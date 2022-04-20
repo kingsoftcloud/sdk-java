@@ -1,0 +1,49 @@
+package example;
+
+import com.alibaba.fastjson.JSON;
+import common.Credential;
+import client.iam.listusers.v20151101.ListUsersClient;
+import client.iam.listusers.v20151101.ListUsersRequest;
+import client.iam.listusers.v20151101.ListUsersResponse;
+import lombok.extern.slf4j.Slf4j;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Properties;
+
+/**
+ * @Classname ListUsersExample
+ * @Description demo
+ */
+@Slf4j
+public class ListUsersExample {
+    public static void main(String[] args) {
+        String secretKey = "secretKey";
+        String signStr = "signStr";
+        String region = "region";
+        String path = "path";
+        String host = "host";
+
+        //设置请求头,若无请求头跳过
+        Map<String, String> head = null;
+        if (host != null && host != "") {
+            head = new HashMap<>();
+            head.put("Host", host);
+        }
+
+        //证书
+        Credential credential = new Credential(secretKey, signStr, region);
+        ListUsersClient ListUsersClient = new ListUsersClient(credential);
+        ListUsersRequest listUsersRequest = new ListUsersRequest();
+        listUsersRequest.setMarker("1");
+        listUsersRequest.setMaxItems("2");
+        try {
+            ListUsersResponse listUsersResponse = ListUsersClient.doGet(path, listUsersRequest, head);
+            log.info("listUsers result:{}", JSON.toJSON(listUsersResponse));
+        } catch (Exception e) {
+            log.error("listUsers occur error", e);
+        }
+    }
+}
