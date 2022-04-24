@@ -1,29 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.ksyun</groupId>
   <artifactId>ksyun-java-sdk</artifactId>
-  <version>1.0-1</version>
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-          <source>8</source>
-          <target>8</target>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+  <version>1.0.4</version>
+  <packaging>jar</packaging>
 
-  <name>ksyun-billing-java-sdk</name>
+  <name>KSYUN SDK for Java</name>
+
+  <description>
+    The KSYUN Web Services SDK for Java provides Java APIs
+    for building software on KSYUN' cost-effective, scalable, and reliable
+    infrastructure products. The KSYUN Java SDK allows developers to code
+    against APIs for all of KSYUN's infrastructure web services (KSC
+    S3, KSC KEC, KSC RDS etc).
+  </description>
+
+  <url>https://github.com/kingsoftcloud/sdk-java</url>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>https://www.ksyun.com/apache2.0</url>
+    </license>
+  </licenses>
+
+  <scm>
+    <url>https://github.com/OliverLiy/fast-sso</url>
+    <connection>https://github.com/OliverLiy/fast-sso.git</connection>
+  </scm>
+
+  <!-- 开发者信息 -->
+  <developers>
+    <developer>
+      <id>ksyun java sdk</id>
+      <name>Kingsoft Cloud</name>
+      <email>zhangxiao4@kingsoft.com</email>
+      <roles>
+        <role>Project Manager</role>
+        <role>Architect</role>
+      </roles>
+      <organization>com.ksyun</organization>
+      <organizationUrl>https://github.com/kingsoftcloud/sdk-java</organizationUrl>
+      <properties>
+        <dept>No</dept>
+      </properties>
+      <timezone>-5</timezone>
+    </developer>
+  </developers>
+
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <skipTests>true</skipTests>
   </properties>
 
   <dependencies>
@@ -79,5 +111,90 @@
     </dependency>
 
   </dependencies>
+
+  <profiles>
+    <profile>
+      <id>sonatype-oss-release</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <build>
+        <plugins>
+          <!--发布到中央SNAPSHOT仓库插件-->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+              <source>7</source>
+              <target>7</target>
+            </configuration>
+          </plugin>
+
+          <!--配置生成Javadoc包-->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>2.9.1</version>
+            <configuration>
+              <!-- jdk1.8要加上，1.7要去掉，否则会报错 -->
+              <additionalJOptions>
+                <additionalJOption>-Xdoclint:none</additionalJOption>
+              </additionalJOptions>
+            </configuration>
+            <executions>
+              <execution>
+                <id>attach-javadocs</id>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <!--配置生成源码包-->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-source-plugin</artifactId>
+            <version>2.2.1</version>
+            <executions>
+              <execution>
+                <id>attach-sources</id>
+                <goals>
+                  <goal>jar-no-fork</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+
+          <!--gpg插件-->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>1.6</version>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
 
 </project>
