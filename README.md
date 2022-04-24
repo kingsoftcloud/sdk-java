@@ -18,7 +18,7 @@
    ```
      <groupId>com.ksyun</groupId>
      <artifactId>ksyun-java-sdk</artifactId>
-     <version>1.0-1</version>
+     <version>1.0.4</version>
    ```
 2. 在您的代码中引用对应模块代码，可参考示例。
 
