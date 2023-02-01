@@ -1,4 +1,4 @@
-package client.iam.updaterole.v20151101;
+package ksyun.client.iam.updaterole.v20151101;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname UpdateRoleClient
-* @Description 重启实例
+* @Description 更新角基本描述
 */
 @Slf4j
 public class UpdateRoleClient extends BaseClient {

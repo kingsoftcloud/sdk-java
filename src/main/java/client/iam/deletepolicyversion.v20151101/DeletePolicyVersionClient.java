@@ -1,4 +1,4 @@
-package client.iam.deletepolicyversion.v20151101;
+package ksyun.client.iam.deletepolicyversion.v20151101;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname DeletePolicyVersionClient
-* @Description 重启实例
+* @Description 删除策略版本内容
 */
 @Slf4j
 public class DeletePolicyVersionClient extends BaseClient {

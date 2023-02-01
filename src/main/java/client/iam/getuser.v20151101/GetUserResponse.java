@@ -1,4 +1,4 @@
-package client.iam.getuser.v20151101;
+package ksyun.client.iam.getuser.v20151101;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;

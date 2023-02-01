@@ -1,4 +1,4 @@
-package client.iam.listroles.v20151101;
+package ksyun.client.iam.listroles.v20151101;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname ListRolesClient
-* @Description 重启实例
+* @Description 查询账号的角色列表
 */
 @Slf4j
 public class ListRolesClient extends BaseClient {

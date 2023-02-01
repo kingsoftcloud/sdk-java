@@ -1,4 +1,4 @@
-package client.iam.attachgrouppolicy.v20151101;
+package ksyun.client.iam.attachgrouppolicy.v20151101;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname AttachGroupPolicyClient
-* @Description 重启实例
+* @Description 附加策略到用户组
 */
 @Slf4j
 public class AttachGroupPolicyClient extends BaseClient {

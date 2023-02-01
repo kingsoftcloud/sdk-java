@@ -1,4 +1,4 @@
-package client.iam.getgroup.v20151101;
+package ksyun.client.iam.getgroup.v20151101;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname GetGroupClient
-* @Description 重启实例
+* @Description 获取用户组基础信息
 */
 @Slf4j
 public class GetGroupClient extends BaseClient {

@@ -1,4 +1,5 @@
-package client.iam.detachgrouppolicy.v20151101;
+package ksyun.client.iam.detachgrouppolicy.v20151101;
+
 import common.annotation.KsYunField;
 import lombok.Builder;
 import lombok.Data;
@@ -13,11 +14,12 @@ import java.util.Arrays;
 */
 @Data
 public class DetachGroupPolicyRequest{
-    /**要分离的策略krn*/
+    /**用户组名*/
     @KsYunField(name="GroupName")
     private String GroupName;
 
-    /**用户组名*/
+    /**要分离的策略krn
+*/
     @KsYunField(name="PolicyKrn")
     private String PolicyKrn;
 

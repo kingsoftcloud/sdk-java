@@ -1,4 +1,4 @@
-package client.iam.getloginprofile.v20151101;
+package ksyun.client.iam.getloginprofile.v20151101;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname GetLoginProfileClient
-* @Description 重启实例
+* @Description 查询登录配置信息
 */
 @Slf4j
 public class GetLoginProfileClient extends BaseClient {

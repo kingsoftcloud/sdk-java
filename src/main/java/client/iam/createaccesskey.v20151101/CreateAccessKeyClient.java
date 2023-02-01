@@ -1,4 +1,4 @@
-package client.iam.createaccesskey.v20151101;
+package ksyun.client.iam.createaccesskey.v20151101;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname CreateAccessKeyClient
-* @Description 重启实例
+* @Description 生成访问密钥
 */
 @Slf4j
 public class CreateAccessKeyClient extends BaseClient {

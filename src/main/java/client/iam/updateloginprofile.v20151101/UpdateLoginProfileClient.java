@@ -1,4 +1,4 @@
-package client.iam.updateloginprofile.v20151101;
+package ksyun.client.iam.updateloginprofile.v20151101;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname UpdateLoginProfileClient
-* @Description 重启实例
+* @Description 更新子用户登录配置
 */
 @Slf4j
 public class UpdateLoginProfileClient extends BaseClient {

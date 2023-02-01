@@ -1,4 +1,4 @@
-package client.iam.updateuser.v20151101;
+package ksyun.client.iam.updateuser.v20151101;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname UpdateUserClient
-* @Description 重启实例
+* @Description 更新用户基本信息
 */
 @Slf4j
 public class UpdateUserClient extends BaseClient {

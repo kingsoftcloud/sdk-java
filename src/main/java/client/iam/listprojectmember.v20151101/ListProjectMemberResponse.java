@@ -1,4 +1,4 @@
-package client.iam.listprojectmember.v20151101;
+package ksyun.client.iam.listprojectmember.v20151101;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;

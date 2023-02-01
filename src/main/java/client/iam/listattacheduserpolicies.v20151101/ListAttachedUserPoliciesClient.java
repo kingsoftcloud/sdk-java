@@ -1,4 +1,4 @@
-package client.iam.listattacheduserpolicies.v20151101;
+package ksyun.client.iam.listattacheduserpolicies.v20151101;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname ListAttachedUserPoliciesClient
-* @Description 重启实例
+* @Description 查询用户附加策略列表
 */
 @Slf4j
 public class ListAttachedUserPoliciesClient extends BaseClient {

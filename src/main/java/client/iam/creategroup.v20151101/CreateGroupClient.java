@@ -1,4 +1,4 @@
-package client.iam.creategroup.v20151101;
+package ksyun.client.iam.creategroup.v20151101;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname CreateGroupClient
-* @Description 重启实例
+* @Description 创建用户组
 */
 @Slf4j
 public class CreateGroupClient extends BaseClient {

@@ -1,4 +1,4 @@
-package client.iam.removeuserfromgroup.v20151101;
+package ksyun.client.iam.removeuserfromgroup.v20151101;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname RemoveUserFromGroupClient
-* @Description 重启实例
+* @Description 从用户组删除用户
 */
 @Slf4j
 public class RemoveUserFromGroupClient extends BaseClient {

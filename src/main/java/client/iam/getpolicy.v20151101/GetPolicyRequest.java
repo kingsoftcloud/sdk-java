@@ -1,4 +1,5 @@
-package client.iam.getpolicy.v20151101;
+package ksyun.client.iam.getpolicy.v20151101;
+
 import common.annotation.KsYunField;
 import lombok.Builder;
 import lombok.Data;

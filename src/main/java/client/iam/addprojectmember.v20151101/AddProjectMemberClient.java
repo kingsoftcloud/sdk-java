@@ -1,4 +1,4 @@
-package client.iam.addprojectmember.v20151101;
+package ksyun.client.iam.addprojectmember.v20151101;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname AddProjectMemberClient
-* @Description 重启实例
+* @Description 添加项目成员
 */
 @Slf4j
 public class AddProjectMemberClient extends BaseClient {

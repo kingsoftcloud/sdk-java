@@ -1,4 +1,4 @@
-package client.iam.detachrolepolicy.v20151101;
+package ksyun.client.iam.detachrolepolicy.v20151101;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname DetachRolePolicyClient
-* @Description 重启实例
+* @Description 分离角色的访问策略
 */
 @Slf4j
 public class DetachRolePolicyClient extends BaseClient {

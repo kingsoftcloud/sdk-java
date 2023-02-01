@@ -1,4 +1,5 @@
-package client.iam.listpolicyversions.v20151101;
+package ksyun.client.iam.listpolicyversions.v20151101;
+
 import common.annotation.KsYunField;
 import lombok.Builder;
 import lombok.Data;
@@ -13,8 +14,9 @@ import java.util.Arrays;
 */
 @Data
 public class ListPolicyVersionsRequest{
-    /**待查询的策略的krn标识
-格式：krn:ksc:iam::account-id:policy/policy-name*/
+    /**待查询策略版本列表的策略的唯一标识
+
+格式：krn:ksc:iam::account-id:policy/policy-name	*/
     @KsYunField(name="PolicyKrn")
     private String PolicyKrn;
 

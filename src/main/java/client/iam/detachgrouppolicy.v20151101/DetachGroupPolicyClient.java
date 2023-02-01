@@ -1,4 +1,4 @@
-package client.iam.detachgrouppolicy.v20151101;
+package ksyun.client.iam.detachgrouppolicy.v20151101;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname DetachGroupPolicyClient
-* @Description 重启实例
+* @Description 从用户组分离策略
 */
 @Slf4j
 public class DetachGroupPolicyClient extends BaseClient {

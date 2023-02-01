@@ -1,4 +1,4 @@
-package client.iam.listentitiesforpolicy.v20151101;
+package ksyun.client.iam.listentitiesforpolicy.v20151101;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname ListEntitiesForPolicyClient
-* @Description 重启实例
+* @Description 查询策略关联实体列表
 */
 @Slf4j
 public class ListEntitiesForPolicyClient extends BaseClient {

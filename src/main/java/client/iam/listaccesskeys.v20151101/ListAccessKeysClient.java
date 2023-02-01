@@ -1,4 +1,4 @@
-package client.iam.listaccesskeys.v20151101;
+package ksyun.client.iam.listaccesskeys.v20151101;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname ListAccessKeysClient
-* @Description 重启实例
+* @Description 查询访问密钥列表
 */
 @Slf4j
 public class ListAccessKeysClient extends BaseClient {

@@ -1,4 +1,4 @@
-package client.iam.getpolicy.v20151101;
+package ksyun.client.iam.getpolicy.v20151101;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname GetPolicyClient
-* @Description 重启实例
+* @Description 查询策略元数据信息
 */
 @Slf4j
 public class GetPolicyClient extends BaseClient {

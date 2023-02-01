@@ -1,4 +1,4 @@
-package client.iam.listusers.v20151101;
+package ksyun.client.iam.listusers.v20151101;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname ListUsersClient
-* @Description 重启实例
+* @Description 查询所有子用户的详细信息
 */
 @Slf4j
 public class ListUsersClient extends BaseClient {

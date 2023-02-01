@@ -1,4 +1,5 @@
-package client.iam.createuser.v20151101;
+package ksyun.client.iam.createuser.v20151101;
+
 import common.annotation.KsYunField;
 import lombok.Builder;
 import lombok.Data;
@@ -17,7 +18,7 @@ public class CreateUserRequest{
     @KsYunField(name="UserName")
     private String UserName;
 
-    /**待创建的IAM用户的用户名*/
+    /**待创建的IAM用户的真实姓名*/
     @KsYunField(name="RealName")
     private String RealName;
 

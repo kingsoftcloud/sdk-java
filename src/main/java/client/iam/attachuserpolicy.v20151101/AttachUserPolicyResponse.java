@@ -1,4 +1,4 @@
-package client.iam.attachuserpolicy.v20151101;
+package ksyun.client.iam.attachuserpolicy.v20151101;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;

@@ -1,4 +1,4 @@
-package client.iam.createrole.v20151101;
+package ksyun.client.iam.createrole.v20151101;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname CreateRoleClient
-* @Description 重启实例
+* @Description 创建角色
 */
 @Slf4j
 public class CreateRoleClient extends BaseClient {

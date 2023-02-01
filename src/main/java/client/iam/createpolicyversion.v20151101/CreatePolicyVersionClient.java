@@ -1,4 +1,4 @@
-package client.iam.createpolicyversion.v20151101;
+package ksyun.client.iam.createpolicyversion.v20151101;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname CreatePolicyVersionClient
-* @Description 重启实例
+* @Description 新建策略版本内容
 */
 @Slf4j
 public class CreatePolicyVersionClient extends BaseClient {

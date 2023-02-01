@@ -1,4 +1,4 @@
-package client.iam.setdefaultpolicyversion.v20151101;
+package ksyun.client.iam.setdefaultpolicyversion.v20151101;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname SetDefaultPolicyVersionClient
-* @Description 重启实例
+* @Description 设定默认策略版本
 */
 @Slf4j
 public class SetDefaultPolicyVersionClient extends BaseClient {

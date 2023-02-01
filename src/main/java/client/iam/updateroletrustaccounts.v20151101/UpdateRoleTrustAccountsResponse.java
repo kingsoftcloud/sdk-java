@@ -1,4 +1,4 @@
-package client.iam.updateroletrustaccounts.v20151101;
+package ksyun.client.iam.updateroletrustaccounts.v20151101;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;

@@ -1,4 +1,4 @@
-package client.iam.updateroletrustaccounts.v20151101;
+package ksyun.client.iam.updateroletrustaccounts.v20151101;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname UpdateRoleTrustAccountsClient
-* @Description 重启实例
+* @Description 更新角色的信任关系
 */
 @Slf4j
 public class UpdateRoleTrustAccountsClient extends BaseClient {

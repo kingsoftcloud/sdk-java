@@ -1,4 +1,4 @@
-package client.iam.deleteprojectmember.v20151101;
+package ksyun.client.iam.deleteprojectmember.v20151101;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname DeleteProjectMemberClient
-* @Description 重启实例
+* @Description 删除项目成员
 */
 @Slf4j
 public class DeleteProjectMemberClient extends BaseClient {
