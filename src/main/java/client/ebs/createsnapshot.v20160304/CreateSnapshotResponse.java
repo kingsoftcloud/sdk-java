@@ -1,4 +1,4 @@
-package client.ebs.createsnapshot.v20160304;
+package ksyun.client.ebs.createsnapshot.v20160304;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;

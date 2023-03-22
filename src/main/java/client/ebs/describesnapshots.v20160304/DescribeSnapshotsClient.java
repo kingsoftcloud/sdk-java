@@ -1,4 +1,4 @@
-package client.ebs.describesnapshots.v20160304;
+package ksyun.client.ebs.describesnapshots.v20160304;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname DescribeSnapshotsClient
-* @Description 重启实例
+* @Description DescribeSnapshots
 */
 @Slf4j
 public class DescribeSnapshotsClient extends BaseClient {

@@ -1,4 +1,4 @@
-package client.ebs.createvolume.v20160304;
+package ksyun.client.ebs.createvolume.v20160304;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname CreateVolumeClient
-* @Description 重启实例
+* @Description CreateVolume
 */
 @Slf4j
 public class CreateVolumeClient extends BaseClient {

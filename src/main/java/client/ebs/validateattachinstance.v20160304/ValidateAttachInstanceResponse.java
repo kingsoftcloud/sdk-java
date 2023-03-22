@@ -1,4 +1,4 @@
-package client.ebs.validateattachinstance.v20160304;
+package ksyun.client.ebs.validateattachinstance.v20160304;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;

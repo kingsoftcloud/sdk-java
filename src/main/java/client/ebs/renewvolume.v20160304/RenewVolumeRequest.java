@@ -1,4 +1,5 @@
-package client.ebs.renewvolume.v20160304;
+package ksyun.client.ebs.renewvolume.v20160304;
+
 import common.annotation.KsYunField;
 import lombok.Builder;
 import lombok.Data;

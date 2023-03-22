@@ -1,4 +1,4 @@
-package client.ebs.attachvolume.v20160304;
+package ksyun.client.ebs.attachvolume.v20160304;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname AttachVolumeClient
-* @Description 重启实例
+* @Description AttachVolume
 */
 @Slf4j
 public class AttachVolumeClient extends BaseClient {

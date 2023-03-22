@@ -1,4 +1,4 @@
-package client.ebs.resizevolume.v20160304;
+package ksyun.client.ebs.resizevolume.v20160304;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname ResizeVolumeClient
-* @Description 重启实例
+* @Description ResizeVolume
 */
 @Slf4j
 public class ResizeVolumeClient extends BaseClient {

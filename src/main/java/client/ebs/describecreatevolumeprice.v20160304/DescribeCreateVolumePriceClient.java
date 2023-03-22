@@ -1,4 +1,4 @@
-package ksyun.client.ebs.createsnapshot.v20160304;
+package ksyun.client.ebs.describecreatevolumeprice.v20160304;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -11,14 +11,14 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.Map;
 
 /**
-* @Classname CreateSnapshotClient
-* @Description CreateSnapshot
+* @Classname DescribeCreateVolumePriceClient
+* @Description 查询云盘新建时的价格
 */
 @Slf4j
-public class CreateSnapshotClient extends BaseClient {
+public class DescribeCreateVolumePriceClient extends BaseClient {
     private final static String service = "ebs";
     private final static String version = "2016-03-04";
-    private final static String action = "CreateSnapshot";
+    private final static String action = "DescribeCreateVolumePrice";
 
 
     /**
@@ -27,7 +27,7 @@ public class CreateSnapshotClient extends BaseClient {
     private Credential credential;
 
 
-    public CreateSnapshotClient(Credential credential) {
+    public DescribeCreateVolumePriceClient(Credential credential) {
         this.credential = credential;
     }
 
@@ -40,7 +40,7 @@ public class CreateSnapshotClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CreateSnapshotResponse doPost(String path, CreateSnapshotRequest requestObj) throws Exception {
+    public DescribeCreateVolumePriceResponse doPost(String path, DescribeCreateVolumePriceRequest requestObj) throws Exception {
         return doPost(path, requestObj, null);
     }
 
@@ -53,11 +53,11 @@ public class CreateSnapshotClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CreateSnapshotResponse doPost(String path, CreateSnapshotRequest requestObj, Map<String, String> head) throws Exception {
+    public DescribeCreateVolumePriceResponse doPost(String path, DescribeCreateVolumePriceRequest requestObj, Map<String, String> head) throws Exception {
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpPost(path, requestParams, head);
         log.info("doPost end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, CreateSnapshotResponse.class);
+        return JSON.parseObject(response, DescribeCreateVolumePriceResponse.class);
     }
 
 
@@ -69,7 +69,7 @@ public class CreateSnapshotClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CreateSnapshotResponse doGet(String path, CreateSnapshotRequest requestObj) throws Exception {
+    public DescribeCreateVolumePriceResponse doGet(String path, DescribeCreateVolumePriceRequest requestObj) throws Exception {
         return doGet(path, requestObj, null);
     }
 
@@ -81,7 +81,7 @@ public class CreateSnapshotClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CreateSnapshotResponse doDelete(String path, CreateSnapshotRequest requestObj) throws Exception {
+    public DescribeCreateVolumePriceResponse doDelete(String path, DescribeCreateVolumePriceRequest requestObj) throws Exception {
         return doDelete(path, requestObj, null);
     }
 
@@ -94,12 +94,12 @@ public class CreateSnapshotClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CreateSnapshotResponse doDelete(String path, CreateSnapshotRequest requestObj, Map<String, String> head) throws Exception {
+    public DescribeCreateVolumePriceResponse doDelete(String path, DescribeCreateVolumePriceRequest requestObj, Map<String, String> head) throws Exception {
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpDelete(path, requestParams, head);
         log.info("doDelete end,path:{},params:{},head:{}", path, requestParams, head);
-        CreateSnapshotResponse CreateSnapshotResponse = JSON.parseObject(response, CreateSnapshotResponse.class);
-        return CreateSnapshotResponse;
+        DescribeCreateVolumePriceResponse DescribeCreateVolumePriceResponse = JSON.parseObject(response, DescribeCreateVolumePriceResponse.class);
+        return DescribeCreateVolumePriceResponse;
     }
 
 
@@ -111,7 +111,7 @@ public class CreateSnapshotClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CreateSnapshotResponse doPut(String path, CreateSnapshotRequest requestObj) throws Exception {
+    public DescribeCreateVolumePriceResponse doPut(String path, DescribeCreateVolumePriceRequest requestObj) throws Exception {
         return doPut(path, requestObj, null);
     }
 
@@ -124,12 +124,12 @@ public class CreateSnapshotClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CreateSnapshotResponse doPut(String path, CreateSnapshotRequest requestObj, Map<String, String> head) throws Exception {
+    public DescribeCreateVolumePriceResponse doPut(String path, DescribeCreateVolumePriceRequest requestObj, Map<String, String> head) throws Exception {
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpPut(path, requestParams, head);
         log.info("httpPut end,path:{},params:{},head:{}", path, requestParams, head);
-        CreateSnapshotResponse CreateSnapshotResponse = JSON.parseObject(response, CreateSnapshotResponse.class);
-        return CreateSnapshotResponse;
+        DescribeCreateVolumePriceResponse DescribeCreateVolumePriceResponse = JSON.parseObject(response, DescribeCreateVolumePriceResponse.class);
+        return DescribeCreateVolumePriceResponse;
     }
 
     /**
@@ -141,11 +141,11 @@ public class CreateSnapshotClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CreateSnapshotResponse doGet(String path, CreateSnapshotRequest requestObj, Map<String, String> head) throws Exception {
+    public DescribeCreateVolumePriceResponse doGet(String path, DescribeCreateVolumePriceRequest requestObj, Map<String, String> head) throws Exception {
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpGet(path, requestParams, head);
         log.info("doGet end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, CreateSnapshotResponse.class);
+        return JSON.parseObject(response, DescribeCreateVolumePriceResponse.class);
     }
 
 
@@ -155,7 +155,7 @@ public class CreateSnapshotClient extends BaseClient {
      * @param requestObj
      * @return
      */
-    private JSONObject getRequestParams(CreateSnapshotRequest requestObj) throws Exception {
+    private JSONObject getRequestParams(DescribeCreateVolumePriceRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置证书
         getCommonParams(credential, requestParams);

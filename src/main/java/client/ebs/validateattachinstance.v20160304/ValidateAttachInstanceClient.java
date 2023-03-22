@@ -1,4 +1,4 @@
-package client.ebs.validateattachinstance.v20160304;
+package ksyun.client.ebs.validateattachinstance.v20160304;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname ValidateAttachInstanceClient
-* @Description 重启实例
+* @Description ValidateAttachInstance
 */
 @Slf4j
 public class ValidateAttachInstanceClient extends BaseClient {

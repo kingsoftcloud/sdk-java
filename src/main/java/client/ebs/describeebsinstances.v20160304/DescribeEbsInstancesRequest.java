@@ -1,4 +1,5 @@
-package client.ebs.describeebsinstances.v20160304;
+package ksyun.client.ebs.describeebsinstances.v20160304;
+
 import common.annotation.KsYunField;
 import lombok.Builder;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package client.ebs.recoveryvolume.v20160304;
+package ksyun.client.ebs.recoveryvolume.v20160304;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname RecoveryVolumeClient
-* @Description 重启实例
+* @Description RecoveryVolume
 */
 @Slf4j
 public class RecoveryVolumeClient extends BaseClient {

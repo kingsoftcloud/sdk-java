@@ -1,4 +1,4 @@
-package client.ebs.updatevolumeproject.v20160304;
+package ksyun.client.ebs.updatevolumeproject.v20160304;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
 * @Classname UpdateVolumeProjectClient
-* @Description 重启实例
+* @Description UpdateVolumeProject
 */
 @Slf4j
 public class UpdateVolumeProjectClient extends BaseClient {
