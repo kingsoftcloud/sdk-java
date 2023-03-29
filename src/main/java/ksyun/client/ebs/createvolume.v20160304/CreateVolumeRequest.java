@@ -20,7 +20,7 @@ public class CreateVolumeRequest{
     @KsYunField(name="VolumeName")
     private String VolumeName;
 
-    /**硬盘类型，4种，SSD2.0/SSD3.0/EHDD/SATA2.0*/
+    /**硬盘类型，SSD3.0/EHDD/ESSD_PL0/ESSD_PL1/ESSD_PL2/ESSD_PL3*/
     @KsYunField(name="VolumeType")
     private String VolumeType;
 
@@ -32,11 +32,18 @@ public class CreateVolumeRequest{
     private String VolumeDesc;
 
     /**磁盘容量大小，单位GB
-取值范围：【10，32000】，步长：1GB*/
+SSD3.0取值范围：【10，32000】，步长：1GB
+EHDD取值范围：【10，32000】，步长：1GB
+ESSD_PL0取值范围：【40，32768】，步长：1GB
+ESSD_PL1取值范围：【40，32768】，步长：1GB
+ESSD_PL2取值范围：【461，32768】，步长：1GB
+ESSD_PL3取值范围：【1761，32768】，步长：1GB
+*/
     @KsYunField(name="Size")
     private Integer Size;
 
-    /**购买云硬盘所处的可用区*/
+    /**购买云硬盘所处的可用区
+如 cn-beijing-6a，cn-shanghai-2a*/
     @KsYunField(name="AvailabilityZone")
     private String AvailabilityZone;
 
@@ -55,7 +62,7 @@ public class CreateVolumeRequest{
     @KsYunField(name="ProjectId")
     private String ProjectId;
 
-    /**子订单ID*/
+    /**子订单ID（内部使用）*/
     @KsYunField(name="SubOrderId")
     private String SubOrderId;
 

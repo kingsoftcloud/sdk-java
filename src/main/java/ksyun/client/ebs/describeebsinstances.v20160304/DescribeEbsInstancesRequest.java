@@ -18,7 +18,7 @@ public class DescribeEbsInstancesRequest{
     @KsYunField(name="AvailabilityZone")
     private String AvailabilityZone;
 
-    /**硬盘类型，三种，SSD2.0/SSD3.0/EHDD*/
+    /**硬盘类型，SSD3.0/EHDD/ESSD_PL0/ESSD_PL1/ESSD_PL2/ESSD_PL3*/
     @KsYunField(name="VolumeType")
     private String VolumeType;
 

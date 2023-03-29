@@ -26,7 +26,10 @@ public class DescribeCreateVolumePriceRequest{
     @KsYunField(name="AvailabilityZone")
     private String AvailabilityZone;
 
-    /**计费类型，如Monthly、Daily、HourlyInstantSettlement*/
+    /**计费类型
+Monthly（预付费，包年包月）
+HourlyInstantSettlement（后付费，按小时实时结算）
+Daily（后付费，按日月结）*/
     @KsYunField(name="ChargeType")
     private String ChargeType;
 
