@@ -42,11 +42,3 @@ jobs:
           MAVEN_CENTRAL_TOKEN: ${{ secrets.OSSRH_PASSWORD }}
           # gpg短明码
           MAVEN_GPG_PASSPHRASE: ${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }} 
-      # Nexus主动部署
-      - name: Release on nexus
-        uses: monkeyWie/maven-nexus-release@v1
-        with:
-          # Nexus用户名
-          maven-repo-server-username: ${{ secrets.OSSRH_USERNAME }}
-          # Nexus明码
-          maven-repo-server-password: ${{ secrets.OSSRH_PASSWORD }}
