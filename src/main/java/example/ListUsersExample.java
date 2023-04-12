@@ -1,6 +1,6 @@
 package example;
 
-//import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSON;
 import common.Credential;
 import lombok.extern.slf4j.Slf4j;
 import java.io.FileInputStream;
