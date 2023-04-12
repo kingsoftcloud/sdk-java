@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+   <servers>
+		<!-- 用于nexus发布jar -->
+		<server>
+			<id>ossrh</id>
+			<username>${{ secrets.SERVER_USERNAME }}</username>
+			<password>${{ secrets.SERVER_PWD }}</password>
+    	</server>
+		
+    </servers>
+	
+	<mirrors>
+        <!-- 阿里镜像 -->
+		
+        <mirror>
+            <id>nexus-aliyun</id>
+            <mirrorOf>central</mirrorOf>
+            <name>Nexus aliyun</name>
+            <url>https://maven.aliyun.com/repository/central</url>
+        </mirror>
+		
+    </mirrors>
+
+
+    <profiles>
+		<!-- 代码质量-所需的配置项-->
+		<profile>
+            <id>ossrh</id>
+            <properties>
+              <gpg.passphrase>${{ secrets.PASSPHRASE }}</gpg.passphrase>
+              <gpg.keyname>${{ secrets.KEYNAME }}</gpg.keyname>
+            </properties>
+        </profile>
+		
+		
+	
+	 
+    </profiles>
+    
+    <activeProfiles>  
+    	<activeProfile>ossrh</activeProfile>  
+  	</activeProfiles>  
+</settings>
