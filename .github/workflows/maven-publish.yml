@@ -33,7 +33,7 @@ jobs:
       # 推送jar包至maven地方仓库
       - name: Publish to Apache Maven Central
         # 执行maven deploy命令
-        run: mvn clean deploy -Dmaven.skip.Test=true 
+        run: mvn clean deploy -Dgpg.passphrase=ksyun123 -Dmaven.skip.Test=true 
         # 环境变量设置
         env:
           # Nexus用户名,如果感觉不想裸露也能够配置到secrets中
