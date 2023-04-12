@@ -1,28 +1,44 @@
-name: Publish package to the Maven Central Repository
+name:  Publish package to the Maven Central Repository
+
 on:
   push:
     branches:
       - master
 jobs:
-  publish:
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
+      # 拉取源码
       - uses: actions/checkout@v2
-      - name: Set up Maven Central Repository
-        uses: actions/setup-java@v2
+      # 装置JDK环境
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
         with:
-          java-version: '8'
-          distribution: 'adopt'
+          java-version: 1.8
+      # 设置Maven地方仓库配置
+      - name: Set up Apache Maven Central
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
           server-id: ossrh
+          # Nexus用户名环境变量
           server-username: MAVEN_USERNAME
-          server-password: MAVEN_PASSWORD
-      - id: install-secret-key
-        name: Install gpg secret key
-        run: |
-          cat <(echo -e "${{ secrets.OSSRH_GPG_SECRET_KEY }}") | gpg --batch --import
-          gpg --list-secret-keys --keyid-format LONG
-      - name: Publish package
+          # Nexus明码环境变量
+          server-password: MAVEN_CENTRAL_TOKEN
+          # gpg短明码环境变量
+          gpg-passphrase: MAVEN_GPG_PASSPHRASE
+          # gpg私钥
+          gpg-private-key: ${{ secrets.OSSRH_GPG_SECRET_KEY }}
+      # 推送jar包至maven地方仓库
+      - name: Publish to Apache Maven Central
+        # 执行maven deploy命令
+        run: mvn clean deploy -Dmaven.skip.Test=true 
+        # 环境变量设置
         env:
+          # Nexus用户名,如果感觉不想裸露也能够配置到secrets中
           MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-          MAVEN_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
-        run: mvn clean deploy  --batch-mode -Dgpg.passphrase=${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }}  -Dmaven.skip.Test=true 
+          # Nexus明码
+          MAVEN_CENTRAL_TOKEN: ${{ secrets.OSSRH_PASSWORD }}
+          # gpg短明码
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }} 
