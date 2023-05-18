@@ -6,7 +6,7 @@
 
   <groupId>com.ksyun</groupId>
   <artifactId>ksyun-java-sdk</artifactId>
-  <version>1.0.4</version>
+  <version>1.0.6</version>
   <packaging>jar</packaging>
 
   <name>KSYUN SDK for Java</name>
@@ -29,16 +29,16 @@
   </licenses>
 
   <scm>
-    <url>https://github.com/OliverLiy/fast-sso</url>
-    <connection>https://github.com/OliverLiy/fast-sso.git</connection>
+    <url>https://github.com/kingsoftcloud/sdk-java.git</url>
+    <connection>https://github.com/kingsoftcloud/sdk-java.git</connection>
   </scm>
 
   <!-- 开发者信息 -->
   <developers>
     <developer>
-      <id>ksyun java sdk</id>
-      <name>Kingsoft Cloud</name>
-      <email>zhangxiao4@kingsoft.com</email>
+      <id>ksyun-java-sdk</id>
+      <name>Kingsoft-Cloud</name>
+      <email>ksyun@kingsoft.com</email>
       <roles>
         <role>Project Manager</role>
         <role>Architect</role>

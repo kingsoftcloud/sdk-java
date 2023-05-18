@@ -13,5 +13,13 @@ import java.util.Arrays;
 */
 @Data
 public class DescribeBillSummaryByPayModeRequest{
+    /**账单开始时间*/
+    @KsYunField(name="BillBeginMonth")
+    private String BillBeginMonth;
+
+    /**账单结束时间*/
+    @KsYunField(name="BillEndMonth")
+    private String BillEndMonth;
+
 
 }
