@@ -51,7 +51,8 @@ public class ReinstallEpcRequest{
 Raid5：数据盘的数量必须大于等于3
 Raid10：数据盘数量必须是4的倍数
 Raid50：数据盘的数量必须大于6且是2的倍数
-SRaid0：单盘SRaid0无限制，仅针对大数据业务自身有冗余的场景*/
+SRaid0：单盘SRaid0无限制，仅针对大数据业务自身有冗余的场景
+与RaidId必填其一，RaidId优先级高*/
     @KsYunField(name="Raid")
     private String Raid;
 
@@ -59,17 +60,9 @@ SRaid0：单盘SRaid0无限制，仅针对大数据业务自身有冗余的场�
     @KsYunField(name="RaidId")
     private String RaidId;
 
-    /**是否保留DISK：Yes|No*/
-    @KsYunField(name="ReserveDisk")
-    private String ReserveDisk;
-
     /**云物理主机名称*/
     @KsYunField(name="HostName")
     private String HostName;
-
-    /**容器扩展信息*/
-    @KsYunField(name="ContainerInfo")
-    private String ContainerInfo;
 
     /**系统盘文件格式*/
     @KsYunField(name="SystemFileType")
@@ -106,10 +99,6 @@ SRaid0：单盘SRaid0无限制，仅针对大数据业务自身有冗余的场�
     /**网卡bond的属性*/
     @KsYunField(name="bondAttribute")
     private String BondAttribute;
-
-    /**机房信息*/
-    @KsYunField(name="Region")
-    private String Region;
 
     /**kes组件类型*/
     @KsYunField(name="KesAgent")

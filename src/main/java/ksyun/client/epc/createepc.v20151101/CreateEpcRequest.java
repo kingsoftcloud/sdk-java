@@ -79,17 +79,14 @@ public class CreateEpcRequest{
 Raid5：数据盘的数量必须大于等于3
 Raid10：数据盘数量必须是4的倍数
 Raid50：数据盘的数量必须大于6且是2的倍数
-SRaid0：单盘SRaid0无限制，仅针对大数据业务自身有冗余的场景*/
+SRaid0：单盘SRaid0无限制，仅针对大数据业务自身有冗余的场景
+与RaidId必填其一，RaidId优先级高*/
     @KsYunField(name="Raid")
     private String Raid;
 
     /**Raid模板Id*/
     @KsYunField(name="RaidId")
     private String RaidId;
-
-    /**Raid模板详情*/
-    @KsYunField(name="RaidInfo")
-    private String RaidInfo;
 
     /**镜像资源ID,参见DescribeImages*/
     @KsYunField(name="ImageId")
@@ -184,10 +181,6 @@ SRaid0：单盘SRaid0无限制，仅针对大数据业务自身有冗余的场�
     @KsYunField(name="Description")
     private String Description;
 
-    /**云物理主机ID*/
-    @KsYunField(name="HostId")
-    private String HostId;
-
     /**弹性IP的带宽*/
     @KsYunField(name="AddressBandWidth")
     private String AddressBandWidth;
@@ -211,14 +204,6 @@ SRaid0：单盘SRaid0无限制，仅针对大数据业务自身有冗余的场�
     /**弹性IP项目的ID*/
     @KsYunField(name="AddressProjectId")
     private String AddressProjectId;
-
-    /**容器扩展信息*/
-    @KsYunField(name="ContainerInfo")
-    private String ContainerInfo;
-
-    /**限制删除天数 limitDay=180表示 从购买起180天后才能删除*/
-    @KsYunField(name="LimitDay")
-    private Integer LimitDay;
 
     /**系统盘文件格式*/
     @KsYunField(name="SystemFileType")
