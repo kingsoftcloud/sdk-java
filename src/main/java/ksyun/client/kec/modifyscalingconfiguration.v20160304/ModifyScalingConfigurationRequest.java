@@ -86,10 +86,10 @@ public class ModifyScalingConfigurationRequest{
         private Boolean DeleteWithInstance;
     }
 
-    /**系统盘类型 
+    /**系统盘大小，最小值为0，最大值为500
  */
-    @KsYunField(name="SystemDisk")
-    private List<String> SystemDiskList;
+    @KsYunField(name="SystemDisk.DiskSize")
+    private Integer SystemDiskDiskSize;
 
     /**弹性IP的带宽 
  */
@@ -160,6 +160,14 @@ public class ModifyScalingConfigurationRequest{
     /**实例名称随机生成*/
     @KsYunField(name="InstanceNameRandom")
     private Boolean InstanceNameRandom;
+
+    /**不能给默认值，不传默认按价格体系配置systemDisk属性中第一个创建*/
+    @KsYunField(name="SystemDisk.DiskType")
+    private String SystemDiskDiskType;
+
+    /**扩容 offline 离线扩容| online 在线扩容*/
+    @KsYunField(name="SystemDisk.ResizeType")
+    private String SystemDiskResizeType;
 
 
 }

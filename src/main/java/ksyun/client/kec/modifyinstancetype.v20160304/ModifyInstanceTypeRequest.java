@@ -43,7 +43,7 @@ true/false*/
     @KsYunField(name="CrossInstanceMigrate")
     private Boolean CrossInstanceMigrate;
 
-    /**目标套餐系统盘类型（当本地盘机型变更为云盘机型时才需填写此参数）*/
+    /**不能给默认值，不传默认按价格体系配置systemDisk属性中第一个创建*/
     @KsYunField(name="SystemDisk.DiskType")
     private String SystemDiskDiskType;
 
@@ -70,6 +70,14 @@ true/false*/
     /**变更实例类型后是否自动重启: 是-true，否-false(默认)*/
     @KsYunField(name="AutoRestart")
     private Boolean AutoRestart;
+
+    /**系统盘大小，最大值500，最小值0*/
+    @KsYunField(name="SystemDisk.DiskSize")
+    private Integer SystemDiskDiskSize;
+
+    /**扩容 offline 离线扩容| online 在线扩容*/
+    @KsYunField(name="SystemDisk.ResizeType")
+    private String SystemDiskResizeType;
 
 
 }
