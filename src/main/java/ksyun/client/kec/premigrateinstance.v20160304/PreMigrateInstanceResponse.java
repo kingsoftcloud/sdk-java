@@ -1,4 +1,4 @@
-package ksyun.client.kec.validateddiskencrypt.v20160304;
+package ksyun.client.kec.premigrateinstance.v20160304;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;
@@ -8,12 +8,12 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname ValidatedDiskEncryptResponse
-* @Description ValidatedDiskEncrypt 返回体
+* @Classname PreMigrateInstanceResponse
+* @Description PreMigrateInstance 返回体
 */
 @Data
 @ToString
-public class ValidatedDiskEncryptResponse extends BaseResponseModel {
+public class PreMigrateInstanceResponse extends BaseResponseModel {
 
     /**
      * 请求id

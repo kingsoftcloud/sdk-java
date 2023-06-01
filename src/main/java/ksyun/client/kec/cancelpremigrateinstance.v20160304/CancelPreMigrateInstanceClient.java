@@ -1,4 +1,4 @@
-package ksyun.client.kec.distributekmspermission.v20160304;
+package ksyun.client.kec.cancelpremigrateinstance.v20160304;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -11,14 +11,14 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.Map;
 
 /**
-* @Classname DistributeKmsPermissionClient
-* @Description DistributeKmsPermission
+* @Classname CancelPreMigrateInstanceClient
+* @Description 取消预迁移
 */
 @Slf4j
-public class DistributeKmsPermissionClient extends BaseClient {
+public class CancelPreMigrateInstanceClient extends BaseClient {
     private final static String service = "kec";
     private final static String version = "2016-03-04";
-    private final static String action = "DistributeKmsPermission";
+    private final static String action = "CancelPreMigrateInstance";
 
 
     /**
@@ -27,7 +27,7 @@ public class DistributeKmsPermissionClient extends BaseClient {
     private Credential credential;
 
 
-    public DistributeKmsPermissionClient(Credential credential) {
+    public CancelPreMigrateInstanceClient(Credential credential) {
         this.credential = credential;
     }
 
@@ -40,7 +40,7 @@ public class DistributeKmsPermissionClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DistributeKmsPermissionResponse doPost(String path, DistributeKmsPermissionRequest requestObj) throws Exception {
+    public CancelPreMigrateInstanceResponse doPost(String path, CancelPreMigrateInstanceRequest requestObj) throws Exception {
         return doPost(path, requestObj, null);
     }
 
@@ -53,11 +53,11 @@ public class DistributeKmsPermissionClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DistributeKmsPermissionResponse doPost(String path, DistributeKmsPermissionRequest requestObj, Map<String, String> head) throws Exception {
+    public CancelPreMigrateInstanceResponse doPost(String path, CancelPreMigrateInstanceRequest requestObj, Map<String, String> head) throws Exception {
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpPost(path, requestParams, head);
         log.info("doPost end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, DistributeKmsPermissionResponse.class);
+        return JSON.parseObject(response, CancelPreMigrateInstanceResponse.class);
     }
 
 
@@ -69,7 +69,7 @@ public class DistributeKmsPermissionClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DistributeKmsPermissionResponse doGet(String path, DistributeKmsPermissionRequest requestObj) throws Exception {
+    public CancelPreMigrateInstanceResponse doGet(String path, CancelPreMigrateInstanceRequest requestObj) throws Exception {
         return doGet(path, requestObj, null);
     }
 
@@ -81,7 +81,7 @@ public class DistributeKmsPermissionClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DistributeKmsPermissionResponse doDelete(String path, DistributeKmsPermissionRequest requestObj) throws Exception {
+    public CancelPreMigrateInstanceResponse doDelete(String path, CancelPreMigrateInstanceRequest requestObj) throws Exception {
         return doDelete(path, requestObj, null);
     }
 
@@ -94,12 +94,12 @@ public class DistributeKmsPermissionClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DistributeKmsPermissionResponse doDelete(String path, DistributeKmsPermissionRequest requestObj, Map<String, String> head) throws Exception {
+    public CancelPreMigrateInstanceResponse doDelete(String path, CancelPreMigrateInstanceRequest requestObj, Map<String, String> head) throws Exception {
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpDelete(path, requestParams, head);
         log.info("doDelete end,path:{},params:{},head:{}", path, requestParams, head);
-        DistributeKmsPermissionResponse DistributeKmsPermissionResponse = JSON.parseObject(response, DistributeKmsPermissionResponse.class);
-        return DistributeKmsPermissionResponse;
+        CancelPreMigrateInstanceResponse CancelPreMigrateInstanceResponse = JSON.parseObject(response, CancelPreMigrateInstanceResponse.class);
+        return CancelPreMigrateInstanceResponse;
     }
 
 
@@ -111,7 +111,7 @@ public class DistributeKmsPermissionClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DistributeKmsPermissionResponse doPut(String path, DistributeKmsPermissionRequest requestObj) throws Exception {
+    public CancelPreMigrateInstanceResponse doPut(String path, CancelPreMigrateInstanceRequest requestObj) throws Exception {
         return doPut(path, requestObj, null);
     }
 
@@ -124,12 +124,12 @@ public class DistributeKmsPermissionClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DistributeKmsPermissionResponse doPut(String path, DistributeKmsPermissionRequest requestObj, Map<String, String> head) throws Exception {
+    public CancelPreMigrateInstanceResponse doPut(String path, CancelPreMigrateInstanceRequest requestObj, Map<String, String> head) throws Exception {
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpPut(path, requestParams, head);
         log.info("httpPut end,path:{},params:{},head:{}", path, requestParams, head);
-        DistributeKmsPermissionResponse DistributeKmsPermissionResponse = JSON.parseObject(response, DistributeKmsPermissionResponse.class);
-        return DistributeKmsPermissionResponse;
+        CancelPreMigrateInstanceResponse CancelPreMigrateInstanceResponse = JSON.parseObject(response, CancelPreMigrateInstanceResponse.class);
+        return CancelPreMigrateInstanceResponse;
     }
 
     /**
@@ -141,11 +141,11 @@ public class DistributeKmsPermissionClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DistributeKmsPermissionResponse doGet(String path, DistributeKmsPermissionRequest requestObj, Map<String, String> head) throws Exception {
+    public CancelPreMigrateInstanceResponse doGet(String path, CancelPreMigrateInstanceRequest requestObj, Map<String, String> head) throws Exception {
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpGet(path, requestParams, head);
         log.info("doGet end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, DistributeKmsPermissionResponse.class);
+        return JSON.parseObject(response, CancelPreMigrateInstanceResponse.class);
     }
 
 
@@ -155,7 +155,7 @@ public class DistributeKmsPermissionClient extends BaseClient {
      * @param requestObj
      * @return
      */
-    private JSONObject getRequestParams(DistributeKmsPermissionRequest requestObj) throws Exception {
+    private JSONObject getRequestParams(CancelPreMigrateInstanceRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置证书
         getCommonParams(credential, requestParams);

@@ -26,8 +26,8 @@ public class ModifyInstanceImageRequest{
 
     /**云主机系统盘配置参数。若不指定该参数，则按照系统默认值进行分配。通用型N2、N3主机支持更换操作系统时指定系统盘大小。
 [SystemDisk](https://docs.ksyun.com/documents/5866)*/
-    @KsYunField(name="SystemDisk")
-    private String SystemDisk;
+    @KsYunField(name="SystemDisk.DiskSize")
+    private Integer SystemDiskDiskSize;
 
     /**实例开机密码
 最短8字符，最长32字符，必须包含大小写英文字符和数字，支持其他可见字符*/
@@ -42,6 +42,14 @@ public class ModifyInstanceImageRequest{
 true/false,默认false*/
     @KsYunField(name="KeepImageLogin")
     private Boolean KeepImageLogin;
+
+    /**不能给默认值，不传默认按价格体系配置systemDisk属性中第一个创建*/
+    @KsYunField(name="SystemDisk.DiskType")
+    private String SystemDiskDiskType;
+
+    /**扩容 offline 离线扩容| online 在线扩容*/
+    @KsYunField(name="SystemDisk.ResizeType")
+    private String SystemDiskResizeType;
 
 
 }

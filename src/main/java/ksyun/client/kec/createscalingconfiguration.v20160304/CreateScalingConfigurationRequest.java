@@ -81,10 +81,9 @@ public class CreateScalingConfigurationRequest{
         private Boolean DeleteWithInstance;
     }
 
-    /**系统盘类型 
- Local_SSD：本地SSD硬盘；SSD2.0：SSD云硬盘2.0；SATA2.0：普通云硬盘2.0；SSD3.0：SSD云硬盘3.0*/
-    @KsYunField(name="SystemDisk")
-    private List<String> SystemDiskList;
+    /**系统盘大小，最小值为0，最大值为500*/
+    @KsYunField(name="SystemDisk.DiskSize")
+    private String SystemDiskDiskSize;
 
     /**弹性IP的带宽 
  */
@@ -143,6 +142,14 @@ public class CreateScalingConfigurationRequest{
         @KsYunField(name="Value")
         private String Value;
     }
+
+    /**不能给默认值，不传默认按价格体系配置systemDisk属性中第一个创建*/
+    @KsYunField(name="SystemDisk.DiskType")
+    private String SystemDiskDiskType;
+
+    /**扩容 offline 离线扩容| online 在线扩容*/
+    @KsYunField(name="SystemDisk.ResizeType")
+    private String SystemDiskResizeType;
 
 
 }

@@ -24,9 +24,9 @@ public class CreateModelRequest{
     @KsYunField(name="InstanceType")
     private String InstanceType;
 
-    /**云主机系统盘配置参数。若不指定该参数，则按照系统默认值进行分配。通用型N2、N3主机支持更换操作系统时指定系统盘大小。*/
-    @KsYunField(name="SystemDisk")
-    private String SystemDisk;
+    /**系统盘内存大小，最小值为0，最大值为500*/
+    @KsYunField(name="SystemDisk.DiskSize")
+    private String SystemDiskDiskSize;
 
     /**数据卷容量，单位GB，容量限制依据[实例套餐类型定义](https://docs.ksyun.com/documents/705)变化，如果调用时未指定，则为相应实例套餐类型最小值。InstanceType为通用型主机时，此参数不生效。*/
     @KsYunField(name="DataDiskGb")
@@ -136,6 +136,14 @@ Monthly(包年包月）、Daily（按量付费（按日月结）)、 HourlyInsta
 ModelTest001*/
     @KsYunField(name="ModelName")
     private String ModelName;
+
+    /**不能给默认值，不传默认按价格体系配置systemDisk属性中第一个创建*/
+    @KsYunField(name="SystemDisk.DiskType")
+    private String SystemDiskDiskType;
+
+    /**扩容 offline 离线扩容| online 在线扩容*/
+    @KsYunField(name="SystemDisk.ResizeType")
+    private String SystemDiskResizeType;
 
 
 }
