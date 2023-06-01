@@ -1,4 +1,4 @@
-package ksyun.client.kec.distributekmspermission.v20160304;
+package ksyun.client.kec.cancelpremigrateinstance.v20160304;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;
@@ -8,12 +8,12 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname DistributeKmsPermissionResponse
-* @Description DistributeKmsPermission 返回体
+* @Classname CancelPreMigrateInstanceResponse
+* @Description CancelPreMigrateInstance 返回体
 */
 @Data
 @ToString
-public class DistributeKmsPermissionResponse extends BaseResponseModel {
+public class CancelPreMigrateInstanceResponse extends BaseResponseModel {
 
     /**
      * 请求id

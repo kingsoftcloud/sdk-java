@@ -35,7 +35,10 @@ public class DescribeInstancesRequest{
     private List<String> ProjectIdList;
 
     /**待返回实例信息的项目ID列表，N的范围为1-100
-支持如下过滤器名称<br>instance-id 实例ID<br>subnet-id 子网ID<br>vpc-id vpc ID<br>instance-name 实例名称<br>instance-type 实例类型<br>private-ip-address 内网IP<br>image-id 镜像ID<br>charge-type 计费模式（Monthly（包年包月）、Daily（按量付费（按日月结））、HourlyInstantSettlement（按量付费）、Spot（竞价型实例））<br>ProjectId.N 所属项目<br>network-interface.subnet-id 网络接口关联的子网ID<br>network-interface.network-interface-id 网卡的ID<br>network-interface.group-id 网络接口关联的安全组ID<br>instance-state.name [实例状态](https://docs.ksyun.com/documents/836)<br>availability-zone-name [可用区（AvailabilityZone）](https://docs.ksyun.com/documents/67)*/
+支持如下过滤器名称<br>instance-id 实例ID<br>subnet-id 子网ID<br>vpc-id vpc ID<br>instance-name 实例名称<br>instance-type 实例类型<br>private-ip-address 内网IP<br>image-id 镜像ID<br>charge-type 计费模式（1（包年包月）、5（按量付费（按日月结））、87（按量付费）、810（竞价型实例））2（按小时计费）, 
+
+84（PostPaidByHour)
+<br>ProjectId.N 所属项目<br>network-interface.subnet-id 网络接口关联的子网ID<br>network-interface.network-interface-id 网卡的ID<br>network-interface.group-id 网络接口关联的安全组ID<br>instance-state.name [实例状态](https://docs.ksyun.com/documents/836)<br>availability-zone-name [可用区（AvailabilityZone）](https://docs.ksyun.com/documents/67)*/
     @KsYunField(name="Filter")
     private List<FilterDto> FilterList;
 

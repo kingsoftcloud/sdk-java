@@ -118,5 +118,17 @@ public class RunInstancesRequest{
         private String PrivateIpAddress;
     }
 
+    /**用户自定义数据*/
+    @KsYunField(name="Userdata")
+    private String Userdata;
+
+    /**系统盘类型*/
+    @KsYunField(name="SystemDisk.DiskType")
+    private String SystemDiskDiskType;
+
+    /**系统盘大小*/
+    @KsYunField(name="SystemDisk.DiskSize")
+    private Integer SystemDiskDiskSize;
+
 
 }
