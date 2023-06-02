@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DeleteLocalVolumeSnapshotRequest{
     /**快照Id，支持批量删除，格式为LocalVolumeSnapshotId.N=XXX，N=1,2,3…100。*/
-    @KsYunField(name="LocalVolumeSnapshotId",type=2)
+    @KsYunField(name="LocalVolumeSnapshotId")
     private List<String> LocalVolumeSnapshotIdList;
 
 
