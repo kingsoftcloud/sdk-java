@@ -1,4 +1,4 @@
-package client.sts.assumerole.v20151101;
+package ksyun.client.sts.assumerole.v20151101;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
