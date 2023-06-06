@@ -1,4 +1,4 @@
-package client.trade.setrenewal.v20200831;
+package ksyun.client.trade.setrenewal.v20200831;
 import common.annotation.KsYunField;
 import lombok.Builder;
 import lombok.Data;

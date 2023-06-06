@@ -1,4 +1,4 @@
-package client.actiontrail.listoperatelogs.v20190401;
+package ksyun.client.actiontrail.listoperatelogs.v20190401;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;

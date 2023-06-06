@@ -1,4 +1,4 @@
-package client.bill.getmonthbill.v20180601;
+package ksyun.client.bill.getmonthbill.v20180601;
 import common.annotation.KsYunField;
 import lombok.Builder;
 import lombok.Data;

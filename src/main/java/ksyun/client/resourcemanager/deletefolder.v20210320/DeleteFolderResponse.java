@@ -1,4 +1,4 @@
-package client.resourcemanager.deletefolder.v20210320;
+package ksyun.client.resourcemanager.deletefolder.v20210320;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;

@@ -1,4 +1,4 @@
-package client.trade.setrenewal.v20200831;
+package ksyun.client.trade.setrenewal.v20200831;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;

@@ -1,4 +1,4 @@
-package client.trade.describeinstances.v20200114;
+package ksyun.client.trade.describeinstances.v20200114;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;

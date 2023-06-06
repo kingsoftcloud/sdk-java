@@ -1,4 +1,4 @@
-package client.bill.getmonthconsume.v20180601;
+package ksyun.client.bill.getmonthconsume.v20180601;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;

@@ -1,4 +1,4 @@
-package client.resourcemanager.moveaccount.v20210320;
+package ksyun.client.resourcemanager.moveaccount.v20210320;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;

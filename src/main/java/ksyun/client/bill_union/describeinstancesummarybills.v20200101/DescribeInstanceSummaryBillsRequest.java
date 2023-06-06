@@ -1,4 +1,4 @@
-package client.bill_union.describeinstancesummarybills.v20200101;
+package ksyun.client.bill_union.describeinstancesummarybills.v20200101;
 import common.annotation.KsYunField;
 import lombok.Builder;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package client.bill.getmonthbill.v20180601;
+package ksyun.client.bill.getmonthbill.v20180601;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;

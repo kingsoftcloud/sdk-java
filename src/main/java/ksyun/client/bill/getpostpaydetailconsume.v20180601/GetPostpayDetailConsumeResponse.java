@@ -1,4 +1,4 @@
-package client.bill.getpostpaydetailconsume.v20180601;
+package ksyun.client.bill.getpostpaydetailconsume.v20180601;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;

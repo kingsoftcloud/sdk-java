@@ -1,4 +1,4 @@
-package client.resourcemanager.createfolder.v20210320;
+package ksyun.client.resourcemanager.createfolder.v20210320;
 import common.annotation.KsYunField;
 import lombok.Builder;
 import lombok.Data;

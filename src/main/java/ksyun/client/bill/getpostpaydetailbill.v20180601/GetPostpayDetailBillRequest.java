@@ -1,4 +1,4 @@
-package client.bill.getpostpaydetailbill.v20180601;
+package ksyun.client.bill.getpostpaydetailbill.v20180601;
 import common.annotation.KsYunField;
 import lombok.Builder;
 import lombok.Data;

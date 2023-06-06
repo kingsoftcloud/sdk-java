@@ -1,4 +1,4 @@
-package client.kead.describeblockip.v20200101;
+package ksyun.client.kead.describeblockip.v20200101;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;

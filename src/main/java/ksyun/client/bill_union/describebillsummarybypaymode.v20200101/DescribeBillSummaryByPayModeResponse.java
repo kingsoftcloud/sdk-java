@@ -1,4 +1,4 @@
-package client.bill_union.describebillsummarybypaymode.v20200101;
+package ksyun.client.bill_union.describebillsummarybypaymode.v20200101;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;
