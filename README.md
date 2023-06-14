@@ -48,4 +48,4 @@ public static void main(String[] args) {
 ```
 
 # 更多示例
-参见金山云控制台-API Explorer-对应服务-SDK示例
+参见金山云控制台-API Explorer-对应服务-SDK示例。
