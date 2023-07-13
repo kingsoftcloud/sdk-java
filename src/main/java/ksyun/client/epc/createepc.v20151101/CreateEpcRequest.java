@@ -273,5 +273,14 @@ SRaid0：单盘SRaid0无限制，仅针对大数据业务自身有冗余的场�
     @KsYunField(name="SystemVolumeSize")
     private String SystemVolumeSize;
 
+    /**roce网络
+有效值： Open：开启  Close：关闭 
+
+
+
+*/
+    @KsYunField(name="RoceNetwork")
+    private String RoceNetwork;
+
 
 }
