@@ -51,5 +51,9 @@ true/false,默认false*/
     @KsYunField(name="SystemDisk.ResizeType")
     private String SystemDiskResizeType;
 
+    /**用户自定义数据，必须是base64编码*/
+    @KsYunField(name="UserData")
+    private String UserData;
+
 
 }

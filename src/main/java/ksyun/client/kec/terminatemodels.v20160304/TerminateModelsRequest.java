@@ -14,9 +14,13 @@ import java.util.Arrays;
 */
 @Data
 public class TerminateModelsRequest{
-    /**预删除的实例启动模板ID*/
+    /**只传ModelId删除模板以及模板下对应的版本*/
     @KsYunField(name="ModelId")
-    private List<String> ModelIdList;
+    private String ModelId;
+
+    /**传ModelId和ModelVersion，删除某个模板下的版本*/
+    @KsYunField(name="ModelVersion")
+    private Integer ModelVersion;
 
 
 }

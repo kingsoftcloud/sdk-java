@@ -130,5 +130,17 @@ public class RunInstancesRequest{
     @KsYunField(name="SystemDisk.DiskSize")
     private Integer SystemDiskDiskSize;
 
+    /**实例启动模版ID，如填写了此项，则RunInstances其他参数只有MaxCount、MinCount生效，其他不生效，如果批量创建，实例名称后缀依然存在。【传modelId，使用默认版本。传modelId和modelVersion，使用传递的版本】*/
+    @KsYunField(name="ModelId")
+    private String ModelId;
+
+    /**实例启动模板版本号。如不指定，则采用默认版本号*/
+    @KsYunField(name="ModelVersion")
+    private Integer ModelVersion;
+
+    /**整机镜像所开云盘数据盘的类型*/
+    @KsYunField(name="AssembledImageDataDiskType")
+    private String AssembledImageDataDiskType;
+
 
 }

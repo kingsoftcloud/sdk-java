@@ -145,5 +145,9 @@ ModelTest001*/
     @KsYunField(name="SystemDisk.ResizeType")
     private String SystemDiskResizeType;
 
+    /**模板描述*/
+    @KsYunField(name="VersionDetail")
+    private String VersionDetail;
+
 
 }
