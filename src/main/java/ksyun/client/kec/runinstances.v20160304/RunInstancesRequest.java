@@ -142,5 +142,9 @@ public class RunInstancesRequest{
     @KsYunField(name="AssembledImageDataDiskType")
     private String AssembledImageDataDiskType;
 
+    /**整机镜像是否展开镜像中的数据盘*/
+    @KsYunField(name="AutoCreateEbs")
+    private Boolean AutoCreateEbs;
+
 
 }
