@@ -98,6 +98,9 @@ public class RunInstancesRequest{
         /**数据盘大小*/
         @KsYunField(name="Size")
         private Integer Size;
+        /**创建云盘所用的快照*/
+        @KsYunField(name="SnapshotId")
+        private String SnapshotId;
     }
 
     /**辅网卡*/
