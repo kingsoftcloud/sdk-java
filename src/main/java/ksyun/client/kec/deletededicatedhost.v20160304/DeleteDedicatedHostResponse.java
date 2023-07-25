@@ -1,4 +1,4 @@
-package client.iam.listentityforpolicy.v20151101;
+package ksyun.client.kec.deletededicatedhost.v20160304;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;
@@ -8,12 +8,12 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname ListEntityForPolicyResponse
-* @Description ListEntityForPolicy 返回体
+* @Classname DeleteDedicatedHostResponse
+* @Description DeleteDedicatedHost 返回体
 */
 @Data
 @ToString
-public class ListEntityForPolicyResponse extends BaseResponseModel {
+public class DeleteDedicatedHostResponse extends BaseResponseModel {
 
     /**
      * 请求id

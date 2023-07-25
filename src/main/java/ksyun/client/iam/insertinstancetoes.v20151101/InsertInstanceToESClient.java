@@ -1,4 +1,4 @@
-package client.iam.listentityforpolicy.v20151101;
+package ksyun.client.iam.insertinstancetoes.v20151101;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -11,14 +11,14 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.Map;
 
 /**
-* @Classname ListEntityForPolicyClient
-* @Description 重启实例
+* @Classname InsertInstanceToESClient
+* @Description 非标实例插入es
 */
 @Slf4j
-public class ListEntityForPolicyClient extends BaseClient {
+public class InsertInstanceToESClient extends BaseClient {
     private final static String service = "iam";
     private final static String version = "2015-11-01";
-    private final static String action = "ListEntityForPolicy";
+    private final static String action = "InsertInstanceToES";
 
 
     /**
@@ -27,7 +27,7 @@ public class ListEntityForPolicyClient extends BaseClient {
     private Credential credential;
 
 
-    public ListEntityForPolicyClient(Credential credential) {
+    public InsertInstanceToESClient(Credential credential) {
         this.credential = credential;
     }
 
@@ -40,7 +40,7 @@ public class ListEntityForPolicyClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public ListEntityForPolicyResponse doPost(String path, ListEntityForPolicyRequest requestObj) throws Exception {
+    public InsertInstanceToESResponse doPost(String path, InsertInstanceToESRequest requestObj) throws Exception {
         return doPost(path, requestObj, null);
     }
 
@@ -53,11 +53,11 @@ public class ListEntityForPolicyClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public ListEntityForPolicyResponse doPost(String path, ListEntityForPolicyRequest requestObj, Map<String, String> head) throws Exception {
+    public InsertInstanceToESResponse doPost(String path, InsertInstanceToESRequest requestObj, Map<String, String> head) throws Exception {
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpPost(path, requestParams, head);
         log.info("doPost end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, ListEntityForPolicyResponse.class);
+        return JSON.parseObject(response, InsertInstanceToESResponse.class);
     }
 
 
@@ -69,7 +69,7 @@ public class ListEntityForPolicyClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public ListEntityForPolicyResponse doGet(String path, ListEntityForPolicyRequest requestObj) throws Exception {
+    public InsertInstanceToESResponse doGet(String path, InsertInstanceToESRequest requestObj) throws Exception {
         return doGet(path, requestObj, null);
     }
 
@@ -81,7 +81,7 @@ public class ListEntityForPolicyClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public ListEntityForPolicyResponse doDelete(String path, ListEntityForPolicyRequest requestObj) throws Exception {
+    public InsertInstanceToESResponse doDelete(String path, InsertInstanceToESRequest requestObj) throws Exception {
         return doDelete(path, requestObj, null);
     }
 
@@ -94,12 +94,12 @@ public class ListEntityForPolicyClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public ListEntityForPolicyResponse doDelete(String path, ListEntityForPolicyRequest requestObj, Map<String, String> head) throws Exception {
+    public InsertInstanceToESResponse doDelete(String path, InsertInstanceToESRequest requestObj, Map<String, String> head) throws Exception {
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpDelete(path, requestParams, head);
         log.info("doDelete end,path:{},params:{},head:{}", path, requestParams, head);
-        ListEntityForPolicyResponse ListEntityForPolicyResponse = JSON.parseObject(response, ListEntityForPolicyResponse.class);
-        return ListEntityForPolicyResponse;
+        InsertInstanceToESResponse InsertInstanceToESResponse = JSON.parseObject(response, InsertInstanceToESResponse.class);
+        return InsertInstanceToESResponse;
     }
 
 
@@ -111,7 +111,7 @@ public class ListEntityForPolicyClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public ListEntityForPolicyResponse doPut(String path, ListEntityForPolicyRequest requestObj) throws Exception {
+    public InsertInstanceToESResponse doPut(String path, InsertInstanceToESRequest requestObj) throws Exception {
         return doPut(path, requestObj, null);
     }
 
@@ -124,12 +124,12 @@ public class ListEntityForPolicyClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public ListEntityForPolicyResponse doPut(String path, ListEntityForPolicyRequest requestObj, Map<String, String> head) throws Exception {
+    public InsertInstanceToESResponse doPut(String path, InsertInstanceToESRequest requestObj, Map<String, String> head) throws Exception {
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpPut(path, requestParams, head);
         log.info("httpPut end,path:{},params:{},head:{}", path, requestParams, head);
-        ListEntityForPolicyResponse ListEntityForPolicyResponse = JSON.parseObject(response, ListEntityForPolicyResponse.class);
-        return ListEntityForPolicyResponse;
+        InsertInstanceToESResponse InsertInstanceToESResponse = JSON.parseObject(response, InsertInstanceToESResponse.class);
+        return InsertInstanceToESResponse;
     }
 
     /**
@@ -141,11 +141,11 @@ public class ListEntityForPolicyClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public ListEntityForPolicyResponse doGet(String path, ListEntityForPolicyRequest requestObj, Map<String, String> head) throws Exception {
+    public InsertInstanceToESResponse doGet(String path, InsertInstanceToESRequest requestObj, Map<String, String> head) throws Exception {
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpGet(path, requestParams, head);
         log.info("doGet end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, ListEntityForPolicyResponse.class);
+        return JSON.parseObject(response, InsertInstanceToESResponse.class);
     }
 
 
@@ -155,7 +155,7 @@ public class ListEntityForPolicyClient extends BaseClient {
      * @param requestObj
      * @return
      */
-    private JSONObject getRequestParams(ListEntityForPolicyRequest requestObj) throws Exception {
+    private JSONObject getRequestParams(InsertInstanceToESRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置证书
         getCommonParams(credential, requestParams);

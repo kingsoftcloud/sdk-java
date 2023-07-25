@@ -18,5 +18,9 @@ public class GetLoginProfileRequest{
     @KsYunField(name="UserName")
     private String UserName;
 
+    /***/
+    @KsYunField(name="NotCheckPassword")
+    private Integer NotCheckPassword;
+
 
 }
