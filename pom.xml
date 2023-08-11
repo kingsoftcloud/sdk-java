@@ -7,12 +7,62 @@
   <groupId>com.ksyun</groupId>
   <artifactId>ksyun-java-sdk</artifactId>
   <version>1.2.4</version>
+  <packaging>jar</packaging>
 
+  <name>KSYUN SDK for Java</name>
 
-  <name>ksyun-billing-java-sdk</name>
+  <description>
+    The KSYUN Web Services SDK for Java provides Java APIs
+    for building software on KSYUN' cost-effective, scalable, and reliable
+    infrastructure products. The KSYUN Java SDK allows developers to code
+    against APIs for all of KSYUN's infrastructure web services (KSC
+    S3, KSC KEC, KSC RDS etc).
+  </description>
+
+  <url>https://github.com/kingsoftcloud/sdk-java</url>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>https://www.ksyun.com/apache2.0</url>
+    </license>
+  </licenses>
+
+  <scm>
+    <url>https://github.com/kingsoftcloud/sdk-java.git</url>
+    <connection>https://github.com/kingsoftcloud/sdk-java.git</connection>
+  </scm>
+
+  <!-- 开发者信息 -->
+  <developers>
+    <developer>
+      <id>ksyun-java-sdk</id>
+      <name>Kingsoft-Cloud</name>
+      <email>ksyun@kingsoft.com</email>
+      <roles>
+        <role>Project Manager</role>
+        <role>Architect</role>
+      </roles>
+      <organization>com.ksyun</organization>
+      <organizationUrl>https://github.com/kingsoftcloud/sdk-java</organizationUrl>
+      <properties>
+        <dept>No</dept>
+      </properties>
+      <timezone>-5</timezone>
+    </developer>
+  </developers>
+
 
   <properties>
+    <jre.version>1.8</jre.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <skipTests>true</skipTests>
+    <dep.maven-surefire-plugin.version>2.9</dep.maven-surefire-plugin.version>
+    <httpcomponents.httpclient.version>4.5.2</httpcomponents.httpclient.version>
+    <dep.commons-lang.version>2.6</dep.commons-lang.version>
+    <dep.maven-eclipse-plugin.version>2.10</dep.maven-eclipse-plugin.version>
+    <dep.maven-source-plugin.version>3.2.0</dep.maven-source-plugin.version>
   </properties>
 
   <dependencies>
@@ -66,8 +116,8 @@
       <artifactId>commons-lang3</artifactId>
       <version>3.5</version>
     </dependency>
-
-    <dependency>
+	
+	<dependency>
       <groupId>com.ksyun</groupId>
       <artifactId>ksc-sdk-java-core</artifactId>
       <version>0.3.31</version>
@@ -75,124 +125,85 @@
 
   </dependencies>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.sonatype.plugins</groupId>
-        <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>1.6.9</version>
-        <extensions>true</extensions>
-        <configuration>
-          <serverId>ossrh</serverId>
-          <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
-          <autoReleaseAfterClose>true</autoReleaseAfterClose>
-        </configuration>
-      </plugin>
+  <profiles>
+    <profile>
+      <id>sonatype-oss-release</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <build>
+        <plugins>
+          <!--发布到中央SNAPSHOT仓库插件-->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+              <source>8</source>
+              <target>8</target>
+            </configuration>
+          </plugin>
 
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-          <source>8</source>
-          <target>8</target>
-        </configuration>
-      </plugin>
+          <!--配置生成Javadoc包-->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>2.9.1</version>
+            <configuration>
+              <!-- jdk1.8要加上，1.7要去掉，否则会报错 -->
+              <additionalJOptions>
+                <additionalJOption>-Xdoclint:none</additionalJOption>
+              </additionalJOptions>
+            </configuration>
+            <executions>
+              <execution>
+                <id>attach-javadocs</id>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <!--配置生成源码包-->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-source-plugin</artifactId>
+            <version>2.2.1</version>
+            <executions>
+              <execution>
+                <id>attach-sources</id>
+                <goals>
+                  <goal>jar-no-fork</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
 
-      <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-        <version>2.5.6</version>
-        <executions>
-          <execution>
-            <id>repackage</id>
-            <goals>
-              <goal>repackage</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <mainClass>planReplaceExample</mainClass>
-        </configuration>
-      </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+            <configuration>
+              <!-- 这个configuration必须配置，用于gpg非交互式明码输出 -->
+              <gpgArguments>
+                <arg>--pinentry-mode</arg>
+                <arg>loopback</arg>
+              </gpgArguments>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-source-plugin</artifactId>
-        <version>3.0.1</version>
-        <executions>
-          <execution>
-            <id>attach-sources</id>
-            <goals>
-              <goal>jar-no-fork</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>3.0.1</version>
-        <configuration>
-          <!-- jdk1.8要加上，1.7要去掉，否则会报错 -->
-          <additionalJOptions>
-            <additionalJOption>-Xdoclint:none</additionalJOption>
-          </additionalJOptions>
-        </configuration>
-        <executions>
-          <execution>
-            <id>attach-javadocs</id>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-
-    <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-deploy-plugin</artifactId>
-        <version>3.1.0</version>
-      </plugin> 
-             
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-gpg-plugin</artifactId>
-        <version>3.0.1</version>
-        <executions>
-          <execution>
-            <id>sign-artifacts</id>
-            <phase>verify</phase>
-            <goals>
-              <goal>sign</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-
-    <resources>
-      <resource>
-        <directory>src/main/resources</directory>
-        <filtering>true</filtering>
-      </resource>
-      <resource>
-        <directory>src/main/java</directory>
-        <includes>
-          <include>**/*.xml</include>
-        </includes>
-      </resource>
-      <resource>
-        <directory>lib</directory>
-        <targetPath>/BOOT-INF/lib/</targetPath>
-        <includes>
-          <include>**/*.jar</include>
-        </includes>
-      </resource>
-    </resources>
-
-  </build>
-
-<distributionManagement>
+  <distributionManagement>
     <snapshotRepository>
       <id>ossrh</id>
       <url>https://oss.sonatype.org/content/repositories/snapshots</url>
