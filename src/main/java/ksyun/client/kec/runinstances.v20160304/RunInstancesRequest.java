@@ -122,8 +122,8 @@ public class RunInstancesRequest{
     }
 
     /**用户自定义数据*/
-    @KsYunField(name="Userdata")
-    private String Userdata;
+    @KsYunField(name="UserData")
+    private String UserData;
 
     /**系统盘类型*/
     @KsYunField(name="SystemDisk.DiskType")

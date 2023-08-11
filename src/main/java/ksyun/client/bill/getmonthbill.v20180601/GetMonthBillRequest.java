@@ -1,4 +1,5 @@
 package ksyun.client.bill.getmonthbill.v20180601;
+
 import common.annotation.KsYunField;
 import lombok.Builder;
 import lombok.Data;
@@ -13,9 +14,13 @@ import java.util.Arrays;
 */
 @Data
 public class GetMonthBillRequest{
-    /**GetMonthBill*/
-    @KsYunField(name="Action")
-    private String Action;
+    /**必选参数，账单开始月份*/
+    @KsYunField(name="BillStartMonth")
+    private String BillStartMonth;
+
+    /**必选参数，账单结束月份*/
+    @KsYunField(name="BillEndMonth")
+    private String BillEndMonth;
 
 
 }

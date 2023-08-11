@@ -14,7 +14,7 @@ import java.util.Arrays;
 */
 @Data
 public class CreateSnapshotRequest{
-    /**只支持是EBS3.0的硬盘，且状态为使用中或待挂载，使用中时主机状态为运行中或停止。长度36个字符，包括字母、数字、-、_*/
+    /**云硬盘创建快照时需为使用中或待挂载状态，使用中时主机状态为运行中或停止。长度36个字符，包括字母、数字、-、_*/
     @KsYunField(name="VolumeId")
     private String VolumeId;
 
@@ -26,7 +26,7 @@ public class CreateSnapshotRequest{
     @KsYunField(name="SnapshotDesc")
     private String SnapshotDesc;
 
-    /**快照类型，默认CommonSnapShot*/
+    /**快照类型支持极速可用快照（LocalSnapShot）、普通快照（CommonSnapShot），默认CommonSnapShot*/
     @KsYunField(name="SnapshotType")
     private String SnapshotType;
 

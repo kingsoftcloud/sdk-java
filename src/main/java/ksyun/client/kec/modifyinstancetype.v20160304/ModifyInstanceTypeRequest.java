@@ -79,5 +79,10 @@ true/false*/
     @KsYunField(name="SystemDisk.ResizeType")
     private String SystemDiskResizeType;
 
+    /**	
+支持快速开盘/快速变更，该参数仅对本地盘/本地盘机型/本地盘快照生效*/
+    @KsYunField(name="InstantAccess")
+    private Boolean InstantAccess;
+
 
 }

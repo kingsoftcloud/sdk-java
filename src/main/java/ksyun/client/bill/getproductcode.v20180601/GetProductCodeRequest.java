@@ -1,4 +1,5 @@
 package ksyun.client.bill.getproductcode.v20180601;
+
 import common.annotation.KsYunField;
 import lombok.Builder;
 import lombok.Data;

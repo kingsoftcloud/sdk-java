@@ -3,19 +3,22 @@ package common.utils;
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.config.RequestConfig;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.*;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
-
-import java.net.URLEncoder;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.io.IOException;
+import java.net.*;
+import java.nio.charset.StandardCharsets;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @Classname HttpClientUtils
@@ -88,41 +91,66 @@ public class HttpClientUtils {
             for (Map.Entry<String, String> entry : head.entrySet()) {
                 httpPost.addHeader(entry.getKey(), entry.getValue());
             }
+
+
             //设置请求参数
             String requestParams = "";
             if (paramMap != null) {
                 if (head.get("Content-Type") != null && head.get("Content-Type").equalsIgnoreCase("application/x-www" +
                         "-form" +
                         "-urlencoded")) {
-                    StringBuilder params = new StringBuilder("");
-                    for (Map.Entry<String, Object> entry : paramMap.entrySet()) {
-                        params.append("&");
-                        params.append(entry.getKey());
-                        params.append("=");
-                        params.append(URLEncoder.encode(String.valueOf(entry.getValue())));
-                    }
-                    if (params.length() > 0) {
-                        requestParams = params.toString().substring(1);
-                    }
+                    List<BasicNameValuePair> nameValuePairList = new ArrayList<>();
+                    List<String> keyList = paramMap.keySet().stream().sorted().collect(Collectors.toList());
+                    keyList.stream().forEach(key -> {
+                        BasicNameValuePair basicNameValuePair = new BasicNameValuePair(key, String.valueOf(paramMap.get(key)));
+                        nameValuePairList.add(basicNameValuePair);
+                    });
+                    //application/x-www-form-urlencoded
+                    UrlEncodedFormEntity urlEncodedFormEntity = new UrlEncodedFormEntity(nameValuePairList, StandardCharsets.UTF_8);
+                    httpPost.setEntity(urlEncodedFormEntity);
                 } else if (head.get("Content-Type") != null && head.get("Content-Type").equalsIgnoreCase("application" +
                         "/json")) {
+
+                    //application/json
                     requestParams = new JSONObject().toJSONString(paramMap);
+                    StringEntity stringEntity = new StringEntity(requestParams);
+                    httpPost.setEntity(stringEntity);
                 }
             }
-            StringEntity stringEntity = new StringEntity(requestParams);
-            httpPost.setEntity(stringEntity);
-            log.info("httpPost begin,url:{},params:{},head:{}", url, requestParams, head);
+
+            String httpClientToCurl = convertHttpClientToCurl(httpPost);
+            log.info("httpClientToCurl:{}", httpClientToCurl);
+
             response = client.execute(httpPost);
             HttpEntity entity = response.getEntity();
             result = EntityUtils.toString(entity, charSet);
             JSONObject jsonObject = JSONObject.parseObject(result);
-            jsonObject.put("result",result);
-            result=jsonObject.toJSONString();
-            log.info("httpPost end,response:{}",result);
+            jsonObject.put("result", result);
+            result = jsonObject.toJSONString();
+            log.info("httpPost end,response:{}", result);
         } finally {
             response.close();
         }
         return result;
+    }
+
+    public static String convertHttpClientToCurl(HttpPost httpPost) throws IOException {
+        StringBuilder curlCommand = new StringBuilder("curl ");
+        // 添加 URL
+        curlCommand.append("'" + httpPost.getURI() + "' ");
+        // 添加请求方法
+        curlCommand.append("-X " + httpPost.getMethod() + " ");
+        // 添加请求头
+        for (Header header : httpPost.getAllHeaders()) {
+            curlCommand.append("-H '" + header.getName() + ": " + header.getValue() + "' ");
+        }
+        // 添加请求体
+        if (httpPost.getEntity() instanceof StringEntity) {
+            StringEntity stringEntity = (StringEntity) httpPost.getEntity();
+            String requestBody = EntityUtils.toString(stringEntity);
+            curlCommand.append("-d '" + requestBody + "' ");
+        }
+        return curlCommand.toString();
     }
 
 
@@ -185,6 +213,7 @@ public class HttpClientUtils {
         if (params.length() > 0) {
             url = url.indexOf("?") > 0 ? url + params.toString() : url + "?" + params.toString().substring(1);
         }
+
         return httpGet(url, head, charSet);
     }
 
@@ -209,18 +238,19 @@ public class HttpClientUtils {
         for (Map.Entry<String, String> entry : head.entrySet()) {
             getRequest.addHeader(entry.getKey(), entry.getValue());
         }
+
         getRequest.setConfig(requestConfig);
         try {
             log.info("httpGet begin,url:{},head:{}:{}", url, head);
             HttpResponse response = client.execute(getRequest);
-            log.info("httpGet end,response:{}",response);
+            log.info("httpGet end,response:{}", response);
             HttpEntity entity = response.getEntity();
             if (null != entity) {
                 String result = EntityUtils.toString(entity, charSet);
                 JSONObject jsonObject = JSONObject.parseObject(result);
-                jsonObject.put("result",result);
-                result=jsonObject.toJSONString();
-                log.info("httpGet end,response:{}",result);
+                jsonObject.put("result", result);
+                result = jsonObject.toJSONString();
+                log.info("httpGet end,response:{}", result);
                 return result;
             }
             return "";
@@ -295,6 +325,7 @@ public class HttpClientUtils {
 
     /**
      * delete 请求
+     *
      * @param url
      * @param head
      * @param charSet
@@ -318,14 +349,14 @@ public class HttpClientUtils {
         try {
             log.info("httpDelete begin,url:{},head:{}:{}", url, head);
             HttpResponse response = client.execute(httpDelete);
-            log.info("httpDelete end,response:{}",response);
+            log.info("httpDelete end,response:{}", response);
             HttpEntity entity = response.getEntity();
             if (null != entity) {
                 String result = EntityUtils.toString(entity, charSet);
                 JSONObject jsonObject = JSONObject.parseObject(result);
-                jsonObject.put("result",result);
-                result=jsonObject.toJSONString();
-                log.info("httpDelete end,response:{}",result);
+                jsonObject.put("result", result);
+                result = jsonObject.toJSONString();
+                log.info("httpDelete end,response:{}", result);
                 return result;
             }
             return "";
@@ -333,10 +364,6 @@ public class HttpClientUtils {
             httpDelete.releaseConnection();
         }
     }
-
-
-
-
 
 
     /**
@@ -353,6 +380,7 @@ public class HttpClientUtils {
 
     /**
      * httpPut
+     *
      * @param url      请求url
      * @param paramMap 请求参数
      * @param head     请求头
@@ -366,6 +394,7 @@ public class HttpClientUtils {
 
     /**
      * httpPut
+     *
      * @param url
      * @param paramMap
      * @param head
@@ -374,7 +403,7 @@ public class HttpClientUtils {
      * @throws Exception
      */
     private static String httpPut(String url, Map<String, Object> paramMap, Map<String, String> head,
-                                   String charSet) throws Exception {
+                                  String charSet) throws Exception {
         CloseableHttpClient client = HttpClients.createDefault();
         CloseableHttpResponse response = null;
         String result = "";
@@ -422,15 +451,14 @@ public class HttpClientUtils {
             HttpEntity entity = response.getEntity();
             result = EntityUtils.toString(entity, charSet);
             JSONObject jsonObject = JSONObject.parseObject(result);
-            jsonObject.put("result",result);
-            result=jsonObject.toJSONString();
-            log.info("httpPut end,response:{}",result);
+            jsonObject.put("result", result);
+            result = jsonObject.toJSONString();
+            log.info("httpPut end,response:{}", result);
         } finally {
             response.close();
         }
         return result;
     }
-
 
 
     /**
@@ -447,5 +475,6 @@ public class HttpClientUtils {
         }
         return url;
     }
+
 
 }

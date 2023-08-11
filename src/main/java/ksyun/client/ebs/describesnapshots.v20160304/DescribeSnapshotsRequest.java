@@ -14,7 +14,7 @@ import java.util.Arrays;
 */
 @Data
 public class DescribeSnapshotsRequest{
-    /**云盘ID，传入该参数可获取指定硬盘的所有快照，此时其他三个参数无效*/
+    /**云盘ID，传入该参数可获取指定硬盘的所有快照数据，此时其他参数无效*/
     @KsYunField(name="VolumeId")
     private String VolumeId;
 
@@ -22,7 +22,7 @@ public class DescribeSnapshotsRequest{
     @KsYunField(name="VolumeCategory")
     private String VolumeCategory;
 
-    /**快照ID，传入该参数可获取指定快照的信息，此时其他三个参数无效*/
+    /**快照ID，传入该参数可获取指定快照的信息，此时其他参数无效*/
     @KsYunField(name="SnapshotId")
     private String SnapshotId;
 
