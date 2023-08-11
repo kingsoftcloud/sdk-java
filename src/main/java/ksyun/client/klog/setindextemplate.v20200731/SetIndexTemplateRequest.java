@@ -38,10 +38,6 @@ public class SetIndexTemplateRequest{
     @KsYunField(name="参数名称")
     private String 参数名称;
 
-    /**-*/
-    @KsYunField(name="-")
-    private String -;
-
     /**true表示索引不区分大小写，false表示索引区分大小写*/
     @KsYunField(name="Lowercase")
     private Boolean Lowercase;
