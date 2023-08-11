@@ -148,11 +148,11 @@
         </executions>
       </plugin>
 
-     <plugin>
+    <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-deploy-plugin</artifactId>
         <version>3.1.0</version>
-      </plugin>
+      </plugin> 
              
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -192,6 +192,15 @@
 
   </build>
 
-
+<distributionManagement>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
 
 </project>
