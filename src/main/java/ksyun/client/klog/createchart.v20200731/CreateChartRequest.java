@@ -34,10 +34,6 @@ public class CreateChartRequest{
     @KsYunField(name="Display")
     private String Display;
 
-    /**-*/
-    @KsYunField(name="-")
-    private String -;
-
     /**日志池名称*/
     @KsYunField(name="LogPoolName")
     private String LogPoolName;
