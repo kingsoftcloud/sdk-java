@@ -61,7 +61,12 @@ public class GetProductCodeClient extends BaseClient {
              head = new HashMap<>();
          }
         //参数配置
-        JSONObject requestParams = getSimpleRequestParams(requestObj);
+        JSONObject requestParams = null;
+        if (head.get("Content-Type").equalsIgnoreCase("application/json")){
+             requestParams = getPostRawRequestParams(requestObj);
+        }else {
+             requestParams = getSimpleRequestParams(requestObj);
+        }
 
         //aws4 签名
         enhanceAws4Signature(head, requestParams, credential, "post");
@@ -84,6 +89,21 @@ public class GetProductCodeClient extends BaseClient {
         return doPost(path, requestObj, head);
     }
 
+    /**
+    * post 请求
+    *
+    * @param path
+    * @param requestObj
+    * @return
+    * @throws Exception
+    */
+    public GetProductCodeResponse doPostRaw(String path, GetProductCodeRequest requestObj, Map<String, String> head) throws Exception {
+        if (head == null) {
+            head = new HashMap<>();
+        }
+        head.put("Content-Type", "application/json");
+        return doPost(path, requestObj, head);
+    }
     /**
      * get 请求
      *
@@ -240,6 +260,17 @@ public class GetProductCodeClient extends BaseClient {
 
         //设置请求体请求参数
         setRequestField(requestObj, requestParams);
+        return requestParams;
+    }
+
+    private JSONObject getPostRawRequestParams(GetProductCodeRequest requestObj) throws Exception {
+        JSONObject requestParams = new JSONObject();
+        //设置接口属性
+        requestParams.put("Action", action);
+        requestParams.put("Version", version);
+
+        //设置请求体请求参数
+        setRequestFieldForPostRaw(requestObj, requestParams);
         return requestParams;
     }
 }

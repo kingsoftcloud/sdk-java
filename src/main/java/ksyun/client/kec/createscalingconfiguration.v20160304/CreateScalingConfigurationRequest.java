@@ -79,6 +79,9 @@ public class CreateScalingConfigurationRequest{
  */
         @KsYunField(name="DeleteWithInstance")
         private Boolean DeleteWithInstance;
+        /**云盘数据盘 快照id*/
+        @KsYunField(name="SnapshotId")
+        private String SnapshotId;
     }
 
     /**系统盘大小，最小值为0，最大值为500*/

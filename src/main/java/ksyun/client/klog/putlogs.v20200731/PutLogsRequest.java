@@ -22,9 +22,9 @@ public class PutLogsRequest{
     @KsYunField(name="LogPoolName")
     private String LogPoolName;
 
-    /**描述*/
-    @KsYunField(name="参数名称")
-    private String 参数名称;
+    /**-*/
+    @KsYunField(name="-")
+    private String -;
 
     /**日志时间*/
     @KsYunField(name="Time")

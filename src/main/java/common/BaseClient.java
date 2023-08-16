@@ -1,13 +1,15 @@
 package common;
 
 import com.alibaba.fastjson.JSONObject;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.module.SimpleModule;
 import common.annotation.KsYunField;
 import common.constant.ErrorCode;
 import common.exception.ClientException;
 import lombok.Data;
-import lombok.extern.log4j.Log4j;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import common.annotation.KsYunFieldPropertySerializer;
 
 import java.lang.reflect.Field;
 import java.math.BigDecimal;
@@ -88,13 +90,17 @@ public class BaseClient {
                         continue;
                     }
 
+                    Object fieldValue = field.get(requestObj);
+                    if (fieldValue==null){
+                        continue;
+                    }
+
                     KsYunField firstKsYunField = field.getAnnotation(KsYunField.class);
                     String fieldTypeName = field.getType().getName();
                     log.info("fieldTypeName:{}", fieldTypeName);
 
                     //基本类型
                     if (basicFieldTypeNameList.contains(fieldTypeName)) {
-                        Object fieldValue = field.get(requestObj);
                         if (fieldValue == null) {
                             continue;
                         }
@@ -233,6 +239,42 @@ public class BaseClient {
         }
     }
 
+    /**
+     * 设置请求体请求参数
+     * application/json
+     *
+     * @param requestObj
+     * @param requestParams
+     * @throws Exception
+     */
+    public void setRequestFieldForPostRaw(Object requestObj, JSONObject requestParams) throws Exception {
+        fillJSONObjectForRaw(requestObj, requestParams);
+    }
+
+
+    /**
+     * 设置请求体请求参数
+     * application/json
+     * @param requestObj
+     * @param requestParams
+     * @throws Exception
+     */
+    private void fillJSONObjectForRaw(Object requestObj, JSONObject requestParams) throws Exception {
+        ObjectMapper objectMapper = new ObjectMapper();
+        SimpleModule module = new SimpleModule();
+        module.addSerializer(requestObj.getClass(), new KsYunFieldPropertySerializer());
+        objectMapper.registerModule(module);
+        String paramsJson = objectMapper.writeValueAsString(requestObj);
+
+        //to JSONObject
+        if (StringUtils.isNotEmpty(paramsJson)){
+            JSONObject.parseObject(paramsJson).entrySet().forEach(entry->{
+                requestParams.put(entry.getKey(),entry.getValue());
+            });
+        }
+
+        log.info("requestParams:{}", JSONObject.toJSONString(requestParams));
+    }
 
     public static void main(String[] args) {
 
