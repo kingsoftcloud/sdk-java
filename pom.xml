@@ -2,11 +2,11 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+  <modelVersion>1.2.6</modelVersion>
 
   <groupId>com.ksyun</groupId>
   <artifactId>ksyun-java-sdk</artifactId>
-  <version>1.2.5</version>
+  <version>1.0</version>
   <packaging>jar</packaging>
 
   <name>KSYUN SDK for Java</name>
@@ -121,6 +121,12 @@
       <groupId>com.ksyun</groupId>
       <artifactId>ksc-sdk-java-core</artifactId>
       <version>0.3.31</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.ksyun</groupId>
+      <artifactId>ksyun-sdk-java-common</artifactId>
+      <version>0.0.1</version>
     </dependency>
 
   </dependencies>
