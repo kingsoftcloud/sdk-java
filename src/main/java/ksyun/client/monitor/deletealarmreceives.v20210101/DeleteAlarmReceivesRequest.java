@@ -16,7 +16,7 @@ import java.util.Arrays;
 public class DeleteAlarmReceivesRequest{
     /**告警策略ID，详见[查询告警策略](https://docs.ksyun.com/documents/40346)*/
     @KsYunField(name="PolicyId")
-    private String PolicyId;
+    private Integer PolicyId;
 
     /**告警联系人类型。取值：
 - 1: 联系组
