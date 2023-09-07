@@ -18,5 +18,9 @@ public class DescribeMongoDBInstanceNodeRequest{
     @KsYunField(name="InstanceId")
     private String InstanceId;
 
+    /**分片集群的shard节点的ID。暂不支持批量查询。*/
+    @KsYunField(name="NodeId")
+    private String NodeId;
+
 
 }

@@ -149,5 +149,25 @@ public class RunInstancesRequest{
     @KsYunField(name="AutoCreateEbs")
     private Boolean AutoCreateEbs;
 
+    /**弹性IP的链路类型的ID */
+    @KsYunField(name="LineId")
+    private String LineId;
+
+    /**弹性IP的带宽，1，如果购买EIP，AddressBandWidth、LineId、AddressChargeType三个接口参数必须同时存在，如有其中任意一个接口参数，判断是否存在其他两个参数；2，如果选择预付费计费方式，必须有购买时长参数； |*/
+    @KsYunField(name="AddressBandWidth")
+    private Integer AddressBandWidth;
+
+    /**PrePaidByMonth ：包年包月，有到期时间，只能升带宽；PostPaidByPeak：按峰值月结，无到期时间，可升降带宽；PostPaidByDay：按日月结，无到期时间，可升降带宽；PostPaidByTransfer：按流量月结，无到期时间，可升降带宽；PostPaidByHour：按小时月结，无到期时间，可升降带宽*/
+    @KsYunField(name="AddressChargeType")
+    private String AddressChargeType;
+
+    /**弹性IP项目的ID,默认值为0*/
+    @KsYunField(name="AddressProjectId")
+    private String AddressProjectId;
+
+    /**购买时长*/
+    @KsYunField(name="AddressPurchaseTime")
+    private Integer AddressPurchaseTime;
+
 
 }
