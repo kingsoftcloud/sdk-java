@@ -26,6 +26,14 @@ public class UpdateCertificateRequest{
     @KsYunField(name="CSR")
     private String CSR;
 
+    /**联系人ID，当ContactId不为空时，Contact参数可缺省，两者并存时以ContactId为准，当ContactId不为空时，City、State、Country都不能为空*/
+    @KsYunField(name="ContactId")
+    private Integer ContactId;
+
+    /**企业信息ID，当CompanyId不为空时，CompanyName、Department、State、City、Address、CompanyPhone、PostalCode可缺省，两者并存时以CompanyId为准*/
+    @KsYunField(name="CompanyId")
+    private Integer CompanyId;
+
     /**企业名称*/
     @KsYunField(name="CompanyName")
     private String CompanyName;
@@ -46,7 +54,7 @@ public class UpdateCertificateRequest{
     @KsYunField(name="Address")
     private String Address;
 
-    /**公司电话,可为座机或者手机*/
+    /**公司电话，可为座机或者手机*/
     @KsYunField(name="CompanyPhone")
     private String CompanyPhone;
 

@@ -15,26 +15,26 @@ import java.util.Arrays;
 @Data
 public class QueryNatTopVifMonitorRequest{
     /**Nat的ID*/
-    @KsYunField(name="natId")
+    @KsYunField(name="NatId")
     private String NatId;
 
-    /**开始时间，时间格式例如:2023-08-08T18:00:00*/
-    @KsYunField(name="startTime")
+    /**开始时间，开始时间和结束时间相差10分钟,例如：2023-09-14T13:30:01*/
+    @KsYunField(name="StartTime")
     private String StartTime;
 
-    /**结束时间，时间格式例如：2023-08-08T18:08:00*/
-    @KsYunField(name="endTime")
+    /**结束时间，开始时间和结束时间相差10分钟，例如：2023-09-14T13:40:01*/
+    @KsYunField(name="EndTime")
     private String EndTime;
 
-    /**排序类型，只能传入两种：OUT/IN*/
-    @KsYunField(name="sortType")
+    /**排序顺序，默认是OUT，可选IN/OUT,区分大小写，填写其他的字符按OUT排序*/
+    @KsYunField(name="SortType")
     private String SortType;
 
-    /**实例类型，只包含两种：kec/epc*/
-    @KsYunField(name="instanceType")
+    /**查询实例类型，不填默认是kec，epc/kec*/
+    @KsYunField(name="InstanceType")
     private String InstanceType;
 
-    /**筛选ip*/
+    /**ip*/
     @KsYunField(name="ip")
     private String Ip;
 

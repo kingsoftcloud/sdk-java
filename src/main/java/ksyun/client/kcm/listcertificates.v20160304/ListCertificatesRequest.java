@@ -18,9 +18,9 @@ public class ListCertificatesRequest{
     @KsYunField(name="CertificateId")
     private List<String> CertificateIdList;
 
-    /**一个或多个项目ID*/
+    /**一个或多个项目ID，若缺省则默认值为0*/
     @KsYunField(name="ProjectId")
-    private Integer[] ProjectId;
+    private List<Integer> ProjectId;
 
     /**主域名*/
     @KsYunField(name="Filter")

@@ -14,7 +14,7 @@ import java.util.Arrays;
 */
 @Data
 public class DescribeInstancesWithListenerRequest{
-    /**多个绑定服务器组的注册ID*/
+    /**多个后端服务器的ID*/
     @KsYunField(name="RegisterId")
     private List<String> RegisterIdList;
 

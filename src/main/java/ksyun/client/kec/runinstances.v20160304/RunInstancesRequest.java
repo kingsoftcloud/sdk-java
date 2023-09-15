@@ -169,5 +169,9 @@ public class RunInstancesRequest{
     @KsYunField(name="AddressPurchaseTime")
     private Integer AddressPurchaseTime;
 
+    /**秘钥ID*/
+    @KsYunField(name="KeyId")
+    private List<String> KeyIdList;
+
 
 }

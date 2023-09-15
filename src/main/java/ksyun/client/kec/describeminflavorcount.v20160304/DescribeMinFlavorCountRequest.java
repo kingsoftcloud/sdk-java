@@ -14,5 +14,9 @@ import java.util.Arrays;
 */
 @Data
 public class DescribeMinFlavorCountRequest{
+    /**商品类型id*/
+    @KsYunField(name="ProductType")
+    private Integer ProductType;
+
 
 }

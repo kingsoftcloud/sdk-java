@@ -14,5 +14,9 @@ import java.util.Arrays;
 */
 @Data
 public class DeleteRemoteManagementRequest{
+    /**带外管理的ID*/
+    @KsYunField(name="RemoteManagementId")
+    private String RemoteManagementId;
+
 
 }

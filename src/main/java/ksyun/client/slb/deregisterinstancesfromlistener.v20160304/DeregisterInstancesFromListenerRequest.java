@@ -14,7 +14,7 @@ import java.util.Arrays;
 */
 @Data
 public class DeregisterInstancesFromListenerRequest{
-    /**绑定服务器组的注册ID*/
+    /**后端服务器的ID*/
     @KsYunField(name="RegisterId")
     private String RegisterId;
 
