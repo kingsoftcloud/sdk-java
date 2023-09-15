@@ -1,3 +1,4 @@
+
 package ksyun.client.kce.createnodepool.v20190806;
 
 import common.annotation.KsYunField;
@@ -25,9 +26,6 @@ public class CreateNodePoolRequest{
     /**是否开启弹性伸缩，有效值：<br>True：开启弹性伸缩<br>False：关闭弹性伸缩<br>默认值：False<br>注：默认未开启自动缩容，若您想开启弹性缩容，后续可在参数ScaleDownEnabled中进行配置开启*/
     @KsYunField(name="EnableAutoScale")
     private Boolean EnableAutoScale;
-
-    /**节点模板信息*/
-    @KsYunField(name="NodeTemplate")
 
     /**节点标签*/
     @KsYunField(name="Label")
