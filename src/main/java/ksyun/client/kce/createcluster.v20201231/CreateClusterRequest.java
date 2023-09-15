@@ -139,12 +139,6 @@ False：Master和Etcd组件共享节点部署
         private String Config;
     }
 
-    /**控制面日志采集,当用户选择的是独立部署集群时，此选项填写无效；当选择是托管时，可选*/
-    @KsYunField(name="ControlPlaneLog")
-
-    /**Serverless集群信息*/
-    @KsYunField(name="ServerlessClusterMaster")
-
     /**Serverless集群是否将apiserver暴露到公网*/
     @KsYunField(name="ExposePublicApiServer")
     private Boolean ExposePublicApiServer;
