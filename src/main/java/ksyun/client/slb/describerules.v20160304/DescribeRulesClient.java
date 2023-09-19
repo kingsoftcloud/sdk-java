@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname DescribeRulesClient
-* @Description 获取应用型负载均衡规则列表
+* @Description 获取经典型负载均衡规则列表
 */
 @Slf4j
 public class DescribeRulesClient extends BaseClient {

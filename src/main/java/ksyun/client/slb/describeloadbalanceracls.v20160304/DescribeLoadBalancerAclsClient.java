@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname DescribeLoadBalancerAclsClient
-* @Description 查询LoadBalancerAcl
+* @Description 查询负载均衡ACL
 */
 @Slf4j
 public class DescribeLoadBalancerAclsClient extends BaseClient {

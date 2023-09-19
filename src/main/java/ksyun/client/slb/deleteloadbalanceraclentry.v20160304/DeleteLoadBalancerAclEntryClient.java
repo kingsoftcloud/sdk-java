@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname DeleteLoadBalancerAclEntryClient
-* @Description 删除LoadBalancerAcl规则
+* @Description 删除负载均衡ACL规则
 */
 @Slf4j
 public class DeleteLoadBalancerAclEntryClient extends BaseClient {

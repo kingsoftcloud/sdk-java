@@ -1,4 +1,4 @@
-package ksyun.client.slb.describeloadbalancers.v20171210;
+package ksyun.client.slb.deletehealthcheck.v20160304;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;
@@ -8,12 +8,12 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname DescribeLoadBalancersResponse
-* @Description DescribeLoadBalancers 返回体
+* @Classname DeleteHealthCheckResponse
+* @Description DeleteHealthCheck 返回体
 */
 @Data
 @ToString
-public class DescribeLoadBalancersResponse extends BaseResponseModel {
+public class DeleteHealthCheckResponse extends BaseResponseModel {
 
     /**
      * 请求id

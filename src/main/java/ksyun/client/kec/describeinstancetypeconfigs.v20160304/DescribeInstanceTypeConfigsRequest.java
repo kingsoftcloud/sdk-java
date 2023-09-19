@@ -14,5 +14,20 @@ import java.util.Arrays;
 */
 @Data
 public class DescribeInstanceTypeConfigsRequest{
+    /***/
+    @KsYunField(name="Filter")
+    private List<FilterDto> FilterList;
+
+    @Data
+    @ToString
+    public static class FilterDto {
+        /***/
+        @KsYunField(name="Name")
+        private List<String> NameList;
+        /***/
+        @KsYunField(name="Value")
+        private List<String> ValueList;
+    }
+
 
 }

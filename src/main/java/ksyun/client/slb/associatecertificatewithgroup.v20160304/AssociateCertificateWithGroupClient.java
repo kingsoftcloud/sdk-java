@@ -1,4 +1,4 @@
-package ksyun.client.slb.describeloadbalancers.v20171210;
+package ksyun.client.slb.associatecertificatewithgroup.v20160304;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,14 +12,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
-* @Classname DescribeLoadBalancersClient
-* @Description 获取应用型负载均衡
+* @Classname AssociateCertificateWithGroupClient
+* @Description AssociateCertificateWithGroup
 */
 @Slf4j
-public class DescribeLoadBalancersClient extends BaseClient {
+public class AssociateCertificateWithGroupClient extends BaseClient {
     private final static String service = "slb";
-    private final static String version = "2017-12-10";
-    private final static String action = "DescribeLoadBalancers";
+    private final static String version = "2016-03-04";
+    private final static String action = "AssociateCertificateWithGroup";
 
 
     /**
@@ -28,7 +28,7 @@ public class DescribeLoadBalancersClient extends BaseClient {
     private Credential credential;
 
 
-    public DescribeLoadBalancersClient(Credential credential) {
+    public AssociateCertificateWithGroupClient(Credential credential) {
         this.credential = credential;
     }
 
@@ -41,7 +41,7 @@ public class DescribeLoadBalancersClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeLoadBalancersResponse doPost(String path, DescribeLoadBalancersRequest requestObj) throws Exception {
+    public AssociateCertificateWithGroupResponse doPost(String path, AssociateCertificateWithGroupRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
@@ -56,7 +56,7 @@ public class DescribeLoadBalancersClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeLoadBalancersResponse doPost(String path, DescribeLoadBalancersRequest requestObj, Map<String, String> head) throws Exception {
+    public AssociateCertificateWithGroupResponse doPost(String path, AssociateCertificateWithGroupRequest requestObj, Map<String, String> head) throws Exception {
          if (head == null) {
              head = new HashMap<>();
          }
@@ -73,7 +73,7 @@ public class DescribeLoadBalancersClient extends BaseClient {
 
         String response = HttpClientUtils.httpPost(path, requestParams, head);
         log.info("doPost end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, DescribeLoadBalancersResponse.class);
+        return JSON.parseObject(response, AssociateCertificateWithGroupResponse.class);
     }
 
     /**
@@ -83,7 +83,7 @@ public class DescribeLoadBalancersClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public DescribeLoadBalancersResponse doPostRaw(String path, DescribeLoadBalancersRequest requestObj) throws Exception {
+    public AssociateCertificateWithGroupResponse doPostRaw(String path, AssociateCertificateWithGroupRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doPost(path, requestObj, head);
@@ -97,7 +97,7 @@ public class DescribeLoadBalancersClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public DescribeLoadBalancersResponse doPostRaw(String path, DescribeLoadBalancersRequest requestObj, Map<String, String> head) throws Exception {
+    public AssociateCertificateWithGroupResponse doPostRaw(String path, AssociateCertificateWithGroupRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
         }
@@ -112,7 +112,7 @@ public class DescribeLoadBalancersClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeLoadBalancersResponse doGet(String path, DescribeLoadBalancersRequest requestObj) throws Exception {
+    public AssociateCertificateWithGroupResponse doGet(String path, AssociateCertificateWithGroupRequest requestObj) throws Exception {
         return doGet(path, requestObj, null);
     }
 
@@ -124,7 +124,7 @@ public class DescribeLoadBalancersClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeLoadBalancersResponse doDelete(String path, DescribeLoadBalancersRequest requestObj) throws Exception {
+    public AssociateCertificateWithGroupResponse doDelete(String path, AssociateCertificateWithGroupRequest requestObj) throws Exception {
         return doDelete(path, requestObj, null);
     }
 
@@ -137,12 +137,12 @@ public class DescribeLoadBalancersClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeLoadBalancersResponse doDelete(String path, DescribeLoadBalancersRequest requestObj, Map<String, String> head) throws Exception {
+    public AssociateCertificateWithGroupResponse doDelete(String path, AssociateCertificateWithGroupRequest requestObj, Map<String, String> head) throws Exception {
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpDelete(path, requestParams, head);
         log.info("doDelete end,path:{},params:{},head:{}", path, requestParams, head);
-        DescribeLoadBalancersResponse DescribeLoadBalancersResponse = JSON.parseObject(response, DescribeLoadBalancersResponse.class);
-        return DescribeLoadBalancersResponse;
+        AssociateCertificateWithGroupResponse AssociateCertificateWithGroupResponse = JSON.parseObject(response, AssociateCertificateWithGroupResponse.class);
+        return AssociateCertificateWithGroupResponse;
     }
 
 
@@ -154,7 +154,7 @@ public class DescribeLoadBalancersClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeLoadBalancersResponse doPut(String path, DescribeLoadBalancersRequest requestObj) throws Exception {
+    public AssociateCertificateWithGroupResponse doPut(String path, AssociateCertificateWithGroupRequest requestObj) throws Exception {
         return doPut(path, requestObj, null);
     }
 
@@ -167,12 +167,12 @@ public class DescribeLoadBalancersClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeLoadBalancersResponse doPut(String path, DescribeLoadBalancersRequest requestObj, Map<String, String> head) throws Exception {
+    public AssociateCertificateWithGroupResponse doPut(String path, AssociateCertificateWithGroupRequest requestObj, Map<String, String> head) throws Exception {
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpPut(path, requestParams, head);
         log.info("httpPut end,path:{},params:{},head:{}", path, requestParams, head);
-        DescribeLoadBalancersResponse DescribeLoadBalancersResponse = JSON.parseObject(response, DescribeLoadBalancersResponse.class);
-        return DescribeLoadBalancersResponse;
+        AssociateCertificateWithGroupResponse AssociateCertificateWithGroupResponse = JSON.parseObject(response, AssociateCertificateWithGroupResponse.class);
+        return AssociateCertificateWithGroupResponse;
     }
 
     /**
@@ -184,7 +184,7 @@ public class DescribeLoadBalancersClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeLoadBalancersResponse doGet(String path, DescribeLoadBalancersRequest requestObj, Map<String, String> head) throws Exception {
+    public AssociateCertificateWithGroupResponse doGet(String path, AssociateCertificateWithGroupRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
         }
@@ -197,7 +197,7 @@ public class DescribeLoadBalancersClient extends BaseClient {
 
         String response = HttpClientUtils.httpGet(path, requestParams, head);
         log.info("doGet end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, DescribeLoadBalancersResponse.class);
+        return JSON.parseObject(response, AssociateCertificateWithGroupResponse.class);
     }
 
 
@@ -207,7 +207,7 @@ public class DescribeLoadBalancersClient extends BaseClient {
      * @param requestObj
      * @return
      */
-    private JSONObject getRequestParams(DescribeLoadBalancersRequest requestObj) throws Exception {
+    private JSONObject getRequestParams(AssociateCertificateWithGroupRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置证书
         getCommonParams(credential, requestParams);
@@ -252,7 +252,7 @@ public class DescribeLoadBalancersClient extends BaseClient {
         head.put(AWS4EncryptionFactory.X_AMZ_DATA, xAmzDate);
     }
 
-    private JSONObject getSimpleRequestParams(DescribeLoadBalancersRequest requestObj) throws Exception {
+    private JSONObject getSimpleRequestParams(AssociateCertificateWithGroupRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置接口属性
         requestParams.put("Action", action);
@@ -263,7 +263,7 @@ public class DescribeLoadBalancersClient extends BaseClient {
         return requestParams;
     }
 
-    private JSONObject getPostRawRequestParams(DescribeLoadBalancersRequest requestObj) throws Exception {
+    private JSONObject getPostRawRequestParams(AssociateCertificateWithGroupRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置接口属性
         requestParams.put("Action", action);

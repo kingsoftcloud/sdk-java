@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname CreateHostHeaderClient
-* @Description 创建应用型负载均衡域名
+* @Description 创建经典型负载均衡域名
 */
 @Slf4j
 public class CreateHostHeaderClient extends BaseClient {

@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname DescribeHostHeadersClient
-* @Description 获取应用型负载均衡域名列表
+* @Description 获取经典型负载均衡域名列表
 */
 @Slf4j
 public class DescribeHostHeadersClient extends BaseClient {

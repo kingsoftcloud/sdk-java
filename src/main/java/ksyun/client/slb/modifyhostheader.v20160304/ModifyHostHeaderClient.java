@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname ModifyHostHeaderClient
-* @Description 修改应用型负载均衡域名
+* @Description 修改经典型负载均衡域名
 */
 @Slf4j
 public class ModifyHostHeaderClient extends BaseClient {

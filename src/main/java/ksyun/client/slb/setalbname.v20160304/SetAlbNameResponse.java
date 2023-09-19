@@ -1,4 +1,4 @@
-package ksyun.client.kec.describeminflavorcount.v20160304;
+package ksyun.client.slb.setalbname.v20160304;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;
@@ -8,12 +8,12 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname DescribeMinFlavorCountResponse
-* @Description DescribeMinFlavorCount 返回体
+* @Classname SetAlbNameResponse
+* @Description SetAlbName 返回体
 */
 @Data
 @ToString
-public class DescribeMinFlavorCountResponse extends BaseResponseModel {
+public class SetAlbNameResponse extends BaseResponseModel {
 
     /**
      * 请求id

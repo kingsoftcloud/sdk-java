@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname DeleteRuleClient
-* @Description 删除应用型负载均衡规则
+* @Description 删除经典型负载均衡规则
 */
 @Slf4j
 public class DeleteRuleClient extends BaseClient {

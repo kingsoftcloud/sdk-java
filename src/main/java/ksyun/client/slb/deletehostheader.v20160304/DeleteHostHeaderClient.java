@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname DeleteHostHeaderClient
-* @Description 删除应用型负载均衡域名
+* @Description 删除经典型负载均衡域名
 */
 @Slf4j
 public class DeleteHostHeaderClient extends BaseClient {

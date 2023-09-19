@@ -1,4 +1,4 @@
-package ksyun.client.kec.describeminflavorcount.v20160304;
+package ksyun.client.slb.deletelisteners.v20160304;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,14 +12,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
-* @Classname DescribeMinFlavorCountClient
-* @Description DescribeMinFlavorCount
+* @Classname DeleteListenersClient
+* @Description 删除监听器
 */
 @Slf4j
-public class DescribeMinFlavorCountClient extends BaseClient {
-    private final static String service = "kec";
+public class DeleteListenersClient extends BaseClient {
+    private final static String service = "slb";
     private final static String version = "2016-03-04";
-    private final static String action = "DescribeMinFlavorCount";
+    private final static String action = "DeleteListeners";
 
 
     /**
@@ -28,7 +28,7 @@ public class DescribeMinFlavorCountClient extends BaseClient {
     private Credential credential;
 
 
-    public DescribeMinFlavorCountClient(Credential credential) {
+    public DeleteListenersClient(Credential credential) {
         this.credential = credential;
     }
 
@@ -41,7 +41,7 @@ public class DescribeMinFlavorCountClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeMinFlavorCountResponse doPost(String path, DescribeMinFlavorCountRequest requestObj) throws Exception {
+    public DeleteListenersResponse doPost(String path, DeleteListenersRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
@@ -56,7 +56,7 @@ public class DescribeMinFlavorCountClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeMinFlavorCountResponse doPost(String path, DescribeMinFlavorCountRequest requestObj, Map<String, String> head) throws Exception {
+    public DeleteListenersResponse doPost(String path, DeleteListenersRequest requestObj, Map<String, String> head) throws Exception {
          if (head == null) {
              head = new HashMap<>();
          }
@@ -73,7 +73,7 @@ public class DescribeMinFlavorCountClient extends BaseClient {
 
         String response = HttpClientUtils.httpPost(path, requestParams, head);
         log.info("doPost end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, DescribeMinFlavorCountResponse.class);
+        return JSON.parseObject(response, DeleteListenersResponse.class);
     }
 
     /**
@@ -83,7 +83,7 @@ public class DescribeMinFlavorCountClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public DescribeMinFlavorCountResponse doPostRaw(String path, DescribeMinFlavorCountRequest requestObj) throws Exception {
+    public DeleteListenersResponse doPostRaw(String path, DeleteListenersRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doPost(path, requestObj, head);
@@ -97,7 +97,7 @@ public class DescribeMinFlavorCountClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public DescribeMinFlavorCountResponse doPostRaw(String path, DescribeMinFlavorCountRequest requestObj, Map<String, String> head) throws Exception {
+    public DeleteListenersResponse doPostRaw(String path, DeleteListenersRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
         }
@@ -112,7 +112,7 @@ public class DescribeMinFlavorCountClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeMinFlavorCountResponse doGet(String path, DescribeMinFlavorCountRequest requestObj) throws Exception {
+    public DeleteListenersResponse doGet(String path, DeleteListenersRequest requestObj) throws Exception {
         return doGet(path, requestObj, null);
     }
 
@@ -124,7 +124,7 @@ public class DescribeMinFlavorCountClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeMinFlavorCountResponse doDelete(String path, DescribeMinFlavorCountRequest requestObj) throws Exception {
+    public DeleteListenersResponse doDelete(String path, DeleteListenersRequest requestObj) throws Exception {
         return doDelete(path, requestObj, null);
     }
 
@@ -137,12 +137,12 @@ public class DescribeMinFlavorCountClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeMinFlavorCountResponse doDelete(String path, DescribeMinFlavorCountRequest requestObj, Map<String, String> head) throws Exception {
+    public DeleteListenersResponse doDelete(String path, DeleteListenersRequest requestObj, Map<String, String> head) throws Exception {
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpDelete(path, requestParams, head);
         log.info("doDelete end,path:{},params:{},head:{}", path, requestParams, head);
-        DescribeMinFlavorCountResponse DescribeMinFlavorCountResponse = JSON.parseObject(response, DescribeMinFlavorCountResponse.class);
-        return DescribeMinFlavorCountResponse;
+        DeleteListenersResponse DeleteListenersResponse = JSON.parseObject(response, DeleteListenersResponse.class);
+        return DeleteListenersResponse;
     }
 
 
@@ -154,7 +154,7 @@ public class DescribeMinFlavorCountClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeMinFlavorCountResponse doPut(String path, DescribeMinFlavorCountRequest requestObj) throws Exception {
+    public DeleteListenersResponse doPut(String path, DeleteListenersRequest requestObj) throws Exception {
         return doPut(path, requestObj, null);
     }
 
@@ -167,12 +167,12 @@ public class DescribeMinFlavorCountClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeMinFlavorCountResponse doPut(String path, DescribeMinFlavorCountRequest requestObj, Map<String, String> head) throws Exception {
+    public DeleteListenersResponse doPut(String path, DeleteListenersRequest requestObj, Map<String, String> head) throws Exception {
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpPut(path, requestParams, head);
         log.info("httpPut end,path:{},params:{},head:{}", path, requestParams, head);
-        DescribeMinFlavorCountResponse DescribeMinFlavorCountResponse = JSON.parseObject(response, DescribeMinFlavorCountResponse.class);
-        return DescribeMinFlavorCountResponse;
+        DeleteListenersResponse DeleteListenersResponse = JSON.parseObject(response, DeleteListenersResponse.class);
+        return DeleteListenersResponse;
     }
 
     /**
@@ -184,7 +184,7 @@ public class DescribeMinFlavorCountClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeMinFlavorCountResponse doGet(String path, DescribeMinFlavorCountRequest requestObj, Map<String, String> head) throws Exception {
+    public DeleteListenersResponse doGet(String path, DeleteListenersRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
         }
@@ -197,7 +197,7 @@ public class DescribeMinFlavorCountClient extends BaseClient {
 
         String response = HttpClientUtils.httpGet(path, requestParams, head);
         log.info("doGet end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, DescribeMinFlavorCountResponse.class);
+        return JSON.parseObject(response, DeleteListenersResponse.class);
     }
 
 
@@ -207,7 +207,7 @@ public class DescribeMinFlavorCountClient extends BaseClient {
      * @param requestObj
      * @return
      */
-    private JSONObject getRequestParams(DescribeMinFlavorCountRequest requestObj) throws Exception {
+    private JSONObject getRequestParams(DeleteListenersRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置证书
         getCommonParams(credential, requestParams);
@@ -252,7 +252,7 @@ public class DescribeMinFlavorCountClient extends BaseClient {
         head.put(AWS4EncryptionFactory.X_AMZ_DATA, xAmzDate);
     }
 
-    private JSONObject getSimpleRequestParams(DescribeMinFlavorCountRequest requestObj) throws Exception {
+    private JSONObject getSimpleRequestParams(DeleteListenersRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置接口属性
         requestParams.put("Action", action);
@@ -263,7 +263,7 @@ public class DescribeMinFlavorCountClient extends BaseClient {
         return requestParams;
     }
 
-    private JSONObject getPostRawRequestParams(DescribeMinFlavorCountRequest requestObj) throws Exception {
+    private JSONObject getPostRawRequestParams(DeleteListenersRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置接口属性
         requestParams.put("Action", action);
