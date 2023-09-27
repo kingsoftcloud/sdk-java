@@ -18,11 +18,13 @@ public class ModifyPrivateIpAddressAttributeRequest{
     @KsYunField(name="SubnetId")
     private String SubnetId;
 
-    /**私网IP地址*/
+    /**私网IP*/
     @KsYunField(name="PrivateIpAddress")
     private String PrivateIpAddress;
 
-    /**IP地址状态*/
+    /**IP地址状态
+retain：预留
+active：不预留*/
     @KsYunField(name="Status")
     private String Status;
 

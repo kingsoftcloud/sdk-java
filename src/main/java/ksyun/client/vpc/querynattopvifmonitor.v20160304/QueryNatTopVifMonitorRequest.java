@@ -26,7 +26,7 @@ public class QueryNatTopVifMonitorRequest{
     @KsYunField(name="EndTime")
     private String EndTime;
 
-    /**排序顺序，默认是OUT，可选IN/OUT,区分大小写，填写其他的字符按OUT排序*/
+    /**排序顺序，默认是BPS_OUT，可选BPS_IN|BPS_OUT|PEAK_IN|PEAK_OUT,区分大小写，填写其他的字符按BPS_OUT排序*/
     @KsYunField(name="SortType")
     private String SortType;
 
