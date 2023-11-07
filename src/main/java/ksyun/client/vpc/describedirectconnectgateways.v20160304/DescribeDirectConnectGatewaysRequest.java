@@ -27,7 +27,8 @@ public class DescribeDirectConnectGatewaysRequest{
     public static class FilterDto {
         /**有效值：
 - vpc-id，Vpc的ID
-- nat-id，Nat的ID*/
+- nat-id，Nat的ID
+- version，版本*/
         @KsYunField(name="Name")
         private String Name;
         /***/

@@ -70,5 +70,9 @@ public class ModifyListenersRequest{
     @KsYunField(name="CertificateId")
     private String CertificateId;
 
+    /**重定向监听器ID*/
+    @KsYunField(name="RedirectListenerId")
+    private String RedirectListenerId;
+
 
 }

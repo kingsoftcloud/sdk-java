@@ -91,5 +91,13 @@ public class ModifyAlbRuleGroupRequest{
         private String AlbRuleValue;
     }
 
+    /**重定向状态码*/
+    @KsYunField(name="RedirectHttpCode")
+    private String RedirectHttpCode;
+
+    /**重定向的监听器ID*/
+    @KsYunField(name="RedirectAlbListenerId")
+    private String RedirectAlbListenerId;
+
 
 }

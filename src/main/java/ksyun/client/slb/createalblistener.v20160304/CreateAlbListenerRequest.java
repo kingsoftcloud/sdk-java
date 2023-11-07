@@ -50,10 +50,6 @@ public class CreateAlbListenerRequest{
     @KsYunField(name="AlbListenerState")
     private String AlbListenerState;
 
-    /**重定向应用型监听器ID*/
-    @KsYunField(name="RedirectAlbListenerId")
-    private String RedirectAlbListenerId;
-
     /**会话保持的状态(start|stop)*/
     @KsYunField(name="SessionState")
     private String SessionState;

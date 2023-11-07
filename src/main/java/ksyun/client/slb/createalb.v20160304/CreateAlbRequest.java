@@ -30,7 +30,8 @@ public class CreateAlbRequest{
     @KsYunField(name="VpcId")
     private String VpcId;
 
-    /**负载均衡的IP版本*/
+    /**负载均衡的IP版本
+ipv4 */
     @KsYunField(name="IpVersion")
     private String IpVersion;
 

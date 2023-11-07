@@ -54,5 +54,13 @@ public class AuthorizeSecurityGroupEntryRequest{
     @KsYunField(name="RuleTag")
     private String RuleTag;
 
+    /**优先级*/
+    @KsYunField(name="Priority")
+    private Integer Priority;
+
+    /**访问权限*/
+    @KsYunField(name="Policy")
+    private String Policy;
+
 
 }

@@ -58,5 +58,9 @@ public class CreateBackendServerGroupRequest{
     @KsYunField(name="Region")
     private String Region;
 
+    /**类型(Host|DirectConnect)*/
+    @KsYunField(name="Type")
+    private String Type;
+
 
 }
