@@ -133,7 +133,8 @@ public class RunInstancesRequest{
     @KsYunField(name="SystemDisk.DiskSize")
     private Integer SystemDiskDiskSize;
 
-    /**实例启动模版ID，如填写了此项，则RunInstances其他参数只有MaxCount、MinCount生效，其他不生效，如果批量创建，实例名称后缀依然存在。【传modelId，使用默认版本。传modelId和modelVersion，使用传递的版本】*/
+    /**实例启动模版ID，如填写了此项，则启动模板中已包含的RunInstances其他参数不生效，启动模板未指定的参数若调用RunInstances时额外传入则可生效，如果批量创建，实例名称后缀依然存在。【传modelId，使用默认版本。传modelId和modelVersion，使用传递的版本】
+示例值：3f0d6229-ed2d-4c9c-8554-b9433517cf8b*/
     @KsYunField(name="ModelId")
     private String ModelId;
 
@@ -172,6 +173,26 @@ public class RunInstancesRequest{
     /**秘钥ID*/
     @KsYunField(name="KeyId")
     private List<String> KeyIdList;
+
+    /**是否保持镜像登录*/
+    @KsYunField(name="keepImageLogin")
+    private Boolean KeepImageLogin;
+
+    /**操作系统内部的计算机名*/
+    @KsYunField(name="HostName")
+    private String HostName;
+
+    /**创建多台实例时为HostName增加有序后缀，有序后缀从1增加，例如host-1*/
+    @KsYunField(name="HostNameSuffix")
+    private Integer HostNameSuffix;
+
+    /**开机密码*/
+    @KsYunField(name="Password")
+    private String Password;
+
+    /**开机失败是否对外删除 ，默认值是false*/
+    @KsYunField(name="FailureAutoDelete")
+    private Boolean FailureAutoDelete;
 
 
 }

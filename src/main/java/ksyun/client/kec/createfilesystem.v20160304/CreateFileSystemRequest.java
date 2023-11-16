@@ -34,5 +34,9 @@ public class CreateFileSystemRequest{
     @KsYunField(name="FileSystemName")
     private String FileSystemName;
 
+    /**项目制id*/
+    @KsYunField(name="ProjectId")
+    private Integer ProjectId;
+
 
 }

@@ -1,4 +1,4 @@
-package ksyun.client.kec.renamededicatedhost.v20160304;
+package ksyun.client.kec.copysnapshot.v20160304;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;
@@ -8,12 +8,12 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname RenameDedicatedHostResponse
-* @Description RenameDedicatedHost 返回体
+* @Classname CopySnapshotResponse
+* @Description CopySnapshot 返回体
 */
 @Data
 @ToString
-public class RenameDedicatedHostResponse extends BaseResponseModel {
+public class CopySnapshotResponse extends BaseResponseModel {
 
     /**
      * 请求id

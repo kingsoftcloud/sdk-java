@@ -1,4 +1,4 @@
-package ksyun.client.kec.renamededicatedhost.v20160304;
+package ksyun.client.kec.copysnapshot.v20160304;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,14 +12,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
-* @Classname RenameDedicatedHostClient
-* @Description 修改专属宿主机名称
+* @Classname CopySnapshotClient
+* @Description 本地盘快照跨region复制
 */
 @Slf4j
-public class RenameDedicatedHostClient extends BaseClient {
+public class CopySnapshotClient extends BaseClient {
     private final static String service = "kec";
     private final static String version = "2016-03-04";
-    private final static String action = "RenameDedicatedHost";
+    private final static String action = "CopySnapshot";
 
 
     /**
@@ -28,7 +28,7 @@ public class RenameDedicatedHostClient extends BaseClient {
     private Credential credential;
 
 
-    public RenameDedicatedHostClient(Credential credential) {
+    public CopySnapshotClient(Credential credential) {
         this.credential = credential;
     }
 
@@ -41,7 +41,7 @@ public class RenameDedicatedHostClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public RenameDedicatedHostResponse doPost(String path, RenameDedicatedHostRequest requestObj) throws Exception {
+    public CopySnapshotResponse doPost(String path, CopySnapshotRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
@@ -56,7 +56,7 @@ public class RenameDedicatedHostClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public RenameDedicatedHostResponse doPost(String path, RenameDedicatedHostRequest requestObj, Map<String, String> head) throws Exception {
+    public CopySnapshotResponse doPost(String path, CopySnapshotRequest requestObj, Map<String, String> head) throws Exception {
          if (head == null) {
              head = new HashMap<>();
          }
@@ -73,7 +73,7 @@ public class RenameDedicatedHostClient extends BaseClient {
 
         String response = HttpClientUtils.httpPost(path, requestParams, head);
         log.info("doPost end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, RenameDedicatedHostResponse.class);
+        return JSON.parseObject(response, CopySnapshotResponse.class);
     }
 
     /**
@@ -83,7 +83,7 @@ public class RenameDedicatedHostClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public RenameDedicatedHostResponse doPostRaw(String path, RenameDedicatedHostRequest requestObj) throws Exception {
+    public CopySnapshotResponse doPostRaw(String path, CopySnapshotRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doPost(path, requestObj, head);
@@ -97,7 +97,7 @@ public class RenameDedicatedHostClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public RenameDedicatedHostResponse doPostRaw(String path, RenameDedicatedHostRequest requestObj, Map<String, String> head) throws Exception {
+    public CopySnapshotResponse doPostRaw(String path, CopySnapshotRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
         }
@@ -112,7 +112,7 @@ public class RenameDedicatedHostClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public RenameDedicatedHostResponse doGet(String path, RenameDedicatedHostRequest requestObj) throws Exception {
+    public CopySnapshotResponse doGet(String path, CopySnapshotRequest requestObj) throws Exception {
         return doGet(path, requestObj, null);
     }
 
@@ -124,7 +124,7 @@ public class RenameDedicatedHostClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public RenameDedicatedHostResponse doDelete(String path, RenameDedicatedHostRequest requestObj) throws Exception {
+    public CopySnapshotResponse doDelete(String path, CopySnapshotRequest requestObj) throws Exception {
         return doDelete(path, requestObj, null);
     }
 
@@ -137,12 +137,12 @@ public class RenameDedicatedHostClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public RenameDedicatedHostResponse doDelete(String path, RenameDedicatedHostRequest requestObj, Map<String, String> head) throws Exception {
+    public CopySnapshotResponse doDelete(String path, CopySnapshotRequest requestObj, Map<String, String> head) throws Exception {
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpDelete(path, requestParams, head);
         log.info("doDelete end,path:{},params:{},head:{}", path, requestParams, head);
-        RenameDedicatedHostResponse RenameDedicatedHostResponse = JSON.parseObject(response, RenameDedicatedHostResponse.class);
-        return RenameDedicatedHostResponse;
+        CopySnapshotResponse CopySnapshotResponse = JSON.parseObject(response, CopySnapshotResponse.class);
+        return CopySnapshotResponse;
     }
 
 
@@ -154,7 +154,7 @@ public class RenameDedicatedHostClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public RenameDedicatedHostResponse doPut(String path, RenameDedicatedHostRequest requestObj) throws Exception {
+    public CopySnapshotResponse doPut(String path, CopySnapshotRequest requestObj) throws Exception {
         return doPut(path, requestObj, null);
     }
 
@@ -167,12 +167,12 @@ public class RenameDedicatedHostClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public RenameDedicatedHostResponse doPut(String path, RenameDedicatedHostRequest requestObj, Map<String, String> head) throws Exception {
+    public CopySnapshotResponse doPut(String path, CopySnapshotRequest requestObj, Map<String, String> head) throws Exception {
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpPut(path, requestParams, head);
         log.info("httpPut end,path:{},params:{},head:{}", path, requestParams, head);
-        RenameDedicatedHostResponse RenameDedicatedHostResponse = JSON.parseObject(response, RenameDedicatedHostResponse.class);
-        return RenameDedicatedHostResponse;
+        CopySnapshotResponse CopySnapshotResponse = JSON.parseObject(response, CopySnapshotResponse.class);
+        return CopySnapshotResponse;
     }
 
     /**
@@ -184,7 +184,7 @@ public class RenameDedicatedHostClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public RenameDedicatedHostResponse doGet(String path, RenameDedicatedHostRequest requestObj, Map<String, String> head) throws Exception {
+    public CopySnapshotResponse doGet(String path, CopySnapshotRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
         }
@@ -197,7 +197,7 @@ public class RenameDedicatedHostClient extends BaseClient {
 
         String response = HttpClientUtils.httpGet(path, requestParams, head);
         log.info("doGet end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, RenameDedicatedHostResponse.class);
+        return JSON.parseObject(response, CopySnapshotResponse.class);
     }
 
 
@@ -207,7 +207,7 @@ public class RenameDedicatedHostClient extends BaseClient {
      * @param requestObj
      * @return
      */
-    private JSONObject getRequestParams(RenameDedicatedHostRequest requestObj) throws Exception {
+    private JSONObject getRequestParams(CopySnapshotRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置证书
         getCommonParams(credential, requestParams);
@@ -252,7 +252,7 @@ public class RenameDedicatedHostClient extends BaseClient {
         head.put(AWS4EncryptionFactory.X_AMZ_DATA, xAmzDate);
     }
 
-    private JSONObject getSimpleRequestParams(RenameDedicatedHostRequest requestObj) throws Exception {
+    private JSONObject getSimpleRequestParams(CopySnapshotRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置接口属性
         requestParams.put("Action", action);
@@ -263,7 +263,7 @@ public class RenameDedicatedHostClient extends BaseClient {
         return requestParams;
     }
 
-    private JSONObject getPostRawRequestParams(RenameDedicatedHostRequest requestObj) throws Exception {
+    private JSONObject getPostRawRequestParams(CopySnapshotRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置接口属性
         requestParams.put("Action", action);

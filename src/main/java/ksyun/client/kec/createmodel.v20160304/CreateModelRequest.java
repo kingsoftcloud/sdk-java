@@ -149,5 +149,9 @@ ModelTest001*/
     @KsYunField(name="VersionDetail")
     private String VersionDetail;
 
+    /**开机失败是否自动删除，默认值是false*/
+    @KsYunField(name="FailureAutoDelete")
+    private Boolean FailureAutoDelete;
+
 
 }
