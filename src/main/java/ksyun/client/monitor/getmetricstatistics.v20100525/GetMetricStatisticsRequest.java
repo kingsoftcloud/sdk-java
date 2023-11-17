@@ -41,7 +41,7 @@ public class GetMetricStatisticsRequest{
 
     /**采样周期，60的整数倍，单位为秒，如果和控制台不一致，会导致数据不一致。默认值为空，将不对数据进行降采样，按产品线的推送频率进行展示。*/
     @KsYunField(name="Period")
-    private Integer Period;
+    private String Period;
 
 
 }
