@@ -28,9 +28,14 @@ public class ModifyClusterInfoRequest{
 
     /**是否支持微服务
 
-    true：支持
+true：支持
 
-    false：不支持*/
+false：不支持*/
     @KsYunField(name="EnableKMSE")
     private Boolean EnableKMSE;
+
+    /**支持对托管集群控制面日志采集配置进行全量更新*/
+    @KsYunField(name="ControlPlaneLog")
+
+
 }

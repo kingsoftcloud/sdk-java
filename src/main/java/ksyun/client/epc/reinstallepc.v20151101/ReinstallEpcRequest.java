@@ -128,5 +128,9 @@ SRaid0：单盘SRaid0无限制，仅针对大数据业务自身有冗余的场�
     @KsYunField(name="GpuImageDriverId")
     private String GpuImageDriverId;
 
+    /**容器引擎组件类型*/
+    @KsYunField(name="containerAgent")
+    private String ContainerAgent;
+
 
 }
