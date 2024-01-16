@@ -194,5 +194,27 @@ public class RunInstancesRequest{
     @KsYunField(name="FailureAutoDelete")
     private Boolean FailureAutoDelete;
 
+    /**标签信息*/
+    @KsYunField(name="Tag")
+    private List<TagDto> TagList;
+
+    @Data
+    @ToString
+    public static class TagDto {
+        /**标签键值*/
+        @KsYunField(name="Key")
+        private String Key;
+        /**标签Id*/
+        @KsYunField(name="Id")
+        private Integer Id;
+        /**标签值*/
+        @KsYunField(name="Value")
+        private String Value;
+    }
+
+    /**容灾组id*/
+    @KsYunField(name="DataGuardId")
+    private String DataGuardId;
+
 
 }
