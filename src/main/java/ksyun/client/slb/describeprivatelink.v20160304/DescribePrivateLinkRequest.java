@@ -29,9 +29,4 @@ public class DescribePrivateLinkRequest{
     /**获取另一页返回结果的 token.*/
     @KsYunField(name="NextToken")
     private String NextToken;
-
-    /***/
-    @KsYunField(name="Filter.N")
-
-
 }

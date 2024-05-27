@@ -105,6 +105,11 @@ public class ModifyAlbRuleGroupRequest{
 
     /**返回固定响应信息*/
     @KsYunField(name="FixedResponseConfig")
-
+    private FixedResponseConfigDto FixedResponseConfig;
+    public static class FixedResponseConfigDto{
+        private String Content;
+        private String ContentType;
+        private String HttpCode;
+    }
 
 }
