@@ -26,10 +26,9 @@ public class DescribeBackendServersRequest{
     @ToString
     public static class FilterDto {
         /**有效值：
-- real-server-ip，真实服务器的IP
-- instance-id，服务器的ID
- -backend-server-group-id，所属服务器组的ID
-- network-interface-id，弹性网卡的ID*/
+- vpc-id，Vpc的ID
+- backend-server-group-type，后端服务器组类型
+- protocol，后端协议*/
         @KsYunField(name="Name")
         private String Name;
         /***/

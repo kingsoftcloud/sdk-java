@@ -50,6 +50,14 @@ public class CreateAlbListenerRequest{
     @KsYunField(name="AlbListenerState")
     private String AlbListenerState;
 
+    /**重定向应用型监听器ID*/
+    @KsYunField(name="RedirectAlbListenerId")
+    private String RedirectAlbListenerId;
+
+    /**重定向状态码*/
+    @KsYunField(name="RedirectHttpCode")
+    private String RedirectHttpCode;
+
     /**会话保持的状态(start|stop)*/
     @KsYunField(name="SessionState")
     private String SessionState;
@@ -70,9 +78,12 @@ public class CreateAlbListenerRequest{
     @KsYunField(name="EnableHttp2")
     private Boolean EnableHttp2;
 
-    /**后端协议版本(HTTP1.0|HTTP1.1)*/
-    @KsYunField(name="HttpProtocol")
-    private String HttpProtocol;
+    /**默认转发策略绑定的服务器组ID,目前仅支持创建转发类型的默认转发策略*/
+    @KsYunField(name="BackendServerGroupId")
+    private String BackendServerGroupId;
+
+    /**返回固定响应信息*/
+    @KsYunField(name="FixedResponseConfig")
 
 
 }

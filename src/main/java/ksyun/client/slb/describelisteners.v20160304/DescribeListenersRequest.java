@@ -25,7 +25,12 @@ public class DescribeListenersRequest{
     @Data
     @ToString
     public static class FilterDto {
-        /**有效值： vpc-id，Vpc的ID*/
+        /**有效值： 
+- load-balancer-id，负载均衡的ID
+- load-balancer-acl-id，负载均衡ACL的ID
+- listener-protocol，监听器的协议
+- certificate-id，证书ID
+- bind-type，监听器挂载类型*/
         @KsYunField(name="Name")
         private String Name;
         /***/

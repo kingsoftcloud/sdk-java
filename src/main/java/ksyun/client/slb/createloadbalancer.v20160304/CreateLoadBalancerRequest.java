@@ -46,5 +46,13 @@ public class CreateLoadBalancerRequest{
     @KsYunField(name="ProjectId")
     private String ProjectId;
 
+    /**删除保护状态(on|off)*/
+    @KsYunField(name="DeleteProtection")
+    private String DeleteProtection;
+
+    /**修改保护状态(on|off)*/
+    @KsYunField(name="ModificationProtection")
+    private String ModificationProtection;
+
 
 }

@@ -42,6 +42,10 @@ public class ConfigureHealthCheckRequest{
     @KsYunField(name="UnhealthyThreshold")
     private Integer UnhealthyThreshold;
 
+    /**健康检查协议 (TCP|ICMP|UDP|HTTP), 当监听器为HTTP/HTTPS类型时可选值为UDP|HTTP ， 当监听器为UDP类型时可选值为UDP|ICMP*/
+    @KsYunField(name="HealthProtocol")
+    private String HealthProtocol;
+
     /**HTTP请求方式 (GET|HEAD)*/
     @KsYunField(name="HttpMethod")
     private String HttpMethod;

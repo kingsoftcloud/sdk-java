@@ -34,6 +34,10 @@ public class CreateAlbRuleGroupRequest{
     @KsYunField(name="Method")
     private String Method;
 
+    /**转发动作类型*/
+    @KsYunField(name="Type")
+    private String Type;
+
     /**会话保持的状态，在ListenerSync为off时有效*/
     @KsYunField(name="SessionState")
     private String SessionState;
@@ -91,14 +95,16 @@ public class CreateAlbRuleGroupRequest{
         private String AlbRuleValue;
     }
 
-    /**重定向状态码
-301|302|307*/
+    /**重定向应用型监听器ID*/
+    @KsYunField(name="RedirectAlbListenerId")
+    private String RedirectAlbListenerId;
+
+    /**重定向状态码,301|302|307*/
     @KsYunField(name="RedirectHttpCode")
     private String RedirectHttpCode;
 
-    /**重定向的监听器ID*/
-    @KsYunField(name="RedirectAlbListenerId")
-    private String RedirectAlbListenerId;
+    /**返回固定响应信息*/
+    @KsYunField(name="FixedResponseConfig")
 
 
 }

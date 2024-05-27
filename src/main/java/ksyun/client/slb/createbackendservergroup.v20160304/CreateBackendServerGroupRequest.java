@@ -18,6 +18,10 @@ public class CreateBackendServerGroupRequest{
     @KsYunField(name="VpcId")
     private String VpcId;
 
+    /**后端协议, 默认HTTP*/
+    @KsYunField(name="Protocol")
+    private String Protocol;
+
     /**后端服务组的名称*/
     @KsYunField(name="BackendServerGroupName")
     private String BackendServerGroupName;
@@ -57,10 +61,6 @@ public class CreateBackendServerGroupRequest{
     /**Region机房*/
     @KsYunField(name="Region")
     private String Region;
-
-    /**类型(Host|DirectConnect)*/
-    @KsYunField(name="Type")
-    private String Type;
 
 
 }

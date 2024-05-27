@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname DescribeBackendServersClient
-* @Description 获取后端服务器列表
+* @Description 查询服务器组中后端服务信息
 */
 @Slf4j
 public class DescribeBackendServersClient extends BaseClient {

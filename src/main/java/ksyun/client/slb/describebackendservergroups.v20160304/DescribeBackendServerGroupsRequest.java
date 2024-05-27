@@ -27,7 +27,8 @@ public class DescribeBackendServerGroupsRequest{
     public static class FilterDto {
         /**有效值：
 - vpc-id，Vpc的ID
-- backend-server-group-type，后端服务器组类型*/
+- backend-server-group-type，后端服务器组类型
+- protocol，后端协议*/
         @KsYunField(name="Name")
         private String Name;
         /***/

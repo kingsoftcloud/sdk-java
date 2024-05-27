@@ -14,9 +14,5 @@ import java.util.Arrays;
 */
 @Data
 public class DeleteAlbRequest{
-    /**应用型负载均衡的ID*/
-    @KsYunField(name="AlbId")
-    private String AlbId;
-
 
 }

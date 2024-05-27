@@ -30,6 +30,10 @@ public class CreateListenersRequest{
     @KsYunField(name="ListenerProtocol")
     private String ListenerProtocol;
 
+    /**监听器支持的挂载类型(RealServer|BackendServerGroup)*/
+    @KsYunField(name="BindType")
+    private String BindType;
+
     /**监听器的协议端口*/
     @KsYunField(name="ListenerPort")
     private Integer ListenerPort;

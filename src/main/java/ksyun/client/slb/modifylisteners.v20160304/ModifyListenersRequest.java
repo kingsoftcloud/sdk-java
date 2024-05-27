@@ -22,6 +22,10 @@ public class ModifyListenersRequest{
     @KsYunField(name="ListenerName")
     private String ListenerName;
 
+    /**监听器支持的挂载类型(RealServer|BackendServerGroup)*/
+    @KsYunField(name="BindType")
+    private String BindType;
+
     /**监听器的状态(start|stop)*/
     @KsYunField(name="ListenerState")
     private String ListenerState;

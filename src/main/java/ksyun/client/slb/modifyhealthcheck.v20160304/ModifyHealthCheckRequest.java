@@ -42,6 +42,10 @@ public class ModifyHealthCheckRequest{
     @KsYunField(name="UnhealthyThreshold")
     private Integer UnhealthyThreshold;
 
+    /**健康检查协议 ,仅HTTP/HTTPS协议的监听器支持修改该值(TCP|HTTP)*/
+    @KsYunField(name="HealthProtocol")
+    private String HealthProtocol;
+
     /**HTTP请求方式 (GET|HEAD)*/
     @KsYunField(name="HttpMethod")
     private String HttpMethod;

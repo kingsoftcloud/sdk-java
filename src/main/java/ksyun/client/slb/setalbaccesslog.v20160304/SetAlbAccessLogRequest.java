@@ -23,8 +23,8 @@ public class SetAlbAccessLogRequest{
     private String ProjectName;
 
     /**访问日志投递的日志池*/
-    @KsYunField(name="LogpoolName")
-    private String LogpoolName;
+    @KsYunField(name="LogPoolName")
+    private String LogPoolName;
 
 
 }

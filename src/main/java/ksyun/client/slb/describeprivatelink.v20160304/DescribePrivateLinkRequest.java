@@ -30,5 +30,8 @@ public class DescribePrivateLinkRequest{
     @KsYunField(name="NextToken")
     private String NextToken;
 
+    /***/
+    @KsYunField(name="Filter.N")
+
 
 }

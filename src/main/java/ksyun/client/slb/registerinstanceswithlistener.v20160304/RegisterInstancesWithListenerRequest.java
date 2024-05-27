@@ -47,5 +47,9 @@ public class RegisterInstancesWithListenerRequest{
     @KsYunField(name="MasterSlaveType")
     private String MasterSlaveType;
 
+    /**弹性网卡ID*/
+    @KsYunField(name="NetworkInterfaceId")
+    private String NetworkInterfaceId;
+
 
 }
