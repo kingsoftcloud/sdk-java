@@ -34,6 +34,14 @@ public class CreateLoadBalancerRequest{
     @KsYunField(name="PrivateIpAddress")
     private String PrivateIpAddress;
 
+    /**删除保护，on开启，off关闭，默认关闭，on/off*/
+    @KsYunField(name="DeleteProtection")
+    private String DeleteProtection;
+
+    /**删除保护，on开启，off关闭，默认关闭，on/off*/
+    @KsYunField(name="ModificationProtection")
+    private String ModificationProtection;
+
     /**负载均衡的IP版本*/
     @KsYunField(name="IpVersion")
     private String IpVersion;
@@ -45,14 +53,6 @@ public class CreateLoadBalancerRequest{
     /**项目的ID*/
     @KsYunField(name="ProjectId")
     private String ProjectId;
-
-    /**删除保护状态(on|off)*/
-    @KsYunField(name="DeleteProtection")
-    private String DeleteProtection;
-
-    /**修改保护状态(on|off)*/
-    @KsYunField(name="ModificationProtection")
-    private String ModificationProtection;
 
 
 }

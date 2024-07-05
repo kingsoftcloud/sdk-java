@@ -78,5 +78,13 @@ public class ModifyListenersRequest{
     @KsYunField(name="RedirectListenerId")
     private String RedirectListenerId;
 
+    /**客户端证书，CaEnabled = true，必填*/
+    @KsYunField(name="CaCertificateId")
+    private String CaCertificateId;
+
+    /**是否开启双向认证*/
+    @KsYunField(name="CaEnabled")
+    private Boolean CaEnabled;
+
 
 }

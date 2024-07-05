@@ -81,14 +81,4 @@ public class CreateAlbListenerRequest{
     /**默认转发策略绑定的服务器组ID,目前仅支持创建转发类型的默认转发策略*/
     @KsYunField(name="BackendServerGroupId")
     private String BackendServerGroupId;
-
-    /**返回固定响应信息*/
-    @KsYunField(name="FixedResponseConfig")
-    private FixedResponseConfigDto FixedResponseConfig;
-    public static class FixedResponseConfigDto{
-        private String Content;
-        private String ContentType;
-        private String HttpCode;
-    }
-
 }

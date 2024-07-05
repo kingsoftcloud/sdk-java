@@ -46,5 +46,21 @@ public class CreateAlbRequest{
     @KsYunField(name="ChargeType")
     private String ChargeType;
 
+    /**子网id*/
+    @KsYunField(name="SubnetId")
+    private String SubnetId;
+
+    /**私网ip*/
+    @KsYunField(name="PrivateIpAddress")
+    private String PrivateIpAddress;
+
+    /**是否开启QUIC功能*/
+    @KsYunField(name="EnabledQuic")
+    private Boolean EnabledQuic;
+
+    /**是否开启弹性伸缩*/
+    @KsYunField(name="EnableHpa")
+    private Boolean EnableHpa;
+
 
 }

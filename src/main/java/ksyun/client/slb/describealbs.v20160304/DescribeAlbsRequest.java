@@ -58,6 +58,10 @@ public class DescribeAlbsRequest{
         private String Value;
     }
 
+    /**项目的ID*/
+    @KsYunField(name="ProjectId")
+    private List<String> ProjectIdList;
+
     /**单次调用可返回的最大条目数量*/
     @KsYunField(name="MaxResults")
     private Integer MaxResults;
@@ -65,10 +69,6 @@ public class DescribeAlbsRequest{
     /**获取另一页返回结果的 token.*/
     @KsYunField(name="NextToken")
     private String NextToken;
-
-    /**项目制ID*/
-    @KsYunField(name="ProjectId")
-    private List<String> ProjectIdList;
 
 
 }
