@@ -202,6 +202,7 @@
                 <arg>--pinentry-mode</arg>
                 <arg>loopback</arg>
               </gpgArguments>
+              <passphrase>ksyun@123!</passphrase>
             </configuration>
           </plugin>
         </plugins>
