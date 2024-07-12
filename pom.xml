@@ -197,14 +197,14 @@
                 </goals>
               </execution>
             </executions>
-            <configuration>
+<!--             <configuration>
               <!-- 这个configuration必须配置，用于gpg非交互式明码输出 -->
               <gpgArguments>
                 <arg>--pinentry-mode</arg>
                 <arg>loopback</arg>
               </gpgArguments>
               <passphrase>ksyun@123!</passphrase>
-            </configuration>
+            </configuration> -->
           </plugin>
         </plugins>
       </build>
