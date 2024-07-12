@@ -27,4 +27,4 @@ jobs:
         settings-path: ${{ github.workspace }}
 
     - name: Build with Maven
-      run: mvn clean deploy  --file pom.xml --batch-mode -Dgpg.passphrase=ksyun123  -Dmaven.skip.Test=true  -s $GITHUB_WORKSPACE/settings.xml 
+      run: mvn clean deploy  --file pom.xml --batch-mode -Dgpg.passphrase=ksyun@123!  -Dmaven.skip.Test=true  -s $GITHUB_WORKSPACE/settings.xml 
