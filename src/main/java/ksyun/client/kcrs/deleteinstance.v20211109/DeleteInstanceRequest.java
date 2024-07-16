@@ -20,7 +20,7 @@ public class DeleteInstanceRequest{
 
     /**是否随实例删除关联的KS3 Bucket，有效值：<br />True：是<br />False：否<br />默认值：False*/
     @KsYunField(name="DeleteBucket")
-    private String DeleteBucket;
+    private Boolean DeleteBucket;
 
 
 }

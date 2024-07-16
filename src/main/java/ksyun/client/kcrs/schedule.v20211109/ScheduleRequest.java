@@ -14,5 +14,13 @@ import java.util.Arrays;
 */
 @Data
 public class ScheduleRequest{
+    /**实例Id*/
+    @KsYunField(name="InstanceId")
+    private String InstanceId;
+
+    /**是否模拟运行*/
+    @KsYunField(name="TestRun")
+    private Boolean TestRun;
+
 
 }

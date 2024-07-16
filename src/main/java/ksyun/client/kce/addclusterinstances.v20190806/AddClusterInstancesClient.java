@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname AddClusterInstancesClient
-* @Description AddClusterInstances
+* @Description 新增节点
 */
 @Slf4j
 public class AddClusterInstancesClient extends BaseClient {

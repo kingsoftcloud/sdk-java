@@ -41,9 +41,9 @@ public class DescribeEpcForClusterRequest{
     @KsYunField(name="Marker")
     private Integer Marker;
 
-    /**单次调用所返回的最大实例数目，默认20， 范围(0-50]。*/
+    /**单次调用所返回的最大实例数目，默认20， 范围(1-50]。*/
     @KsYunField(name="MaxResults")
-    private String MaxResults;
+    private Integer MaxResults;
 
 
 }

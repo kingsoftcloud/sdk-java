@@ -14,5 +14,13 @@ import java.util.Arrays;
 */
 @Data
 public class DescribeRetentionRuleRequest{
+    /**请求Id*/
+    @KsYunField(name="InstanceId")
+    private String InstanceId;
+
+    /**命名空间*/
+    @KsYunField(name="Namespace")
+    private String Namespace;
+
 
 }

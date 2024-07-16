@@ -38,7 +38,14 @@ public class DescribeClusterRequest{
     @ToString
     public static class FilterDto {
         /**一个或者多个过滤器，有效值：
-集群master管理类型：cluster-manage-mode*/
+集群master管理类型：cluster-manage-mode
+cluster-manage-mode枚举值：
+
+- ManagedCluster 托管集群
+- DedicatedCluster 独立部署集群
+- ExternalCluster 纳管集群
+- ServerlessCluster Serverless集群
+*/
         @KsYunField(name="Name")
         private String Name;
         /***/

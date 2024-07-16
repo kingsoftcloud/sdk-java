@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname DescribeInstanceImageClient
-* @Description DescribeInstanceImage
+* @Description 获取容器服务支持的节点操作系统
 */
 @Slf4j
 public class DescribeInstanceImageClient extends BaseClient {

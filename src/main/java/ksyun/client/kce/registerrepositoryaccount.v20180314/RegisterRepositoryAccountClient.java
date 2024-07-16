@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname RegisterRepositoryAccountClient
-* @Description 用户注册镜像仓库
+* @Description 注册镜像仓库
 */
 @Slf4j
 public class RegisterRepositoryAccountClient extends BaseClient {

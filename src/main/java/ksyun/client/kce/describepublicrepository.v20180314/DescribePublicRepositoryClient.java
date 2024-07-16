@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname DescribePublicRepositoryClient
-* @Description 查询ksyun hub镜像仓库
+* @Description 查询ksyun公有镜像仓库列表
 */
 @Slf4j
 public class DescribePublicRepositoryClient extends BaseClient {

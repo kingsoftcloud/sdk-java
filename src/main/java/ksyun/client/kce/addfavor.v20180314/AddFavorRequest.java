@@ -14,7 +14,7 @@ import java.util.Arrays;
 */
 @Data
 public class AddFavorRequest{
-    /**仓库名称*/
+    /**命名空间/仓库名称，如“mynamespace/myrepo”*/
     @KsYunField(name="RepoName")
     private String RepoName;
 

@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname DescribeExistedInstancesClient
-* @Description 获取KEC实例列表
+* @Description 查询已经存在的云服务器
 */
 @Slf4j
 public class DescribeExistedInstancesClient extends BaseClient {

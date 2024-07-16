@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname AddClusterEpcInstancesClient
-* @Description AddClusterEpcInstances
+* @Description 移入裸金属服务器到集群
 */
 @Slf4j
 public class AddClusterEpcInstancesClient extends BaseClient {

@@ -14,5 +14,21 @@ import java.util.Arrays;
 */
 @Data
 public class GetRetentionPolicyLogsRequest{
+    /**实例Id*/
+    @KsYunField(name="InstanceId")
+    private String InstanceId;
+
+    /**命名空间*/
+    @KsYunField(name="Namespace")
+    private String Namespace;
+
+    /**分页参数*/
+    @KsYunField(name="Page")
+    private Integer Page;
+
+    /**每页数据大小*/
+    @KsYunField(name="PageSize")
+    private Integer PageSize;
+
 
 }

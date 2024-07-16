@@ -14,5 +14,16 @@ import java.util.Arrays;
 */
 @Data
 public class UpdateRetentionRuleRequest{
+    /**实例Id*/
+    @KsYunField(name="InstanceId")
+    private String InstanceId;
+
+    /**命名空间*/
+    @KsYunField(name="Namespace")
+    private String Namespace;
+
+    /**参数实体类*/
+    @KsYunField(name="Rule")
+
 
 }

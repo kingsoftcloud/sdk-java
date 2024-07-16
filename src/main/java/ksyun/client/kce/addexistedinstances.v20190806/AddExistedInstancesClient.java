@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname AddExistedInstancesClient
-* @Description 添加KEC节点到集群
+* @Description 添加已有的服务器
 */
 @Slf4j
 public class AddExistedInstancesClient extends BaseClient {

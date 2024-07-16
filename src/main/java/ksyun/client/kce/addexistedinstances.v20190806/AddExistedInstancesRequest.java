@@ -28,10 +28,12 @@ public class AddExistedInstancesRequest{
         /**节点角色,有效值：Worker*/
         @KsYunField(name="NodeRole")
         private String NodeRole;
-        /**云服务器产品重新安装实例操作系统的透传参数，json化字符串格式，详见更换或者重新安装实例操作系统
-注意：接口中的ImageId参数替换为支持的节点操作系统，可调用DescribeInstanceImage接口，获取容器服务支持的节点操作系统*/
+        /**云服务器产品重新安装实例操作系统的透传参数，json化字符串格式，详见主机更换或者重新安装实例操作接口ModifyInstanceImage。
+注意：接口中的ImageId参数替换为支持的节点操作系统，可调用容器的DescribeInstanceImage接口，获取容器服务支持的节点操作系统*/
         @KsYunField(name="KecPara")
         private List<String> KecParaList;
+        /**节点高级设置*/
+        @KsYunField(name="AdvancedSetting")
     }
 
 

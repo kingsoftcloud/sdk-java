@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname ModifyClusterInfoClient
-* @Description ModifyClusterInfo
+* @Description 修改集群基本信息
 */
 @Slf4j
 public class ModifyClusterInfoClient extends BaseClient {

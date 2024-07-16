@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname AddFavorClient
-* @Description 收藏镜像
+* @Description 添加收藏
 */
 @Slf4j
 public class AddFavorClient extends BaseClient {

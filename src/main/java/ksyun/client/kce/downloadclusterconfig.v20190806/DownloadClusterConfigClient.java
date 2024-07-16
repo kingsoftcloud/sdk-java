@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname DownloadClusterConfigClient
-* @Description DownloadClusterConfig
+* @Description 下载集群配置文件
 */
 @Slf4j
 public class DownloadClusterConfigClient extends BaseClient {

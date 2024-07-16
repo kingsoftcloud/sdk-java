@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname DeleteClusterClient
-* @Description DeleteCluster
+* @Description 删除集群
 */
 @Slf4j
 public class DeleteClusterClient extends BaseClient {

@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname DescribeTagClient
-* @Description 查询镜像列表
+* @Description 查询镜像tag列表
 */
 @Slf4j
 public class DescribeTagClient extends BaseClient {

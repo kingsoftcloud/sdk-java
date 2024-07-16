@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname DeleteTagsClient
-* @Description 删除镜像
+* @Description 删除镜像tag
 */
 @Slf4j
 public class DeleteTagsClient extends BaseClient {

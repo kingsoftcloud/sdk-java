@@ -33,11 +33,17 @@ public class DescribeClusterInstanceRequest{
     @Data
     @ToString
     public static class FilterDto {
-        /**一个或者多个过滤器，有效值：
-节点角色：instance-role
-节点id：instance-id
-节点类型：type
-节点状态：instance-status*/
+        /**支持的过滤器参数
+
+- instance-name 实例名称
+- instance-role 实例角色
+- instance-id 实例id
+- instance-ip 实例ip
+- instance-status 实例状态
+- node-pool-id 节点所属节点池id
+
+
+*/
         @KsYunField(name="Name")
         private String Name;
         /***/

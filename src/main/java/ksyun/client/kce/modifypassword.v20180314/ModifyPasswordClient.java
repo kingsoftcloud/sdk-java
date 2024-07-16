@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname ModifyPasswordClient
-* @Description 修改仓库密码
+* @Description 修改镜像仓库密码
 */
 @Slf4j
 public class ModifyPasswordClient extends BaseClient {

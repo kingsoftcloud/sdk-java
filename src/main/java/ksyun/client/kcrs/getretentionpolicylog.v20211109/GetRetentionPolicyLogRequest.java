@@ -14,5 +14,21 @@ import java.util.Arrays;
 */
 @Data
 public class GetRetentionPolicyLogRequest{
+    /**实例Id*/
+    @KsYunField(name="InstanceId")
+    private String InstanceId;
+
+    /**命名空间*/
+    @KsYunField(name="Namespace")
+    private String Namespace;
+
+    /**taskId*/
+    @KsYunField(name="TaskId")
+    private Integer TaskId;
+
+    /**ExecutionId*/
+    @KsYunField(name="ExecutionId")
+    private Integer ExecutionId;
+
 
 }

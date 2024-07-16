@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname DescribeEpcImageClient
-* @Description 查询EPC镜像
+* @Description 获取裸金属服务器支持的系统镜像
 */
 @Slf4j
 public class DescribeEpcImageClient extends BaseClient {

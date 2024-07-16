@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname CreateClusterClient
-* @Description 创建集群新版
+* @Description 创建集群（新）
 */
 @Slf4j
 public class CreateClusterClient extends BaseClient {

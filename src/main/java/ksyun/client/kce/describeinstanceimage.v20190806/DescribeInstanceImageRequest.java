@@ -14,9 +14,5 @@ import java.util.Arrays;
 */
 @Data
 public class DescribeInstanceImageRequest{
-    /**镜像id*/
-    @KsYunField(name="ImageId")
-    private List<String> ImageIdList;
-
 
 }

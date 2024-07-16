@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname DescribeClusterInstanceClient
-* @Description DescribeClusterInstance
+* @Description 查询集群节点列表
 */
 @Slf4j
 public class DescribeClusterInstanceClient extends BaseClient {

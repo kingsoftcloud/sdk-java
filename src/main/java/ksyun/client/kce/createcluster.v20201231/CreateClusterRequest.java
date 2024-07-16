@@ -18,11 +18,19 @@ public class CreateClusterRequest{
     @KsYunField(name="ClusterName")
     private String ClusterName;
 
-    /**集群类型*/
+    /**集群类型，默认值 VirtualMachine，该字段已无实际意义，可忽略
+
+- VirtualMachine 云服务器
+- BareMetal 裸金属
+*/
     @KsYunField(name="ClusterType")
     private String ClusterType;
 
-    /**master管理形态<br>有效值：ManagedCluster，DedicatedCluster<br>默认值：DedicatedCluster*/
+    /**集群管理模式，默认DedicatedCluster
+
+- DedicatedCluster 独立部署集群
+- ManagedCluster 托管集群
+- ServerlessCluster serverless集群*/
     @KsYunField(name="ClusterManageMode")
     private String ClusterManageMode;
 
@@ -34,15 +42,26 @@ public class CreateClusterRequest{
     @KsYunField(name="VpcId")
     private String VpcId;
 
-    /**集群pod的网段，如：10.0.0.0/16<br>校验：容器集群pod的网段不能和Service网段和VPC的网段冲突；托管集群不支持33网段*/
+    /**集群pod的网段，如：10.0.0.0/16
+
+- 不能与Service网段冲突
+- 不能与VPC网段冲突
+- 托管集群不支持33网段*/
     @KsYunField(name="PodCidr")
     private String PodCidr;
 
-    /**集群Service的网段，如：10.1.0.0/16<br>校验：容器集群Service的网段不能和Pod网段和VPC的网段冲突*/
+    /**集群Service的网段，如10.254.0.0/16
+
+- 不能与Pod网段冲突
+- 不能与Vpc网段冲突*/
     @KsYunField(name="ServiceCidr")
     private String ServiceCidr;
 
-    /**集群的网络模型<br>有效值：Flannel、Canal*/
+    /**集群的网络模型
+
+- Flannel
+- Canal
+- Calico*/
     @KsYunField(name="NetworkType")
     private String NetworkType;
 
@@ -54,9 +73,13 @@ public class CreateClusterRequest{
     @KsYunField(name="ReserveSubnetId")
     private String ReserveSubnetId;
 
-    /**是否将apiserver暴露到公网。若不需要暴露，则不填写此选项；若选择暴露，则会创建公网SLB和EIP用于开启集群的Api Server公网访问。需要用户传递弹性EIP创建透传参数，json化字符串格，详见[创建弹性IP](https://docs.ksyun.com/documents/687)。*/
+    /**是否将apiserver暴露到公网，仅针对独立部署集群生效。若不需要暴露，则不填写此选项；若选择暴露，则会创建公网SLB和EIP用于开启集群的Api Server公网访问。需要用户传递弹性EIP创建透传参数，json化字符串格，详见[创建弹性IP](https://docs.ksyun.com/documents/687)。*/
     @KsYunField(name="PublicApiServer")
     private String PublicApiServer;
+
+    /**托管集群或者Serverless集群是否将apiserver暴露到公网*/
+    @KsYunField(name="ExposePublicApiServer")
+    private Boolean ExposePublicApiServer;
 
     /**每个节点上运行的pod数量上限<br> 默认值：128 <br> 可选值：16，32，64，128，256*/
     @KsYunField(name="MaxPodPerNode")
@@ -91,10 +114,15 @@ False：Master和Etcd组件共享节点部署
     @Data
     @ToString
     public static class InstanceForNodeDto {
-        /**节点角色,有效值：Worker、Master_Etcd、Master、Etcd
-- ClusterManageMode字段为DedicatedCluster
-   当MasterEtcdSeparate字段设置为False时，Worker和Master_Etcd需要同时指定；
-   当MasterEtcdSeparate字段设置为True时，Master、Etcd和Worker角色需要同时指定。
+        /**节点角色,有效值：
+- Worker
+- Master_Etcd
+- Master
+- Etcd
+
+ClusterManageMode字段为DedicatedCluster时
+- MasterEtcdSeparate字段设置为False时，Worker和Master_Etcd需要同时指定
+- MasterEtcdSeparate字段设置为True时，Master、Etcd和Worker角色需要同时指定。
 - Master_Etcd、Master、Etcd目前只能是3个或者5个。
 - Master_Etcd、Master、Etcd建议配置4C8G起，数据盘建议SSD，50G起。*/
         @KsYunField(name="NodeRole")
@@ -111,10 +139,17 @@ False：Master和Etcd组件共享节点部署
     @Data
     @ToString
     public static class ExistedInstanceForEpcDto {
-        /**节点角色,有效值：Worker、Master_Etcd、Master、Etcd
-- ClusterManageMode字段为DedicatedCluster
-   当MasterEtcdSeparate字段设置为False时，Worker和Master_Etcd需要同时指定；
-   当MasterEtcdSeparate字段设置为True时，Master、Etcd和Worker角色需要同时指定。
+        /**节点角色,有效值：
+
+- Worker
+- Master_Etcd
+- Master
+- Etcd
+
+ClusterManageMode字段为DedicatedCluster时
+
+- MasterEtcdSeparate字段设置为False时，Worker和Master_Etcd需要同时指定
+- MasterEtcdSeparate字段设置为True时，Master、Etcd和Worker角色需要同时指定。
 - Master_Etcd、Master、Etcd目前只能是3个或者5个。
 - Master_Etcd、Master、Etcd建议配置4C8G起，数据盘建议SSD，50G起。*/
         @KsYunField(name="NodeRole")
@@ -124,7 +159,7 @@ False：Master和Etcd组件共享节点部署
         private List<Object> EpcConfigList;
     }
 
-    /**集群中安装的组件*/
+    /**不推荐使用接口进行安装，集群会安装默认的组件，如需安装其它增强组件，请在集群创建完成后，在控制台选择安装。*/
     @KsYunField(name="Component")
     private List<ComponentDto> ComponentList;
 
@@ -139,9 +174,8 @@ False：Master和Etcd组件共享节点部署
         private String Config;
     }
 
-    /**Serverless集群是否将apiserver暴露到公网*/
-    @KsYunField(name="ExposePublicApiServer")
-    private Boolean ExposePublicApiServer;
+    /**控制面日志采集,当用户选择的是独立部署集群时，此选项填写无效；当选择是托管时，可选*/
+    @KsYunField(name="ControlPlaneLog")
 
 
 }

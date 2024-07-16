@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname DeleteClusterInstancesClient
-* @Description DeleteClusterInstances
+* @Description 移除集群中的节点
 */
 @Slf4j
 public class DeleteClusterInstancesClient extends BaseClient {

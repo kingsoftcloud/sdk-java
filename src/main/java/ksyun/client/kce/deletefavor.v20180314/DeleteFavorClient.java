@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname DeleteFavorClient
-* @Description 取消收藏镜像
+* @Description 取消收藏
 */
 @Slf4j
 public class DeleteFavorClient extends BaseClient {

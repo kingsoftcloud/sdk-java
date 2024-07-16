@@ -18,7 +18,7 @@ public class DeleteRepoTagRequest{
     @KsYunField(name="InstanceId")
     private String InstanceId;
 
-    /**命名空间*/
+    /**命名空间名称，只能包含小写字母、数字、和分隔符（“-”，“.”)，不能以分隔符开头或结尾*/
     @KsYunField(name="Namespace")
     private String Namespace;
 

@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname DescribeEpcForClusterClient
-* @Description DescribeEpcForCluster
+* @Description 获取支持移入集群的裸金属服务器列表
 */
 @Slf4j
 public class DescribeEpcForClusterClient extends BaseClient {
