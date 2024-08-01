@@ -26,9 +26,6 @@ public class CreateNodePoolRequest{
     @KsYunField(name="EnableAutoScale")
     private Boolean EnableAutoScale;
 
-    /**节点模板信息*/
-    @KsYunField(name="NodeTemplate")
-
     /**节点标签*/
     @KsYunField(name="Label")
     private List<LabelDto> LabelList;

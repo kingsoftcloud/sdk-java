@@ -14,8 +14,5 @@ import java.util.Arrays;
 */
 @Data
 public class DescribeContainerGroupCountRequest{
-    /***/
-    @KsYunField(name="Label")
-
 
 }

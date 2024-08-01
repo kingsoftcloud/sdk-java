@@ -173,9 +173,4 @@ ClusterManageMode字段为DedicatedCluster时
         @KsYunField(name="Config")
         private String Config;
     }
-
-    /**控制面日志采集,当用户选择的是独立部署集群时，此选项填写无效；当选择是托管时，可选*/
-    @KsYunField(name="ControlPlaneLog")
-
-
 }

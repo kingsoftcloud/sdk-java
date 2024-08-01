@@ -22,8 +22,4 @@ public class CreateWebhookTriggerRequest{
     @KsYunField(name="Namespace")
     private String Namespace;
 
-    /**触发器参数*/
-    @KsYunField(name="Trigger")
-
-
 }

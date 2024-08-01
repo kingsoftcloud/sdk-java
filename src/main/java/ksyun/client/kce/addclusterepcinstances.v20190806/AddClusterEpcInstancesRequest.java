@@ -27,9 +27,4 @@ public class AddClusterEpcInstancesRequest{
     /**裸金属服务器产品重新安装操作系统的透传参数，json化字符串格式，详见[重装租赁裸金属服务器](https://apiexplorer.ksyun.com/#/api/44/ReinstallEpc/2015-11-01/1003)。*/
     @KsYunField(name="EpcPara")
     private List<String> EpcParaList;
-
-    /**节点高级设置*/
-    @KsYunField(name="AdvancedSetting")
-
-
 }

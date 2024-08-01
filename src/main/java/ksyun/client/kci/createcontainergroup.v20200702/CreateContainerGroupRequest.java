@@ -89,13 +89,6 @@ public class CreateContainerGroupRequest{
     /**镜像缓存ID，指定镜像缓存，则AutoMatchImageCache无效*/
     @KsYunField(name="ImageCacheId")
     private String ImageCacheId;
-
-    /**容器实例高级属性设置，主要用于控制容器实例底层KVM的启动配置*/
-    @KsYunField(name="AdvanceSettings")
-
-    /**容器实例底层云服务器DNS配置*/
-    @KsYunField(name="MachineDnsConfig")
-
     /**容器实例底层云主机host配置，如使用场景：当有自建镜像仓库时，可通过此参数配置host，通过域名拉取vpc下自建仓库镜像*/
     @KsYunField(name="MachineHostAliase")
     private List<MachineHostAliaseDto> MachineHostAliaseList;
@@ -155,14 +148,6 @@ public class CreateContainerGroupRequest{
         /**Volume名称，格式需符合`^[a-z0-9]([-a-z0-9]*[a-z0-9])?$`*/
         @KsYunField(name="Name")
         private String Name;
-        /**当Volume.Type=NFSVolume，该配置必须填写*/
-        @KsYunField(name="NFSVolume")
-        /**当Volume.Type=HostPathVolume时，该配置必填*/
-        @KsYunField(name="HostPathVolume")
-        /**当Volume.Type=EBSVolume时，该配置必填*/
-        @KsYunField(name="EBSVolume")
-        /**当Volume.Type=ConfigFileVolume时，该配置必填*/
-        @KsYunField(name="ConfigFileVolume")
     }
 
     /****创建无集群模式实例时该字段必填***/
@@ -199,10 +184,6 @@ public class CreateContainerGroupRequest{
         /**镜像拉取策略- Always- IfNotPresent- Never*/
         @KsYunField(name="ImagePullPolicy")
         private String ImagePullPolicy;
-        /**存活探测配置*/
-        @KsYunField(name="LivenessProbe")
-        /**就绪探测配置，各参数说明请参考LivenessProbe*/
-        @KsYunField(name="ReadinessProbe")
         /**环境变量*/
         @KsYunField(name="EnvironmentVar")
         private List<Object> EnvironmentVarList;
@@ -213,9 +194,6 @@ public class CreateContainerGroupRequest{
         @KsYunField(name="VolumeMount")
         private List<Object> VolumeMountList;
     }
-
-    /****创建无集群模式实例时该字段必填**pod dns配置*/
-    @KsYunField(name="DnsConfig")
 
     /****创建无集群模式实例时该字段必填**pod host配置*/
     @KsYunField(name="HostAliase")
@@ -254,10 +232,6 @@ public class CreateContainerGroupRequest{
         @KsYunField(name="Value")
         private String Value;
     }
-
-    /****创建集群模式容器实例时该字段才生效**KubeProxy配置*/
-    @KsYunField(name="KubeProxy")
-
     /****创建集群模式容器实例该字段才生效**pod日志是否采集到klog，默认false，若开启，则按照kce集群的配置的采集规则将日志输出到klog。*/
     @KsYunField(name="KlogEnabled")
     private Boolean KlogEnabled;

@@ -21,9 +21,4 @@ public class ModifyNodeTemplateRequest{
     /**节点池id*/
     @KsYunField(name="NodePoolId")
     private String NodePoolId;
-
-    /**节点模板信息<br>注：不可修改计费方式、节点池所在vpc*/
-    @KsYunField(name="NodeTemplate")
-
-
 }

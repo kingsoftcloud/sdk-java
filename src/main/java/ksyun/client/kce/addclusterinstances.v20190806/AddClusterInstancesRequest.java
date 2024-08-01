@@ -32,8 +32,6 @@ public class AddClusterInstancesRequest{
 节点配置信息使用云主机/专属云主机创建透传参数，json化字符串格式，详见云主机创建实例接口和专属云主机创建实例接口*/
         @KsYunField(name="NodePara")
         private List<String> NodeParaList;
-        /**节点高级设置*/
-        @KsYunField(name="AdvancedSetting")
     }
 
 

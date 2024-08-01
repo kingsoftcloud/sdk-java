@@ -32,8 +32,6 @@ public class AddExistedInstancesRequest{
 注意：接口中的ImageId参数替换为支持的节点操作系统，可调用容器的DescribeInstanceImage接口，获取容器服务支持的节点操作系统*/
         @KsYunField(name="KecPara")
         private List<String> KecParaList;
-        /**节点高级设置*/
-        @KsYunField(name="AdvancedSetting")
     }
 
 

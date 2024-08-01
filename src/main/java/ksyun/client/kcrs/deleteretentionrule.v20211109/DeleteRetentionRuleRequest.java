@@ -21,9 +21,4 @@ public class DeleteRetentionRuleRequest{
     /**命名空间*/
     @KsYunField(name="Namespace")
     private String Namespace;
-
-    /**参数实体类*/
-    @KsYunField(name="Rule")
-
-
 }
