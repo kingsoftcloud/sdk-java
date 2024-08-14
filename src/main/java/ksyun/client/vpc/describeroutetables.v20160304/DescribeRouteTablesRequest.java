@@ -1,4 +1,4 @@
-package ksyun.client.vpc.describevpngatewayroutes.v20160304;
+package ksyun.client.vpc.describeroutetables.v20160304;
 
 import common.annotation.KsYunField;
 import lombok.Builder;
@@ -9,14 +9,14 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname DescribeVpnGatewayRoutesRequest
+* @Classname DescribeRouteTablesRequest
 * @Description 请求参数
 */
 @Data
-public class DescribeVpnGatewayRoutesRequest{
-    /**Vpn网关Id*/
-    @KsYunField(name="VpnGatewayId")
-    private String VpnGatewayId;
+public class DescribeRouteTablesRequest{
+    /**多个路由表的ID*/
+    @KsYunField(name="RouteTableId")
+    private List<String> RouteTableIdList;
 
     /**筛选Filter*/
     @KsYunField(name="Filter")
@@ -26,8 +26,7 @@ public class DescribeVpnGatewayRoutesRequest{
     @ToString
     public static class FilterDto {
         /**有效值：
-- nexthop，下一跳类型
-- cidr-block，网段*/
+- vpc-id，Vpc的ID*/
         @KsYunField(name="Name")
         private String Name;
         /***/

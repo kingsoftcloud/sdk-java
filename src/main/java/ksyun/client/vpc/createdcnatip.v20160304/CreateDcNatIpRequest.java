@@ -1,4 +1,4 @@
-package ksyun.client.vpc.describesubnetavailableaddresses.v20160304;
+package ksyun.client.vpc.createdcnatip.v20160304;
 
 import common.annotation.KsYunField;
 import lombok.Builder;
@@ -9,10 +9,10 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname DescribeSubnetAvailableAddressesRequest
+* @Classname CreateDcNatIpRequest
 * @Description 请求参数
 */
 @Data
-public class DescribeSubnetAvailableAddressesRequest{
+public class CreateDcNatIpRequest{
 
 }

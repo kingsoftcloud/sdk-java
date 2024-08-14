@@ -18,7 +18,7 @@ public class CreateRouteRequest{
     @KsYunField(name="VpcId")
     private String VpcId;
 
-    /**路由的类型*/
+    /**下一跳类型*/
     @KsYunField(name="RouteType")
     private String RouteType;
 
@@ -45,6 +45,26 @@ public class CreateRouteRequest{
     /**网卡ID*/
     @KsYunField(name="NetworkInterfaceId")
     private String NetworkInterfaceId;
+
+    /**高可用虚拟IP的ID*/
+    @KsYunField(name="HaVipId")
+    private String HaVipId;
+
+    /**高可用虚拟IP的主网卡ID*/
+    @KsYunField(name="HaVipMasterNetworkInterfaceId")
+    private String HaVipMasterNetworkInterfaceId;
+
+    /**云企业网的ID*/
+    @KsYunField(name="CenId")
+    private String CenId;
+
+    /**路由描述(部分机房支持，不支持该参数的机房忽略此传值)*/
+    @KsYunField(name="Description")
+    private String Description;
+
+    /**路由表ID(部分机房支持，不支持该参数的机房忽略此传值)*/
+    @KsYunField(name="RouteTableId")
+    private String RouteTableId;
 
 
 }

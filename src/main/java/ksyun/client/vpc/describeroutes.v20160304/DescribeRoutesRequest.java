@@ -28,7 +28,8 @@ public class DescribeRoutesRequest{
         /**有效值：
 - vpc-id，Vpc的ID
 - instance-id，主机路由的下一跳ID
-- destination-cidr-block，目标网段*/
+- destination-cidr-block，目标网段
+- route-table-id，路由表ID*/
         @KsYunField(name="Name")
         private String Name;
         /***/

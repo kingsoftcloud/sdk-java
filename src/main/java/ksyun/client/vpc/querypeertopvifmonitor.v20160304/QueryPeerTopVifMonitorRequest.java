@@ -14,15 +14,15 @@ import java.util.Arrays;
 */
 @Data
 public class QueryPeerTopVifMonitorRequest{
-    /**虚拟私有网络id, VpcId*/
-    @KsYunField(name="VpcId")
+    /**虚拟私有网络id*/
+    @KsYunField(name="vpcId")
     private String VpcId;
 
-    /**开始时间，开始时间和结束时间相差10分钟,例如：2023-09-14T13:30:01*/
+    /**开始时间，开始时间和结束时间相差10分钟。例如：2023-12-21T00:01:00*/
     @KsYunField(name="StartTime")
     private String StartTime;
 
-    /**结束时间，开始时间和结束时间相差10分钟，例如：2023-09-14T13:40:01*/
+    /**结束时间，开始时间和结束时间相差10分钟。例如：2023-12-21T00:01:00*/
     @KsYunField(name="EndTime")
     private String EndTime;
 
@@ -30,8 +30,8 @@ public class QueryPeerTopVifMonitorRequest{
     @KsYunField(name="SortType")
     private String SortType;
 
-    /**筛选ip*/
-    @KsYunField(name="Ip")
+    /**筛选IP。*/
+    @KsYunField(name="ip")
     private String Ip;
 
 

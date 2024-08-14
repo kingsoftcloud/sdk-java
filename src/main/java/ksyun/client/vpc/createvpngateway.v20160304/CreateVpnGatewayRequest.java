@@ -38,5 +38,9 @@ public class CreateVpnGatewayRequest{
     @KsYunField(name="PurchaseTime")
     private Integer PurchaseTime;
 
+    /**VPN网关的版本,支持1.0/2.0*/
+    @KsYunField(name="VpnGatewayVersion")
+    private String VpnGatewayVersion;
+
 
 }

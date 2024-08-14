@@ -42,9 +42,13 @@ public class CreateVpnTunnelRequest{
     @KsYunField(name="IkeEncryAlgorithm")
     private String IkeEncryAlgorithm;
 
-    /**客户网关的类型(GreOverIpsec|Ipsec)*/
+    /**客户网关的类型(GreOverIpsec|Ipsec|route_ipsec|ipsec)*/
     @KsYunField(name="Type")
     private String Type;
+
+    /**开启健康检查*/
+    @KsYunField(name="OpenHealthCheck")
+    private Boolean OpenHealthCheck;
 
     /**预共享密钥。对称加密的KEY，VPN端和客户端统一，用户自行填写*/
     @KsYunField(name="PreSharedKey")
@@ -81,6 +85,22 @@ public class CreateVpnTunnelRequest{
     /**GRE模式开启HA模式客户的IP*/
     @KsYunField(name="HaCustomerGreIp")
     private String HaCustomerGreIp;
+
+    /**•高可用模式, active_active （负载） 、active_standby（主备）*/
+    @KsYunField(name="HaMode")
+    private String HaMode;
+
+    /**金山侧互联IP*/
+    @KsYunField(name="LocalPeerIp")
+    private String LocalPeerIp;
+
+    /**•客户侧互联IP*/
+    @KsYunField(name="CustomerPeerIp")
+    private String CustomerPeerIp;
+
+    /**••IKE版本*/
+    @KsYunField(name="IkeVersion")
+    private String IkeVersion;
 
 
 }

@@ -14,7 +14,7 @@ import java.util.Arrays;
 */
 @Data
 public class DeleteVpnGatewayRouteRequest{
-    /**VPN网关路由id*/
+    /**VPN网关的ID*/
     @KsYunField(name="VpnGatewayRouteId")
     private String VpnGatewayRouteId;
 
