@@ -30,15 +30,17 @@ public class ReinstallEpcRequest{
     @KsYunField(name="Password")
     private String Password;
 
-    /**是否支持Bond，是：“Yes”；不是:”No”*/
+    /**网卡模式
+有效值：
+bond4：BOND模式
+single：非BOND模式
+dual：双网卡模式
+1. centos、Debin、Ubuntu重装时，bond选项 限制：
+    a. 若开机为双网卡模式，则只能重装成双网卡模式，无法重装为bond和非bond模式。
+    b. bond/非bond重装时仅可选择bond/非bond 
+2. 重装为window系统时，无法选择网卡类型，默认重装为非bond模式,且无法选择密钥验证。*/
     @KsYunField(name="NetworkInterfaceMode")
     private String NetworkInterfaceMode;
-
-    /**安全组件类型
-- classic：经典版
-- no：不开启*/
-    @KsYunField(name="SecurityAgent")
-    private String SecurityAgent;
 
     /**安全组件类型
 - classic：经典版
@@ -97,7 +99,7 @@ SRaid0：单盘SRaid0无限制，仅针对大数据业务自身有冗余的场�
     private String NvmeDataDiskCatalogueSuffix;
 
     /**网卡bond的属性*/
-    @KsYunField(name="bondAttribute")
+    @KsYunField(name="BondAttribute")
     private String BondAttribute;
 
     /**kes组件类型*/
@@ -129,7 +131,7 @@ SRaid0：单盘SRaid0无限制，仅针对大数据业务自身有冗余的场�
     private String GpuImageDriverId;
 
     /**容器引擎组件类型*/
-    @KsYunField(name="containerAgent")
+    @KsYunField(name="ContainerAgent")
     private String ContainerAgent;
 
 

@@ -93,10 +93,11 @@ SRaid0：单盘SRaid0无限制，仅针对大数据业务自身有冗余的场�
     private String ImageId;
 
     /**网卡模式
--有效值：
--bond4：BOND模式
--single ：非BOND模式
--dual：双网卡模式*/
+有效值：
+bond4：BOND模式
+single：非BOND模式
+dual：双网卡模式
+windows创建时，只支持非bond模式。*/
     @KsYunField(name="NetworkInterfaceMode")
     private String NetworkInterfaceMode;
 
@@ -148,12 +149,6 @@ SRaid0：单盘SRaid0无限制，仅针对大数据业务自身有冗余的场�
     /**系统的登录密码*/
     @KsYunField(name="Password")
     private String Password;
-
-    /**安全组件类型
-- classic：经典版
-- no：不开启*/
-    @KsYunField(name="SecurityAgent")
-    private String SecurityAgent;
 
     /**安全组件类型
 - classic：经典版
@@ -237,8 +232,9 @@ SRaid0：单盘SRaid0无限制，仅针对大数据业务自身有冗余的场�
     @KsYunField(name="NvmeDataDiskCatalogueSuffix")
     private String NvmeDataDiskCatalogueSuffix;
 
-    /**网卡bond的属性*/
-    @KsYunField(name="bondAttribute")
+    /**网卡bond的属性
+有效值： bond0|bond1*/
+    @KsYunField(name="BondAttribute")
     private String BondAttribute;
 
     /**容器引擎组件类型*/
@@ -275,12 +271,20 @@ SRaid0：单盘SRaid0无限制，仅针对大数据业务自身有冗余的场�
 
     /**roce网络
 有效值： Open：开启  Close：关闭 
-
+添加白名单的用户为必填项
 
 
 */
     @KsYunField(name="RoceNetwork")
     private String RoceNetwork;
+
+    /**创建pdns所需参数*/
+    @KsYunField(name="ZoneId")
+    private String ZoneId;
+
+    /**创建pdns所需参数*/
+    @KsYunField(name="ZoneType")
+    private String ZoneType;
 
 
 }

@@ -62,5 +62,9 @@ public class CreateProcessRequest{
     @KsYunField(name="ProcessSource")
     private Integer ProcessSource;
 
+    /***/
+    @KsYunField(name="autoNocCase")
+    private Integer AutoNocCase;
+
 
 }
