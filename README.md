@@ -18,7 +18,7 @@
    ```
      <groupId>com.ksyun</groupId>
      <artifactId>ksyun-java-sdk</artifactId>
-     <version>1.0.4</version>
+     <version> 版本 </version>  //以maven中央仓库为准：https://mvnrepository.com/artifact/com.ksyun/ksyun-java-sdk
    ```
 2. 在您的代码中引用对应模块代码，可参考示例。
 
