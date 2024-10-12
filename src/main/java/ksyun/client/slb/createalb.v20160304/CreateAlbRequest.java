@@ -62,5 +62,13 @@ public class CreateAlbRequest{
     @KsYunField(name="EnableHpa")
     private Boolean EnableHpa;
 
+    /**是否开启删除保护*/
+    @KsYunField(name="DeleteProtection")
+    private Boolean DeleteProtection;
+
+    /**是否开启修改保护*/
+    @KsYunField(name="ModificationProtection")
+    private Boolean ModificationProtection;
+
 
 }

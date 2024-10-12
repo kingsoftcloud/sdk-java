@@ -26,5 +26,9 @@ public class ModifyPrivateLinkServerRequest{
     @KsYunField(name="Description")
     private String Description;
 
+    /**删除保护*/
+    @KsYunField(name="DeleteProtection")
+    private String DeleteProtection;
+
 
 }

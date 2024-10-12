@@ -30,5 +30,9 @@ public class CreatePrivateLinkServerRequest{
     @KsYunField(name="ProjectId")
     private String ProjectId;
 
+    /**删除保护*/
+    @KsYunField(name="DeleteProtection")
+    private String DeleteProtection;
+
 
 }

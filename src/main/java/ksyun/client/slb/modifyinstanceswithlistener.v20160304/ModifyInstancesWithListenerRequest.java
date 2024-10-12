@@ -14,5 +14,25 @@ import java.util.Arrays;
 */
 @Data
 public class ModifyInstancesWithListenerRequest{
+    /**后端服务器的ID*/
+    @KsYunField(name="RegisterId")
+    private String RegisterId;
+
+    /**实例的权重*/
+    @KsYunField(name="Weight")
+    private Integer Weight;
+
+    /**后端服务的端口*/
+    @KsYunField(name="RealServerPort")
+    private Integer RealServerPort;
+
+    /**RealServer的主备类型(Master | Slave)，仅MasterSlave监听器有此参数*/
+    @KsYunField(name="MasterSlaveType")
+    private String MasterSlaveType;
+
+    /**标签*/
+    @KsYunField(name="Tag")
+    private String Tag;
+
 
 }

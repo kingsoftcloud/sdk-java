@@ -25,15 +25,6 @@ public class DescribeAlbListenersRequest{
     @Data
     @ToString
     public static class FilterDto {
-        /**有效值：
-- load-balancer-id，应用型负载均衡的ID
-- load-balancer-acl-id，负载均衡Acl的ID
- -listener-protocol，协议类型*/
-        @KsYunField(name="Name")
-        private String Name;
-        /***/
-        @KsYunField(name="Value")
-        private List<String> ValueList;
     }
 
     /**单次调用可返回的最大条目数量*/

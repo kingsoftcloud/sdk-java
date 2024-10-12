@@ -38,6 +38,22 @@ public class CreateAlbListenerRequest{
     @KsYunField(name="CertificateId")
     private String CertificateId;
 
+    /**客户端证书的ID*/
+    @KsYunField(name="CaCertificateId")
+    private String CaCertificateId;
+
+    /**双向认证是否开启*/
+    @KsYunField(name="CaEnabled")
+    private Boolean CaEnabled;
+
+    /**QUIC监听器的ID*/
+    @KsYunField(name="QuicListenerId")
+    private String QuicListenerId;
+
+    /**开启QUIC升级*/
+    @KsYunField(name="EnableQuicUpgrade")
+    private Boolean EnableQuicUpgrade;
+
     /**TLS安全策略*/
     @KsYunField(name="TlsCipherPolicy")
     private String TlsCipherPolicy;

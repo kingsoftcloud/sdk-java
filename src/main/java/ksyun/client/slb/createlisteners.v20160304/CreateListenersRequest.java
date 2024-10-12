@@ -70,7 +70,7 @@ public class CreateListenersRequest{
     @KsYunField(name="RedirectListenerId")
     private String RedirectListenerId;
 
-    /**会话保持的状态*/
+    /**会话保持的状态(start|stop)*/
     @KsYunField(name="SessionState")
     private String SessionState;
 
