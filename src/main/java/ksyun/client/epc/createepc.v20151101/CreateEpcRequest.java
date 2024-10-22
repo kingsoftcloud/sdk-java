@@ -204,23 +204,47 @@ windows创建时，只支持非bond模式。*/
     @KsYunField(name="SystemFileType")
     private String SystemFileType;
 
-    /**数据盘文件格式*/
+    /**数据盘文件格式
+有效值：EXT4|XFS
+*/
     @KsYunField(name="DataFileType")
     private String DataFileType;
 
-    /**数据盘目录*/
+    /**数据盘目录
+有效值：
+
+    /DATA/disk：在系统的DATA目录下，系统里展示内容如/DATA/disk1，/DATA/disk2
+    /data：在系统的根目录下，系统里展示内容从/data1开始，如/data1，/data2
+*/
     @KsYunField(name="DataDiskCatalogue")
     private String DataDiskCatalogue;
 
-    /**数据盘目录后缀属性*/
+    /**数据盘目录后缀属性
+有效值：
+
+    NoSuffix ：不使用后缀，只有在数据盘有一块的时候，可以使用此参数
+    NaturalNumber：后缀从1底层的整数
+    NaturalNumberFromZero：后缀从0递增的整数
+*/
     @KsYunField(name="DataDiskCatalogueSuffix")
     private String DataDiskCatalogueSuffix;
 
-    /**对超线程的变更*/
+    /**对超线程的变更
+有效值：
+
+    Open：开启
+    Close：关闭
+    NoChange：不改变
+*/
     @KsYunField(name="HyperThreading")
     private String HyperThreading;
 
-    /**NVME数据盘类型*/
+    /**NVME数据盘类型
+有效值：
+
+    EXT4
+    XFS
+*/
     @KsYunField(name="NvmeDataFileType")
     private String NvmeDataFileType;
 
