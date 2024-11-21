@@ -30,7 +30,7 @@ public class ListResourcesRequest{
     @KsYunField(name="ResourceUuids")
     private String ResourceUuids;
 
-    /**资源类型名称*/
+    /**资源类型名称，详见 [各产品线资源类型名称](https://docs.ksyun.com/documents/43391)*/
     @KsYunField(name="ResourceName")
     private String ResourceName;
 

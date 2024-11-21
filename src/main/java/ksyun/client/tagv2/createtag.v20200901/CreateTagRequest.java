@@ -14,11 +14,11 @@ import java.util.Arrays;
 */
 @Data
 public class CreateTagRequest{
-    /**Key 最多128字符，仅支持中英文字符/数字+-=._:/@，不能以ksc开头*/
+    /**Key 最多128字符，仅支持中英文字符 数字 + - = . _ : / @ () {} （） 【】，不能以ksc开头*/
     @KsYunField(name="Key")
     private String Key;
 
-    /**Value最多256字符，仅支持中英文字符/数字+-=._:/@(){}，不能以ksc开头,多个以","隔开*/
+    /**Value最多256字符，仅支持中英文字符 数字 + - = . _ : / @ () {} （） 【】，不能以ksc开头,多个以","隔开*/
     @KsYunField(name="Value")
     private String Value;
 
