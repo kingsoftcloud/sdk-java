@@ -173,4 +173,26 @@ ClusterManageMode字段为DedicatedCluster时
         @KsYunField(name="Config")
         private String Config;
     }
+
+    /**控制面日志采集,当用户选择的是独立部署集群时，此选项填写无效；当选择是托管时，可选*/
+    @KsYunField(name="ControlPlaneLog")
+    private ControlPlaneLogDto ControlPlaneLog;
+
+    @Data
+    @ToString
+    public static class ControlPlaneLogDto {
+        /**集群ID*/
+        @KsYunField(name="ClusterId")
+        private String ClusterId;
+        /**控制面日志采集是否开启*/
+        @KsYunField(name="Enable")
+        private Boolean Enable;
+        /**指定控制面日志所投递日志项目的名称，未配置但指定items时将自动创建名称为k8s-log-{clusterID}的日志项目*/
+        @KsYunField(name="ProjectName")
+        private String ProjectName;
+        /**指定哪些控制面日志需要被采集，多个组件请采用英文逗号拼接，如apiserver,kcm，有效值\n\n- apiserver \n- kcm\n- scheduler\n- auditing\*/
+        @KsYunField(name="Items")
+        private String Items;
+    }
+
 }

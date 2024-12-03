@@ -1,4 +1,4 @@
-package ksyun.client.kce.describecluster.v20190806;
+package ksyun.client.kce.describeclustersummary.v20190806;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;
@@ -8,12 +8,12 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname DescribeClusterResponse
-* @Description DescribeCluster 返回体
+* @Classname DescribeClusterSummaryResponse
+* @Description DescribeClusterSummary 返回体
 */
 @Data
 @ToString
-public class DescribeClusterResponse extends BaseResponseModel {
+public class DescribeClusterSummaryResponse extends BaseResponseModel {
 
     /**
      * 请求id

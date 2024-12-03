@@ -33,4 +33,25 @@ true：支持
 false：不支持*/
     @KsYunField(name="EnableKMSE")
     private Boolean EnableKMSE;
+
+    /**支持对托管集群控制面日志采集配置进行全量更新*/
+    @KsYunField(name="ControlPlaneLog")
+    private ControlPlaneLogDto ControlPlaneLog;
+    @Data
+    @ToString
+    public static class ControlPlaneLogDto {
+        /**集群id*/
+        @KsYunField(name="ClusterId")
+        private String ClusterId;
+        /**是否支持*/
+        @KsYunField(name="Enable")
+        private Boolean Enable;
+        /**控制面日志所投递日志项目的名称，未配置但指定items时将自动创建名称为k8s-log-{clusterID}的日志项目*/
+        @KsYunField(name="ProjectName")
+        private String ProjectName;
+        /**控制面日志采集范围，多个组件请使用英文逗号拼接，如apiserver,kcm。
+         有效值：[“apiserver”,“kcm”,“scheduler”,“auditing”]*/
+        @KsYunField(name="Items")
+        private String Items;
+    }
 }

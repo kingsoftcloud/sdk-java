@@ -1,4 +1,4 @@
-package ksyun.client.kce.describecluster.v20190806;
+package ksyun.client.kce.describeclustersummary.v20190806;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,14 +12,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
-* @Classname DescribeClusterClient
-* @Description 查询集群列表
+* @Classname DescribeClusterSummaryClient
+* @Description 查询用户指定机房下的全量集群基础信息
 */
 @Slf4j
-public class DescribeClusterClient extends BaseClient {
+public class DescribeClusterSummaryClient extends BaseClient {
     private final static String service = "kce";
     private final static String version = "2019-08-06";
-    private final static String action = "DescribeCluster";
+    private final static String action = "DescribeClusterSummary";
 
 
     /**
@@ -28,7 +28,7 @@ public class DescribeClusterClient extends BaseClient {
     private Credential credential;
 
 
-    public DescribeClusterClient(Credential credential) {
+    public DescribeClusterSummaryClient(Credential credential) {
         this.credential = credential;
     }
 
@@ -41,7 +41,7 @@ public class DescribeClusterClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeClusterResponse doPost(String path, DescribeClusterRequest requestObj) throws Exception {
+    public DescribeClusterSummaryResponse doPost(String path, DescribeClusterSummaryRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
@@ -56,7 +56,7 @@ public class DescribeClusterClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeClusterResponse doPost(String path, DescribeClusterRequest requestObj, Map<String, String> head) throws Exception {
+    public DescribeClusterSummaryResponse doPost(String path, DescribeClusterSummaryRequest requestObj, Map<String, String> head) throws Exception {
          if (head == null) {
              head = new HashMap<>();
          }
@@ -73,7 +73,7 @@ public class DescribeClusterClient extends BaseClient {
 
         String response = HttpClientUtils.httpPost(path, requestParams, head);
         log.info("doPost end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, DescribeClusterResponse.class);
+        return JSON.parseObject(response, DescribeClusterSummaryResponse.class);
     }
 
     /**
@@ -83,7 +83,7 @@ public class DescribeClusterClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public DescribeClusterResponse doPostRaw(String path, DescribeClusterRequest requestObj) throws Exception {
+    public DescribeClusterSummaryResponse doPostRaw(String path, DescribeClusterSummaryRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doPost(path, requestObj, head);
@@ -97,7 +97,7 @@ public class DescribeClusterClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public DescribeClusterResponse doPostRaw(String path, DescribeClusterRequest requestObj, Map<String, String> head) throws Exception {
+    public DescribeClusterSummaryResponse doPostRaw(String path, DescribeClusterSummaryRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
         }
@@ -112,7 +112,7 @@ public class DescribeClusterClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeClusterResponse doGet(String path, DescribeClusterRequest requestObj) throws Exception {
+    public DescribeClusterSummaryResponse doGet(String path, DescribeClusterSummaryRequest requestObj) throws Exception {
         return doGet(path, requestObj, null);
     }
 
@@ -124,7 +124,7 @@ public class DescribeClusterClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeClusterResponse doDelete(String path, DescribeClusterRequest requestObj) throws Exception {
+    public DescribeClusterSummaryResponse doDelete(String path, DescribeClusterSummaryRequest requestObj) throws Exception {
         return doDelete(path, requestObj, null);
     }
 
@@ -137,12 +137,12 @@ public class DescribeClusterClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeClusterResponse doDelete(String path, DescribeClusterRequest requestObj, Map<String, String> head) throws Exception {
+    public DescribeClusterSummaryResponse doDelete(String path, DescribeClusterSummaryRequest requestObj, Map<String, String> head) throws Exception {
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpDelete(path, requestParams, head);
         log.info("doDelete end,path:{},params:{},head:{}", path, requestParams, head);
-        DescribeClusterResponse DescribeClusterResponse = JSON.parseObject(response, DescribeClusterResponse.class);
-        return DescribeClusterResponse;
+        DescribeClusterSummaryResponse DescribeClusterSummaryResponse = JSON.parseObject(response, DescribeClusterSummaryResponse.class);
+        return DescribeClusterSummaryResponse;
     }
 
 
@@ -154,7 +154,7 @@ public class DescribeClusterClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeClusterResponse doPut(String path, DescribeClusterRequest requestObj) throws Exception {
+    public DescribeClusterSummaryResponse doPut(String path, DescribeClusterSummaryRequest requestObj) throws Exception {
         return doPut(path, requestObj, null);
     }
 
@@ -167,12 +167,12 @@ public class DescribeClusterClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeClusterResponse doPut(String path, DescribeClusterRequest requestObj, Map<String, String> head) throws Exception {
+    public DescribeClusterSummaryResponse doPut(String path, DescribeClusterSummaryRequest requestObj, Map<String, String> head) throws Exception {
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpPut(path, requestParams, head);
         log.info("httpPut end,path:{},params:{},head:{}", path, requestParams, head);
-        DescribeClusterResponse DescribeClusterResponse = JSON.parseObject(response, DescribeClusterResponse.class);
-        return DescribeClusterResponse;
+        DescribeClusterSummaryResponse DescribeClusterSummaryResponse = JSON.parseObject(response, DescribeClusterSummaryResponse.class);
+        return DescribeClusterSummaryResponse;
     }
 
     /**
@@ -184,7 +184,7 @@ public class DescribeClusterClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeClusterResponse doGet(String path, DescribeClusterRequest requestObj, Map<String, String> head) throws Exception {
+    public DescribeClusterSummaryResponse doGet(String path, DescribeClusterSummaryRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
         }
@@ -197,7 +197,7 @@ public class DescribeClusterClient extends BaseClient {
 
         String response = HttpClientUtils.httpGet(path, requestParams, head);
         log.info("doGet end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, DescribeClusterResponse.class);
+        return JSON.parseObject(response, DescribeClusterSummaryResponse.class);
     }
 
 
@@ -207,7 +207,7 @@ public class DescribeClusterClient extends BaseClient {
      * @param requestObj
      * @return
      */
-    private JSONObject getRequestParams(DescribeClusterRequest requestObj) throws Exception {
+    private JSONObject getRequestParams(DescribeClusterSummaryRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置证书
         getCommonParams(credential, requestParams);
@@ -252,7 +252,7 @@ public class DescribeClusterClient extends BaseClient {
         head.put(AWS4EncryptionFactory.X_AMZ_DATA, xAmzDate);
     }
 
-    private JSONObject getSimpleRequestParams(DescribeClusterRequest requestObj) throws Exception {
+    private JSONObject getSimpleRequestParams(DescribeClusterSummaryRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置接口属性
         requestParams.put("Action", action);
@@ -263,7 +263,7 @@ public class DescribeClusterClient extends BaseClient {
         return requestParams;
     }
 
-    private JSONObject getPostRawRequestParams(DescribeClusterRequest requestObj) throws Exception {
+    private JSONObject getPostRawRequestParams(DescribeClusterSummaryRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置接口属性
         requestParams.put("Action", action);
