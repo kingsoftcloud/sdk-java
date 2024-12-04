@@ -1,4 +1,4 @@
-package ksyun.client.epc.createepc.v20151101;
+package ksyun.client.epc.batchcreateepc.v20151101;
 
 import common.annotation.KsYunField;
 import lombok.Builder;
@@ -9,11 +9,11 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname CreateEpcRequest
+* @Classname BatchCreateEpcRequest
 * @Description 请求参数
 */
 @Data
-public class CreateEpcRequest{
+public class BatchCreateEpcRequest{
     /**
 - 裸金属服务器机型
 - 有效值:
@@ -105,10 +105,6 @@ windows创建时，只支持非bond模式。*/
     @KsYunField(name="SubnetId")
     private String SubnetId;
 
-    /**内网资源IP地址*/
-    @KsYunField(name="PrivateIpAddress")
-    private String PrivateIpAddress;
-
     /**用户密钥对的资源ID*/
     @KsYunField(name="keyId")
     private String KeyId;
@@ -159,10 +155,6 @@ windows创建时，只支持非bond模式。*/
     /**从网卡的子网ID*/
     @KsYunField(name="ExtensionSubnetId")
     private String ExtensionSubnetId;
-
-    /**从网卡在VPC中的IP*/
-    @KsYunField(name="ExtensionPrivateIpAddress")
-    private String ExtensionPrivateIpAddress;
 
     /**DNS1的值*/
     @KsYunField(name="ExtensionDNS1")
@@ -309,6 +301,18 @@ windows创建时，只支持非bond模式。*/
     /**创建pdns所需参数*/
     @KsYunField(name="ZoneType")
     private String ZoneType;
+
+    /**实例起始值*/
+    @KsYunField(name="HostNameStartNo")
+    private Integer HostNameStartNo;
+
+    /**计算机名称起始值*/
+    @KsYunField(name="ComputerNameStartNo")
+    private Integer ComputerNameStartNo;
+
+    /**数量*/
+    @KsYunField(name="Amount")
+    private Integer Amount;
 
 
 }
