@@ -45,6 +45,33 @@ public class LaunchClusterRequest{
 
     /**元数组高可用信息：*/
     @KsYunField(name="DatabaseInfo")
+    private DatabaseInfoDto DatabaseInfo;
+
+    @Data
+    @ToString
+    public static class DatabaseInfoDto {
+        /**数据库类型：
+         本地Mysql：mysql
+         rds：rds*/
+        @KsYunField(name="Type")
+        private String Type;
+
+        /**数据库 Endpoint*/
+        @KsYunField(name="Endpoint")
+        private String Endpoint;
+
+        /**数据库用户名*/
+        @KsYunField(name="Username")
+        private String Username;
+
+        /**数据库密码*/
+        @KsYunField(name="Password")
+        private String Password;
+
+        /**rds实例id，当数据库类型为rds时需要填写*/
+        @KsYunField(name="RdsInstanceId")
+        private String RdsInstanceId;
+    }
 
     /**组件列表：
 1. Hadoop
