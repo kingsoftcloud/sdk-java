@@ -28,8 +28,8 @@ public class ScaleInInstanceGroupsRequest{
         /**节点组 id，需要注意的是，仅可对 Task 节点或 Gateway 节点进行缩容操作。节点组 id 可通过 DescribeCluster 接口获得*/
         private String Id;
         /**要缩容的实例列表，不支持缩容中间实例，如果要缩容中间实例需提工单处理*/
-        @KsYunField(name="instance",type=2)
-        private List<Object> InstanceList;
+        @KsYunField(name="instances",type=2)
+        private List<Object> InstancesList;
     }
 
     /**是否开启优雅缩容*/

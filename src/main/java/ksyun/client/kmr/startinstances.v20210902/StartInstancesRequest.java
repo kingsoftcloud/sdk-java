@@ -14,5 +14,15 @@ import java.util.Arrays;
 */
 @Data
 public class StartInstancesRequest{
+    /**集群ID
+*/
+    @KsYunField(name="ClusterId")
+    private String ClusterId;
+
+    /**主机实例ID
+*/
+    @KsYunField(name="InstanceIds",type=2)
+    private List<String> InstanceIdsList;
+
 
 }

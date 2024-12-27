@@ -14,5 +14,9 @@ import java.util.Arrays;
 */
 @Data
 public class ListClustersRequest{
+    /**分页参数*/
+    @KsYunField(name="Marker")
+    private String Marker;
+
 
 }

@@ -14,5 +14,10 @@ import java.util.Arrays;
 */
 @Data
 public class ListTagValuesRequest{
+    /**集群ID
+*/
+    @KsYunField(name="ClusterId")
+    private String ClusterId;
+
 
 }

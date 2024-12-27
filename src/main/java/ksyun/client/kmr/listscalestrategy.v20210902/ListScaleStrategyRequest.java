@@ -14,5 +14,9 @@ import java.util.Arrays;
 */
 @Data
 public class ListScaleStrategyRequest{
+    /**集群ID*/
+    @KsYunField(name="ClusterId")
+    private String ClusterId;
+
 
 }
