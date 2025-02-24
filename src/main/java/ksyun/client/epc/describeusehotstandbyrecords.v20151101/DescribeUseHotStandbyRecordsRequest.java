@@ -26,6 +26,26 @@ hot-standby-private-ip，热备机内网ip
 hot-standby-host-type，热备机机型
 replace-type，热备替换类型*/
     @KsYunField(name="Filter.N")
+    private  List<FilterNDto> Filter;
+    @Data
+    @ToString
+    public static class FilterNDto {
+        /**参数名称*/
+        @KsYunField(name="Name")
+        private String Name;
+        /**fault-host-id，故障机实例ID，仅支持精确查询
+         hot-standby-host-id，热备机实例ID
+         fault-sn，故障机SN
+         fault-private-ip，故障机内网ip
+         fault-host-type，故障机类型
+         hot-standby-sn，热备机sn
+         hot-standby-private-ip，热备机内网ip
+         hot-standby-host-type，热备机机型
+         replace-type，热备替换类型*/
+        @KsYunField(name="Value.M")
+        private List<String> Value;
+    }
+
 
     /**每页条数*/
     @KsYunField(name="MaxResults")
