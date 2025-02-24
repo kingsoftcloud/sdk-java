@@ -129,8 +129,8 @@ windows创建时，只支持非bond模式。*/
     @KsYunField(name="ProjectId")
     private String ProjectId;
 
-    /**云物理主机计费类型，包年包月Monthly，按日月结Daily
--有效值：Monthly | Daily*/
+    /**云物理主机计费类型，包年包月Monthly，按日月结Daily，试用Trial
+-有效值：Monthly | Daily| Trial*/
     @KsYunField(name="ChargeType")
     private String ChargeType;
 
@@ -313,6 +313,14 @@ windows创建时，只支持非bond模式。*/
     /**数量*/
     @KsYunField(name="Amount")
     private Integer Amount;
+
+    /**释义：试用定时转正
+有效值： 
+    ▪ support：开启
+    ▪ unsupport：关闭
+默认值：unsupport，不传默认关闭*/
+    @KsYunField(name="TimedRegularization")
+    private String TimedRegularization;
 
 
 }

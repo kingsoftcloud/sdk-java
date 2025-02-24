@@ -94,8 +94,8 @@ SRaid0：单盘SRaid0无限制，仅针对大数据业务自身有冗余的场�
 
     /**网卡模式
 有效值：
-bond4：BOND模式
-single：非BOND模式
+bond4：bond模式
+single：非bond模式
 dual：双网卡模式
 windows创建时，只支持非bond模式。*/
     @KsYunField(name="NetworkInterfaceMode")
@@ -133,8 +133,8 @@ windows创建时，只支持非bond模式。*/
     @KsYunField(name="ProjectId")
     private String ProjectId;
 
-    /**云物理主机计费类型，包年包月Monthly，按日月结Daily
--有效值：Monthly | Daily*/
+    /**云物理主机计费类型，包年包月Monthly，按日月结Daily，试用Trial
+-有效值：Monthly | Daily | Trial*/
     @KsYunField(name="ChargeType")
     private String ChargeType;
 
@@ -150,7 +150,7 @@ windows创建时，只支持非bond模式。*/
     @KsYunField(name="Password")
     private String Password;
 
-    /**监控组件类型
+    /**云监控
 - classic：经典版
 - no：不开启*/
     @KsYunField(name="CloudMonitorAgent")
@@ -256,7 +256,7 @@ windows创建时，只支持非bond模式。*/
     @KsYunField(name="NvmeDataDiskCatalogueSuffix")
     private String NvmeDataDiskCatalogueSuffix;
 
-    /**网卡bond的属性
+    /**bond名称
 有效值： bond0|bond1*/
     @KsYunField(name="BondAttribute")
     private String BondAttribute;
@@ -309,6 +309,21 @@ windows创建时，只支持非bond模式。*/
     /**创建pdns所需参数*/
     @KsYunField(name="ZoneType")
     private String ZoneType;
+
+    /**是否开启热备机，有效值
+support开启
+unsupport不开启
+onlyHotStandby只开热备机*/
+    @KsYunField(name="UseHotStandby")
+    private String UseHotStandby;
+
+    /**释义：试用定时转正
+有效值： 
+    ▪ support：开启
+    ▪ unsupport：关闭
+默认值：unsupport，不传默认关闭*/
+    @KsYunField(name="TimedRegularization")
+    private String TimedRegularization;
 
 
 }

@@ -22,5 +22,11 @@ public class UseHotStandByEpcRequest{
     @KsYunField(name="HotStandByHostId")
     private String HotStandByHostId;
 
+    /**保留信息，有效值
+RetainPrivateIP保留内网IP
+Notretain不保留，默认值*/
+    @KsYunField(name="RetainInstanceInfo")
+    private String RetainInstanceInfo;
+
 
 }
