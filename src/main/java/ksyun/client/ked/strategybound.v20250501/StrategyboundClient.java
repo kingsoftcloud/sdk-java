@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname StrategyboundClient
-* @Description 策略安全组绑定云电脑API
+* @Description 将指定云电脑与策略安全组绑定。
 */
 @Slf4j
 public class StrategyboundClient extends BaseClient {

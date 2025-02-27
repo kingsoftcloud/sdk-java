@@ -15,8 +15,8 @@ import java.util.Arrays;
 @Data
 public class StrategyrulebatchEditRequest{
     /**安全组id*/
-    @KsYunField(name="securityGroupId")
-    private String SecurityGroupId;
+    @KsYunField(name="securityGroupId",type=2)
+    private List<String> SecurityGroupIdList;
 
 
 }

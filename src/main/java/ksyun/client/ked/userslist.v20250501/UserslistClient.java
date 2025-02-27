@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname UserslistClient
-* @Description 用户列表API
+* @Description 查看所有用户的概览信息。
 */
 @Slf4j
 public class UserslistClient extends BaseClient {

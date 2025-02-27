@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname UserspasswordresetClient
-* @Description 用户重置密码API
+* @Description 重新设置用户密码。
 */
 @Slf4j
 public class UserspasswordresetClient extends BaseClient {

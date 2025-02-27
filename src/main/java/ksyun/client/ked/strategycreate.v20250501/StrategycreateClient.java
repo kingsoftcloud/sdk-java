@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname StrategycreateClient
-* @Description 策略安全组创建API
+* @Description 创建一个新的策略安全组。
 */
 @Slf4j
 public class StrategycreateClient extends BaseClient {

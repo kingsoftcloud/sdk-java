@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname CloudDeskcreateClient
-* @Description 云电脑创建
+* @Description 此接口允许用户通过提供必要的参数（如实例名称、类型、镜像ID等）来创建新的云电脑实例。
 */
 @Slf4j
 public class CloudDeskcreateClient extends BaseClient {

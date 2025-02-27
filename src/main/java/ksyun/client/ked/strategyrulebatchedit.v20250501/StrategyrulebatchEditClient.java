@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname StrategyrulebatchEditClient
-* @Description 批量配置策略组规则API
+* @Description 批量删除策略安全组规则。
 */
 @Slf4j
 public class StrategyrulebatchEditClient extends BaseClient {

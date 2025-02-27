@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname MonitorregionsClient
-* @Description 区域列表API
+* @Description 返回系统支持的所有地理区域的列表，包括其显示名称和对应的值。
 */
 @Slf4j
 public class MonitorregionsClient extends BaseClient {

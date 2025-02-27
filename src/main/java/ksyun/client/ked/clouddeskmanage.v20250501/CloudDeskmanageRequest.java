@@ -16,13 +16,14 @@ import java.util.Arrays;
 public class CloudDeskmanageRequest{
     /**云电脑 id 列表
 */
-    @KsYunField(name="instanceIds")
-    private String InstanceIds;
+    @KsYunField(name="instanceIds",type=2)
+    private List<String> InstanceIdsList;
 
     /**start 开机
 stop 关机
 reboot 重启
-forcedUnbind*/
+forcedUnbind 强制解绑用户
+delete 删除*/
     @KsYunField(name="action1")
     private String Action1;
 

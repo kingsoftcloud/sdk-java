@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname CloudDesklistClient
-* @Description 云电脑列表管理
+* @Description 该接口用于获取用户所拥有的所有云电脑实例的列表，支持分页查询，并能根据连接状态过滤结果。
 */
 @Slf4j
 public class CloudDesklistClient extends BaseClient {

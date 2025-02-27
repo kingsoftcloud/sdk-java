@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname UserscreateClient
-* @Description 用户创建API
+* @Description 注册新用户。
 */
 @Slf4j
 public class UserscreateClient extends BaseClient {

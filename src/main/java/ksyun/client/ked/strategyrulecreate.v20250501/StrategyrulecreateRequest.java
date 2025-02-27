@@ -14,11 +14,11 @@ import java.util.Arrays;
 */
 @Data
 public class StrategyrulecreateRequest{
-    /**规则名*/
+    /**策略名称*/
     @KsYunField(name="name")
     private String Name;
 
-    /**规则描述*/
+    /**策略描述*/
     @KsYunField(name="description")
     private String Description;
 
@@ -41,7 +41,10 @@ public class StrategyrulecreateRequest{
         private Integer MaxPortRange;
         /**最小端口号*/
         private Integer MinPortRange;
-        /**固定值 ANY*/
+        /**TCP
+UDP
+ICMP
+IP*/
         private String Protocol;
     }
 

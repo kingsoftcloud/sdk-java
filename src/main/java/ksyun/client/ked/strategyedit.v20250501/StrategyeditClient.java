@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname StrategyeditClient
-* @Description 策略安全组修改API
+* @Description 修改现有策略安全组的信息。
 */
 @Slf4j
 public class StrategyeditClient extends BaseClient {

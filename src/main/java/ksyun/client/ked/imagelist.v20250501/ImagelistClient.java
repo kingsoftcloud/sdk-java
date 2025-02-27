@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname ImagelistClient
-* @Description 镜像管理列表API
+* @Description 列出所有可用的镜像资源列表。
 */
 @Slf4j
 public class ImagelistClient extends BaseClient {

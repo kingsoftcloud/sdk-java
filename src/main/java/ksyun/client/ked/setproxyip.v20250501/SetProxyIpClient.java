@@ -1,4 +1,4 @@
-package ksyun.client.ked.strategyunbound.v20250501;
+package ksyun.client.ked.setproxyip.v20250501;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,14 +12,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
-* @Classname StrategyunboundClient
-* @Description 解除当前云电脑与安全组的绑定关系。
+* @Classname SetProxyIpClient
+* @Description 支持在云电脑里配置出口代理
 */
 @Slf4j
-public class StrategyunboundClient extends BaseClient {
+public class SetProxyIpClient extends BaseClient {
     private final static String service = "ked";
     private final static String version = "V1";
-    private final static String action = "Strategyunbound";
+    private final static String action = "SetProxyIp";
 
 
     /**
@@ -28,7 +28,7 @@ public class StrategyunboundClient extends BaseClient {
     private Credential credential;
 
 
-    public StrategyunboundClient(Credential credential) {
+    public SetProxyIpClient(Credential credential) {
         this.credential = credential;
     }
 
@@ -41,7 +41,7 @@ public class StrategyunboundClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public StrategyunboundResponse doPost(String path, StrategyunboundRequest requestObj) throws Exception {
+    public SetProxyIpResponse doPost(String path, SetProxyIpRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
@@ -56,7 +56,7 @@ public class StrategyunboundClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public StrategyunboundResponse doPost(String path, StrategyunboundRequest requestObj, Map<String, String> head) throws Exception {
+    public SetProxyIpResponse doPost(String path, SetProxyIpRequest requestObj, Map<String, String> head) throws Exception {
          if (head == null) {
              head = new HashMap<>();
          }
@@ -73,7 +73,7 @@ public class StrategyunboundClient extends BaseClient {
 
         String response = HttpClientUtils.httpPost(path, requestParams, head);
         log.info("doPost end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, StrategyunboundResponse.class);
+        return JSON.parseObject(response, SetProxyIpResponse.class);
     }
 
     /**
@@ -83,7 +83,7 @@ public class StrategyunboundClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public StrategyunboundResponse doPostRaw(String path, StrategyunboundRequest requestObj) throws Exception {
+    public SetProxyIpResponse doPostRaw(String path, SetProxyIpRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doPost(path, requestObj, head);
@@ -97,7 +97,7 @@ public class StrategyunboundClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public StrategyunboundResponse doPostRaw(String path, StrategyunboundRequest requestObj, Map<String, String> head) throws Exception {
+    public SetProxyIpResponse doPostRaw(String path, SetProxyIpRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
         }
@@ -112,7 +112,7 @@ public class StrategyunboundClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public StrategyunboundResponse doGet(String path, StrategyunboundRequest requestObj) throws Exception {
+    public SetProxyIpResponse doGet(String path, SetProxyIpRequest requestObj) throws Exception {
         return doGet(path, requestObj, null);
     }
 
@@ -124,7 +124,7 @@ public class StrategyunboundClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public StrategyunboundResponse doDelete(String path, StrategyunboundRequest requestObj) throws Exception {
+    public SetProxyIpResponse doDelete(String path, SetProxyIpRequest requestObj) throws Exception {
         return doDelete(path, requestObj, null);
     }
 
@@ -137,12 +137,12 @@ public class StrategyunboundClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public StrategyunboundResponse doDelete(String path, StrategyunboundRequest requestObj, Map<String, String> head) throws Exception {
+    public SetProxyIpResponse doDelete(String path, SetProxyIpRequest requestObj, Map<String, String> head) throws Exception {
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpDelete(path, requestParams, head);
         log.info("doDelete end,path:{},params:{},head:{}", path, requestParams, head);
-        StrategyunboundResponse StrategyunboundResponse = JSON.parseObject(response, StrategyunboundResponse.class);
-        return StrategyunboundResponse;
+        SetProxyIpResponse SetProxyIpResponse = JSON.parseObject(response, SetProxyIpResponse.class);
+        return SetProxyIpResponse;
     }
 
 
@@ -154,7 +154,7 @@ public class StrategyunboundClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public StrategyunboundResponse doPut(String path, StrategyunboundRequest requestObj) throws Exception {
+    public SetProxyIpResponse doPut(String path, SetProxyIpRequest requestObj) throws Exception {
         return doPut(path, requestObj, null);
     }
 
@@ -167,12 +167,12 @@ public class StrategyunboundClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public StrategyunboundResponse doPut(String path, StrategyunboundRequest requestObj, Map<String, String> head) throws Exception {
+    public SetProxyIpResponse doPut(String path, SetProxyIpRequest requestObj, Map<String, String> head) throws Exception {
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpPut(path, requestParams, head);
         log.info("httpPut end,path:{},params:{},head:{}", path, requestParams, head);
-        StrategyunboundResponse StrategyunboundResponse = JSON.parseObject(response, StrategyunboundResponse.class);
-        return StrategyunboundResponse;
+        SetProxyIpResponse SetProxyIpResponse = JSON.parseObject(response, SetProxyIpResponse.class);
+        return SetProxyIpResponse;
     }
 
     /**
@@ -184,7 +184,7 @@ public class StrategyunboundClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public StrategyunboundResponse doGet(String path, StrategyunboundRequest requestObj, Map<String, String> head) throws Exception {
+    public SetProxyIpResponse doGet(String path, SetProxyIpRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
         }
@@ -197,7 +197,7 @@ public class StrategyunboundClient extends BaseClient {
 
         String response = HttpClientUtils.httpGet(path, requestParams, head);
         log.info("doGet end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, StrategyunboundResponse.class);
+        return JSON.parseObject(response, SetProxyIpResponse.class);
     }
 
 
@@ -207,7 +207,7 @@ public class StrategyunboundClient extends BaseClient {
      * @param requestObj
      * @return
      */
-    private JSONObject getRequestParams(StrategyunboundRequest requestObj) throws Exception {
+    private JSONObject getRequestParams(SetProxyIpRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置证书
         getCommonParams(credential, requestParams);
@@ -252,7 +252,7 @@ public class StrategyunboundClient extends BaseClient {
         head.put(AWS4EncryptionFactory.X_AMZ_DATA, xAmzDate);
     }
 
-    private JSONObject getSimpleRequestParams(StrategyunboundRequest requestObj) throws Exception {
+    private JSONObject getSimpleRequestParams(SetProxyIpRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置接口属性
         requestParams.put("Action", action);
@@ -263,7 +263,7 @@ public class StrategyunboundClient extends BaseClient {
         return requestParams;
     }
 
-    private JSONObject getPostRawRequestParams(StrategyunboundRequest requestObj) throws Exception {
+    private JSONObject getPostRawRequestParams(SetProxyIpRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置接口属性
         requestParams.put("Action", action);

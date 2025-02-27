@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname ImageeditClient
-* @Description 镜像修改API
+* @Description 编辑已有镜像的信息。
 */
 @Slf4j
 public class ImageeditClient extends BaseClient {

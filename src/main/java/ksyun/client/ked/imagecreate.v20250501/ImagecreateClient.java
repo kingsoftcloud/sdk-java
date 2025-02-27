@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname ImagecreateClient
-* @Description 镜像创建API
+* @Description 创建自定义镜像。
 */
 @Slf4j
 public class ImagecreateClient extends BaseClient {

@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname RoleseditClient
-* @Description 角色修改API
+* @Description 更新角色属性。
 */
 @Slf4j
 public class RoleseditClient extends BaseClient {

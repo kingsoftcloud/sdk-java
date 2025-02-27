@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname StrategylistClient
-* @Description 策略安全组列表API
+* @Description 获取特定云电脑的安全组列表。
 */
 @Slf4j
 public class StrategylistClient extends BaseClient {

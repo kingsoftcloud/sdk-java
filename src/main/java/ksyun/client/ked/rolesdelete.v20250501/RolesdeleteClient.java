@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname RolesdeleteClient
-* @Description 角色删除API
+* @Description 删除指定角色。
 */
 @Slf4j
 public class RolesdeleteClient extends BaseClient {

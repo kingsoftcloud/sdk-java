@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname UserseditClient
-* @Description 用户修改API
+* @Description 更改相关用户资料。
 */
 @Slf4j
 public class UserseditClient extends BaseClient {

@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname CloudDeskeditClient
-* @Description 云电脑列表编辑
+* @Description 用户可以通过此接口更新指定云电脑实例的信息，比如名称等。
 */
 @Slf4j
 public class CloudDeskeditClient extends BaseClient {

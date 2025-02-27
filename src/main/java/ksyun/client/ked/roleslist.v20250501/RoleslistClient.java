@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname RoleslistClient
-* @Description 角色管理列表API
+* @Description 显示所有角色列表及其详细信息。
 */
 @Slf4j
 public class RoleslistClient extends BaseClient {

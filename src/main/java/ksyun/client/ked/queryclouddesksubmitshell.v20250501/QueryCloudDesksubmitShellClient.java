@@ -1,4 +1,4 @@
-package ksyun.client.ked.strategyunbound.v20250501;
+package ksyun.client.ked.queryclouddesksubmitshell.v20250501;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,14 +12,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
-* @Classname StrategyunboundClient
-* @Description 解除当前云电脑与安全组的绑定关系。
+* @Classname QueryCloudDesksubmitShellClient
+* @Description 提交一个可执行的脚本，支持ps1,bat脚本,请注意脚本的后缀,".ps1"的后缀会使用powershell 执行
 */
 @Slf4j
-public class StrategyunboundClient extends BaseClient {
+public class QueryCloudDesksubmitShellClient extends BaseClient {
     private final static String service = "ked";
     private final static String version = "V1";
-    private final static String action = "Strategyunbound";
+    private final static String action = "QueryCloudDesksubmitShell";
 
 
     /**
@@ -28,7 +28,7 @@ public class StrategyunboundClient extends BaseClient {
     private Credential credential;
 
 
-    public StrategyunboundClient(Credential credential) {
+    public QueryCloudDesksubmitShellClient(Credential credential) {
         this.credential = credential;
     }
 
@@ -41,7 +41,7 @@ public class StrategyunboundClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public StrategyunboundResponse doPost(String path, StrategyunboundRequest requestObj) throws Exception {
+    public QueryCloudDesksubmitShellResponse doPost(String path, QueryCloudDesksubmitShellRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
@@ -56,7 +56,7 @@ public class StrategyunboundClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public StrategyunboundResponse doPost(String path, StrategyunboundRequest requestObj, Map<String, String> head) throws Exception {
+    public QueryCloudDesksubmitShellResponse doPost(String path, QueryCloudDesksubmitShellRequest requestObj, Map<String, String> head) throws Exception {
          if (head == null) {
              head = new HashMap<>();
          }
@@ -73,7 +73,7 @@ public class StrategyunboundClient extends BaseClient {
 
         String response = HttpClientUtils.httpPost(path, requestParams, head);
         log.info("doPost end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, StrategyunboundResponse.class);
+        return JSON.parseObject(response, QueryCloudDesksubmitShellResponse.class);
     }
 
     /**
@@ -83,7 +83,7 @@ public class StrategyunboundClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public StrategyunboundResponse doPostRaw(String path, StrategyunboundRequest requestObj) throws Exception {
+    public QueryCloudDesksubmitShellResponse doPostRaw(String path, QueryCloudDesksubmitShellRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doPost(path, requestObj, head);
@@ -97,7 +97,7 @@ public class StrategyunboundClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public StrategyunboundResponse doPostRaw(String path, StrategyunboundRequest requestObj, Map<String, String> head) throws Exception {
+    public QueryCloudDesksubmitShellResponse doPostRaw(String path, QueryCloudDesksubmitShellRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
         }
@@ -112,7 +112,7 @@ public class StrategyunboundClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public StrategyunboundResponse doGet(String path, StrategyunboundRequest requestObj) throws Exception {
+    public QueryCloudDesksubmitShellResponse doGet(String path, QueryCloudDesksubmitShellRequest requestObj) throws Exception {
         return doGet(path, requestObj, null);
     }
 
@@ -124,7 +124,7 @@ public class StrategyunboundClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public StrategyunboundResponse doDelete(String path, StrategyunboundRequest requestObj) throws Exception {
+    public QueryCloudDesksubmitShellResponse doDelete(String path, QueryCloudDesksubmitShellRequest requestObj) throws Exception {
         return doDelete(path, requestObj, null);
     }
 
@@ -137,12 +137,12 @@ public class StrategyunboundClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public StrategyunboundResponse doDelete(String path, StrategyunboundRequest requestObj, Map<String, String> head) throws Exception {
+    public QueryCloudDesksubmitShellResponse doDelete(String path, QueryCloudDesksubmitShellRequest requestObj, Map<String, String> head) throws Exception {
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpDelete(path, requestParams, head);
         log.info("doDelete end,path:{},params:{},head:{}", path, requestParams, head);
-        StrategyunboundResponse StrategyunboundResponse = JSON.parseObject(response, StrategyunboundResponse.class);
-        return StrategyunboundResponse;
+        QueryCloudDesksubmitShellResponse QueryCloudDesksubmitShellResponse = JSON.parseObject(response, QueryCloudDesksubmitShellResponse.class);
+        return QueryCloudDesksubmitShellResponse;
     }
 
 
@@ -154,7 +154,7 @@ public class StrategyunboundClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public StrategyunboundResponse doPut(String path, StrategyunboundRequest requestObj) throws Exception {
+    public QueryCloudDesksubmitShellResponse doPut(String path, QueryCloudDesksubmitShellRequest requestObj) throws Exception {
         return doPut(path, requestObj, null);
     }
 
@@ -167,12 +167,12 @@ public class StrategyunboundClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public StrategyunboundResponse doPut(String path, StrategyunboundRequest requestObj, Map<String, String> head) throws Exception {
+    public QueryCloudDesksubmitShellResponse doPut(String path, QueryCloudDesksubmitShellRequest requestObj, Map<String, String> head) throws Exception {
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpPut(path, requestParams, head);
         log.info("httpPut end,path:{},params:{},head:{}", path, requestParams, head);
-        StrategyunboundResponse StrategyunboundResponse = JSON.parseObject(response, StrategyunboundResponse.class);
-        return StrategyunboundResponse;
+        QueryCloudDesksubmitShellResponse QueryCloudDesksubmitShellResponse = JSON.parseObject(response, QueryCloudDesksubmitShellResponse.class);
+        return QueryCloudDesksubmitShellResponse;
     }
 
     /**
@@ -184,7 +184,7 @@ public class StrategyunboundClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public StrategyunboundResponse doGet(String path, StrategyunboundRequest requestObj, Map<String, String> head) throws Exception {
+    public QueryCloudDesksubmitShellResponse doGet(String path, QueryCloudDesksubmitShellRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
         }
@@ -197,7 +197,7 @@ public class StrategyunboundClient extends BaseClient {
 
         String response = HttpClientUtils.httpGet(path, requestParams, head);
         log.info("doGet end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, StrategyunboundResponse.class);
+        return JSON.parseObject(response, QueryCloudDesksubmitShellResponse.class);
     }
 
 
@@ -207,7 +207,7 @@ public class StrategyunboundClient extends BaseClient {
      * @param requestObj
      * @return
      */
-    private JSONObject getRequestParams(StrategyunboundRequest requestObj) throws Exception {
+    private JSONObject getRequestParams(QueryCloudDesksubmitShellRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置证书
         getCommonParams(credential, requestParams);
@@ -252,7 +252,7 @@ public class StrategyunboundClient extends BaseClient {
         head.put(AWS4EncryptionFactory.X_AMZ_DATA, xAmzDate);
     }
 
-    private JSONObject getSimpleRequestParams(StrategyunboundRequest requestObj) throws Exception {
+    private JSONObject getSimpleRequestParams(QueryCloudDesksubmitShellRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置接口属性
         requestParams.put("Action", action);
@@ -263,7 +263,7 @@ public class StrategyunboundClient extends BaseClient {
         return requestParams;
     }
 
-    private JSONObject getPostRawRequestParams(StrategyunboundRequest requestObj) throws Exception {
+    private JSONObject getPostRawRequestParams(QueryCloudDesksubmitShellRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置接口属性
         requestParams.put("Action", action);

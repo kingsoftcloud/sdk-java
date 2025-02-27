@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname ImagedeleteClient
-* @Description 镜像删除API
+* @Description 删除指定的镜像。
 */
 @Slf4j
 public class ImagedeleteClient extends BaseClient {

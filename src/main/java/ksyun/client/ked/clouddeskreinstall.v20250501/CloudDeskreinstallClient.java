@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname CloudDeskreinstallClient
-* @Description 云电脑重装系统
+* @Description 允许用户对一个或多个云电脑实例执行系统重装操作。
 */
 @Slf4j
 public class CloudDeskreinstallClient extends BaseClient {

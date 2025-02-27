@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname UsersinstancebindClient
-* @Description 用户绑定云电脑
+* @Description 将云电脑分配给指定用户。
 */
 @Slf4j
 public class UsersinstancebindClient extends BaseClient {

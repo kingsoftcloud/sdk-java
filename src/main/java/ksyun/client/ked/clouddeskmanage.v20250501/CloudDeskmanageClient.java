@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname CloudDeskmanageClient
-* @Description 云电脑开机/关机/重启
+* @Description 提供对云电脑进行开机、关机、重启或删除的操作功能。
 */
 @Slf4j
 public class CloudDeskmanageClient extends BaseClient {

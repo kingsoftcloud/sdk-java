@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname UsersdeleteClient
-* @Description 用户删除API
+* @Description 删除指定用户账户。
 */
 @Slf4j
 public class UsersdeleteClient extends BaseClient {

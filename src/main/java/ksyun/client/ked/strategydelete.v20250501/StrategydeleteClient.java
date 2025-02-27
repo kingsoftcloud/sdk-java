@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname StrategydeleteClient
-* @Description 策略安全组删除API
+* @Description 删除指定的策略安全组。
 */
 @Slf4j
 public class StrategydeleteClient extends BaseClient {

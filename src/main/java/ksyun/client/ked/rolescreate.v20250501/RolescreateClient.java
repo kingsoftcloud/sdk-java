@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
 * @Classname RolescreateClient
-* @Description 角色创建API
+* @Description 创建新角色，支持配置相应权限。
 */
 @Slf4j
 public class RolescreateClient extends BaseClient {
