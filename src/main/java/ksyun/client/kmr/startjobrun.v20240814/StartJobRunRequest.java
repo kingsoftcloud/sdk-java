@@ -80,7 +80,7 @@ public class StartJobRunRequest {
          * Java作业的主类，其中包含启动的main函数
          */
         @KsYunField(name = "Class")
-        private String Class;
+        private String ClassField;
         /**
          * 作业应用程序代码的资源文件路径
          */
