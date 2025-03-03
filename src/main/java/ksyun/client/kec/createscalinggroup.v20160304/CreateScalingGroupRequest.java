@@ -87,7 +87,6 @@ public class CreateScalingGroupRequest {
          */
         @KsYunField(name = "ServerPort")
         private List<Integer> ServerPortList;
-        private List<Int> ServerPortList;
         /**
          * 端口权重
          */
