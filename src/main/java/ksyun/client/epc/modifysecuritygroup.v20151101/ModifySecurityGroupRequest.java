@@ -29,5 +29,4 @@ public class ModifySecurityGroupRequest {
     @KsYunField(name = "SecurityGroupId")
     private List<String> SecurityGroupIdList;
 
-
 }

@@ -33,5 +33,4 @@ public class DeleteRepoTagRequest {
     @KsYunField(name = "TagName")
     private String TagName;
 
-
 }

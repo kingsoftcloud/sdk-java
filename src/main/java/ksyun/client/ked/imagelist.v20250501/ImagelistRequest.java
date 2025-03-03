@@ -27,5 +27,4 @@ public class ImagelistRequest {
     @KsYunField(name = "name")
     private String Name;
 
-
 }

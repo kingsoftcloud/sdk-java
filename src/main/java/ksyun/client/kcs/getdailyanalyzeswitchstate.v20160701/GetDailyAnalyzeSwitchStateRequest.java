@@ -15,5 +15,4 @@ public class GetDailyAnalyzeSwitchStateRequest {
     @KsYunField(name = "CacheId")
     private String CacheId;
 
-
 }

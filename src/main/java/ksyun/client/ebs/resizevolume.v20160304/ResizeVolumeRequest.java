@@ -35,5 +35,4 @@ public class ResizeVolumeRequest {
     @KsYunField(name = "SubOrderId")
     private String SubOrderId;
 
-
 }

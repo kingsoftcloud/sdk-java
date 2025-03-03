@@ -65,5 +65,4 @@ public class DescribeEpcsRequest {
         private List<String> ValueList;
     }
 
-
 }

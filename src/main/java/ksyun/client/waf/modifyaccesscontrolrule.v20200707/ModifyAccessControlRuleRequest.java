@@ -63,5 +63,4 @@ public class ModifyAccessControlRuleRequest {
     @KsYunField(name = "Status")
     private Boolean Status;
 
-
 }

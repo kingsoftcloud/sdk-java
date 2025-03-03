@@ -15,5 +15,4 @@ public class StrategydeleteRequest {
     @KsYunField(name = "id")
     private Integer Id;
 
-
 }

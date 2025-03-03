@@ -27,5 +27,4 @@ public class ModifyCertificateWithGroupRequest {
     @KsYunField(name = "CertificateId")
     private String CertificateId;
 
-
 }

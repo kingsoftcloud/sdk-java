@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname CreateInstanceAccountActionClient
- * @Description CreateInstanceAccountAction
+ * @Description create instance account action
  */
 @Slf4j
 public class CreateInstanceAccountActionClient extends BaseClient {
@@ -26,7 +26,7 @@ public class CreateInstanceAccountActionClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CreateInstanceAccountActionClient(Credential credential) {

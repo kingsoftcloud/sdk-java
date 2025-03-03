@@ -21,5 +21,4 @@ public class SetLBModificationProtectionRequest {
     @KsYunField(name = "ModificationProtection")
     private String ModificationProtection;
 
-
 }

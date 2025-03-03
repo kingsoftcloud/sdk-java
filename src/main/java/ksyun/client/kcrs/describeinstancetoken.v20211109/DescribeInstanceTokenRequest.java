@@ -27,5 +27,4 @@ public class DescribeInstanceTokenRequest {
     @KsYunField(name = "MaxResults")
     private String MaxResults;
 
-
 }

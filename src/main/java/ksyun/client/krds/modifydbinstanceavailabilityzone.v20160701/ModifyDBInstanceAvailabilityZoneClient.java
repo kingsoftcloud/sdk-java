@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname ModifyDBInstanceAvailabilityZoneClient
- * @Description 修改实例备库可用区
+ * @Description modify db instance availability zone
  */
 @Slf4j
 public class ModifyDBInstanceAvailabilityZoneClient extends BaseClient {
@@ -26,7 +26,7 @@ public class ModifyDBInstanceAvailabilityZoneClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ModifyDBInstanceAvailabilityZoneClient(Credential credential) {

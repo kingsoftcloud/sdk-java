@@ -21,5 +21,4 @@ public class RemoveUserFromGroupRequest {
     @KsYunField(name = "UserName")
     private String UserName;
 
-
 }

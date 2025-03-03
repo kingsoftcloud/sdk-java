@@ -33,5 +33,4 @@ public class DescribeInternalEndpointDnsRequest {
     @KsYunField(name = "InternalEndpointDns")
     private String InternalEndpointDns;
 
-
 }

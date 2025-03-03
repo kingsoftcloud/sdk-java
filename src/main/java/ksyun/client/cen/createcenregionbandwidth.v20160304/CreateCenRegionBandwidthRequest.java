@@ -1,12 +1,7 @@
 package ksyun.client.cen.createcenregionbandwidth.v20160304;
 
 import common.annotation.KsYunField;
-import lombok.Builder;
 import lombok.Data;
-import lombok.ToString;
-
-import java.util.List;
-import java.util.Arrays;
 
 /**
  * @Classname CreateCenRegionBandwidthRequest
@@ -15,34 +10,27 @@ import java.util.Arrays;
 @Data
 public class CreateCenRegionBandwidthRequest {
     /**
-     * 云企业网的ID
+     * 本端机房Code
      */
-    @KsYunField(name = "CenId")
-    private String CenId;
+    @KsYunField(name = "LocalRegion")
+    private String LocalRegion;
 
     /**
-     * A机房Code
+     * 远端机房Code
      */
-    @KsYunField(name = "RegionA")
-    private String RegionA;
+    @KsYunField(name = "RemoteRegion")
+    private String RemoteRegion;
 
     /**
-     * B机房Code
-     */
-    @KsYunField(name = "RegionB")
-    private String RegionB;
-
-    /**
-     * 云企业网带宽包ID
+     * 云企业网带宽包的ID
      */
     @KsYunField(name = "CenBandWidthPackageId")
     private String CenBandWidthPackageId;
 
     /**
-     * 带宽
+     * 跨地域的带宽值
      */
-    @KsYunField(name = "BandWidth")
-    private Integer BandWidth;
-
+    @KsYunField(name = "InterBandWidth")
+    private Integer InterBandWidth;
 
 }

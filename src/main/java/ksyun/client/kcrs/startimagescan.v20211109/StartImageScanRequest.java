@@ -33,5 +33,4 @@ public class StartImageScanRequest {
     @KsYunField(name = "ImageId")
     private String ImageId;
 
-
 }

@@ -26,7 +26,7 @@ public class DescribeLocalVolumeSnapshotsClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeLocalVolumeSnapshotsClient(Credential credential) {

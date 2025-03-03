@@ -27,5 +27,4 @@ public class CreateFolderRequest {
     @KsYunField(name = "Desc")
     private String Desc;
 
-
 }

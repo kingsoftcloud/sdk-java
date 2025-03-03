@@ -37,6 +37,11 @@ public class DescribeEpcForClusterRequest {
      */
     @KsYunField(name = "MaxResults")
     private Integer MaxResults;
+    /**
+     * 操作类型，可取值：AddNode，传递该值后，返回的数据则自动增加状态过滤，只返回Running、HotStandby状态的EPC实例
+     */
+    @KsYunField(name = "OperatorType")
+    private String OperatorType;
 
     @Data
     @ToString
@@ -50,6 +55,5 @@ public class DescribeEpcForClusterRequest {
         @KsYunField(name = "Value")
         private List<String> ValueList;
     }
-
 
 }

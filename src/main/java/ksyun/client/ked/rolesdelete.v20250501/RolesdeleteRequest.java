@@ -15,5 +15,4 @@ public class RolesdeleteRequest {
     @KsYunField(name = "id")
     private Integer Id;
 
-
 }

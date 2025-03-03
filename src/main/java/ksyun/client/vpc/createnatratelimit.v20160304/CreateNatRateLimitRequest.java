@@ -27,5 +27,4 @@ public class CreateNatRateLimitRequest {
     @KsYunField(name = "inBandwidthLimit")
     private Integer InBandwidthLimit;
 
-
 }

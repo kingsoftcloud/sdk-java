@@ -15,5 +15,4 @@ public class ListScaleStrategyRequest {
     @KsYunField(name = "ClusterId")
     private String ClusterId;
 
-
 }

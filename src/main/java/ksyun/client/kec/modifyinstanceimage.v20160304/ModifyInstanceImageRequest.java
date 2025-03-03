@@ -27,7 +27,6 @@ public class ModifyInstanceImageRequest {
 
     /**
      * 云主机系统盘配置参数。若不指定该参数，则按照系统默认值进行分配。通用型N2、N3主机支持更换操作系统时指定系统盘大小。
-     * [SystemDisk](https://docs.ksyun.com/documents/5866)
      */
     @KsYunField(name = "SystemDisk.DiskSize")
     private Integer SystemDiskDiskSize;
@@ -69,6 +68,5 @@ public class ModifyInstanceImageRequest {
      */
     @KsYunField(name = "UserData")
     private String UserData;
-
 
 }

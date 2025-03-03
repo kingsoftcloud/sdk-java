@@ -26,7 +26,7 @@ public class DescribeAccessControlRulesClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeAccessControlRulesClient(Credential credential) {

@@ -27,5 +27,4 @@ public class OverrideDBInstanceByPointInTimeRequest {
     @KsYunField(name = "RestorableTime")
     private String RestorableTime;
 
-
 }

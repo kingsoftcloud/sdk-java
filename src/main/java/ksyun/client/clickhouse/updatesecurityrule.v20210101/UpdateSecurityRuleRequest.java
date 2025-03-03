@@ -27,5 +27,4 @@ public class UpdateSecurityRuleRequest {
     @KsYunField(name = "Description")
     private String Description;
 
-
 }

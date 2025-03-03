@@ -15,5 +15,4 @@ public class RollbackLocalVolumeRequest {
     @KsYunField(name = "LocalVolumeSnapshotId")
     private String LocalVolumeSnapshotId;
 
-
 }

@@ -26,7 +26,7 @@ public class GetRetentionPolicyLogClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public GetRetentionPolicyLogClient(Credential credential) {

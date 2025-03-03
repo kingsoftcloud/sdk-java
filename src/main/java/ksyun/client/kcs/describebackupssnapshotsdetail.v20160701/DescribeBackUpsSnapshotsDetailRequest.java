@@ -21,5 +21,4 @@ public class DescribeBackUpsSnapshotsDetailRequest {
     @KsYunField(name = "SnapshotId")
     private String SnapshotId;
 
-
 }

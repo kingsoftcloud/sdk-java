@@ -26,7 +26,7 @@ public class DescribeSplitItemDayBillDetailsClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeSplitItemDayBillDetailsClient(Credential credential) {

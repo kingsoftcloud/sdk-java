@@ -15,5 +15,4 @@ public class ListProjectMemberRequest {
     @KsYunField(name = "ProjectId")
     private Integer ProjectId;
 
-
 }

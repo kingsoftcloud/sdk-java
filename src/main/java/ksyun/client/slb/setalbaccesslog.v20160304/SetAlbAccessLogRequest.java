@@ -27,5 +27,4 @@ public class SetAlbAccessLogRequest {
     @KsYunField(name = "LogpoolName")
     private String LogpoolName;
 
-
 }

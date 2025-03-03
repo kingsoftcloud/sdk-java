@@ -51,5 +51,4 @@ public class ModifyRemoteManagementRequest {
     @KsYunField(name = "VersionId")
     private Integer VersionId;
 
-
 }

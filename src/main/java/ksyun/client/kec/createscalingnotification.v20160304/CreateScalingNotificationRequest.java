@@ -29,5 +29,4 @@ public class CreateScalingNotificationRequest {
     @KsYunField(name = "Description")
     private String Description;
 
-
 }

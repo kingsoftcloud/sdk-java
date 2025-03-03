@@ -21,5 +21,4 @@ public class ModifyImageRequest {
     @KsYunField(name = "ImageId")
     private String ImageId;
 
-
 }

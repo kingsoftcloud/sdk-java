@@ -33,5 +33,4 @@ public class DeleteAlarmReceivesRequest {
     @KsYunField(name = "ContactId", type = 2)
     private List<Integer> ContactIdList;
 
-
 }

@@ -21,5 +21,4 @@ public class DetachDirectConnectGatewayRequest {
     @KsYunField(name = "DirectConnectInterfaceId")
     private String DirectConnectInterfaceId;
 
-
 }

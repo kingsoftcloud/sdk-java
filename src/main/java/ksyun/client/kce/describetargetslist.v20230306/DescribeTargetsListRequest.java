@@ -48,5 +48,4 @@ public class DescribeTargetsListRequest {
     @KsYunField(name = "MaxResults")
     private Integer MaxResults;
 
-
 }

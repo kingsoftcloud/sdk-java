@@ -26,7 +26,7 @@ public class AssociateNetworkAclClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public AssociateNetworkAclClient(Credential credential) {

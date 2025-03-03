@@ -39,5 +39,4 @@ public class QueryPeerTopVifMonitorRequest {
     @KsYunField(name = "ip")
     private String Ip;
 
-
 }

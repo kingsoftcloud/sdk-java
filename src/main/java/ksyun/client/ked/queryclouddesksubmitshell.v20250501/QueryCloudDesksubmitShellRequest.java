@@ -19,9 +19,10 @@ public class QueryCloudDesksubmitShellRequest {
     @KsYunField(name = "name")
     private String Name;
 
-    /***/
+    /**
+     * 脚本内容需要base64转下
+     */
     @KsYunField(name = "shellContent")
     private String ShellContent;
-
 
 }

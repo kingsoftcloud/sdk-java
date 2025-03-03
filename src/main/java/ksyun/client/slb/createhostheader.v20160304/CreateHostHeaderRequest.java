@@ -27,5 +27,4 @@ public class CreateHostHeaderRequest {
     @KsYunField(name = "HostHeader")
     private String HostHeader;
 
-
 }

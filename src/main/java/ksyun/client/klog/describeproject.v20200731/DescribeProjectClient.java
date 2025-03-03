@@ -26,7 +26,7 @@ public class DescribeProjectClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeProjectClient(Credential credential) {

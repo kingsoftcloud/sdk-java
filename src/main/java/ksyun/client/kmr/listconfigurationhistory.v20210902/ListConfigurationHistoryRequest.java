@@ -27,5 +27,4 @@ public class ListConfigurationHistoryRequest {
     @KsYunField(name = "Marker")
     private String Marker;
 
-
 }

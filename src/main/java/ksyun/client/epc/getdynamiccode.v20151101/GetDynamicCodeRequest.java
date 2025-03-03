@@ -15,5 +15,4 @@ public class GetDynamicCodeRequest {
     @KsYunField(name = "RemoteManagementId")
     private String RemoteManagementId;
 
-
 }

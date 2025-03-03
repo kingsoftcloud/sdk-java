@@ -1,0 +1,22 @@
+package ksyun.client.sqlserver.deletesecuritygroup.v20190425;
+
+import common.annotation.KsYunField;
+import lombok.Data;
+
+/**
+ * @Classname DeleteSecurityGroupRequest
+ * @Description 请求参数
+ */
+@Data
+public class DeleteSecurityGroupRequest {
+    /**
+     * 安全组ID
+     * <p>
+     * ```json
+     * 安全组ID，支持批量删除，每个ID中间用英文 ”,“  隔开
+     * ```
+     */
+    @KsYunField(name = "SecurityGroupIds")
+    private String SecurityGroupIds;
+
+}

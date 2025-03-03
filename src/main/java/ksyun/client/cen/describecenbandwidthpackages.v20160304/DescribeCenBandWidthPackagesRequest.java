@@ -39,6 +39,16 @@ public class DescribeCenBandWidthPackagesRequest {
      */
     @KsYunField(name = "NextToken")
     private String NextToken;
+    /**
+     * 多个标签的键
+     */
+    @KsYunField(name = "TagKey")
+    private List<String> TagKeyList;
+    /**
+     * 多个标签的键
+     */
+    @KsYunField(name = "TagKV")
+    private List<TagKVDto> TagKVList;
 
     @Data
     @ToString
@@ -54,5 +64,19 @@ public class DescribeCenBandWidthPackagesRequest {
         private List<String> ValueList;
     }
 
+    @Data
+    @ToString
+    public static class TagKVDto {
+        /**
+         * 标签键
+         */
+        @KsYunField(name = "Name")
+        private String Name;
+        /**
+         * 标签值
+         */
+        @KsYunField(name = "Value")
+        private String Value;
+    }
 
 }

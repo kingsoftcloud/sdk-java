@@ -1,5 +1,6 @@
 package ksyun.client.memcached.setcachesecurityrules.v20180627;
 
+import common.annotation.KsYunField;
 import lombok.Data;
 
 /**
@@ -8,5 +9,16 @@ import lombok.Data;
  */
 @Data
 public class SetCacheSecurityRulesRequest {
+    /**
+     * Action
+     */
+    @KsYunField(name = "Action")
+    private String Action;
+
+    /**
+     * Version
+     */
+    @KsYunField(name = "Version")
+    private String Version;
 
 }

@@ -1,12 +1,7 @@
 package ksyun.client.iam.updateroletrustaccounts.v20151101;
 
 import common.annotation.KsYunField;
-import lombok.Builder;
 import lombok.Data;
-import lombok.ToString;
-
-import java.util.List;
-import java.util.Arrays;
 
 /**
  * @Classname UpdateRoleTrustAccountsRequest
@@ -25,6 +20,5 @@ public class UpdateRoleTrustAccountsRequest {
      */
     @KsYunField(name = "NewTrustAccounts")
     private String NewTrustAccounts;
-
 
 }

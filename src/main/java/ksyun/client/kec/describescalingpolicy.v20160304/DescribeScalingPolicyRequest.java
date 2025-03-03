@@ -41,5 +41,4 @@ public class DescribeScalingPolicyRequest {
     @KsYunField(name = "MaxResults")
     private Integer MaxResults;
 
-
 }

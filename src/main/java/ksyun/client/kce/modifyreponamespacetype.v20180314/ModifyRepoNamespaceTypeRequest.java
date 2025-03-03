@@ -21,5 +21,4 @@ public class ModifyRepoNamespaceTypeRequest {
     @KsYunField(name = "Public")
     private Boolean Public;
 
-
 }

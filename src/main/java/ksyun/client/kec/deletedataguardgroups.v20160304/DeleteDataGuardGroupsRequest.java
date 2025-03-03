@@ -17,5 +17,4 @@ public class DeleteDataGuardGroupsRequest {
     @KsYunField(name = "DataGuardId")
     private List<String> DataGuardIdList;
 
-
 }

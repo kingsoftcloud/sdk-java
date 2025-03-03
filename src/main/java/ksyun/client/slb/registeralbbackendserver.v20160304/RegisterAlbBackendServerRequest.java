@@ -45,5 +45,4 @@ public class RegisterAlbBackendServerRequest {
     @KsYunField(name = "DirectConnectGatewayId")
     private String DirectConnectGatewayId;
 
-
 }

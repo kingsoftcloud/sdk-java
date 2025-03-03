@@ -105,5 +105,4 @@ public class CreateSlbRuleRequest {
     @KsYunField(name = "HostName")
     private String HostName;
 
-
 }

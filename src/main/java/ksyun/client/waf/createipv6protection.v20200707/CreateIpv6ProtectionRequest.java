@@ -15,5 +15,4 @@ public class CreateIpv6ProtectionRequest {
     @KsYunField(name = "ResourceRecordId", type = 2)
     private List<String> ResourceRecordIdList;
 
-
 }

@@ -15,5 +15,4 @@ public class DeleteRepoNamespaceRequest {
     @KsYunField(name = "Namespace")
     private String Namespace;
 
-
 }

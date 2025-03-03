@@ -35,5 +35,4 @@ public class ModifyImageAttributeRequest {
     @KsYunField(name = "CloudInitSupport")
     private Boolean CloudInitSupport;
 
-
 }

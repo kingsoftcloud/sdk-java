@@ -21,5 +21,4 @@ public class DescribeMongoDBInstanceNodeRequest {
     @KsYunField(name = "NodeId")
     private String NodeId;
 
-
 }

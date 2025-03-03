@@ -21,5 +21,4 @@ public class ResetPasswordMongoDBInstanceRequest {
     @KsYunField(name = "InstancePassword")
     private String InstancePassword;
 
-
 }

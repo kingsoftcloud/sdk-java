@@ -41,5 +41,4 @@ public class ModifyNetworkInterfaceAttributeRequest {
     @KsYunField(name = "SecurityGroupIdList", type = 2)
     private List<String> SecurityGroupIdListList;
 
-
 }

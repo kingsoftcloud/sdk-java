@@ -33,5 +33,4 @@ public class GetProjectInstanceListNewRequest {
     @KsYunField(name = "Pn")
     private Integer Pn;
 
-
 }

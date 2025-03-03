@@ -26,7 +26,7 @@ public class ReinstallEpcClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ReinstallEpcClient(Credential credential) {

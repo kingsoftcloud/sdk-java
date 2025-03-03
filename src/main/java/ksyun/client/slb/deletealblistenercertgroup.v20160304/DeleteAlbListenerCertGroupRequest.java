@@ -15,5 +15,4 @@ public class DeleteAlbListenerCertGroupRequest {
     @KsYunField(name = "AlbListenerCertGroupId")
     private String AlbListenerCertGroupId;
 
-
 }

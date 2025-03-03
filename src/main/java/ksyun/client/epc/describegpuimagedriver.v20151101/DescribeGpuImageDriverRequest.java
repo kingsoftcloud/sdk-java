@@ -33,5 +33,4 @@ public class DescribeGpuImageDriverRequest {
     @KsYunField(name = "HostType")
     private String HostType;
 
-
 }

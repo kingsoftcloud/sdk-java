@@ -69,5 +69,4 @@ public class CreateNatRequest {
     @KsYunField(name = "PurchaseTime")
     private Integer PurchaseTime;
 
-
 }

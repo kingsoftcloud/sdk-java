@@ -48,5 +48,4 @@ public class DescribeAlbListenerCertGroupsRequest {
         private List<String> ValueList;
     }
 
-
 }

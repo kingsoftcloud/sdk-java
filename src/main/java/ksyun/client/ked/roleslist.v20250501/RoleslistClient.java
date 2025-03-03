@@ -26,7 +26,7 @@ public class RoleslistClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public RoleslistClient(Credential credential) {

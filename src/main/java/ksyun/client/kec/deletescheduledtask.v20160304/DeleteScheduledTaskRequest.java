@@ -21,5 +21,4 @@ public class DeleteScheduledTaskRequest {
     @KsYunField(name = "ScalingGroupId")
     private String ScalingGroupId;
 
-
 }

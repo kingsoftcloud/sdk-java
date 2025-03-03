@@ -16,5 +16,4 @@ public class DeleteSnapshotRequest {
     @KsYunField(name = "SnapshotId")
     private String SnapshotId;
 
-
 }

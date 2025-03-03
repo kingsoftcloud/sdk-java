@@ -21,5 +21,4 @@ public class DescribeNamespaceExistRequest {
     @KsYunField(name = "Namespace")
     private String Namespace;
 
-
 }

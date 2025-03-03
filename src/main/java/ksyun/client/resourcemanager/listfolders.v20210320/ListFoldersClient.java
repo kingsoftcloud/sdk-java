@@ -26,7 +26,7 @@ public class ListFoldersClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ListFoldersClient(Credential credential) {

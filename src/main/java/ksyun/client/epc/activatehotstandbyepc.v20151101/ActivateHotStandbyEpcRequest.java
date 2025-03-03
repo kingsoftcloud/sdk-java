@@ -15,5 +15,4 @@ public class ActivateHotStandbyEpcRequest {
     @KsYunField(name = "HostId")
     private String HostId;
 
-
 }

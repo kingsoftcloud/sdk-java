@@ -39,5 +39,4 @@ public class QueryBwsTopEipMonitorRequest {
     @KsYunField(name = "PublicIp")
     private String PublicIp;
 
-
 }

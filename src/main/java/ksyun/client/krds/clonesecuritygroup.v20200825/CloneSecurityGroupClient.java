@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname CloneSecurityGroupClient
- * @Description 复制安全组
+ * @Description clone security group
  */
 @Slf4j
 public class CloneSecurityGroupClient extends BaseClient {
@@ -26,7 +26,7 @@ public class CloneSecurityGroupClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CloneSecurityGroupClient(Credential credential) {

@@ -15,5 +15,4 @@ public class RebootDBInstanceRequest {
     @KsYunField(name = "DBInstanceIdentifier")
     private String DBInstanceIdentifier;
 
-
 }

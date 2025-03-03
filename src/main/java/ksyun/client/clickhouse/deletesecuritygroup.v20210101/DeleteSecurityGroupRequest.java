@@ -1,12 +1,7 @@
 package ksyun.client.clickhouse.deletesecuritygroup.v20210101;
 
 import common.annotation.KsYunField;
-import lombok.Builder;
 import lombok.Data;
-import lombok.ToString;
-
-import java.util.List;
-import java.util.Arrays;
 
 /**
  * @Classname DeleteSecurityGroupRequest
@@ -25,6 +20,5 @@ public class DeleteSecurityGroupRequest {
      */
     @KsYunField(name = "ProductType")
     private Integer ProductType;
-
 
 }

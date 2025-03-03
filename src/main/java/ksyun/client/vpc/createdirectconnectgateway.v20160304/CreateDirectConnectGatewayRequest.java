@@ -21,5 +21,4 @@ public class CreateDirectConnectGatewayRequest {
     @KsYunField(name = "DirectConnectGatewayName")
     private String DirectConnectGatewayName;
 
-
 }

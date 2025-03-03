@@ -15,5 +15,4 @@ public class DeleteAlbListenerRequest {
     @KsYunField(name = "AlbListenerId")
     private String AlbListenerId;
 
-
 }

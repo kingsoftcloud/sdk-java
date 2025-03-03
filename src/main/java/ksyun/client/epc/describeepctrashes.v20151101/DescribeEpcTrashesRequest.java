@@ -21,5 +21,4 @@ public class DescribeEpcTrashesRequest {
     @KsYunField(name = "NextToken")
     private String NextToken;
 
-
 }

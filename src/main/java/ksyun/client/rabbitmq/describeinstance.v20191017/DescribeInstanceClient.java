@@ -26,7 +26,7 @@ public class DescribeInstanceClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeInstanceClient(Credential credential) {

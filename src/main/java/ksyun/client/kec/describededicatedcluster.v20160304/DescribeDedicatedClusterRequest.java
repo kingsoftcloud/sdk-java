@@ -17,5 +17,4 @@ public class DescribeDedicatedClusterRequest {
     @KsYunField(name = "DedicatedClusterId")
     private List<String> DedicatedClusterIdList;
 
-
 }

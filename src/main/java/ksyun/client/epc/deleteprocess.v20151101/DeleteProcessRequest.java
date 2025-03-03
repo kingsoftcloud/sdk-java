@@ -15,5 +15,4 @@ public class DeleteProcessRequest {
     @KsYunField(name = "OperationProcessId")
     private String OperationProcessId;
 
-
 }

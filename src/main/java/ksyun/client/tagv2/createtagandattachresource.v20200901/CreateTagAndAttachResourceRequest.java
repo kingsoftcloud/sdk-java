@@ -10,13 +10,13 @@ import lombok.Data;
 @Data
 public class CreateTagAndAttachResourceRequest {
     /**
-     * TagKey
+     * Key 最多128字符，仅支持中英文字符 数字 + - = . _ : / @ () {} （） 【】，不能以ksc开头
      */
     @KsYunField(name = "TagKey")
     private String TagKey;
 
     /**
-     * TagValue
+     * Value最多255字符，仅支持中英文字符 数字 + - = . _ : / @ () {} （） 【】，不能以ksc开头,多个以","隔开
      */
     @KsYunField(name = "TagValue")
     private String TagValue;
@@ -32,6 +32,5 @@ public class CreateTagAndAttachResourceRequest {
      */
     @KsYunField(name = "ResourceUuid")
     private String ResourceUuid;
-
 
 }

@@ -19,5 +19,4 @@ public class DeleteAlarmPolicyRequest {
     @KsYunField(name = "PolicyIds", type = 2)
     private List<Integer> PolicyIdsList;
 
-
 }

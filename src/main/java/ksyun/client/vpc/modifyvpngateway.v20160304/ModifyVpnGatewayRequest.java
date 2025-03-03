@@ -27,5 +27,4 @@ public class ModifyVpnGatewayRequest {
     @KsYunField(name = "VpnGatewayName")
     private String VpnGatewayName;
 
-
 }

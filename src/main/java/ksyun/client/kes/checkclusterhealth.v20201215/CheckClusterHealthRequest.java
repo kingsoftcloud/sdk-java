@@ -24,5 +24,4 @@ public class CheckClusterHealthRequest {
     @KsYunField(name = "check_list", type = 2)
     private List<String> Check_listList;
 
-
 }

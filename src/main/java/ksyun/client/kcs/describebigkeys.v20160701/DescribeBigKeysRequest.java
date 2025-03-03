@@ -15,5 +15,4 @@ public class DescribeBigKeysRequest {
     @KsYunField(name = "CacheId")
     private String CacheId;
 
-
 }

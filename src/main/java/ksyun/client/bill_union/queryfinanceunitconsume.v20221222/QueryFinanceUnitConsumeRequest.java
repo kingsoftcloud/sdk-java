@@ -33,5 +33,4 @@ public class QueryFinanceUnitConsumeRequest {
     @KsYunField(name = "Size")
     private Integer Size;
 
-
 }

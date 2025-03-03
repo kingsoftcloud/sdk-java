@@ -26,7 +26,7 @@ public class ResizeVolumeClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ResizeVolumeClient(Credential credential) {

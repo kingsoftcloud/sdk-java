@@ -33,5 +33,4 @@ public class ListAccountsForParentRequest {
     @KsYunField(name = "PageSize")
     private Integer PageSize;
 
-
 }

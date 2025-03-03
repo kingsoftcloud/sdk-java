@@ -15,5 +15,4 @@ public class DeleteMountTargetRequest {
     @KsYunField(name = "MountTargetId")
     private String MountTargetId;
 
-
 }

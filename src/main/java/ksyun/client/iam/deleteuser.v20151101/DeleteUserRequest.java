@@ -15,5 +15,4 @@ public class DeleteUserRequest {
     @KsYunField(name = "UserName")
     private String UserName;
 
-
 }

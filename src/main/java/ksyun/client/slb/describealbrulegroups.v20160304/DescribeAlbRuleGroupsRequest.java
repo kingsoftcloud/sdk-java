@@ -48,5 +48,4 @@ public class DescribeAlbRuleGroupsRequest {
         private List<String> ValueList;
     }
 
-
 }

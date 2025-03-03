@@ -15,5 +15,4 @@ public class DescribeGrafanaWhiteListRequest {
     @KsYunField(name = "InstanceId")
     private String InstanceId;
 
-
 }

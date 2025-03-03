@@ -26,7 +26,7 @@ public class DescribeMonitorListClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeMonitorListClient(Credential credential) {

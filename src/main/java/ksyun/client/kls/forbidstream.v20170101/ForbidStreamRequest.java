@@ -39,5 +39,4 @@ public class ForbidStreamRequest {
     @KsYunField(name = "ForbidTillUnixTime")
     private Integer ForbidTillUnixTime;
 
-
 }

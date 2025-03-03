@@ -15,5 +15,4 @@ public class GetProxyConfigRequest {
     @KsYunField(name = "instanceId")
     private String InstanceId;
 
-
 }

@@ -27,5 +27,4 @@ public class DescribeAccessControlRulesRequest {
     @KsYunField(name = "RuleName")
     private String RuleName;
 
-
 }

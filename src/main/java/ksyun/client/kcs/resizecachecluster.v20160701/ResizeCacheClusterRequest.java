@@ -39,5 +39,4 @@ public class ResizeCacheClusterRequest {
     @KsYunField(name = "ShardNum")
     private Integer ShardNum;
 
-
 }

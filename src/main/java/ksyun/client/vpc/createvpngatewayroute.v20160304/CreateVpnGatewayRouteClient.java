@@ -26,7 +26,7 @@ public class CreateVpnGatewayRouteClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CreateVpnGatewayRouteClient(Credential credential) {

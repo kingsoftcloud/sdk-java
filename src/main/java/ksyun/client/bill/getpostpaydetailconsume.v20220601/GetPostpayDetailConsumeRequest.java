@@ -39,5 +39,4 @@ public class GetPostpayDetailConsumeRequest {
     @KsYunField(name = "PageSize")
     private Integer PageSize;
 
-
 }

@@ -15,5 +15,4 @@ public class DeregisterInstancesFromListenerRequest {
     @KsYunField(name = "RegisterId")
     private String RegisterId;
 
-
 }

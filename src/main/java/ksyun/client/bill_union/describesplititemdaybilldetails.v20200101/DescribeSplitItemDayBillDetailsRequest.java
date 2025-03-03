@@ -51,5 +51,4 @@ public class DescribeSplitItemDayBillDetailsRequest {
     @KsYunField(name = "Size")
     private Integer Size;
 
-
 }

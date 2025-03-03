@@ -15,5 +15,4 @@ public class DeleteRouteRequest {
     @KsYunField(name = "RouteId")
     private String RouteId;
 
-
 }

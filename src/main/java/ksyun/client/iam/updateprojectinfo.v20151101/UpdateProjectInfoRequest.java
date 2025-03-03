@@ -27,5 +27,4 @@ public class UpdateProjectInfoRequest {
     @KsYunField(name = "ProjectDesc")
     private String ProjectDesc;
 
-
 }

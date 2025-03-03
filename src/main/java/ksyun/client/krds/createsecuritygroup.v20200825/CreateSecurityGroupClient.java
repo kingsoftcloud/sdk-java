@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname CreateSecurityGroupClient
- * @Description 创建安全组
+ * @Description create security group
  */
 @Slf4j
 public class CreateSecurityGroupClient extends BaseClient {
@@ -26,7 +26,7 @@ public class CreateSecurityGroupClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CreateSecurityGroupClient(Credential credential) {

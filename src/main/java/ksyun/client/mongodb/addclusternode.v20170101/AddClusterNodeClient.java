@@ -26,7 +26,7 @@ public class AddClusterNodeClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public AddClusterNodeClient(Credential credential) {

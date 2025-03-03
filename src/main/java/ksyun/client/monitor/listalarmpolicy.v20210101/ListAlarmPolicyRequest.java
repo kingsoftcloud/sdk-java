@@ -23,5 +23,4 @@ public class ListAlarmPolicyRequest {
     @KsYunField(name = "PageSize")
     private Integer PageSize;
 
-
 }

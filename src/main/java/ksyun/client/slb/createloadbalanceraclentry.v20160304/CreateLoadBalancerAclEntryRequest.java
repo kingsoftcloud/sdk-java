@@ -45,5 +45,4 @@ public class CreateLoadBalancerAclEntryRequest {
     @KsYunField(name = "Description")
     private String Description;
 
-
 }

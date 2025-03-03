@@ -45,5 +45,4 @@ public class CreateScalingPolicyRequest {
     @KsYunField(name = "CoolDown")
     private Integer CoolDown;
 
-
 }

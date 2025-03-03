@@ -1,6 +1,5 @@
 package ksyun.client.pdns.modifyrecord.v20160304;
 
-import common.annotation.KsYunField;
 import lombok.Data;
 
 /**
@@ -9,11 +8,4 @@ import lombok.Data;
  */
 @Data
 public class ModifyRecordRequest {
-    /**
-     * 记录值
-     */
-    @KsYunField(name = "RecordValue")
-    private String RecordValue;
-
-
 }

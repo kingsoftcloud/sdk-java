@@ -15,5 +15,4 @@ public class DeleteZoneRequest {
     @KsYunField(name = "Action")
     private String Action;
 
-
 }

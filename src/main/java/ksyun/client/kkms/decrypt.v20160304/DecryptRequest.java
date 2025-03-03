@@ -21,5 +21,4 @@ public class DecryptRequest {
     @KsYunField(name = "CiphertextBlob")
     private String CiphertextBlob;
 
-
 }

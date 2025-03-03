@@ -33,5 +33,4 @@ public class DescribeImageScanRequest {
     @KsYunField(name = "ImageId")
     private String ImageId;
 
-
 }

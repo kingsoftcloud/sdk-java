@@ -15,5 +15,4 @@ public class DeleteFavorRequest {
     @KsYunField(name = "RepoName")
     private String RepoName;
 
-
 }

@@ -21,5 +21,4 @@ public class DeleteNetworkAclEntryRequest {
     @KsYunField(name = "NetworkAclEntryId")
     private String NetworkAclEntryId;
 
-
 }

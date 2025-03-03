@@ -29,5 +29,4 @@ public class DescribeDedicatedHostsRequest {
     @KsYunField(name = "ProjectId")
     private List<Integer> ProjectId;
 
-
 }

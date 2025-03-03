@@ -26,7 +26,7 @@ public class ListRealtimeStreamsInfoClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ListRealtimeStreamsInfoClient(Credential credential) {

@@ -21,5 +21,4 @@ public class DescribeAgentStatusRequest {
     @KsYunField(name = "ClusterId")
     private String ClusterId;
 
-
 }

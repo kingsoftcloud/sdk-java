@@ -21,5 +21,4 @@ public class UnAssociateHaVipRequest {
     @KsYunField(name = "HaVipId")
     private String HaVipId;
 
-
 }

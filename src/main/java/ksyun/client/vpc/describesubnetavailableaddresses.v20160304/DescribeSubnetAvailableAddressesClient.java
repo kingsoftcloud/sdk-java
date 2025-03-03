@@ -26,7 +26,7 @@ public class DescribeSubnetAvailableAddressesClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeSubnetAvailableAddressesClient(Credential credential) {

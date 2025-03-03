@@ -21,5 +21,4 @@ public class ModifyKeyRequest {
     @KsYunField(name = "KeyId")
     private String KeyId;
 
-
 }

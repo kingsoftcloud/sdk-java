@@ -26,7 +26,7 @@ public class DescribeBandWidthSharesClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeBandWidthSharesClient(Credential credential) {

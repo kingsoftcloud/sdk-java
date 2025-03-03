@@ -27,5 +27,4 @@ public class FlushCacheClusterRequest {
     @KsYunField(name = "DatabaseNo")
     private String DatabaseNo;
 
-
 }

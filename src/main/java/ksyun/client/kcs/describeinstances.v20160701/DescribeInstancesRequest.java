@@ -47,5 +47,4 @@ public class DescribeInstancesRequest {
     @KsYunField(name = "SearchKey")
     private String SearchKey;
 
-
 }

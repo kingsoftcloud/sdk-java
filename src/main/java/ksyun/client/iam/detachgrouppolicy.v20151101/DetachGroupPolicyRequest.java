@@ -21,5 +21,4 @@ public class DetachGroupPolicyRequest {
     @KsYunField(name = "PolicyKrn")
     private String PolicyKrn;
 
-
 }

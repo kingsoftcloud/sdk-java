@@ -27,5 +27,4 @@ public class ModifyInstanceDatabaseInfoRequest {
     @KsYunField(name = "InstanceDatabaseDescription")
     private String InstanceDatabaseDescription;
 
-
 }

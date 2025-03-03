@@ -27,5 +27,12 @@ public class ImportKeyRequest {
     @KsYunField(name = "Description")
     private String Description;
 
+    /**
+     * 是否校验密钥合法性
+     * true:校验
+     * false:不校验
+     */
+    @KsYunField(name = "IsCheck")
+    private Boolean IsCheck;
 
 }

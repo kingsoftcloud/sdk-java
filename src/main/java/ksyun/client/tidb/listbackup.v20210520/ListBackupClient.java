@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname ListBackupClient
- * @Description ListBackup
+ * @Description 备份-查询备份列表
  */
 @Slf4j
 public class ListBackupClient extends BaseClient {
@@ -26,7 +26,7 @@ public class ListBackupClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ListBackupClient(Credential credential) {

@@ -27,5 +27,4 @@ public class DelPresetRequest {
     @KsYunField(name = "Preset")
     private String Preset;
 
-
 }

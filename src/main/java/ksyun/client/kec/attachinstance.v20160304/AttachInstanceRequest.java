@@ -23,5 +23,4 @@ public class AttachInstanceRequest {
     @KsYunField(name = "ScalingInstanceId")
     private List<String> ScalingInstanceIdList;
 
-
 }

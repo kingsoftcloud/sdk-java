@@ -17,5 +17,4 @@ public class BatchDeleteNatRateLimitRequest {
     @KsYunField(name = "NatRateLimitId")
     private List<String> NatRateLimitIdList;
 
-
 }

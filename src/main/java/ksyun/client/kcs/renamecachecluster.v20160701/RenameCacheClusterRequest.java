@@ -27,5 +27,4 @@ public class RenameCacheClusterRequest {
     @KsYunField(name = "Name")
     private String Name;
 
-
 }

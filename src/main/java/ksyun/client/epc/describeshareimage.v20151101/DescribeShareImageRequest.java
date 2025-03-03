@@ -21,5 +21,4 @@ public class DescribeShareImageRequest {
     @KsYunField(name = "NextToken")
     private String NextToken;
 
-
 }

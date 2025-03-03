@@ -15,5 +15,4 @@ public class DeleteDBParameterGroupRequest {
     @KsYunField(name = "DBParameterGroupId")
     private String DBParameterGroupId;
 
-
 }

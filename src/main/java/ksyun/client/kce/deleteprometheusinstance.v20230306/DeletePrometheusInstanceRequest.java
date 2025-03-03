@@ -15,5 +15,4 @@ public class DeletePrometheusInstanceRequest {
     @KsYunField(name = "InstanceId")
     private String InstanceId;
 
-
 }

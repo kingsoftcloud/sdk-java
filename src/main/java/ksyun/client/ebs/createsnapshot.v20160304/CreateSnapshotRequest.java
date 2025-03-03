@@ -33,5 +33,4 @@ public class CreateSnapshotRequest {
     @KsYunField(name = "SnapshotType")
     private String SnapshotType;
 
-
 }

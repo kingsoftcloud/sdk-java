@@ -32,5 +32,4 @@ public class ModifyImageSharePermissionRequest {
     @KsYunField(name = "Permission")
     private String Permission;
 
-
 }

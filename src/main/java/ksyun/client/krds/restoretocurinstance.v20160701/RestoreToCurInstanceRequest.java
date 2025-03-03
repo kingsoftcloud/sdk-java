@@ -33,23 +33,52 @@ public class RestoreToCurInstanceRequest {
     /**
      * 源		[{<br>  "DatabaseName": "wang",<br>"WholeDatabase":"True",<br>"TableNames": [<br>"li"]<br>}]
      */
-    @KsYunField(name = "SrcDatabases", type = 2)
+    @KsYunField(name = "SrcDatabases")
     private List<SrcDatabasesDto> SrcDatabasesList;
     /**
      * 目标		[{<br>"DatabaseName": "wang",<br>"WholeDatabase":"True",<br>"TableNames": [<br> "li"]<br> }]
      */
-    @KsYunField(name = "DstDatabases", type = 2)
+    @KsYunField(name = "DstDatabases")
     private List<DstDatabasesDto> DstDatabasesList;
 
     @Data
     @ToString
     public static class SrcDatabasesDto {
+        /**
+         * 数据库名称
+         */
+        @KsYunField(name = "DatabaseName")
+        private String DatabaseName;
+        /**
+         * 是否为整库
+         */
+        @KsYunField(name = "WholeDatabase")
+        private String WholeDatabase;
+        /**
+         * 数据表列表
+         */
+        @KsYunField(name = "TableNames")
+        private String TableNames;
     }
 
     @Data
     @ToString
     public static class DstDatabasesDto {
+        /**
+         * 数据表列表
+         */
+        @KsYunField(name = "TableNames")
+        private List<String> TableNamesList;
+        /**
+         * 是否是整库
+         */
+        @KsYunField(name = "WholeDatabase")
+        private String WholeDatabase;
+        /**
+         * 数据库库名
+         */
+        @KsYunField(name = "DatabaseName")
+        private String DatabaseName;
     }
-
 
 }

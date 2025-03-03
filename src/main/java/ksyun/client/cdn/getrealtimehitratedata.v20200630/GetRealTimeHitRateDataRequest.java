@@ -45,5 +45,4 @@ public class GetRealTimeHitRateDataRequest {
     @KsYunField(name = "ResultType")
     private String ResultType;
 
-
 }

@@ -26,7 +26,7 @@ public class UnassignPrivateIpAddressClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public UnassignPrivateIpAddressClient(Credential credential) {

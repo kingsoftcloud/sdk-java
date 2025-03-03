@@ -15,5 +15,4 @@ public class DeleteHostHeaderRequest {
     @KsYunField(name = "HostHeaderId")
     private String HostHeaderId;
 
-
 }

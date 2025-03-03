@@ -18,7 +18,7 @@ public class DescribeScalingGroupRequest {
     private List<String> ScalingGroupIdList;
 
     /**
-     * 待查询的伸缩组名称
+     * 待查询的伸缩组名称 模糊查询
      */
     @KsYunField(name = "ScalingGroupName")
     private String ScalingGroupName;
@@ -53,6 +53,5 @@ public class DescribeScalingGroupRequest {
      */
     @KsYunField(name = "ScalingActivityId")
     private List<String> ScalingActivityIdList;
-
 
 }

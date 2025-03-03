@@ -26,7 +26,7 @@ public class ModifyVpcPeeringConnectionClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ModifyVpcPeeringConnectionClient(Credential credential) {

@@ -29,5 +29,4 @@ public class DescribePdnsZonesRequest {
     @KsYunField(name = "NextToken")
     private String NextToken;
 
-
 }

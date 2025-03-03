@@ -26,7 +26,7 @@ public class DeleteCacheSlaveNodeClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DeleteCacheSlaveNodeClient(Credential credential) {

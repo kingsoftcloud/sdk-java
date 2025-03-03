@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname GetTableRestorableTimeClient
- * @Description 获取数据库可恢复时间
+ * @Description get table restoreable time rang
  */
 @Slf4j
 public class GetTableRestorableTimeClient extends BaseClient {
@@ -26,7 +26,7 @@ public class GetTableRestorableTimeClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public GetTableRestorableTimeClient(Credential credential) {

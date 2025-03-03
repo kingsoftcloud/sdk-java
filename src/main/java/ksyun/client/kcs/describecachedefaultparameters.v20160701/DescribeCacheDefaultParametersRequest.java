@@ -21,5 +21,4 @@ public class DescribeCacheDefaultParametersRequest {
     @KsYunField(name = "ParamVersion")
     private String ParamVersion;
 
-
 }

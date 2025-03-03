@@ -25,5 +25,4 @@ public class UpdateAlertUserStatusRequest {
     @KsYunField(name = "UserStatus")
     private Integer UserStatus;
 
-
 }

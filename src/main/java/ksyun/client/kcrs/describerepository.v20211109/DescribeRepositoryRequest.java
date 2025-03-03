@@ -41,5 +41,4 @@ public class DescribeRepositoryRequest {
     @KsYunField(name = "Marker")
     private String Marker;
 
-
 }

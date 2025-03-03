@@ -27,5 +27,4 @@ public class DescribeCacheByRoleRequest {
     @KsYunField(name = "Proxy")
     private String Proxy;
 
-
 }

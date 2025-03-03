@@ -26,7 +26,7 @@ public class DeactivateMFADeviceClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DeactivateMFADeviceClient(Credential credential) {

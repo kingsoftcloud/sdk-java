@@ -21,5 +21,4 @@ public class DisassociateNatRequest {
     @KsYunField(name = "SubnetId")
     private String SubnetId;
 
-
 }

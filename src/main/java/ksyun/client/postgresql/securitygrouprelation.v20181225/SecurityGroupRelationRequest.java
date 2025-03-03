@@ -35,5 +35,4 @@ public class SecurityGroupRelationRequest {
     @KsYunField(name = "DBInstanceIdentifier")
     private List<String> DBInstanceIdentifierList;
 
-
 }

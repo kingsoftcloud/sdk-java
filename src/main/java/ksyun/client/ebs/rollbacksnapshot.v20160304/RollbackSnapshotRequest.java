@@ -21,5 +21,4 @@ public class RollbackSnapshotRequest {
     @KsYunField(name = "SnapshotId")
     private String SnapshotId;
 
-
 }

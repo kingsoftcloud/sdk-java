@@ -21,5 +21,4 @@ public class QueryShellStatusRequest {
     @KsYunField(name = "planId")
     private Integer PlanId;
 
-
 }

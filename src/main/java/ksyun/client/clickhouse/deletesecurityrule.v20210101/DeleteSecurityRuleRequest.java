@@ -27,5 +27,4 @@ public class DeleteSecurityRuleRequest {
     @KsYunField(name = "RuleIds")
     private String RuleIds;
 
-
 }

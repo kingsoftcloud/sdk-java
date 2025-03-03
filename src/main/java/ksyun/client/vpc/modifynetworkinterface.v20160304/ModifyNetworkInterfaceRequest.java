@@ -21,5 +21,4 @@ public class ModifyNetworkInterfaceRequest {
     @KsYunField(name = "NetworkInterfaceId")
     private String NetworkInterfaceId;
 
-
 }

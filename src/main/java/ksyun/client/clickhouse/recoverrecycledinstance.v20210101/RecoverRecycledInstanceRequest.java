@@ -17,5 +17,4 @@ public class RecoverRecycledInstanceRequest {
     @KsYunField(name = "InstanceIds", type = 2)
     private List<String> InstanceIdsList;
 
-
 }

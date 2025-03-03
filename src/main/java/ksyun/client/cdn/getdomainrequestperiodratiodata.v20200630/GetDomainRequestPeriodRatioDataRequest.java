@@ -93,5 +93,4 @@ public class GetDomainRequestPeriodRatioDataRequest {
     @KsYunField(name = "ResultType")
     private String ResultType;
 
-
 }

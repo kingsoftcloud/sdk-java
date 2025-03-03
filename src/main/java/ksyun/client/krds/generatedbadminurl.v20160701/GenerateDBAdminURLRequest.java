@@ -15,5 +15,4 @@ public class GenerateDBAdminURLRequest {
     @KsYunField(name = "DBInstanceIdentifier")
     private String DBInstanceIdentifier;
 
-
 }

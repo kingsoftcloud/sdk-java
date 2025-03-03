@@ -93,5 +93,4 @@ public class CreateAlbRequest {
     @KsYunField(name = "ModificationProtection")
     private Boolean ModificationProtection;
 
-
 }

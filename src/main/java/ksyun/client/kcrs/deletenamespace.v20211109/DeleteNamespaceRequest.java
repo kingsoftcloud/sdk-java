@@ -21,5 +21,4 @@ public class DeleteNamespaceRequest {
     @KsYunField(name = "Namespace")
     private String Namespace;
 
-
 }

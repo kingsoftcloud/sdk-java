@@ -15,5 +15,4 @@ public class ModifyPasswordRequest {
     @KsYunField(name = "Password")
     private String Password;
 
-
 }

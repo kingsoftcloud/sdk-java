@@ -23,5 +23,4 @@ public class DedicatedHostMigrateRequest {
     @KsYunField(name = "DedicatedHostId")
     private List<String> DedicatedHostIdList;
 
-
 }

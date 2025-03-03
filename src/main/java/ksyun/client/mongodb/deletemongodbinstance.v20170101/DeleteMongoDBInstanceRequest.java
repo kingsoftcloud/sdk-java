@@ -15,5 +15,4 @@ public class DeleteMongoDBInstanceRequest {
     @KsYunField(name = "InstanceId")
     private String InstanceId;
 
-
 }

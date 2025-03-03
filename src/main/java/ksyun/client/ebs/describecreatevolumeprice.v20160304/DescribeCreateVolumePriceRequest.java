@@ -42,5 +42,4 @@ public class DescribeCreateVolumePriceRequest {
     @KsYunField(name = "PurchaseTime")
     private Integer PurchaseTime;
 
-
 }

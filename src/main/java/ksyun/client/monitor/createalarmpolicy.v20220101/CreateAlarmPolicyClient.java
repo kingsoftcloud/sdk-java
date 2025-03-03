@@ -26,7 +26,7 @@ public class CreateAlarmPolicyClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CreateAlarmPolicyClient(Credential credential) {

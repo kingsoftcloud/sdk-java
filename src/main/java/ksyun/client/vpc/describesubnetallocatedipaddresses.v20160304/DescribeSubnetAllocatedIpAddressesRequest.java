@@ -42,5 +42,4 @@ public class DescribeSubnetAllocatedIpAddressesRequest {
         private List<String> ValueList;
     }
 
-
 }

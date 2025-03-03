@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname ModifySecurityGroupRuleNameClient
- * @Description 修改安全组规则名称
+ * @Description modify security group rule name
  */
 @Slf4j
 public class ModifySecurityGroupRuleNameClient extends BaseClient {
@@ -26,7 +26,7 @@ public class ModifySecurityGroupRuleNameClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ModifySecurityGroupRuleNameClient(Credential credential) {

@@ -40,5 +40,4 @@ public class UserseditRequest {
     @KsYunField(name = "status")
     private Integer Status;
 
-
 }

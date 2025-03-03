@@ -52,6 +52,12 @@ public class CreateRouteRequest {
     private String VpnTunnelId;
 
     /**
+     * VPN网关的ID
+     */
+    @KsYunField(name = "VpnGatewayId")
+    private String VpnGatewayId;
+
+    /**
      * 网卡ID
      */
     @KsYunField(name = "NetworkInterfaceId")
@@ -86,6 +92,5 @@ public class CreateRouteRequest {
      */
     @KsYunField(name = "RouteTableId")
     private String RouteTableId;
-
 
 }

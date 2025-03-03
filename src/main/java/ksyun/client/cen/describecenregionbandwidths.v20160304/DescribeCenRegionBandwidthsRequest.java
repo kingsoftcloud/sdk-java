@@ -39,7 +39,7 @@ public class DescribeCenRegionBandwidthsRequest {
     public static class FilterDto {
         /**
          * 有效值：
-         * - cen-id，云企业网的ID
+         * - cen-bandwidth-package-id，云企业网带宽包ID
          */
         @KsYunField(name = "Name")
         private String Name;
@@ -47,6 +47,5 @@ public class DescribeCenRegionBandwidthsRequest {
         @KsYunField(name = "Value")
         private List<String> ValueList;
     }
-
 
 }

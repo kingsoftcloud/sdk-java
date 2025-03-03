@@ -13,5 +13,4 @@ public class RejectShareImageRequest {
     @KsYunField(name = "ImageId")
     private String ImageId;
 
-
 }

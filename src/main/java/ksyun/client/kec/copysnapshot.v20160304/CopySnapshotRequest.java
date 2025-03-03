@@ -35,5 +35,4 @@ public class CopySnapshotRequest {
     @KsYunField(name = "DestinationSnapshotDesc")
     private String DestinationSnapshotDesc;
 
-
 }

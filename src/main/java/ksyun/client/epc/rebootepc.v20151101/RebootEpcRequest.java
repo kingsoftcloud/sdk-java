@@ -15,5 +15,4 @@ public class RebootEpcRequest {
     @KsYunField(name = "HostId")
     private String HostId;
 
-
 }

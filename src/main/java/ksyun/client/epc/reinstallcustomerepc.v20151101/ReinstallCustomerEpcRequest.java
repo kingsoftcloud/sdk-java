@@ -27,5 +27,4 @@ public class ReinstallCustomerEpcRequest {
     @KsYunField(name = "Path")
     private String Path;
 
-
 }

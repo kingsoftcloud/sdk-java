@@ -26,7 +26,7 @@ public class ListUnsecuredInstanceClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ListUnsecuredInstanceClient(Credential credential) {

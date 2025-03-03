@@ -33,5 +33,4 @@ public class ModifyDBInstanceRequest {
     @KsYunField(name = "DBParameterGroupId")
     private String DBParameterGroupId;
 
-
 }

@@ -27,5 +27,4 @@ public class UpdateSecurityRuleRequest {
     @KsYunField(name = "Cidr")
     private String Cidr;
 
-
 }

@@ -21,5 +21,4 @@ public class CreateCloudDeskgetTokenRequest {
     @KsYunField(name = "password")
     private String Password;
 
-
 }

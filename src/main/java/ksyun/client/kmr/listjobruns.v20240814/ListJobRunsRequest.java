@@ -16,11 +16,9 @@ public class ListJobRunsRequest {
     private String WorkspaceId;
 
     /**
-     * 查询作业数量
-     * 默认值:10
+     * 查询返回的最大记录数
      */
     @KsYunField(name = "MaxResults")
     private Integer MaxResults;
-
 
 }

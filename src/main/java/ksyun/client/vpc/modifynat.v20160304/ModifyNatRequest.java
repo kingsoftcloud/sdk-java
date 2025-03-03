@@ -27,5 +27,4 @@ public class ModifyNatRequest {
     @KsYunField(name = "BandWidth")
     private Integer BandWidth;
 
-
 }

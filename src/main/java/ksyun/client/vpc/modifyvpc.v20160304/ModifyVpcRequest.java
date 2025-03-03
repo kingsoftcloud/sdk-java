@@ -21,5 +21,4 @@ public class ModifyVpcRequest {
     @KsYunField(name = "VpcId")
     private String VpcId;
 
-
 }

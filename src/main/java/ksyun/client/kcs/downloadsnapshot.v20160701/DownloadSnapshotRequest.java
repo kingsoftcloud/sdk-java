@@ -21,5 +21,4 @@ public class DownloadSnapshotRequest {
     @KsYunField(name = "SnapshotId")
     private String SnapshotId;
 
-
 }

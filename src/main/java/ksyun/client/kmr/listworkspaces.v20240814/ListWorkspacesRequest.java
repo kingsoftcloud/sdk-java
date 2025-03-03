@@ -38,5 +38,4 @@ public class ListWorkspacesRequest {
     @KsYunField(name = "PageSize")
     private Integer PageSize;
 
-
 }

@@ -21,5 +21,4 @@ public class ModifyNatIpStatusRequest {
     @KsYunField(name = "Enabled")
     private Boolean Enabled;
 
-
 }

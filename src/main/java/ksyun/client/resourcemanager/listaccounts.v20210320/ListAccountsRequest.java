@@ -28,5 +28,4 @@ public class ListAccountsRequest {
     @KsYunField(name = "IsAll")
     private Integer IsAll;
 
-
 }

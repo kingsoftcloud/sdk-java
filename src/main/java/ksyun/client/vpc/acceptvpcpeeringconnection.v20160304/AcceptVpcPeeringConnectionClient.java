@@ -26,7 +26,7 @@ public class AcceptVpcPeeringConnectionClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public AcceptVpcPeeringConnectionClient(Credential credential) {

@@ -21,5 +21,4 @@ public class DeleteScalingPolicyRequest {
     @KsYunField(name = "ScalingPolicyId")
     private String ScalingPolicyId;
 
-
 }

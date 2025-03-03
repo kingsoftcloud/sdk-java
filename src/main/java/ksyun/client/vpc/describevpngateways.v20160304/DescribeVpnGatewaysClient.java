@@ -26,7 +26,7 @@ public class DescribeVpnGatewaysClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeVpnGatewaysClient(Credential credential) {

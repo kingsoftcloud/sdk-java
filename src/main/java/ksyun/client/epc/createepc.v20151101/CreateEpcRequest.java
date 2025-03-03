@@ -257,14 +257,15 @@ public class CreateEpcRequest {
     private String AddressProjectId;
 
     /**
-     * 系统盘文件格式
+     * 系统盘文件格式(NTFS仅支持windows)
+     * 有效值：EXT4|XFS|NTFS
      */
     @KsYunField(name = "SystemFileType")
     private String SystemFileType;
 
     /**
-     * 数据盘文件格式
-     * 有效值：EXT4|XFS
+     * 数据盘文件格式(NTFS仅支持windows)
+     * 有效值：EXT4|XFS|NTFS
      */
     @KsYunField(name = "DataFileType")
     private String DataFileType;
@@ -416,6 +417,5 @@ public class CreateEpcRequest {
      */
     @KsYunField(name = "TimedRegularization")
     private String TimedRegularization;
-
 
 }

@@ -26,7 +26,7 @@ public class ListAccountsClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ListAccountsClient(Credential credential) {

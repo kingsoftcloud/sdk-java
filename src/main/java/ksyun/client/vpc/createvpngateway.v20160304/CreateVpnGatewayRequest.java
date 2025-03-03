@@ -51,5 +51,4 @@ public class CreateVpnGatewayRequest {
     @KsYunField(name = "VpnGatewayVersion")
     private String VpnGatewayVersion;
 
-
 }

@@ -15,5 +15,4 @@ public class DescribeRecordRequest {
     @KsYunField(name = "Action")
     private String Action;
 
-
 }

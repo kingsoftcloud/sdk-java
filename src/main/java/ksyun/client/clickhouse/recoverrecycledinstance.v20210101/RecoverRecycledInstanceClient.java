@@ -26,7 +26,7 @@ public class RecoverRecycledInstanceClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public RecoverRecycledInstanceClient(Credential credential) {

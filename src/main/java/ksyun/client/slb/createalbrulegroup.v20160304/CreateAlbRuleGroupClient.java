@@ -26,7 +26,7 @@ public class CreateAlbRuleGroupClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CreateAlbRuleGroupClient(Credential credential) {

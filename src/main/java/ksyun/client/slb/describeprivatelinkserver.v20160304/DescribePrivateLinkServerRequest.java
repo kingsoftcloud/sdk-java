@@ -35,5 +35,4 @@ public class DescribePrivateLinkServerRequest {
     @KsYunField(name = "NextToken")
     private String NextToken;
 
-
 }

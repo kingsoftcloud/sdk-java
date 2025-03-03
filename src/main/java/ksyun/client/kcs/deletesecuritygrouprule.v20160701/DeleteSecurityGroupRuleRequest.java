@@ -29,5 +29,4 @@ public class DeleteSecurityGroupRuleRequest {
     @KsYunField(name = "SecurityGroupRuleId")
     private List<String> SecurityGroupRuleIdList;
 
-
 }

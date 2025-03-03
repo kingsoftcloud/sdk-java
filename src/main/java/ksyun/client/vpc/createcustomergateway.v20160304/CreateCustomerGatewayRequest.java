@@ -27,5 +27,4 @@ public class CreateCustomerGatewayRequest {
     @KsYunField(name = "HaCustomerGatewayAddress")
     private String HaCustomerGatewayAddress;
 
-
 }

@@ -21,5 +21,4 @@ public class CreateRepoNamespaceRequest {
     @KsYunField(name = "Public")
     private String Public;
 
-
 }

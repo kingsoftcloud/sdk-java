@@ -2,6 +2,7 @@ package ksyun.client.slb.createalblistener.v20160304;
 
 import common.annotation.KsYunField;
 import lombok.Data;
+import lombok.ToString;
 
 /**
  * @Classname CreateAlbListenerRequest
@@ -44,30 +45,6 @@ public class CreateAlbListenerRequest {
      */
     @KsYunField(name = "CertificateId")
     private String CertificateId;
-
-    /**
-     * 客户端证书的ID
-     */
-    @KsYunField(name = "CaCertificateId")
-    private String CaCertificateId;
-
-    /**
-     * 双向认证是否开启
-     */
-    @KsYunField(name = "CaEnabled")
-    private Boolean CaEnabled;
-
-    /**
-     * QUIC监听器的ID
-     */
-    @KsYunField(name = "QuicListenerId")
-    private String QuicListenerId;
-
-    /**
-     * 开启QUIC升级
-     */
-    @KsYunField(name = "EnableQuicUpgrade")
-    private Boolean EnableQuicUpgrade;
 
     /**
      * TLS安全策略
@@ -134,4 +111,78 @@ public class CreateAlbListenerRequest {
      */
     @KsYunField(name = "BackendServerGroupId")
     private String BackendServerGroupId;
+
+    /**
+     * 返回固定响应信息
+     */
+    @KsYunField(name = "FixedResponseConfig")
+
+    private FixedResponseConfigDto FixedResponseConfigList;
+    /**
+     * 返回固定响应信息
+     */
+    @KsYunField(name = "RewriteConfig")
+
+    private RewriteConfigDto RewriteConfigList;
+    /**
+     * 是否开启双向认证
+     */
+    @KsYunField(name = "CaEnabled")
+    private Boolean CaEnabled;
+    /**
+     * 客户端证书
+     */
+    @KsYunField(name = "CaCertificateId")
+    private String CaCertificateId;
+    /**
+     * 是否开启QUIC
+     */
+    @KsYunField(name = "EnableQuicUpgrade")
+    private Boolean EnableQuicUpgrade;
+    /**
+     * QUIC监听器id
+     */
+    @KsYunField(name = "QuicListenerId")
+    private String QuicListenerId;
+
+    @Data
+    @ToString
+    public static class FixedResponseConfigDto {
+        /**
+         * 响应正文长度不能超过1000个字符，不支持中文字符
+         */
+        @KsYunField(name = "Content")
+        private String Content;
+        /**
+         * 响应正文类型,text/plain|text/css|text/html|application/javascript|application/json
+         */
+        @KsYunField(name = "ContentType")
+        private String ContentType;
+        /**
+         * 响应状态码,仅支持2xx、4xx、5xx数字型字符串，x为任意数字
+         */
+        @KsYunField(name = "HttpCode")
+        private String HttpCode;
+    }
+
+    @Data
+    @ToString
+    public static class RewriteConfigDto {
+        /**
+         * 重写的域名
+         */
+        @KsYunField(name = "HttpHost")
+        private String HttpHost;
+        /**
+         * 重写的路经
+         */
+        @KsYunField(name = "Url")
+        private String Url;
+        /**
+         * 重写的查询字符串
+         */
+        @KsYunField(name = "QueryString")
+        private String QueryString;
+    }
+
 }

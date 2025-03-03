@@ -21,5 +21,4 @@ public class UpdateGrafanaPasswordRequest {
     @KsYunField(name = "Password")
     private String Password;
 
-
 }

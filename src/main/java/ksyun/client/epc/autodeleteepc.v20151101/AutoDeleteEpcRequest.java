@@ -28,5 +28,4 @@ public class AutoDeleteEpcRequest {
     @KsYunField(name = "AutoDeleteEip")
     private String AutoDeleteEip;
 
-
 }

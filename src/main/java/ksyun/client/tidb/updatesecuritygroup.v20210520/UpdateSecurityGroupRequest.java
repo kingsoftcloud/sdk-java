@@ -27,5 +27,4 @@ public class UpdateSecurityGroupRequest {
     @KsYunField(name = "Description")
     private String Description;
 
-
 }

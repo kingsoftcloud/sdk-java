@@ -21,5 +21,4 @@ public class ModifyKeyStateRequest {
     @KsYunField(name = "KeyState")
     private String KeyState;
 
-
 }

@@ -48,5 +48,4 @@ public class DescribeInternetGatewaysRequest {
         private List<String> ValueList;
     }
 
-
 }

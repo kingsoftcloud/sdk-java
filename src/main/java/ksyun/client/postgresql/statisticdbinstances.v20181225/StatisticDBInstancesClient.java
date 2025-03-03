@@ -26,7 +26,7 @@ public class StatisticDBInstancesClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public StatisticDBInstancesClient(Credential credential) {

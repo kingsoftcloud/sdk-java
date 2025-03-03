@@ -26,7 +26,7 @@ public class ResetDBParameterClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ResetDBParameterClient(Credential credential) {

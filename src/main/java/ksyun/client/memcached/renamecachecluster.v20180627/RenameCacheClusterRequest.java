@@ -10,22 +10,15 @@ import lombok.Data;
 @Data
 public class RenameCacheClusterRequest {
     /**
-     * 缓存服务ID
+     * Action
      */
-    @KsYunField(name = "CacheId")
-    private String CacheId;
+    @KsYunField(name = "Action")
+    private String Action;
 
     /**
-     * 缓存服务名称
+     * Version
      */
-    @KsYunField(name = "Name")
-    private String Name;
-
-    /**
-     * 缓存服务引擎 	 取固定值：memcached
-     */
-    @KsYunField(name = "Engine")
-    private String Engine;
-
+    @KsYunField(name = "Version")
+    private String Version;
 
 }

@@ -62,5 +62,4 @@ public class StrategyrulecreateRequest {
         private String Protocol;
     }
 
-
 }

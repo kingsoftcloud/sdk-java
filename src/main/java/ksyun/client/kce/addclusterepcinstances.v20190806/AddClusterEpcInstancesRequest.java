@@ -36,25 +36,26 @@ public class AddClusterEpcInstancesRequest {
      * 节点高级设置
      */
     @KsYunField(name = "AdvancedSetting")
-    private AdvancedSettingDto AdvancedSetting;
+
+    private AdvancedSettingDto AdvancedSettingList;
 
     @Data
     @ToString
     public static class AdvancedSettingDto {
         /**
          * 容器运行时，根据集群版本和需求选择
-         * Kubernetes版本
+         * Kubernetes版本＜1.24时，有效值：
+         * - docker
+         * - containerd
+         * <p>
+         * Kubernetes版本≥1.24时，有效值：
+         * - contained
+         * 默认值：docker
          */
         @KsYunField(name = "ContainerRuntime")
         private String ContainerRuntime;
         /**
-         * 容器的存储路径，不填写的话默认为/data/docker
-         */
-        @KsYunField(name = "DockerPath")
-        private String DockerPath;
-        /**
          * 容器的存储路径，不填写的话默认为/data/container
-         * 注：当传该参数时，DockerPath参数失效
          */
         @KsYunField(name = "ContainerPath")
         private String ContainerPath;
@@ -77,12 +78,12 @@ public class AddClusterEpcInstancesRequest {
          * 节点加入集群时预置的标签
          */
         @KsYunField(name = "Label")
-        private List<LabelDto> Label;
+        private List<Object> LabelList;
         /**
          * 自定义节点上k8s组件的参数
          */
         @KsYunField(name = "ExtraArg")
-        private ExtraArgDto ExtraArg;
+        private ExtraArgDto ExtraArgList;
         /**
          * 自定义容器日志采集文件大小，超出此大小日志将滚动写入下一文件，默认值为100m
          */
@@ -97,61 +98,16 @@ public class AddClusterEpcInstancesRequest {
          * 节点加入集群时预置污点，匹配污点容忍进行调度
          */
         @KsYunField(name = "Taints")
-        private List<TaintsDto> Taints;
-    }
+        private List<Object> TaintsList;
 
-    @Data
-    @ToString
-    public static class LabelDto {
-        /**
-         * 标签名称
-         */
-        @KsYunField(name = "Key")
-        private String Key;
-        /**
-         * 标签值
-         */
-        @KsYunField(name = "Value")
-        private String Value;
-    }
-
-    @Data
-    @ToString
-    public static class ExtraArgDto {
-        /**
-         * 用户自定义kubelet的参数
-         */
-        @KsYunField(name = "Kubelet")
-        private KubeletDto Kubelet;
-    }
-
-    @Data
-    @ToString
-    public static class KubeletDto {
-        /**
-         * 用户自定义kubelet的参数，格式k1=v1，如： --feature-gates=EphemeralContainers=true
-         */
-        @KsYunField(name = "CustomArg")
-        private String CustomArg;
-    }
-
-    @Data
-    @ToString
-    public static class TaintsDto {
-        /**
-         * 污点名称，校验规则：不超过253个字符，只能包含字母、数字及分隔符("-"、"_"、"."、"/")，且必须以字母、数字开头和结尾
-         */
-        @KsYunField(name = "Key")
-        private String Key;
-        /**
-         * 污点值，校验规则：不超过63个字符，只能包含字母、数字及分隔符("-"、"_"、"."、"/")，且必须以字母、数字开头和结尾
-         */
-        @KsYunField(name = "Value")
-        private String Value;
-        /**
-         * 污点效果，有效值为NoSchedule、PreferNoSchedule、NoExecute
-         */
-        @KsYunField(name = "Effect")
-        private String Effect;
+        @Data
+        @ToString
+        public static class ExtraArgDto {
+            /**
+             * 用户自定义kubelet的参数
+             */
+            @KsYunField(name = "Kubelet")
+            private List<Object> KubeletList;
+        }
     }
 }

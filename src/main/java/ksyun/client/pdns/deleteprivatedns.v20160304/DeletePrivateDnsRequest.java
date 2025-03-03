@@ -27,5 +27,4 @@ public class DeletePrivateDnsRequest {
     @KsYunField(name = "ProjectId")
     private String ProjectId;
 
-
 }

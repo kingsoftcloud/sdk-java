@@ -27,5 +27,4 @@ public class CreateNamespaceRequest {
     @KsYunField(name = "Public")
     private String Public;
 
-
 }

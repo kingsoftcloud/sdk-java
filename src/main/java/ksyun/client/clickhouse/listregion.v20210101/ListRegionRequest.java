@@ -15,5 +15,4 @@ public class ListRegionRequest {
     @KsYunField(name = "ProductType")
     private Integer ProductType;
 
-
 }

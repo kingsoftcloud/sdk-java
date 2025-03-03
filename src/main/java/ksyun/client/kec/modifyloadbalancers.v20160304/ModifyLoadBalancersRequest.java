@@ -15,5 +15,4 @@ public class ModifyLoadBalancersRequest {
     @KsYunField(name = "ScalingGroupId")
     private String ScalingGroupId;
 
-
 }

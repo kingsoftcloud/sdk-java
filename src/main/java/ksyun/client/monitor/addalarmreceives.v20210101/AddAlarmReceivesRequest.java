@@ -42,5 +42,4 @@ public class AddAlarmReceivesRequest {
     @KsYunField(name = "ContactId", type = 2)
     private List<Integer> ContactIdList;
 
-
 }

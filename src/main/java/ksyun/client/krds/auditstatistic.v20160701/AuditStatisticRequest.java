@@ -27,5 +27,4 @@ public class AuditStatisticRequest {
     @KsYunField(name = "AuditStatisticEndTime")
     private String AuditStatisticEndTime;
 
-
 }

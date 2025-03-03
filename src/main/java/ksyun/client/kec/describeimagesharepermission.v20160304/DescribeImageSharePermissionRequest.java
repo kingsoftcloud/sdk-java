@@ -16,5 +16,4 @@ public class DescribeImageSharePermissionRequest {
     @KsYunField(name = "ImageId")
     private String ImageId;
 
-
 }

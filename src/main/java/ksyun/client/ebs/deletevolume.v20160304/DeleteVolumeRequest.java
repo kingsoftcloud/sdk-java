@@ -22,5 +22,4 @@ public class DeleteVolumeRequest {
     @KsYunField(name = "ForceDelete")
     private Boolean ForceDelete;
 
-
 }

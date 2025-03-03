@@ -15,5 +15,4 @@ public class RepoNamespaceExistRequest {
     @KsYunField(name = "Namespace")
     private String Namespace;
 
-
 }

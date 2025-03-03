@@ -26,7 +26,7 @@ public class DescribeBackendServersClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeBackendServersClient(Credential credential) {

@@ -49,5 +49,4 @@ public class DescribeScalingActivityRequest {
     @KsYunField(name = "EndTime")
     private String EndTime;
 
-
 }

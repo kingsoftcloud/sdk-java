@@ -26,7 +26,7 @@ public class UpdateRetentionTriggerClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public UpdateRetentionTriggerClient(Credential credential) {

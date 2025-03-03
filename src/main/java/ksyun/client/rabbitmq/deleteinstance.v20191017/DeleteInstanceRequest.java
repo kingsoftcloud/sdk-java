@@ -15,5 +15,4 @@ public class DeleteInstanceRequest {
     @KsYunField(name = "InstanceId")
     private String InstanceId;
 
-
 }

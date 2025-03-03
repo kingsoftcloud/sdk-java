@@ -27,5 +27,4 @@ public class DescribeContainerLogRequest {
     @KsYunField(name = "Tail")
     private Integer Tail;
 
-
 }

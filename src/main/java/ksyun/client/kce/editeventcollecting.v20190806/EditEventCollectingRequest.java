@@ -22,5 +22,4 @@ public class EditEventCollectingRequest {
     @KsYunField(name = "EnableEventCollecting")
     private Boolean EnableEventCollecting;
 
-
 }

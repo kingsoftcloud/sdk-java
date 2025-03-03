@@ -27,5 +27,4 @@ public class RebindSecurityGroupRequest {
     @KsYunField(name = "InstanceId")
     private String InstanceId;
 
-
 }

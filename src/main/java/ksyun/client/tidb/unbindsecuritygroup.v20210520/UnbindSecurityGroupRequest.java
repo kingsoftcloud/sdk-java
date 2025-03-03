@@ -21,5 +21,4 @@ public class UnbindSecurityGroupRequest {
     @KsYunField(name = "InstanceIds")
     private String InstanceIds;
 
-
 }

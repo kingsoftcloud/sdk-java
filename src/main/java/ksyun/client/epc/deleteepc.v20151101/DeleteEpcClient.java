@@ -26,7 +26,7 @@ public class DeleteEpcClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DeleteEpcClient(Credential credential) {

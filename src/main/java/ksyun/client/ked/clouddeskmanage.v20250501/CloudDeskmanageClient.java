@@ -26,7 +26,7 @@ public class CloudDeskmanageClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CloudDeskmanageClient(Credential credential) {

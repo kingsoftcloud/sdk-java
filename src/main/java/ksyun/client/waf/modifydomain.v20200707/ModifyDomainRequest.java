@@ -95,5 +95,4 @@ public class ModifyDomainRequest {
     @KsYunField(name = "Sources")
     private String Sources;
 
-
 }

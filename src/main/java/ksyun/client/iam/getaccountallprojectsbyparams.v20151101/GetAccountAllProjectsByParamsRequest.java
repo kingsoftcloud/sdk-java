@@ -33,5 +33,4 @@ public class GetAccountAllProjectsByParamsRequest {
     @KsYunField(name = "ParamAccessKey")
     private String ParamAccessKey;
 
-
 }

@@ -63,5 +63,4 @@ public class SqlAuditReportRequest {
     @KsYunField(name = "Size")
     private Integer Size;
 
-
 }

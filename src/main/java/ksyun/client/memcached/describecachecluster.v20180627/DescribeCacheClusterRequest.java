@@ -1,12 +1,7 @@
 package ksyun.client.memcached.describecachecluster.v20180627;
 
 import common.annotation.KsYunField;
-import lombok.Builder;
 import lombok.Data;
-import lombok.ToString;
-
-import java.util.List;
-import java.util.Arrays;
 
 /**
  * @Classname DescribeCacheClusterRequest
@@ -15,16 +10,15 @@ import java.util.Arrays;
 @Data
 public class DescribeCacheClusterRequest {
     /**
-     * 缓存服务ID
+     * Action
      */
-    @KsYunField(name = "CacheId")
-    private String CacheId;
+    @KsYunField(name = "Action")
+    private String Action;
 
     /**
-     * 缓存服务引擎 	 取固定值： memcached
+     * Version
      */
-    @KsYunField(name = "Engine")
-    private String Engine;
-
+    @KsYunField(name = "Version")
+    private String Version;
 
 }

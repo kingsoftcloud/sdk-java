@@ -1,12 +1,7 @@
 package ksyun.client.cen.deletecenregionbandwidth.v20160304;
 
 import common.annotation.KsYunField;
-import lombok.Builder;
 import lombok.Data;
-import lombok.ToString;
-
-import java.util.List;
-import java.util.Arrays;
 
 /**
  * @Classname DeleteCenRegionBandwidthRequest
@@ -19,6 +14,5 @@ public class DeleteCenRegionBandwidthRequest {
      */
     @KsYunField(name = "CenRegionBandwidthId")
     private String CenRegionBandwidthId;
-
 
 }

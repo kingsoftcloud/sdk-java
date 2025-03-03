@@ -26,7 +26,7 @@ public class ClusterHealthStatisticClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ClusterHealthStatisticClient(Credential credential) {

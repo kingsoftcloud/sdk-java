@@ -75,5 +75,4 @@ public class SetIndexTemplateRequest {
     @KsYunField(name = "SeparatorStatus")
     private Boolean SeparatorStatus;
 
-
 }

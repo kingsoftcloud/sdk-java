@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname ListUnsecuredInstanceClient
- * @Description ListUnsecuredInstance
+ * @Description 安全-查询未绑定安全组实例列表
  */
 @Slf4j
 public class ListUnsecuredInstanceClient extends BaseClient {
@@ -26,7 +26,7 @@ public class ListUnsecuredInstanceClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ListUnsecuredInstanceClient(Credential credential) {

@@ -15,5 +15,4 @@ public class DeleteDomainRequest {
     @KsYunField(name = "ResourceRecordId")
     private String ResourceRecordId;
 
-
 }

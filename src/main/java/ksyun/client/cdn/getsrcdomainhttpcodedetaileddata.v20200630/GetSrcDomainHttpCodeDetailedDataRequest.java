@@ -57,5 +57,4 @@ public class GetSrcDomainHttpCodeDetailedDataRequest {
     @KsYunField(name = "ResultType")
     private String ResultType;
 
-
 }

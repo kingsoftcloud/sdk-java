@@ -26,7 +26,7 @@ public class CreateWebhookTriggerClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CreateWebhookTriggerClient(Credential credential) {

@@ -27,5 +27,4 @@ public class CloudDeskmanageRequest {
     @KsYunField(name = "action1")
     private String Action1;
 
-
 }

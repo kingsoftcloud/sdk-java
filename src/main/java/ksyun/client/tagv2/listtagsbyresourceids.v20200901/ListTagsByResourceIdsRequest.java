@@ -21,5 +21,4 @@ public class ListTagsByResourceIdsRequest {
     @KsYunField(name = "ResourceUuids")
     private String ResourceUuids;
 
-
 }

@@ -79,5 +79,4 @@ public class DescribePriceRequest {
         private Integer Size;
     }
 
-
 }

@@ -29,5 +29,4 @@ public class DeleteScaleStrategyRequest {
     @KsYunField(name = "StrategyModule")
     private String StrategyModule;
 
-
 }

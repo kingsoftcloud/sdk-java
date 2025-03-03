@@ -52,5 +52,4 @@ public class DescribeInstancesWithListenerRequest {
         private List<String> ValueList;
     }
 
-
 }

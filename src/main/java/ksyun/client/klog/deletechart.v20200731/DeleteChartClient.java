@@ -26,7 +26,7 @@ public class DeleteChartClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DeleteChartClient(Credential credential) {

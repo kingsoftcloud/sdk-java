@@ -49,5 +49,4 @@ public class ModifyInstanceDatabasePrivilegesRequest {
         private String Privilege;
     }
 
-
 }

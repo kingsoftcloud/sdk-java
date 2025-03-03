@@ -27,5 +27,4 @@ public class GetStreamTranListRequest {
     @KsYunField(name = "StreamID")
     private String StreamID;
 
-
 }

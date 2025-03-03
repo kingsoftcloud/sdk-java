@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname ModifyDBInstanceClient
- * @Description modify db instance
+ * @Description modify db instance old
  */
 @Slf4j
 public class ModifyDBInstanceClient extends BaseClient {
@@ -26,7 +26,7 @@ public class ModifyDBInstanceClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ModifyDBInstanceClient(Credential credential) {

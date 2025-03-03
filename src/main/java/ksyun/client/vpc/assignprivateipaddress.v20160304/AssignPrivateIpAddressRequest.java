@@ -29,5 +29,4 @@ public class AssignPrivateIpAddressRequest {
     @KsYunField(name = "SecondaryPrivateIpAddressCount")
     private Integer SecondaryPrivateIpAddressCount;
 
-
 }

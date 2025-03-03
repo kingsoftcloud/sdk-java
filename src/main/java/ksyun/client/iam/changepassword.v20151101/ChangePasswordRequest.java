@@ -21,5 +21,4 @@ public class ChangePasswordRequest {
     @KsYunField(name = "NewPassword")
     private String NewPassword;
 
-
 }

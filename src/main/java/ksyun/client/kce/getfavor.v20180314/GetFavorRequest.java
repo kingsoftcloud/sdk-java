@@ -27,5 +27,4 @@ public class GetFavorRequest {
     @KsYunField(name = "Keyword")
     private String Keyword;
 
-
 }

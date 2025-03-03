@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname SecurityGroupRelationClient
- * @Description 修改安全组实例绑定关系
+ * @Description security group relation
  */
 @Slf4j
 public class SecurityGroupRelationClient extends BaseClient {
@@ -26,7 +26,7 @@ public class SecurityGroupRelationClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public SecurityGroupRelationClient(Credential credential) {

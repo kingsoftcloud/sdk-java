@@ -52,5 +52,4 @@ public class DescribeSecurityGroupsRequest {
     @KsYunField(name = "SearchKey")
     private String SearchKey;
 
-
 }

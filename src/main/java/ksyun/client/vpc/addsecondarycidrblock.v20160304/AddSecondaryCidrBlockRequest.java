@@ -21,5 +21,4 @@ public class AddSecondaryCidrBlockRequest {
     @KsYunField(name = "CidrBlock")
     private String CidrBlock;
 
-
 }

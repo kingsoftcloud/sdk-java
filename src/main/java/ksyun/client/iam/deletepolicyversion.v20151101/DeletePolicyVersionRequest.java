@@ -22,5 +22,4 @@ public class DeletePolicyVersionRequest {
     @KsYunField(name = "VersionId")
     private String VersionId;
 
-
 }

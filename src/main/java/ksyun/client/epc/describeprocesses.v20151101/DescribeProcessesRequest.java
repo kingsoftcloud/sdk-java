@@ -50,5 +50,4 @@ public class DescribeProcessesRequest {
         private List<String> ValueList;
     }
 
-
 }

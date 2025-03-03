@@ -26,7 +26,7 @@ public class CreatePolicyClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CreatePolicyClient(Credential credential) {

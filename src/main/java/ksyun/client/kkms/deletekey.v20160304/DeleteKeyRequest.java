@@ -15,5 +15,4 @@ public class DeleteKeyRequest {
     @KsYunField(name = "KeyId")
     private String KeyId;
 
-
 }

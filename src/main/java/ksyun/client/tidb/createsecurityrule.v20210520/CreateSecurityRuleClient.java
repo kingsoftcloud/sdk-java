@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname CreateSecurityRuleClient
- * @Description CreateSecurityRule
+ * @Description 安全-创建安全规则(CIDR)
  */
 @Slf4j
 public class CreateSecurityRuleClient extends BaseClient {
@@ -26,7 +26,7 @@ public class CreateSecurityRuleClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CreateSecurityRuleClient(Credential credential) {

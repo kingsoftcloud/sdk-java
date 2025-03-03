@@ -15,5 +15,4 @@ public class CreateAccessKeyRequest {
     @KsYunField(name = "UserName")
     private String UserName;
 
-
 }

@@ -33,5 +33,4 @@ public class UpdateFolderRequest {
     @KsYunField(name = "Desc")
     private String Desc;
 
-
 }

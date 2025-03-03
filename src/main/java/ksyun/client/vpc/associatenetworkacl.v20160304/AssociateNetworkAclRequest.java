@@ -21,5 +21,4 @@ public class AssociateNetworkAclRequest {
     @KsYunField(name = "NetworkAclId")
     private String NetworkAclId;
 
-
 }

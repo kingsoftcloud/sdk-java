@@ -47,5 +47,4 @@ public class DescribeEpcManagementsRequest {
     @KsYunField(name = "RemoteManagementId")
     private String RemoteManagementId;
 
-
 }

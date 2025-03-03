@@ -33,5 +33,4 @@ public class DescribeInstanceSummaryBillsRequest {
     @KsYunField(name = "Size")
     private Integer Size;
 
-
 }

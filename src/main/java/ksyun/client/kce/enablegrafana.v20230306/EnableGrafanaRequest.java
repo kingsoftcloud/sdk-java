@@ -27,5 +27,4 @@ public class EnableGrafanaRequest {
     @KsYunField(name = "Password")
     private String Password;
 
-
 }

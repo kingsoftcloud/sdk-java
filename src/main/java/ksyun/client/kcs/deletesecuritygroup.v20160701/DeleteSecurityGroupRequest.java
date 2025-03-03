@@ -23,5 +23,4 @@ public class DeleteSecurityGroupRequest {
     @KsYunField(name = "SecurityGroupId")
     private List<String> SecurityGroupIdList;
 
-
 }

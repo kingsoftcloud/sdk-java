@@ -21,5 +21,4 @@ public class StrategyboundRequest {
     @KsYunField(name = "instanceId")
     private String InstanceId;
 
-
 }

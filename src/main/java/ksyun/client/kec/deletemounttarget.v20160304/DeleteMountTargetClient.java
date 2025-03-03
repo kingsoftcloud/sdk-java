@@ -26,7 +26,7 @@ public class DeleteMountTargetClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DeleteMountTargetClient(Credential credential) {

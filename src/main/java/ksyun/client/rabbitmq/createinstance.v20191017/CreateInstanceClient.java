@@ -26,7 +26,7 @@ public class CreateInstanceClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CreateInstanceClient(Credential credential) {

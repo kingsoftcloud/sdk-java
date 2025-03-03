@@ -33,5 +33,4 @@ public class DescribeSpotPriceHistoryRequest {
     @KsYunField(name = "EndTime")
     private String EndTime;
 
-
 }

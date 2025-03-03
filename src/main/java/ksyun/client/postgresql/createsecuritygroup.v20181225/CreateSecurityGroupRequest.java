@@ -69,5 +69,4 @@ public class CreateSecurityGroupRequest {
         private String SecurityGroupRuleProtocol;
     }
 
-
 }

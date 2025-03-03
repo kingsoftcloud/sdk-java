@@ -21,5 +21,4 @@ public class GetUserUsageDataExportTaskRequest {
     @KsYunField(name = "PageNumber")
     private String PageNumber;
 
-
 }

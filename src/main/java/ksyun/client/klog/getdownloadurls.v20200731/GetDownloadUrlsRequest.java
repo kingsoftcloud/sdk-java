@@ -10,16 +10,9 @@ import lombok.Data;
 @Data
 public class GetDownloadUrlsRequest {
     /**
-     * 任务下载ID，通过获取下载任务列表获取
+     * Action
      */
-    @KsYunField(name = "DownloadID")
-    private String DownloadID;
-
-    /**
-     * 工程名称
-     */
-    @KsYunField(name = "ProjectName")
-    private String ProjectName;
-
+    @KsYunField(name = "Action")
+    private String Action;
 
 }

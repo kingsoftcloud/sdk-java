@@ -21,5 +21,4 @@ public class AttachRolePolicyRequest {
     @KsYunField(name = "PolicyKrn")
     private String PolicyKrn;
 
-
 }

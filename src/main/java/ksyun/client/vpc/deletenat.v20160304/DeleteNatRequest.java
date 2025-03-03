@@ -15,5 +15,4 @@ public class DeleteNatRequest {
     @KsYunField(name = "NatId")
     private String NatId;
 
-
 }

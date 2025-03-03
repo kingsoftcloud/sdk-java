@@ -15,5 +15,4 @@ public class DescribeCertificatesRequest {
     @KsYunField(name = "Request")
     private String Request;
 
-
 }

@@ -26,7 +26,7 @@ public class GetDownloadUrlsClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public GetDownloadUrlsClient(Credential credential) {

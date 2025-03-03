@@ -21,5 +21,4 @@ public class DisassociateNetworkAclRequest {
     @KsYunField(name = "NetworkAclId")
     private String NetworkAclId;
 
-
 }

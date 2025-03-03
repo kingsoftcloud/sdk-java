@@ -18,8 +18,13 @@ public class ModifyCenBandWidthPackageRequest {
     /**
      * 带宽值
      */
-    @KsYunField(name = "BandWidth")
-    private Integer BandWidth;
+    @KsYunField(name = "PackageBandWidth")
+    private Integer PackageBandWidth;
 
+    /**
+     * 带宽包的名称
+     */
+    @KsYunField(name = "CenBandWidthPackageName")
+    private String CenBandWidthPackageName;
 
 }

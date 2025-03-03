@@ -26,7 +26,7 @@ public class ListPolicyVersionsClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ListPolicyVersionsClient(Credential credential) {

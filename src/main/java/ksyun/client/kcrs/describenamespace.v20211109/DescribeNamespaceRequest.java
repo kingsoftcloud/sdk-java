@@ -39,5 +39,4 @@ public class DescribeNamespaceRequest {
     @KsYunField(name = "Marker")
     private String Marker;
 
-
 }

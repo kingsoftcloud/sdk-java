@@ -26,7 +26,7 @@ public class DescribeFileSystemsClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeFileSystemsClient(Credential credential) {

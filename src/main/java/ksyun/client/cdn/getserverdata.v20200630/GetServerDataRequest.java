@@ -69,5 +69,4 @@ public class GetServerDataRequest {
     @KsYunField(name = "ResultType")
     private String ResultType;
 
-
 }

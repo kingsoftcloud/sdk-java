@@ -149,5 +149,4 @@ public class CreateDBInstanceRequest {
     @KsYunField(name = "ProjectId")
     private String ProjectId;
 
-
 }

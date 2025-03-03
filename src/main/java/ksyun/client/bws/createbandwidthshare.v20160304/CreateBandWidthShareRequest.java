@@ -39,5 +39,4 @@ public class CreateBandWidthShareRequest {
     @KsYunField(name = "ChargeType")
     private String ChargeType;
 
-
 }

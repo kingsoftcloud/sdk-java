@@ -15,5 +15,4 @@ public class DeregisterAlbBackendServerRequest {
     @KsYunField(name = "BackendServerId")
     private String BackendServerId;
 
-
 }

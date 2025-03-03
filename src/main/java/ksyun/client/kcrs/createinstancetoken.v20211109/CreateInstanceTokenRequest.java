@@ -33,5 +33,4 @@ public class CreateInstanceTokenRequest {
     @KsYunField(name = "Desc")
     private String Desc;
 
-
 }

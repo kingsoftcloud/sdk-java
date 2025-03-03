@@ -33,5 +33,4 @@ public class DescribeEpcStocksRequest {
         private List<String> ValueList;
     }
 
-
 }

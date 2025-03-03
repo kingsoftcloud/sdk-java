@@ -42,5 +42,4 @@ public class DescribeScalingConfigurationRequest {
     @KsYunField(name = "MaxResults")
     private Integer MaxResults;
 
-
 }

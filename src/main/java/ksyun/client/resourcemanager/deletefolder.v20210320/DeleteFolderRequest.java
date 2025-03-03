@@ -15,5 +15,4 @@ public class DeleteFolderRequest {
     @KsYunField(name = "FolderId")
     private String FolderId;
 
-
 }

@@ -21,5 +21,4 @@ public class DescribeImagesRequest {
     @KsYunField(name = "NextToken")
     private String NextToken;
 
-
 }

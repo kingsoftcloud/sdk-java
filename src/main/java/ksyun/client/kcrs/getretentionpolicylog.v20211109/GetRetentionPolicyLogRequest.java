@@ -33,5 +33,4 @@ public class GetRetentionPolicyLogRequest {
     @KsYunField(name = "ExecutionId")
     private Integer ExecutionId;
 
-
 }

@@ -21,5 +21,4 @@ public class DescribeDBInstanceParametersRequest {
     @KsYunField(name = "ConfigType")
     private String ConfigType;
 
-
 }

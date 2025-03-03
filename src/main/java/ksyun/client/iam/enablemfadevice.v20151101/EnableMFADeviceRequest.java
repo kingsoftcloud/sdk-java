@@ -33,5 +33,4 @@ public class EnableMFADeviceRequest {
     @KsYunField(name = "UserName")
     private String UserName;
 
-
 }

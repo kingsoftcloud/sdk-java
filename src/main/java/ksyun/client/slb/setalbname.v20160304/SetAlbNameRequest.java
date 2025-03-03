@@ -21,5 +21,4 @@ public class SetAlbNameRequest {
     @KsYunField(name = "AlbName")
     private String AlbName;
 
-
 }

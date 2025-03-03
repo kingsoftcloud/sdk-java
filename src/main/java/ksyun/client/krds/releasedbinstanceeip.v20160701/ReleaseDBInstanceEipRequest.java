@@ -15,5 +15,4 @@ public class ReleaseDBInstanceEipRequest {
     @KsYunField(name = "DBInstanceIdentifier")
     private String DBInstanceIdentifier;
 
-
 }

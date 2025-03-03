@@ -15,5 +15,4 @@ public class DescribeShardNodeRequest {
     @KsYunField(name = "InstanceId")
     private String InstanceId;
 
-
 }

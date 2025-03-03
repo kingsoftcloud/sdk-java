@@ -15,5 +15,4 @@ public class GetVirtualMFADeviceRequest {
     @KsYunField(name = "UserName")
     private String UserName;
 
-
 }

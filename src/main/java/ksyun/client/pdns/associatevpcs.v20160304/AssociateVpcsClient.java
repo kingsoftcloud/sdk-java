@@ -26,7 +26,7 @@ public class AssociateVpcsClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public AssociateVpcsClient(Credential credential) {

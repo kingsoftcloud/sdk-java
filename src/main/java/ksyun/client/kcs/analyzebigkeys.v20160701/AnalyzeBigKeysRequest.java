@@ -21,5 +21,4 @@ public class AnalyzeBigKeysRequest {
     @KsYunField(name = "QueryType")
     private Integer QueryType;
 
-
 }

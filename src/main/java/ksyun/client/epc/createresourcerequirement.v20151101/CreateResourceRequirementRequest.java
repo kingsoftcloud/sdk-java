@@ -45,5 +45,4 @@ public class CreateResourceRequirementRequest {
     @KsYunField(name = "HostType")
     private String HostType;
 
-
 }

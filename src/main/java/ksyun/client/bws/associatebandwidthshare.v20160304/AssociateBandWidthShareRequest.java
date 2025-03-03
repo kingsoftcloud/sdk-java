@@ -21,5 +21,4 @@ public class AssociateBandWidthShareRequest {
     @KsYunField(name = "AllocationId")
     private String AllocationId;
 
-
 }

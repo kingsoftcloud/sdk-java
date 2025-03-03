@@ -15,5 +15,4 @@ public class DeleteCustomerGatewayRequest {
     @KsYunField(name = "CustomerGatewayId")
     private String CustomerGatewayId;
 
-
 }

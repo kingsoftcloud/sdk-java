@@ -27,5 +27,4 @@ public class UpdateMongoDBInstanceRequest {
     @KsYunField(name = "Storage")
     private Integer Storage;
 
-
 }

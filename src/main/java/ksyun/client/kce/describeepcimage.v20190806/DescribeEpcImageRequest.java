@@ -17,5 +17,4 @@ public class DescribeEpcImageRequest {
     @KsYunField(name = "ImageId")
     private List<String> ImageIdList;
 
-
 }

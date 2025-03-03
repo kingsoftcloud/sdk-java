@@ -65,5 +65,4 @@ public class CloneLoadBalancerRequest {
     @KsYunField(name = "ProjectId")
     private String ProjectId;
 
-
 }

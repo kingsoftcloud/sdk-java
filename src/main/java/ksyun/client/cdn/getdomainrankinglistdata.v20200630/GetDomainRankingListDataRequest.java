@@ -33,5 +33,4 @@ public class GetDomainRankingListDataRequest {
     @KsYunField(name = "SortBy")
     private String SortBy;
 
-
 }

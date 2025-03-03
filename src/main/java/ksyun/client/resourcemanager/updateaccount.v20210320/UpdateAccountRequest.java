@@ -27,5 +27,4 @@ public class UpdateAccountRequest {
     @KsYunField(name = "FolderId")
     private String FolderId;
 
-
 }

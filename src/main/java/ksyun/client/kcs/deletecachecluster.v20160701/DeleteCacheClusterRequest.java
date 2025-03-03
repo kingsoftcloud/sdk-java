@@ -21,5 +21,4 @@ public class DeleteCacheClusterRequest {
     @KsYunField(name = "CacheId")
     private String CacheId;
 
-
 }

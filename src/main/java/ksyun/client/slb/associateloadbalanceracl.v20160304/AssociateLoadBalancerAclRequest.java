@@ -21,5 +21,4 @@ public class AssociateLoadBalancerAclRequest {
     @KsYunField(name = "ListenerId")
     private String ListenerId;
 
-
 }

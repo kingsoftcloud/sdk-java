@@ -26,7 +26,7 @@ public class DescribeCenRoutesClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeCenRoutesClient(Credential credential) {

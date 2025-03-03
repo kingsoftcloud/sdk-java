@@ -83,5 +83,4 @@ public class ListOperateLogsRequest {
     @KsYunField(name = "SearchAfter")
     private String SearchAfter;
 
-
 }

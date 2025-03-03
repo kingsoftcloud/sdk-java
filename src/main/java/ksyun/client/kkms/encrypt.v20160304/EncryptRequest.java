@@ -21,5 +21,4 @@ public class EncryptRequest {
     @KsYunField(name = "Plaintext")
     private String Plaintext;
 
-
 }

@@ -27,5 +27,4 @@ public class UpdatePasswordRequest {
     @KsYunField(name = "Password")
     private String Password;
 
-
 }

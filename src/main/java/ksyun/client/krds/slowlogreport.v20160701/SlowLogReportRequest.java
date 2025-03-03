@@ -69,5 +69,4 @@ public class SlowLogReportRequest {
     @KsYunField(name = "MaxRecords")
     private Integer MaxRecords;
 
-
 }

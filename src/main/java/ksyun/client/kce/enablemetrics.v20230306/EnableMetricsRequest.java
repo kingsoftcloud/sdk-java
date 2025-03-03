@@ -44,5 +44,4 @@ public class EnableMetricsRequest {
     @KsYunField(name = "MetricsName")
     private List<String> MetricsNameList;
 
-
 }

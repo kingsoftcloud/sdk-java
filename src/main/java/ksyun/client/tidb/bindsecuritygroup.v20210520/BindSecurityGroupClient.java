@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname BindSecurityGroupClient
- * @Description BindSecurityGroup
+ * @Description 安全-绑定安全组(实例)
  */
 @Slf4j
 public class BindSecurityGroupClient extends BaseClient {
@@ -26,7 +26,7 @@ public class BindSecurityGroupClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public BindSecurityGroupClient(Credential credential) {

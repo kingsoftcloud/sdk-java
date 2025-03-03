@@ -15,5 +15,4 @@ public class DescribeRegionsRequest {
     @KsYunField(name = "Action")
     private String Action;
 
-
 }

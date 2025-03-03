@@ -15,5 +15,4 @@ public class DisassociateClusterRequest {
     @KsYunField(name = "HostId")
     private String HostId;
 
-
 }

@@ -21,5 +21,4 @@ public class RenameRequest {
     @KsYunField(name = "InstanceName")
     private String InstanceName;
 
-
 }

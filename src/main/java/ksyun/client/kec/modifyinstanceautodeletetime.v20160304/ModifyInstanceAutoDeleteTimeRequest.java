@@ -29,5 +29,4 @@ public class ModifyInstanceAutoDeleteTimeRequest {
     @KsYunField(name = "AutoDeleteEip")
     private Boolean AutoDeleteEip;
 
-
 }

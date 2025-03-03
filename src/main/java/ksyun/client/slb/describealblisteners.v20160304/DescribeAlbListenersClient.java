@@ -26,7 +26,7 @@ public class DescribeAlbListenersClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeAlbListenersClient(Credential credential) {

@@ -21,5 +21,4 @@ public class DescRegionRequest {
     @KsYunField(name = "RegionCode")
     private String RegionCode;
 
-
 }

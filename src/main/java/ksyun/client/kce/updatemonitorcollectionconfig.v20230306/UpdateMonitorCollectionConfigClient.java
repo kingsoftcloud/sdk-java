@@ -26,7 +26,7 @@ public class UpdateMonitorCollectionConfigClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public UpdateMonitorCollectionConfigClient(Credential credential) {

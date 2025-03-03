@@ -26,7 +26,7 @@ public class InsertInstanceToESClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public InsertInstanceToESClient(Credential credential) {

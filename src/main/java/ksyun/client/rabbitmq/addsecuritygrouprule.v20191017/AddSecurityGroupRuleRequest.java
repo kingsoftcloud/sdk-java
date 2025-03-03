@@ -21,5 +21,4 @@ public class AddSecurityGroupRuleRequest {
     @KsYunField(name = "Cidrs")
     private String Cidrs;
 
-
 }

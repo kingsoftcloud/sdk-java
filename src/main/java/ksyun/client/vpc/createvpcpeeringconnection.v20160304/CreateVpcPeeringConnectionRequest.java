@@ -28,12 +28,6 @@ public class CreateVpcPeeringConnectionRequest {
     private String PeerVpcId;
 
     /**
-     * 发起端region
-     */
-    @KsYunField(name = "Region")
-    private String Region;
-
-    /**
      * 接受端Vpc的region
      */
     @KsYunField(name = "PeerRegion")
@@ -52,6 +46,12 @@ public class CreateVpcPeeringConnectionRequest {
     private Integer BandWidth;
 
     /**
+     * 购买时长，计费类型为包年包月时不可缺省。
+     */
+    @KsYunField(name = "PurchaseTime")
+    private Integer PurchaseTime;
+
+    /**
      * 项目的ID
      */
     @KsYunField(name = "ProjectId")
@@ -62,6 +62,5 @@ public class CreateVpcPeeringConnectionRequest {
      */
     @KsYunField(name = "ChargeType")
     private String ChargeType;
-
 
 }

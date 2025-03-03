@@ -15,5 +15,4 @@ public class DeleteNetworkInterfaceRequest {
     @KsYunField(name = "NetworkInterfaceId")
     private String NetworkInterfaceId;
 
-
 }

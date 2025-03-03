@@ -47,5 +47,4 @@ public class SetCacheParametersRequest {
     @KsYunField(name = "ResetAllParameters")
     private Boolean ResetAllParameters;
 
-
 }

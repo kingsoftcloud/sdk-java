@@ -45,5 +45,4 @@ public class DescribeHotKeysRequest {
     @KsYunField(name = "SortDir")
     private String SortDir;
 
-
 }

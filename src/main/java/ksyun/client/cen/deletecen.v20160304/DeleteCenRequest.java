@@ -20,5 +20,4 @@ public class DeleteCenRequest {
     @KsYunField(name = "CenId")
     private String CenId;
 
-
 }

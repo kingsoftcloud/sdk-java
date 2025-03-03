@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname UnbindSecurityGroupClient
- * @Description UnbindSecurityGroup
+ * @Description 安全-实例解绑安全组
  */
 @Slf4j
 public class UnbindSecurityGroupClient extends BaseClient {
@@ -26,7 +26,7 @@ public class UnbindSecurityGroupClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public UnbindSecurityGroupClient(Credential credential) {

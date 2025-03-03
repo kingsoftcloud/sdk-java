@@ -25,5 +25,4 @@ public class CloudDeskeditRequest {
     @KsYunField(name = "id")
     private Integer Id;
 
-
 }

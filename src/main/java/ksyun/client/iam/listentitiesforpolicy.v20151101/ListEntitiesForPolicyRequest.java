@@ -27,5 +27,4 @@ public class ListEntitiesForPolicyRequest {
     @KsYunField(name = "Marker")
     private String Marker;
 
-
 }

@@ -50,5 +50,4 @@ public class DescribeBackendServerGroupsRequest {
         private List<String> ValueList;
     }
 
-
 }

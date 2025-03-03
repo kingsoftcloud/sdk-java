@@ -26,7 +26,7 @@ public class QueryBucketsClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public QueryBucketsClient(Credential credential) {

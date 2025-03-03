@@ -22,5 +22,4 @@ public class GetPolicyVersionRequest {
     @KsYunField(name = "VersionId")
     private String VersionId;
 
-
 }

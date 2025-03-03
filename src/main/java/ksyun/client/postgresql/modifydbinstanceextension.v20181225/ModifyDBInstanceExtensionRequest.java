@@ -49,5 +49,4 @@ public class ModifyDBInstanceExtensionRequest {
     @KsYunField(name = "Extension")
     private List<String> ExtensionList;
 
-
 }

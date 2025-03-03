@@ -21,5 +21,4 @@ public class CreateShareImageRequest {
     @KsYunField(name = "AccountId.N")
     private String AccountIdN;
 
-
 }

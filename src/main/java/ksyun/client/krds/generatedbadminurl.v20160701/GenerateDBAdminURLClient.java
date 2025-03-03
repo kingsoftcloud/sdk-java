@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname GenerateDBAdminURLClient
- * @Description generate db admin u r l
+ * @Description 库表-获取登录数据库连接
  */
 @Slf4j
 public class GenerateDBAdminURLClient extends BaseClient {
@@ -26,7 +26,7 @@ public class GenerateDBAdminURLClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public GenerateDBAdminURLClient(Credential credential) {

@@ -27,5 +27,4 @@ public class GetGroupRequest {
     @KsYunField(name = "Marker")
     private String Marker;
 
-
 }

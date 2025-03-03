@@ -26,7 +26,7 @@ public class CreateDownloadTaskClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CreateDownloadTaskClient(Credential credential) {

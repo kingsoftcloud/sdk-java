@@ -47,5 +47,4 @@ public class UpdateUserRequest {
     @KsYunField(name = "NewRemark")
     private String NewRemark;
 
-
 }

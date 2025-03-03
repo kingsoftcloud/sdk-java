@@ -27,5 +27,4 @@ public class DescribeVpnsRequest {
     @KsYunField(name = "RemoteManagementId")
     private String RemoteManagementId;
 
-
 }

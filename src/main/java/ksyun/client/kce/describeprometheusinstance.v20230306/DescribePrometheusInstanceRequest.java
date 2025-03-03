@@ -35,5 +35,4 @@ public class DescribePrometheusInstanceRequest {
     @KsYunField(name = "Search")
     private String Search;
 
-
 }

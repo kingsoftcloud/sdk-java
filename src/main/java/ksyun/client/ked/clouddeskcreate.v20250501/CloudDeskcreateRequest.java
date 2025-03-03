@@ -96,5 +96,4 @@ public class CloudDeskcreateRequest {
     @KsYunField(name = "uniqueSuffix")
     private Boolean UniqueSuffix;
 
-
 }

@@ -26,7 +26,7 @@ public class CreateCacheClusterClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CreateCacheClusterClient(Credential credential) {

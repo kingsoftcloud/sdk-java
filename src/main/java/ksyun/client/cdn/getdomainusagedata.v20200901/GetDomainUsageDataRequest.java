@@ -67,5 +67,4 @@ public class GetDomainUsageDataRequest {
     @KsYunField(name = "Value")
     private String Value;
 
-
 }

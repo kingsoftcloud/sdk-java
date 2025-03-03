@@ -21,5 +21,4 @@ public class CreateHaVipRequest {
     @KsYunField(name = "IpAddress")
     private String IpAddress;
 
-
 }

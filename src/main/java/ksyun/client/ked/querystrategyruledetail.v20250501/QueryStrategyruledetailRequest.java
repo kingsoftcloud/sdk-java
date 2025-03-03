@@ -15,5 +15,4 @@ public class QueryStrategyruledetailRequest {
     @KsYunField(name = "securityGroupId")
     private String SecurityGroupId;
 
-
 }

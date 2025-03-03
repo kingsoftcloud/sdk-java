@@ -26,7 +26,7 @@ public class CreateVpcClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CreateVpcClient(Credential credential) {

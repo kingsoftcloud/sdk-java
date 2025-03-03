@@ -21,5 +21,4 @@ public class CloudDeskreinstallRequest {
     @KsYunField(name = "imageId")
     private String ImageId;
 
-
 }

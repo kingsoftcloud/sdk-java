@@ -81,5 +81,4 @@ public class GetDomainHttpCodeDetailedDataRequest {
     @KsYunField(name = "ResultType")
     private String ResultType;
 
-
 }

@@ -21,5 +21,4 @@ public class RestartCacheClusterRequest {
     @KsYunField(name = "CacheId")
     private String CacheId;
 
-
 }

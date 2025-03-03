@@ -10,10 +10,9 @@ import lombok.Data;
 @Data
 public class DescribeInstanceRequest {
     /**
-     * 实例ID。
+     * 实例ID
      */
     @KsYunField(name = "InstanceId")
     private String InstanceId;
-
 
 }

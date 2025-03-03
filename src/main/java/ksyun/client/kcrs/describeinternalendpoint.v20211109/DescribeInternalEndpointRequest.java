@@ -15,5 +15,4 @@ public class DescribeInternalEndpointRequest {
     @KsYunField(name = "InstanceId")
     private String InstanceId;
 
-
 }

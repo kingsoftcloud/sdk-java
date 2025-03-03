@@ -15,5 +15,4 @@ public class DescribeShareImageAccountListRequest {
     @KsYunField(name = "ImageId")
     private String ImageId;
 
-
 }

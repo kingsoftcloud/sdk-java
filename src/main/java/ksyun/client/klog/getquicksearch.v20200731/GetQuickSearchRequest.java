@@ -10,22 +10,9 @@ import lombok.Data;
 @Data
 public class GetQuickSearchRequest {
     /**
-     * 工程名称
+     * Action
      */
-    @KsYunField(name = "ProjectName")
-    private String ProjectName;
-
-    /**
-     * 日志池名称
-     */
-    @KsYunField(name = "LogPoolName")
-    private String LogPoolName;
-
-    /**
-     * 快速查询名称
-     */
-    @KsYunField(name = "QuickSearchName")
-    private String QuickSearchName;
-
+    @KsYunField(name = "Action")
+    private String Action;
 
 }

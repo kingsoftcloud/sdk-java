@@ -26,7 +26,7 @@ public class DeleteSecurityGroupClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DeleteSecurityGroupClient(Credential credential) {

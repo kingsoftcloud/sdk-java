@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname SqlAuditReportClient
- * @Description 某时间段全量SQL统计查询接口
+ * @Description 某时段全量SQL统计
  */
 @Slf4j
 public class SqlAuditReportClient extends BaseClient {
@@ -26,7 +26,7 @@ public class SqlAuditReportClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public SqlAuditReportClient(Credential credential) {

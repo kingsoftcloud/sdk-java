@@ -15,5 +15,4 @@ public class RestartMongoDBInstanceRequest {
     @KsYunField(name = "InstanceId")
     private String InstanceId;
 
-
 }

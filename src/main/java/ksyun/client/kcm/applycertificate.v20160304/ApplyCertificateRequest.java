@@ -57,5 +57,4 @@ public class ApplyCertificateRequest {
     @KsYunField(name = "ProjectId")
     private Integer ProjectId;
 
-
 }

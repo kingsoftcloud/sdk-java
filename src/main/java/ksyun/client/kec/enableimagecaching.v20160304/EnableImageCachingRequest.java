@@ -18,5 +18,4 @@ public class EnableImageCachingRequest {
     @KsYunField(name = "ImageId")
     private List<String> ImageIdList;
 
-
 }

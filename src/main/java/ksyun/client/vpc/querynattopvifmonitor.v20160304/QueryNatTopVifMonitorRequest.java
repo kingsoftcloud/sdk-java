@@ -45,5 +45,4 @@ public class QueryNatTopVifMonitorRequest {
     @KsYunField(name = "ip")
     private String Ip;
 
-
 }

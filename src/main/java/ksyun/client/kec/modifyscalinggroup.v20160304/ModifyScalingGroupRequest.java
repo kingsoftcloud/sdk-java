@@ -104,5 +104,4 @@ public class ModifyScalingGroupRequest {
         private Integer Weight;
     }
 
-
 }

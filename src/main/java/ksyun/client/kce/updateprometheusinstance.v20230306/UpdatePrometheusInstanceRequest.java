@@ -27,5 +27,4 @@ public class UpdatePrometheusInstanceRequest {
     @KsYunField(name = "DataRetentionTime")
     private Integer DataRetentionTime;
 
-
 }

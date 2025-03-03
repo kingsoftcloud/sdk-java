@@ -27,5 +27,4 @@ public class ListAttachedRolePoliciesRequest {
     @KsYunField(name = "MaxItems")
     private Integer MaxItems;
 
-
 }

@@ -82,5 +82,4 @@ public class CreateInstanceRequest {
     @KsYunField(name = "NodeNum")
     private Integer NodeNum;
 
-
 }

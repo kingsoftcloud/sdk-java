@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname SlowLogReportClient
- * @Description 某时间段慢SQL统计查询接口
+ * @Description slow log report
  */
 @Slf4j
 public class SlowLogReportClient extends BaseClient {
@@ -26,7 +26,7 @@ public class SlowLogReportClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public SlowLogReportClient(Credential credential) {

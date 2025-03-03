@@ -41,5 +41,4 @@ public class GetEntryRateDataRequest {
     @KsYunField(name = "Isp")
     private String Isp;
 
-
 }

@@ -21,5 +21,4 @@ public class StrategyunboundRequest {
     @KsYunField(name = "instanceId")
     private String InstanceId;
 
-
 }

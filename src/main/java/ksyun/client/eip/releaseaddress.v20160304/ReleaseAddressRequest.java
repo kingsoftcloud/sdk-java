@@ -15,5 +15,4 @@ public class ReleaseAddressRequest {
     @KsYunField(name = "AllocationId")
     private String AllocationId;
 
-
 }

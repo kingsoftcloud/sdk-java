@@ -33,5 +33,10 @@ public class ExportSnapshotRequest {
     @KsYunField(name = "ObjectName")
     private String ObjectName;
 
+    /**
+     * 实例Id。
+     */
+    @KsYunField(name = "CacheId")
+    private String CacheId;
 
 }

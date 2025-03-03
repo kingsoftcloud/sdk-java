@@ -10,28 +10,9 @@ import lombok.Data;
 @Data
 public class GetUsageRequest {
     /**
-     * 工程名称列表
+     * Action
      */
-    @KsYunField(name = "Projects")
-    private String Projects;
-
-    /**
-     * 指标名称列表，不传返回所有；WriteFlow，ReadFlow，Storage，SearchRequests，WriteRequests
-     */
-    @KsYunField(name = "Metrics")
-    private String Metrics;
-
-    /**
-     * 开始时间戳
-     */
-    @KsYunField(name = "From")
-    private String From;
-
-    /**
-     * 结束时间戳
-     */
-    @KsYunField(name = "To")
-    private String To;
-
+    @KsYunField(name = "Action")
+    private String Action;
 
 }

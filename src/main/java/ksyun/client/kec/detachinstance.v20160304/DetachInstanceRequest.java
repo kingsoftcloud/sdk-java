@@ -23,5 +23,4 @@ public class DetachInstanceRequest {
     @KsYunField(name = "ScalingInstanceId")
     private List<String> ScalingInstanceIdList;
 
-
 }

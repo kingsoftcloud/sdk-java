@@ -15,5 +15,4 @@ public class GetTableRestorableTimeRequest {
     @KsYunField(name = "DBInstanceIdentifier")
     private String DBInstanceIdentifier;
 
-
 }

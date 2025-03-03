@@ -21,5 +21,4 @@ public class OverrideDBInstanceRequest {
     @KsYunField(name = "DBBackupIdentifier")
     private String DBBackupIdentifier;
 
-
 }

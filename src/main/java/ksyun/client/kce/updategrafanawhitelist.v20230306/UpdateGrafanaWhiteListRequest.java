@@ -23,5 +23,4 @@ public class UpdateGrafanaWhiteListRequest {
     @KsYunField(name = "WhiteList")
     private List<String> WhiteListList;
 
-
 }

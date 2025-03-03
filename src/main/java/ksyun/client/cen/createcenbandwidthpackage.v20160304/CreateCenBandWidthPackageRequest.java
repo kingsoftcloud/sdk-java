@@ -1,12 +1,7 @@
 package ksyun.client.cen.createcenbandwidthpackage.v20160304;
 
 import common.annotation.KsYunField;
-import lombok.Builder;
 import lombok.Data;
-import lombok.ToString;
-
-import java.util.List;
-import java.util.Arrays;
 
 /**
  * @Classname CreateCenBandWidthPackageRequest
@@ -23,26 +18,26 @@ public class CreateCenBandWidthPackageRequest {
     /**
      * 带宽包的名称
      */
-    @KsYunField(name = "Name")
-    private String Name;
+    @KsYunField(name = "CenBandWidthPackageName")
+    private String CenBandWidthPackageName;
 
     /**
-     * 地域组A的ID
+     * 本端区域ID
      */
-    @KsYunField(name = "RegionAGroupId")
-    private String RegionAGroupId;
+    @KsYunField(name = "LocalAreaId")
+    private String LocalAreaId;
 
     /**
-     * 地域组B的ID
+     * 远端区域ID
      */
-    @KsYunField(name = "RegionBGroupId")
-    private String RegionBGroupId;
+    @KsYunField(name = "RemoteAreaId")
+    private String RemoteAreaId;
 
     /**
      * 带宽值
      */
-    @KsYunField(name = "BandWidth")
-    private Integer BandWidth;
+    @KsYunField(name = "PackageBandWidth")
+    private Integer PackageBandWidth;
 
     /**
      * 项目的ID
@@ -51,16 +46,15 @@ public class CreateCenBandWidthPackageRequest {
     private String ProjectId;
 
     /**
-     * 计费类型 (Monthly|Peak|Daily|Hourly|PrepaidByTime|PostpaidByTime|TrafficMonthly)
+     * 计费类型 (Monthly|Daily)
      */
     @KsYunField(name = "ChargeType")
     private String ChargeType;
 
     /**
-     * 购买时长，计费类型为包年包月时不可缺省。
+     * 购买时长，计费类型为包年包月Monthly时不可缺省。
      */
     @KsYunField(name = "PurchaseTime")
     private Integer PurchaseTime;
-
 
 }

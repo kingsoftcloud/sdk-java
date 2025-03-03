@@ -27,5 +27,4 @@ public class DeleteWebhookTriggerRequest {
     @KsYunField(name = "TriggerId")
     private String TriggerId;
 
-
 }

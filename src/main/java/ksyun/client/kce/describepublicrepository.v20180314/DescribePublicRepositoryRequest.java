@@ -47,5 +47,4 @@ public class DescribePublicRepositoryRequest {
         private List<String> ValueList;
     }
 
-
 }

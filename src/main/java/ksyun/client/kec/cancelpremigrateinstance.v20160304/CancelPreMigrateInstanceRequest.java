@@ -15,5 +15,4 @@ public class CancelPreMigrateInstanceRequest {
     @KsYunField(name = "InstanceId")
     private String InstanceId;
 
-
 }

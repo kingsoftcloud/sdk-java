@@ -1,12 +1,9 @@
 package ksyun.client.cen.describecens.v20160304;
 
 import common.annotation.KsYunField;
-import lombok.Builder;
 import lombok.Data;
-import lombok.ToString;
 
 import java.util.List;
-import java.util.Arrays;
 
 /**
  * @Classname DescribeCensRequest
@@ -31,6 +28,5 @@ public class DescribeCensRequest {
      */
     @KsYunField(name = "NextToken")
     private String NextToken;
-
 
 }

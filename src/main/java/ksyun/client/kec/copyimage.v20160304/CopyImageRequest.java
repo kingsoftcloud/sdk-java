@@ -32,5 +32,4 @@ public class CopyImageRequest {
     @KsYunField(name = "DestinationImageName")
     private String DestinationImageName;
 
-
 }

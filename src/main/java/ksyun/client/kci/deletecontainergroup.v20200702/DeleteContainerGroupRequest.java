@@ -15,5 +15,4 @@ public class DeleteContainerGroupRequest {
     @KsYunField(name = "ContainerGroupId")
     private String ContainerGroupId;
 
-
 }

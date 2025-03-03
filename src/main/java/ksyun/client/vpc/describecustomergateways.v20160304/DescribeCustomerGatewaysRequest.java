@@ -29,5 +29,4 @@ public class DescribeCustomerGatewaysRequest {
     @KsYunField(name = "NextToken")
     private String NextToken;
 
-
 }

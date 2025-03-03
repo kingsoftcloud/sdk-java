@@ -181,5 +181,4 @@ public class ReinstallEpcRequest {
     @KsYunField(name = "ContainerAgent")
     private String ContainerAgent;
 
-
 }

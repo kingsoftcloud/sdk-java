@@ -23,5 +23,4 @@ public class DescribeVpnTunnelIpsecStatusRequest {
     @KsYunField(name = "VpnTunnelId")
     private List<String> VpnTunnelIdList;
 
-
 }

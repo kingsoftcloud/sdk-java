@@ -47,5 +47,4 @@ public class DescribeComponentParamsRequest {
         private String ParamVersion;
     }
 
-
 }

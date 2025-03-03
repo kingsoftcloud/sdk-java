@@ -53,5 +53,4 @@ public class RolescreateRequest {
     @KsYunField(name = "usb")
     private Integer Usb;
 
-
 }

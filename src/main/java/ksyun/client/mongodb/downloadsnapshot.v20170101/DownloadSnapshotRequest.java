@@ -15,5 +15,10 @@ public class DownloadSnapshotRequest {
     @KsYunField(name = "SnapshotId")
     private String SnapshotId;
 
+    /**
+     * 实例Id。
+     */
+    @KsYunField(name = "InstanceId")
+    private String InstanceId;
 
 }

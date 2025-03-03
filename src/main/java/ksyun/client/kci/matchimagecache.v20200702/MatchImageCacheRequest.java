@@ -21,5 +21,4 @@ public class MatchImageCacheRequest {
     @KsYunField(name = "Image")
     private List<String> ImageList;
 
-
 }

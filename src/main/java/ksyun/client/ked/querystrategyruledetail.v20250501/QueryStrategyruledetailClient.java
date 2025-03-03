@@ -26,7 +26,7 @@ public class QueryStrategyruledetailClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public QueryStrategyruledetailClient(Credential credential) {

@@ -26,7 +26,7 @@ public class ModifyInstanceAccountInfoClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ModifyInstanceAccountInfoClient(Credential credential) {

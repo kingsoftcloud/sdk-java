@@ -27,7 +27,7 @@ public class AssumeRoleRequest {
     /**
      * 过期时间。单位：秒。
      * <p>
-     * 过期时间最小值为900秒，最大值为要扮演角色的MaxSessionDuration时间。默认值为3600秒。
+     * 过期时间最小值为900秒，最大值为86400秒，默认值为3600秒。
      */
     @KsYunField(name = "DurationSeconds")
     private String DurationSeconds;
@@ -53,6 +53,5 @@ public class AssumeRoleRequest {
      */
     @KsYunField(name = "Policy")
     private String Policy;
-
 
 }

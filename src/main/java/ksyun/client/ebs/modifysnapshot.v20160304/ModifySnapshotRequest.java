@@ -27,5 +27,4 @@ public class ModifySnapshotRequest {
     @KsYunField(name = "SnapshotDesc")
     private String SnapshotDesc;
 
-
 }

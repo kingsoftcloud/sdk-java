@@ -15,5 +15,4 @@ public class UsersdeleteRequest {
     @KsYunField(name = "id")
     private Integer Id;
 
-
 }

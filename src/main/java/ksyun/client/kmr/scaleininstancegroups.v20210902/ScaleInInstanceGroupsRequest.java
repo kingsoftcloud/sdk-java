@@ -48,5 +48,4 @@ public class ScaleInInstanceGroupsRequest {
         private List<Object> InstancesList;
     }
 
-
 }

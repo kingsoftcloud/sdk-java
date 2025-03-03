@@ -39,5 +39,4 @@ public class CreateKeyRequest {
     @KsYunField(name = "ChargeType")
     private String ChargeType;
 
-
 }

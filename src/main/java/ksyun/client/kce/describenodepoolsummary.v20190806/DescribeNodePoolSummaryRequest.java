@@ -1,12 +1,7 @@
 package ksyun.client.kce.describenodepoolsummary.v20190806;
 
 import common.annotation.KsYunField;
-import lombok.Builder;
 import lombok.Data;
-import lombok.ToString;
-
-import java.util.List;
-import java.util.Arrays;
 
 /**
  * @Classname DescribeNodePoolSummaryRequest
@@ -19,6 +14,5 @@ public class DescribeNodePoolSummaryRequest {
      */
     @KsYunField(name = "ClusterId")
     private String ClusterId;
-
 
 }

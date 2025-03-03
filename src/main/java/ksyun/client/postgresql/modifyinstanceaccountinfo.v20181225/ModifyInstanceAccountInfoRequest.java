@@ -18,20 +18,19 @@ public class ModifyInstanceAccountInfoRequest {
     /**
      * 实例名称
      */
-    @KsYunField(name = "InstanceAccountName")
-    private String InstanceAccountName;
+    @KsYunField(name = "AccountName")
+    private String AccountName;
 
     /**
      * 实例密码
      */
-    @KsYunField(name = "InstanceAccountPassword")
-    private String InstanceAccountPassword;
+    @KsYunField(name = "AccountPassword")
+    private String AccountPassword;
 
     /**
      * 数据库账户描述
      */
-    @KsYunField(name = "InstanceAccountDescription")
-    private String InstanceAccountDescription;
-
+    @KsYunField(name = "AccountDescription")
+    private String AccountDescription;
 
 }

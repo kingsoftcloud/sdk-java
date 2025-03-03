@@ -16,5 +16,4 @@ public class RecoveryVolumeRequest {
     @KsYunField(name = "VolumeId")
     private String VolumeId;
 
-
 }

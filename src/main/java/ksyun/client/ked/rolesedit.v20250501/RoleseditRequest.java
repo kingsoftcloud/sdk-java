@@ -59,5 +59,4 @@ public class RoleseditRequest {
     @KsYunField(name = "usb")
     private Integer Usb;
 
-
 }

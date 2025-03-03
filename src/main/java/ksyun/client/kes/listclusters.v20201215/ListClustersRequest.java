@@ -19,5 +19,4 @@ public class ListClustersRequest {
     @KsYunField(name = "Marker")
     private String Marker;
 
-
 }

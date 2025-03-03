@@ -21,5 +21,4 @@ public class ModifyAddressRequest {
     @KsYunField(name = "BandWidth")
     private Integer BandWidth;
 
-
 }

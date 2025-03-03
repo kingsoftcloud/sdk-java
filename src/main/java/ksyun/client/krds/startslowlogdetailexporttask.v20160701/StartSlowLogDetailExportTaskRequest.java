@@ -33,5 +33,4 @@ public class StartSlowLogDetailExportTaskRequest {
     @KsYunField(name = "AccessSqlStatement")
     private String AccessSqlStatement;
 
-
 }

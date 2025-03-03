@@ -18,13 +18,13 @@ public class SetProxyIpRequest {
     private List<String> InstanceIdsList;
 
     /**
-     * 省份
+     * 省份：湖北 湖南 江西 山东 江苏 安徽 浙江 福建 上海 广东 广西 海南 云南 贵州 西藏 重庆 宁夏 新疆 青海 陕西 甘肃 北京 天津 河北 山西 内蒙古 辽宁 吉林 黑龙江 四川
      */
     @KsYunField(name = "province")
     private String Province;
 
     /**
-     * 运营商
+     * 运营商：电信、联通、移动
      */
     @KsYunField(name = "isp")
     private String Isp;
@@ -34,6 +34,5 @@ public class SetProxyIpRequest {
      */
     @KsYunField(name = "city")
     private String City;
-
 
 }

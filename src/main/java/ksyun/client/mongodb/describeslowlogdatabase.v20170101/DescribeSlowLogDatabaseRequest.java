@@ -39,5 +39,4 @@ public class DescribeSlowLogDatabaseRequest {
     @KsYunField(name = "EndTime")
     private String EndTime;
 
-
 }

@@ -15,5 +15,4 @@ public class DeleteImageCacheRequest {
     @KsYunField(name = "ImageCacheId")
     private String ImageCacheId;
 
-
 }

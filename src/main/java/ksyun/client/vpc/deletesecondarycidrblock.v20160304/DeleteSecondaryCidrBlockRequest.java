@@ -21,5 +21,4 @@ public class DeleteSecondaryCidrBlockRequest {
     @KsYunField(name = "SecondaryCidrId")
     private String SecondaryCidrId;
 
-
 }

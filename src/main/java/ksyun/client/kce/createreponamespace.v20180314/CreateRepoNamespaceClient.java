@@ -26,7 +26,7 @@ public class CreateRepoNamespaceClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CreateRepoNamespaceClient(Credential credential) {

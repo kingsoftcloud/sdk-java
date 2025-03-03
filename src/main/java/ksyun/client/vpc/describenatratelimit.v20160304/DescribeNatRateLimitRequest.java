@@ -39,5 +39,4 @@ public class DescribeNatRateLimitRequest {
         private List<String> ValueList;
     }
 
-
 }

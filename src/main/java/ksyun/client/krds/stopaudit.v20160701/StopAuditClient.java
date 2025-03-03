@@ -26,7 +26,7 @@ public class StopAuditClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public StopAuditClient(Credential credential) {

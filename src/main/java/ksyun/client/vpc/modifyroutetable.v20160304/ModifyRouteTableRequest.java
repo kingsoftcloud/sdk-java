@@ -27,5 +27,4 @@ public class ModifyRouteTableRequest {
     @KsYunField(name = "Description")
     private String Description;
 
-
 }

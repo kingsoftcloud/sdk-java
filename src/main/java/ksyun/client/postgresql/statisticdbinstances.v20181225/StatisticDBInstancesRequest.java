@@ -27,5 +27,4 @@ public class StatisticDBInstancesRequest {
     @KsYunField(name = "Keyword")
     private String Keyword;
 
-
 }

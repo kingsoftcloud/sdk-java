@@ -26,7 +26,7 @@ public class AttachDirectConnectGatewayClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public AttachDirectConnectGatewayClient(Credential credential) {

@@ -17,5 +17,4 @@ public class DeleteLocalVolumeSnapshotRequest {
     @KsYunField(name = "LocalVolumeSnapshotId")
     private List<String> LocalVolumeSnapshotIdList;
 
-
 }

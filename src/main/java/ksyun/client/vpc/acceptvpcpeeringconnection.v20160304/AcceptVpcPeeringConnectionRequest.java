@@ -15,5 +15,4 @@ public class AcceptVpcPeeringConnectionRequest {
     @KsYunField(name = "VpcPeeringConnectionId")
     private String VpcPeeringConnectionId;
 
-
 }

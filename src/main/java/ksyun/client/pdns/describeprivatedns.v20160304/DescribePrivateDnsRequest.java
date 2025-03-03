@@ -21,5 +21,4 @@ public class DescribePrivateDnsRequest {
     @KsYunField(name = "Version")
     private String Version;
 
-
 }

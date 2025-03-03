@@ -21,5 +21,4 @@ public class ModifyVpnTunnelRequest {
     @KsYunField(name = "VpnTunnelName")
     private String VpnTunnelName;
 
-
 }

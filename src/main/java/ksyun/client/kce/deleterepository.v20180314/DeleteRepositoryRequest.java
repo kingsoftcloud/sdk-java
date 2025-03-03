@@ -15,5 +15,4 @@ public class DeleteRepositoryRequest {
     @KsYunField(name = "RepoName")
     private String RepoName;
 
-
 }

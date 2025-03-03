@@ -22,16 +22,9 @@ public class ModifyZoneRecordRequest {
     private String RecordId;
 
     /**
-     * 记录值
-     */
-    @KsYunField(name = "RecordValue")
-    private String RecordValue;
-
-    /**
      * 记录ttl
      */
     @KsYunField(name = "RecordTtl")
     private Integer RecordTtl;
-
 
 }

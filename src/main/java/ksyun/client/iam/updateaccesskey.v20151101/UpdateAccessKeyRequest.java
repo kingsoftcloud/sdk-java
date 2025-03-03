@@ -27,5 +27,4 @@ public class UpdateAccessKeyRequest {
     @KsYunField(name = "Status")
     private String Status;
 
-
 }

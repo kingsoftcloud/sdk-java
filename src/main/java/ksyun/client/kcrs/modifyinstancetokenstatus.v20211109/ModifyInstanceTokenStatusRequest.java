@@ -27,5 +27,4 @@ public class ModifyInstanceTokenStatusRequest {
     @KsYunField(name = "Enable")
     private String Enable;
 
-
 }

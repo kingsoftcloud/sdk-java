@@ -36,5 +36,4 @@ public class DeleteMonitorCollectionConfigRequest {
     @KsYunField(name = "Type")
     private String Type;
 
-
 }

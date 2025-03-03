@@ -45,5 +45,4 @@ public class AssociateAddressRequest {
     @KsYunField(name = "PrivateIpAddress")
     private String PrivateIpAddress;
 
-
 }

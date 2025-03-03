@@ -21,5 +21,4 @@ public class ModifyNodePoolScaleUpPolicyRequest {
     @KsYunField(name = "ScaleUpPolicy")
     private String ScaleUpPolicy;
 
-
 }

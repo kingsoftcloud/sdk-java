@@ -33,5 +33,4 @@ public class ModifyInstanceAccountInfoRequest {
     @KsYunField(name = "InstanceAccountDescription")
     private String InstanceAccountDescription;
 
-
 }

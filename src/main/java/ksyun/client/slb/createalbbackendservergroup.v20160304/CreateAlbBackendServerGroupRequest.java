@@ -39,5 +39,4 @@ public class CreateAlbBackendServerGroupRequest {
     @KsYunField(name = "Protocol")
     private String Protocol;
 
-
 }

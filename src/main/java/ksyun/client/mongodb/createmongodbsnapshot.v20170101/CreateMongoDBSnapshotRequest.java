@@ -27,5 +27,4 @@ public class CreateMongoDBSnapshotRequest {
     @KsYunField(name = "BackupMode")
     private String BackupMode;
 
-
 }

@@ -21,5 +21,4 @@ public class DeleteBigKeysAnalyseResultRequest {
     @KsYunField(name = "TaskId")
     private String TaskId;
 
-
 }

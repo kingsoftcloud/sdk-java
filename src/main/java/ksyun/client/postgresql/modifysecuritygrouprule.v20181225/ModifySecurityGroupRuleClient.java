@@ -26,7 +26,7 @@ public class ModifySecurityGroupRuleClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ModifySecurityGroupRuleClient(Credential credential) {

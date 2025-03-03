@@ -26,7 +26,7 @@ public class OverrideDBInstanceClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public OverrideDBInstanceClient(Credential credential) {

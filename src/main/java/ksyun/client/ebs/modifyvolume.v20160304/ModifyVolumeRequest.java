@@ -35,5 +35,4 @@ public class ModifyVolumeRequest {
     @KsYunField(name = "DeleteWithInstance")
     private String DeleteWithInstance;
 
-
 }

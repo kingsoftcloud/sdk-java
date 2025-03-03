@@ -15,5 +15,4 @@ public class DeletePdnsZoneRequest {
     @KsYunField(name = "ZoneId")
     private String ZoneId;
 
-
 }

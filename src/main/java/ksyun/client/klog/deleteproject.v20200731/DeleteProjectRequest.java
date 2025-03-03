@@ -10,10 +10,9 @@ import lombok.Data;
 @Data
 public class DeleteProjectRequest {
     /**
-     * 工程名称
+     * Action
      */
-    @KsYunField(name = "ProjectName")
-    private String ProjectName;
-
+    @KsYunField(name = "Action")
+    private String Action;
 
 }

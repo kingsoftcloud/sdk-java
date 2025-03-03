@@ -13,5 +13,4 @@ public class GetPolicyRequest {
     @KsYunField(name = "PolicyKrn")
     private String PolicyKrn;
 
-
 }

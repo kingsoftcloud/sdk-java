@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname DeleteInstanceDatabaseActionClient
- * @Description DeleteInstanceDatabaseAction
+ * @Description 库表-删除实例数据库
  */
 @Slf4j
 public class DeleteInstanceDatabaseActionClient extends BaseClient {
@@ -26,7 +26,7 @@ public class DeleteInstanceDatabaseActionClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DeleteInstanceDatabaseActionClient(Credential credential) {

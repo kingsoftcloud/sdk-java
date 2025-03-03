@@ -35,5 +35,4 @@ public class ProtectedFromScaleDownRequest {
     @KsYunField(name = "ProtectedFromScaleDown")
     private Boolean ProtectedFromScaleDown;
 
-
 }

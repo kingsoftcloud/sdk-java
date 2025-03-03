@@ -15,5 +15,4 @@ public class DeleteBackendServerGroupRequest {
     @KsYunField(name = "BackendServerGroupId")
     private String BackendServerGroupId;
 
-
 }

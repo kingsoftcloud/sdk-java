@@ -27,5 +27,4 @@ public class DisassociateBandWidthShareRequest {
     @KsYunField(name = "BandWidth")
     private Integer BandWidth;
 
-
 }

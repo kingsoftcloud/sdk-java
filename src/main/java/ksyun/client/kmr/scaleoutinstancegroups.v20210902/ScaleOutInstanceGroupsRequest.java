@@ -139,5 +139,4 @@ public class ScaleOutInstanceGroupsRequest {
         private Integer InstanceGroupIndex;
     }
 
-
 }

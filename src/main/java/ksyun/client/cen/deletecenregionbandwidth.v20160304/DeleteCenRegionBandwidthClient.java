@@ -26,7 +26,7 @@ public class DeleteCenRegionBandwidthClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DeleteCenRegionBandwidthClient(Credential credential) {

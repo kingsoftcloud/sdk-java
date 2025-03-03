@@ -26,7 +26,7 @@ public class ModifyKeyStateClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ModifyKeyStateClient(Credential credential) {

@@ -45,5 +45,4 @@ public class GetUvDataRequest {
     @KsYunField(name = "ResultType")
     private String ResultType;
 
-
 }

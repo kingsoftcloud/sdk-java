@@ -21,5 +21,4 @@ public class ValidateAttachInstanceRequest {
     @KsYunField(name = "InstanceId")
     private String InstanceId;
 
-
 }

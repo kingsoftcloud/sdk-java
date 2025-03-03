@@ -71,5 +71,4 @@ public class RestoreDBInstanceFromDBBackupRequest {
     @KsYunField(name = "SubnetId")
     private String SubnetId;
 
-
 }

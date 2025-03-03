@@ -36,5 +36,4 @@ public class ListPoliciesRequest {
     @KsYunField(name = "Scope")
     private String Scope;
 
-
 }

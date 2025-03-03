@@ -10,16 +10,9 @@ import lombok.Data;
 @Data
 public class GetDashboardNamesByIdsRequest {
     /**
-     * 工程名称
+     * Action
      */
-    @KsYunField(name = "ProjectName")
-    private String ProjectName;
-
-    /**
-     * 仪表盘id列表
-     */
-    @KsYunField(name = "DashboardIds")
-    private String DashboardIds;
-
+    @KsYunField(name = "Action")
+    private String Action;
 
 }

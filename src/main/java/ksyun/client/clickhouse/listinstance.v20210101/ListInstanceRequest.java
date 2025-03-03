@@ -54,5 +54,4 @@ public class ListInstanceRequest {
     @KsYunField(name = "Limit")
     private Integer Limit;
 
-
 }

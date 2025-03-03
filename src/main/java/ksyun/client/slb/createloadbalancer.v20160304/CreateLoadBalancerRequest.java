@@ -69,5 +69,4 @@ public class CreateLoadBalancerRequest {
     @KsYunField(name = "ProjectId")
     private String ProjectId;
 
-
 }

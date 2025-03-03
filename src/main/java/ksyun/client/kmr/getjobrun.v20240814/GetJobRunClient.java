@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname GetJobRunClient
- * @Description 获取作业详情
+ * @Description 获取Spark作业详情
  */
 @Slf4j
 public class GetJobRunClient extends BaseClient {
@@ -26,7 +26,7 @@ public class GetJobRunClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public GetJobRunClient(Credential credential) {

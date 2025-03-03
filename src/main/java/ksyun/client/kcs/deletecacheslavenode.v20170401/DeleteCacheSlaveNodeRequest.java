@@ -27,5 +27,4 @@ public class DeleteCacheSlaveNodeRequest {
     @KsYunField(name = "NodeId")
     private String NodeId;
 
-
 }

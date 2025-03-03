@@ -26,7 +26,7 @@ public class ListEntitiesForPolicyClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ListEntitiesForPolicyClient(Credential credential) {

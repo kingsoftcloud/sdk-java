@@ -21,5 +21,4 @@ public class DeleteCacheParameterGroupRequest {
     @KsYunField(name = "CacheParameterGroupId")
     private String CacheParameterGroupId;
 
-
 }

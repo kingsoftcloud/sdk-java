@@ -47,5 +47,4 @@ public class DescribeEpcDeviceAttributesRequest {
         private List<String> ValueList;
     }
 
-
 }

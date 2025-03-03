@@ -35,5 +35,4 @@ public class InstanceMigrateRequest {
     @KsYunField(name = "DataDisk")
     private List<String> DataDiskList;
 
-
 }

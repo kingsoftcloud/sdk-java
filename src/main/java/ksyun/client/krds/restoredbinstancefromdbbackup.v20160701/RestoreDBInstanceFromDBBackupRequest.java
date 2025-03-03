@@ -57,5 +57,11 @@ public class RestoreDBInstanceFromDBBackupRequest {
     @KsYunField(name = "Port")
     private Integer Port;
 
+    /**
+     * 计费方式：
+     * YEAR_MONTH(包年包月),DAY(按量付费-按日月结),HourlyInstantSettlement(按量付费-按小时结)
+     */
+    @KsYunField(name = "BillType")
+    private String BillType;
 
 }

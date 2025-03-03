@@ -125,6 +125,19 @@ public class CreateContainerGroupRequest {
      */
     @KsYunField(name = "ImageCacheId")
     private String ImageCacheId;
+
+    /**
+     * 容器实例高级属性设置，主要用于控制容器实例底层KVM的启动配置
+     */
+    @KsYunField(name = "AdvanceSettings")
+
+    private AdvanceSettingsDto AdvanceSettingsList;
+    /**
+     * 容器实例底层云服务器DNS配置
+     */
+    @KsYunField(name = "MachineDnsConfig")
+
+    private MachineDnsConfigDto MachineDnsConfigList;
     /**
      * 容器实例底层云主机host配置，如使用场景：当有自建镜像仓库时，可通过此参数配置host，通过域名拉取vpc下自建仓库镜像
      */
@@ -146,6 +159,10 @@ public class CreateContainerGroupRequest {
     /****创建无集群模式实例时该字段必填***/
     @KsYunField(name = "Container")
     private List<ContainerDto> ContainerList;
+    /****创建无集群模式实例时该字段必填**pod dns配置*/
+    @KsYunField(name = "DnsConfig")
+
+    private DnsConfigDto DnsConfigList;
     /****创建无集群模式实例时该字段必填**pod host配置*/
     @KsYunField(name = "HostAliase")
     private List<HostAliaseDto> HostAliaseList;
@@ -160,6 +177,10 @@ public class CreateContainerGroupRequest {
      */
     @KsYunField(name = "Label")
     private List<LabelDto> LabelList;
+    /****创建集群模式容器实例时该字段才生效**KubeProxy配置*/
+    @KsYunField(name = "KubeProxy")
+
+    private KubeProxyDto KubeProxyList;
     /****创建集群模式容器实例该字段才生效**pod日志是否采集到klog，默认false，若开启，则按照kce集群的配置的采集规则将日志输出到klog。*/
     @KsYunField(name = "KlogEnabled")
     private Boolean KlogEnabled;
@@ -173,6 +194,55 @@ public class CreateContainerGroupRequest {
      计算规格时，优先以Limit值进行计算，Limit值为空，再以Request值累加计算。*/
     @KsYunField(name = "ContainerSpec")
     private List<ContainerSpecDto> ContainerSpecList;
+
+    @Data
+    @ToString
+    public static class AdvanceSettingsDto {
+        /**
+         * 容器实例底层云主机启动镜像，该镜像必须是容器实例研发研发提供的镜像，否则无法启动容器实例
+         */
+        @KsYunField(name = "ImageId")
+        private String ImageId;
+        /**
+         * 本地数据盘，基本已经弃用，仅少量机型支持本地数据盘
+         */
+        @KsYunField(name = "DataDiskGb")
+        private Integer DataDiskGb;
+        /**
+         * 系统盘配置，有特殊系统盘要求，可填写，系统盘配置会决定可采用的机型
+         */
+        @KsYunField(name = "SystemDisk")
+        private SystemDiskDto SystemDiskList;
+
+        @Data
+        @ToString
+        public static class SystemDiskDto {
+            /**
+             * 支持以下几种类型- Local_SSD 本地SSD- SSD3.0 云盘SSD3.0- EHDD 高效云盘- ESSD_SYSTEM_PL0 极速盘- ESSD_SYSTEM_PL1 极速盘- ESSD_SYSTEM_PL2 极速盘请谨慎指定系统盘类型，系统盘类型需要机型的支持
+             */
+            @KsYunField(name = "Type")
+            private String Type;
+            /**
+             * 系统盘大小范围，当填写了Type，不填写Size时，盘大小默认为最小值Local_SSD 20~100SSD 20~500EHDD 20~500ESSD_SYSTEM_PL0 50~500ESSD_SYSTEM_PL1 50~500ESSD_SYSTEM_PL2 461~500
+             */
+            @KsYunField(name = "Size")
+            private Integer Size;
+        }
+    }
+
+    @Data
+    @ToString
+    public static class MachineDnsConfigDto {
+        /***/
+        @KsYunField(name = "NameServer")
+        private List<String> NameServerList;
+        /***/
+        @KsYunField(name = "Search")
+        private List<String> SearchList;
+        /***/
+        @KsYunField(name = "Option")
+        private List<Object> OptionList;
+    }
 
     @Data
     @ToString
@@ -223,6 +293,124 @@ public class CreateContainerGroupRequest {
          */
         @KsYunField(name = "Name")
         private String Name;
+        /**
+         * 当Volume.Type=NFSVolume，该配置必须填写
+         */
+        @KsYunField(name = "NFSVolume")
+        private NFSVolumeDto NFSVolumeList;
+        /**
+         * 当Volume.Type=HostPathVolume时，该配置必填
+         */
+        @KsYunField(name = "HostPathVolume")
+        private HostPathVolumeDto HostPathVolumeList;
+        /**
+         * 当Volume.Type=EBSVolume时，该配置必填
+         */
+        @KsYunField(name = "EBSVolume")
+        private EBSVolumeDto EBSVolumeList;
+        /**
+         * 当Volume.Type=ConfigFileVolume时，该配置必填
+         */
+        @KsYunField(name = "ConfigFileVolume")
+        private ConfigFileVolumeDto ConfigFileVolumeList;
+
+        @Data
+        @ToString
+        public static class NFSVolumeDto {
+            /**
+             * 当Volume.Type=NFSVolume，Server必填
+             */
+            @KsYunField(name = "Server")
+            private String Server;
+            /**
+             * 当Volume.Type=NFSVolume，路径必填
+             */
+            @KsYunField(name = "Path")
+            private String Path;
+            /***/
+            @KsYunField(name = "ReadOnly")
+            private Boolean ReadOnly;
+        }
+
+        @Data
+        @ToString
+        public static class HostPathVolumeDto {
+            /**
+             * 当Volume.Type=HostPathVolume时，路径必填
+             */
+            @KsYunField(name = "Path")
+            private String Path;
+        }
+
+        @Data
+        @ToString
+        public static class EBSVolumeDto {
+            /**
+             * 当Volume.Type=EBSVolume时，文件系统类型必填，取值如下- ext3- ext4- xfs
+             */
+            @KsYunField(name = "FsType")
+            private String FsType;
+            /**
+             * 云盘ID，指定ID，则表示使用已有云盘开实例，其它参数Type、Size、SnapshotId无效
+             */
+            @KsYunField(name = "VolumeId")
+            private String VolumeId;
+            /**
+             * 数据云盘是否随容器实例删除，默认否
+             */
+            @KsYunField(name = "DeleteWithInstance")
+            private Boolean DeleteWithInstance;
+            /**
+             * 当VolumeId为空时，云盘类型必填，ESSD盘只支持六代机KVM- SSD3.0- EHDD- ESSD_PL0- ESSD_PL1- ESSD_PL2
+             */
+            @KsYunField(name = "Type")
+            private String Type;
+            /**
+             * 当VolumeId为空时，数据盘大小必填，大小范围如下(单位GB)- SSD3.0 10~32000- EHDD 10~32000- ESSD_PL0 40~32000- ESSD_PL1 40~32000- ESSD_PL2 461~32000
+             */
+            @KsYunField(name = "Size")
+            private Integer Size;
+            /**
+             * 基于快照开盘，必须普通快照
+             */
+            @KsYunField(name = "SnapshotId")
+            private Integer SnapshotId;
+        }
+
+        @Data
+        @ToString
+        public static class ConfigFileVolumeDto {
+            /**
+             * 配置文件的默认权限，采用四位八进制数表示。
+             * <p>
+             * 例如0644表示权限为-rw-r--r--，0对应-，表示文件类型为普通文件，644对应后续9位字符，表示3组权限，即用户权限为rw-，用户所在组权限为r--，其他用户权限为r--。
+             * <p>
+             * 权限说明如下：
+             * <p>
+             * ---：没有任何权限，八进制值为0。
+             * <p>
+             * --x：只有执行权限，八进制值为1。
+             * <p>
+             * -w-：只有写入权限，八进制值为2。
+             * <p>
+             * -wx：有写入和执行权限，八进制值为3。
+             * <p>
+             * r--：只有读取权限，八进制值为4。
+             * <p>
+             * r-x：有读取和执行权限，八进制值为5。
+             * <p>
+             * rw-：有读取和写入权限，八进制值为6。
+             * <p>
+             * rwx：具有读取、写入和执行权限，八进制值为7。
+             */
+            @KsYunField(name = "DefaultMode")
+            private Integer DefaultMode;
+            /**
+             * 当Volume.Type=ConfigFileVolume时，该配置必填
+             */
+            @KsYunField(name = "ConfigFileToPath")
+            private List<Object> ConfigFileToPathList;
+        }
     }
 
     @Data
@@ -272,6 +460,16 @@ public class CreateContainerGroupRequest {
         @KsYunField(name = "ImagePullPolicy")
         private String ImagePullPolicy;
         /**
+         * 存活探测配置
+         */
+        @KsYunField(name = "LivenessProbe")
+        private LivenessProbeDto LivenessProbeList;
+        /**
+         * 就绪探测配置，各参数说明请参考LivenessProbe
+         */
+        @KsYunField(name = "ReadinessProbe")
+        private ReadinessProbeDto ReadinessProbeList;
+        /**
          * 环境变量
          */
         @KsYunField(name = "EnvironmentVar")
@@ -284,6 +482,176 @@ public class CreateContainerGroupRequest {
          */
         @KsYunField(name = "VolumeMount")
         private List<Object> VolumeMountList;
+
+        @Data
+        @ToString
+        public static class LivenessProbeDto {
+            /**
+             * 初始探测延迟时间
+             */
+            @KsYunField(name = "InitialDelaySeconds")
+            private Integer InitialDelaySeconds;
+            /**
+             * 探测周期时间，默认10
+             */
+            @KsYunField(name = "PeriodSeconds")
+            private Integer PeriodSeconds;
+            /**
+             * 探测超时时间，默认1
+             */
+            @KsYunField(name = "TimeoutSeconds")
+            private Integer TimeoutSeconds;
+            /**
+             * 探测成功次数阀值，固定为1
+             */
+            @KsYunField(name = "SuccessThreshold")
+            private Integer SuccessThreshold;
+            /**
+             * 探测失败次数阀值，默认1
+             */
+            @KsYunField(name = "FailureThreshold")
+            private Integer FailureThreshold;
+            /**
+             * 探测方式HttpGet、TcpSocket、Exec三选一， 发送http get请求探测
+             */
+            @KsYunField(name = "HttpGet")
+            private HttpGetDto HttpGetList;
+            /**
+             * 探测方式HttpGet、TcpSocket、Exec三选一，发送tcp探测
+             */
+            @KsYunField(name = "TcpSocket")
+            private TcpSocketDto TcpSocketList;
+            /**
+             * 探测方式HttpGet、TcpSocket、Exec三选一， 执行命令探测
+             */
+            @KsYunField(name = "Exec")
+            private ExecDto ExecList;
+
+            @Data
+            @ToString
+            public static class HttpGetDto {
+                /**
+                 * 端口
+                 */
+                @KsYunField(name = "Port")
+                private Integer Port;
+                /**
+                 * 请求路径
+                 */
+                @KsYunField(name = "Path")
+                private String Path;
+                /**
+                 * - HTTPS- HTTP
+                 */
+                @KsYunField(name = "Scheme")
+                private String Scheme;
+            }
+
+            @Data
+            @ToString
+            public static class TcpSocketDto {
+                /**
+                 * tcp端口
+                 */
+                @KsYunField(name = "Port")
+                private Integer Port;
+            }
+
+            @Data
+            @ToString
+            public static class ExecDto {
+                /**
+                 * 命令行
+                 */
+                @KsYunField(name = "Command")
+                private List<String> CommandList;
+            }
+        }
+
+        @Data
+        @ToString
+        public static class ReadinessProbeDto {
+            /**
+             * 初始探测延时，默认0
+             */
+            @KsYunField(name = "InitialDelaySeconds")
+            private Integer InitialDelaySeconds;
+            /**
+             * 探测周期默认10
+             */
+            @KsYunField(name = "PeriodSeconds")
+            private Integer PeriodSeconds;
+            /**
+             * 超时时间默认1
+             */
+            @KsYunField(name = "TimeoutSeconds")
+            private Integer TimeoutSeconds;
+            /**
+             * 成功次数阀值默认1
+             */
+            @KsYunField(name = "SuccessThreshold")
+            private Integer SuccessThreshold;
+            /**
+             * 失败次数阀值默认3
+             */
+            @KsYunField(name = "FailureThreshold")
+            private Integer FailureThreshold;
+            /***/
+            @KsYunField(name = "HttpGet")
+            private HttpGetDto HttpGetList;
+            /***/
+            @KsYunField(name = "Exec")
+            private ExecDto ExecList;
+            /***/
+            @KsYunField(name = "TcpSocket")
+            private TcpSocketDto TcpSocketList;
+
+            @Data
+            @ToString
+            public static class HttpGetDto {
+                /***/
+                @KsYunField(name = "Port")
+                private Integer Port;
+                /***/
+                @KsYunField(name = "Path")
+                private String Path;
+                /**
+                 * - HTTP- HTTPS
+                 */
+                @KsYunField(name = "Scheme")
+                private String Scheme;
+            }
+
+            @Data
+            @ToString
+            public static class ExecDto {
+                /***/
+                @KsYunField(name = "Command")
+                private List<String> CommandList;
+            }
+
+            @Data
+            @ToString
+            public static class TcpSocketDto {
+                /***/
+                @KsYunField(name = "Port")
+                private Integer Port;
+            }
+        }
+    }
+
+    @Data
+    @ToString
+    public static class DnsConfigDto {
+        /***/
+        @KsYunField(name = "NameServer")
+        private List<String> NameServerList;
+        /***/
+        @KsYunField(name = "Search")
+        private List<String> SearchList;
+        /***/
+        @KsYunField(name = "Option")
+        private List<Object> OptionList;
     }
 
     @Data
@@ -310,6 +678,16 @@ public class CreateContainerGroupRequest {
          */
         @KsYunField(name = "Value")
         private String Value;
+    }
+
+    @Data
+    @ToString
+    public static class KubeProxyDto {
+        /**
+         * 是否启用kubeProxy，默认不启用，启用kubeProxy后，该pod具备访问集群内ClusterIP类型服务的能力
+         */
+        @KsYunField(name = "Enabled")
+        private Boolean Enabled;
     }
 
     @Data
@@ -378,6 +756,5 @@ public class CreateContainerGroupRequest {
         @KsYunField(name = "LimitMem")
         private Double LimitMem;
     }
-
 
 }

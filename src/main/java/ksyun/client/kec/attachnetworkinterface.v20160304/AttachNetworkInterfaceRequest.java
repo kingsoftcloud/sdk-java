@@ -31,15 +31,11 @@ public class AttachNetworkInterfaceRequest {
      * 安全组id
      */
     @KsYunField(name = "SecurityGroupId")
-    private String SecurityGroupId;
+    private List<String> SecurityGroupIdList;
 
     /***/
     @KsYunField(name = "PrivateIpAddress")
     private String PrivateIpAddress;
-
-    /***/
-    @KsYunField(name = "SecurityGroupIds", type = 2)
-    private List<String> SecurityGroupIdsList;
 
     /**
      * 指定子网下的ipv6地址
@@ -50,6 +46,5 @@ public class AttachNetworkInterfaceRequest {
     /***/
     @KsYunField(name = "MacAddress")
     private String MacAddress;
-
 
 }

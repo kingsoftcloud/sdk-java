@@ -21,5 +21,4 @@ public class AssociateRouteTableRequest {
     @KsYunField(name = "RouteTableId")
     private String RouteTableId;
 
-
 }

@@ -27,5 +27,4 @@ public class CreateRoleRequest {
     @KsYunField(name = "Description")
     private String Description;
 
-
 }

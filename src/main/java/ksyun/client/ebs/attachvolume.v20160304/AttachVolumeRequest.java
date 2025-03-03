@@ -29,5 +29,4 @@ public class AttachVolumeRequest {
     @KsYunField(name = "DeleteWithInstance")
     private String DeleteWithInstance;
 
-
 }

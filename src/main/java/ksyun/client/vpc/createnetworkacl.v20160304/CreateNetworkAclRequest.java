@@ -27,5 +27,4 @@ public class CreateNetworkAclRequest {
     @KsYunField(name = "Description")
     private String Description;
 
-
 }

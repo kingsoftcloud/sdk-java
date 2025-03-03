@@ -27,5 +27,4 @@ public class CreateForwardConfRequest {
     @KsYunField(name = "ServicePort")
     private Integer ServicePort;
 
-
 }

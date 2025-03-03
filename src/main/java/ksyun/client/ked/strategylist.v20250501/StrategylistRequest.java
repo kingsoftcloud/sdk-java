@@ -27,5 +27,4 @@ public class StrategylistRequest {
     @KsYunField(name = "name")
     private String Name;
 
-
 }

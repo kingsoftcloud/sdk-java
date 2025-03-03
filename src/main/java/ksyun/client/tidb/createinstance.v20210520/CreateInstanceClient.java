@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname CreateInstanceClient
- * @Description CreateInstance
+ * @Description 实例-创建实例
  */
 @Slf4j
 public class CreateInstanceClient extends BaseClient {
@@ -26,7 +26,7 @@ public class CreateInstanceClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CreateInstanceClient(Credential credential) {

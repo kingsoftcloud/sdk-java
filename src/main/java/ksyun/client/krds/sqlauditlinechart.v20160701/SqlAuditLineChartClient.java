@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname SqlAuditLineChartClient
- * @Description 某时间段全量SQL折线图查询接口
+ * @Description 某时段全量SQL折线图
  */
 @Slf4j
 public class SqlAuditLineChartClient extends BaseClient {
@@ -26,7 +26,7 @@ public class SqlAuditLineChartClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public SqlAuditLineChartClient(Credential credential) {

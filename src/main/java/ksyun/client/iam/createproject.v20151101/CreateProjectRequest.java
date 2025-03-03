@@ -21,5 +21,4 @@ public class CreateProjectRequest {
     @KsYunField(name = "ProjectDesc")
     private String ProjectDesc;
 
-
 }

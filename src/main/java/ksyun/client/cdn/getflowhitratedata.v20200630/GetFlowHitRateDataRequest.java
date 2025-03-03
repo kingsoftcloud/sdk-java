@@ -45,5 +45,4 @@ public class GetFlowHitRateDataRequest {
     @KsYunField(name = "ResultType")
     private String ResultType;
 
-
 }

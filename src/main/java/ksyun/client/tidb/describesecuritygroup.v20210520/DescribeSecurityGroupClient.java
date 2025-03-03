@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname DescribeSecurityGroupClient
- * @Description DescribeSecurityGroup
+ * @Description 安全-查询安全组详情
  */
 @Slf4j
 public class DescribeSecurityGroupClient extends BaseClient {
@@ -26,7 +26,7 @@ public class DescribeSecurityGroupClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeSecurityGroupClient(Credential credential) {

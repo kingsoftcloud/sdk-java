@@ -15,5 +15,4 @@ public class DescribeMongoDBSnapshotRequest {
     @KsYunField(name = "InstanceId")
     private String InstanceId;
 
-
 }

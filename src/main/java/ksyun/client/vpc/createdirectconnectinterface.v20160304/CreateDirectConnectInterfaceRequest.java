@@ -93,5 +93,22 @@ public class CreateDirectConnectInterfaceRequest {
     @KsYunField(name = "BgpClientToken")
     private String BgpClientToken;
 
+    /**
+     * 是否开启Ipv6
+     */
+    @KsYunField(name = "EnableIpv6")
+    private Boolean EnableIpv6;
+
+    /**
+     * 客户侧ipv6互联IP
+     */
+    @KsYunField(name = "CustomerIpv6PeerIp")
+    private String CustomerIpv6PeerIp;
+
+    /**
+     * 金山云侧ipv6互联IP
+     */
+    @KsYunField(name = "LocalIpv6PeerIp")
+    private String LocalIpv6PeerIp;
 
 }

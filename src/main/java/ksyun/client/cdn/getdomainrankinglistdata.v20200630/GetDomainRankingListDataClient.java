@@ -26,7 +26,7 @@ public class GetDomainRankingListDataClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public GetDomainRankingListDataClient(Credential credential) {

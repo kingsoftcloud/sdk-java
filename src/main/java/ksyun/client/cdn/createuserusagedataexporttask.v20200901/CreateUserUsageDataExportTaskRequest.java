@@ -39,5 +39,4 @@ public class CreateUserUsageDataExportTaskRequest {
     @KsYunField(name = "Language")
     private String Language;
 
-
 }

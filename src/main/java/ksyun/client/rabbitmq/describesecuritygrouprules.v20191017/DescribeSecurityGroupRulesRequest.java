@@ -15,5 +15,4 @@ public class DescribeSecurityGroupRulesRequest {
     @KsYunField(name = "InstanceId")
     private String InstanceId;
 
-
 }

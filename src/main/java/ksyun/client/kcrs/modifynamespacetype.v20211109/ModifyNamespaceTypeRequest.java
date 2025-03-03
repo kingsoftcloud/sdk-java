@@ -27,5 +27,4 @@ public class ModifyNamespaceTypeRequest {
     @KsYunField(name = "Public")
     private String Public;
 
-
 }

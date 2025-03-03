@@ -15,5 +15,4 @@ public class DeleteRecordRequest {
     @KsYunField(name = "Action")
     private String Action;
 
-
 }

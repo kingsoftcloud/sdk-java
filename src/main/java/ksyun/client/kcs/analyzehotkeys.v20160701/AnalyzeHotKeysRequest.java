@@ -21,5 +21,4 @@ public class AnalyzeHotKeysRequest {
     @KsYunField(name = "CacheId")
     private String CacheId;
 
-
 }

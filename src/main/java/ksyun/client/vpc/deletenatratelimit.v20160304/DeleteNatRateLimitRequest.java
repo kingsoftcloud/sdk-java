@@ -15,5 +15,4 @@ public class DeleteNatRateLimitRequest {
     @KsYunField(name = "NatRateLimitId")
     private String NatRateLimitId;
 
-
 }

@@ -45,5 +45,4 @@ public class DescribeZoneRecordRequest {
         private List<String> ValueList;
     }
 
-
 }

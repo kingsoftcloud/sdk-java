@@ -39,5 +39,4 @@ public class GetRetentionPolicyLogDetailRequest {
     @KsYunField(name = "PageSize")
     private Integer PageSize;
 
-
 }

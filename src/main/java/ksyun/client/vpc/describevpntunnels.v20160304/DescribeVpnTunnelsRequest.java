@@ -49,5 +49,4 @@ public class DescribeVpnTunnelsRequest {
         private List<String> ValueList;
     }
 
-
 }

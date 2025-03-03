@@ -15,5 +15,4 @@ public class RegisterRepositoryAccountRequest {
     @KsYunField(name = "Password")
     private String Password;
 
-
 }

@@ -28,5 +28,4 @@ public class SetRenewalRequest {
     @KsYunField(name = "RenewDuration")
     private Integer RenewDuration;
 
-
 }

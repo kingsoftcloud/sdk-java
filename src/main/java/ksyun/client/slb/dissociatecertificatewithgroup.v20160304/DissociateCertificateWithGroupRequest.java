@@ -21,5 +21,4 @@ public class DissociateCertificateWithGroupRequest {
     @KsYunField(name = "CertificateId")
     private String CertificateId;
 
-
 }

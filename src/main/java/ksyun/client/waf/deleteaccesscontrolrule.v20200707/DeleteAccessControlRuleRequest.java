@@ -15,5 +15,4 @@ public class DeleteAccessControlRuleRequest {
     @KsYunField(name = "RuleId")
     private String RuleId;
 
-
 }

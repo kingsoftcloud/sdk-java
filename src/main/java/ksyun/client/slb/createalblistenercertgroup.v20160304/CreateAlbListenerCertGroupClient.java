@@ -26,7 +26,7 @@ public class CreateAlbListenerCertGroupClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CreateAlbListenerCertGroupClient(Credential credential) {

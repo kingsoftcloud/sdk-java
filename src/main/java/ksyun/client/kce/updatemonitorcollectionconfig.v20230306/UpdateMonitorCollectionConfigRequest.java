@@ -42,5 +42,4 @@ public class UpdateMonitorCollectionConfigRequest {
     @KsYunField(name = "ConfigYaml")
     private String ConfigYaml;
 
-
 }

@@ -15,5 +15,4 @@ public class DescribeClusterInfoRequest {
     @KsYunField(name = "ClusterId")
     private String ClusterId;
 
-
 }

@@ -27,5 +27,4 @@ public class CreatePrivateDnsRequest {
     @KsYunField(name = "ProjectId")
     private String ProjectId;
 
-
 }

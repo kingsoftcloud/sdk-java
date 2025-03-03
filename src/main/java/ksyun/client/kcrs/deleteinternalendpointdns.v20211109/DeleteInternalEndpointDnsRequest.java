@@ -33,5 +33,4 @@ public class DeleteInternalEndpointDnsRequest {
     @KsYunField(name = "InternalEndpointDns")
     private String InternalEndpointDns;
 
-
 }

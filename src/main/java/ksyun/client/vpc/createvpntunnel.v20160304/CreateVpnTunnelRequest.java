@@ -141,5 +141,4 @@ public class CreateVpnTunnelRequest {
     @KsYunField(name = "IkeVersion")
     private String IkeVersion;
 
-
 }

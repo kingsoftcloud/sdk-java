@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname CreateEpcClient
- * @Description CreateEpc
+ * @Description 创建云物理主机
  */
 @Slf4j
 public class CreateEpcClient extends BaseClient {
@@ -26,7 +26,7 @@ public class CreateEpcClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CreateEpcClient(Credential credential) {

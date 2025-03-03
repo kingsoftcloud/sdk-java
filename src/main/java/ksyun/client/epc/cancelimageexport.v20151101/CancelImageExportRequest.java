@@ -13,5 +13,4 @@ public class CancelImageExportRequest {
     @KsYunField(name = "ImageId")
     private String ImageId;
 
-
 }

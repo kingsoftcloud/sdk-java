@@ -45,5 +45,4 @@ public class GetTopIpDataRequest {
     @KsYunField(name = "SortBy")
     private String SortBy;
 
-
 }

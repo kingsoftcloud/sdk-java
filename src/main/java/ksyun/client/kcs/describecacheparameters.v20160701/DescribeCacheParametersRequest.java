@@ -21,5 +21,4 @@ public class DescribeCacheParametersRequest {
     @KsYunField(name = "CacheId")
     private String CacheId;
 
-
 }

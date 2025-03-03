@@ -26,7 +26,7 @@ public class CreatePdnsZoneClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CreatePdnsZoneClient(Credential credential) {

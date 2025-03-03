@@ -69,5 +69,4 @@ public class CloneInstanceRequest {
     @KsYunField(name = "InstanceId")
     private String InstanceId;
 
-
 }

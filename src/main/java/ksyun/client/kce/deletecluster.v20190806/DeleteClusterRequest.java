@@ -24,5 +24,4 @@ public class DeleteClusterRequest {
     @KsYunField(name = "InstanceDeleteMode")
     private String InstanceDeleteMode;
 
-
 }

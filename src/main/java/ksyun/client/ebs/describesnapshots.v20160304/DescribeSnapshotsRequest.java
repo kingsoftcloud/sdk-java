@@ -51,5 +51,4 @@ public class DescribeSnapshotsRequest {
     @KsYunField(name = "PageSize")
     private Integer PageSize;
 
-
 }

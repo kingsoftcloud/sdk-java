@@ -39,5 +39,4 @@ public class BindZoneVpcRequest {
         private List<String> VpcIdList;
     }
 
-
 }

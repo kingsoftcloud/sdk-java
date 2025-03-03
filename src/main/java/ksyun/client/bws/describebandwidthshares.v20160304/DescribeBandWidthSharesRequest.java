@@ -30,6 +30,21 @@ public class DescribeBandWidthSharesRequest {
     @KsYunField(name = "Filter")
     private List<FilterDto> FilterList;
     /**
+     * 是否在返回值中包含资源标签信息
+     */
+    @KsYunField(name = "IsContainTag")
+    private Boolean IsContainTag;
+    /**
+     * 多个标签的键
+     */
+    @KsYunField(name = "TagKey")
+    private List<String> TagKeyList;
+    /**
+     * 多个标签的键
+     */
+    @KsYunField(name = "TagKV")
+    private List<TagKVDto> TagKVList;
+    /**
      * 单次调用可返回的最大条目数量
      */
     @KsYunField(name = "MaxResults")
@@ -54,5 +69,19 @@ public class DescribeBandWidthSharesRequest {
         private List<String> ValueList;
     }
 
+    @Data
+    @ToString
+    public static class TagKVDto {
+        /**
+         * 标签键
+         */
+        @KsYunField(name = "Name")
+        private String Name;
+        /**
+         * 标签值
+         */
+        @KsYunField(name = "Value")
+        private String Value;
+    }
 
 }

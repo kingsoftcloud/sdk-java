@@ -15,5 +15,4 @@ public class StopEpcRequest {
     @KsYunField(name = "HostId")
     private String HostId;
 
-
 }

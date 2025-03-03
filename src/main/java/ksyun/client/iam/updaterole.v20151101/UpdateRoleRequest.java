@@ -21,5 +21,4 @@ public class UpdateRoleRequest {
     @KsYunField(name = "NewDescription")
     private String NewDescription;
 
-
 }

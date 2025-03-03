@@ -43,5 +43,4 @@ public class ModifyInstanceAttributeRequest {
     @KsYunField(name = "RestartMode")
     private String RestartMode;
 
-
 }

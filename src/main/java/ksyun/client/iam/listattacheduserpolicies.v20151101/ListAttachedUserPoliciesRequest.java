@@ -29,5 +29,4 @@ public class ListAttachedUserPoliciesRequest {
     @KsYunField(name = "MaxItems")
     private String MaxItems;
 
-
 }

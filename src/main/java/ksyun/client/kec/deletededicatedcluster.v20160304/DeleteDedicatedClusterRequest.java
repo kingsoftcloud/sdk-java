@@ -1,12 +1,9 @@
 package ksyun.client.kec.deletededicatedcluster.v20160304;
 
 import common.annotation.KsYunField;
-import lombok.Builder;
 import lombok.Data;
-import lombok.ToString;
 
 import java.util.List;
-import java.util.Arrays;
 
 /**
  * @Classname DeleteDedicatedClusterRequest
@@ -19,6 +16,5 @@ public class DeleteDedicatedClusterRequest {
      */
     @KsYunField(name = "DedicatedClusterId")
     private List<String> DedicatedClusterIdList;
-
 
 }

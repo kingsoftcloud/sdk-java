@@ -39,5 +39,4 @@ public class ModifyInstanceTokenInformationRequest {
     @KsYunField(name = "Desc")
     private String Desc;
 
-
 }

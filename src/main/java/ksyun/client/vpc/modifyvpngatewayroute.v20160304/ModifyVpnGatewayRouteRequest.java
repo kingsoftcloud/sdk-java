@@ -10,16 +10,15 @@ import lombok.Data;
 @Data
 public class ModifyVpnGatewayRouteRequest {
     /**
-     * VPN网关的ID
+     * VPN网关路由的ID
      */
-    @KsYunField(name = "VpnGatewayId")
-    private String VpnGatewayId;
+    @KsYunField(name = "VpnGatewayRouteId")
+    private String VpnGatewayRouteId;
 
     /**
      * 描述
      */
     @KsYunField(name = "Description")
     private String Description;
-
 
 }

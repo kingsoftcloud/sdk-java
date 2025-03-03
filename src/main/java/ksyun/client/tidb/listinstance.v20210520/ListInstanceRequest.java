@@ -45,5 +45,10 @@ public class ListInstanceRequest {
     @KsYunField(name = "OrderBy")
     private String OrderBy;
 
+    /**
+     * 商品类型，默认：577
+     */
+    @KsYunField(name = "ProductType")
+    private Integer ProductType;
 
 }

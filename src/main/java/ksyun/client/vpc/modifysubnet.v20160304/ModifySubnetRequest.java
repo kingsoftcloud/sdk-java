@@ -33,5 +33,4 @@ public class ModifySubnetRequest {
     @KsYunField(name = "Dns2")
     private String Dns2;
 
-
 }

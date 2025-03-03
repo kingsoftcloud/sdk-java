@@ -17,5 +17,4 @@ public class StrategyrulebatchEditRequest {
     @KsYunField(name = "securityGroupId", type = 2)
     private List<String> SecurityGroupIdList;
 
-
 }

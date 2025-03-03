@@ -44,5 +44,4 @@ public class DropMetricsRequest {
     @KsYunField(name = "MetricsName")
     private List<String> MetricsNameList;
 
-
 }

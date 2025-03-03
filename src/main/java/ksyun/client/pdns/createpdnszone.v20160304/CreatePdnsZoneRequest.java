@@ -34,5 +34,4 @@ public class CreatePdnsZoneRequest {
     @KsYunField(name = "ChargeType")
     private String ChargeType;
 
-
 }

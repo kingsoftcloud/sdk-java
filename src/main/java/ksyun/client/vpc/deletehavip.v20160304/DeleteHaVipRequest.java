@@ -15,5 +15,4 @@ public class DeleteHaVipRequest {
     @KsYunField(name = "HaVipId")
     private String HaVipId;
 
-
 }

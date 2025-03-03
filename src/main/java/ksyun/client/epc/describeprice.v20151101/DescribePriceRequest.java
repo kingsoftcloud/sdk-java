@@ -40,5 +40,4 @@ public class DescribePriceRequest {
     @KsYunField(name = "Amount")
     private Integer Amount;
 
-
 }

@@ -1,12 +1,9 @@
 package ksyun.client.ebs.describevolumes.v20160304;
 
 import common.annotation.KsYunField;
-import lombok.Builder;
 import lombok.Data;
-import lombok.ToString;
 
 import java.util.List;
-import java.util.Arrays;
 
 /**
  * @Classname DescribeVolumesRequest
@@ -58,5 +55,34 @@ public class DescribeVolumesRequest {
     @KsYunField(name = "MaxResults")
     private Integer MaxResults;
 
+    /**
+     * 云盘的标签键。N的取值范围：1~20。查询到该标签下的资源数量不能超过1000个；使用多个标签过滤资源，查询到同时绑定了多个标签的资源数量不能超过1000个
+     */
+    @KsYunField(name = "Tag.N.Key")
+    private String TagNKey;
+
+    /**
+     * 云盘的标签值。N的取值范围：1~20。查询到该标签下的资源数量不能超过1000个；使用多个标签过滤资源，查询到同时绑定了多个标签的资源数量不能超过1000个【需注意：不支持仅输入标签值进行查询，当不输入标签键时，标签值填写框置灰】
+     */
+    @KsYunField(name = "Tag.N.Value")
+    private String TagNValue;
+
+    /**
+     * 云硬盘创建日期，格式：yyyy-MM-dd，可查出该日期之前（含当日）创建的硬盘信息
+     */
+    @KsYunField(name = "VolumeCreateEndDate")
+    private String VolumeCreateEndDate;
+
+    /**
+     * 云硬盘创建日期，格式：yyyy-MM-dd，可查出该日期（含当日）之后创建硬盘信息
+     */
+    @KsYunField(name = "VolumeCreateStartDate")
+    private String VolumeCreateStartDate;
+
+    /**
+     * 创建云盘时使用的快照ID
+     */
+    @KsYunField(name = "SourceSnapshotId")
+    private String SourceSnapshotId;
 
 }

@@ -15,5 +15,10 @@ public class CreateCenRequest {
     @KsYunField(name = "CenName")
     private String CenName;
 
+    /**
+     * 云企业网的描述
+     */
+    @KsYunField(name = "Description")
+    private String Description;
 
 }

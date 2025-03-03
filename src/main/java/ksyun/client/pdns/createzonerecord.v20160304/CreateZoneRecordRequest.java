@@ -39,5 +39,4 @@ public class CreateZoneRecordRequest {
     @KsYunField(name = "RecordValue")
     private String RecordValue;
 
-
 }

@@ -33,5 +33,4 @@ public class PresetRequest {
     @KsYunField(name = "Video")
     private String Video;
 
-
 }

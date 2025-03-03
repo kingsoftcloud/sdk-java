@@ -21,5 +21,4 @@ public class DescribeRetentionRuleRequest {
     @KsYunField(name = "Namespace")
     private String Namespace;
 
-
 }

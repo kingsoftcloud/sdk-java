@@ -26,7 +26,7 @@ public class CreateDBInstanceClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CreateDBInstanceClient(Credential credential) {

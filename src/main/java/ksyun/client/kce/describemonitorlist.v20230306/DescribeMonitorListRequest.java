@@ -41,5 +41,4 @@ public class DescribeMonitorListRequest {
     @KsYunField(name = "MaxResults")
     private Integer MaxResults;
 
-
 }

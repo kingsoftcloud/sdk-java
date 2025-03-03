@@ -44,5 +44,4 @@ public class ModifySecurityGroupRuleRequest {
     @KsYunField(name = "SecurityGroupRule.SecurityGroupRuleCidr")
     private List<String> SecurityGroupRuleSecurityGroupRuleCidrList;
 
-
 }

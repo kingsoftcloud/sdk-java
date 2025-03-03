@@ -15,5 +15,4 @@ public class DescribeImageCacheEventRequest {
     @KsYunField(name = "ImageCacheId")
     private String ImageCacheId;
 
-
 }

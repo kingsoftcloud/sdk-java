@@ -62,5 +62,4 @@ public class DescribeExistedInstancesRequest {
         private List<String> ValueList;
     }
 
-
 }

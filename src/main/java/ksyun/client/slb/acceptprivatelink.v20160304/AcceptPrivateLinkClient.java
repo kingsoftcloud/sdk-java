@@ -26,7 +26,7 @@ public class AcceptPrivateLinkClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public AcceptPrivateLinkClient(Credential credential) {

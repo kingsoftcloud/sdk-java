@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname AllocateDBInstanceEipClient
- * @Description 申请外网访问IP地址
+ * @Description EIP-申请外网访问IP地址
  */
 @Slf4j
 public class AllocateDBInstanceEipClient extends BaseClient {
@@ -26,7 +26,7 @@ public class AllocateDBInstanceEipClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public AllocateDBInstanceEipClient(Credential credential) {

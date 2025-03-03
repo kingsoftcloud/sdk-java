@@ -21,5 +21,4 @@ public class AddNatIpRequest {
     @KsYunField(name = "AddNumber")
     private Integer AddNumber;
 
-
 }

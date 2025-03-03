@@ -47,5 +47,4 @@ public class ListRecycledInstanceRequest {
     @KsYunField(name = "Limit")
     private Integer Limit;
 
-
 }

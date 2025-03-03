@@ -35,5 +35,4 @@ public class DeleteClusterInstancesFromNodePoolRequest {
     @KsYunField(name = "InstanceDeleteMode")
     private Boolean InstanceDeleteMode;
 
-
 }

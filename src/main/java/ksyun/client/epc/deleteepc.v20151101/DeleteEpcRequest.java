@@ -15,5 +15,4 @@ public class DeleteEpcRequest {
     @KsYunField(name = "HostId")
     private String HostId;
 
-
 }

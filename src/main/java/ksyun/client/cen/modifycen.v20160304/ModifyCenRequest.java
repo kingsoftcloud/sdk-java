@@ -1,12 +1,7 @@
 package ksyun.client.cen.modifycen.v20160304;
 
 import common.annotation.KsYunField;
-import lombok.Builder;
 import lombok.Data;
-import lombok.ToString;
-
-import java.util.List;
-import java.util.Arrays;
 
 /**
  * @Classname ModifyCenRequest
@@ -26,5 +21,10 @@ public class ModifyCenRequest {
     @KsYunField(name = "CenName")
     private String CenName;
 
+    /**
+     * 云企业网的描述
+     */
+    @KsYunField(name = "Description")
+    private String Description;
 
 }

@@ -30,5 +30,4 @@ public class StopInstancesRequest {
     @KsYunField(name = "StoppedMode")
     private String StoppedMode;
 
-
 }

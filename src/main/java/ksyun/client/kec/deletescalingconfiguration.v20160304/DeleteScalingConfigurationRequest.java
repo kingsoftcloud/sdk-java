@@ -17,5 +17,4 @@ public class DeleteScalingConfigurationRequest {
     @KsYunField(name = "ScalingConfigurationId")
     private List<String> ScalingConfigurationIdList;
 
-
 }

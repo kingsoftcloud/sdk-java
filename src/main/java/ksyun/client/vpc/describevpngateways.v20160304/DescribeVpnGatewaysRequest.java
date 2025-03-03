@@ -54,5 +54,4 @@ public class DescribeVpnGatewaysRequest {
         private List<String> ValueList;
     }
 
-
 }

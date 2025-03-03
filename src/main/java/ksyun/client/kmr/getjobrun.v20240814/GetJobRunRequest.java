@@ -21,5 +21,4 @@ public class GetJobRunRequest {
     @KsYunField(name = "JobRunId")
     private String JobRunId;
 
-
 }

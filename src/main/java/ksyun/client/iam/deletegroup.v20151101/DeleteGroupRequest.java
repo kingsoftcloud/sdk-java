@@ -15,5 +15,4 @@ public class DeleteGroupRequest {
     @KsYunField(name = "GroupName")
     private String GroupName;
 
-
 }

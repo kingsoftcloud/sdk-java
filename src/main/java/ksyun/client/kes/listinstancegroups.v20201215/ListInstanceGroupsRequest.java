@@ -1,7 +1,12 @@
 package ksyun.client.kes.listinstancegroups.v20201215;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname ListInstanceGroupsRequest
@@ -14,6 +19,5 @@ public class ListInstanceGroupsRequest {
      */
     @KsYunField(name = "ClusterId")
     private String ClusterId;
-
 
 }

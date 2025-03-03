@@ -23,5 +23,4 @@ public class AttachInstancesIamRoleRequest {
     @KsYunField(name = "IamRoleName")
     private String IamRoleName;
 
-
 }

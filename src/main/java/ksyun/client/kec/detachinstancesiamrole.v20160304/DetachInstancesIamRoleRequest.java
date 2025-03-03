@@ -17,5 +17,4 @@ public class DetachInstancesIamRoleRequest {
     @KsYunField(name = "InstanceId")
     private List<String> InstanceIdList;
 
-
 }

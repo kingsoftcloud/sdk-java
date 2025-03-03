@@ -39,5 +39,4 @@ public class CreateVpnGatewayRouteRequest {
     @KsYunField(name = "Description")
     private String Description;
 
-
 }

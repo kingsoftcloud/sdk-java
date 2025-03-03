@@ -29,5 +29,4 @@ public class CreateSecurityGroupRuleRequest {
     @KsYunField(name = "SecurityGroupId")
     private String SecurityGroupId;
 
-
 }

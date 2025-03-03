@@ -59,5 +59,4 @@ public class DescribeClusterInstanceRequest {
         private List<String> ValueList;
     }
 
-
 }

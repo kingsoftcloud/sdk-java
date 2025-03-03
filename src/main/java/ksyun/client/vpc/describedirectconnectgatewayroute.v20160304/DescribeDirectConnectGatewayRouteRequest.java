@@ -50,5 +50,4 @@ public class DescribeDirectConnectGatewayRouteRequest {
         private List<String> ValueList;
     }
 
-
 }

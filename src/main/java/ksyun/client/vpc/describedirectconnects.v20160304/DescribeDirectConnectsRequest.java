@@ -29,5 +29,4 @@ public class DescribeDirectConnectsRequest {
     @KsYunField(name = "NextToken")
     private String NextToken;
 
-
 }

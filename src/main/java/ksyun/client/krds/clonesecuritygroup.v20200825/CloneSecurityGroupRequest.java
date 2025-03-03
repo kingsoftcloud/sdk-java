@@ -27,5 +27,4 @@ public class CloneSecurityGroupRequest {
     @KsYunField(name = "SecurityGroupDescription")
     private String SecurityGroupDescription;
 
-
 }

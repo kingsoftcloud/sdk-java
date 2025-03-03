@@ -27,5 +27,4 @@ public class CreateSecurityGroupRequest {
     @KsYunField(name = "Description")
     private String Description;
 
-
 }

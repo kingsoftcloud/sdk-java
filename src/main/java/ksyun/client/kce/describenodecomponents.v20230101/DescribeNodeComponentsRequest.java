@@ -47,5 +47,4 @@ public class DescribeNodeComponentsRequest {
     @KsYunField(name = "MaxResults")
     private Integer MaxResults;
 
-
 }

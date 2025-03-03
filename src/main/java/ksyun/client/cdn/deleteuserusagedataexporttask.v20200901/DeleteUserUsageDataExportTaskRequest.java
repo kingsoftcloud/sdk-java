@@ -15,5 +15,4 @@ public class DeleteUserUsageDataExportTaskRequest {
     @KsYunField(name = "TaskID")
     private String TaskID;
 
-
 }

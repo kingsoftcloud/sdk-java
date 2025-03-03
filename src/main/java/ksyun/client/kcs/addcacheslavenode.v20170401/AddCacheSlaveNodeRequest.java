@@ -27,5 +27,4 @@ public class AddCacheSlaveNodeRequest {
     @KsYunField(name = "SlaveVip")
     private String SlaveVip;
 
-
 }

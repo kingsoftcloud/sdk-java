@@ -21,5 +21,4 @@ public class CloseDirectAccessToClusterRequest {
     @KsYunField(name = "CacheId")
     private String CacheId;
 
-
 }

@@ -15,5 +15,4 @@ public class DeleteRoleRequest {
     @KsYunField(name = "RoleName")
     private String RoleName;
 
-
 }

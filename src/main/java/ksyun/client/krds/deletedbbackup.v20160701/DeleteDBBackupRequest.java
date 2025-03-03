@@ -15,5 +15,4 @@ public class DeleteDBBackupRequest {
     @KsYunField(name = "DBBackupIdentifier")
     private String DBBackupIdentifier;
 
-
 }

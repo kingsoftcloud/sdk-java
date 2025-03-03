@@ -21,5 +21,4 @@ public class DeleteMongoDBSnapshotRequest {
     @KsYunField(name = "SnapshotId")
     private String SnapshotId;
 
-
 }

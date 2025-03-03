@@ -29,5 +29,4 @@ public class AllocateSecurityGroupRequest {
     @KsYunField(name = "SecurityGroupId")
     private List<String> SecurityGroupIdList;
 
-
 }

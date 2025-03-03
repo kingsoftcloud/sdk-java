@@ -29,5 +29,16 @@ public class ListCertificatesRequest {
     @KsYunField(name = "Filter")
     private List<String> FilterList;
 
+    /**
+     * 页码
+     */
+    @KsYunField(name = "Page")
+    private Integer Page;
+
+    /**
+     * 默认20
+     */
+    @KsYunField(name = "PageSize")
+    private Integer PageSize;
 
 }

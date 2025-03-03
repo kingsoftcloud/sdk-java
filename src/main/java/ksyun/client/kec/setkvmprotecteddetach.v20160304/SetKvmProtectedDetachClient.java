@@ -26,7 +26,7 @@ public class SetKvmProtectedDetachClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public SetKvmProtectedDetachClient(Credential credential) {

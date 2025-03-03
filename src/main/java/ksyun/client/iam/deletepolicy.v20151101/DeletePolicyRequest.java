@@ -16,5 +16,4 @@ public class DeletePolicyRequest {
     @KsYunField(name = "PolicyKrn")
     private String PolicyKrn;
 
-
 }

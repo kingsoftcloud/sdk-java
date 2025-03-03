@@ -21,5 +21,4 @@ public class DescribeClusterForRestoreRequest {
     @KsYunField(name = "ResetTimePoint")
     private String ResetTimePoint;
 
-
 }

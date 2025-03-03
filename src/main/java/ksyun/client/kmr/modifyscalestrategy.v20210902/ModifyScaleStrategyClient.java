@@ -26,7 +26,7 @@ public class ModifyScaleStrategyClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ModifyScaleStrategyClient(Credential credential) {

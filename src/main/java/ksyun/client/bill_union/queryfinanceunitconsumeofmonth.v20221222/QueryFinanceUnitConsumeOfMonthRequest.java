@@ -27,5 +27,4 @@ public class QueryFinanceUnitConsumeOfMonthRequest {
     @KsYunField(name = "Size")
     private Integer Size;
 
-
 }

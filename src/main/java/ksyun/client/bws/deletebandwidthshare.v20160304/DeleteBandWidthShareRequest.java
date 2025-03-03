@@ -15,5 +15,4 @@ public class DeleteBandWidthShareRequest {
     @KsYunField(name = "BandWidthShareId")
     private String BandWidthShareId;
 
-
 }

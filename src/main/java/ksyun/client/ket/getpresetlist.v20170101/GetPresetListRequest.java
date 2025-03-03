@@ -21,5 +21,4 @@ public class GetPresetListRequest {
     @KsYunField(name = "App")
     private String App;
 
-
 }

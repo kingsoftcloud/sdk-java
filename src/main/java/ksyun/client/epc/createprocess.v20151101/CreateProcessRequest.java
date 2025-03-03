@@ -85,5 +85,4 @@ public class CreateProcessRequest {
     @KsYunField(name = "autoNocCase")
     private Integer AutoNocCase;
 
-
 }

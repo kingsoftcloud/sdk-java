@@ -21,5 +21,4 @@ public class DescribeSnapshotsRequest {
     @KsYunField(name = "CacheId")
     private String CacheId;
 
-
 }

@@ -21,5 +21,4 @@ public class GetScaleAPIServerConfigRequest {
     @KsYunField(name = "InstanceIp")
     private String InstanceIp;
 
-
 }

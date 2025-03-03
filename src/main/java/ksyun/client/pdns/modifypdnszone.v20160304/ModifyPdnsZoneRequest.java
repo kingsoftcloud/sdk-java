@@ -21,5 +21,4 @@ public class ModifyPdnsZoneRequest {
     @KsYunField(name = "ZoneTtl")
     private Integer ZoneTtl;
 
-
 }

@@ -15,5 +15,4 @@ public class PublishDirectConnectRouteRequest {
     @KsYunField(name = "DirectConnectGatewayRouteId")
     private String DirectConnectGatewayRouteId;
 
-
 }

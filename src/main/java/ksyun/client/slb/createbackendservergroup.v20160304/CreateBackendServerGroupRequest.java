@@ -81,5 +81,4 @@ public class CreateBackendServerGroupRequest {
     @KsYunField(name = "Region")
     private String Region;
 
-
 }

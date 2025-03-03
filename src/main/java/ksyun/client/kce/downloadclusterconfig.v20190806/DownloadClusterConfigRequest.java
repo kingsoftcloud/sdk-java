@@ -21,5 +21,4 @@ public class DownloadClusterConfigRequest {
     @KsYunField(name = "IsPublic")
     private Boolean IsPublic;
 
-
 }

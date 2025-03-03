@@ -26,7 +26,7 @@ public class SetvCPUClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public SetvCPUClient(Credential credential) {

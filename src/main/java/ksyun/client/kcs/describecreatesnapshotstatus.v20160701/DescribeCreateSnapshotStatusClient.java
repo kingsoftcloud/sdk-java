@@ -26,7 +26,7 @@ public class DescribeCreateSnapshotStatusClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeCreateSnapshotStatusClient(Credential credential) {

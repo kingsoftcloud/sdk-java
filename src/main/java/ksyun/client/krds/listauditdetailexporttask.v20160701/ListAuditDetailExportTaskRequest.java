@@ -27,5 +27,4 @@ public class ListAuditDetailExportTaskRequest {
     @KsYunField(name = "MaxRecords")
     private String MaxRecords;
 
-
 }

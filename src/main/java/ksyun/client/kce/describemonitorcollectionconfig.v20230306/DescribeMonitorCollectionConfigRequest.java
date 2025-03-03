@@ -36,5 +36,4 @@ public class DescribeMonitorCollectionConfigRequest {
     @KsYunField(name = "Type")
     private String Type;
 
-
 }

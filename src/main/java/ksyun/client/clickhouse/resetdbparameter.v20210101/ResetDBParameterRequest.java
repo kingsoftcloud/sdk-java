@@ -21,5 +21,4 @@ public class ResetDBParameterRequest {
     @KsYunField(name = "ConfigType")
     private String ConfigType;
 
-
 }

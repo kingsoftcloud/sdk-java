@@ -21,5 +21,4 @@ public class DescribeSecurityGroupRequest {
     @KsYunField(name = "SecurityGroupId")
     private String SecurityGroupId;
 
-
 }

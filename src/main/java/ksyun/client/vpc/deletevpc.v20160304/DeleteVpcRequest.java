@@ -15,5 +15,4 @@ public class DeleteVpcRequest {
     @KsYunField(name = "VpcId")
     private String VpcId;
 
-
 }

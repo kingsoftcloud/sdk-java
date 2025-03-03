@@ -23,5 +23,4 @@ public class AddVmIntoDataGuardRequest {
     @KsYunField(name = "InstanceId")
     private List<String> InstanceIdList;
 
-
 }

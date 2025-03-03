@@ -29,5 +29,4 @@ public class ModifyScalingNotificationRequest {
     @KsYunField(name = "NotificationType")
     private List<String> NotificationTypeList;
 
-
 }

@@ -15,5 +15,4 @@ public class CreateRecordDataRequest {
     @KsYunField(name = "Action")
     private String Action;
 
-
 }

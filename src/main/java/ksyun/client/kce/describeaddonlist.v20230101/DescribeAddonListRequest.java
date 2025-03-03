@@ -27,5 +27,4 @@ public class DescribeAddonListRequest {
     @KsYunField(name = "Marker")
     private Integer Marker;
 
-
 }

@@ -26,7 +26,7 @@ public class CreateImageCacheClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CreateImageCacheClient(Credential credential) {

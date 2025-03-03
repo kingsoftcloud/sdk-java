@@ -21,5 +21,4 @@ public class AllocateDBInstanceEipRequest {
     @KsYunField(name = "Port")
     private Integer Port;
 
-
 }

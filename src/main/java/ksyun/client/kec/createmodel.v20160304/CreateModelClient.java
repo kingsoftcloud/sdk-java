@@ -26,7 +26,7 @@ public class CreateModelClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CreateModelClient(Credential credential) {

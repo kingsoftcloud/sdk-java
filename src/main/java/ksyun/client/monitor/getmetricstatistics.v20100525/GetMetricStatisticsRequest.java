@@ -52,5 +52,4 @@ public class GetMetricStatisticsRequest {
     @KsYunField(name = "Period")
     private String Period;
 
-
 }

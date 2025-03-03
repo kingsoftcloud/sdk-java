@@ -45,5 +45,4 @@ public class StartAuditDetailExportTaskRequest {
     @KsYunField(name = "AuditEndTime")
     private String AuditEndTime;
 
-
 }

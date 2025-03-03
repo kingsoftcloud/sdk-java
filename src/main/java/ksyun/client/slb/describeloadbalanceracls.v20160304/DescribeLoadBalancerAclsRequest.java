@@ -29,5 +29,4 @@ public class DescribeLoadBalancerAclsRequest {
     @KsYunField(name = "NextToken")
     private String NextToken;
 
-
 }

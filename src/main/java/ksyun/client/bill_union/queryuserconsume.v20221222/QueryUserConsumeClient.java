@@ -26,7 +26,7 @@ public class QueryUserConsumeClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public QueryUserConsumeClient(Credential credential) {

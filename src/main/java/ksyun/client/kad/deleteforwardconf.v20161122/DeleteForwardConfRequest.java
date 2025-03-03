@@ -15,5 +15,4 @@ public class DeleteForwardConfRequest {
     @KsYunField(name = "ForwardConfId")
     private String ForwardConfId;
 
-
 }

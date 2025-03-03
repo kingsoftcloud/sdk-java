@@ -29,5 +29,4 @@ public class DeleteNodePoolRequest {
     @KsYunField(name = "InstanceDeleteMode")
     private Boolean InstanceDeleteMode;
 
-
 }

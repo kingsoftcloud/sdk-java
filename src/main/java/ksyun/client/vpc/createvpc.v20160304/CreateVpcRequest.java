@@ -27,5 +27,4 @@ public class CreateVpcRequest {
     @KsYunField(name = "ProvidedIpv6CidrBlock")
     private Boolean ProvidedIpv6CidrBlock;
 
-
 }

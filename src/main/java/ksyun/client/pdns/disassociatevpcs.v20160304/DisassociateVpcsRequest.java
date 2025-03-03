@@ -28,5 +28,4 @@ public class DisassociateVpcsRequest {
     @KsYunField(name = "VpcId")
     private String VpcId;
 
-
 }

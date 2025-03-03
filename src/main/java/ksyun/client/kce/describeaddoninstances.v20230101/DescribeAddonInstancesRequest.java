@@ -35,5 +35,4 @@ public class DescribeAddonInstancesRequest {
     @KsYunField(name = "AddonIds", type = 2)
     private List<String> AddonIdsList;
 
-
 }

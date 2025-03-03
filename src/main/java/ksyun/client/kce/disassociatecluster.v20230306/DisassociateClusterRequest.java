@@ -21,5 +21,4 @@ public class DisassociateClusterRequest {
     @KsYunField(name = "ClusterId")
     private String ClusterId;
 
-
 }

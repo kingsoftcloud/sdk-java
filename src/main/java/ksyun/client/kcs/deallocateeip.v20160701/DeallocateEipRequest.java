@@ -27,5 +27,4 @@ public class DeallocateEipRequest {
     @KsYunField(name = "InsType")
     private String InsType;
 
-
 }

@@ -15,5 +15,4 @@ public class RejectPrivateLinkRequest {
     @KsYunField(name = "PrivateLinkId")
     private String PrivateLinkId;
 
-
 }

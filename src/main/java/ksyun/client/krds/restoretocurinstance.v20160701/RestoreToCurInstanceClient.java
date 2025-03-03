@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname RestoreToCurInstanceClient
- * @Description 库表级恢复到当前实例
+ * @Description restore to cur instance
  */
 @Slf4j
 public class RestoreToCurInstanceClient extends BaseClient {
@@ -26,7 +26,7 @@ public class RestoreToCurInstanceClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public RestoreToCurInstanceClient(Credential credential) {

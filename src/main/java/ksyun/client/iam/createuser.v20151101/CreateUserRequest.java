@@ -69,5 +69,4 @@ public class CreateUserRequest {
     @KsYunField(name = "ViewAllProject")
     private Integer ViewAllProject;
 
-
 }

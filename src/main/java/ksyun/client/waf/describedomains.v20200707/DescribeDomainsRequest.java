@@ -13,5 +13,4 @@ public class DescribeDomainsRequest {
     @KsYunField(name = "ResourceRecord")
     private String ResourceRecord;
 
-
 }

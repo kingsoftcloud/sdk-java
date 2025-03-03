@@ -41,5 +41,4 @@ public class BindTagsRequest {
         private Integer TagId;
     }
 
-
 }

@@ -26,7 +26,7 @@ public class ListHistoryPubStreamsErrInfoClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ListHistoryPubStreamsErrInfoClient(Credential credential) {

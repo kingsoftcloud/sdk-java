@@ -16,10 +16,9 @@ public class DeleteInstanceAccountActionRequest {
     private String DBInstanceIdentifier;
 
     /**
-     * 数据库帐号名称		支持批量删除，使用“,”隔开
+     * 数据库账户名称，支持批量删除，使用“,”隔开
      */
     @KsYunField(name = "InstanceAccountName")
     private String InstanceAccountName;
-
 
 }

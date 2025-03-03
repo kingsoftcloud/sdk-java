@@ -33,5 +33,4 @@ public class DescribeAuditHotDurationRequest {
     @KsYunField(name = "EndTime")
     private String EndTime;
 
-
 }

@@ -26,7 +26,7 @@ public class CreateCenRegionBandwidthClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CreateCenRegionBandwidthClient(Credential credential) {

@@ -29,5 +29,4 @@ public class AddClusterInstanceToNodePoolRequest {
     @KsYunField(name = "InstanceIds")
     private List<String> InstanceIdsList;
 
-
 }

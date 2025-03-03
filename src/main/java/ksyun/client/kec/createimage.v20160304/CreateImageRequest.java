@@ -52,5 +52,4 @@ public class CreateImageRequest {
     @KsYunField(name = "InstantAccess")
     private Boolean InstantAccess;
 
-
 }

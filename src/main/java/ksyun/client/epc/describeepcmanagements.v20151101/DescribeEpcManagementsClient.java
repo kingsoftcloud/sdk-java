@@ -26,7 +26,7 @@ public class DescribeEpcManagementsClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeEpcManagementsClient(Credential credential) {

@@ -1,7 +1,12 @@
 package ksyun.client.slb.deletealbrulegroup.v20160304;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname DeleteAlbRuleGroupRequest
@@ -14,6 +19,5 @@ public class DeleteAlbRuleGroupRequest {
      */
     @KsYunField(name = "AlbRuleGroupId")
     private String AlbRuleGroupId;
-
 
 }

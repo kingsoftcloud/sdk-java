@@ -33,5 +33,4 @@ public class GetAreaIspDataRequest {
     @KsYunField(name = "Domains")
     private String Domains;
 
-
 }

@@ -15,5 +15,4 @@ public class DescribeAlarmPolicyRequest {
     @KsYunField(name = "PolicyId")
     private Integer PolicyId;
 
-
 }

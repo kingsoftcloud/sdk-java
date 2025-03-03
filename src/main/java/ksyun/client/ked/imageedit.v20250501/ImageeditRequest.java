@@ -27,5 +27,4 @@ public class ImageeditRequest {
     @KsYunField(name = "imageName")
     private String ImageName;
 
-
 }

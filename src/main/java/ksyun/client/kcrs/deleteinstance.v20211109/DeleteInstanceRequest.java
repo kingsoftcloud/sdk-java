@@ -21,5 +21,4 @@ public class DeleteInstanceRequest {
     @KsYunField(name = "DeleteBucket")
     private Boolean DeleteBucket;
 
-
 }

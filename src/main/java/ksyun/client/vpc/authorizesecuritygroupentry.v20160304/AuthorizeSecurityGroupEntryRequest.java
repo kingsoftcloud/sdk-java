@@ -81,5 +81,4 @@ public class AuthorizeSecurityGroupEntryRequest {
     @KsYunField(name = "Policy")
     private String Policy;
 
-
 }

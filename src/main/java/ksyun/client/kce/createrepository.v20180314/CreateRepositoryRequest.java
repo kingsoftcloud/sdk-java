@@ -21,5 +21,4 @@ public class CreateRepositoryRequest {
     @KsYunField(name = "Description")
     private String Description;
 
-
 }

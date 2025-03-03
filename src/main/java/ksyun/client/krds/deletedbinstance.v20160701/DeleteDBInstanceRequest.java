@@ -15,5 +15,4 @@ public class DeleteDBInstanceRequest {
     @KsYunField(name = "DBInstanceIdentifier")
     private String DBInstanceIdentifier;
 
-
 }

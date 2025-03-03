@@ -15,5 +15,4 @@ public class DescribeCollationsRequest {
     @KsYunField(name = "DBInstanceIdentifier")
     private String DBInstanceIdentifier;
 
-
 }

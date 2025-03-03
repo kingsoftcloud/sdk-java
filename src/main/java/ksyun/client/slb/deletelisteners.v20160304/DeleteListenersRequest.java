@@ -15,5 +15,4 @@ public class DeleteListenersRequest {
     @KsYunField(name = "ListenerId")
     private String ListenerId;
 
-
 }

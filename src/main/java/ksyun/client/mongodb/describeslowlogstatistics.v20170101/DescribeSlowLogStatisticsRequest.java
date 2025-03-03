@@ -51,5 +51,4 @@ public class DescribeSlowLogStatisticsRequest {
     @KsYunField(name = "MaxRecords")
     private Integer MaxRecords;
 
-
 }

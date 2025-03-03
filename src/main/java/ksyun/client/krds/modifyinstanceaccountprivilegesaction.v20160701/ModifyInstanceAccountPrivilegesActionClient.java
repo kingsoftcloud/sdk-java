@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname ModifyInstanceAccountPrivilegesActionClient
- * @Description ModifyInstanceAccountPrivilegesAction
+ * @Description modify instance account privileges action
  */
 @Slf4j
 public class ModifyInstanceAccountPrivilegesActionClient extends BaseClient {
@@ -26,7 +26,7 @@ public class ModifyInstanceAccountPrivilegesActionClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ModifyInstanceAccountPrivilegesActionClient(Credential credential) {

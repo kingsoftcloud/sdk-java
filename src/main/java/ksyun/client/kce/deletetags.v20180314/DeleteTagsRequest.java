@@ -23,5 +23,4 @@ public class DeleteTagsRequest {
     @KsYunField(name = "Tag")
     private List<String> TagList;
 
-
 }

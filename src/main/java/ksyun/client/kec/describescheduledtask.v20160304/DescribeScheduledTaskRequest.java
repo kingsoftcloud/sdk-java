@@ -37,5 +37,4 @@ public class DescribeScheduledTaskRequest {
     @KsYunField(name = "MaxResults")
     private Integer MaxResults;
 
-
 }

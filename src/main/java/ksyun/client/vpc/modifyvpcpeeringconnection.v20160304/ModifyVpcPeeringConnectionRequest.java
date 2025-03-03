@@ -27,5 +27,4 @@ public class ModifyVpcPeeringConnectionRequest {
     @KsYunField(name = "BandWidth")
     private Integer BandWidth;
 
-
 }

@@ -26,7 +26,7 @@ public class DeleteScaleStrategyClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DeleteScaleStrategyClient(Credential credential) {

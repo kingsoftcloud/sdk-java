@@ -45,5 +45,4 @@ public class GetTopUrlDataRequest {
     @KsYunField(name = "SortBy")
     private String SortBy;
 
-
 }

@@ -39,5 +39,4 @@ public class DescribeDBBackupsRequest {
     @KsYunField(name = "MaxRecords")
     private Integer MaxRecords;
 
-
 }

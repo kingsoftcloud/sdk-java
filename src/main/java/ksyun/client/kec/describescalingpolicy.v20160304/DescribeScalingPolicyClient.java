@@ -26,7 +26,7 @@ public class DescribeScalingPolicyClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeScalingPolicyClient(Credential credential) {

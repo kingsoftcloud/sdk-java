@@ -21,5 +21,4 @@ public class AddSecondaryInstanceRequest {
     @KsYunField(name = "NodeNum")
     private String NodeNum;
 
-
 }

@@ -43,5 +43,4 @@ public class PreMigrateInstanceRequest {
     @KsYunField(name = "InstantAccess")
     private Boolean InstantAccess;
 
-
 }

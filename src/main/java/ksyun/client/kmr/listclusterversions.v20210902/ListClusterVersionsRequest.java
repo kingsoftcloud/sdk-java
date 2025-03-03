@@ -20,5 +20,4 @@ public class ListClusterVersionsRequest {
     @KsYunField(name = "DistributionVersion")
     private String DistributionVersion;
 
-
 }

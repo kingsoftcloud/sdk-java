@@ -22,5 +22,4 @@ public class DetachUserPolicyRequest {
     @KsYunField(name = "UserName")
     private String UserName;
 
-
 }

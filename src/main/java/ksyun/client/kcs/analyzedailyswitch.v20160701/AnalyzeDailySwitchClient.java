@@ -26,7 +26,7 @@ public class AnalyzeDailySwitchClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public AnalyzeDailySwitchClient(Credential credential) {

@@ -15,5 +15,4 @@ public class GetRoleRequest {
     @KsYunField(name = "RoleName")
     private String RoleName;
 
-
 }

@@ -15,5 +15,4 @@ public class CreateDataGuardGroupRequest {
     @KsYunField(name = "DataGuardName")
     private String DataGuardName;
 
-
 }

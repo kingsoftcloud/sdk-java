@@ -26,7 +26,7 @@ public class AddAlbRuleClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public AddAlbRuleClient(Credential credential) {

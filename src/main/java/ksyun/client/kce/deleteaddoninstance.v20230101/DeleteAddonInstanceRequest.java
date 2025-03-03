@@ -33,5 +33,4 @@ public class DeleteAddonInstanceRequest {
     @KsYunField(name = "InstanceId")
     private String InstanceId;
 
-
 }

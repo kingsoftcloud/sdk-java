@@ -21,5 +21,4 @@ public class ExportImageRequest {
     @KsYunField(name = "ObjectName")
     private String ObjectName;
 
-
 }

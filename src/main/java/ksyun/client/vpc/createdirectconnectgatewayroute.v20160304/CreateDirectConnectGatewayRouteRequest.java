@@ -45,5 +45,4 @@ public class CreateDirectConnectGatewayRouteRequest {
     @KsYunField(name = "EnableIpv6")
     private Boolean EnableIpv6;
 
-
 }

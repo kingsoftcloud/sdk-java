@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname SlowLogLineChartClient
- * @Description 某时间段慢SQL折线图查询接口
+ * @Description slow log line chart
  */
 @Slf4j
 public class SlowLogLineChartClient extends BaseClient {
@@ -26,7 +26,7 @@ public class SlowLogLineChartClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public SlowLogLineChartClient(Credential credential) {

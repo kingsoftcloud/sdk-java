@@ -21,5 +21,4 @@ public class DescribeCacheReadonlyNodeRequest {
     @KsYunField(name = "AvailableZone")
     private String AvailableZone;
 
-
 }

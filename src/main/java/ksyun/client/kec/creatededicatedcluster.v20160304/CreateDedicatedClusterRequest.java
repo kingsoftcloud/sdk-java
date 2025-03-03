@@ -27,5 +27,4 @@ public class CreateDedicatedClusterRequest {
     @KsYunField(name = "AvailabilityZone")
     private String AvailabilityZone;
 
-
 }

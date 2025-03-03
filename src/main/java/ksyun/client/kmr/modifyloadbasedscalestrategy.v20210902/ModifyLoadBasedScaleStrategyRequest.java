@@ -15,5 +15,4 @@ public class ModifyLoadBasedScaleStrategyRequest {
     @KsYunField(name = "ClusterId")
     private String ClusterId;
 
-
 }

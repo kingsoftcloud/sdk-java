@@ -41,5 +41,4 @@ public class DescribeInstanceRequest {
     @KsYunField(name = "InstanceName")
     private String InstanceName;
 
-
 }

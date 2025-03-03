@@ -27,5 +27,4 @@ public class RunRetentionPolicyRequest {
     @KsYunField(name = "TestRun")
     private Boolean TestRun;
 
-
 }

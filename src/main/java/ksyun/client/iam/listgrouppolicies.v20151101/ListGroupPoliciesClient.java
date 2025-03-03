@@ -26,7 +26,7 @@ public class ListGroupPoliciesClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ListGroupPoliciesClient(Credential credential) {

@@ -45,5 +45,4 @@ public class GetReqHitRateDataRequest {
     @KsYunField(name = "ResultType")
     private String ResultType;
 
-
 }

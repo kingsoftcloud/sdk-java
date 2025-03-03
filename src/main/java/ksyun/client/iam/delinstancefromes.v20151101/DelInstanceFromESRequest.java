@@ -17,5 +17,4 @@ public class DelInstanceFromESRequest {
     @KsYunField(name = "InstanceId")
     private String InstanceId;
 
-
 }

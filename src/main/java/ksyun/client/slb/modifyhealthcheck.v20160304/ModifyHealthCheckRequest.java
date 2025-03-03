@@ -87,5 +87,4 @@ public class ModifyHealthCheckRequest {
     @KsYunField(name = "HealthCheckExp")
     private String HealthCheckExp;
 
-
 }

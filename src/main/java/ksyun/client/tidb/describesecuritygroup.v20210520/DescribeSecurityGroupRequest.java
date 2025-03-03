@@ -15,5 +15,16 @@ public class DescribeSecurityGroupRequest {
     @KsYunField(name = "SecurityGroupId")
     private String SecurityGroupId;
 
+    /**
+     * 规则模糊匹配，CIDR规则 or 描述
+     */
+    @KsYunField(name = "RuleFuzzySearch")
+    private String RuleFuzzySearch;
+
+    /**
+     * 实例模糊匹配：实例名称 or IP
+     */
+    @KsYunField(name = "InstanceFuzzySearch")
+    private String InstanceFuzzySearch;
 
 }

@@ -15,5 +15,4 @@ public class DeleteRuleRequest {
     @KsYunField(name = "RuleId")
     private String RuleId;
 
-
 }

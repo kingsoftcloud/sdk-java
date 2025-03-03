@@ -21,5 +21,4 @@ public class SetAlbStatusRequest {
     @KsYunField(name = "State")
     private String State;
 
-
 }

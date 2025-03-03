@@ -26,7 +26,7 @@ public class DescribeImageSharePermissionClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeImageSharePermissionClient(Credential credential) {

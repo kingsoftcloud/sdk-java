@@ -10,22 +10,9 @@ import lombok.Data;
 @Data
 public class ListDownloadTasksRequest {
     /**
-     * 页码
+     * Action
      */
-    @KsYunField(name = "Page")
-    private String Page;
-
-    /**
-     * 每页大小
-     */
-    @KsYunField(name = "Size")
-    private String Size;
-
-    /**
-     * 工程名称
-     */
-    @KsYunField(name = "ProjectName")
-    private String ProjectName;
-
+    @KsYunField(name = "Action")
+    private String Action;
 
 }

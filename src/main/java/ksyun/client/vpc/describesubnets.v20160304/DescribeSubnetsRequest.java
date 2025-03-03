@@ -54,5 +54,4 @@ public class DescribeSubnetsRequest {
         private List<String> ValueList;
     }
 
-
 }

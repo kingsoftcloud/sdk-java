@@ -26,7 +26,7 @@ public class DescribeCacheReadonlyNodeClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeCacheReadonlyNodeClient(Credential credential) {

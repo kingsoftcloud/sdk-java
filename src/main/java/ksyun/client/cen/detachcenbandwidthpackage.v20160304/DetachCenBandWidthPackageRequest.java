@@ -1,12 +1,7 @@
 package ksyun.client.cen.detachcenbandwidthpackage.v20160304;
 
 import common.annotation.KsYunField;
-import lombok.Builder;
 import lombok.Data;
-import lombok.ToString;
-
-import java.util.List;
-import java.util.Arrays;
 
 /**
  * @Classname DetachCenBandWidthPackageRequest
@@ -25,6 +20,5 @@ public class DetachCenBandWidthPackageRequest {
      */
     @KsYunField(name = "CenId")
     private String CenId;
-
 
 }

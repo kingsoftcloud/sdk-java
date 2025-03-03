@@ -21,5 +21,4 @@ public class DescribeEbsInstancesRequest {
     @KsYunField(name = "VolumeType")
     private String VolumeType;
 
-
 }

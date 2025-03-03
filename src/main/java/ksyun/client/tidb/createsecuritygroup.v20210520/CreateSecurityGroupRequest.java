@@ -16,7 +16,7 @@ public class CreateSecurityGroupRequest {
     private Integer ProductType;
 
     /**
-     * 安全组名称。
+     * 安全组名称。长度[2,64]
      */
     @KsYunField(name = "SecurityGroupName")
     private String SecurityGroupName;
@@ -32,6 +32,5 @@ public class CreateSecurityGroupRequest {
      */
     @KsYunField(name = "Description")
     private String Description;
-
 
 }

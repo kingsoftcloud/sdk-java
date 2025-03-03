@@ -26,7 +26,7 @@ public class AssociateClusterClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public AssociateClusterClient(Credential credential) {

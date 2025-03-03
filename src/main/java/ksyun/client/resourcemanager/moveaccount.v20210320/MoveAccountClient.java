@@ -26,7 +26,7 @@ public class MoveAccountClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public MoveAccountClient(Credential credential) {

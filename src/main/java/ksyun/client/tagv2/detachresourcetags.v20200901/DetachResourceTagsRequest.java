@@ -27,5 +27,4 @@ public class DetachResourceTagsRequest {
     @KsYunField(name = "TagIds")
     private String TagIds;
 
-
 }

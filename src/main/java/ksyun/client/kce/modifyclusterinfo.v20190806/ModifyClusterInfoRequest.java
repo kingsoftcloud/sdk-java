@@ -42,13 +42,14 @@ public class ModifyClusterInfoRequest {
      * 支持对托管集群控制面日志采集配置进行全量更新
      */
     @KsYunField(name = "ControlPlaneLog")
-    private ControlPlaneLogDto ControlPlaneLog;
+
+    private ControlPlaneLogDto ControlPlaneLogList;
 
     @Data
     @ToString
     public static class ControlPlaneLogDto {
         /**
-         * 集群id
+         * 集群ID
          */
         @KsYunField(name = "ClusterId")
         private String ClusterId;
@@ -64,7 +65,7 @@ public class ModifyClusterInfoRequest {
         private String ProjectName;
         /**
          * 控制面日志采集范围，多个组件请使用英文逗号拼接，如apiserver,kcm。
-         * 有效值：[“apiserver”,“kcm”,“scheduler”,“auditing”]
+         * 有效值：["apiserver","kcm","scheduler","auditing"]
          */
         @KsYunField(name = "Items")
         private String Items;

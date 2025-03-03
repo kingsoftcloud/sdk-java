@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname StartSlowLogDetailExportTaskClient
- * @Description StartSlowLogDetailExportTask
+ * @Description start slow log detail export task
  */
 @Slf4j
 public class StartSlowLogDetailExportTaskClient extends BaseClient {
@@ -26,7 +26,7 @@ public class StartSlowLogDetailExportTaskClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public StartSlowLogDetailExportTaskClient(Credential credential) {

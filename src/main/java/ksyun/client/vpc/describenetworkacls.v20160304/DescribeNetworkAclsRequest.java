@@ -48,5 +48,4 @@ public class DescribeNetworkAclsRequest {
         private List<String> ValueList;
     }
 
-
 }

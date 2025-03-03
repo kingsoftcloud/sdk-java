@@ -37,5 +37,4 @@ public class InsertInstanceToESRequest {
     @KsYunField(name = "InstanceName")
     private String InstanceName;
 
-
 }

@@ -21,5 +21,4 @@ public class SetLBDeleteProtectionRequest {
     @KsYunField(name = "DeleteProtection")
     private String DeleteProtection;
 
-
 }

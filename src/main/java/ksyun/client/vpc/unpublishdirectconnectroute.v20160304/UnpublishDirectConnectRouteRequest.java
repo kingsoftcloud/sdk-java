@@ -15,5 +15,4 @@ public class UnpublishDirectConnectRouteRequest {
     @KsYunField(name = "DirectConnectGatewayRouteId")
     private String DirectConnectGatewayRouteId;
 
-
 }

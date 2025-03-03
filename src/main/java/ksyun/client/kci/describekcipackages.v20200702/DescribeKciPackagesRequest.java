@@ -28,5 +28,4 @@ public class DescribeKciPackagesRequest {
     @KsYunField(name = "KciType")
     private String KciType;
 
-
 }

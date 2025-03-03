@@ -21,5 +21,4 @@ public class SetEnableAlbAccessLogRequest {
     @KsYunField(name = "EnabledLog")
     private Boolean EnabledLog;
 
-
 }

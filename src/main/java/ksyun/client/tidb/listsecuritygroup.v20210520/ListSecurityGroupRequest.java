@@ -33,5 +33,4 @@ public class ListSecurityGroupRequest {
     @KsYunField(name = "OrderBy")
     private String OrderBy;
 
-
 }

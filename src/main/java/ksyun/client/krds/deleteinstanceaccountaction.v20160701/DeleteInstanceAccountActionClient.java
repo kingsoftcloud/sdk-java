@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname DeleteInstanceAccountActionClient
- * @Description DeleteInstanceAccountAction
+ * @Description delete instance account action
  */
 @Slf4j
 public class DeleteInstanceAccountActionClient extends BaseClient {
@@ -26,7 +26,7 @@ public class DeleteInstanceAccountActionClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DeleteInstanceAccountActionClient(Credential credential) {

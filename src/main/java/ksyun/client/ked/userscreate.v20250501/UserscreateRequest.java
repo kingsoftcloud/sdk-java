@@ -33,5 +33,4 @@ public class UserscreateRequest {
     @KsYunField(name = "roleId")
     private Integer RoleId;
 
-
 }

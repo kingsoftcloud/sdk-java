@@ -26,7 +26,7 @@ public class DeleteFolderClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DeleteFolderClient(Credential credential) {

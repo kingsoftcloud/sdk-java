@@ -27,5 +27,4 @@ public class ImagecreateRequest {
     @KsYunField(name = "instanceId")
     private String InstanceId;
 
-
 }

@@ -149,6 +149,11 @@ public class ModifyScalingConfigurationRequest {
      */
     @KsYunField(name = "SystemDisk.ResizeType")
     private String SystemDiskResizeType;
+    /**
+     * 是否同步ebs标签
+     */
+    @KsYunField(name = "SyncTag")
+    private Boolean SyncTag;
 
     @Data
     @ToString
@@ -186,6 +191,5 @@ public class ModifyScalingConfigurationRequest {
         @KsYunField(name = "Value")
         private String Value;
     }
-
 
 }

@@ -39,5 +39,4 @@ public class SetTimingSnapshotRequest {
     @KsYunField(name = "Bigkey")
     private Boolean Bigkey;
 
-
 }

@@ -10,16 +10,11 @@ import lombok.Data;
 @Data
 public class CreateKeyRequest {
     /**
-     * 密钥名称
+     * 用户定义的密钥名称
+     * 缺省值：Ksc_key
+     * 格式：2-128个字符，支持中英文数字特殊符号
      */
     @KsYunField(name = "KeyName")
     private String KeyName;
-
-    /**
-     * 描述
-     */
-    @KsYunField(name = "Description")
-    private String Description;
-
 
 }

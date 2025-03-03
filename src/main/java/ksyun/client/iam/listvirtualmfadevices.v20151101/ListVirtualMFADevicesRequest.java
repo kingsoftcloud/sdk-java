@@ -27,5 +27,4 @@ public class ListVirtualMFADevicesRequest {
     @KsYunField(name = "MaxItems")
     private Integer MaxItems;
 
-
 }

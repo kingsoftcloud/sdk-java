@@ -1,7 +1,12 @@
 package ksyun.client.clickhouse.describeenginedefaultparameters.v20210101;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname DescribeEngineDefaultParametersRequest
@@ -20,6 +25,5 @@ public class DescribeEngineDefaultParametersRequest {
      */
     @KsYunField(name = "ConfigType")
     private String ConfigType;
-
 
 }

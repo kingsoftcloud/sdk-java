@@ -21,5 +21,4 @@ public class AttachGroupPolicyRequest {
     @KsYunField(name = "PolicyKrn")
     private String PolicyKrn;
 
-
 }

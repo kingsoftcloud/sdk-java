@@ -23,5 +23,4 @@ public class DeleteInstanceRequest {
     @KsYunField(name = "DeleteDirectly")
     private Boolean DeleteDirectly;
 
-
 }

@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname DescribeLastLogClient
- * @Description DescribeLastLog
+ * @Description describe last log
  */
 @Slf4j
 public class DescribeLastLogClient extends BaseClient {
@@ -26,7 +26,7 @@ public class DescribeLastLogClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeLastLogClient(Credential credential) {

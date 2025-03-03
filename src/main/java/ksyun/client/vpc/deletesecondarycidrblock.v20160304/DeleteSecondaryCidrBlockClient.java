@@ -26,7 +26,7 @@ public class DeleteSecondaryCidrBlockClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DeleteSecondaryCidrBlockClient(Credential credential) {

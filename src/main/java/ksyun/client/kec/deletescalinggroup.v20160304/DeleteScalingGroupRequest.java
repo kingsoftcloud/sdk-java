@@ -15,5 +15,4 @@ public class DeleteScalingGroupRequest {
     @KsYunField(name = "ScalingGroupId")
     private String ScalingGroupId;
 
-
 }

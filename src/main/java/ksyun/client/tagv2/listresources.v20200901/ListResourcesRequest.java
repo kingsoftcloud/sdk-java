@@ -70,5 +70,4 @@ public class ListResourcesRequest {
         private List<String> ValueList;
     }
 
-
 }

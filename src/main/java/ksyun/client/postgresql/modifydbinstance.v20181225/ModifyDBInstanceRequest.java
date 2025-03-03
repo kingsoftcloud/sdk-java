@@ -53,5 +53,4 @@ public class ModifyDBInstanceRequest {
     @KsYunField(name = "SecurityGroupId")
     private String SecurityGroupId;
 
-
 }

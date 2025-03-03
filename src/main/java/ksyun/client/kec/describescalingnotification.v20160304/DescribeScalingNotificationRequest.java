@@ -33,5 +33,4 @@ public class DescribeScalingNotificationRequest {
     @KsYunField(name = "MaxResults")
     private Integer MaxResults;
 
-
 }

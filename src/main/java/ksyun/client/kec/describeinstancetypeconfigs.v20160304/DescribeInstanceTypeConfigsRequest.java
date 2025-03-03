@@ -36,5 +36,4 @@ public class DescribeInstanceTypeConfigsRequest {
         private List<String> ValueList;
     }
 
-
 }

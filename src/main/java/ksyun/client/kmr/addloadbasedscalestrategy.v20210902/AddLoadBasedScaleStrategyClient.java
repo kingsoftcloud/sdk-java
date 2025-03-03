@@ -26,7 +26,7 @@ public class AddLoadBasedScaleStrategyClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public AddLoadBasedScaleStrategyClient(Credential credential) {

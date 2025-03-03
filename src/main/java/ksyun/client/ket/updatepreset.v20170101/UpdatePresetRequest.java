@@ -45,5 +45,4 @@ public class UpdatePresetRequest {
     @KsYunField(name = "Video")
     private String Video;
 
-
 }

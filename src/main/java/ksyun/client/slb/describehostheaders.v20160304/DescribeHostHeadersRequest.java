@@ -48,5 +48,4 @@ public class DescribeHostHeadersRequest {
         private List<String> ValueList;
     }
 
-
 }

@@ -21,5 +21,4 @@ public class ModifyHyperThreadingRequest {
     @KsYunField(name = "HyperThreadingStatus")
     private String HyperThreadingStatus;
 
-
 }

@@ -15,5 +15,4 @@ public class DescribeZoneRequest {
     @KsYunField(name = "Action")
     private String Action;
 
-
 }

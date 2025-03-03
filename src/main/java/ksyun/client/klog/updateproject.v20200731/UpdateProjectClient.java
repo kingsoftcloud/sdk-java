@@ -26,7 +26,7 @@ public class UpdateProjectClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public UpdateProjectClient(Credential credential) {

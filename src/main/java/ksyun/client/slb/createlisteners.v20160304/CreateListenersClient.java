@@ -26,7 +26,7 @@ public class CreateListenersClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CreateListenersClient(Credential credential) {

@@ -15,5 +15,4 @@ public class GetMonthConsumeRequest {
     @KsYunField(name = "BillMonth")
     private String BillMonth;
 
-
 }

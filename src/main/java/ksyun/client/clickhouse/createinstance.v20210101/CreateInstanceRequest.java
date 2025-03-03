@@ -141,5 +141,4 @@ public class CreateInstanceRequest {
     @KsYunField(name = "SecurityGroupId")
     private String SecurityGroupId;
 
-
 }

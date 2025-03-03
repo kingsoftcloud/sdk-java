@@ -23,5 +23,4 @@ public class StopInstancesRequest {
     @KsYunField(name = "InstanceIds", type = 2)
     private List<String> InstanceIdsList;
 
-
 }

@@ -15,5 +15,4 @@ public class DetailWorkspaceRequest {
     @KsYunField(name = "WorkspaceId")
     private String WorkspaceId;
 
-
 }

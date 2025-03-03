@@ -26,7 +26,7 @@ public class DescribeInternetGatewaysClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeInternetGatewaysClient(Credential credential) {

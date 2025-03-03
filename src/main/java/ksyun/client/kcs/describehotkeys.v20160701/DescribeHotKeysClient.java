@@ -26,7 +26,7 @@ public class DescribeHotKeysClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeHotKeysClient(Credential credential) {

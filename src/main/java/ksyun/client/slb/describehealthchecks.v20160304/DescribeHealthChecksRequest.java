@@ -48,5 +48,4 @@ public class DescribeHealthChecksRequest {
         private List<String> ValueList;
     }
 
-
 }

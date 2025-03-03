@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname ReleaseDBInstanceEipClient
- * @Description 释放外网访问IP地址
+ * @Description EIP-释放外网访问IP地址
  */
 @Slf4j
 public class ReleaseDBInstanceEipClient extends BaseClient {
@@ -26,7 +26,7 @@ public class ReleaseDBInstanceEipClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ReleaseDBInstanceEipClient(Credential credential) {

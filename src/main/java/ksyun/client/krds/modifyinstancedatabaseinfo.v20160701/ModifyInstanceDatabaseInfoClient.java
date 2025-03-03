@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname ModifyInstanceDatabaseInfoClient
- * @Description ModifyInstanceDatabaseInfo
+ * @Description 库表-修改数据库信息
  */
 @Slf4j
 public class ModifyInstanceDatabaseInfoClient extends BaseClient {
@@ -26,7 +26,7 @@ public class ModifyInstanceDatabaseInfoClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ModifyInstanceDatabaseInfoClient(Credential credential) {

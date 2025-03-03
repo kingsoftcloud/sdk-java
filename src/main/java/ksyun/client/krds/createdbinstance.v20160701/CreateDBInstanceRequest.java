@@ -96,7 +96,16 @@ public class CreateDBInstanceRequest {
     private String Port;
 
     /**
-     * 计费方式	默认值：YEAR_MONTH，取值范围：YEAR_MONTH（包年包月）,DAY（按日计费）。
+     * 计费方式	默认值：YEAR_MONTH
+     * ```json
+     * 包年包月:YEAR_MONTH
+     * 按量付费(按日月结):DAY
+     * 按量付费:HourlyInstantSettlement
+     * <p>
+     * 备注：
+     * 1.按日月结（按日配置付费月结）
+     * 2.按量付费 (按小时实时结算，按量实时计费&结算）
+     * ```
      */
     @KsYunField(name = "BillType")
     private String BillType;
@@ -130,6 +139,5 @@ public class CreateDBInstanceRequest {
      */
     @KsYunField(name = "TableNamesAreCaseSensitive")
     private Integer TableNamesAreCaseSensitive;
-
 
 }

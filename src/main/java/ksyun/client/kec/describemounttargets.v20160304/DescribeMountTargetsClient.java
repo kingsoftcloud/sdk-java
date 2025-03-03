@@ -26,7 +26,7 @@ public class DescribeMountTargetsClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeMountTargetsClient(Credential credential) {

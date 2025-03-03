@@ -26,7 +26,7 @@ public class ModifyDBNetworkClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ModifyDBNetworkClient(Credential credential) {

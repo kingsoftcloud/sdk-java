@@ -45,5 +45,4 @@ public class DescribeImagesRequest {
     @KsYunField(name = "Marker")
     private String Marker;
 
-
 }

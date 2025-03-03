@@ -27,5 +27,4 @@ public class UpdateRetentionTriggerRequest {
     @KsYunField(name = "Trigger")
     private String Trigger;
 
-
 }

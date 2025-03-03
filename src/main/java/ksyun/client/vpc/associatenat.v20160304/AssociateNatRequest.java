@@ -29,5 +29,4 @@ public class AssociateNatRequest {
     @KsYunField(name = "NatIpId")
     private List<String> NatIpIdList;
 
-
 }

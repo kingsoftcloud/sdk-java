@@ -27,5 +27,4 @@ public class ListSlowLogDetailExportTaskRequest {
     @KsYunField(name = "MaxRecords")
     private String MaxRecords;
 
-
 }

@@ -42,5 +42,4 @@ public class DescribeEpcRaidAttributesRequest {
         private List<String> ValueList;
     }
 
-
 }

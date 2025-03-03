@@ -21,5 +21,4 @@ public class ModifyLoadBalancerAclRequest {
     @KsYunField(name = "LoadBalancerAclName")
     private String LoadBalancerAclName;
 
-
 }

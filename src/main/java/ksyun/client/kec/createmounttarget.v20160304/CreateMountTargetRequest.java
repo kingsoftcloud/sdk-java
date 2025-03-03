@@ -27,5 +27,4 @@ public class CreateMountTargetRequest {
     @KsYunField(name = "IpVersion")
     private String IpVersion;
 
-
 }

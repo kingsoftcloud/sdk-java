@@ -33,5 +33,4 @@ public class OpenDirectAccessToClusterRequest {
     @KsYunField(name = "VpcId")
     private String VpcId;
 
-
 }

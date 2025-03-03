@@ -39,5 +39,4 @@ public class CreateInstanceRequest {
     @KsYunField(name = "ProjectId")
     private String ProjectId;
 
-
 }

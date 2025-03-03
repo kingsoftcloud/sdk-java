@@ -23,5 +23,4 @@ public class TerminateInstancesRequest {
     @KsYunField(name = "ForceDelete")
     private Boolean ForceDelete;
 
-
 }

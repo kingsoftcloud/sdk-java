@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname OverrideDBInstanceByPointInTimeClient
- * @Description 恢复实例到当前时间点
+ * @Description override db instance by pointln time
  */
 @Slf4j
 public class OverrideDBInstanceByPointInTimeClient extends BaseClient {
@@ -26,7 +26,7 @@ public class OverrideDBInstanceByPointInTimeClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public OverrideDBInstanceByPointInTimeClient(Credential credential) {

@@ -26,7 +26,7 @@ public class ModifyCustomerGatewayClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ModifyCustomerGatewayClient(Credential credential) {

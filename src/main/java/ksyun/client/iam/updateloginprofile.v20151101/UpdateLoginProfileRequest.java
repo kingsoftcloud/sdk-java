@@ -16,7 +16,10 @@ public class UpdateLoginProfileRequest {
     private String UserName;
 
     /**
-     * 新密码
+     * 新密码，可选参数，注：
+     * - 当传参且值为空字符串时，关闭子用户控制台登录；
+     * - 当传参不为空字符串时，启用子用户控制台登录，并设置新密码；
+     * - 当不传参时，沿用原设置；
      */
     @KsYunField(name = "Password")
     private String Password;
@@ -44,6 +47,5 @@ public class UpdateLoginProfileRequest {
      */
     @KsYunField(name = "ViewAllProject")
     private Boolean ViewAllProject;
-
 
 }

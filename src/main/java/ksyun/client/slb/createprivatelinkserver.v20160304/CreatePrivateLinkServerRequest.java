@@ -39,5 +39,4 @@ public class CreatePrivateLinkServerRequest {
     @KsYunField(name = "DeleteProtection")
     private String DeleteProtection;
 
-
 }

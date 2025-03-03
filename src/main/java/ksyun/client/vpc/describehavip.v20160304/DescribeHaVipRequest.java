@@ -49,5 +49,4 @@ public class DescribeHaVipRequest {
         private List<String> ValueList;
     }
 
-
 }

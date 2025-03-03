@@ -21,5 +21,4 @@ public class DeleteNatIpRequest {
     @KsYunField(name = "NatIpId")
     private String NatIpId;
 
-
 }

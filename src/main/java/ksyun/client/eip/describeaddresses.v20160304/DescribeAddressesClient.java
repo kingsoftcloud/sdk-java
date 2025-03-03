@@ -26,7 +26,7 @@ public class DescribeAddressesClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeAddressesClient(Credential credential) {

@@ -26,7 +26,7 @@ public class ModifyScheduledTaskClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ModifyScheduledTaskClient(Credential credential) {

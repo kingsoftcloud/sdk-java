@@ -29,5 +29,4 @@ public class DescribeModelsRequest {
     @KsYunField(name = "Marker")
     private Integer Marker;
 
-
 }

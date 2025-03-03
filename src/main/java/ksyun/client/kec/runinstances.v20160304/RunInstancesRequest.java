@@ -25,18 +25,6 @@ public class RunInstancesRequest {
     private String DedicatedHostId;
 
     /**
-     * 实例VCPU核数
-     */
-    @KsYunField(name = "InstanceConfigure.VCPU")
-    private String InstanceConfigureVCPU;
-
-    /**
-     * 实例内存
-     */
-    @KsYunField(name = "InstanceConfigure.MemoryGb")
-    private String InstanceConfigureMemoryGb;
-
-    /**
      * 实例套餐类型
      */
     @KsYunField(name = "InstanceType")
@@ -73,7 +61,7 @@ public class RunInstancesRequest {
     private String InstancePassword;
 
     /**
-     * 计费类型，调用时需要明确指定，无默认值
+     * 调用时需要明确指定，无默认值
      */
     @KsYunField(name = "ChargeType")
     private String ChargeType;
@@ -88,7 +76,7 @@ public class RunInstancesRequest {
      * 实例绑定的安全组，目前仅支持绑定一个安全组
      */
     @KsYunField(name = "SecurityGroupId")
-    private String SecurityGroupId;
+    private List<String> SecurityGroupIdList;
 
     /**
      * 私有IP地址，指定子网IP地址范围内的任意有效值，代表实例的主IP地址，只能选择一个，绑定到主网卡；如果未指定该参数，系统自动从有效地址池中随机选取一个
@@ -130,15 +118,11 @@ public class RunInstancesRequest {
     @KsYunField(name = "UserData")
     private String UserData;
     /**
-     * 系统盘类型
+     * 系统盘
      */
-    @KsYunField(name = "SystemDisk.DiskType")
-    private String SystemDiskDiskType;
-    /**
-     * 系统盘大小
-     */
-    @KsYunField(name = "SystemDisk.DiskSize")
-    private Integer SystemDiskDiskSize;
+    @KsYunField(name = "SystemDisk")
+
+    private SystemDiskDto SystemDiskList;
     /**
      * 实例启动模版ID，如填写了此项，则启动模板中已包含的RunInstances其他参数不生效，启动模板未指定的参数若调用RunInstances时额外传入则可生效，如果批量创建，实例名称后缀依然存在。【传modelId，使用默认版本。传modelId和modelVersion，使用传递的版本】
      * 示例值：3f0d6229-ed2d-4c9c-8554-b9433517cf8b
@@ -181,6 +165,11 @@ public class RunInstancesRequest {
     @KsYunField(name = "AddressProjectId")
     private String AddressProjectId;
     /**
+     * 共享带宽ID
+     */
+    @KsYunField(name = "BandWidthShareId")
+    private String BandWidthShareId;
+    /**
      * 购买时长
      */
     @KsYunField(name = "AddressPurchaseTime")
@@ -191,9 +180,9 @@ public class RunInstancesRequest {
     @KsYunField(name = "KeyId")
     private List<String> KeyIdList;
     /**
-     * 是否保持镜像登录
+     * 是否保留镜像设置
      */
-    @KsYunField(name = "keepImageLogin")
+    @KsYunField(name = "KeepImageLogin")
     private Boolean KeepImageLogin;
     /**
      * 操作系统内部的计算机名
@@ -205,11 +194,6 @@ public class RunInstancesRequest {
      */
     @KsYunField(name = "HostNameSuffix")
     private Integer HostNameSuffix;
-    /**
-     * 开机密码
-     */
-    @KsYunField(name = "Password")
-    private String Password;
     /**
      * 开机失败是否对外删除 ，默认值是false
      */
@@ -225,6 +209,50 @@ public class RunInstancesRequest {
      */
     @KsYunField(name = "DataGuardId")
     private String DataGuardId;
+    /***/
+    @KsYunField(name = "InstanceConfigure")
+
+    private InstanceConfigureDto InstanceConfigureList;
+    /**
+     * 是否支持联网增强
+     */
+    @KsYunField(name = "SriovNetSupport")
+    private Boolean SriovNetSupport;
+    /**
+     * 是否分配ipv6
+     */
+    @KsYunField(name = "DistributeIpv6")
+    private Boolean DistributeIpv6;
+    /**
+     * 本地盘快照id
+     */
+    @KsYunField(name = "LocalVolumeSnapshotId")
+    private String LocalVolumeSnapshotId;
+    /**
+     * 是否同步ebs标签
+     */
+    @KsYunField(name = "SyncTag")
+    private Boolean SyncTag;
+    /**
+     * iam角色名称
+     */
+    @KsYunField(name = "IamRoleName")
+    private String IamRoleName;
+    /**
+     * 定时删除时间
+     */
+    @KsYunField(name = "AutoDeleteTime")
+    private String AutoDeleteTime;
+    /**
+     * 是否自动删除eip
+     */
+    @KsYunField(name = "AutoDeleteEip")
+    private Boolean AutoDeleteEip;
+    /**
+     * 是否开启资源保护
+     */
+    @KsYunField(name = "IsProtect")
+    private Boolean IsProtect;
 
     @Data
     @ToString
@@ -263,12 +291,27 @@ public class RunInstancesRequest {
          * 辅网卡的安全组id不创建辅网卡时非必填，创建辅网卡时必填
          */
         @KsYunField(name = "SecurityGroupId")
-        private String SecurityGroupId;
+        private List<String> SecurityGroupIdList;
         /**
          * 辅网卡的内网ip,创建辅网卡传了按传的ip开机，不传自动分配
          */
         @KsYunField(name = "PrivateIpAddress")
         private String PrivateIpAddress;
+    }
+
+    @Data
+    @ToString
+    public static class SystemDiskDto {
+        /**
+         * 系统盘类型
+         */
+        @KsYunField(name = "DiskType")
+        private String DiskType;
+        /**
+         * 系统盘大小
+         */
+        @KsYunField(name = "DiskSize")
+        private Integer DiskSize;
     }
 
     @Data
@@ -291,5 +334,24 @@ public class RunInstancesRequest {
         private String Value;
     }
 
+    @Data
+    @ToString
+    public static class InstanceConfigureDto {
+        /**
+         * cpu
+         */
+        @KsYunField(name = "VCPU")
+        private String VCPU;
+        /**
+         * 内存
+         */
+        @KsYunField(name = "MemoryGb")
+        private String MemoryGb;
+        /**
+         * 数据卷容量，单位GB
+         */
+        @KsYunField(name = "DataDiskGb")
+        private String DataDiskGb;
+    }
 
 }

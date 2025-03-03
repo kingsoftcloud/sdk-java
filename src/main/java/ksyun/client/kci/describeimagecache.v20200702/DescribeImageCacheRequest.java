@@ -41,5 +41,4 @@ public class DescribeImageCacheRequest {
     @KsYunField(name = "MaxResults")
     private Integer MaxResults;
 
-
 }

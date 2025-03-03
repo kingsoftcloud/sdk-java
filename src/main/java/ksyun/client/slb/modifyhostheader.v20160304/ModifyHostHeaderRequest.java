@@ -21,5 +21,4 @@ public class ModifyHostHeaderRequest {
     @KsYunField(name = "CertificateId")
     private String CertificateId;
 
-
 }

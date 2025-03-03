@@ -57,5 +57,4 @@ public class AnalyzeSlowDailyRequest {
     @KsYunField(name = "OperationType")
     private String OperationType;
 
-
 }

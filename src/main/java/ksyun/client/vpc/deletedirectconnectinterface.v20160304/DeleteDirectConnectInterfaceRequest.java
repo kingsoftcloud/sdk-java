@@ -15,5 +15,4 @@ public class DeleteDirectConnectInterfaceRequest {
     @KsYunField(name = "DirectConnectInterfaceId")
     private String DirectConnectInterfaceId;
 
-
 }

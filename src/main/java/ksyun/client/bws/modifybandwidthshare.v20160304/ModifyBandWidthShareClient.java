@@ -26,7 +26,7 @@ public class ModifyBandWidthShareClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ModifyBandWidthShareClient(Credential credential) {

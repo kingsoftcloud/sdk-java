@@ -27,5 +27,4 @@ public class ModifyBandWidthShareRequest {
     @KsYunField(name = "BandWidthShareName")
     private String BandWidthShareName;
 
-
 }

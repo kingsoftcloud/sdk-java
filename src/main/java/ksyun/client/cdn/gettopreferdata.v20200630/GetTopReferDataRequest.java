@@ -45,5 +45,4 @@ public class GetTopReferDataRequest {
     @KsYunField(name = "SortBy")
     private String SortBy;
 
-
 }

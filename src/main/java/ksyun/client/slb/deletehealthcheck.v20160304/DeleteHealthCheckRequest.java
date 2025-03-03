@@ -15,5 +15,4 @@ public class DeleteHealthCheckRequest {
     @KsYunField(name = "HealthCheckId")
     private String HealthCheckId;
 
-
 }

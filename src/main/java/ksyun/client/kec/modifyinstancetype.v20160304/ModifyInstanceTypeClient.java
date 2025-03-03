@@ -26,7 +26,7 @@ public class ModifyInstanceTypeClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ModifyInstanceTypeClient(Credential credential) {

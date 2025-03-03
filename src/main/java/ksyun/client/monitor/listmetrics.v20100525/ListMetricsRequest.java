@@ -41,5 +41,4 @@ public class ListMetricsRequest {
     @KsYunField(name = "PageSize")
     private Integer PageSize;
 
-
 }

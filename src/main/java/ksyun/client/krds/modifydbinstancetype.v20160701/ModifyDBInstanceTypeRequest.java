@@ -45,5 +45,4 @@ public class ModifyDBInstanceTypeRequest {
     @KsYunField(name = "AvailabilityZone")
     private String AvailabilityZone;
 
-
 }

@@ -21,5 +21,4 @@ public class DescribeCacheClusterRequest {
     @KsYunField(name = "AvailableZone")
     private String AvailableZone;
 
-
 }

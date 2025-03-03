@@ -21,5 +21,10 @@ public class DescribeBillSummaryByPayModeRequest {
     @KsYunField(name = "BillEndMonth")
     private String BillEndMonth;
 
+    /**
+     * 成员账账号Id，非必填
+     */
+    @KsYunField(name = "SubAccount")
+    private Integer SubAccount;
 
 }

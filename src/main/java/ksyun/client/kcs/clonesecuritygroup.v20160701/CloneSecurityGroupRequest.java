@@ -33,5 +33,4 @@ public class CloneSecurityGroupRequest {
     @KsYunField(name = "SrcSecurityGroupId")
     private String SrcSecurityGroupId;
 
-
 }

@@ -23,5 +23,4 @@ public class DeleteDedicatedHostRequest {
     @KsYunField(name = "IsRefund")
     private Boolean IsRefund;
 
-
 }

@@ -29,5 +29,4 @@ public class BindSecurityGroupRequest {
     @KsYunField(name = "InstanceIds")
     private String InstanceIds;
 
-
 }

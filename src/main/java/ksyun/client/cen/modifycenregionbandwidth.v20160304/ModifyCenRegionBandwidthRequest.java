@@ -1,12 +1,7 @@
 package ksyun.client.cen.modifycenregionbandwidth.v20160304;
 
 import common.annotation.KsYunField;
-import lombok.Builder;
 import lombok.Data;
-import lombok.ToString;
-
-import java.util.List;
-import java.util.Arrays;
 
 /**
  * @Classname ModifyCenRegionBandwidthRequest
@@ -21,10 +16,9 @@ public class ModifyCenRegionBandwidthRequest {
     private String CenRegionBandwidthId;
 
     /**
-     * 带宽
+     * 跨地域间分配的带宽
      */
-    @KsYunField(name = "BandWidth")
-    private String BandWidth;
-
+    @KsYunField(name = "InterBandWidth")
+    private String InterBandWidth;
 
 }

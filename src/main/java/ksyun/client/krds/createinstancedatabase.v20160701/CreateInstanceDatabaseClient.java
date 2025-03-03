@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname CreateInstanceDatabaseClient
- * @Description CreateInstanceDatabase
+ * @Description 库表-创建实例数据库
  */
 @Slf4j
 public class CreateInstanceDatabaseClient extends BaseClient {
@@ -26,7 +26,7 @@ public class CreateInstanceDatabaseClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CreateInstanceDatabaseClient(Credential credential) {

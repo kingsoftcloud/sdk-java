@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname RenameInstanceClient
- * @Description RenameInstance
+ * @Description 实例-重命名
  */
 @Slf4j
 public class RenameInstanceClient extends BaseClient {
@@ -26,7 +26,7 @@ public class RenameInstanceClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public RenameInstanceClient(Credential credential) {

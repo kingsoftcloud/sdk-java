@@ -27,5 +27,4 @@ public class RenameMongoDBSnapshotRequest {
     @KsYunField(name = "Name")
     private String Name;
 
-
 }

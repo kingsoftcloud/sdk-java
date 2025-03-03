@@ -29,5 +29,4 @@ public class DescribePolicyObjectRequest {
     @KsYunField(name = "PageSize")
     private Integer PageSize;
 
-
 }

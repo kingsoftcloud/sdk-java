@@ -39,5 +39,4 @@ public class DescribeWebhookTriggerLogRequest {
     @KsYunField(name = "MaxResults")
     private String MaxResults;
 
-
 }

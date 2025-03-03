@@ -40,30 +40,6 @@ public class ModifyAlbListenerRequest {
     private String CertificateId;
 
     /**
-     * 客户端证书的ID
-     */
-    @KsYunField(name = "CaCertificateId")
-    private String CaCertificateId;
-
-    /**
-     * 双向认证是否开启
-     */
-    @KsYunField(name = "CaEnabled")
-    private Boolean CaEnabled;
-
-    /**
-     * QUIC监听器的ID
-     */
-    @KsYunField(name = "QuicListenerId")
-    private String QuicListenerId;
-
-    /**
-     * 开启QUIC升级
-     */
-    @KsYunField(name = "EnableQuicUpgrade")
-    private Boolean EnableQuicUpgrade;
-
-    /**
      * TLS安全策略
      */
     @KsYunField(name = "TlsCipherPolicy")
@@ -111,5 +87,28 @@ public class ModifyAlbListenerRequest {
     @KsYunField(name = "EnableHttp2")
     private Boolean EnableHttp2;
 
+    /**
+     * 是否开启双向认证
+     */
+    @KsYunField(name = "CaEnabled")
+    private Boolean CaEnabled;
+
+    /**
+     * 客户端证书
+     */
+    @KsYunField(name = "CaCertificateId")
+    private String CaCertificateId;
+
+    /**
+     * 是否开启QUIC
+     */
+    @KsYunField(name = "EnableQuicUpgrade")
+    private Boolean EnableQuicUpgrade;
+
+    /**
+     * QUIC监听器id
+     */
+    @KsYunField(name = "QuicListenerId")
+    private String QuicListenerId;
 
 }

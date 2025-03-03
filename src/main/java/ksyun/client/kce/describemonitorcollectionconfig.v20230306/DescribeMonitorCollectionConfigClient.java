@@ -26,7 +26,7 @@ public class DescribeMonitorCollectionConfigClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeMonitorCollectionConfigClient(Credential credential) {

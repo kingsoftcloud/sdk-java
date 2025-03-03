@@ -21,5 +21,4 @@ public class UserspasswordresetRequest {
     @KsYunField(name = "password")
     private String Password;
 
-
 }

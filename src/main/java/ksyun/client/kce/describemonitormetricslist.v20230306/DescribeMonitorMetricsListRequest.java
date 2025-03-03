@@ -56,5 +56,4 @@ public class DescribeMonitorMetricsListRequest {
     @KsYunField(name = "MaxResults")
     private Integer MaxResults;
 
-
 }

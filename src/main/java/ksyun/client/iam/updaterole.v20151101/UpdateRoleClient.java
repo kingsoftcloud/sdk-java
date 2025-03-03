@@ -26,7 +26,7 @@ public class UpdateRoleClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public UpdateRoleClient(Credential credential) {

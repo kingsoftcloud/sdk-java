@@ -26,7 +26,7 @@ public class StrategycreateClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public StrategycreateClient(Credential credential) {

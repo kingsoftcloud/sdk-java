@@ -20,7 +20,8 @@ public class ModifyInstanceTypeRequest {
 
     /**
      * 实例目标套餐规格
-     * [实例套餐类型有效值](https://docs.ksyun.com/documents/40858) <br>若对应实例为专属虚机，该值需填写DVM1.NONE(专属型)、DVM2.NONE(专属型2.0)、DVM3.NONE（专属型3.0），专属虚机只支持升降配，不支持变更实例类型。<br>具体套餐信息参考[实例套餐类型定义](https://docs.ksyun.com/documents/705)
+     * 实例套餐类型有效值
+     * 若对应实例为专属虚机，该值需填写DVM1.NONE(专属型)、DVM2.NONE(专属型2.0)、DVM3.NONE（专属型3.0），专属虚机只支持升降配，不支持变更实例类型。<br>具体套餐信息参考[实例套餐类型定义](https://docs.ksyun.com/documents/705)
      */
     @KsYunField(name = "InstanceType")
     private String InstanceType;
@@ -101,6 +102,5 @@ public class ModifyInstanceTypeRequest {
         @KsYunField(name = "Size")
         private String Size;
     }
-
 
 }

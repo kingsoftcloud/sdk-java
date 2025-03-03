@@ -52,5 +52,4 @@ public class DescribeEventLogsRequest {
     @KsYunField(name = "MaxResults")
     private Integer MaxResults;
 
-
 }

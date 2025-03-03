@@ -26,7 +26,7 @@ public class CloudDeskgetDesktopUrlClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CloudDeskgetDesktopUrlClient(Credential credential) {

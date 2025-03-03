@@ -39,5 +39,4 @@ public class DescribeSlowLogLineChartRequest {
     @KsYunField(name = "EndTime")
     private String EndTime;
 
-
 }

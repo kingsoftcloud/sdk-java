@@ -33,5 +33,4 @@ public class ModifyDnsRequest {
     @KsYunField(name = "DNS2")
     private String DNS2;
 
-
 }

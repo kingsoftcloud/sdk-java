@@ -26,7 +26,7 @@ public class EnableImageCachingClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public EnableImageCachingClient(Credential credential) {

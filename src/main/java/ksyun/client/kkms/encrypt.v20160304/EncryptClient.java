@@ -26,7 +26,7 @@ public class EncryptClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public EncryptClient(Credential credential) {

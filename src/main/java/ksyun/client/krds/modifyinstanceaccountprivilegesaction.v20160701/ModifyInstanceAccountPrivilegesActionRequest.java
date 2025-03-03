@@ -19,13 +19,13 @@ public class ModifyInstanceAccountPrivilegesActionRequest {
     private String DBInstanceIdentifier;
 
     /**
-     * 数据库帐号名称
+     * 数据库账户名称
      */
     @KsYunField(name = "InstanceAccountName")
     private String InstanceAccountName;
 
     /**
-     * 数据库权限		不传则置空改帐号数据库权限
+     * 数据库权限：不传则置空改账户数据库权限
      */
     @KsYunField(name = "InstanceAccountPrivileges", type = 2)
     private List<InstanceAccountPrivilegesDto> InstanceAccountPrivilegesList;
@@ -48,6 +48,5 @@ public class ModifyInstanceAccountPrivilegesActionRequest {
          */
         private String Privilege;
     }
-
 
 }

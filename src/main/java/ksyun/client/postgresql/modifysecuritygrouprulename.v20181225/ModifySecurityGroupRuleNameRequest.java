@@ -25,5 +25,4 @@ public class ModifySecurityGroupRuleNameRequest {
     @KsYunField(name = "SecurityGroupRuleName")
     private String SecurityGroupRuleName;
 
-
 }

@@ -16,16 +16,15 @@ public class SetCacheParameterGroupRequest {
     private String AvailableZone;
 
     /**
-     * 参数组ID。
+     * 参数组ID。支持同时应用server参数组和proxy参数组，以','分隔。
      */
-    @KsYunField(name = "CacheParameterGroupId")
-    private String CacheParameterGroupId;
+    @KsYunField(name = "CacheParameterGroupIds")
+    private String CacheParameterGroupIds;
 
     /**
      * 缓存服务ID。
      */
     @KsYunField(name = "CacheId")
     private String CacheId;
-
 
 }

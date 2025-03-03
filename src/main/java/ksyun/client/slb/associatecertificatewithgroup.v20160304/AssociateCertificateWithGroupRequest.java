@@ -21,5 +21,4 @@ public class AssociateCertificateWithGroupRequest {
     @KsYunField(name = "CertificateId")
     private String CertificateId;
 
-
 }

@@ -15,5 +15,4 @@ public class DeletePrivateLinkServerRequest {
     @KsYunField(name = "PrivateLinkServerId")
     private String PrivateLinkServerId;
 
-
 }

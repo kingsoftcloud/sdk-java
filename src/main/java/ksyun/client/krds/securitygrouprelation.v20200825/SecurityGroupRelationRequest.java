@@ -10,22 +10,31 @@ import lombok.Data;
 @Data
 public class SecurityGroupRelationRequest {
     /**
-     * 操作类型		Attach \
+     * Attach | Dettach Attach: 添加实例Id到安全组 Dettach：将实例Id从安全组解绑
      */
     @KsYunField(name = "RelationAction")
     private String RelationAction;
 
     /**
      * 安全组ID
+     * <p>
+     * 单独操作传递此值
      */
     @KsYunField(name = "SecurityGroupId")
     private String SecurityGroupId;
+
+    /**
+     * 安全组ID列表
+     * <p>
+     * 若批量操作则传递此值
+     */
+    @KsYunField(name = "SecurityGroupIds")
+    private String SecurityGroupIds;
 
     /**
      * 实例ID列表		例如：<br>方式1：DBInstanceIdentifier.0=aaa&DBInstanceIdentifier.1=bbb<br>方式2：DBInstanceIdentifier=aaa,bbb
      */
     @KsYunField(name = "DBInstanceIdentifier")
     private String DBInstanceIdentifier;
-
 
 }

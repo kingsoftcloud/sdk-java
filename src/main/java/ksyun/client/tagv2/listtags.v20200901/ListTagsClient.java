@@ -26,7 +26,7 @@ public class ListTagsClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ListTagsClient(Credential credential) {

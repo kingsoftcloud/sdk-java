@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname DescribeCollationsClient
- * @Description DescribeCollations
+ * @Description 库表-支持字符集列表
  */
 @Slf4j
 public class DescribeCollationsClient extends BaseClient {
@@ -26,7 +26,7 @@ public class DescribeCollationsClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeCollationsClient(Credential credential) {

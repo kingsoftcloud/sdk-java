@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname ListAuditDetailExportTaskClient
- * @Description 列出历史导出任务
+ * @Description 历史导出任务列表
  */
 @Slf4j
 public class ListAuditDetailExportTaskClient extends BaseClient {
@@ -26,7 +26,7 @@ public class ListAuditDetailExportTaskClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ListAuditDetailExportTaskClient(Credential credential) {

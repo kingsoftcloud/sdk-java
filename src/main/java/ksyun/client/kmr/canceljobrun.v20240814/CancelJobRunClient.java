@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname CancelJobRunClient
- * @Description 停止作业运行
+ * @Description 停止Spark作业运行
  */
 @Slf4j
 public class CancelJobRunClient extends BaseClient {
@@ -26,7 +26,7 @@ public class CancelJobRunClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CancelJobRunClient(Credential credential) {

@@ -21,5 +21,4 @@ public class UserslistRequest {
     @KsYunField(name = "page")
     private Integer Page;
 
-
 }

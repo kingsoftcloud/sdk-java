@@ -15,5 +15,4 @@ public class DisableScalingGroupRequest {
     @KsYunField(name = "ScalingGroupId")
     private String ScalingGroupId;
 
-
 }

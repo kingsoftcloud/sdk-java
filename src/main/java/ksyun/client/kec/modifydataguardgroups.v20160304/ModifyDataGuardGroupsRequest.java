@@ -21,5 +21,4 @@ public class ModifyDataGuardGroupsRequest {
     @KsYunField(name = "DataGuardName")
     private String DataGuardName;
 
-
 }

@@ -30,5 +30,4 @@ public class SetKvmProtectedDetachRequest {
     @KsYunField(name = "ProtectedFromDetach")
     private Integer ProtectedFromDetach;
 
-
 }

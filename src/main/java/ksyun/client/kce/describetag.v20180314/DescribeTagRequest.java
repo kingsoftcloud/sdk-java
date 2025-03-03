@@ -47,5 +47,4 @@ public class DescribeTagRequest {
         private List<String> ValueList;
     }
 
-
 }

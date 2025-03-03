@@ -17,5 +17,4 @@ public class DescribeRemoteManagementsRequest {
     @KsYunField(name = "RemoteManagementId")
     private List<String> RemoteManagementIdList;
 
-
 }

@@ -3,6 +3,8 @@ package ksyun.client.kec.modifynetworkinterfaceattribute.v20160304;
 import common.annotation.KsYunField;
 import lombok.Data;
 
+import java.util.List;
+
 /**
  * @Classname ModifyNetworkInterfaceAttributeRequest
  * @Description 请求参数
@@ -35,7 +37,7 @@ public class ModifyNetworkInterfaceAttributeRequest {
      * 标准UUID格式，形如`^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$`
      */
     @KsYunField(name = "SecurityGroupId")
-    private String SecurityGroupId;
+    private List<String> SecurityGroupIdList;
 
     /**
      * 私有IP地址，子网IP地址范围内的任意有效值。
@@ -57,6 +59,5 @@ public class ModifyNetworkInterfaceAttributeRequest {
      */
     @KsYunField(name = "DNS2")
     private String DNS2;
-
 
 }

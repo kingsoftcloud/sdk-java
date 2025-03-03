@@ -27,5 +27,4 @@ public class RenameSnapshotRequest {
     @KsYunField(name = "SnapshotId")
     private String SnapshotId;
 
-
 }

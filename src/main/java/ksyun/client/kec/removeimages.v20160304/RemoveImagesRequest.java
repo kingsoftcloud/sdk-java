@@ -16,5 +16,4 @@ public class RemoveImagesRequest {
     @KsYunField(name = "ImageId")
     private String ImageId;
 
-
 }

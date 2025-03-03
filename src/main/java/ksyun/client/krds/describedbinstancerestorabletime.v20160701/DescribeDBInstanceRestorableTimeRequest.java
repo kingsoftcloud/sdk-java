@@ -15,5 +15,4 @@ public class DescribeDBInstanceRestorableTimeRequest {
     @KsYunField(name = "DBInstanceIdentifier")
     private String DBInstanceIdentifier;
 
-
 }

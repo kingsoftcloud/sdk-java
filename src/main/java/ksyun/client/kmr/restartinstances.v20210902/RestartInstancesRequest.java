@@ -41,5 +41,4 @@ public class RestartInstancesRequest {
     @KsYunField(name = "ForceReboot")
     private Boolean ForceReboot;
 
-
 }

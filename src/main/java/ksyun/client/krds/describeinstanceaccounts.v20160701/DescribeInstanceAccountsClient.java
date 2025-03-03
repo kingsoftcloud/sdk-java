@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname DescribeInstanceAccountsClient
- * @Description DescribeInstanceAccounts
+ * @Description describe instance accounts new
  */
 @Slf4j
 public class DescribeInstanceAccountsClient extends BaseClient {
@@ -26,7 +26,7 @@ public class DescribeInstanceAccountsClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeInstanceAccountsClient(Credential credential) {

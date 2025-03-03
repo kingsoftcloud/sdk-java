@@ -27,5 +27,4 @@ public class GenerateDataKeyRequest {
     @KsYunField(name = "NumberOfBytes")
     private Integer NumberOfBytes;
 
-
 }

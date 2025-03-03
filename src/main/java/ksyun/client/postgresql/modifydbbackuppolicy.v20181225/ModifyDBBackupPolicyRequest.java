@@ -23,5 +23,4 @@ public class ModifyDBBackupPolicyRequest {
     @KsYunField(name = "PreferredBackupTime")
     private String PreferredBackupTime;
 
-
 }

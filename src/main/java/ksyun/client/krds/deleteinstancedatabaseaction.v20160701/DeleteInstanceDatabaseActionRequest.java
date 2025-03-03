@@ -21,5 +21,4 @@ public class DeleteInstanceDatabaseActionRequest {
     @KsYunField(name = "InstanceDatabaseName")
     private String InstanceDatabaseName;
 
-
 }

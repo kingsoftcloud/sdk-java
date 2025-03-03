@@ -136,5 +136,4 @@ public class CreateCacheClusterRequest {
     @KsYunField(name = "Separation")
     private Integer Separation;
 
-
 }

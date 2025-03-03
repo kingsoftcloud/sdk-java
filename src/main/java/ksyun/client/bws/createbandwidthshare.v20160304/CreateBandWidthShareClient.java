@@ -26,7 +26,7 @@ public class CreateBandWidthShareClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CreateBandWidthShareClient(Credential credential) {

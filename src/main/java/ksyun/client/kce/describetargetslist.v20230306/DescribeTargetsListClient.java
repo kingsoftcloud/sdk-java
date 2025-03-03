@@ -26,7 +26,7 @@ public class DescribeTargetsListClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeTargetsListClient(Credential credential) {

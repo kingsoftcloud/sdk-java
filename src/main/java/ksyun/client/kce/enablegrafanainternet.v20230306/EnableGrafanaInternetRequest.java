@@ -21,5 +21,4 @@ public class EnableGrafanaInternetRequest {
     @KsYunField(name = "EnableInternet")
     private Boolean EnableInternet;
 
-
 }

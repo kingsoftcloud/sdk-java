@@ -33,5 +33,4 @@ public class SetMongoDBTimingSnapshotRequest {
     @KsYunField(name = "TimeCycle")
     private String TimeCycle;
 
-
 }

@@ -27,5 +27,4 @@ public class ModifyLoadBalancerRequest {
     @KsYunField(name = "LoadBalancerState")
     private String LoadBalancerState;
 
-
 }

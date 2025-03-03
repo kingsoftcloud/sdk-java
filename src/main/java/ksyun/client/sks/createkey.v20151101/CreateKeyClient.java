@@ -26,7 +26,7 @@ public class CreateKeyClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CreateKeyClient(Credential credential) {

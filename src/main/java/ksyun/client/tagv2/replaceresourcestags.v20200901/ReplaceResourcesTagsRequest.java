@@ -33,5 +33,4 @@ public class ReplaceResourcesTagsRequest {
         private String TagIds;
     }
 
-
 }

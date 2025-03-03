@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname BatchCreateEpcClient
- * @Description BatchCreateEpc
+ * @Description 批量创建云物理主机
  */
 @Slf4j
 public class BatchCreateEpcClient extends BaseClient {
@@ -26,7 +26,7 @@ public class BatchCreateEpcClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public BatchCreateEpcClient(Credential credential) {

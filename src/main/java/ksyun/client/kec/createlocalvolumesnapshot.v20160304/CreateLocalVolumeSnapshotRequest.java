@@ -33,5 +33,4 @@ public class CreateLocalVolumeSnapshotRequest {
     @KsYunField(name = "InstantAccess")
     private Boolean InstantAccess;
 
-
 }

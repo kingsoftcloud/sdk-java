@@ -26,7 +26,7 @@ public class DescribeSlowLogStatisticsClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeSlowLogStatisticsClient(Credential credential) {

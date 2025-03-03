@@ -15,5 +15,4 @@ public class GetUserRequest {
     @KsYunField(name = "UserName")
     private String UserName;
 
-
 }

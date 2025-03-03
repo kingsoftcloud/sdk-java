@@ -10,16 +10,9 @@ import lombok.Data;
 @Data
 public class CreateDashboardRequest {
     /**
-     * 工程名称
+     * Action
      */
-    @KsYunField(name = "ProjectName")
-    private String ProjectName;
-
-    /**
-     * 仪表盘名称
-     */
-    @KsYunField(name = "DashboardName")
-    private String DashboardName;
-
+    @KsYunField(name = "Action")
+    private String Action;
 
 }

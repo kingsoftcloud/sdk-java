@@ -81,5 +81,4 @@ public class CreateSubnetRequest {
     @KsYunField(name = "AvailabilityZone")
     private String AvailabilityZone;
 
-
 }

@@ -39,5 +39,4 @@ public class CreateRemoteManagementRequest {
     @KsYunField(name = "VersionId")
     private Integer VersionId;
 
-
 }

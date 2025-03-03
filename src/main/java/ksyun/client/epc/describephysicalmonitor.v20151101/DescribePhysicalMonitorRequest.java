@@ -15,5 +15,4 @@ public class DescribePhysicalMonitorRequest {
     @KsYunField(name = "HostId")
     private String HostId;
 
-
 }

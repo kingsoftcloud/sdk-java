@@ -77,5 +77,4 @@ public class ModifyWebhookTriggerRequest {
     @KsYunField(name = "Value")
     private List<String> ValueList;
 
-
 }

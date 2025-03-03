@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname DescRegionClient
- * @Description DescRegion
+ * @Description 其他-查询指定地域详情
  */
 @Slf4j
 public class DescRegionClient extends BaseClient {
@@ -26,7 +26,7 @@ public class DescRegionClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescRegionClient(Credential credential) {

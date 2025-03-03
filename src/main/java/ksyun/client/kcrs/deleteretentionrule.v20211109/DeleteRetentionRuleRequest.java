@@ -2,6 +2,7 @@ package ksyun.client.kcrs.deleteretentionrule.v20211109;
 
 import common.annotation.KsYunField;
 import lombok.Data;
+import lombok.ToString;
 
 /**
  * @Classname DeleteRetentionRuleRequest
@@ -20,4 +21,21 @@ public class DeleteRetentionRuleRequest {
      */
     @KsYunField(name = "Namespace")
     private String Namespace;
+
+    /**
+     * 参数实体类
+     */
+    @KsYunField(name = "Rule")
+
+    private RuleDto RuleList;
+
+    @Data
+    @ToString
+    public static class RuleDto {
+        /**
+         * 规则Id
+         */
+        @KsYunField(name = "RuleId")
+        private String RuleId;
+    }
 }

@@ -24,5 +24,4 @@ public class CloudDesklistRequest {
     @KsYunField(name = "connected")
     private String Connected;
 
-
 }

@@ -39,5 +39,4 @@ public class UpdateMongoDBInstanceClusterRequest {
     @KsYunField(name = "Storage")
     private Integer Storage;
 
-
 }

@@ -46,5 +46,4 @@ public class AllocateAddressRequest {
     @KsYunField(name = "PurchaseTime")
     private Integer PurchaseTime;
 
-
 }

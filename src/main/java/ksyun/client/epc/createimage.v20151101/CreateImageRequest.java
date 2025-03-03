@@ -33,5 +33,4 @@ public class CreateImageRequest {
     @KsYunField(name = "ImageInitialization")
     private String ImageInitialization;
 
-
 }

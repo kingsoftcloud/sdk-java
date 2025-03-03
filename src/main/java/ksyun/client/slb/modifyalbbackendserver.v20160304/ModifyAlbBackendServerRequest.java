@@ -21,5 +21,4 @@ public class ModifyAlbBackendServerRequest {
     @KsYunField(name = "Weight")
     private Integer Weight;
 
-
 }

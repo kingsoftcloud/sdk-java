@@ -21,5 +21,4 @@ public class AddUserToGroupRequest {
     @KsYunField(name = "UserName")
     private String UserName;
 
-
 }

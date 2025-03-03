@@ -64,5 +64,4 @@ public class RegisterInstancesWithListenerRequest {
     @KsYunField(name = "NetworkInterfaceId")
     private String NetworkInterfaceId;
 
-
 }

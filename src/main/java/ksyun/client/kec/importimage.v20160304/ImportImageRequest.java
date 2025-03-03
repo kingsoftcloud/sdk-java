@@ -33,7 +33,7 @@ public class ImportImageRequest {
     private String Platform;
 
     /**
-     * 存放镜像的ks3对应的bucket地址。[如何开通ks3?](https://docs.ksyun.com/documents/858)[如何获取bucket地址？](https://docs.ksyun.com/documents/906#18)
+     * 存放镜像的ks3对应的bucket地址。[如何开通ks3?](https://docs.ksyun.com/documents/858)[如何获取bucket地址？](https://docs.ksyun.com/documents/27937?type=3)
      * http开头，有效的bucket地址
      */
     @KsYunField(name = "ImageUrl")
@@ -66,6 +66,5 @@ public class ImportImageRequest {
      */
     @KsYunField(name = "DataImageFormat")
     private List<String> DataImageFormatList;
-
 
 }

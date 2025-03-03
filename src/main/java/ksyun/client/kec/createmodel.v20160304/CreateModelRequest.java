@@ -1,10 +1,12 @@
 package ksyun.client.kec.createmodel.v20160304;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname CreateModelRequest
@@ -21,16 +23,10 @@ public class CreateModelRequest {
 
     /**
      * 实例套餐类型，如果调用时未指定实例套餐类型，默认值为I1.1A
-     * [实例套餐类型有效值](https://docs.ksyun.com/documents/40858) <br>具体套餐信息参考[实例套餐类型定义](https://docs.ksyun.com/documents/705)
+     * 实例套餐类型有效值具体套餐信息参考[实例套餐类型定义](https://docs.ksyun.com/documents/705)
      */
     @KsYunField(name = "InstanceType")
     private String InstanceType;
-
-    /**
-     * 系统盘内存大小，最小值为0，最大值为500
-     */
-    @KsYunField(name = "SystemDisk.DiskSize")
-    private String SystemDiskDiskSize;
 
     /**
      * 数据卷容量，单位GB，容量限制依据[实例套餐类型定义](https://docs.ksyun.com/documents/705)变化，如果调用时未指定，则为相应实例套餐类型最小值。InstanceType为通用型主机时，此参数不生效。
@@ -79,7 +75,7 @@ public class CreateModelRequest {
      * 标准UUID格式，形如`^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$`
      */
     @KsYunField(name = "SecurityGroupId")
-    private String SecurityGroupId;
+    private List<String> SecurityGroupIdList;
     /**
      * 私有IP地址，指定子网IP地址范围内的任意有效值，代表实例的主IP地址，只能选择一个，绑定到主网卡；如果未指定该参数，系统自动从有效地址池中随机选取一个。
      * 标准IP地址格式
@@ -147,25 +143,75 @@ public class CreateModelRequest {
     @KsYunField(name = "ModelName")
     private String ModelName;
     /**
-     * 不能给默认值，不传默认按价格体系配置systemDisk属性中第一个创建
-     */
-    @KsYunField(name = "SystemDisk.DiskType")
-    private String SystemDiskDiskType;
-    /**
-     * 扩容 offline 离线扩容| online 在线扩容
-     */
-    @KsYunField(name = "SystemDisk.ResizeType")
-    private String SystemDiskResizeType;
-    /**
-     * 模板描述
-     */
-    @KsYunField(name = "VersionDetail")
-    private String VersionDetail;
-    /**
      * 开机失败是否自动删除，默认值是false
      */
     @KsYunField(name = "FailureAutoDelete")
     private Boolean FailureAutoDelete;
+    /***/
+    @KsYunField(name = "SystemDisk")
+
+    private SystemDiskDto SystemDiskList;
+    /**
+     * 操作系统内部的计算机名
+     */
+    @KsYunField(name = "HostName")
+    private String HostName;
+    /**
+     * 创建多台实例时为HostName增加有序后缀，有序后缀从1增加，例如host-1
+     */
+    @KsYunField(name = "HostNameSuffix")
+    private String HostNameSuffix;
+    /**
+     * 用户自定义数据
+     */
+    @KsYunField(name = "UserData")
+    private String UserData;
+    /***/
+    @KsYunField(name = "NetworkInterface")
+    private List<NetworkInterfaceDto> NetworkInterfaceList;
+    /***/
+    @KsYunField(name = "Tag")
+    private List<TagDto> TagList;
+    /**
+     * 购买EIP，true or false；传true即为购买EIP，下面关于EIP的参数生效；传false为稍后购买，下面的EIP参数不生效
+     */
+    @KsYunField(name = "AllocateAddress")
+    private Boolean AllocateAddress;
+    /**
+     * 是否支持ipV6
+     */
+    @KsYunField(name = "IsDistributeIpv6")
+    private Boolean IsDistributeIpv6;
+    /**
+     * 内存
+     */
+    @KsYunField(name = "Mem")
+    private String Mem;
+    /**
+     * cpu
+     */
+    @KsYunField(name = "Cpu")
+    private String Cpu;
+    /**
+     * Iam角色名称
+     */
+    @KsYunField(name = "IamRoleName")
+    private String IamRoleName;
+    /**
+     * 整机镜像数据盘类型
+     */
+    @KsYunField(name = "AssembledImageDataDiskType")
+    private String AssembledImageDataDiskType;
+    /**
+     * 本地盘快照id
+     */
+    @KsYunField(name = "LocalVolumeSnapshotId")
+    private String LocalVolumeSnapshotId;
+    /**
+     * 是否同步ebs标签
+     */
+    @KsYunField(name = "SyncTag")
+    private Boolean SyncTag;
 
     @Data
     @ToString
@@ -188,7 +234,63 @@ public class CreateModelRequest {
          */
         @KsYunField(name = "DeleteWithInstance")
         private Boolean DeleteWithInstance;
+        /**
+         * 云盘快照id
+         */
+        @KsYunField(name = "SnapshotId")
+        private String SnapshotId;
+        /***/
+        @KsYunField(name = "SnapshotName")
+        private String SnapshotName;
     }
 
+    @Data
+    @ToString
+    public static class SystemDiskDto {
+        /**
+         * 不能给默认值，不传默认按价格体系配置systemDisk属性中第一个创建
+         */
+        @KsYunField(name = "DiskType")
+        private String DiskType;
+        /**
+         * 系统盘内存大小，最小值为0，最大值为500
+         */
+        @KsYunField(name = "DiskSize")
+        private String DiskSize;
+    }
+
+    @Data
+    @ToString
+    public static class NetworkInterfaceDto {
+        /**
+         * 辅网卡的子网id不创建辅网卡时非必填，创建辅网卡时必填
+         */
+        @KsYunField(name = "SubnetId")
+        private String SubnetId;
+        /**
+         * 辅网卡的安全组id不创建辅网卡时非必填，创建辅网卡时必填
+         */
+        @KsYunField(name = "SecurityGroupId")
+        private List<String> SecurityGroupIdList;
+        /**
+         * 辅网卡的内网ip,创建辅网卡传了按传的ip开机，不传自动分配
+         */
+        @KsYunField(name = "PrivateIpAddress")
+        private String PrivateIpAddress;
+    }
+
+    @Data
+    @ToString
+    public static class TagDto {
+        /***/
+        @KsYunField(name = "Key")
+        private String Key;
+        /***/
+        @KsYunField(name = "Id")
+        private Integer Id;
+        /***/
+        @KsYunField(name = "Value")
+        private String Value;
+    }
 
 }

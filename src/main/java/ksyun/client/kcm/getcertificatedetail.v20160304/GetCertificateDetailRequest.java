@@ -15,5 +15,4 @@ public class GetCertificateDetailRequest {
     @KsYunField(name = "CertificateId")
     private String CertificateId;
 
-
 }

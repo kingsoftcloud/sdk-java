@@ -26,7 +26,7 @@ public class ModifySlbRuleClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ModifySlbRuleClient(Credential credential) {

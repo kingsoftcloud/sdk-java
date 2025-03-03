@@ -35,5 +35,4 @@ public class ExecContainerCommandRequest {
     @KsYunField(name = "TTY")
     private Boolean TTY;
 
-
 }

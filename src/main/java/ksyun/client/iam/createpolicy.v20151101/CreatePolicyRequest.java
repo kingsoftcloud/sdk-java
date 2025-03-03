@@ -37,5 +37,4 @@ public class CreatePolicyRequest {
     @KsYunField(name = "CreateMode")
     private String CreateMode;
 
-
 }

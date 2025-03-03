@@ -85,5 +85,4 @@ public class CreateDBInstanceReadReplicaRequest {
     @KsYunField(name = "Disk")
     private Integer Disk;
 
-
 }

@@ -15,5 +15,4 @@ public class DescribeMongoDBInstanceRequest {
     @KsYunField(name = "InstanceId")
     private String InstanceId;
 
-
 }

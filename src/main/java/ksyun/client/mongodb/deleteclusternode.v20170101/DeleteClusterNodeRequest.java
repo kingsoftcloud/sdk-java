@@ -21,5 +21,4 @@ public class DeleteClusterNodeRequest {
     @KsYunField(name = "NodeId")
     private String NodeId;
 
-
 }

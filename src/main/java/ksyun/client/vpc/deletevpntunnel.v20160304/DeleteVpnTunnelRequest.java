@@ -15,5 +15,4 @@ public class DeleteVpnTunnelRequest {
     @KsYunField(name = "VpnTunnelId")
     private String VpnTunnelId;
 
-
 }

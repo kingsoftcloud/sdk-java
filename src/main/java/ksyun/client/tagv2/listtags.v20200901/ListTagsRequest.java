@@ -33,5 +33,4 @@ public class ListTagsRequest {
     @KsYunField(name = "Value")
     private String Value;
 
-
 }

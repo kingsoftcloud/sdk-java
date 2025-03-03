@@ -29,5 +29,4 @@ public class BatchModifyNatRateLimitRequest {
     @KsYunField(name = "NatRateLimitId")
     private List<String> NatRateLimitIdList;
 
-
 }

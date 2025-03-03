@@ -17,5 +17,4 @@ public class ListPolicyVersionsRequest {
     @KsYunField(name = "PolicyKrn")
     private String PolicyKrn;
 
-
 }

@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname ListRegionClient
- * @Description ListRegion
+ * @Description 其他-查询地域列表
  */
 @Slf4j
 public class ListRegionClient extends BaseClient {
@@ -26,7 +26,7 @@ public class ListRegionClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ListRegionClient(Credential credential) {

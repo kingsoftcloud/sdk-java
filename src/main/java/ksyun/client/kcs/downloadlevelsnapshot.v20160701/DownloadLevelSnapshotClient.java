@@ -26,7 +26,7 @@ public class DownloadLevelSnapshotClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DownloadLevelSnapshotClient(Credential credential) {

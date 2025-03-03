@@ -15,5 +15,4 @@ public class ReturnEpcRequest {
     @KsYunField(name = "HostId")
     private String HostId;
 
-
 }

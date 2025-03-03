@@ -1,12 +1,10 @@
 package ksyun.client.cen.describecenroutes.v20160304;
 
 import common.annotation.KsYunField;
-import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
-import java.util.Arrays;
 
 /**
  * @Classname DescribeCenRoutesRequest
@@ -41,10 +39,12 @@ public class DescribeCenRoutesRequest {
     public static class FilterDto {
         /**
          * 有效值：
-         * - cen-id，云企业网的ID
-         * - instance-type，实例的类型
-         * -status，状态
-         * - region，机房Code
+         * - cen-id，云企业网ID
+         * - network-instance-id，网络实例ID
+         * - instance-type，实例类型
+         * - region，金山云机房Code
+         * - destination-cidr-block，目标网段
+         * - instance-route-type，实例路由类型
          */
         @KsYunField(name = "Name")
         private String Name;
@@ -52,6 +52,5 @@ public class DescribeCenRoutesRequest {
         @KsYunField(name = "Value")
         private List<String> ValueList;
     }
-
 
 }

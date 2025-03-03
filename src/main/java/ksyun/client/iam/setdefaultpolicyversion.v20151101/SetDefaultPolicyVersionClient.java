@@ -26,7 +26,7 @@ public class SetDefaultPolicyVersionClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public SetDefaultPolicyVersionClient(Credential credential) {

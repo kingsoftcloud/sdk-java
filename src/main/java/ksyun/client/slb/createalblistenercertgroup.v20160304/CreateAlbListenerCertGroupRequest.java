@@ -15,5 +15,4 @@ public class CreateAlbListenerCertGroupRequest {
     @KsYunField(name = "AlbListenerId")
     private String AlbListenerId;
 
-
 }

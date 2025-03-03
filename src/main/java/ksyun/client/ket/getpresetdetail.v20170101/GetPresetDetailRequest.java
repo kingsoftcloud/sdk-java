@@ -27,5 +27,4 @@ public class GetPresetDetailRequest {
     @KsYunField(name = "Preset")
     private String Preset;
 
-
 }

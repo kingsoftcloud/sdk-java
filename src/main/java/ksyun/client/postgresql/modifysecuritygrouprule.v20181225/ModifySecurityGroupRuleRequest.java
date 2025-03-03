@@ -67,5 +67,4 @@ public class ModifySecurityGroupRuleRequest {
         private String SecurityGroupRuleProtocol;
     }
 
-
 }

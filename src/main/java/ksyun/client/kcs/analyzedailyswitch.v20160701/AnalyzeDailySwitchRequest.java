@@ -27,5 +27,4 @@ public class AnalyzeDailySwitchRequest {
     @KsYunField(name = "SlowLog")
     private Boolean SlowLog;
 
-
 }

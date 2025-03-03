@@ -27,5 +27,4 @@ public class ListTagValuesRequest {
     @KsYunField(name = "PageSize")
     private Integer PageSize;
 
-
 }

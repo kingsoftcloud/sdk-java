@@ -17,5 +17,4 @@ public class SwitchImageTypeRequest {
     @KsYunField(name = "ImageId")
     private List<String> ImageIdList;
 
-
 }

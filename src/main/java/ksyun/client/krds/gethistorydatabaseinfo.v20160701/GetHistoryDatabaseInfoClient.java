@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname GetHistoryDatabaseInfoClient
- * @Description 获取指定时间点附近或者备份集的库表信息
+ * @Description get hitstory database info
  */
 @Slf4j
 public class GetHistoryDatabaseInfoClient extends BaseClient {
@@ -26,7 +26,7 @@ public class GetHistoryDatabaseInfoClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public GetHistoryDatabaseInfoClient(Credential credential) {

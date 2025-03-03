@@ -15,5 +15,4 @@ public class ClusterHealthStatisticRequest {
     @KsYunField(name = "ClusterId")
     private String ClusterId;
 
-
 }

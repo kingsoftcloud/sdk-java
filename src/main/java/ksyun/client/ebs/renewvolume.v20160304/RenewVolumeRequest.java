@@ -21,5 +21,4 @@ public class RenewVolumeRequest {
     @KsYunField(name = "PurchaseTime")
     private Integer PurchaseTime;
 
-
 }

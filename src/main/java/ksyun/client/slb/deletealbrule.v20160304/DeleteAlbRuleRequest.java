@@ -27,5 +27,4 @@ public class DeleteAlbRuleRequest {
     @KsYunField(name = "AlbRuleValue")
     private String AlbRuleValue;
 
-
 }

@@ -15,5 +15,4 @@ public class DescribeInstanceStatisticRequest {
     @KsYunField(name = "Action")
     private String Action;
 
-
 }

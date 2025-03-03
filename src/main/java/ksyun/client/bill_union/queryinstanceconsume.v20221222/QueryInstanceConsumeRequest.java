@@ -39,5 +39,4 @@ public class QueryInstanceConsumeRequest {
     @KsYunField(name = "Size")
     private Integer Size;
 
-
 }

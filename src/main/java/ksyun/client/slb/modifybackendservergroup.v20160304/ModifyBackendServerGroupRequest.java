@@ -21,5 +21,4 @@ public class ModifyBackendServerGroupRequest {
     @KsYunField(name = "BackendServerGroupName")
     private String BackendServerGroupName;
 
-
 }

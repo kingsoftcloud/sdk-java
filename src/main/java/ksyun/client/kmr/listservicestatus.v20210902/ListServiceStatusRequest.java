@@ -15,5 +15,4 @@ public class ListServiceStatusRequest {
     @KsYunField(name = "ClusterId")
     private String ClusterId;
 
-
 }

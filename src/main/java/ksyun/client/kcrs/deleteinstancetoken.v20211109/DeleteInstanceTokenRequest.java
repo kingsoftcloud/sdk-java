@@ -21,5 +21,4 @@ public class DeleteInstanceTokenRequest {
     @KsYunField(name = "TokenId")
     private String TokenId;
 
-
 }

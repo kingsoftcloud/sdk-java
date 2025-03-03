@@ -19,5 +19,4 @@ public class ListConfigurationsRequest {
     @KsYunField(name = "ServiceName")
     private String ServiceName;
 
-
 }

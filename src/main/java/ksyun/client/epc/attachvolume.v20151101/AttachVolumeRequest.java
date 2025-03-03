@@ -21,5 +21,4 @@ public class AttachVolumeRequest {
     @KsYunField(name = "VolumeId")
     private String VolumeId;
 
-
 }

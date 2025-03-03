@@ -15,5 +15,4 @@ public class ListTagValuesRequest {
     @KsYunField(name = "ClusterId")
     private String ClusterId;
 
-
 }

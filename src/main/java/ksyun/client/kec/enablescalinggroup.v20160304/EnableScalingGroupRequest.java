@@ -1,12 +1,7 @@
 package ksyun.client.kec.enablescalinggroup.v20160304;
 
 import common.annotation.KsYunField;
-import lombok.Builder;
 import lombok.Data;
-import lombok.ToString;
-
-import java.util.List;
-import java.util.Arrays;
 
 /**
  * @Classname EnableScalingGroupRequest
@@ -19,6 +14,5 @@ public class EnableScalingGroupRequest {
      */
     @KsYunField(name = "ScalingGroupId")
     private String ScalingGroupId;
-
 
 }

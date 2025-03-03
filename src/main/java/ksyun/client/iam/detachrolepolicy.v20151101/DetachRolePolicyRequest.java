@@ -21,5 +21,4 @@ public class DetachRolePolicyRequest {
     @KsYunField(name = "PolicyKrn")
     private String PolicyKrn;
 
-
 }

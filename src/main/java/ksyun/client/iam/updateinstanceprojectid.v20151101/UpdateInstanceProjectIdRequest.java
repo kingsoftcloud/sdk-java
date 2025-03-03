@@ -33,5 +33,4 @@ public class UpdateInstanceProjectIdRequest {
     @KsYunField(name = "Version")
     private String Version;
 
-
 }

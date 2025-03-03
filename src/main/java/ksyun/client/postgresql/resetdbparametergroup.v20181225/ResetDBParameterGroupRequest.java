@@ -15,5 +15,4 @@ public class ResetDBParameterGroupRequest {
     @KsYunField(name = "DBParameterGroupId")
     private String DBParameterGroupId;
 
-
 }

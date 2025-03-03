@@ -33,5 +33,4 @@ public class DescribeDBLogFilesRequest {
     @KsYunField(name = "MaxRecords")
     private Integer MaxRecords;
 
-
 }

@@ -21,5 +21,4 @@ public class DescribeLastLogRequest {
     @KsYunField(name = "DBLogType")
     private String DBLogType;
 
-
 }

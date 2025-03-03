@@ -28,5 +28,4 @@ public class AssociateVpcsRequest {
     @KsYunField(name = "VpcId")
     private String VpcId;
 
-
 }

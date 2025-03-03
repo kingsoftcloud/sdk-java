@@ -15,5 +15,4 @@ public class DescribeCenBandWidthPackageUsageRequest {
     @KsYunField(name = "CenBandWidthPackageId")
     private String CenBandWidthPackageId;
 
-
 }

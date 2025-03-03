@@ -21,5 +21,4 @@ public class SetPrivateLinkDeleteProtectionRequest {
     @KsYunField(name = "DeleteProtection")
     private String DeleteProtection;
 
-
 }

@@ -69,5 +69,4 @@ public class SlowLogDetailRequest {
     @KsYunField(name = "checksum")
     private String Checksum;
 
-
 }

@@ -26,7 +26,7 @@ public class DeleteInstanceClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DeleteInstanceClient(Credential credential) {

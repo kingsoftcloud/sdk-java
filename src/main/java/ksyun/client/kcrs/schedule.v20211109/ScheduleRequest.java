@@ -21,5 +21,4 @@ public class ScheduleRequest {
     @KsYunField(name = "TestRun")
     private Boolean TestRun;
 
-
 }

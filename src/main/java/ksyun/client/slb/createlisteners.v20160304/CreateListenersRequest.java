@@ -135,5 +135,4 @@ public class CreateListenersRequest {
     @KsYunField(name = "CaEnabled")
     private Boolean CaEnabled;
 
-
 }

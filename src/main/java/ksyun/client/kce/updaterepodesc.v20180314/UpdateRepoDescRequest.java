@@ -21,5 +21,4 @@ public class UpdateRepoDescRequest {
     @KsYunField(name = "Description")
     private String Description;
 
-
 }

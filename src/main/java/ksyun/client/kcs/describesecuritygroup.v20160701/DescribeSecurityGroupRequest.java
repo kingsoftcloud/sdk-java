@@ -39,5 +39,4 @@ public class DescribeSecurityGroupRequest {
     @KsYunField(name = "Limit")
     private Integer Limit;
 
-
 }

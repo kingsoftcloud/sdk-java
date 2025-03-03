@@ -15,5 +15,4 @@ public class DeleteSubnetRequest {
     @KsYunField(name = "SubnetId")
     private String SubnetId;
 
-
 }

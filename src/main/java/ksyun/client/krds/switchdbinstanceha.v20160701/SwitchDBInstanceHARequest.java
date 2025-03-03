@@ -15,5 +15,4 @@ public class SwitchDBInstanceHARequest {
     @KsYunField(name = "DBInstanceIdentifier")
     private String DBInstanceIdentifier;
 
-
 }

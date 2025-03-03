@@ -15,5 +15,4 @@ public class DeleteRemoteManagementRequest {
     @KsYunField(name = "RemoteManagementId")
     private String RemoteManagementId;
 
-
 }

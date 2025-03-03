@@ -26,7 +26,7 @@ public class DeleteImageClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DeleteImageClient(Credential credential) {

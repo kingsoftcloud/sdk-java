@@ -26,7 +26,7 @@ public class GetFlowHitRateDataClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public GetFlowHitRateDataClient(Credential credential) {

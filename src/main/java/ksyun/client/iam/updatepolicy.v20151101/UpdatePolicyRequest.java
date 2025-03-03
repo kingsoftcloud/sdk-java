@@ -21,5 +21,4 @@ public class UpdatePolicyRequest {
     @KsYunField(name = "NewDescription")
     private String NewDescription;
 
-
 }

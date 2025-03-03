@@ -21,5 +21,4 @@ public class AssociateClusterRequest {
     @KsYunField(name = "ClusterId")
     private String ClusterId;
 
-
 }

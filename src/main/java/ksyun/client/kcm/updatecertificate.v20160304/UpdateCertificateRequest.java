@@ -147,5 +147,13 @@ public class UpdateCertificateRequest {
     @KsYunField(name = "Algorithm")
     private String Algorithm;
 
+    /**
+     * 证书签名算法。可选值
+     * <p>
+     * SHA256-FULLCHAIN
+     * SHA2-256 默认值
+     */
+    @KsYunField(name = "CertSignature")
+    private String CertSignature;
 
 }

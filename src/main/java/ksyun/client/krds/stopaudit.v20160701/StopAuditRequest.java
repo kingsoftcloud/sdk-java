@@ -15,5 +15,4 @@ public class StopAuditRequest {
     @KsYunField(name = "DBInstanceIdentifier")
     private String DBInstanceIdentifier;
 
-
 }

@@ -10,22 +10,15 @@ import lombok.Data;
 @Data
 public class ResizeCacheClusterRequest {
     /**
-     * 缓存服务ID
+     * Action
      */
-    @KsYunField(name = "CacheId")
-    private String CacheId;
+    @KsYunField(name = "Action")
+    private String Action;
 
     /**
-     * 更配目标大小，以GB为单位 	 缓存资源为单主从模式时，可选值为：{1, 2, 4, 8, 16, 32, 64}；
+     * Version
      */
-    @KsYunField(name = "Capacity")
-    private String Capacity;
-
-    /**
-     * 缓存服务引擎             	 取固定值：memcached
-     */
-    @KsYunField(name = "Engine")
-    private String Engine;
-
+    @KsYunField(name = "Version")
+    private String Version;
 
 }

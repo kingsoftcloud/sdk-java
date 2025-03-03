@@ -21,5 +21,4 @@ public class DeleteProjectMemberRequest {
     @KsYunField(name = "MemberIds")
     private String MemberIds;
 
-
 }

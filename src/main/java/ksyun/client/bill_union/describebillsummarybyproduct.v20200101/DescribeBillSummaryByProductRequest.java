@@ -21,5 +21,10 @@ public class DescribeBillSummaryByProductRequest {
     @KsYunField(name = "BillEndMonth")
     private String BillEndMonth;
 
+    /**
+     * 成员账号Id
+     */
+    @KsYunField(name = "SubAccount")
+    private Integer SubAccount;
 
 }

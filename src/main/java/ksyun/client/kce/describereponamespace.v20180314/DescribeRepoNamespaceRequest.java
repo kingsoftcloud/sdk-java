@@ -47,5 +47,4 @@ public class DescribeRepoNamespaceRequest {
         private List<String> ValueList;
     }
 
-
 }

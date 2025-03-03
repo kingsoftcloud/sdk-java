@@ -19,7 +19,7 @@ public class CreateInstanceRequest {
     private String InstanceName;
 
     /**
-     * 集群已开启的实例类型,多个模块用逗号分隔。如："tidb,pd,tikv,timonitor"。
+     * 集群已开启的实例类型,多个模块用逗号分隔。如："tidb,pd,tikv,timonitor,tidcd"。
      */
     @KsYunField(name = "EnableModules")
     private String EnableModules;
@@ -34,7 +34,7 @@ public class CreateInstanceRequest {
      * "tidisk": 0
      * }
      */
-    @KsYunField(name = "ModuleConfigs", type = 2)
+    @KsYunField(name = "ModuleConfigs")
     private List<ModuleConfigsDto> ModuleConfigsList;
     /**
      * 管理员账号名称，默认：root。
@@ -77,21 +77,6 @@ public class CreateInstanceRequest {
     @KsYunField(name = "ProjectId")
     private String ProjectId;
     /**
-     * 最大备份记录数。
-     */
-    @KsYunField(name = "BackupConfig.MaxBackups")
-    private Integer BackupConfigMaxBackups;
-    /**
-     * 备份记录最大保留时长，单位：小时。
-     */
-    @KsYunField(name = "BackupConfig.MaxReservedHours")
-    private Integer BackupConfigMaxReservedHours;
-    /**
-     * 自动备份时间段。默认值："01:00-02:00"。
-     */
-    @KsYunField(name = "BackupConfig.PreferredBackupTime")
-    private String BackupConfigPreferredBackupTime;
-    /**
      * 开启自动备份。取固定值：true。
      */
     @KsYunField(name = "EnableAutoBackup")
@@ -121,11 +106,96 @@ public class CreateInstanceRequest {
      */
     @KsYunField(name = "SecurityGroupId")
     private String SecurityGroupId;
+    /**
+     * 备份配置
+     */
+    @KsYunField(name = "BackupConfig")
+
+    private BackupConfigDto BackupConfigList;
+    /**
+     * 实例备份id(指定备份恢复时需传)
+     */
+    @KsYunField(name = "backupId")
+    private String BackupId;
+    /**
+     * 备份恢复实例ID(根据时间点恢复的源实例)
+     * ```
+     * 指定时间点恢复，需要如下参数都传
+     * <p>
+     * 注意：
+     * backupRestoreInstanceId
+     * backupRestoreTime
+     * ```
+     */
+    @KsYunField(name = "backupRestoreInstanceId")
+    private String BackupRestoreInstanceId;
+    /**
+     * 备份恢复时间点(根据时间点恢复的指定时间点)
+     * ```
+     * 格式：2024-03-14 10:46:02
+     * <p>
+     * 注意：
+     * backupRestoreInstanceId
+     * backupRestoreTime
+     * ```
+     */
+    @KsYunField(name = "backupRestoreTime")
+    private String BackupRestoreTime;
 
     @Data
     @ToString
     public static class ModuleConfigsDto {
+        /**
+         * 模块类型
+         */
+        @KsYunField(name = "ModuleType")
+        private String ModuleType;
+        /**
+         * 模块套餐
+         */
+        @KsYunField(name = "PackageCode")
+        private String PackageCode;
+        /**
+         * 模块副本数
+         */
+        @KsYunField(name = "Replicas")
+        private Integer Replicas;
+        /**
+         * 模块CPU数
+         */
+        @KsYunField(name = "Cpu")
+        private Integer Cpu;
+        /**
+         * 模块Mem数
+         */
+        @KsYunField(name = "Mem")
+        private Integer Mem;
+        /**
+         * 模块disk数-
+         */
+        @KsYunField(name = "Tidisk")
+        private Integer Tidisk;
     }
 
+    @Data
+    @ToString
+    public static class BackupConfigDto {
+        /**
+         * 最大备份记录数。暂不可改
+         */
+        @KsYunField(name = "MaxBackups")
+        private String MaxBackups;
+        /**
+         * 备份最大保留时长，单位：小时；
+         * 默认：72小时
+         */
+        @KsYunField(name = "MaxReservedHours")
+        private String MaxReservedHours;
+        /**
+         * 自动备份时间段。默认值：“01:00-02:00”。
+         */
+        @KsYunField(name = "PreferredBackupTime")
+        private String PreferredBackupTime;
+    }
 
 }

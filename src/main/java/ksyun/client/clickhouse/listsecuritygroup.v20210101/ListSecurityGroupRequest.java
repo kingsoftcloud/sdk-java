@@ -15,5 +15,4 @@ public class ListSecurityGroupRequest {
     @KsYunField(name = "ProductType")
     private Integer ProductType;
 
-
 }

@@ -21,5 +21,4 @@ public class DescribeNetworkRequest {
     @KsYunField(name = "ClusterName")
     private String ClusterName;
 
-
 }

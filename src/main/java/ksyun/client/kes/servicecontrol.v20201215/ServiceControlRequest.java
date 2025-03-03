@@ -30,5 +30,4 @@ public class ServiceControlRequest {
     @KsYunField(name = "Rolling")
     private String Rolling;
 
-
 }

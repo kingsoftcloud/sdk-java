@@ -15,5 +15,4 @@ public class DeleteForwardSourceRequest {
     @KsYunField(name = "ForwardSourceId")
     private String ForwardSourceId;
 
-
 }

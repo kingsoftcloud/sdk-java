@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname RestoreToSgInstanceClient
- * @Description 库表级恢复到临时实例
+ * @Description restore to sginstance
  */
 @Slf4j
 public class RestoreToSgInstanceClient extends BaseClient {
@@ -26,7 +26,7 @@ public class RestoreToSgInstanceClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public RestoreToSgInstanceClient(Credential credential) {

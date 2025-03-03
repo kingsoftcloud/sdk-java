@@ -21,5 +21,4 @@ public class StrategycreateRequest {
     @KsYunField(name = "description")
     private String Description;
 
-
 }

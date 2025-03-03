@@ -83,5 +83,4 @@ public class CreateMongoDBInstanceRequest {
     @KsYunField(name = "InstanceClass")
     private String InstanceClass;
 
-
 }

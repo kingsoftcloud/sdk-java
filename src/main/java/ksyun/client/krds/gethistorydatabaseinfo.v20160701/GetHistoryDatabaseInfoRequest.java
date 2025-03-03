@@ -27,5 +27,4 @@ public class GetHistoryDatabaseInfoRequest {
     @KsYunField(name = "RestorableTime")
     private String RestorableTime;
 
-
 }

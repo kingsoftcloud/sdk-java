@@ -29,5 +29,4 @@ public class UseHotStandByEpcRequest {
     @KsYunField(name = "RetainInstanceInfo")
     private String RetainInstanceInfo;
 
-
 }

@@ -15,5 +15,4 @@ public class DisassociateAddressRequest {
     @KsYunField(name = "AllocationId")
     private String AllocationId;
 
-
 }

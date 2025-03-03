@@ -45,5 +45,4 @@ public class DeleteZoneRecordRequest {
     @KsYunField(name = "Port")
     private String Port;
 
-
 }

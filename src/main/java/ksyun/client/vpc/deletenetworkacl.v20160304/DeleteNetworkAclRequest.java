@@ -15,5 +15,4 @@ public class DeleteNetworkAclRequest {
     @KsYunField(name = "NetworkAclId")
     private String NetworkAclId;
 
-
 }

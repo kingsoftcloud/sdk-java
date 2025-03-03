@@ -10,10 +10,9 @@ import lombok.Data;
 @Data
 public class DescribeMongoDBShardNodeRequest {
     /**
-     * 实例ID
+     * 实例Id
      */
     @KsYunField(name = "InstanceId")
     private String InstanceId;
-
 
 }

@@ -35,5 +35,4 @@ public class CreateNetworkInterfaceRequest {
     @KsYunField(name = "SecurityGroupId")
     private List<String> SecurityGroupIdList;
 
-
 }

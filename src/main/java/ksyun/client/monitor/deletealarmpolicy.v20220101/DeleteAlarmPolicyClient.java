@@ -26,7 +26,7 @@ public class DeleteAlarmPolicyClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DeleteAlarmPolicyClient(Credential credential) {

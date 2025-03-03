@@ -99,5 +99,4 @@ public class DescribeCacheClustersRequest {
     @KsYunField(name = "Mode")
     private String Mode;
 
-
 }

@@ -21,5 +21,4 @@ public class ListRolesRequest {
     @KsYunField(name = "MaxItems")
     private Integer MaxItems;
 
-
 }

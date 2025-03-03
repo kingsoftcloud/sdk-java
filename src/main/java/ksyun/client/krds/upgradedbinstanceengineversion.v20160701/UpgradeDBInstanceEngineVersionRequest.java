@@ -27,5 +27,4 @@ public class UpgradeDBInstanceEngineVersionRequest {
     @KsYunField(name = "EngineVersion")
     private String EngineVersion;
 
-
 }

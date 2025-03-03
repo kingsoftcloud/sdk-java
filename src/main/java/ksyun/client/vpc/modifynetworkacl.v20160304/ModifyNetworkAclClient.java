@@ -26,7 +26,7 @@ public class ModifyNetworkAclClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ModifyNetworkAclClient(Credential credential) {

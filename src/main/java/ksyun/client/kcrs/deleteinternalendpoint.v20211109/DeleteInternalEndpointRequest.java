@@ -1,12 +1,7 @@
 package ksyun.client.kcrs.deleteinternalendpoint.v20211109;
 
 import common.annotation.KsYunField;
-import lombok.Builder;
 import lombok.Data;
-import lombok.ToString;
-
-import java.util.List;
-import java.util.Arrays;
 
 /**
  * @Classname DeleteInternalEndpointRequest
@@ -31,6 +26,5 @@ public class DeleteInternalEndpointRequest {
      */
     @KsYunField(name = "EniLBIp")
     private String EniLBIp;
-
 
 }

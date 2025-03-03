@@ -23,5 +23,4 @@ public class DescribeForwardConfRequest {
     @KsYunField(name = "ForwardConfId")
     private List<String> ForwardConfIdList;
 
-
 }

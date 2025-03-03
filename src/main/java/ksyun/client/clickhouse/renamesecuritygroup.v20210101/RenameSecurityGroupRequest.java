@@ -33,5 +33,4 @@ public class RenameSecurityGroupRequest {
     @KsYunField(name = "Description")
     private String Description;
 
-
 }

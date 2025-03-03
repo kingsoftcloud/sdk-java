@@ -26,7 +26,7 @@ public class DeleteUserClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DeleteUserClient(Credential credential) {

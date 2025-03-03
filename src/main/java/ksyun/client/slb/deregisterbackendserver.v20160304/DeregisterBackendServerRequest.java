@@ -15,5 +15,4 @@ public class DeregisterBackendServerRequest {
     @KsYunField(name = "RegisterId")
     private String RegisterId;
 
-
 }

@@ -15,5 +15,4 @@ public class DescribeDBInstanceParametersRequest {
     @KsYunField(name = "DBInstanceIdentifier")
     private String DBInstanceIdentifier;
 
-
 }

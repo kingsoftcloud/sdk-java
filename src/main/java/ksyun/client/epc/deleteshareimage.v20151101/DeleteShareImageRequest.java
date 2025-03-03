@@ -21,5 +21,4 @@ public class DeleteShareImageRequest {
     @KsYunField(name = "AccountId.N")
     private String AccountIdN;
 
-
 }

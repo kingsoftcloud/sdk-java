@@ -21,5 +21,4 @@ public class RevokeSecurityGroupEntryRequest {
     @KsYunField(name = "SecurityGroupEntryId")
     private String SecurityGroupEntryId;
 
-
 }

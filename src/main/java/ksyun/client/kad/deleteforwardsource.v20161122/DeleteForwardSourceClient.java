@@ -26,7 +26,7 @@ public class DeleteForwardSourceClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DeleteForwardSourceClient(Credential credential) {

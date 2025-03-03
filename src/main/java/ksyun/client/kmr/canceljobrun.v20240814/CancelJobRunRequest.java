@@ -2,6 +2,9 @@ package ksyun.client.kmr.canceljobrun.v20240814;
 
 import common.annotation.KsYunField;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
 
 /**
  * @Classname CancelJobRunRequest
@@ -16,10 +19,23 @@ public class CancelJobRunRequest {
     private String WorkspaceId;
 
     /**
-     * 作业ID
+     * 停止作业
+     * 支持批量停止
      */
-    @KsYunField(name = "JobRunId")
-    private String JobRunId;
+    @KsYunField(name = "JobRunIds", type = 2)
+    private List<JobRunIdsDto> JobRunIdsList;
 
+    @Data
+    @ToString
+    public static class JobRunIdsDto {
+        /**
+         * 作业ID
+         */
+        private String JobRunId;
+        /**
+         * 作业类型：spark、ray
+         */
+        private String JobType;
+    }
 
 }

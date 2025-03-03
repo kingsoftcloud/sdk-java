@@ -19,25 +19,25 @@ public class CreateInstanceAccountActionRequest {
     private String DBInstanceIdentifier;
 
     /**
-     * 账号名称			数字字母下滑线
+     * 账户名称：数字字母下滑线
      */
     @KsYunField(name = "InstanceAccountName")
     private String InstanceAccountName;
 
     /**
-     * 账号密码
+     * 账户密码
      */
     @KsYunField(name = "InstanceAccountPassword")
     private String InstanceAccountPassword;
 
     /**
-     * 数据库账号描述
+     * 账户描述
      */
     @KsYunField(name = "InstanceAccountDescription")
     private String InstanceAccountDescription;
 
     /**
-     * 该账号对应的数据库权限
+     * 该账户对应的数据库权限
      */
     @KsYunField(name = "InstanceAccountPrivileges", type = 2)
     private List<InstanceAccountPrivilegesDto> InstanceAccountPrivilegesList;
@@ -60,6 +60,5 @@ public class CreateInstanceAccountActionRequest {
          */
         private String Privilege;
     }
-
 
 }

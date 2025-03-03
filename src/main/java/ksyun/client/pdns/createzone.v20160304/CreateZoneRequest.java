@@ -33,5 +33,4 @@ public class CreateZoneRequest {
     @KsYunField(name = "ZoneTtl")
     private Integer ZoneTtl;
 
-
 }

@@ -21,5 +21,4 @@ public class ModifyCustomerGatewayRequest {
     @KsYunField(name = "CustomerGatewayName")
     private String CustomerGatewayName;
 
-
 }

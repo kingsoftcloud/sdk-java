@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname DeleteSecurityGroupClient
- * @Description 删除安全组
+ * @Description delete security group
  */
 @Slf4j
 public class DeleteSecurityGroupClient extends BaseClient {
@@ -26,7 +26,7 @@ public class DeleteSecurityGroupClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DeleteSecurityGroupClient(Credential credential) {

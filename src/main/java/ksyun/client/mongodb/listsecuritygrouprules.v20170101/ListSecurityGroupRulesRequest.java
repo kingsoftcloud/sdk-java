@@ -15,5 +15,4 @@ public class ListSecurityGroupRulesRequest {
     @KsYunField(name = "InstanceId")
     private String InstanceId;
 
-
 }

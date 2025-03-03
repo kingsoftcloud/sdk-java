@@ -26,7 +26,8 @@ public class DescribeUseHotStandbyRecordsRequest {
      * replace-type，热备替换类型
      */
     @KsYunField(name = "Filter.N")
-    private List<FilterNDto> Filter;
+
+    private FilterNDto FilterNList;
     /**
      * 每页条数
      */
@@ -57,9 +58,8 @@ public class DescribeUseHotStandbyRecordsRequest {
          * hot-standby-host-type，热备机机型
          * replace-type，热备替换类型
          */
-        @KsYunField(name = "Value.M")
-        private List<String> Value;
+        @KsYunField(name = "Value")
+        private List<String> ValueList;
     }
-
 
 }

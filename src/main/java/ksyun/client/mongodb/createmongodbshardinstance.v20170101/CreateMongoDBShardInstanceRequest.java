@@ -101,5 +101,4 @@ public class CreateMongoDBShardInstanceRequest {
     @KsYunField(name = "MongosClass")
     private String MongosClass;
 
-
 }

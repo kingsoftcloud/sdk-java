@@ -21,5 +21,4 @@ public class ListGroupsRequest {
     @KsYunField(name = "Marker")
     private String Marker;
 
-
 }

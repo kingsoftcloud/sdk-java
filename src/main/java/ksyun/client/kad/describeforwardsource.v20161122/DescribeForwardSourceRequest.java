@@ -23,5 +23,4 @@ public class DescribeForwardSourceRequest {
     @KsYunField(name = "ForwardSourceId")
     private List<String> ForwardSourceIdList;
 
-
 }

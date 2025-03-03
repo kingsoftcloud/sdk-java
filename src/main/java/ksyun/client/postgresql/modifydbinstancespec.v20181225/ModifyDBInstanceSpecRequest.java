@@ -51,5 +51,4 @@ public class ModifyDBInstanceSpecRequest {
     @KsYunField(name = "Disk")
     private Integer Disk;
 
-
 }

@@ -33,5 +33,4 @@ public class SqlAuditLineChartRequest {
     @KsYunField(name = "EndTime")
     private String EndTime;
 
-
 }

@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname DescribeAuditHotCountClient
- * @Description 某时间段SQL执行次数TOP10查询接口
+ * @Description 某时段SQL执行次数TOP10查询
  */
 @Slf4j
 public class DescribeAuditHotCountClient extends BaseClient {
@@ -26,7 +26,7 @@ public class DescribeAuditHotCountClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribeAuditHotCountClient(Credential credential) {

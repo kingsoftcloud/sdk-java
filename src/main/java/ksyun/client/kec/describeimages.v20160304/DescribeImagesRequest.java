@@ -23,5 +23,4 @@ public class DescribeImagesRequest {
     @KsYunField(name = "ImageType")
     private String ImageType;
 
-
 }

@@ -52,7 +52,7 @@ public class CreateImageCacheRequest {
     /**
      * 拉取镜像仓库中私有镜像的凭据，公开镜像无须填写凭据
      */
-    @KsYunField(name = "ImageRegistryCredential", type = 2)
+    @KsYunField(name = "ImageRegistryCredential")
     private List<ImageRegistryCredentialDto> ImageRegistryCredentialList;
     /**
      * 镜像缓存类型
@@ -71,18 +71,20 @@ public class CreateImageCacheRequest {
     @ToString
     public static class ImageRegistryCredentialDto {
         /**
-         * 可以是ip或者domain，请与填写的镜像的server域名保持一致，否则无法使用
+         * 镜像仓库Server
          */
+        @KsYunField(name = "Server")
         private String Server;
         /**
-         * 仓库用户名
+         * 用户名
          */
+        @KsYunField(name = "Username")
         private String Username;
         /**
-         * 镜像仓库密码
+         * 仓库密码
          */
+        @KsYunField(name = "Password")
         private String Password;
     }
-
 
 }

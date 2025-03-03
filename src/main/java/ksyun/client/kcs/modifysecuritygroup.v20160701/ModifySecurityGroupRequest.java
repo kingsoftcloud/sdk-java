@@ -33,5 +33,4 @@ public class ModifySecurityGroupRequest {
     @KsYunField(name = "SecurityGroupId")
     private String SecurityGroupId;
 
-
 }

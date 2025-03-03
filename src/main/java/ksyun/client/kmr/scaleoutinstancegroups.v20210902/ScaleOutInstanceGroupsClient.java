@@ -26,7 +26,7 @@ public class ScaleOutInstanceGroupsClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ScaleOutInstanceGroupsClient(Credential credential) {

@@ -55,5 +55,4 @@ public class DescribeNetworkInterfacesRequest {
         private List<String> ValueList;
     }
 
-
 }

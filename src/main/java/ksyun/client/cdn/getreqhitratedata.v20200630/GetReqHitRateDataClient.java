@@ -26,7 +26,7 @@ public class GetReqHitRateDataClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public GetReqHitRateDataClient(Credential credential) {

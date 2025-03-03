@@ -34,8 +34,7 @@ public class DescribeMongoDBInstancesRequest {
     private String VnetId;
 
     /**
-     * 项目ID。
-     * 默认是0(默认项目),如果查询全部项目，需要传入所有的项目ID，‘,’隔开。
+     * 项目制ID。如需指定查询多个项目制下实例，用‘,’隔开。默认查询全部项目制。
      */
     @KsYunField(name = "IamProjectId")
     private String IamProjectId;
@@ -107,6 +106,5 @@ public class DescribeMongoDBInstancesRequest {
      */
     @KsYunField(name = "OrderBy")
     private String OrderBy;
-
 
 }

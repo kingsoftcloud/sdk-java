@@ -22,5 +22,4 @@ public class SetDefaultPolicyVersionRequest {
     @KsYunField(name = "VersionId")
     private String VersionId;
 
-
 }

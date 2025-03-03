@@ -38,5 +38,4 @@ public class ListPrivateLinkServerRequest {
         private List<String> ValueList;
     }
 
-
 }

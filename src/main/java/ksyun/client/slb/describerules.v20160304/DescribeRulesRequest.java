@@ -47,5 +47,4 @@ public class DescribeRulesRequest {
         private List<String> ValueList;
     }
 
-
 }

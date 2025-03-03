@@ -21,5 +21,4 @@ public class TerminateModelsRequest {
     @KsYunField(name = "ModelVersion")
     private Integer ModelVersion;
 
-
 }

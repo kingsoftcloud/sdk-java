@@ -13,5 +13,4 @@ public class DescribeContainerGroupEventsRequest {
     @KsYunField(name = "ContainerGroupId")
     private String ContainerGroupId;
 
-
 }

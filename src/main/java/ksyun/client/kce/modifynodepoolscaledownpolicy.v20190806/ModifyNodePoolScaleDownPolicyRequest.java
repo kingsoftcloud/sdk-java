@@ -45,5 +45,4 @@ public class ModifyNodePoolScaleDownPolicyRequest {
     @KsYunField(name = "ScaleDownUtilizationThreshold")
     private Integer ScaleDownUtilizationThreshold;
 
-
 }

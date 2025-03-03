@@ -29,5 +29,4 @@ public class CreateSecurityRuleRequest {
     @KsYunField(name = "Cidrs", type = 2)
     private List<String> CidrsList;
 
-
 }

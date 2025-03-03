@@ -1,0 +1,24 @@
+package ksyun.client.influxdb.deleteaccount.v20191010;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import common.BaseResponseModel;
+import lombok.Data;
+import lombok.ToString;
+
+/**
+ * @Classname DeleteAccountResponse
+ * @Description DeleteAccount 返回体
+ */
+@Data
+@ToString
+public class DeleteAccountResponse extends BaseResponseModel {
+
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
+
+    //返回结果，需要按需扩展
+
+}

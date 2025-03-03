@@ -141,7 +141,14 @@ public class CreateClusterRequest {
      * 控制面日志采集,当用户选择的是独立部署集群时，此选项填写无效；当选择是托管时，可选
      */
     @KsYunField(name = "ControlPlaneLog")
-    private ControlPlaneLogDto ControlPlaneLog;
+
+    private ControlPlaneLogDto ControlPlaneLogList;
+    /**
+     * 开启删除保护
+     * 默认值：True
+     */
+    @KsYunField(name = "EnableDelProtection")
+    private Boolean EnableDelProtection;
 
     @Data
     @ToString
@@ -244,7 +251,12 @@ public class CreateClusterRequest {
         @KsYunField(name = "ProjectName")
         private String ProjectName;
         /**
-         * 指定哪些控制面日志需要被采集，多个组件请采用英文逗号拼接，如apiserver,kcm，有效值\n\n- apiserver \n- kcm\n- scheduler\n- auditing\
+         * 指定哪些控制面日志需要被采集，多个组件请采用英文逗号拼接，如apiserver,kcm，有效值
+         * <p>
+         * - apiserver
+         * - kcm
+         * - scheduler
+         * - auditing"
          */
         @KsYunField(name = "Items")
         private String Items;

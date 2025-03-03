@@ -35,5 +35,4 @@ public class ListUnsecuredInstanceRequest {
     @KsYunField(name = "OrderBy")
     private List<String> OrderByList;
 
-
 }

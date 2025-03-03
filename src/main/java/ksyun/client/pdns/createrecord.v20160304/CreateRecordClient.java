@@ -26,7 +26,7 @@ public class CreateRecordClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public CreateRecordClient(Credential credential) {

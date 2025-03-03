@@ -21,5 +21,4 @@ public class AddFavorRequest {
     @KsYunField(name = "RepoType")
     private String RepoType;
 
-
 }

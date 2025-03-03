@@ -21,5 +21,4 @@ public class GetRetentionTriggerRequest {
     @KsYunField(name = "Namespace")
     private String Namespace;
 
-
 }

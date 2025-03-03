@@ -73,5 +73,4 @@ public class CreateDedicatedHostsRequest {
         private String Value;
     }
 
-
 }

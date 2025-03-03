@@ -21,5 +21,4 @@ public class RenameMongoDBInstanceRequest {
     @KsYunField(name = "Name")
     private String Name;
 
-
 }

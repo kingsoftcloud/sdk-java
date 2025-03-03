@@ -21,5 +21,4 @@ public class ModifyClusterNameRequest {
     @KsYunField(name = "ClusterName")
     private String ClusterName;
 
-
 }

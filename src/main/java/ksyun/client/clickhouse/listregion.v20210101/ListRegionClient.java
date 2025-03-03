@@ -26,7 +26,7 @@ public class ListRegionClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ListRegionClient(Credential credential) {

@@ -21,5 +21,4 @@ public class DeleteSecurityGroupRulesRequest {
     @KsYunField(name = "Cidrs")
     private String Cidrs;
 
-
 }

@@ -15,5 +15,4 @@ public class GetVNCAddressRequest {
     @KsYunField(name = "InstanceId")
     private String InstanceId;
 
-
 }

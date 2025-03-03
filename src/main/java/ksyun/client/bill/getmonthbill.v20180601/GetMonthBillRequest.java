@@ -21,5 +21,4 @@ public class GetMonthBillRequest {
     @KsYunField(name = "BillEndMonth")
     private String BillEndMonth;
 
-
 }

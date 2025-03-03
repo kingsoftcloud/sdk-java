@@ -105,5 +105,4 @@ public class ModifyNodePoolRequest {
         private String Effect;
     }
 
-
 }

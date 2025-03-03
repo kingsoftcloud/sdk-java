@@ -29,5 +29,4 @@ public class BatchCreateNatRateLimitRequest {
     @KsYunField(name = "NetworkInterfaceId")
     private List<String> NetworkInterfaceIdList;
 
-
 }

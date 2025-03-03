@@ -1,12 +1,7 @@
 package ksyun.client.mongodb.deallocateeip.v20170101;
 
 import common.annotation.KsYunField;
-import lombok.Builder;
 import lombok.Data;
-import lombok.ToString;
-
-import java.util.List;
-import java.util.Arrays;
 
 /**
  * @Classname DeallocateEipRequest
@@ -19,6 +14,5 @@ public class DeallocateEipRequest {
      */
     @KsYunField(name = "InstanceId")
     private String InstanceId;
-
 
 }

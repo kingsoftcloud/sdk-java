@@ -1,12 +1,9 @@
 package ksyun.client.monitor.getalertuser.v20210101;
 
 import common.annotation.KsYunField;
-import lombok.Builder;
 import lombok.Data;
-import lombok.ToString;
 
 import java.util.List;
-import java.util.Arrays;
 
 /**
  * @Classname GetAlertUserRequest
@@ -24,6 +21,5 @@ public class GetAlertUserRequest {
      */
     @KsYunField(name = "UserGrpId")
     private List<Integer> UserGrpId;
-
 
 }

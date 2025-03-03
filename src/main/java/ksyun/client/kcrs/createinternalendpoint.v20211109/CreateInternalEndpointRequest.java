@@ -27,5 +27,4 @@ public class CreateInternalEndpointRequest {
     @KsYunField(name = "ReserveSubnetId")
     private String ReserveSubnetId;
 
-
 }

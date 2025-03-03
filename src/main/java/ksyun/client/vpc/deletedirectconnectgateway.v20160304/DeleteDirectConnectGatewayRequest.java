@@ -15,5 +15,4 @@ public class DeleteDirectConnectGatewayRequest {
     @KsYunField(name = "DirectConnectGatewayId")
     private String DirectConnectGatewayId;
 
-
 }

@@ -27,5 +27,4 @@ public class MoveAccountRequest {
     @KsYunField(name = "ToFolderId")
     private String ToFolderId;
 
-
 }

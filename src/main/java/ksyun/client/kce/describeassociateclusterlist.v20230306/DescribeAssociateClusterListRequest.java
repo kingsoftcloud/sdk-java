@@ -35,5 +35,4 @@ public class DescribeAssociateClusterListRequest {
     @KsYunField(name = "ClusterId")
     private List<String> ClusterIdList;
 
-
 }

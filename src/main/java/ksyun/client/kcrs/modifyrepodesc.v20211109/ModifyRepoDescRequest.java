@@ -33,5 +33,4 @@ public class ModifyRepoDescRequest {
     @KsYunField(name = "Desc")
     private String Desc;
 
-
 }

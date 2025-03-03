@@ -1,5 +1,6 @@
 package ksyun.client.eip.getlines.v20160304;
 
+import common.annotation.KsYunField;
 import lombok.Data;
 
 /**
@@ -8,5 +9,28 @@ import lombok.Data;
  */
 @Data
 public class GetLinesRequest {
+    /**
+     * 线路类型的ID
+     */
+    @KsYunField(name = "Uuid")
+    private String Uuid;
+
+    /**
+     * 线路LineName
+     */
+    @KsYunField(name = "Name")
+    private String Name;
+
+    /**
+     * IpVersion版本，不传查询所有的，ipv6|ipv4
+     */
+    @KsYunField(name = "IpVersion")
+    private String IpVersion;
+
+    /**
+     * LineType，线路类型，例如:Public
+     */
+    @KsYunField(name = "Type")
+    private String Type;
 
 }

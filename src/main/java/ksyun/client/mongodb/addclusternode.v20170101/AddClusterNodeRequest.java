@@ -33,5 +33,4 @@ public class AddClusterNodeRequest {
     @KsYunField(name = "NodeStorage")
     private Integer NodeStorage;
 
-
 }

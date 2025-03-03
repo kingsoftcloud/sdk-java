@@ -15,5 +15,4 @@ public class DeleteLoadBalancerAclEntryRequest {
     @KsYunField(name = "LoadBalancerAclEntryId")
     private String LoadBalancerAclEntryId;
 
-
 }

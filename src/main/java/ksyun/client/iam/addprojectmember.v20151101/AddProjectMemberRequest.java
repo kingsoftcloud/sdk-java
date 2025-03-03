@@ -28,5 +28,4 @@ public class AddProjectMemberRequest {
     @KsYunField(name = "IdentityType")
     private Integer IdentityType;
 
-
 }

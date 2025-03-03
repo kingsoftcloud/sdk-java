@@ -26,7 +26,7 @@ public class DescribePrometheusInstanceClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DescribePrometheusInstanceClient(Credential credential) {

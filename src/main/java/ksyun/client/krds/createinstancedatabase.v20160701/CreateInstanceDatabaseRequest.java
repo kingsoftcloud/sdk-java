@@ -33,5 +33,4 @@ public class CreateInstanceDatabaseRequest {
     @KsYunField(name = "InstanceDatabaseDescription")
     private String InstanceDatabaseDescription;
 
-
 }

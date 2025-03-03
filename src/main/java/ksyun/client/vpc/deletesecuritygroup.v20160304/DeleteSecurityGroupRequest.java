@@ -15,5 +15,4 @@ public class DeleteSecurityGroupRequest {
     @KsYunField(name = "SecurityGroupId")
     private String SecurityGroupId;
 
-
 }

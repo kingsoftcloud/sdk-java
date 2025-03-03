@@ -21,5 +21,4 @@ public class CloudDeskgetDesktopUrlRequest {
     @KsYunField(name = "instanceId")
     private String InstanceId;
 
-
 }

@@ -21,5 +21,4 @@ public class ModifyOverclockingAttributeRequest {
     @KsYunField(name = "OverclockingAttribute")
     private String OverclockingAttribute;
 
-
 }

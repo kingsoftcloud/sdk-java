@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Classname ModifyInstanceDatabasePrivilegesClient
- * @Description ModifyInstanceDatabasePrivileges
+ * @Description 库表-数据库库表授权
  */
 @Slf4j
 public class ModifyInstanceDatabasePrivilegesClient extends BaseClient {
@@ -26,7 +26,7 @@ public class ModifyInstanceDatabasePrivilegesClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public ModifyInstanceDatabasePrivilegesClient(Credential credential) {

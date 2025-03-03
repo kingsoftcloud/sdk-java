@@ -28,5 +28,4 @@ public class SetUserSsoSettingsRequest {
     @KsYunField(name = "Domain")
     private String Domain;
 
-
 }

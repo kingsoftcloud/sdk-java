@@ -4,6 +4,8 @@ import common.annotation.KsYunField;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
  * @Classname StartJobRunRequest
  * @Description 请求参数
@@ -38,7 +40,8 @@ public class StartJobRunRequest {
 
     /***/
     @KsYunField(name = "SparkSubmitData")
-    private SparkSubmitDataDto SparkSubmitData;
+
+    private SparkSubmitDataDto SparkSubmitDataList;
 
     @Data
     @ToString
@@ -48,102 +51,99 @@ public class StartJobRunRequest {
          */
         @KsYunField(name = "Name")
         private String Name;
-
         /**
          * 作业的Driver核数
          */
         @KsYunField(name = "SparkDriverCores")
-        private int SparkDriverCores;
-
+        private Integer SparkDriverCores;
         /**
          * 作业的Driver内存
          */
         @KsYunField(name = "SparkDriverMemory")
         private String SparkDriverMemory;
-
         /**
          * 作业的Executor核数
          */
         @KsYunField(name = "SparkExecutorCores")
-        private int SparkExecutorCores;
-
+        private Integer SparkExecutorCores;
         /**
          * 作业的Executor内存
          */
         @KsYunField(name = "SparkExecutorMemory")
         private String SparkExecutorMemory;
-
         /**
          * 作业的Executor数量
          */
         @KsYunField(name = "SparkNumExecutors")
-        private int SparkNumExecutors;
-
+        private Integer SparkNumExecutors;
         /**
          * Java作业的主类，其中包含启动的main函数
          */
         @KsYunField(name = "Class")
-        private String ClassName;
-
+        private String Class;
         /**
          * 作业应用程序代码的资源文件路径
          */
         @KsYunField(name = "AppResource")
         private String AppResource;
-
         /**
          * 自定义参数组
          */
         @KsYunField(name = "ExtraArgs")
-        private String[] ExtraArgs;
-
+        private List<String> ExtraArgsList;
         /**
-         * 设置作业配置项，以key=value形式填写
+         * 设置作业配置项
+         * 以key=value形式填写
          */
         @KsYunField(name = "Conf")
-        private String[] Conf;
-
+        private List<String> ConfList;
         /**
-         * 作业需引用的JAR包资源，仅支持KS3资源，多个文件使用逗号（,）分隔
+         * 作业需引用的JAR包资源
+         * 仅支持KS3资源，多个文件使用逗号（,）分隔
          */
         @KsYunField(name = "Jars")
-        private String[] Jars;
-
+        private List<String> JarsList;
         /**
-         * 作业需要引用的资源文件，仅支持KS3资源，多个文件使用逗号（,）分隔
+         * 作业需要引用的资源文件
+         * 仅支持KS3资源，多个文件使用逗号（,）分隔
          */
         @KsYunField(name = "Files")
-        private String[] Files;
-
+        private List<String> FilesList;
         /**
-         * 作业需引用的Python脚本，仅支持KS3资源，多个文件使用逗号（,）分隔，该参数仅对PySpark程序生效
+         * 作业需引用的Python脚本
+         * 仅支持KS3资源，多个文件使用逗号（,）分隔
+         * 该参数仅对PySpark程序生效
          */
         @KsYunField(name = "PyFiles")
-        private String[] PyFiles;
-
+        private List<String> PyFilesList;
         /**
-         * 作业需引用的archive包资源，仅支持KS3资源，多个文件使用逗号（,）分隔
+         * 作业需引用的archive包资源
+         * 仅支持KS3资源，多个文件使用逗号（,）分隔
          */
         @KsYunField(name = "Archives")
-        private String[] Archives;
-
+        private List<String> ArchivesList;
         /**
          * 作业指定外部依赖包
          */
         @KsYunField(name = "Packages")
-        private String[] Packages;
-
+        private List<String> PackagesList;
         /**
          * 用于缓存加速archive资源，多个文件使用逗号（,）分隔
          */
         @KsYunField(name = "CacheFile")
-        private String[] CacheFile;
-
+        private List<String> CacheFileList;
         /**
          * 容器镜像地址
          */
         @KsYunField(name = "Image")
         private String Image;
+        /**
+         * 作业优先级
+         * true：p0优先级，可用于期望高优插入执行的作业
+         * false：p1优先级，默认优先级
+         * 其中p0优先级高于p1优先级
+         */
+        @KsYunField(name = "HighPriority")
+        private Boolean HighPriority;
     }
-
 }

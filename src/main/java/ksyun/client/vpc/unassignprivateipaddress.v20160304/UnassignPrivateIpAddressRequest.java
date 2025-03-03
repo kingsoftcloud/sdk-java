@@ -23,5 +23,4 @@ public class UnassignPrivateIpAddressRequest {
     @KsYunField(name = "PrivateIpAddress")
     private List<String> PrivateIpAddressList;
 
-
 }

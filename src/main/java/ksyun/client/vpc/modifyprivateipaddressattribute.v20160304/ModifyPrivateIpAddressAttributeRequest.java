@@ -33,5 +33,4 @@ public class ModifyPrivateIpAddressAttributeRequest {
     @KsYunField(name = "AllocateStatus")
     private String AllocateStatus;
 
-
 }

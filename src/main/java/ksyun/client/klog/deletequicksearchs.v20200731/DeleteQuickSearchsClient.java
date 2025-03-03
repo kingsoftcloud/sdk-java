@@ -26,7 +26,7 @@ public class DeleteQuickSearchsClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public DeleteQuickSearchsClient(Credential credential) {

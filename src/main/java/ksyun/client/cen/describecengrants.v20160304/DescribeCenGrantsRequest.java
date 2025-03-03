@@ -1,12 +1,10 @@
 package ksyun.client.cen.describecengrants.v20160304;
 
 import common.annotation.KsYunField;
-import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
-import java.util.Arrays;
 
 /**
  * @Classname DescribeCenGrantsRequest
@@ -41,7 +39,8 @@ public class DescribeCenGrantsRequest {
     public static class FilterDto {
         /**
          * 有效值：
-         * - instance-id，实例ID
+         * - cen-id，云企业网ID
+         * - network-instance-id，网络实例ID
          * - instance-type，实例类型
          * - cen-account-id，云企业网账号ID
          */
@@ -51,6 +50,5 @@ public class DescribeCenGrantsRequest {
         @KsYunField(name = "Value")
         private List<String> ValueList;
     }
-
 
 }

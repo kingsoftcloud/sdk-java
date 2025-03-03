@@ -45,5 +45,4 @@ public class RestoreSnapshotRequest {
     @KsYunField(name = "ObjectName")
     private String ObjectName;
 
-
 }

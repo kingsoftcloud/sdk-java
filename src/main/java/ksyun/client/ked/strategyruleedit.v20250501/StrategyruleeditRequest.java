@@ -14,7 +14,8 @@ public class StrategyruleeditRequest {
      * 安全组出站规则
      */
     @KsYunField(name = "policies")
-    private PoliciesDto Policies;
+
+    private PoliciesDto PoliciesList;
     /**
      * 策略组 id
      */
@@ -29,36 +30,35 @@ public class StrategyruleeditRequest {
          */
         @KsYunField(name = "description")
         private String Description;
-
         /**
          * out：流出
          * 暂不允许流入规则添加
          */
         @KsYunField(name = "direction")
         private String Direction;
-
         /**
          * ip 值
          */
         @KsYunField(name = "cidrBlock")
         private String CidrBlock;
-
         /**
          * 最大端口号，0 表示所有端口
          */
         @KsYunField(name = "maxPortRange")
-        private String MaxPortRange;
-
+        private Integer MaxPortRange;
         /**
          * 最小端口号，0 标识所有端口
          */
         @KsYunField(name = "minPortRange")
-        private String MinPortRange;
-
+        private Integer MinPortRange;
         /**
-         * 固定值 ANY
+         * TCP
+         * UDP
+         * ICMP
+         * IP
          */
         @KsYunField(name = "protocol")
         private String Protocol;
     }
+
 }

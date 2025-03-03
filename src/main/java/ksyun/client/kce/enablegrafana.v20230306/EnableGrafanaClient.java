@@ -26,7 +26,7 @@ public class EnableGrafanaClient extends BaseClient {
     /**
      * 证书
      */
-    private Credential credential;
+    private final Credential credential;
 
 
     public EnableGrafanaClient(Credential credential) {

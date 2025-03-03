@@ -29,5 +29,4 @@ public class DescribeVpcsRequest {
     @KsYunField(name = "NextToken")
     private String NextToken;
 
-
 }

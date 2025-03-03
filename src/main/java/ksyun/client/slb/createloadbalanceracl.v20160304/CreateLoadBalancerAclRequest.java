@@ -21,5 +21,4 @@ public class CreateLoadBalancerAclRequest {
     @KsYunField(name = "IpVersion")
     private String IpVersion;
 
-
 }

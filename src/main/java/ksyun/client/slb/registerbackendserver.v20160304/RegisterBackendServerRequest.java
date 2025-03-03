@@ -33,5 +33,4 @@ public class RegisterBackendServerRequest {
     @KsYunField(name = "Weight")
     private Integer Weight;
 
-
 }
