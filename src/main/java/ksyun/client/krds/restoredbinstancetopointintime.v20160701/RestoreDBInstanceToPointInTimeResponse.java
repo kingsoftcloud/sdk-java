@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname RestoreDBInstanceToPointInTimeResponse
-* @Description RestoreDBInstanceToPointInTime 返回体
-*/
+ * @Classname RestoreDBInstanceToPointInTimeResponse
+ * @Description RestoreDBInstanceToPointInTime 返回体
+ */
 @Data
 @ToString
 public class RestoreDBInstanceToPointInTimeResponse extends BaseResponseModel {

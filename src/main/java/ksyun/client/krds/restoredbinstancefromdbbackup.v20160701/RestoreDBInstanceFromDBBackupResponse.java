@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname RestoreDBInstanceFromDBBackupResponse
-* @Description RestoreDBInstanceFromDBBackup 返回体
-*/
+ * @Classname RestoreDBInstanceFromDBBackupResponse
+ * @Description RestoreDBInstanceFromDBBackup 返回体
+ */
 @Data
 @ToString
 public class RestoreDBInstanceFromDBBackupResponse extends BaseResponseModel {

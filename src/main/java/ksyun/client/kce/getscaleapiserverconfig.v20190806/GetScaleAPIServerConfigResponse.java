@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname GetScaleAPIServerConfigResponse
-* @Description GetScaleAPIServerConfig 返回体
-*/
+ * @Classname GetScaleAPIServerConfigResponse
+ * @Description GetScaleAPIServerConfig 返回体
+ */
 @Data
 @ToString
 public class GetScaleAPIServerConfigResponse extends BaseResponseModel {

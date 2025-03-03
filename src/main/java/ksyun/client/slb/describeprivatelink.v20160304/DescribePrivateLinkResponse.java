@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DescribePrivateLinkResponse
-* @Description DescribePrivateLink 返回体
-*/
+ * @Classname DescribePrivateLinkResponse
+ * @Description DescribePrivateLink 返回体
+ */
 @Data
 @ToString
 public class DescribePrivateLinkResponse extends BaseResponseModel {

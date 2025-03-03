@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DeletePdnsZoneResponse
-* @Description DeletePdnsZone 返回体
-*/
+ * @Classname DeletePdnsZoneResponse
+ * @Description DeletePdnsZone 返回体
+ */
 @Data
 @ToString
 public class DeletePdnsZoneResponse extends BaseResponseModel {

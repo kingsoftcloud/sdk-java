@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DeleteCacheParameterGroupResponse
-* @Description DeleteCacheParameterGroup 返回体
-*/
+ * @Classname DeleteCacheParameterGroupResponse
+ * @Description DeleteCacheParameterGroup 返回体
+ */
 @Data
 @ToString
 public class DeleteCacheParameterGroupResponse extends BaseResponseModel {

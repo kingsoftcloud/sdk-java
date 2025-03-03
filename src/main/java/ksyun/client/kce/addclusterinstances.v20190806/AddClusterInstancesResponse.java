@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname AddClusterInstancesResponse
-* @Description AddClusterInstances 返回体
-*/
+ * @Classname AddClusterInstancesResponse
+ * @Description AddClusterInstances 返回体
+ */
 @Data
 @ToString
 public class AddClusterInstancesResponse extends BaseResponseModel {

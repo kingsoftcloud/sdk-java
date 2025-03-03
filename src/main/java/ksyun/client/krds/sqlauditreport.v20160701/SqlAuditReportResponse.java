@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname SqlAuditReportResponse
-* @Description SqlAuditReport 返回体
-*/
+ * @Classname SqlAuditReportResponse
+ * @Description SqlAuditReport 返回体
+ */
 @Data
 @ToString
 public class SqlAuditReportResponse extends BaseResponseModel {

@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DescribeNetworkInterfacesResponse
-* @Description DescribeNetworkInterfaces 返回体
-*/
+ * @Classname DescribeNetworkInterfacesResponse
+ * @Description DescribeNetworkInterfaces 返回体
+ */
 @Data
 @ToString
 public class DescribeNetworkInterfacesResponse extends BaseResponseModel {

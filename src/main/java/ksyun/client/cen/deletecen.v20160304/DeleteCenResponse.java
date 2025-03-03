@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname DeleteCenResponse
-* @Description DeleteCen 返回体
-*/
+ * @Classname DeleteCenResponse
+ * @Description DeleteCen 返回体
+ */
 @Data
 @ToString
 public class DeleteCenResponse extends BaseResponseModel {

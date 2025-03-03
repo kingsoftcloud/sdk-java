@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DelPresetResponse
-* @Description DelPreset 返回体
-*/
+ * @Classname DelPresetResponse
+ * @Description DelPreset 返回体
+ */
 @Data
 @ToString
 public class DelPresetResponse extends BaseResponseModel {

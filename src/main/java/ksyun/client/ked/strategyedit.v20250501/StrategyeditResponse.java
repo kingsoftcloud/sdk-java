@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname StrategyeditResponse
-* @Description Strategyedit 返回体
-*/
+ * @Classname StrategyeditResponse
+ * @Description Strategyedit 返回体
+ */
 @Data
 @ToString
 public class StrategyeditResponse extends BaseResponseModel {

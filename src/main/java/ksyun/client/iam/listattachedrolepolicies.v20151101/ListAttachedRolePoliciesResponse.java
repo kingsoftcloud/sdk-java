@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname ListAttachedRolePoliciesResponse
-* @Description ListAttachedRolePolicies 返回体
-*/
+ * @Classname ListAttachedRolePoliciesResponse
+ * @Description ListAttachedRolePolicies 返回体
+ */
 @Data
 @ToString
 public class ListAttachedRolePoliciesResponse extends BaseResponseModel {

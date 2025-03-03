@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname ModifyNatIpStatusResponse
-* @Description ModifyNatIpStatus 返回体
-*/
+ * @Classname ModifyNatIpStatusResponse
+ * @Description ModifyNatIpStatus 返回体
+ */
 @Data
 @ToString
 public class ModifyNatIpStatusResponse extends BaseResponseModel {

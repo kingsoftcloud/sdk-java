@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DropRecycledInstanceResponse
-* @Description DropRecycledInstance 返回体
-*/
+ * @Classname DropRecycledInstanceResponse
+ * @Description DropRecycledInstance 返回体
+ */
 @Data
 @ToString
 public class DropRecycledInstanceResponse extends BaseResponseModel {

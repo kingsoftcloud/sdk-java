@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname DescribeManagedAccessoryResponse
-* @Description DescribeManagedAccessory 返回体
-*/
+ * @Classname DescribeManagedAccessoryResponse
+ * @Description DescribeManagedAccessory 返回体
+ */
 @Data
 @ToString
 public class DescribeManagedAccessoryResponse extends BaseResponseModel {

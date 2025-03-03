@@ -9,17 +9,21 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname AttachCenBandWidthPackageRequest
-* @Description 请求参数
-*/
+ * @Classname AttachCenBandWidthPackageRequest
+ * @Description 请求参数
+ */
 @Data
-public class AttachCenBandWidthPackageRequest{
-    /**云企业网带宽包的ID*/
-    @KsYunField(name="CenBandWidthPackageId")
+public class AttachCenBandWidthPackageRequest {
+    /**
+     * 云企业网带宽包的ID
+     */
+    @KsYunField(name = "CenBandWidthPackageId")
     private String CenBandWidthPackageId;
 
-    /**云企业网的ID*/
-    @KsYunField(name="CenId")
+    /**
+     * 云企业网的ID
+     */
+    @KsYunField(name = "CenId")
     private String CenId;
 
 

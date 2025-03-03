@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname CheckBlacklistResponse
-* @Description CheckBlacklist 返回体
-*/
+ * @Classname CheckBlacklistResponse
+ * @Description CheckBlacklist 返回体
+ */
 @Data
 @ToString
 public class CheckBlacklistResponse extends BaseResponseModel {

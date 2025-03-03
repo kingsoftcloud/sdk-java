@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname AssociateClusterResponse
-* @Description AssociateCluster 返回体
-*/
+ * @Classname AssociateClusterResponse
+ * @Description AssociateCluster 返回体
+ */
 @Data
 @ToString
 public class AssociateClusterResponse extends BaseResponseModel {

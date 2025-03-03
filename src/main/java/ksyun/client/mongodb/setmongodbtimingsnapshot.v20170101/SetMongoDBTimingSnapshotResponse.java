@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname SetMongoDBTimingSnapshotResponse
-* @Description SetMongoDBTimingSnapshot 返回体
-*/
+ * @Classname SetMongoDBTimingSnapshotResponse
+ * @Description SetMongoDBTimingSnapshot 返回体
+ */
 @Data
 @ToString
 public class SetMongoDBTimingSnapshotResponse extends BaseResponseModel {

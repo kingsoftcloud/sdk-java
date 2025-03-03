@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname GetPresetDetailResponse
-* @Description GetPresetDetail 返回体
-*/
+ * @Classname GetPresetDetailResponse
+ * @Description GetPresetDetail 返回体
+ */
 @Data
 @ToString
 public class GetPresetDetailResponse extends BaseResponseModel {

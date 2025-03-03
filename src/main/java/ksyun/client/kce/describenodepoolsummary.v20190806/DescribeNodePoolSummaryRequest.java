@@ -9,13 +9,15 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname DescribeNodePoolSummaryRequest
-* @Description 请求参数
-*/
+ * @Classname DescribeNodePoolSummaryRequest
+ * @Description 请求参数
+ */
 @Data
-public class DescribeNodePoolSummaryRequest{
-    /**集群ID*/
-    @KsYunField(name="ClusterId")
+public class DescribeNodePoolSummaryRequest {
+    /**
+     * 集群ID
+     */
+    @KsYunField(name = "ClusterId")
     private String ClusterId;
 
 

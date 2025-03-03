@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DescribeMongoDBInstanceNodeResponse
-* @Description DescribeMongoDBInstanceNode 返回体
-*/
+ * @Classname DescribeMongoDBInstanceNodeResponse
+ * @Description DescribeMongoDBInstanceNode 返回体
+ */
 @Data
 @ToString
 public class DescribeMongoDBInstanceNodeResponse extends BaseResponseModel {

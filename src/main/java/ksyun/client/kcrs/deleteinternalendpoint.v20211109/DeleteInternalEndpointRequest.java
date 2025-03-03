@@ -9,21 +9,27 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname DeleteInternalEndpointRequest
-* @Description 请求参数
-*/
+ * @Classname DeleteInternalEndpointRequest
+ * @Description 请求参数
+ */
 @Data
-public class DeleteInternalEndpointRequest{
-    /**实例id*/
-    @KsYunField(name="InstanceId")
+public class DeleteInternalEndpointRequest {
+    /**
+     * 实例id
+     */
+    @KsYunField(name = "InstanceId")
     private String InstanceId;
 
-    /**vpcid*/
-    @KsYunField(name="VpcId")
+    /**
+     * vpcid
+     */
+    @KsYunField(name = "VpcId")
     private String VpcId;
 
-    /**内网访问链路ip*/
-    @KsYunField(name="EniLBIp")
+    /**
+     * 内网访问链路ip
+     */
+    @KsYunField(name = "EniLBIp")
     private String EniLBIp;
 
 

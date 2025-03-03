@@ -9,13 +9,15 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname DeleteVpcPeeringConnectionRequest
-* @Description 请求参数
-*/
+ * @Classname DeleteVpcPeeringConnectionRequest
+ * @Description 请求参数
+ */
 @Data
-public class DeleteVpcPeeringConnectionRequest{
-    /**对等连接的ID*/
-    @KsYunField(name="VpcPeeringConnectionId")
+public class DeleteVpcPeeringConnectionRequest {
+    /**
+     * 对等连接的ID
+     */
+    @KsYunField(name = "VpcPeeringConnectionId")
     private String VpcPeeringConnectionId;
 
 

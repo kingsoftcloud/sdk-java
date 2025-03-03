@@ -9,10 +9,10 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname DescribeManagedAccessoryRequest
-* @Description 请求参数
-*/
+ * @Classname DescribeManagedAccessoryRequest
+ * @Description 请求参数
+ */
 @Data
-public class DescribeManagedAccessoryRequest{
+public class DescribeManagedAccessoryRequest {
 
 }

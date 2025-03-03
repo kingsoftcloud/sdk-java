@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname ModifyInstanceAccountPrivilegesActionResponse
-* @Description ModifyInstanceAccountPrivilegesAction 返回体
-*/
+ * @Classname ModifyInstanceAccountPrivilegesActionResponse
+ * @Description ModifyInstanceAccountPrivilegesAction 返回体
+ */
 @Data
 @ToString
 public class ModifyInstanceAccountPrivilegesActionResponse extends BaseResponseModel {

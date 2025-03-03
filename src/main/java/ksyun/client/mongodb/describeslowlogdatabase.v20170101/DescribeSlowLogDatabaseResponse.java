@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DescribeSlowLogDatabaseResponse
-* @Description DescribeSlowLogDatabase 返回体
-*/
+ * @Classname DescribeSlowLogDatabaseResponse
+ * @Description DescribeSlowLogDatabase 返回体
+ */
 @Data
 @ToString
 public class DescribeSlowLogDatabaseResponse extends BaseResponseModel {

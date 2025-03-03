@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname GetPostpayDetailBillResponse
-* @Description GetPostpayDetailBill 返回体
-*/
+ * @Classname GetPostpayDetailBillResponse
+ * @Description GetPostpayDetailBill 返回体
+ */
 @Data
 @ToString
 public class GetPostpayDetailBillResponse extends BaseResponseModel {

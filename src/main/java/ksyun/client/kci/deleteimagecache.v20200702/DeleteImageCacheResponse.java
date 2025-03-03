@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DeleteImageCacheResponse
-* @Description DeleteImageCache 返回体
-*/
+ * @Classname DeleteImageCacheResponse
+ * @Description DeleteImageCache 返回体
+ */
 @Data
 @ToString
 public class DeleteImageCacheResponse extends BaseResponseModel {

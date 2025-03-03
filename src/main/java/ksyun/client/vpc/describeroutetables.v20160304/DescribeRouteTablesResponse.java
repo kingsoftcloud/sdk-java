@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DescribeRouteTablesResponse
-* @Description DescribeRouteTables 返回体
-*/
+ * @Classname DescribeRouteTablesResponse
+ * @Description DescribeRouteTables 返回体
+ */
 @Data
 @ToString
 public class DescribeRouteTablesResponse extends BaseResponseModel {

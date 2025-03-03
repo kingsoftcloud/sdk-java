@@ -1,33 +1,36 @@
 package ksyun.client.iam.getaccountallprojectsbyparams.v20151101;
 
 import common.annotation.KsYunField;
-import lombok.Builder;
 import lombok.Data;
-import lombok.ToString;
-
-import java.util.List;
-import java.util.Arrays;
 
 /**
-* @Classname GetAccountAllProjectsByParamsRequest
-* @Description 请求参数
-*/
+ * @Classname GetAccountAllProjectsByParamsRequest
+ * @Description 请求参数
+ */
 @Data
-public class GetAccountAllProjectsByParamsRequest{
-    /**每页显示条数*/
-    @KsYunField(name="Ps")
+public class GetAccountAllProjectsByParamsRequest {
+    /**
+     * 每页显示条数
+     */
+    @KsYunField(name = "Ps")
     private Integer Ps;
 
-    /**页码*/
-    @KsYunField(name="Pn")
+    /**
+     * 页码
+     */
+    @KsYunField(name = "Pn")
     private Integer Pn;
 
-    /**子账号用户名*/
-    @KsYunField(name="ParamUserName")
+    /**
+     * 子账号用户名
+     */
+    @KsYunField(name = "ParamUserName")
     private String ParamUserName;
 
-    /**该主账号下任意一个子账号的AccessKey*/
-    @KsYunField(name="ParamAccessKey")
+    /**
+     * 该主账号下任意一个子账号的AccessKey
+     */
+    @KsYunField(name = "ParamAccessKey")
     private String ParamAccessKey;
 
 

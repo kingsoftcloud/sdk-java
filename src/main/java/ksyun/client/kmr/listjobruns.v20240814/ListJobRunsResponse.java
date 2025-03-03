@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname ListJobRunsResponse
-* @Description ListJobRuns 返回体
-*/
+ * @Classname ListJobRunsResponse
+ * @Description ListJobRuns 返回体
+ */
 @Data
 @ToString
 public class ListJobRunsResponse extends BaseResponseModel {

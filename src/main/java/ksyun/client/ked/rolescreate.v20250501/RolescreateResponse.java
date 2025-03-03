@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname RolescreateResponse
-* @Description Rolescreate 返回体
-*/
+ * @Classname RolescreateResponse
+ * @Description Rolescreate 返回体
+ */
 @Data
 @ToString
 public class RolescreateResponse extends BaseResponseModel {

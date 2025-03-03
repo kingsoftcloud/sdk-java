@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname AcceptVpcPeeringConnectionResponse
-* @Description AcceptVpcPeeringConnection 返回体
-*/
+ * @Classname AcceptVpcPeeringConnectionResponse
+ * @Description AcceptVpcPeeringConnection 返回体
+ */
 @Data
 @ToString
 public class AcceptVpcPeeringConnectionResponse extends BaseResponseModel {

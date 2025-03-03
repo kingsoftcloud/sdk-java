@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname GetUsageResponse
-* @Description GetUsage 返回体
-*/
+ * @Classname GetUsageResponse
+ * @Description GetUsage 返回体
+ */
 @Data
 @ToString
 public class GetUsageResponse extends BaseResponseModel {

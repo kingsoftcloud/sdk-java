@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname GenerateDataKeyResponse
-* @Description GenerateDataKey 返回体
-*/
+ * @Classname GenerateDataKeyResponse
+ * @Description GenerateDataKey 返回体
+ */
 @Data
 @ToString
 public class GenerateDataKeyResponse extends BaseResponseModel {

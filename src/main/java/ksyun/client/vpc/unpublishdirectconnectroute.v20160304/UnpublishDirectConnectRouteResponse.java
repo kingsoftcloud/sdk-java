@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname UnpublishDirectConnectRouteResponse
-* @Description UnpublishDirectConnectRoute 返回体
-*/
+ * @Classname UnpublishDirectConnectRouteResponse
+ * @Description UnpublishDirectConnectRoute 返回体
+ */
 @Data
 @ToString
 public class UnpublishDirectConnectRouteResponse extends BaseResponseModel {

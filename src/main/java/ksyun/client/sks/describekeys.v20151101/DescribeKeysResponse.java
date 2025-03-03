@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DescribeKeysResponse
-* @Description DescribeKeys 返回体
-*/
+ * @Classname DescribeKeysResponse
+ * @Description DescribeKeys 返回体
+ */
 @Data
 @ToString
 public class DescribeKeysResponse extends BaseResponseModel {

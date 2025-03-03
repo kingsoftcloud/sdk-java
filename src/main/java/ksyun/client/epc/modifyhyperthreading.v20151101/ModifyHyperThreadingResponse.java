@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname ModifyHyperThreadingResponse
-* @Description ModifyHyperThreading 返回体
-*/
+ * @Classname ModifyHyperThreadingResponse
+ * @Description ModifyHyperThreading 返回体
+ */
 @Data
 @ToString
 public class ModifyHyperThreadingResponse extends BaseResponseModel {

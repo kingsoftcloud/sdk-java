@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname DeleteAccessKeyResponse
-* @Description DeleteAccessKey 返回体
-*/
+ * @Classname DeleteAccessKeyResponse
+ * @Description DeleteAccessKey 返回体
+ */
 @Data
 @ToString
 public class DeleteAccessKeyResponse extends BaseResponseModel {

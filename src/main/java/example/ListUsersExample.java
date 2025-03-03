@@ -1,17 +1,9 @@
 package example;
 
-import com.alibaba.fastjson.JSON;
-import common.Credential;
 import lombok.extern.slf4j.Slf4j;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Properties;
-
 /**
-* @Classname ListUsersExample
+ * @Classname ListUsersExample
  * @Description Example
  */
 @Slf4j

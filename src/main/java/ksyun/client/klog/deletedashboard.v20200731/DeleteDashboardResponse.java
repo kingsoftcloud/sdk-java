@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DeleteDashboardResponse
-* @Description DeleteDashboard 返回体
-*/
+ * @Classname DeleteDashboardResponse
+ * @Description DeleteDashboard 返回体
+ */
 @Data
 @ToString
 public class DeleteDashboardResponse extends BaseResponseModel {

@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DisassociateClusterResponse
-* @Description DisassociateCluster 返回体
-*/
+ * @Classname DisassociateClusterResponse
+ * @Description DisassociateCluster 返回体
+ */
 @Data
 @ToString
 public class DisassociateClusterResponse extends BaseResponseModel {

@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname UpdateAccessKeyResponse
-* @Description UpdateAccessKey 返回体
-*/
+ * @Classname UpdateAccessKeyResponse
+ * @Description UpdateAccessKey 返回体
+ */
 @Data
 @ToString
 public class UpdateAccessKeyResponse extends BaseResponseModel {

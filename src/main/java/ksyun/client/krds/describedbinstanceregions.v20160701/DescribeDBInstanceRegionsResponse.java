@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DescribeDBInstanceRegionsResponse
-* @Description DescribeDBInstanceRegions 返回体
-*/
+ * @Classname DescribeDBInstanceRegionsResponse
+ * @Description DescribeDBInstanceRegions 返回体
+ */
 @Data
 @ToString
 public class DescribeDBInstanceRegionsResponse extends BaseResponseModel {

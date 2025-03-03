@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DescribeCacheReadonlyNodeResponse
-* @Description DescribeCacheReadonlyNode 返回体
-*/
+ * @Classname DescribeCacheReadonlyNodeResponse
+ * @Description DescribeCacheReadonlyNode 返回体
+ */
 @Data
 @ToString
 public class DescribeCacheReadonlyNodeResponse extends BaseResponseModel {

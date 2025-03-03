@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname ScaleInInstanceGroupsResponse
-* @Description ScaleInInstanceGroups 返回体
-*/
+ * @Classname ScaleInInstanceGroupsResponse
+ * @Description ScaleInInstanceGroups 返回体
+ */
 @Data
 @ToString
 public class ScaleInInstanceGroupsResponse extends BaseResponseModel {

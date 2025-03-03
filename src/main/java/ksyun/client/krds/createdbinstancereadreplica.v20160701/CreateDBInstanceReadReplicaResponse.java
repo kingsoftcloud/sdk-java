@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname CreateDBInstanceReadReplicaResponse
-* @Description CreateDBInstanceReadReplica 返回体
-*/
+ * @Classname CreateDBInstanceReadReplicaResponse
+ * @Description CreateDBInstanceReadReplica 返回体
+ */
 @Data
 @ToString
 public class CreateDBInstanceReadReplicaResponse extends BaseResponseModel {

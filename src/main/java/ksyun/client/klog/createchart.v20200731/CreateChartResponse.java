@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname CreateChartResponse
-* @Description CreateChart 返回体
-*/
+ * @Classname CreateChartResponse
+ * @Description CreateChart 返回体
+ */
 @Data
 @ToString
 public class CreateChartResponse extends BaseResponseModel {

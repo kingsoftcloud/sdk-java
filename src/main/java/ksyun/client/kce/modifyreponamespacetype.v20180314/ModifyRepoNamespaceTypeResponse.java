@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname ModifyRepoNamespaceTypeResponse
-* @Description ModifyRepoNamespaceType 返回体
-*/
+ * @Classname ModifyRepoNamespaceTypeResponse
+ * @Description ModifyRepoNamespaceType 返回体
+ */
 @Data
 @ToString
 public class ModifyRepoNamespaceTypeResponse extends BaseResponseModel {

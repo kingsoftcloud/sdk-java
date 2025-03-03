@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname AllocateSecurityGroupResponse
-* @Description AllocateSecurityGroup 返回体
-*/
+ * @Classname AllocateSecurityGroupResponse
+ * @Description AllocateSecurityGroup 返回体
+ */
 @Data
 @ToString
 public class AllocateSecurityGroupResponse extends BaseResponseModel {

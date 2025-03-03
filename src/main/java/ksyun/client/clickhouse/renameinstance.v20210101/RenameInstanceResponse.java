@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname RenameInstanceResponse
-* @Description RenameInstance 返回体
-*/
+ * @Classname RenameInstanceResponse
+ * @Description RenameInstance 返回体
+ */
 @Data
 @ToString
 public class RenameInstanceResponse extends BaseResponseModel {

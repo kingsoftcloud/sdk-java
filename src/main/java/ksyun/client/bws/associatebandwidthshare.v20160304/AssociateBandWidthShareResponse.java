@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname AssociateBandWidthShareResponse
-* @Description AssociateBandWidthShare 返回体
-*/
+ * @Classname AssociateBandWidthShareResponse
+ * @Description AssociateBandWidthShare 返回体
+ */
 @Data
 @ToString
 public class AssociateBandWidthShareResponse extends BaseResponseModel {

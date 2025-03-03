@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname StartEtlTaskResponse
-* @Description StartEtlTask 返回体
-*/
+ * @Classname StartEtlTaskResponse
+ * @Description StartEtlTask 返回体
+ */
 @Data
 @ToString
 public class StartEtlTaskResponse extends BaseResponseModel {

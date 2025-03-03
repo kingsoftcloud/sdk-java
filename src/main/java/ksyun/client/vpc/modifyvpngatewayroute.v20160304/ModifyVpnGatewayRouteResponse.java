@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname ModifyVpnGatewayRouteResponse
-* @Description ModifyVpnGatewayRoute 返回体
-*/
+ * @Classname ModifyVpnGatewayRouteResponse
+ * @Description ModifyVpnGatewayRoute 返回体
+ */
 @Data
 @ToString
 public class ModifyVpnGatewayRouteResponse extends BaseResponseModel {

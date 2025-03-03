@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DescribeCacheByRoleResponse
-* @Description DescribeCacheByRole 返回体
-*/
+ * @Classname DescribeCacheByRoleResponse
+ * @Description DescribeCacheByRole 返回体
+ */
 @Data
 @ToString
 public class DescribeCacheByRoleResponse extends BaseResponseModel {

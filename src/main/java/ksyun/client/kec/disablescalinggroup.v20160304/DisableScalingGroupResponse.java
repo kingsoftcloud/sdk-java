@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DisableScalingGroupResponse
-* @Description DisableScalingGroup 返回体
-*/
+ * @Classname DisableScalingGroupResponse
+ * @Description DisableScalingGroup 返回体
+ */
 @Data
 @ToString
 public class DisableScalingGroupResponse extends BaseResponseModel {

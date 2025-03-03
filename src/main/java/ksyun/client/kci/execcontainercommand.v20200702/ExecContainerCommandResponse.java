@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname ExecContainerCommandResponse
-* @Description ExecContainerCommand 返回体
-*/
+ * @Classname ExecContainerCommandResponse
+ * @Description ExecContainerCommand 返回体
+ */
 @Data
 @ToString
 public class ExecContainerCommandResponse extends BaseResponseModel {

@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DisassociateVpcsResponse
-* @Description DisassociateVpcs 返回体
-*/
+ * @Classname DisassociateVpcsResponse
+ * @Description DisassociateVpcs 返回体
+ */
 @Data
 @ToString
 public class DisassociateVpcsResponse extends BaseResponseModel {

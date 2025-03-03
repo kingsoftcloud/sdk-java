@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname StrategyunboundResponse
-* @Description Strategyunbound 返回体
-*/
+ * @Classname StrategyunboundResponse
+ * @Description Strategyunbound 返回体
+ */
 @Data
 @ToString
 public class StrategyunboundResponse extends BaseResponseModel {

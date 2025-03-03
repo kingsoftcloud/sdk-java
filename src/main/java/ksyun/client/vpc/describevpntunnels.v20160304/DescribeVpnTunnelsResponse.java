@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DescribeVpnTunnelsResponse
-* @Description DescribeVpnTunnels 返回体
-*/
+ * @Classname DescribeVpnTunnelsResponse
+ * @Description DescribeVpnTunnels 返回体
+ */
 @Data
 @ToString
 public class DescribeVpnTunnelsResponse extends BaseResponseModel {

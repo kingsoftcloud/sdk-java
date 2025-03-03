@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DescribePrometheusInstanceResponse
-* @Description DescribePrometheusInstance 返回体
-*/
+ * @Classname DescribePrometheusInstanceResponse
+ * @Description DescribePrometheusInstance 返回体
+ */
 @Data
 @ToString
 public class DescribePrometheusInstanceResponse extends BaseResponseModel {

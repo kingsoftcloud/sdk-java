@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DeleteDedicatedHostResponse
-* @Description DeleteDedicatedHost 返回体
-*/
+ * @Classname DeleteDedicatedHostResponse
+ * @Description DeleteDedicatedHost 返回体
+ */
 @Data
 @ToString
 public class DeleteDedicatedHostResponse extends BaseResponseModel {

@@ -9,17 +9,21 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname DeleteSecurityGroupRequest
-* @Description 请求参数
-*/
+ * @Classname DeleteSecurityGroupRequest
+ * @Description 请求参数
+ */
 @Data
-public class DeleteSecurityGroupRequest{
-    /**安全组ID列表。*/
-    @KsYunField(name="SecurityGroupIds")
+public class DeleteSecurityGroupRequest {
+    /**
+     * 安全组ID列表。
+     */
+    @KsYunField(name = "SecurityGroupIds")
     private String SecurityGroupIds;
 
-    /**商品类型：Clickhouse固定取值：523。*/
-    @KsYunField(name="ProductType")
+    /**
+     * 商品类型：Clickhouse固定取值：523。
+     */
+    @KsYunField(name = "ProductType")
     private Integer ProductType;
 
 

@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname ModifyClusterInfoResponse
-* @Description ModifyClusterInfo 返回体
-*/
+ * @Classname ModifyClusterInfoResponse
+ * @Description ModifyClusterInfo 返回体
+ */
 @Data
 @ToString
 public class ModifyClusterInfoResponse extends BaseResponseModel {

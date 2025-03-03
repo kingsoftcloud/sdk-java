@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname SlowLogLineChartResponse
-* @Description SlowLogLineChart 返回体
-*/
+ * @Classname SlowLogLineChartResponse
+ * @Description SlowLogLineChart 返回体
+ */
 @Data
 @ToString
 public class SlowLogLineChartResponse extends BaseResponseModel {

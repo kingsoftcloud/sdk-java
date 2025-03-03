@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DeleteDirectConnectInterfaceResponse
-* @Description DeleteDirectConnectInterface 返回体
-*/
+ * @Classname DeleteDirectConnectInterfaceResponse
+ * @Description DeleteDirectConnectInterface 返回体
+ */
 @Data
 @ToString
 public class DeleteDirectConnectInterfaceResponse extends BaseResponseModel {

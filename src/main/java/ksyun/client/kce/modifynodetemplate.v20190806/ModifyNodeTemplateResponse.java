@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname ModifyNodeTemplateResponse
-* @Description ModifyNodeTemplate 返回体
-*/
+ * @Classname ModifyNodeTemplateResponse
+ * @Description ModifyNodeTemplate 返回体
+ */
 @Data
 @ToString
 public class ModifyNodeTemplateResponse extends BaseResponseModel {

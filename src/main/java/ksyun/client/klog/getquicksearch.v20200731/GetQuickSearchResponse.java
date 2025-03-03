@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname GetQuickSearchResponse
-* @Description GetQuickSearch 返回体
-*/
+ * @Classname GetQuickSearchResponse
+ * @Description GetQuickSearch 返回体
+ */
 @Data
 @ToString
 public class GetQuickSearchResponse extends BaseResponseModel {

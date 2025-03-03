@@ -8,13 +8,14 @@ import common.aws.AWS4EncryptionFactory;
 import common.utils.HttpClientUtils;
 import common.utils.SignUtils;
 import lombok.extern.slf4j.Slf4j;
+
 import java.util.HashMap;
 import java.util.Map;
 
 /**
-* @Classname GetPolicyClient
-* @Description 查询策略元数据信息
-*/
+ * @Classname GetPolicyClient
+ * @Description 查询策略元数据信息
+ */
 @Slf4j
 public class GetPolicyClient extends BaseClient {
     private final static String service = "iam";
@@ -32,6 +33,32 @@ public class GetPolicyClient extends BaseClient {
         this.credential = credential;
     }
 
+    private static void enhanceAws4Signature(Map<String, String> head, Map<String, Object> params, Credential credential, String requestMethod) {
+        AWS4EncryptionFactory aws4EncryptionFactory = new AWS4EncryptionFactory(credential.getSecretKey(), credential.getSignStr(), service, credential.getRegion());
+
+        //设置请求参数
+        if (params != null) {
+            params.entrySet().forEach(entry -> {
+                aws4EncryptionFactory.setParamMap(entry.getKey(), entry.getValue());
+            });
+        }
+
+        //设置请求头
+        if (head != null) {
+            head.entrySet().forEach(entry -> {
+                aws4EncryptionFactory.setHeadMap(entry.getKey(), entry.getValue());
+            });
+        }
+
+        //aws 加密
+        aws4EncryptionFactory.generateSignature(requestMethod);
+
+        //回填aws4 签名
+        String authorization = aws4EncryptionFactory.getHead().get(AWS4EncryptionFactory.X_Authorization);
+        String xAmzDate = aws4EncryptionFactory.getHead().get(AWS4EncryptionFactory.X_AMZ_DATA);
+        head.put(AWS4EncryptionFactory.X_Authorization, authorization);
+        head.put(AWS4EncryptionFactory.X_AMZ_DATA, xAmzDate);
+    }
 
     /**
      * post请求
@@ -57,15 +84,15 @@ public class GetPolicyClient extends BaseClient {
      * @throws Exception
      */
     public GetPolicyResponse doPost(String path, GetPolicyRequest requestObj, Map<String, String> head) throws Exception {
-         if (head == null) {
-             head = new HashMap<>();
-         }
+        if (head == null) {
+            head = new HashMap<>();
+        }
         //参数配置
         JSONObject requestParams = null;
-        if (head.get("Content-Type").equalsIgnoreCase("application/json")){
-             requestParams = getPostRawRequestParams(requestObj);
-        }else {
-             requestParams = getSimpleRequestParams(requestObj);
+        if (head.get("Content-Type").equalsIgnoreCase("application/json")) {
+            requestParams = getPostRawRequestParams(requestObj);
+        } else {
+            requestParams = getSimpleRequestParams(requestObj);
         }
 
         //aws4 签名
@@ -77,12 +104,13 @@ public class GetPolicyClient extends BaseClient {
     }
 
     /**
-    * post 请求
-    * @param path
-    * @param requestObj
-    * @return
-    * @throws Exception
-    */
+     * post 请求
+     *
+     * @param path
+     * @param requestObj
+     * @return
+     * @throws Exception
+     */
     public GetPolicyResponse doPostRaw(String path, GetPolicyRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
@@ -90,13 +118,13 @@ public class GetPolicyClient extends BaseClient {
     }
 
     /**
-    * post 请求
-    *
-    * @param path
-    * @param requestObj
-    * @return
-    * @throws Exception
-    */
+     * post 请求
+     *
+     * @param path
+     * @param requestObj
+     * @return
+     * @throws Exception
+     */
     public GetPolicyResponse doPostRaw(String path, GetPolicyRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
@@ -104,6 +132,7 @@ public class GetPolicyClient extends BaseClient {
         head.put("Content-Type", "application/json");
         return doPost(path, requestObj, head);
     }
+
     /**
      * get 请求
      *
@@ -144,7 +173,6 @@ public class GetPolicyClient extends BaseClient {
         GetPolicyResponse GetPolicyResponse = JSON.parseObject(response, GetPolicyResponse.class);
         return GetPolicyResponse;
     }
-
 
     /**
      * doPut 请求
@@ -200,7 +228,6 @@ public class GetPolicyClient extends BaseClient {
         return JSON.parseObject(response, GetPolicyResponse.class);
     }
 
-
     /**
      * 构造请求参数
      *
@@ -217,39 +244,12 @@ public class GetPolicyClient extends BaseClient {
         requestParams.put("Version", version);
 
         //设置请求体请求参数
-        setRequestField(requestObj,requestParams);
+        setRequestField(requestObj, requestParams);
 
         //签名
         String signature = SignUtils.signature(requestParams, credential.getSignStr());
         requestParams.put("Signature", signature);
         return requestParams;
-    }
-
-    private static void enhanceAws4Signature(Map<String, String> head, Map<String, Object> params, Credential credential, String requestMethod) {
-        AWS4EncryptionFactory aws4EncryptionFactory = new AWS4EncryptionFactory(credential.getSecretKey(), credential.getSignStr(), service, credential.getRegion());
-
-        //设置请求参数
-        if (params != null) {
-            params.entrySet().forEach(entry -> {
-                aws4EncryptionFactory.setParamMap(entry.getKey(), entry.getValue());
-            });
-        }
-
-        //设置请求头
-        if (head != null) {
-            head.entrySet().forEach(entry -> {
-                aws4EncryptionFactory.setHeadMap(entry.getKey(), entry.getValue());
-            });
-        }
-
-        //aws 加密
-        aws4EncryptionFactory.generateSignature(requestMethod);
-
-        //回填aws4 签名
-        String authorization = aws4EncryptionFactory.getHead().get(AWS4EncryptionFactory.X_Authorization);
-        String xAmzDate = aws4EncryptionFactory.getHead().get(AWS4EncryptionFactory.X_AMZ_DATA);
-        head.put(AWS4EncryptionFactory.X_Authorization, authorization);
-        head.put(AWS4EncryptionFactory.X_AMZ_DATA, xAmzDate);
     }
 
     private JSONObject getSimpleRequestParams(GetPolicyRequest requestObj) throws Exception {

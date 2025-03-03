@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname UnbindSecurityGroupResponse
-* @Description UnbindSecurityGroup 返回体
-*/
+ * @Classname UnbindSecurityGroupResponse
+ * @Description UnbindSecurityGroup 返回体
+ */
 @Data
 @ToString
 public class UnbindSecurityGroupResponse extends BaseResponseModel {

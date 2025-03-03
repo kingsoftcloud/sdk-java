@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DeleteAccessControlRuleResponse
-* @Description DeleteAccessControlRule 返回体
-*/
+ * @Classname DeleteAccessControlRuleResponse
+ * @Description DeleteAccessControlRule 返回体
+ */
 @Data
 @ToString
 public class DeleteAccessControlRuleResponse extends BaseResponseModel {

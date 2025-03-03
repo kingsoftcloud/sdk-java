@@ -9,13 +9,15 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname DeallocateEipRequest
-* @Description 请求参数
-*/
+ * @Classname DeallocateEipRequest
+ * @Description 请求参数
+ */
 @Data
-public class DeallocateEipRequest{
-    /**实例id*/
-    @KsYunField(name="InstanceId")
+public class DeallocateEipRequest {
+    /**
+     * 实例id
+     */
+    @KsYunField(name = "InstanceId")
     private String InstanceId;
 
 

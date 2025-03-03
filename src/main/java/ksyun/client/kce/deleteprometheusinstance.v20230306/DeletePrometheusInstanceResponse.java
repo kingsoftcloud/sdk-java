@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DeletePrometheusInstanceResponse
-* @Description DeletePrometheusInstance 返回体
-*/
+ * @Classname DeletePrometheusInstanceResponse
+ * @Description DeletePrometheusInstance 返回体
+ */
 @Data
 @ToString
 public class DeletePrometheusInstanceResponse extends BaseResponseModel {

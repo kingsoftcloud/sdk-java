@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname StatisticDBInstancesResponse
-* @Description StatisticDBInstances 返回体
-*/
+ * @Classname StatisticDBInstancesResponse
+ * @Description StatisticDBInstances 返回体
+ */
 @Data
 @ToString
 public class StatisticDBInstancesResponse extends BaseResponseModel {

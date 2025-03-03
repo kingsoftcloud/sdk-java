@@ -8,13 +8,14 @@ import common.aws.AWS4EncryptionFactory;
 import common.utils.HttpClientUtils;
 import common.utils.SignUtils;
 import lombok.extern.slf4j.Slf4j;
+
 import java.util.HashMap;
 import java.util.Map;
 
 /**
-* @Classname DescribeDBInstanceRestorableTimeClient
-* @Description describe db instance restorable time
-*/
+ * @Classname DescribeDBInstanceRestorableTimeClient
+ * @Description describe db instance restorable time
+ */
 @Slf4j
 public class DescribeDBInstanceRestorableTimeClient extends BaseClient {
     private final static String service = "krds";
@@ -32,6 +33,32 @@ public class DescribeDBInstanceRestorableTimeClient extends BaseClient {
         this.credential = credential;
     }
 
+    private static void enhanceAws4Signature(Map<String, String> head, Map<String, Object> params, Credential credential, String requestMethod) {
+        AWS4EncryptionFactory aws4EncryptionFactory = new AWS4EncryptionFactory(credential.getSecretKey(), credential.getSignStr(), service, credential.getRegion());
+
+        //设置请求参数
+        if (params != null) {
+            params.entrySet().forEach(entry -> {
+                aws4EncryptionFactory.setParamMap(entry.getKey(), entry.getValue());
+            });
+        }
+
+        //设置请求头
+        if (head != null) {
+            head.entrySet().forEach(entry -> {
+                aws4EncryptionFactory.setHeadMap(entry.getKey(), entry.getValue());
+            });
+        }
+
+        //aws 加密
+        aws4EncryptionFactory.generateSignature(requestMethod);
+
+        //回填aws4 签名
+        String authorization = aws4EncryptionFactory.getHead().get(AWS4EncryptionFactory.X_Authorization);
+        String xAmzDate = aws4EncryptionFactory.getHead().get(AWS4EncryptionFactory.X_AMZ_DATA);
+        head.put(AWS4EncryptionFactory.X_Authorization, authorization);
+        head.put(AWS4EncryptionFactory.X_AMZ_DATA, xAmzDate);
+    }
 
     /**
      * post请求
@@ -57,15 +84,15 @@ public class DescribeDBInstanceRestorableTimeClient extends BaseClient {
      * @throws Exception
      */
     public DescribeDBInstanceRestorableTimeResponse doPost(String path, DescribeDBInstanceRestorableTimeRequest requestObj, Map<String, String> head) throws Exception {
-         if (head == null) {
-             head = new HashMap<>();
-         }
+        if (head == null) {
+            head = new HashMap<>();
+        }
         //参数配置
         JSONObject requestParams = null;
-        if (head.get("Content-Type").equalsIgnoreCase("application/json")){
-             requestParams = getPostRawRequestParams(requestObj);
-        }else {
-             requestParams = getSimpleRequestParams(requestObj);
+        if (head.get("Content-Type").equalsIgnoreCase("application/json")) {
+            requestParams = getPostRawRequestParams(requestObj);
+        } else {
+            requestParams = getSimpleRequestParams(requestObj);
         }
 
         //aws4 签名
@@ -77,12 +104,13 @@ public class DescribeDBInstanceRestorableTimeClient extends BaseClient {
     }
 
     /**
-    * post 请求
-    * @param path
-    * @param requestObj
-    * @return
-    * @throws Exception
-    */
+     * post 请求
+     *
+     * @param path
+     * @param requestObj
+     * @return
+     * @throws Exception
+     */
     public DescribeDBInstanceRestorableTimeResponse doPostRaw(String path, DescribeDBInstanceRestorableTimeRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
@@ -90,13 +118,13 @@ public class DescribeDBInstanceRestorableTimeClient extends BaseClient {
     }
 
     /**
-    * post 请求
-    *
-    * @param path
-    * @param requestObj
-    * @return
-    * @throws Exception
-    */
+     * post 请求
+     *
+     * @param path
+     * @param requestObj
+     * @return
+     * @throws Exception
+     */
     public DescribeDBInstanceRestorableTimeResponse doPostRaw(String path, DescribeDBInstanceRestorableTimeRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
@@ -104,6 +132,7 @@ public class DescribeDBInstanceRestorableTimeClient extends BaseClient {
         head.put("Content-Type", "application/json");
         return doPost(path, requestObj, head);
     }
+
     /**
      * get 请求
      *
@@ -144,7 +173,6 @@ public class DescribeDBInstanceRestorableTimeClient extends BaseClient {
         DescribeDBInstanceRestorableTimeResponse DescribeDBInstanceRestorableTimeResponse = JSON.parseObject(response, DescribeDBInstanceRestorableTimeResponse.class);
         return DescribeDBInstanceRestorableTimeResponse;
     }
-
 
     /**
      * doPut 请求
@@ -200,7 +228,6 @@ public class DescribeDBInstanceRestorableTimeClient extends BaseClient {
         return JSON.parseObject(response, DescribeDBInstanceRestorableTimeResponse.class);
     }
 
-
     /**
      * 构造请求参数
      *
@@ -217,39 +244,12 @@ public class DescribeDBInstanceRestorableTimeClient extends BaseClient {
         requestParams.put("Version", version);
 
         //设置请求体请求参数
-        setRequestField(requestObj,requestParams);
+        setRequestField(requestObj, requestParams);
 
         //签名
         String signature = SignUtils.signature(requestParams, credential.getSignStr());
         requestParams.put("Signature", signature);
         return requestParams;
-    }
-
-    private static void enhanceAws4Signature(Map<String, String> head, Map<String, Object> params, Credential credential, String requestMethod) {
-        AWS4EncryptionFactory aws4EncryptionFactory = new AWS4EncryptionFactory(credential.getSecretKey(), credential.getSignStr(), service, credential.getRegion());
-
-        //设置请求参数
-        if (params != null) {
-            params.entrySet().forEach(entry -> {
-                aws4EncryptionFactory.setParamMap(entry.getKey(), entry.getValue());
-            });
-        }
-
-        //设置请求头
-        if (head != null) {
-            head.entrySet().forEach(entry -> {
-                aws4EncryptionFactory.setHeadMap(entry.getKey(), entry.getValue());
-            });
-        }
-
-        //aws 加密
-        aws4EncryptionFactory.generateSignature(requestMethod);
-
-        //回填aws4 签名
-        String authorization = aws4EncryptionFactory.getHead().get(AWS4EncryptionFactory.X_Authorization);
-        String xAmzDate = aws4EncryptionFactory.getHead().get(AWS4EncryptionFactory.X_AMZ_DATA);
-        head.put(AWS4EncryptionFactory.X_Authorization, authorization);
-        head.put(AWS4EncryptionFactory.X_AMZ_DATA, xAmzDate);
     }
 
     private JSONObject getSimpleRequestParams(DescribeDBInstanceRestorableTimeRequest requestObj) throws Exception {

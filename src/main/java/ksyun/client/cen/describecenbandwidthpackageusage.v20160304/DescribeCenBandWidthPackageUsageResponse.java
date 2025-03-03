@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DescribeCenBandWidthPackageUsageResponse
-* @Description DescribeCenBandWidthPackageUsage 返回体
-*/
+ * @Classname DescribeCenBandWidthPackageUsageResponse
+ * @Description DescribeCenBandWidthPackageUsage 返回体
+ */
 @Data
 @ToString
 public class DescribeCenBandWidthPackageUsageResponse extends BaseResponseModel {

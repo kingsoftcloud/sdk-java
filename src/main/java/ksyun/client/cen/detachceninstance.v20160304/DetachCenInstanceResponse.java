@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname DetachCenInstanceResponse
-* @Description DetachCenInstance 返回体
-*/
+ * @Classname DetachCenInstanceResponse
+ * @Description DetachCenInstance 返回体
+ */
 @Data
 @ToString
 public class DetachCenInstanceResponse extends BaseResponseModel {

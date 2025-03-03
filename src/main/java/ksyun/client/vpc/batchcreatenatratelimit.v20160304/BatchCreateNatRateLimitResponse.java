@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname BatchCreateNatRateLimitResponse
-* @Description BatchCreateNatRateLimit 返回体
-*/
+ * @Classname BatchCreateNatRateLimitResponse
+ * @Description BatchCreateNatRateLimit 返回体
+ */
 @Data
 @ToString
 public class BatchCreateNatRateLimitResponse extends BaseResponseModel {

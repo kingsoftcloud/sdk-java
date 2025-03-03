@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname CreateMongoDBShardInstanceResponse
-* @Description CreateMongoDBShardInstance 返回体
-*/
+ * @Classname CreateMongoDBShardInstanceResponse
+ * @Description CreateMongoDBShardInstance 返回体
+ */
 @Data
 @ToString
 public class CreateMongoDBShardInstanceResponse extends BaseResponseModel {

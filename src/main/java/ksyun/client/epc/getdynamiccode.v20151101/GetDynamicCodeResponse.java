@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname GetDynamicCodeResponse
-* @Description GetDynamicCode 返回体
-*/
+ * @Classname GetDynamicCodeResponse
+ * @Description GetDynamicCode 返回体
+ */
 @Data
 @ToString
 public class GetDynamicCodeResponse extends BaseResponseModel {

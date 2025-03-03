@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DeleteRouteResponse
-* @Description DeleteRoute 返回体
-*/
+ * @Classname DeleteRouteResponse
+ * @Description DeleteRoute 返回体
+ */
 @Data
 @ToString
 public class DeleteRouteResponse extends BaseResponseModel {

@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname ListSlowLogDetailExportTaskResponse
-* @Description ListSlowLogDetailExportTask 返回体
-*/
+ * @Classname ListSlowLogDetailExportTaskResponse
+ * @Description ListSlowLogDetailExportTask 返回体
+ */
 @Data
 @ToString
 public class ListSlowLogDetailExportTaskResponse extends BaseResponseModel {

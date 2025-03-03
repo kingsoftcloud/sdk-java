@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DeregisterInstancesFromListenerResponse
-* @Description DeregisterInstancesFromListener 返回体
-*/
+ * @Classname DeregisterInstancesFromListenerResponse
+ * @Description DeregisterInstancesFromListener 返回体
+ */
 @Data
 @ToString
 public class DeregisterInstancesFromListenerResponse extends BaseResponseModel {

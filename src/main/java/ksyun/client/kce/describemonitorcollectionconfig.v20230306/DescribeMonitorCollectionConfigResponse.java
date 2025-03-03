@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DescribeMonitorCollectionConfigResponse
-* @Description DescribeMonitorCollectionConfig 返回体
-*/
+ * @Classname DescribeMonitorCollectionConfigResponse
+ * @Description DescribeMonitorCollectionConfig 返回体
+ */
 @Data
 @ToString
 public class DescribeMonitorCollectionConfigResponse extends BaseResponseModel {

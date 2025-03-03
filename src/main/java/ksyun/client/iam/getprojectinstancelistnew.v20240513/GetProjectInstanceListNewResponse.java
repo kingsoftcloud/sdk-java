@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname GetProjectInstanceListNewResponse
-* @Description GetProjectInstanceListNew 返回体
-*/
+ * @Classname GetProjectInstanceListNewResponse
+ * @Description GetProjectInstanceListNew 返回体
+ */
 @Data
 @ToString
 public class GetProjectInstanceListNewResponse extends BaseResponseModel {

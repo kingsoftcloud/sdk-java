@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DescribeContainerGroupEventsResponse
-* @Description DescribeContainerGroupEvents 返回体
-*/
+ * @Classname DescribeContainerGroupEventsResponse
+ * @Description DescribeContainerGroupEvents 返回体
+ */
 @Data
 @ToString
 public class DescribeContainerGroupEventsResponse extends BaseResponseModel {

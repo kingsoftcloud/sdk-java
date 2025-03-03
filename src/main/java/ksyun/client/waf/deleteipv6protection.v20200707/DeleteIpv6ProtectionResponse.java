@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DeleteIpv6ProtectionResponse
-* @Description DeleteIpv6Protection 返回体
-*/
+ * @Classname DeleteIpv6ProtectionResponse
+ * @Description DeleteIpv6Protection 返回体
+ */
 @Data
 @ToString
 public class DeleteIpv6ProtectionResponse extends BaseResponseModel {

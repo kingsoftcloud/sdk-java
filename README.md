@@ -1,6 +1,7 @@
 # 简介
 
-欢迎使用金山云开发者工具套件（SDK）。为方便 JAVA 开发者调试和接入金山云产品 API，这里向您介绍适用于 JAVA 的金山云开发工具包，并提供首次使用开发工具包的简单示例。让您快速获取金山云 JAVA SDK 并开始调用。
+欢迎使用金山云开发者工具套件（SDK）。为方便 JAVA 开发者调试和接入金山云产品 API，这里向您介绍适用于 JAVA
+的金山云开发工具包，并提供首次使用开发工具包的简单示例。让您快速获取金山云 JAVA SDK 并开始调用。
 
 # 依赖环境
 
@@ -10,7 +11,9 @@
 
 # 获取安装
 
-安装 JAVA SDK 前，先获取安全凭证。在第一次使用云 API 之前，用户首先需要在金山云控制台上申请安全凭证，安全凭证包括 secretId 和 secretKey， secretId 是用于标识 API 调用者的身份，secretKey 是用于加密签名字符串和服务器端验证签名字符串的密钥。secretKey 必须严格保管，避免泄露。
+安装 JAVA SDK 前，先获取安全凭证。在第一次使用云 API 之前，用户首先需要在金山云控制台上申请安全凭证，安全凭证包括 secretId 和
+secretKey， secretId 是用于标识 API 调用者的身份，secretKey 是用于加密签名字符串和服务器端验证签名字符串的密钥。secretKey
+必须严格保管，避免泄露。
 
 ## 通过 MAVEN 安装
 
@@ -48,4 +51,5 @@ public static void main(String[] args) {
 ```
 
 # 更多示例
+
 参见金山云控制台-API Explorer-对应服务-SDK示例。

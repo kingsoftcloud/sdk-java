@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname GetDomainRequestPeriodRatioDataResponse
-* @Description GetDomainRequestPeriodRatioData 返回体
-*/
+ * @Classname GetDomainRequestPeriodRatioDataResponse
+ * @Description GetDomainRequestPeriodRatioData 返回体
+ */
 @Data
 @ToString
 public class GetDomainRequestPeriodRatioDataResponse extends BaseResponseModel {

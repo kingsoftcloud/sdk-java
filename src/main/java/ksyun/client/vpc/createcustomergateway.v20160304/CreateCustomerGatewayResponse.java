@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname CreateCustomerGatewayResponse
-* @Description CreateCustomerGateway 返回体
-*/
+ * @Classname CreateCustomerGatewayResponse
+ * @Description CreateCustomerGateway 返回体
+ */
 @Data
 @ToString
 public class CreateCustomerGatewayResponse extends BaseResponseModel {

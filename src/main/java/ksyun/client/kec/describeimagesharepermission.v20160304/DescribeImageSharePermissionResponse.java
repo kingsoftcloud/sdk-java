@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DescribeImageSharePermissionResponse
-* @Description DescribeImageSharePermission 返回体
-*/
+ * @Classname DescribeImageSharePermissionResponse
+ * @Description DescribeImageSharePermission 返回体
+ */
 @Data
 @ToString
 public class DescribeImageSharePermissionResponse extends BaseResponseModel {

@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname GetPostpayDetailConsumeResponse
-* @Description GetPostpayDetailConsume 返回体
-*/
+ * @Classname GetPostpayDetailConsumeResponse
+ * @Description GetPostpayDetailConsume 返回体
+ */
 @Data
 @ToString
 public class GetPostpayDetailConsumeResponse extends BaseResponseModel {

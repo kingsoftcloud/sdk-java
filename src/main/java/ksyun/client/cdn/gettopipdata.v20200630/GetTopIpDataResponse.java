@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname GetTopIpDataResponse
-* @Description GetTopIpData 返回体
-*/
+ * @Classname GetTopIpDataResponse
+ * @Description GetTopIpData 返回体
+ */
 @Data
 @ToString
 public class GetTopIpDataResponse extends BaseResponseModel {

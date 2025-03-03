@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname CreateAddonInstanceResponse
-* @Description CreateAddonInstance 返回体
-*/
+ * @Classname CreateAddonInstanceResponse
+ * @Description CreateAddonInstance 返回体
+ */
 @Data
 @ToString
 public class CreateAddonInstanceResponse extends BaseResponseModel {

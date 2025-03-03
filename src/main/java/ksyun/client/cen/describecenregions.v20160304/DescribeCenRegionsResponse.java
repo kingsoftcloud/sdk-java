@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname DescribeCenRegionsResponse
-* @Description DescribeCenRegions 返回体
-*/
+ * @Classname DescribeCenRegionsResponse
+ * @Description DescribeCenRegions 返回体
+ */
 @Data
 @ToString
 public class DescribeCenRegionsResponse extends BaseResponseModel {

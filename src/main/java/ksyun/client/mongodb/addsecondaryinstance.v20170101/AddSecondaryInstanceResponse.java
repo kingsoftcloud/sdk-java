@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname AddSecondaryInstanceResponse
-* @Description AddSecondaryInstance 返回体
-*/
+ * @Classname AddSecondaryInstanceResponse
+ * @Description AddSecondaryInstance 返回体
+ */
 @Data
 @ToString
 public class AddSecondaryInstanceResponse extends BaseResponseModel {

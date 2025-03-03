@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname CreateDBParameterGroupResponse
-* @Description CreateDBParameterGroup 返回体
-*/
+ * @Classname CreateDBParameterGroupResponse
+ * @Description CreateDBParameterGroup 返回体
+ */
 @Data
 @ToString
 public class CreateDBParameterGroupResponse extends BaseResponseModel {

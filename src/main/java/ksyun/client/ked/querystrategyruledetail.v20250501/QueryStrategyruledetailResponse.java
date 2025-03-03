@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname QueryStrategyruledetailResponse
-* @Description QueryStrategyruledetail 返回体
-*/
+ * @Classname QueryStrategyruledetailResponse
+ * @Description QueryStrategyruledetail 返回体
+ */
 @Data
 @ToString
 public class QueryStrategyruledetailResponse extends BaseResponseModel {

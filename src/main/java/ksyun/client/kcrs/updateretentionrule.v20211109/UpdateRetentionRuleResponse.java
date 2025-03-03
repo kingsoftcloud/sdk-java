@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname UpdateRetentionRuleResponse
-* @Description UpdateRetentionRule 返回体
-*/
+ * @Classname UpdateRetentionRuleResponse
+ * @Description UpdateRetentionRule 返回体
+ */
 @Data
 @ToString
 public class UpdateRetentionRuleResponse extends BaseResponseModel {

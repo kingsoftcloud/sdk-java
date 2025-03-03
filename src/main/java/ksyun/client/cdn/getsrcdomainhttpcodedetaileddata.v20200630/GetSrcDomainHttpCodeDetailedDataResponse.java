@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname GetSrcDomainHttpCodeDetailedDataResponse
-* @Description GetSrcDomainHttpCodeDetailedData 返回体
-*/
+ * @Classname GetSrcDomainHttpCodeDetailedDataResponse
+ * @Description GetSrcDomainHttpCodeDetailedData 返回体
+ */
 @Data
 @ToString
 public class GetSrcDomainHttpCodeDetailedDataResponse extends BaseResponseModel {

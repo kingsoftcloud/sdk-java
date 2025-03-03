@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname ReleaseDBInstanceEipResponse
-* @Description ReleaseDBInstanceEip 返回体
-*/
+ * @Classname ReleaseDBInstanceEipResponse
+ * @Description ReleaseDBInstanceEip 返回体
+ */
 @Data
 @ToString
 public class ReleaseDBInstanceEipResponse extends BaseResponseModel {

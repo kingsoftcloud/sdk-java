@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname ListHistoryPubStreamsErrInfoResponse
-* @Description ListHistoryPubStreamsErrInfo 返回体
-*/
+ * @Classname ListHistoryPubStreamsErrInfoResponse
+ * @Description ListHistoryPubStreamsErrInfo 返回体
+ */
 @Data
 @ToString
 public class ListHistoryPubStreamsErrInfoResponse extends BaseResponseModel {

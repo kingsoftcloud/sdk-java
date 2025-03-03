@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname ModifyKeyStateResponse
-* @Description ModifyKeyState 返回体
-*/
+ * @Classname ModifyKeyStateResponse
+ * @Description ModifyKeyState 返回体
+ */
 @Data
 @ToString
 public class ModifyKeyStateResponse extends BaseResponseModel {

@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname CreateTagResponse
-* @Description CreateTag 返回体
-*/
+ * @Classname CreateTagResponse
+ * @Description CreateTag 返回体
+ */
 @Data
 @ToString
 public class CreateTagResponse extends BaseResponseModel {

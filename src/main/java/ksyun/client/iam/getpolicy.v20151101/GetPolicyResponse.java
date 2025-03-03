@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname GetPolicyResponse
-* @Description GetPolicy 返回体
-*/
+ * @Classname GetPolicyResponse
+ * @Description GetPolicy 返回体
+ */
 @Data
 @ToString
 public class GetPolicyResponse extends BaseResponseModel {

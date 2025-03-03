@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname CreateZoneResponse
-* @Description CreateZone 返回体
-*/
+ * @Classname CreateZoneResponse
+ * @Description CreateZone 返回体
+ */
 @Data
 @ToString
 public class CreateZoneResponse extends BaseResponseModel {

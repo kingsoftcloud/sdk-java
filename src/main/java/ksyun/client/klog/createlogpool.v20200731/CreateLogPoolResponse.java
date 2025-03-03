@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname CreateLogPoolResponse
-* @Description CreateLogPool 返回体
-*/
+ * @Classname CreateLogPoolResponse
+ * @Description CreateLogPool 返回体
+ */
 @Data
 @ToString
 public class CreateLogPoolResponse extends BaseResponseModel {

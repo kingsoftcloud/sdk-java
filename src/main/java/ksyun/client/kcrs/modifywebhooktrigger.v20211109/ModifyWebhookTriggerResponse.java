@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname ModifyWebhookTriggerResponse
-* @Description ModifyWebhookTrigger 返回体
-*/
+ * @Classname ModifyWebhookTriggerResponse
+ * @Description ModifyWebhookTrigger 返回体
+ */
 @Data
 @ToString
 public class ModifyWebhookTriggerResponse extends BaseResponseModel {

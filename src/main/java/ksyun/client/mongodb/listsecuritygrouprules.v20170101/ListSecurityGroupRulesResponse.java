@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname ListSecurityGroupRulesResponse
-* @Description ListSecurityGroupRules 返回体
-*/
+ * @Classname ListSecurityGroupRulesResponse
+ * @Description ListSecurityGroupRules 返回体
+ */
 @Data
 @ToString
 public class ListSecurityGroupRulesResponse extends BaseResponseModel {

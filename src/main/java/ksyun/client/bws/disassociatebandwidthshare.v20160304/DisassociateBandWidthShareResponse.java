@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DisassociateBandWidthShareResponse
-* @Description DisassociateBandWidthShare 返回体
-*/
+ * @Classname DisassociateBandWidthShareResponse
+ * @Description DisassociateBandWidthShare 返回体
+ */
 @Data
 @ToString
 public class DisassociateBandWidthShareResponse extends BaseResponseModel {

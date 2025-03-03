@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DisableImageCachingResponse
-* @Description DisableImageCaching 返回体
-*/
+ * @Classname DisableImageCachingResponse
+ * @Description DisableImageCaching 返回体
+ */
 @Data
 @ToString
 public class DisableImageCachingResponse extends BaseResponseModel {

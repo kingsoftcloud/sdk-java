@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname ModifyDirectConnectInterfaceResponse
-* @Description ModifyDirectConnectInterface 返回体
-*/
+ * @Classname ModifyDirectConnectInterfaceResponse
+ * @Description ModifyDirectConnectInterface 返回体
+ */
 @Data
 @ToString
 public class ModifyDirectConnectInterfaceResponse extends BaseResponseModel {

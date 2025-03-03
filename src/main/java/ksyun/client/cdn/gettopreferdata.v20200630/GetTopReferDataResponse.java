@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname GetTopReferDataResponse
-* @Description GetTopReferData 返回体
-*/
+ * @Classname GetTopReferDataResponse
+ * @Description GetTopReferData 返回体
+ */
 @Data
 @ToString
 public class GetTopReferDataResponse extends BaseResponseModel {

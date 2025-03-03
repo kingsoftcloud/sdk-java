@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DeleteInstanceTokenResponse
-* @Description DeleteInstanceToken 返回体
-*/
+ * @Classname DeleteInstanceTokenResponse
+ * @Description DeleteInstanceToken 返回体
+ */
 @Data
 @ToString
 public class DeleteInstanceTokenResponse extends BaseResponseModel {

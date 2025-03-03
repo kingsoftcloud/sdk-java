@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DescribeHaVipResponse
-* @Description DescribeHaVip 返回体
-*/
+ * @Classname DescribeHaVipResponse
+ * @Description DescribeHaVip 返回体
+ */
 @Data
 @ToString
 public class DescribeHaVipResponse extends BaseResponseModel {

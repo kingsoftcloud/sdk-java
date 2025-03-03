@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname DeallocateEipResponse
-* @Description DeallocateEip 返回体
-*/
+ * @Classname DeallocateEipResponse
+ * @Description DeallocateEip 返回体
+ */
 @Data
 @ToString
 public class DeallocateEipResponse extends BaseResponseModel {

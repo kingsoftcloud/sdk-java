@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname TerminateInstancesResponse
-* @Description TerminateInstances 返回体
-*/
+ * @Classname TerminateInstancesResponse
+ * @Description TerminateInstances 返回体
+ */
 @Data
 @ToString
 public class TerminateInstancesResponse extends BaseResponseModel {

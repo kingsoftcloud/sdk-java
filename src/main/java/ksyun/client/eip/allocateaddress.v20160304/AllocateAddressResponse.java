@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname AllocateAddressResponse
-* @Description AllocateAddress 返回体
-*/
+ * @Classname AllocateAddressResponse
+ * @Description AllocateAddress 返回体
+ */
 @Data
 @ToString
 public class AllocateAddressResponse extends BaseResponseModel {

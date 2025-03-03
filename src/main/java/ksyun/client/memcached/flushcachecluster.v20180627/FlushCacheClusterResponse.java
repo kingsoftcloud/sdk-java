@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname FlushCacheClusterResponse
-* @Description FlushCacheCluster 返回体
-*/
+ * @Classname FlushCacheClusterResponse
+ * @Description FlushCacheCluster 返回体
+ */
 @Data
 @ToString
 public class FlushCacheClusterResponse extends BaseResponseModel {

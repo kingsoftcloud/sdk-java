@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname GetAccountAllProjectListResponse
-* @Description GetAccountAllProjectList 返回体
-*/
+ * @Classname GetAccountAllProjectListResponse
+ * @Description GetAccountAllProjectList 返回体
+ */
 @Data
 @ToString
 public class GetAccountAllProjectListResponse extends BaseResponseModel {

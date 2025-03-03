@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname CreateVolumeResponse
-* @Description CreateVolume 返回体
-*/
+ * @Classname CreateVolumeResponse
+ * @Description CreateVolume 返回体
+ */
 @Data
 @ToString
 public class CreateVolumeResponse extends BaseResponseModel {

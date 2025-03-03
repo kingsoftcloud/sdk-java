@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DeleteSecurityGroupRulesResponse
-* @Description DeleteSecurityGroupRules 返回体
-*/
+ * @Classname DeleteSecurityGroupRulesResponse
+ * @Description DeleteSecurityGroupRules 返回体
+ */
 @Data
 @ToString
 public class DeleteSecurityGroupRulesResponse extends BaseResponseModel {

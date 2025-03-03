@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DeleteSnapshotResponse
-* @Description DeleteSnapshot 返回体
-*/
+ * @Classname DeleteSnapshotResponse
+ * @Description DeleteSnapshot 返回体
+ */
 @Data
 @ToString
 public class DeleteSnapshotResponse extends BaseResponseModel {

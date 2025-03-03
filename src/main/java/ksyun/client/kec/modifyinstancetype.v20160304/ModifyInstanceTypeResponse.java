@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname ModifyInstanceTypeResponse
-* @Description ModifyInstanceType 返回体
-*/
+ * @Classname ModifyInstanceTypeResponse
+ * @Description ModifyInstanceType 返回体
+ */
 @Data
 @ToString
 public class ModifyInstanceTypeResponse extends BaseResponseModel {

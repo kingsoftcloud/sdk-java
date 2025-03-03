@@ -9,13 +9,15 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname DeleteDedicatedClusterRequest
-* @Description 请求参数
-*/
+ * @Classname DeleteDedicatedClusterRequest
+ * @Description 请求参数
+ */
 @Data
-public class DeleteDedicatedClusterRequest{
-    /**专属集群id列表*/
-    @KsYunField(name="DedicatedClusterId")
+public class DeleteDedicatedClusterRequest {
+    /**
+     * 专属集群id列表
+     */
+    @KsYunField(name = "DedicatedClusterId")
     private List<String> DedicatedClusterIdList;
 
 

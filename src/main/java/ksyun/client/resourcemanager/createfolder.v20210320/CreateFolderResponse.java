@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname CreateFolderResponse
-* @Description CreateFolder 返回体
-*/
+ * @Classname CreateFolderResponse
+ * @Description CreateFolder 返回体
+ */
 @Data
 @ToString
 public class CreateFolderResponse extends BaseResponseModel {

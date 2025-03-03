@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname GetTableRestorableTimeResponse
-* @Description GetTableRestorableTime 返回体
-*/
+ * @Classname GetTableRestorableTimeResponse
+ * @Description GetTableRestorableTime 返回体
+ */
 @Data
 @ToString
 public class GetTableRestorableTimeResponse extends BaseResponseModel {

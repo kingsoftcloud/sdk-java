@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname DeleteCenRegionBandwidthResponse
-* @Description DeleteCenRegionBandwidth 返回体
-*/
+ * @Classname DeleteCenRegionBandwidthResponse
+ * @Description DeleteCenRegionBandwidth 返回体
+ */
 @Data
 @ToString
 public class DeleteCenRegionBandwidthResponse extends BaseResponseModel {

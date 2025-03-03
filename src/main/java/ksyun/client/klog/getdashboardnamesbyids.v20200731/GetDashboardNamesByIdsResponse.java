@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname GetDashboardNamesByIdsResponse
-* @Description GetDashboardNamesByIds 返回体
-*/
+ * @Classname GetDashboardNamesByIdsResponse
+ * @Description GetDashboardNamesByIds 返回体
+ */
 @Data
 @ToString
 public class GetDashboardNamesByIdsResponse extends BaseResponseModel {

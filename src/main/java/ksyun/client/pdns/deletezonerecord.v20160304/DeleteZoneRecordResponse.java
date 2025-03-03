@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DeleteZoneRecordResponse
-* @Description DeleteZoneRecord 返回体
-*/
+ * @Classname DeleteZoneRecordResponse
+ * @Description DeleteZoneRecord 返回体
+ */
 @Data
 @ToString
 public class DeleteZoneRecordResponse extends BaseResponseModel {

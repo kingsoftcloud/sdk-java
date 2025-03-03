@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname ModifyDomainResponse
-* @Description ModifyDomain 返回体
-*/
+ * @Classname ModifyDomainResponse
+ * @Description ModifyDomain 返回体
+ */
 @Data
 @ToString
 public class ModifyDomainResponse extends BaseResponseModel {

@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname CreateIpv6ProtectionResponse
-* @Description CreateIpv6Protection 返回体
-*/
+ * @Classname CreateIpv6ProtectionResponse
+ * @Description CreateIpv6Protection 返回体
+ */
 @Data
 @ToString
 public class CreateIpv6ProtectionResponse extends BaseResponseModel {

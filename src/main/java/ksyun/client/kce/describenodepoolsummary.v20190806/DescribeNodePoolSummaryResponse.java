@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname DescribeNodePoolSummaryResponse
-* @Description DescribeNodePoolSummary 返回体
-*/
+ * @Classname DescribeNodePoolSummaryResponse
+ * @Description DescribeNodePoolSummary 返回体
+ */
 @Data
 @ToString
 public class DescribeNodePoolSummaryResponse extends BaseResponseModel {

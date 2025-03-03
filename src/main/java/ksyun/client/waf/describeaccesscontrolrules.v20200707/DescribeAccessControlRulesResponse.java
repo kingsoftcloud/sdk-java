@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DescribeAccessControlRulesResponse
-* @Description DescribeAccessControlRules 返回体
-*/
+ * @Classname DescribeAccessControlRulesResponse
+ * @Description DescribeAccessControlRules 返回体
+ */
 @Data
 @ToString
 public class DescribeAccessControlRulesResponse extends BaseResponseModel {

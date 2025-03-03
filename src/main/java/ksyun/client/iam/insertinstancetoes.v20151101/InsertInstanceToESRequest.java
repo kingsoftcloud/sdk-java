@@ -1,45 +1,40 @@
 package ksyun.client.iam.insertinstancetoes.v20151101;
 
 import common.annotation.KsYunField;
-import lombok.Builder;
 import lombok.Data;
-import lombok.ToString;
-
-import java.util.List;
-import java.util.Arrays;
 
 /**
-* @Classname InsertInstanceToESRequest
-* @Description 请求参数
-*/
+ * @Classname InsertInstanceToESRequest
+ * @Description 请求参数
+ */
 @Data
-public class InsertInstanceToESRequest{
+public class InsertInstanceToESRequest {
     /***/
-    @KsYunField(name="ProjectId")
+    @KsYunField(name = "ProjectId")
     private Integer ProjectId;
 
     /***/
-    @KsYunField(name="ProductLine")
+    @KsYunField(name = "ProductLine")
     private String ProductLine;
 
     /***/
-    @KsYunField(name="ProductGroup")
+    @KsYunField(name = "ProductGroup")
     private Integer ProductGroup;
 
     /***/
-    @KsYunField(name="ResourceType")
+    @KsYunField(name = "ResourceType")
     private String ResourceType;
 
     /***/
-    @KsYunField(name="InstanceId")
+    @KsYunField(name = "InstanceId")
     private String InstanceId;
 
     /***/
-    @KsYunField(name="RegionEn")
+    @KsYunField(name = "RegionEn")
     private String RegionEn;
 
     /***/
-    @KsYunField(name="InstanceName")
+    @KsYunField(name = "InstanceName")
     private String InstanceName;
 
 

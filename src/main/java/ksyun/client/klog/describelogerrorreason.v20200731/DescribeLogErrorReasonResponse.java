@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DescribeLogErrorReasonResponse
-* @Description DescribeLogErrorReason 返回体
-*/
+ * @Classname DescribeLogErrorReasonResponse
+ * @Description DescribeLogErrorReason 返回体
+ */
 @Data
 @ToString
 public class DescribeLogErrorReasonResponse extends BaseResponseModel {

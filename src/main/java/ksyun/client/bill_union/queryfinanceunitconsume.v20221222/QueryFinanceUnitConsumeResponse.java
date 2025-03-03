@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname QueryFinanceUnitConsumeResponse
-* @Description QueryFinanceUnitConsume 返回体
-*/
+ * @Classname QueryFinanceUnitConsumeResponse
+ * @Description QueryFinanceUnitConsume 返回体
+ */
 @Data
 @ToString
 public class QueryFinanceUnitConsumeResponse extends BaseResponseModel {

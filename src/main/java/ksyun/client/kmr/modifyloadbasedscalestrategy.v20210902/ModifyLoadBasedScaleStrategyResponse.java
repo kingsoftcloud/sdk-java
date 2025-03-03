@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname ModifyLoadBasedScaleStrategyResponse
-* @Description ModifyLoadBasedScaleStrategy 返回体
-*/
+ * @Classname ModifyLoadBasedScaleStrategyResponse
+ * @Description ModifyLoadBasedScaleStrategy 返回体
+ */
 @Data
 @ToString
 public class ModifyLoadBasedScaleStrategyResponse extends BaseResponseModel {

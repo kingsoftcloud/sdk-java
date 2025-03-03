@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname AnalyzeDailyResponse
-* @Description AnalyzeDaily 返回体
-*/
+ * @Classname AnalyzeDailyResponse
+ * @Description AnalyzeDaily 返回体
+ */
 @Data
 @ToString
 public class AnalyzeDailyResponse extends BaseResponseModel {

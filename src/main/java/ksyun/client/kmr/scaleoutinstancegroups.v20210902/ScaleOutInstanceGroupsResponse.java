@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname ScaleOutInstanceGroupsResponse
-* @Description ScaleOutInstanceGroups 返回体
-*/
+ * @Classname ScaleOutInstanceGroupsResponse
+ * @Description ScaleOutInstanceGroups 返回体
+ */
 @Data
 @ToString
 public class ScaleOutInstanceGroupsResponse extends BaseResponseModel {

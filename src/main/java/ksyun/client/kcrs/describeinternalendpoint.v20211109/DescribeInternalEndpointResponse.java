@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DescribeInternalEndpointResponse
-* @Description DescribeInternalEndpoint 返回体
-*/
+ * @Classname DescribeInternalEndpointResponse
+ * @Description DescribeInternalEndpoint 返回体
+ */
 @Data
 @ToString
 public class DescribeInternalEndpointResponse extends BaseResponseModel {

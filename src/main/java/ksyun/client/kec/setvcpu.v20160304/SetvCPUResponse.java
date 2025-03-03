@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname SetvCPUResponse
-* @Description SetvCPU 返回体
-*/
+ * @Classname SetvCPUResponse
+ * @Description SetvCPU 返回体
+ */
 @Data
 @ToString
 public class SetvCPUResponse extends BaseResponseModel {

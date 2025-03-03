@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DescribeCacheParameterGroupResponse
-* @Description DescribeCacheParameterGroup 返回体
-*/
+ * @Classname DescribeCacheParameterGroupResponse
+ * @Description DescribeCacheParameterGroup 返回体
+ */
 @Data
 @ToString
 public class DescribeCacheParameterGroupResponse extends BaseResponseModel {

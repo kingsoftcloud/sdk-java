@@ -5,12 +5,10 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname ListFoldersResponse
-* @Description ListFolders 返回体
-*/
+ * @Classname ListFoldersResponse
+ * @Description ListFolders 返回体
+ */
 @Data
 @ToString
 public class ListFoldersResponse extends BaseResponseModel {
