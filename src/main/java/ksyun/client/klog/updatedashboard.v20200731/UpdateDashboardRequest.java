@@ -10,9 +10,15 @@ import lombok.Data;
 @Data
 public class UpdateDashboardRequest {
     /**
-     * Action
+     * 仪表盘ID
      */
-    @KsYunField(name = "Action")
-    private String Action;
+    @KsYunField(name = "DashboardId")
+    private String DashboardId;
+
+    /**
+     * 仪表盘名称
+     */
+    @KsYunField(name = "DashboardName")
+    private String DashboardName;
 
 }

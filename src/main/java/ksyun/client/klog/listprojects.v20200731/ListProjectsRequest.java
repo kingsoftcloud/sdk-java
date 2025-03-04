@@ -10,9 +10,15 @@ import lombok.Data;
 @Data
 public class ListProjectsRequest {
     /**
-     * Action
+     * 返回记录的页码，从0开始
      */
-    @KsYunField(name = "Action")
-    private String Action;
+    @KsYunField(name = "Page")
+    private Integer Page;
+
+    /**
+     * 每页返回最大条目，默认 500（最大值）
+     */
+    @KsYunField(name = "Size")
+    private Integer Size;
 
 }

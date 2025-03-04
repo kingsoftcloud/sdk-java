@@ -5,8 +5,6 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
  * @Classname ModifyEpcResponse
  * @Description ModifyEpc 返回体

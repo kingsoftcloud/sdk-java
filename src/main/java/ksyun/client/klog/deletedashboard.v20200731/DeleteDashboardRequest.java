@@ -10,9 +10,9 @@ import lombok.Data;
 @Data
 public class DeleteDashboardRequest {
     /**
-     * Action
+     * 仪表盘ID
      */
-    @KsYunField(name = "Action")
-    private String Action;
+    @KsYunField(name = "DashboardId")
+    private String DashboardId;
 
 }

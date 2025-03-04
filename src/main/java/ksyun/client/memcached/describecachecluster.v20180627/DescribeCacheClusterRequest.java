@@ -10,15 +10,15 @@ import lombok.Data;
 @Data
 public class DescribeCacheClusterRequest {
     /**
-     * Action
+     * 缓存服务ID
      */
-    @KsYunField(name = "Action")
-    private String Action;
+    @KsYunField(name = "CacheId")
+    private String CacheId;
 
     /**
-     * Version
+     * 缓存服务引擎 	 取固定值： memcached
      */
-    @KsYunField(name = "Version")
-    private String Version;
+    @KsYunField(name = "Engine")
+    private String Engine;
 
 }

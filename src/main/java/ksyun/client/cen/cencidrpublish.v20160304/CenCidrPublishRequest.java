@@ -29,4 +29,10 @@ public class CenCidrPublishRequest {
     @KsYunField(name = "NetworkRouteId")
     private List<String> NetworkRouteIdList;
 
+    /**
+     * 网络实例发布的自定义网段
+     */
+    @KsYunField(name = "SelfDefineCidr")
+    private List<String> SelfDefineCidrList;
+
 }

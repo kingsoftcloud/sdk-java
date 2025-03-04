@@ -10,15 +10,21 @@ import lombok.Data;
 @Data
 public class GetBlacklistRequest {
     /**
-     * Action
+     * 域名空间
      */
-    @KsYunField(name = "Action")
-    private String Action;
+    @KsYunField(name = "UniqueName")
+    private String UniqueName;
 
     /**
-     * Version
+     * 应用名
      */
-    @KsYunField(name = "Version")
-    private String Version;
+    @KsYunField(name = "App")
+    private String App;
+
+    /**
+     * 推流域名
+     */
+    @KsYunField(name = "Pubdomain")
+    private String Pubdomain;
 
 }

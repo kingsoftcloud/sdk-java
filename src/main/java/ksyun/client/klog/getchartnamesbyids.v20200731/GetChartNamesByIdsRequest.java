@@ -10,9 +10,15 @@ import lombok.Data;
 @Data
 public class GetChartNamesByIdsRequest {
     /**
-     * Action
+     * 工程名称
      */
-    @KsYunField(name = "Action")
-    private String Action;
+    @KsYunField(name = "ProjectName")
+    private String ProjectName;
+
+    /**
+     * 图表id列表
+     */
+    @KsYunField(name = "ChartIds")
+    private String ChartIds;
 
 }

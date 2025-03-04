@@ -29,4 +29,10 @@ public class CenCidrDeleteRequest {
     @KsYunField(name = "NetworkRouteId")
     private List<String> NetworkRouteIdList;
 
+    /**
+     * 自定义网段路由的ID
+     */
+    @KsYunField(name = "SelfRouteId")
+    private List<String> SelfRouteIdList;
+
 }

@@ -10,9 +10,33 @@ import lombok.Data;
 @Data
 public class CreateProjectRequest {
     /**
-     * Action
+     * 工程名称
      */
-    @KsYunField(name = "Action")
-    private String Action;
+    @KsYunField(name = "ProjectName")
+    private String ProjectName;
+
+    /**
+     * 工程描述
+     */
+    @KsYunField(name = "Description")
+    private String Description;
+
+    /**
+     * 所属地域
+     */
+    @KsYunField(name = "Region")
+    private String Region;
+
+    /**
+     * 项目id，不填则默认为默认项目id
+     */
+    @KsYunField(name = "IamProjectId")
+    private Integer IamProjectId;
+
+    /**
+     * 项目名称，不填则为默认项目名称，以IamProjectId为准
+     */
+    @KsYunField(name = "IamProjectName")
+    private String IamProjectName;
 
 }

@@ -1,5 +1,6 @@
 package ksyun.client.klog.describelogpool.v20200731;
 
+import common.annotation.KsYunField;
 import lombok.Data;
 
 /**
@@ -8,4 +9,16 @@ import lombok.Data;
  */
 @Data
 public class DescribeLogPoolRequest {
+    /**
+     * 工程名称
+     */
+    @KsYunField(name = "ProjectName")
+    private String ProjectName;
+
+    /**
+     * 日志池名称
+     */
+    @KsYunField(name = "LogPoolName")
+    private String LogPoolName;
+
 }

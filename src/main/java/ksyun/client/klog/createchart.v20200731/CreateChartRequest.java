@@ -1,12 +1,7 @@
 package ksyun.client.klog.createchart.v20200731;
 
 import common.annotation.KsYunField;
-import lombok.Builder;
 import lombok.Data;
-import lombok.ToString;
-
-import java.util.List;
-import java.util.Arrays;
 
 /**
  * @Classname CreateChartRequest

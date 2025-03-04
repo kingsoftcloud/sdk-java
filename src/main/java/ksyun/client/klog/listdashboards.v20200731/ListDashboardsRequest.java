@@ -10,9 +10,21 @@ import lombok.Data;
 @Data
 public class ListDashboardsRequest {
     /**
-     * Action
+     * 工程名称
      */
-    @KsYunField(name = "Action")
-    private String Action;
+    @KsYunField(name = "ProjectName")
+    private String ProjectName;
+
+    /**
+     * 返回的分页数，从0开始
+     */
+    @KsYunField(name = "Page")
+    private Integer Page;
+
+    /**
+     * 每页返回最大条目，默认 500（最大值）
+     */
+    @KsYunField(name = "Size")
+    private Integer Size;
 
 }

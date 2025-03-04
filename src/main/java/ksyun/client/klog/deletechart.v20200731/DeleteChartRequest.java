@@ -10,9 +10,9 @@ import lombok.Data;
 @Data
 public class DeleteChartRequest {
     /**
-     * Action
+     * 图表ID
      */
-    @KsYunField(name = "Action")
-    private String Action;
+    @KsYunField(name = "ChartId")
+    private String ChartId;
 
 }

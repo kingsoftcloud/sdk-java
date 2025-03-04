@@ -1,6 +1,5 @@
 package ksyun.client.memcached.describeavailabilityzones.v20180627;
 
-import common.annotation.KsYunField;
 import lombok.Data;
 
 /**
@@ -9,16 +8,4 @@ import lombok.Data;
  */
 @Data
 public class DescribeAvailabilityZonesRequest {
-    /**
-     * Action
-     */
-    @KsYunField(name = "Action")
-    private String Action;
-
-    /**
-     * Version
-     */
-    @KsYunField(name = "Version")
-    private String Version;
-
 }

@@ -37,6 +37,15 @@ public class DescribeAlbListenersRequest {
     @Data
     @ToString
     public static class FilterDto {
+        /**
+         * 有效值：
+         * - alblistener-id，应用型监听器的ID
+         */
+        @KsYunField(name = "Name")
+        private String Name;
+        /***/
+        @KsYunField(name = "Value")
+        private List<String> ValueList;
     }
 
 }

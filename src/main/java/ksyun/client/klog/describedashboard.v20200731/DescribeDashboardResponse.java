@@ -5,8 +5,6 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
  * @Classname DescribeDashboardResponse
  * @Description DescribeDashboard 返回体

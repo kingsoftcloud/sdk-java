@@ -5,6 +5,8 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.Set;
+
 /**
  * @Classname ResetAccountPasswordResponse
  * @Description ResetAccountPassword 返回体
