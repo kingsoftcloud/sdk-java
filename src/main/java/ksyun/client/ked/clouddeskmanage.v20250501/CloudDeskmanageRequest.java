@@ -23,6 +23,8 @@ public class CloudDeskmanageRequest {
      * reboot 重启
      * forcedUnbind 强制解绑用户
      * delete 删除
+     * lock 锁定
+     * unlock 解锁
      */
     @KsYunField(name = "action1")
     private String Action1;

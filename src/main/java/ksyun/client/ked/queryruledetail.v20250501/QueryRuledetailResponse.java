@@ -1,4 +1,4 @@
-package ksyun.client.ked.imagedelete.v20250501;
+package ksyun.client.ked.queryruledetail.v20250501;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;
@@ -6,12 +6,12 @@ import lombok.Data;
 import lombok.ToString;
 
 /**
- * @Classname ImagedeleteResponse
- * @Description Imagedelete 返回体
+ * @Classname QueryRuledetailResponse
+ * @Description QueryRuledetail 返回体
  */
 @Data
 @ToString
-public class ImagedeleteResponse extends BaseResponseModel {
+public class QueryRuledetailResponse extends BaseResponseModel {
 
     /**
      * 请求id

@@ -1,4 +1,4 @@
-package ksyun.client.ked.clouddeskmanage.v20250501;
+package ksyun.client.ked.getstock.v20250501;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -13,14 +13,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Classname CloudDeskmanageClient
- * @Description 提供对云电脑进行开机、关机、重启、删除、锁定和解锁的操作功能。
+ * @Classname GetStockClient
+ * @Description 通过API获取，渠道商在某个节点可以开云电脑的配额
  */
 @Slf4j
-public class CloudDeskmanageClient extends BaseClient {
+public class GetStockClient extends BaseClient {
     private final static String service = "ked";
     private final static String version = "V1";
-    private final static String action = "CloudDeskmanage";
+    private final static String action = "GetStock";
 
 
     /**
@@ -29,7 +29,7 @@ public class CloudDeskmanageClient extends BaseClient {
     private final Credential credential;
 
 
-    public CloudDeskmanageClient(Credential credential) {
+    public GetStockClient(Credential credential) {
         this.credential = credential;
     }
 
@@ -68,7 +68,7 @@ public class CloudDeskmanageClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CloudDeskmanageResponse doPost(String path, CloudDeskmanageRequest requestObj) throws Exception {
+    public GetStockResponse doPost(String path, GetStockRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
@@ -83,7 +83,7 @@ public class CloudDeskmanageClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CloudDeskmanageResponse doPost(String path, CloudDeskmanageRequest requestObj, Map<String, String> head) throws Exception {
+    public GetStockResponse doPost(String path, GetStockRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
         }
@@ -100,7 +100,7 @@ public class CloudDeskmanageClient extends BaseClient {
 
         String response = HttpClientUtils.httpPost(path, requestParams, head);
         log.info("doPost end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, CloudDeskmanageResponse.class);
+        return JSON.parseObject(response, GetStockResponse.class);
     }
 
     /**
@@ -111,7 +111,7 @@ public class CloudDeskmanageClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CloudDeskmanageResponse doPostRaw(String path, CloudDeskmanageRequest requestObj) throws Exception {
+    public GetStockResponse doPostRaw(String path, GetStockRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doPost(path, requestObj, head);
@@ -125,7 +125,7 @@ public class CloudDeskmanageClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CloudDeskmanageResponse doPostRaw(String path, CloudDeskmanageRequest requestObj, Map<String, String> head) throws Exception {
+    public GetStockResponse doPostRaw(String path, GetStockRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
         }
@@ -141,7 +141,7 @@ public class CloudDeskmanageClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CloudDeskmanageResponse doGet(String path, CloudDeskmanageRequest requestObj) throws Exception {
+    public GetStockResponse doGet(String path, GetStockRequest requestObj) throws Exception {
         return doGet(path, requestObj, null);
     }
 
@@ -153,7 +153,7 @@ public class CloudDeskmanageClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CloudDeskmanageResponse doDelete(String path, CloudDeskmanageRequest requestObj) throws Exception {
+    public GetStockResponse doDelete(String path, GetStockRequest requestObj) throws Exception {
         return doDelete(path, requestObj, null);
     }
 
@@ -166,12 +166,12 @@ public class CloudDeskmanageClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CloudDeskmanageResponse doDelete(String path, CloudDeskmanageRequest requestObj, Map<String, String> head) throws Exception {
+    public GetStockResponse doDelete(String path, GetStockRequest requestObj, Map<String, String> head) throws Exception {
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpDelete(path, requestParams, head);
         log.info("doDelete end,path:{},params:{},head:{}", path, requestParams, head);
-        CloudDeskmanageResponse CloudDeskmanageResponse = JSON.parseObject(response, CloudDeskmanageResponse.class);
-        return CloudDeskmanageResponse;
+        GetStockResponse GetStockResponse = JSON.parseObject(response, GetStockResponse.class);
+        return GetStockResponse;
     }
 
     /**
@@ -182,7 +182,7 @@ public class CloudDeskmanageClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CloudDeskmanageResponse doPut(String path, CloudDeskmanageRequest requestObj) throws Exception {
+    public GetStockResponse doPut(String path, GetStockRequest requestObj) throws Exception {
         return doPut(path, requestObj, null);
     }
 
@@ -195,12 +195,12 @@ public class CloudDeskmanageClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CloudDeskmanageResponse doPut(String path, CloudDeskmanageRequest requestObj, Map<String, String> head) throws Exception {
+    public GetStockResponse doPut(String path, GetStockRequest requestObj, Map<String, String> head) throws Exception {
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpPut(path, requestParams, head);
         log.info("httpPut end,path:{},params:{},head:{}", path, requestParams, head);
-        CloudDeskmanageResponse CloudDeskmanageResponse = JSON.parseObject(response, CloudDeskmanageResponse.class);
-        return CloudDeskmanageResponse;
+        GetStockResponse GetStockResponse = JSON.parseObject(response, GetStockResponse.class);
+        return GetStockResponse;
     }
 
     /**
@@ -212,7 +212,7 @@ public class CloudDeskmanageClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CloudDeskmanageResponse doGet(String path, CloudDeskmanageRequest requestObj, Map<String, String> head) throws Exception {
+    public GetStockResponse doGet(String path, GetStockRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
         }
@@ -225,7 +225,7 @@ public class CloudDeskmanageClient extends BaseClient {
 
         String response = HttpClientUtils.httpGet(path, requestParams, head);
         log.info("doGet end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, CloudDeskmanageResponse.class);
+        return JSON.parseObject(response, GetStockResponse.class);
     }
 
     /**
@@ -234,7 +234,7 @@ public class CloudDeskmanageClient extends BaseClient {
      * @param requestObj
      * @return
      */
-    private JSONObject getRequestParams(CloudDeskmanageRequest requestObj) throws Exception {
+    private JSONObject getRequestParams(GetStockRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置证书
         getCommonParams(credential, requestParams);
@@ -252,7 +252,7 @@ public class CloudDeskmanageClient extends BaseClient {
         return requestParams;
     }
 
-    private JSONObject getSimpleRequestParams(CloudDeskmanageRequest requestObj) throws Exception {
+    private JSONObject getSimpleRequestParams(GetStockRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置接口属性
         requestParams.put("Action", action);
@@ -263,7 +263,7 @@ public class CloudDeskmanageClient extends BaseClient {
         return requestParams;
     }
 
-    private JSONObject getPostRawRequestParams(CloudDeskmanageRequest requestObj) throws Exception {
+    private JSONObject getPostRawRequestParams(GetStockRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置接口属性
         requestParams.put("Action", action);
