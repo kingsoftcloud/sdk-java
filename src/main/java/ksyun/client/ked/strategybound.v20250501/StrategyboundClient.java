@@ -70,7 +70,7 @@ public class StrategyboundClient extends BaseClient {
      */
     public StrategyboundResponse doPost(String path, StrategyboundRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doPost(path, requestObj, head);
     }
 

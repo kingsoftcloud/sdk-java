@@ -70,7 +70,7 @@ public class StrategyrulecreateClient extends BaseClient {
      */
     public StrategyrulecreateResponse doPost(String path, StrategyrulecreateRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doPost(path, requestObj, head);
     }
 

@@ -70,7 +70,7 @@ public class RolesdeleteClient extends BaseClient {
      */
     public RolesdeleteResponse doPost(String path, RolesdeleteRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doPost(path, requestObj, head);
     }
 
