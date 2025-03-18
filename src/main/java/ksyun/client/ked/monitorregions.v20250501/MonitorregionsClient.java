@@ -87,6 +87,7 @@ public class MonitorregionsClient extends BaseClient {
         if (head == null) {
             head = new HashMap<>();
         }
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         //参数配置
         JSONObject requestParams = null;
         if (head.get("Content-Type").equalsIgnoreCase("application/json")) {
@@ -113,7 +114,7 @@ public class MonitorregionsClient extends BaseClient {
      */
     public MonitorregionsResponse doPostRaw(String path, MonitorregionsRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
     }
 
@@ -129,7 +130,7 @@ public class MonitorregionsClient extends BaseClient {
         if (head == null) {
             head = new HashMap<>();
         }
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
     }
 
@@ -142,6 +143,8 @@ public class MonitorregionsClient extends BaseClient {
      * @throws Exception
      */
     public MonitorregionsResponse doGet(String path, MonitorregionsRequest requestObj) throws Exception {
+        Map<String, String> head = new HashMap<>();
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doGet(path, requestObj, null);
     }
 
@@ -154,6 +157,8 @@ public class MonitorregionsClient extends BaseClient {
      * @throws Exception
      */
     public MonitorregionsResponse doDelete(String path, MonitorregionsRequest requestObj) throws Exception {
+        Map<String, String> head = new HashMap<>();
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDelete(path, requestObj, null);
     }
 
@@ -167,6 +172,10 @@ public class MonitorregionsClient extends BaseClient {
      * @throws Exception
      */
     public MonitorregionsResponse doDelete(String path, MonitorregionsRequest requestObj, Map<String, String> head) throws Exception {
+        if (head == null) {
+            head = new HashMap<>();
+        }
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpDelete(path, requestParams, head);
         log.info("doDelete end,path:{},params:{},head:{}", path, requestParams, head);
@@ -183,6 +192,8 @@ public class MonitorregionsClient extends BaseClient {
      * @throws Exception
      */
     public MonitorregionsResponse doPut(String path, MonitorregionsRequest requestObj) throws Exception {
+        Map<String, String> head = new HashMap<>();
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doPut(path, requestObj, null);
     }
 
@@ -196,6 +207,10 @@ public class MonitorregionsClient extends BaseClient {
      * @throws Exception
      */
     public MonitorregionsResponse doPut(String path, MonitorregionsRequest requestObj, Map<String, String> head) throws Exception {
+        if (head == null) {
+            head = new HashMap<>();
+        }
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpPut(path, requestParams, head);
         log.info("httpPut end,path:{},params:{},head:{}", path, requestParams, head);
@@ -216,7 +231,7 @@ public class MonitorregionsClient extends BaseClient {
         if (head == null) {
             head = new HashMap<>();
         }
-
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         //参数配置
         JSONObject requestParams = getSimpleRequestParams(requestObj);
 

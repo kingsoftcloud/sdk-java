@@ -1,4 +1,4 @@
-package ksyun.client.ked.getstock.v20250501;
+package ksyun.client.vpc.detachdirectconnectgatewaywithvpc.v20160304;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -13,14 +13,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Classname GetStockClient
- * @Description 通过API获取，渠道商在某个节点可以开云电脑的配额
+ * @Classname DetachDirectConnectGatewayWithVpcClient
+ * @Description 边界网关解绑VPC
  */
 @Slf4j
-public class GetStockClient extends BaseClient {
-    private final static String service = "ked";
-    private final static String version = "V1";
-    private final static String action = "GetStock";
+public class DetachDirectConnectGatewayWithVpcClient extends BaseClient {
+    private final static String service = "vpc";
+    private final static String version = "2016-03-04";
+    private final static String action = "DetachDirectConnectGatewayWithVpc";
 
 
     /**
@@ -29,7 +29,7 @@ public class GetStockClient extends BaseClient {
     private final Credential credential;
 
 
-    public GetStockClient(Credential credential) {
+    public DetachDirectConnectGatewayWithVpcClient(Credential credential) {
         this.credential = credential;
     }
 
@@ -68,7 +68,7 @@ public class GetStockClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetStockResponse doPost(String path, GetStockRequest requestObj) throws Exception {
+    public DetachDirectConnectGatewayWithVpcResponse doPost(String path, DetachDirectConnectGatewayWithVpcRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
@@ -83,10 +83,11 @@ public class GetStockClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetStockResponse doPost(String path, GetStockRequest requestObj, Map<String, String> head) throws Exception {
+    public DetachDirectConnectGatewayWithVpcResponse doPost(String path, DetachDirectConnectGatewayWithVpcRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
         }
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         //参数配置
         JSONObject requestParams = null;
         if (head.get("Content-Type").equalsIgnoreCase("application/json")) {
@@ -100,7 +101,7 @@ public class GetStockClient extends BaseClient {
 
         String response = HttpClientUtils.httpPost(path, requestParams, head);
         log.info("doPost end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, GetStockResponse.class);
+        return JSON.parseObject(response, DetachDirectConnectGatewayWithVpcResponse.class);
     }
 
     /**
@@ -111,9 +112,9 @@ public class GetStockClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetStockResponse doPostRaw(String path, GetStockRequest requestObj) throws Exception {
+    public DetachDirectConnectGatewayWithVpcResponse doPostRaw(String path, DetachDirectConnectGatewayWithVpcRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
     }
 
@@ -125,11 +126,11 @@ public class GetStockClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetStockResponse doPostRaw(String path, GetStockRequest requestObj, Map<String, String> head) throws Exception {
+    public DetachDirectConnectGatewayWithVpcResponse doPostRaw(String path, DetachDirectConnectGatewayWithVpcRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
         }
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
     }
 
@@ -141,7 +142,9 @@ public class GetStockClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetStockResponse doGet(String path, GetStockRequest requestObj) throws Exception {
+    public DetachDirectConnectGatewayWithVpcResponse doGet(String path, DetachDirectConnectGatewayWithVpcRequest requestObj) throws Exception {
+        Map<String, String> head = new HashMap<>();
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doGet(path, requestObj, null);
     }
 
@@ -153,7 +156,9 @@ public class GetStockClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetStockResponse doDelete(String path, GetStockRequest requestObj) throws Exception {
+    public DetachDirectConnectGatewayWithVpcResponse doDelete(String path, DetachDirectConnectGatewayWithVpcRequest requestObj) throws Exception {
+        Map<String, String> head = new HashMap<>();
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDelete(path, requestObj, null);
     }
 
@@ -166,12 +171,16 @@ public class GetStockClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetStockResponse doDelete(String path, GetStockRequest requestObj, Map<String, String> head) throws Exception {
+    public DetachDirectConnectGatewayWithVpcResponse doDelete(String path, DetachDirectConnectGatewayWithVpcRequest requestObj, Map<String, String> head) throws Exception {
+        if (head == null) {
+            head = new HashMap<>();
+        }
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpDelete(path, requestParams, head);
         log.info("doDelete end,path:{},params:{},head:{}", path, requestParams, head);
-        GetStockResponse GetStockResponse = JSON.parseObject(response, GetStockResponse.class);
-        return GetStockResponse;
+        DetachDirectConnectGatewayWithVpcResponse DetachDirectConnectGatewayWithVpcResponse = JSON.parseObject(response, DetachDirectConnectGatewayWithVpcResponse.class);
+        return DetachDirectConnectGatewayWithVpcResponse;
     }
 
     /**
@@ -182,7 +191,9 @@ public class GetStockClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetStockResponse doPut(String path, GetStockRequest requestObj) throws Exception {
+    public DetachDirectConnectGatewayWithVpcResponse doPut(String path, DetachDirectConnectGatewayWithVpcRequest requestObj) throws Exception {
+        Map<String, String> head = new HashMap<>();
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doPut(path, requestObj, null);
     }
 
@@ -195,12 +206,16 @@ public class GetStockClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetStockResponse doPut(String path, GetStockRequest requestObj, Map<String, String> head) throws Exception {
+    public DetachDirectConnectGatewayWithVpcResponse doPut(String path, DetachDirectConnectGatewayWithVpcRequest requestObj, Map<String, String> head) throws Exception {
+        if (head == null) {
+            head = new HashMap<>();
+        }
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpPut(path, requestParams, head);
         log.info("httpPut end,path:{},params:{},head:{}", path, requestParams, head);
-        GetStockResponse GetStockResponse = JSON.parseObject(response, GetStockResponse.class);
-        return GetStockResponse;
+        DetachDirectConnectGatewayWithVpcResponse DetachDirectConnectGatewayWithVpcResponse = JSON.parseObject(response, DetachDirectConnectGatewayWithVpcResponse.class);
+        return DetachDirectConnectGatewayWithVpcResponse;
     }
 
     /**
@@ -212,11 +227,11 @@ public class GetStockClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetStockResponse doGet(String path, GetStockRequest requestObj, Map<String, String> head) throws Exception {
+    public DetachDirectConnectGatewayWithVpcResponse doGet(String path, DetachDirectConnectGatewayWithVpcRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
         }
-
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         //参数配置
         JSONObject requestParams = getSimpleRequestParams(requestObj);
 
@@ -225,7 +240,7 @@ public class GetStockClient extends BaseClient {
 
         String response = HttpClientUtils.httpGet(path, requestParams, head);
         log.info("doGet end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, GetStockResponse.class);
+        return JSON.parseObject(response, DetachDirectConnectGatewayWithVpcResponse.class);
     }
 
     /**
@@ -234,7 +249,7 @@ public class GetStockClient extends BaseClient {
      * @param requestObj
      * @return
      */
-    private JSONObject getRequestParams(GetStockRequest requestObj) throws Exception {
+    private JSONObject getRequestParams(DetachDirectConnectGatewayWithVpcRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置证书
         getCommonParams(credential, requestParams);
@@ -252,7 +267,7 @@ public class GetStockClient extends BaseClient {
         return requestParams;
     }
 
-    private JSONObject getSimpleRequestParams(GetStockRequest requestObj) throws Exception {
+    private JSONObject getSimpleRequestParams(DetachDirectConnectGatewayWithVpcRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置接口属性
         requestParams.put("Action", action);
@@ -263,7 +278,7 @@ public class GetStockClient extends BaseClient {
         return requestParams;
     }
 
-    private JSONObject getPostRawRequestParams(GetStockRequest requestObj) throws Exception {
+    private JSONObject getPostRawRequestParams(DetachDirectConnectGatewayWithVpcRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置接口属性
         requestParams.put("Action", action);

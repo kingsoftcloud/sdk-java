@@ -18,10 +18,27 @@ public class CloudDesklistRequest {
     private Integer Size;
 
     /**
-     * on
-     * off
+     * 连接状态 on off
      */
     @KsYunField(name = "connected")
     private String Connected;
+
+    /**
+     * 云电脑已绑定的标签id,多个id使用英文逗号分隔
+     */
+    @KsYunField(name = "labelIds")
+    private String LabelIds;
+
+    /**
+     * 云电脑名称或实例id
+     */
+    @KsYunField(name = "name")
+    private String Name;
+
+    /**
+     * 云电脑已绑定的用户名
+     */
+    @KsYunField(name = "userName")
+    private String UserName;
 
 }

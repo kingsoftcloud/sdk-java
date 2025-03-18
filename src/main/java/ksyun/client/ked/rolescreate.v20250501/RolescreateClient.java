@@ -87,6 +87,7 @@ public class RolescreateClient extends BaseClient {
         if (head == null) {
             head = new HashMap<>();
         }
+        head.putIfAbsent("Content-Type", "application/json");
         //参数配置
         JSONObject requestParams = null;
         if (head.get("Content-Type").equalsIgnoreCase("application/json")) {
@@ -142,6 +143,8 @@ public class RolescreateClient extends BaseClient {
      * @throws Exception
      */
     public RolescreateResponse doGet(String path, RolescreateRequest requestObj) throws Exception {
+        Map<String, String> head = new HashMap<>();
+        head.putIfAbsent("Content-Type", "application/json");
         return doGet(path, requestObj, null);
     }
 
@@ -154,6 +157,8 @@ public class RolescreateClient extends BaseClient {
      * @throws Exception
      */
     public RolescreateResponse doDelete(String path, RolescreateRequest requestObj) throws Exception {
+        Map<String, String> head = new HashMap<>();
+        head.put("Content-Type", "application/json");
         return doDelete(path, requestObj, null);
     }
 
@@ -167,6 +172,10 @@ public class RolescreateClient extends BaseClient {
      * @throws Exception
      */
     public RolescreateResponse doDelete(String path, RolescreateRequest requestObj, Map<String, String> head) throws Exception {
+        if (head == null) {
+            head = new HashMap<>();
+        }
+        head.putIfAbsent("Content-Type", "application/json");
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpDelete(path, requestParams, head);
         log.info("doDelete end,path:{},params:{},head:{}", path, requestParams, head);
@@ -183,6 +192,8 @@ public class RolescreateClient extends BaseClient {
      * @throws Exception
      */
     public RolescreateResponse doPut(String path, RolescreateRequest requestObj) throws Exception {
+        Map<String, String> head = new HashMap<>();
+        head.putIfAbsent("Content-Type", "application/json");
         return doPut(path, requestObj, null);
     }
 
@@ -196,6 +207,10 @@ public class RolescreateClient extends BaseClient {
      * @throws Exception
      */
     public RolescreateResponse doPut(String path, RolescreateRequest requestObj, Map<String, String> head) throws Exception {
+        if (head == null) {
+            head = new HashMap<>();
+        }
+        head.putIfAbsent("Content-Type", "application/json");
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpPut(path, requestParams, head);
         log.info("httpPut end,path:{},params:{},head:{}", path, requestParams, head);
@@ -216,7 +231,7 @@ public class RolescreateClient extends BaseClient {
         if (head == null) {
             head = new HashMap<>();
         }
-
+        head.putIfAbsent("Content-Type", "application/json");
         //参数配置
         JSONObject requestParams = getSimpleRequestParams(requestObj);
 

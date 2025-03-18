@@ -1,4 +1,4 @@
-package ksyun.client.ked.getstock.v20250501;
+package ksyun.client.ked.cancelinstancelabel.v20250501;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;
@@ -6,12 +6,12 @@ import lombok.Data;
 import lombok.ToString;
 
 /**
- * @Classname GetStockResponse
- * @Description GetStock 返回体
+ * @Classname CancelInstanceLabelResponse
+ * @Description CancelInstanceLabel 返回体
  */
 @Data
 @ToString
-public class GetStockResponse extends BaseResponseModel {
+public class CancelInstanceLabelResponse extends BaseResponseModel {
 
     /**
      * 请求id

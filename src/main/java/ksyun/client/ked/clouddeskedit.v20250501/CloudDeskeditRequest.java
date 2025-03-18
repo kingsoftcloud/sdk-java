@@ -21,8 +21,4 @@ public class CloudDeskeditRequest {
     @KsYunField(name = "name")
     private String Name;
 
-    /***/
-    @KsYunField(name = "id")
-    private Integer Id;
-
 }

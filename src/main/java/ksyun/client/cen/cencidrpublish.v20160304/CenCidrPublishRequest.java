@@ -35,4 +35,10 @@ public class CenCidrPublishRequest {
     @KsYunField(name = "SelfDefineCidr")
     private List<String> SelfDefineCidrList;
 
+    /**
+     * CenId
+     */
+    @KsYunField(name = "CenId")
+    private String CenId;
+
 }
