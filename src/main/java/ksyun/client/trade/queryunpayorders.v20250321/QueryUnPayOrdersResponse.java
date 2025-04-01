@@ -1,19 +1,17 @@
-package ksyun.client.trade.listinstancesupportbilltypes.v20250220;
+package ksyun.client.trade.queryunpayorders.v20250321;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
- * @Classname ListInstanceSupportBillTypesResponse
- * @Description ListInstanceSupportBillTypes 返回体
+ * @Classname QueryUnPayOrdersResponse
+ * @Description QueryUnPayOrders 返回体
  */
 @Data
 @ToString
-public class ListInstanceSupportBillTypesResponse extends BaseResponseModel {
+public class QueryUnPayOrdersResponse extends BaseResponseModel {
 
     /**
      * 请求id

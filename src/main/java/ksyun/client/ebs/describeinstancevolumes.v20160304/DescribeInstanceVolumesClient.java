@@ -70,7 +70,7 @@ public class DescribeInstanceVolumesClient extends BaseClient {
      */
     public DescribeInstanceVolumesResponse doPost(String path, DescribeInstanceVolumesRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doPost(path, requestObj, head);
     }
 
@@ -87,6 +87,7 @@ public class DescribeInstanceVolumesClient extends BaseClient {
         if (head == null) {
             head = new HashMap<>();
         }
+        head.putIfAbsent("Content-Type", "application/json");
         //参数配置
         JSONObject requestParams = null;
         if (head.get("Content-Type").equalsIgnoreCase("application/json")) {
@@ -142,6 +143,8 @@ public class DescribeInstanceVolumesClient extends BaseClient {
      * @throws Exception
      */
     public DescribeInstanceVolumesResponse doGet(String path, DescribeInstanceVolumesRequest requestObj) throws Exception {
+        Map<String, String> head = new HashMap<>();
+        head.putIfAbsent("Content-Type", "application/json");
         return doGet(path, requestObj, null);
     }
 
@@ -154,6 +157,8 @@ public class DescribeInstanceVolumesClient extends BaseClient {
      * @throws Exception
      */
     public DescribeInstanceVolumesResponse doDelete(String path, DescribeInstanceVolumesRequest requestObj) throws Exception {
+        Map<String, String> head = new HashMap<>();
+        head.put("Content-Type", "application/json");
         return doDelete(path, requestObj, null);
     }
 
@@ -167,6 +172,10 @@ public class DescribeInstanceVolumesClient extends BaseClient {
      * @throws Exception
      */
     public DescribeInstanceVolumesResponse doDelete(String path, DescribeInstanceVolumesRequest requestObj, Map<String, String> head) throws Exception {
+        if (head == null) {
+            head = new HashMap<>();
+        }
+        head.putIfAbsent("Content-Type", "application/json");
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpDelete(path, requestParams, head);
         log.info("doDelete end,path:{},params:{},head:{}", path, requestParams, head);
@@ -183,6 +192,8 @@ public class DescribeInstanceVolumesClient extends BaseClient {
      * @throws Exception
      */
     public DescribeInstanceVolumesResponse doPut(String path, DescribeInstanceVolumesRequest requestObj) throws Exception {
+        Map<String, String> head = new HashMap<>();
+        head.putIfAbsent("Content-Type", "application/json");
         return doPut(path, requestObj, null);
     }
 
@@ -196,6 +207,10 @@ public class DescribeInstanceVolumesClient extends BaseClient {
      * @throws Exception
      */
     public DescribeInstanceVolumesResponse doPut(String path, DescribeInstanceVolumesRequest requestObj, Map<String, String> head) throws Exception {
+        if (head == null) {
+            head = new HashMap<>();
+        }
+        head.putIfAbsent("Content-Type", "application/json");
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpPut(path, requestParams, head);
         log.info("httpPut end,path:{},params:{},head:{}", path, requestParams, head);
@@ -216,7 +231,7 @@ public class DescribeInstanceVolumesClient extends BaseClient {
         if (head == null) {
             head = new HashMap<>();
         }
-
+        head.putIfAbsent("Content-Type", "application/json");
         //参数配置
         JSONObject requestParams = getSimpleRequestParams(requestObj);
 

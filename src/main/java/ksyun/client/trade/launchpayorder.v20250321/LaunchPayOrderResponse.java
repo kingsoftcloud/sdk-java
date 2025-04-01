@@ -1,19 +1,17 @@
-package ksyun.client.trade.listinstancesupportbilltypes.v20250220;
+package ksyun.client.trade.launchpayorder.v20250321;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
- * @Classname ListInstanceSupportBillTypesResponse
- * @Description ListInstanceSupportBillTypes 返回体
+ * @Classname LaunchPayOrderResponse
+ * @Description LaunchPayOrder 返回体
  */
 @Data
 @ToString
-public class ListInstanceSupportBillTypesResponse extends BaseResponseModel {
+public class LaunchPayOrderResponse extends BaseResponseModel {
 
     /**
      * 请求id

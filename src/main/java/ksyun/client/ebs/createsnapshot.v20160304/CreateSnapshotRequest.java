@@ -33,4 +33,10 @@ public class CreateSnapshotRequest {
     @KsYunField(name = "SnapshotType")
     private String SnapshotType;
 
+    /**
+     * 快照定时删除时间，格式为 2021-07-30T00:00:00，可选，不传则默认为永久保留
+     */
+    @KsYunField(name = "ScheduledDeleteTime")
+    private String ScheduledDeleteTime;
+
 }

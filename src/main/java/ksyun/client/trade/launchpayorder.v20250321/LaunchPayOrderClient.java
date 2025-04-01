@@ -1,4 +1,4 @@
-package ksyun.client.ebs.modifydedicatedblockstorageclusterattribute.v20160304;
+package ksyun.client.trade.launchpayorder.v20250321;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -13,14 +13,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Classname ModifyDedicatedBlockStorageClusterAttributeClient
- * @Description 修改专属块存储集群属性
+ * @Classname LaunchPayOrderClient
+ * @Description 通过订单ID支付订单，会自动扣余额的金额
  */
 @Slf4j
-public class ModifyDedicatedBlockStorageClusterAttributeClient extends BaseClient {
-    private final static String service = "ebs";
-    private final static String version = "2016-03-04";
-    private final static String action = "ModifyDedicatedBlockStorageClusterAttribute";
+public class LaunchPayOrderClient extends BaseClient {
+    private final static String service = "trade";
+    private final static String version = "2025-03-21";
+    private final static String action = "LaunchPayOrder";
 
 
     /**
@@ -29,7 +29,7 @@ public class ModifyDedicatedBlockStorageClusterAttributeClient extends BaseClien
     private final Credential credential;
 
 
-    public ModifyDedicatedBlockStorageClusterAttributeClient(Credential credential) {
+    public LaunchPayOrderClient(Credential credential) {
         this.credential = credential;
     }
 
@@ -68,7 +68,7 @@ public class ModifyDedicatedBlockStorageClusterAttributeClient extends BaseClien
      * @return
      * @throws Exception
      */
-    public ModifyDedicatedBlockStorageClusterAttributeResponse doPost(String path, ModifyDedicatedBlockStorageClusterAttributeRequest requestObj) throws Exception {
+    public LaunchPayOrderResponse doPost(String path, LaunchPayOrderRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
@@ -83,7 +83,7 @@ public class ModifyDedicatedBlockStorageClusterAttributeClient extends BaseClien
      * @return
      * @throws Exception
      */
-    public ModifyDedicatedBlockStorageClusterAttributeResponse doPost(String path, ModifyDedicatedBlockStorageClusterAttributeRequest requestObj, Map<String, String> head) throws Exception {
+    public LaunchPayOrderResponse doPost(String path, LaunchPayOrderRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
         }
@@ -101,7 +101,7 @@ public class ModifyDedicatedBlockStorageClusterAttributeClient extends BaseClien
 
         String response = HttpClientUtils.httpPost(path, requestParams, head);
         log.info("doPost end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, ModifyDedicatedBlockStorageClusterAttributeResponse.class);
+        return JSON.parseObject(response, LaunchPayOrderResponse.class);
     }
 
     /**
@@ -112,7 +112,7 @@ public class ModifyDedicatedBlockStorageClusterAttributeClient extends BaseClien
      * @return
      * @throws Exception
      */
-    public ModifyDedicatedBlockStorageClusterAttributeResponse doPostRaw(String path, ModifyDedicatedBlockStorageClusterAttributeRequest requestObj) throws Exception {
+    public LaunchPayOrderResponse doPostRaw(String path, LaunchPayOrderRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
@@ -126,7 +126,7 @@ public class ModifyDedicatedBlockStorageClusterAttributeClient extends BaseClien
      * @return
      * @throws Exception
      */
-    public ModifyDedicatedBlockStorageClusterAttributeResponse doPostRaw(String path, ModifyDedicatedBlockStorageClusterAttributeRequest requestObj, Map<String, String> head) throws Exception {
+    public LaunchPayOrderResponse doPostRaw(String path, LaunchPayOrderRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
         }
@@ -142,7 +142,7 @@ public class ModifyDedicatedBlockStorageClusterAttributeClient extends BaseClien
      * @return
      * @throws Exception
      */
-    public ModifyDedicatedBlockStorageClusterAttributeResponse doGet(String path, ModifyDedicatedBlockStorageClusterAttributeRequest requestObj) throws Exception {
+    public LaunchPayOrderResponse doGet(String path, LaunchPayOrderRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doGet(path, requestObj, null);
@@ -156,7 +156,7 @@ public class ModifyDedicatedBlockStorageClusterAttributeClient extends BaseClien
      * @return
      * @throws Exception
      */
-    public ModifyDedicatedBlockStorageClusterAttributeResponse doDelete(String path, ModifyDedicatedBlockStorageClusterAttributeRequest requestObj) throws Exception {
+    public LaunchPayOrderResponse doDelete(String path, LaunchPayOrderRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDelete(path, requestObj, null);
@@ -171,7 +171,7 @@ public class ModifyDedicatedBlockStorageClusterAttributeClient extends BaseClien
      * @return
      * @throws Exception
      */
-    public ModifyDedicatedBlockStorageClusterAttributeResponse doDelete(String path, ModifyDedicatedBlockStorageClusterAttributeRequest requestObj, Map<String, String> head) throws Exception {
+    public LaunchPayOrderResponse doDelete(String path, LaunchPayOrderRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
         }
@@ -179,8 +179,8 @@ public class ModifyDedicatedBlockStorageClusterAttributeClient extends BaseClien
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpDelete(path, requestParams, head);
         log.info("doDelete end,path:{},params:{},head:{}", path, requestParams, head);
-        ModifyDedicatedBlockStorageClusterAttributeResponse ModifyDedicatedBlockStorageClusterAttributeResponse = JSON.parseObject(response, ModifyDedicatedBlockStorageClusterAttributeResponse.class);
-        return ModifyDedicatedBlockStorageClusterAttributeResponse;
+        LaunchPayOrderResponse LaunchPayOrderResponse = JSON.parseObject(response, LaunchPayOrderResponse.class);
+        return LaunchPayOrderResponse;
     }
 
     /**
@@ -191,7 +191,7 @@ public class ModifyDedicatedBlockStorageClusterAttributeClient extends BaseClien
      * @return
      * @throws Exception
      */
-    public ModifyDedicatedBlockStorageClusterAttributeResponse doPut(String path, ModifyDedicatedBlockStorageClusterAttributeRequest requestObj) throws Exception {
+    public LaunchPayOrderResponse doPut(String path, LaunchPayOrderRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doPut(path, requestObj, null);
@@ -206,7 +206,7 @@ public class ModifyDedicatedBlockStorageClusterAttributeClient extends BaseClien
      * @return
      * @throws Exception
      */
-    public ModifyDedicatedBlockStorageClusterAttributeResponse doPut(String path, ModifyDedicatedBlockStorageClusterAttributeRequest requestObj, Map<String, String> head) throws Exception {
+    public LaunchPayOrderResponse doPut(String path, LaunchPayOrderRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
         }
@@ -214,8 +214,8 @@ public class ModifyDedicatedBlockStorageClusterAttributeClient extends BaseClien
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpPut(path, requestParams, head);
         log.info("httpPut end,path:{},params:{},head:{}", path, requestParams, head);
-        ModifyDedicatedBlockStorageClusterAttributeResponse ModifyDedicatedBlockStorageClusterAttributeResponse = JSON.parseObject(response, ModifyDedicatedBlockStorageClusterAttributeResponse.class);
-        return ModifyDedicatedBlockStorageClusterAttributeResponse;
+        LaunchPayOrderResponse LaunchPayOrderResponse = JSON.parseObject(response, LaunchPayOrderResponse.class);
+        return LaunchPayOrderResponse;
     }
 
     /**
@@ -227,7 +227,7 @@ public class ModifyDedicatedBlockStorageClusterAttributeClient extends BaseClien
      * @return
      * @throws Exception
      */
-    public ModifyDedicatedBlockStorageClusterAttributeResponse doGet(String path, ModifyDedicatedBlockStorageClusterAttributeRequest requestObj, Map<String, String> head) throws Exception {
+    public LaunchPayOrderResponse doGet(String path, LaunchPayOrderRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
         }
@@ -240,7 +240,7 @@ public class ModifyDedicatedBlockStorageClusterAttributeClient extends BaseClien
 
         String response = HttpClientUtils.httpGet(path, requestParams, head);
         log.info("doGet end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, ModifyDedicatedBlockStorageClusterAttributeResponse.class);
+        return JSON.parseObject(response, LaunchPayOrderResponse.class);
     }
 
     /**
@@ -249,7 +249,7 @@ public class ModifyDedicatedBlockStorageClusterAttributeClient extends BaseClien
      * @param requestObj
      * @return
      */
-    private JSONObject getRequestParams(ModifyDedicatedBlockStorageClusterAttributeRequest requestObj) throws Exception {
+    private JSONObject getRequestParams(LaunchPayOrderRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置证书
         getCommonParams(credential, requestParams);
@@ -267,7 +267,7 @@ public class ModifyDedicatedBlockStorageClusterAttributeClient extends BaseClien
         return requestParams;
     }
 
-    private JSONObject getSimpleRequestParams(ModifyDedicatedBlockStorageClusterAttributeRequest requestObj) throws Exception {
+    private JSONObject getSimpleRequestParams(LaunchPayOrderRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置接口属性
         requestParams.put("Action", action);
@@ -278,7 +278,7 @@ public class ModifyDedicatedBlockStorageClusterAttributeClient extends BaseClien
         return requestParams;
     }
 
-    private JSONObject getPostRawRequestParams(ModifyDedicatedBlockStorageClusterAttributeRequest requestObj) throws Exception {
+    private JSONObject getPostRawRequestParams(LaunchPayOrderRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置接口属性
         requestParams.put("Action", action);
