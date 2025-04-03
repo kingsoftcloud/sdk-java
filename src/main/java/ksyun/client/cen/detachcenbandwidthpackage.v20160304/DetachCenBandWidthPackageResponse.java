@@ -5,10 +5,12 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.Set;
+
 /**
- * @Classname DetachCenBandWidthPackageResponse
- * @Description DetachCenBandWidthPackage 返回体
- */
+* @Classname DetachCenBandWidthPackageResponse
+* @Description DetachCenBandWidthPackage 返回体
+*/
 @Data
 @ToString
 public class DetachCenBandWidthPackageResponse extends BaseResponseModel {

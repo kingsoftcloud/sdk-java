@@ -8,14 +8,13 @@ import common.aws.AWS4EncryptionFactory;
 import common.utils.HttpClientUtils;
 import common.utils.SignUtils;
 import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Classname DetachNetworkInstanceClient
- * @Description DetachNetworkInstance
- */
+* @Classname DetachNetworkInstanceClient
+* @Description DetachNetworkInstance
+*/
 @Slf4j
 public class DetachNetworkInstanceClient extends BaseClient {
     private final static String service = "cen";
@@ -26,39 +25,13 @@ public class DetachNetworkInstanceClient extends BaseClient {
     /**
      * 证书
      */
-    private final Credential credential;
+    private Credential credential;
 
 
     public DetachNetworkInstanceClient(Credential credential) {
         this.credential = credential;
     }
 
-    private static void enhanceAws4Signature(Map<String, String> head, Map<String, Object> params, Credential credential, String requestMethod) {
-        AWS4EncryptionFactory aws4EncryptionFactory = new AWS4EncryptionFactory(credential.getSecretKey(), credential.getSignStr(), service, credential.getRegion());
-
-        //设置请求参数
-        if (params != null) {
-            params.entrySet().forEach(entry -> {
-                aws4EncryptionFactory.setParamMap(entry.getKey(), entry.getValue());
-            });
-        }
-
-        //设置请求头
-        if (head != null) {
-            head.entrySet().forEach(entry -> {
-                aws4EncryptionFactory.setHeadMap(entry.getKey(), entry.getValue());
-            });
-        }
-
-        //aws 加密
-        aws4EncryptionFactory.generateSignature(requestMethod);
-
-        //回填aws4 签名
-        String authorization = aws4EncryptionFactory.getHead().get(AWS4EncryptionFactory.X_Authorization);
-        String xAmzDate = aws4EncryptionFactory.getHead().get(AWS4EncryptionFactory.X_AMZ_DATA);
-        head.put(AWS4EncryptionFactory.X_Authorization, authorization);
-        head.put(AWS4EncryptionFactory.X_AMZ_DATA, xAmzDate);
-    }
 
     /**
      * post请求
@@ -84,16 +57,16 @@ public class DetachNetworkInstanceClient extends BaseClient {
      * @throws Exception
      */
     public DetachNetworkInstanceResponse doPost(String path, DetachNetworkInstanceRequest requestObj, Map<String, String> head) throws Exception {
-        if (head == null) {
-            head = new HashMap<>();
-        }
+         if (head == null) {
+             head = new HashMap<>();
+         }
         head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         //参数配置
         JSONObject requestParams = null;
-        if (head.get("Content-Type").equalsIgnoreCase("application/json")) {
-            requestParams = getPostRawRequestParams(requestObj);
-        } else {
-            requestParams = getSimpleRequestParams(requestObj);
+        if (head.get("Content-Type").equalsIgnoreCase("application/json")){
+             requestParams = getPostRawRequestParams(requestObj);
+        }else {
+             requestParams = getSimpleRequestParams(requestObj);
         }
 
         //aws4 签名
@@ -105,13 +78,12 @@ public class DetachNetworkInstanceClient extends BaseClient {
     }
 
     /**
-     * post 请求
-     *
-     * @param path
-     * @param requestObj
-     * @return
-     * @throws Exception
-     */
+    * post 请求
+    * @param path
+    * @param requestObj
+    * @return
+    * @throws Exception
+    */
     public DetachNetworkInstanceResponse doPostRaw(String path, DetachNetworkInstanceRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
@@ -119,13 +91,13 @@ public class DetachNetworkInstanceClient extends BaseClient {
     }
 
     /**
-     * post 请求
-     *
-     * @param path
-     * @param requestObj
-     * @return
-     * @throws Exception
-     */
+    * post 请求
+    *
+    * @param path
+    * @param requestObj
+    * @return
+    * @throws Exception
+    */
     public DetachNetworkInstanceResponse doPostRaw(String path, DetachNetworkInstanceRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
@@ -133,7 +105,6 @@ public class DetachNetworkInstanceClient extends BaseClient {
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
     }
-
     /**
      * get 请求
      *
@@ -182,6 +153,7 @@ public class DetachNetworkInstanceClient extends BaseClient {
         DetachNetworkInstanceResponse DetachNetworkInstanceResponse = JSON.parseObject(response, DetachNetworkInstanceResponse.class);
         return DetachNetworkInstanceResponse;
     }
+
 
     /**
      * doPut 请求
@@ -243,6 +215,7 @@ public class DetachNetworkInstanceClient extends BaseClient {
         return JSON.parseObject(response, DetachNetworkInstanceResponse.class);
     }
 
+
     /**
      * 构造请求参数
      *
@@ -259,12 +232,39 @@ public class DetachNetworkInstanceClient extends BaseClient {
         requestParams.put("Version", version);
 
         //设置请求体请求参数
-        setRequestField(requestObj, requestParams);
+        setRequestField(requestObj,requestParams);
 
         //签名
         String signature = SignUtils.signature(requestParams, credential.getSignStr());
         requestParams.put("Signature", signature);
         return requestParams;
+    }
+
+    private static void enhanceAws4Signature(Map<String, String> head, Map<String, Object> params, Credential credential, String requestMethod) {
+        AWS4EncryptionFactory aws4EncryptionFactory = new AWS4EncryptionFactory(credential.getSecretKey(), credential.getSignStr(), service, credential.getRegion());
+
+        //设置请求参数
+        if (params != null) {
+            params.entrySet().forEach(entry -> {
+                aws4EncryptionFactory.setParamMap(entry.getKey(), entry.getValue());
+            });
+        }
+
+        //设置请求头
+        if (head != null) {
+            head.entrySet().forEach(entry -> {
+                aws4EncryptionFactory.setHeadMap(entry.getKey(), entry.getValue());
+            });
+        }
+
+        //aws 加密
+        aws4EncryptionFactory.generateSignature(requestMethod);
+
+        //回填aws4 签名
+        String authorization = aws4EncryptionFactory.getHead().get(AWS4EncryptionFactory.X_Authorization);
+        String xAmzDate = aws4EncryptionFactory.getHead().get(AWS4EncryptionFactory.X_AMZ_DATA);
+        head.put(AWS4EncryptionFactory.X_Authorization, authorization);
+        head.put(AWS4EncryptionFactory.X_AMZ_DATA, xAmzDate);
     }
 
     private JSONObject getSimpleRequestParams(DetachNetworkInstanceRequest requestObj) throws Exception {
