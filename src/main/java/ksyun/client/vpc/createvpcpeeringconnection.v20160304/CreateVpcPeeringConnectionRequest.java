@@ -54,13 +54,13 @@ public class CreateVpcPeeringConnectionRequest {
     /**
      * 项目的ID
      */
-    @KsYunField(name = "ProjectId")
+    @KsYunField(name="ProjectId")
     private String ProjectId;
 
     /**
      * 对等连接的计费类型，同机房的对端连接此参数缺省
      */
-    @KsYunField(name = "ChargeType")
+    @KsYunField(name="ChargeType")
     private String ChargeType;
 
 }

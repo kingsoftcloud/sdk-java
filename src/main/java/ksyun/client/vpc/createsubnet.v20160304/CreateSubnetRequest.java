@@ -45,27 +45,19 @@ public class CreateSubnetRequest {
     @KsYunField(name = "DhcpIpFrom")
     private String DhcpIpFrom;
 
-    /**
-     * DHCP结束IP
-     */
+    /**DHCP结束IP*/
     @KsYunField(name = "DhcpIpTo")
     private String DhcpIpTo;
 
-    /**
-     * 子网的Dns1
-     */
+    /**子网的Dns1*/
     @KsYunField(name = "Dns1")
     private String Dns1;
 
-    /**
-     * 子网的Dns2
-     */
+    /**子网的Dns2*/
     @KsYunField(name = "Dns2")
     private String Dns2;
 
-    /**
-     * 网关的IP，当SubnetType为Normal或Physical不能为空
-     */
+    /**网关的IP，当SubnetType为Normal或Physical不能为空*/
     @KsYunField(name = "GatewayIp")
     private String GatewayIp;
 

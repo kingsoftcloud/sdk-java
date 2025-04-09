@@ -29,11 +29,6 @@ public class DescribeDirectConnectGatewayRouteRequest {
      */
     @KsYunField(name = "Filter")
     private List<FilterDto> FilterList;
-    /**
-     * 获取另一页返回结果的 token.
-     */
-    @KsYunField(name = "NextToken")
-    private String NextToken;
 
     @Data
     @ToString
@@ -49,5 +44,11 @@ public class DescribeDirectConnectGatewayRouteRequest {
         @KsYunField(name = "Value")
         private List<String> ValueList;
     }
+
+    /**
+     * 获取另一页返回结果的 token.
+     */
+    @KsYunField(name = "NextToken")
+    private String NextToken;
 
 }

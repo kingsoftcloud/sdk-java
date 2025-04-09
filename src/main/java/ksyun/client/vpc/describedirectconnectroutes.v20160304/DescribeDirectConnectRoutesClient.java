@@ -1,4 +1,4 @@
-package ksyun.client.vpc.deletenatip.v20160304;
+package ksyun.client.vpc.describedirectconnectroutes.v20160304;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -8,28 +8,27 @@ import common.aws.AWS4EncryptionFactory;
 import common.utils.HttpClientUtils;
 import common.utils.SignUtils;
 import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Classname DeleteNatIpClient
- * @Description 删除NATIP
- */
+* @Classname DescribeDirectConnectRoutesClient
+* @Description 查询专线路由
+*/
 @Slf4j
-public class DeleteNatIpClient extends BaseClient {
+public class DescribeDirectConnectRoutesClient extends BaseClient {
     private final static String service = "vpc";
     private final static String version = "2016-03-04";
-    private final static String action = "DeleteNatIp";
+    private final static String action = "DescribeDirectConnectRoutes";
 
 
     /**
      * 证书
      */
-    private final Credential credential;
+    private Credential credential;
 
 
-    public DeleteNatIpClient(Credential credential) {
+    public DescribeDirectConnectRoutesClient(Credential credential) {
         this.credential = credential;
     }
 
@@ -42,7 +41,7 @@ public class DeleteNatIpClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DeleteNatIpResponse doPost(String path, DeleteNatIpRequest requestObj) throws Exception {
+    public DescribeDirectConnectRoutesResponse doPost(String path, DescribeDirectConnectRoutesRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
@@ -57,17 +56,17 @@ public class DeleteNatIpClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DeleteNatIpResponse doPost(String path, DeleteNatIpRequest requestObj, Map<String, String> head) throws Exception {
-        if (head == null) {
-            head = new HashMap<>();
-        }
+    public DescribeDirectConnectRoutesResponse doPost(String path, DescribeDirectConnectRoutesRequest requestObj, Map<String, String> head) throws Exception {
+         if (head == null) {
+             head = new HashMap<>();
+         }
         head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         //参数配置
         JSONObject requestParams = null;
-        if (head.get("Content-Type").equalsIgnoreCase("application/json")) {
-            requestParams = getPostRawRequestParams(requestObj);
-        } else {
-            requestParams = getSimpleRequestParams(requestObj);
+        if (head.get("Content-Type").equalsIgnoreCase("application/json")){
+             requestParams = getPostRawRequestParams(requestObj);
+        }else {
+             requestParams = getSimpleRequestParams(requestObj);
         }
 
         //aws4 签名
@@ -75,31 +74,31 @@ public class DeleteNatIpClient extends BaseClient {
 
         String response = HttpClientUtils.httpPost(path, requestParams, head);
         log.info("doPost end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, DeleteNatIpResponse.class);
+        return JSON.parseObject(response, DescribeDirectConnectRoutesResponse.class);
     }
 
     /**
-     * post 请求
-     * @param path
-     * @param requestObj
-     * @return
-     * @throws Exception
-     */
-    public DeleteNatIpResponse doPostRaw(String path, DeleteNatIpRequest requestObj) throws Exception {
+    * post 请求
+    * @param path
+    * @param requestObj
+    * @return
+    * @throws Exception
+    */
+    public DescribeDirectConnectRoutesResponse doPostRaw(String path, DescribeDirectConnectRoutesRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
     }
 
     /**
-     * post 请求
-     *
-     * @param path
-     * @param requestObj
-     * @return
-     * @throws Exception
-     */
-    public DeleteNatIpResponse doPostRaw(String path, DeleteNatIpRequest requestObj, Map<String, String> head) throws Exception {
+    * post 请求
+    *
+    * @param path
+    * @param requestObj
+    * @return
+    * @throws Exception
+    */
+    public DescribeDirectConnectRoutesResponse doPostRaw(String path, DescribeDirectConnectRoutesRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
         }
@@ -114,7 +113,7 @@ public class DeleteNatIpClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DeleteNatIpResponse doGet(String path, DeleteNatIpRequest requestObj) throws Exception {
+    public DescribeDirectConnectRoutesResponse doGet(String path, DescribeDirectConnectRoutesRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doGet(path, requestObj, null);
@@ -128,7 +127,7 @@ public class DeleteNatIpClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DeleteNatIpResponse doDelete(String path, DeleteNatIpRequest requestObj) throws Exception {
+    public DescribeDirectConnectRoutesResponse doDelete(String path, DescribeDirectConnectRoutesRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDelete(path, requestObj, null);
@@ -143,7 +142,7 @@ public class DeleteNatIpClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DeleteNatIpResponse doDelete(String path, DeleteNatIpRequest requestObj, Map<String, String> head) throws Exception {
+    public DescribeDirectConnectRoutesResponse doDelete(String path, DescribeDirectConnectRoutesRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
         }
@@ -151,8 +150,8 @@ public class DeleteNatIpClient extends BaseClient {
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpDelete(path, requestParams, head);
         log.info("doDelete end,path:{},params:{},head:{}", path, requestParams, head);
-        DeleteNatIpResponse DeleteNatIpResponse = JSON.parseObject(response, DeleteNatIpResponse.class);
-        return DeleteNatIpResponse;
+        DescribeDirectConnectRoutesResponse DescribeDirectConnectRoutesResponse = JSON.parseObject(response, DescribeDirectConnectRoutesResponse.class);
+        return DescribeDirectConnectRoutesResponse;
     }
 
 
@@ -164,7 +163,7 @@ public class DeleteNatIpClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DeleteNatIpResponse doPut(String path, DeleteNatIpRequest requestObj) throws Exception {
+    public DescribeDirectConnectRoutesResponse doPut(String path, DescribeDirectConnectRoutesRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doPut(path, requestObj, null);
@@ -179,7 +178,7 @@ public class DeleteNatIpClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DeleteNatIpResponse doPut(String path, DeleteNatIpRequest requestObj, Map<String, String> head) throws Exception {
+    public DescribeDirectConnectRoutesResponse doPut(String path, DescribeDirectConnectRoutesRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
         }
@@ -187,8 +186,8 @@ public class DeleteNatIpClient extends BaseClient {
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpPut(path, requestParams, head);
         log.info("httpPut end,path:{},params:{},head:{}", path, requestParams, head);
-        DeleteNatIpResponse DeleteNatIpResponse = JSON.parseObject(response, DeleteNatIpResponse.class);
-        return DeleteNatIpResponse;
+        DescribeDirectConnectRoutesResponse DescribeDirectConnectRoutesResponse = JSON.parseObject(response, DescribeDirectConnectRoutesResponse.class);
+        return DescribeDirectConnectRoutesResponse;
     }
 
     /**
@@ -200,7 +199,7 @@ public class DeleteNatIpClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DeleteNatIpResponse doGet(String path, DeleteNatIpRequest requestObj, Map<String, String> head) throws Exception {
+    public DescribeDirectConnectRoutesResponse doGet(String path, DescribeDirectConnectRoutesRequest requestObj, Map<String, String> head) throws Exception {
         if (head == null) {
             head = new HashMap<>();
         }
@@ -213,7 +212,7 @@ public class DeleteNatIpClient extends BaseClient {
 
         String response = HttpClientUtils.httpGet(path, requestParams, head);
         log.info("doGet end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, DeleteNatIpResponse.class);
+        return JSON.parseObject(response, DescribeDirectConnectRoutesResponse.class);
     }
 
 
@@ -223,7 +222,7 @@ public class DeleteNatIpClient extends BaseClient {
      * @param requestObj
      * @return
      */
-    private JSONObject getRequestParams(DeleteNatIpRequest requestObj) throws Exception {
+    private JSONObject getRequestParams(DescribeDirectConnectRoutesRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置证书
         getCommonParams(credential, requestParams);
@@ -233,7 +232,7 @@ public class DeleteNatIpClient extends BaseClient {
         requestParams.put("Version", version);
 
         //设置请求体请求参数
-        setRequestField(requestObj, requestParams);
+        setRequestField(requestObj,requestParams);
 
         //签名
         String signature = SignUtils.signature(requestParams, credential.getSignStr());
@@ -268,7 +267,7 @@ public class DeleteNatIpClient extends BaseClient {
         head.put(AWS4EncryptionFactory.X_AMZ_DATA, xAmzDate);
     }
 
-    private JSONObject getSimpleRequestParams(DeleteNatIpRequest requestObj) throws Exception {
+    private JSONObject getSimpleRequestParams(DescribeDirectConnectRoutesRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置接口属性
         requestParams.put("Action", action);
@@ -279,7 +278,7 @@ public class DeleteNatIpClient extends BaseClient {
         return requestParams;
     }
 
-    private JSONObject getPostRawRequestParams(DeleteNatIpRequest requestObj) throws Exception {
+    private JSONObject getPostRawRequestParams(DescribeDirectConnectRoutesRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
         //设置接口属性
         requestParams.put("Action", action);

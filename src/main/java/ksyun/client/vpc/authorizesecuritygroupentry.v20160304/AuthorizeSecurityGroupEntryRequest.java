@@ -60,25 +60,19 @@ public class AuthorizeSecurityGroupEntryRequest {
     /**
      * TCP或UDP协议的端口规则结束端口
      */
-    @KsYunField(name = "PortRangeTo")
+    @KsYunField(name="PortRangeTo")
     private Integer PortRangeTo;
 
-    /**
-     * 安全组规则标签
-     */
+    /**安全组规则标签*/
     @KsYunField(name = "RuleTag")
     private String RuleTag;
 
-    /**
-     * 优先级
-     */
-    @KsYunField(name = "Priority")
+    /**优先级*/
+    @KsYunField(name="Priority")
     private Integer Priority;
 
-    /**
-     * 访问权限
-     */
-    @KsYunField(name = "Policy")
+    /**访问权限*/
+    @KsYunField(name="Policy")
     private String Policy;
 
 }

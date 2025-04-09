@@ -56,7 +56,7 @@ public class CreateFlowLogRequest {
     /**
      * 流日志描述
      */
-    @KsYunField(name = "Description")
+    @KsYunField(name ="Description")
     private String Description;
 
 }

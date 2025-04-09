@@ -60,19 +60,15 @@ public class CreateNetworkAclEntryRequest {
     /**
      * TCP或UDP协议的端口规则结束端口
      */
-    @KsYunField(name = "PortRangeTo")
+    @KsYunField(name="PortRangeTo")
     private Integer PortRangeTo;
 
-    /**
-     * ACL规则的网段
-     */
-    @KsYunField(name = "CidrBlock")
+    /**ACL规则的网段*/
+    @KsYunField(name="CidrBlock")
     private String CidrBlock;
 
-    /**
-     * ACL的描述
-     */
-    @KsYunField(name = "Description")
+    /**ACL的描述*/
+    @KsYunField(name="Description")
     private String Description;
 
 }

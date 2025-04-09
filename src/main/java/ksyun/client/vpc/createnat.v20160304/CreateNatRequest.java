@@ -42,31 +42,29 @@ public class CreateNatRequest {
     /**
      * Nat的IP数量
      */
-    @KsYunField(name = "NatIpNumber")
+    @KsYunField(name ="NatIpNumber")
     private Integer NatIpNumber;
 
-    /**
-     * Nat的映射范围
-     */
+    /**Nat的映射范围*/
     @KsYunField(name = "NatMode")
     private String NatMode;
 
     /**
      * 项目的ID
      */
-    @KsYunField(name = "ProjectId")
+    @KsYunField(name="ProjectId")
     private String ProjectId;
 
     /**
      * Nat的计费类型
      */
-    @KsYunField(name = "ChargeType")
+    @KsYunField(name="ChargeType")
     private String ChargeType;
 
     /**
      * 购买时长，计费类型为包年包月时不可缺省。
      */
-    @KsYunField(name = "PurchaseTime")
+    @KsYunField(name="PurchaseTime")
     private Integer PurchaseTime;
 
 }

@@ -51,9 +51,7 @@ public class CreateRouteRequest {
     @KsYunField(name = "VpnTunnelId")
     private String VpnTunnelId;
 
-    /**
-     * VPN网关的ID
-     */
+    /**VPN网关的ID*/
     @KsYunField(name = "VpnGatewayId")
     private String VpnGatewayId;
 
@@ -63,9 +61,7 @@ public class CreateRouteRequest {
     @KsYunField(name = "NetworkInterfaceId")
     private String NetworkInterfaceId;
 
-    /**
-     * 高可用虚拟IP的ID
-     */
+    /**高可用虚拟IP的ID*/
     @KsYunField(name = "HaVipId")
     private String HaVipId;
 
@@ -75,15 +71,11 @@ public class CreateRouteRequest {
     @KsYunField(name = "HaVipMasterNetworkInterfaceId")
     private String HaVipMasterNetworkInterfaceId;
 
-    /**
-     * 云企业网的ID
-     */
+    /**云企业网的ID*/
     @KsYunField(name = "CenId")
     private String CenId;
 
-    /**
-     * 路由描述(部分机房支持，不支持该参数的机房忽略此传值)
-     */
+    /**路由描述(部分机房支持，不支持该参数的机房忽略此传值)*/
     @KsYunField(name = "Description")
     private String Description;
 
