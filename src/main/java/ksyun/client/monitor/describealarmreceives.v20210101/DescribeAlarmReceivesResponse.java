@@ -5,10 +5,12 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.Set;
+
 /**
- * @Classname DescribeAlarmReceivesResponse
- * @Description DescribeAlarmReceives 返回体
- */
+* @Classname DescribeAlarmReceivesResponse
+* @Description DescribeAlarmReceives 返回体
+*/
 @Data
 @ToString
 public class DescribeAlarmReceivesResponse extends BaseResponseModel {

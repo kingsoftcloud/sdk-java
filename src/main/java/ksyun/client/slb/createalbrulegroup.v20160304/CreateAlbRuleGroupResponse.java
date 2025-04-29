@@ -5,10 +5,12 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.Set;
+
 /**
- * @Classname CreateAlbRuleGroupResponse
- * @Description CreateAlbRuleGroup 返回体
- */
+* @Classname CreateAlbRuleGroupResponse
+* @Description CreateAlbRuleGroup 返回体
+*/
 @Data
 @ToString
 public class CreateAlbRuleGroupResponse extends BaseResponseModel {

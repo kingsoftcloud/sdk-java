@@ -5,10 +5,12 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.Set;
+
 /**
- * @Classname CreateSlbRuleResponse
- * @Description CreateSlbRule 返回体
- */
+* @Classname CreateSlbRuleResponse
+* @Description CreateSlbRule 返回体
+*/
 @Data
 @ToString
 public class CreateSlbRuleResponse extends BaseResponseModel {

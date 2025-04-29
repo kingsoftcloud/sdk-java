@@ -5,10 +5,12 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.Set;
+
 /**
- * @Classname RegisterBackendServerResponse
- * @Description RegisterBackendServer 返回体
- */
+* @Classname RegisterBackendServerResponse
+* @Description RegisterBackendServer 返回体
+*/
 @Data
 @ToString
 public class RegisterBackendServerResponse extends BaseResponseModel {

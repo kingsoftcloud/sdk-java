@@ -9,15 +9,13 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DeleteAlbRuleGroupRequest
- * @Description 请求参数
- */
+* @Classname DeleteAlbRuleGroupRequest
+* @Description 请求参数
+*/
 @Data
-public class DeleteAlbRuleGroupRequest {
-    /**
-     * 转发策略的ID
-     */
-    @KsYunField(name = "AlbRuleGroupId")
+public class DeleteAlbRuleGroupRequest{
+    /**转发策略的ID*/
+    @KsYunField(name="AlbRuleGroupId")
     private String AlbRuleGroupId;
 
 }

@@ -8,14 +8,13 @@ import common.aws.AWS4EncryptionFactory;
 import common.utils.HttpClientUtils;
 import common.utils.SignUtils;
 import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Classname ModifyInstancesWithListenerClient
- * @Description 修改真实服务器信息
- */
+* @Classname ModifyInstancesWithListenerClient
+* @Description 修改真实服务器信息
+*/
 @Slf4j
 public class ModifyInstancesWithListenerClient extends BaseClient {
     private final static String service = "slb";
@@ -26,11 +25,219 @@ public class ModifyInstancesWithListenerClient extends BaseClient {
     /**
      * 证书
      */
-    private final Credential credential;
+    private Credential credential;
 
 
     public ModifyInstancesWithListenerClient(Credential credential) {
         this.credential = credential;
+    }
+
+
+    /**
+     * post请求
+     *
+     * @param path
+     * @param requestObj
+     * @return
+     * @throws Exception
+     */
+    public ModifyInstancesWithListenerResponse doPost(String path, ModifyInstancesWithListenerRequest requestObj) throws Exception {
+        Map<String, String> head = new HashMap<>();
+        head.put("Content-Type", "application/x-www-form-urlencoded");
+        return doPost(path, requestObj, head);
+    }
+
+    /**
+     * post请求
+     *
+     * @param path
+     * @param requestObj
+     * @param head
+     * @return
+     * @throws Exception
+     */
+    public ModifyInstancesWithListenerResponse doPost(String path, ModifyInstancesWithListenerRequest requestObj, Map<String, String> head) throws Exception {
+         if (head == null) {
+             head = new HashMap<>();
+         }
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        //参数配置
+        JSONObject requestParams = null;
+        if (head.get("Content-Type").equalsIgnoreCase("application/json")){
+             requestParams = getPostRawRequestParams(requestObj);
+        }else {
+             requestParams = getSimpleRequestParams(requestObj);
+        }
+
+        //aws4 签名
+        enhanceAws4Signature(head, requestParams, credential, "post");
+
+        String response = HttpClientUtils.httpPost(path, requestParams, head);
+        log.info("doPost end,path:{},params:{},head:{}", path, requestParams, head);
+        return JSON.parseObject(response, ModifyInstancesWithListenerResponse.class);
+    }
+
+    /**
+    * post 请求
+    * @param path
+    * @param requestObj
+    * @return
+    * @throws Exception
+    */
+    public ModifyInstancesWithListenerResponse doPostRaw(String path, ModifyInstancesWithListenerRequest requestObj) throws Exception {
+        Map<String, String> head = new HashMap<>();
+        head.put("Content-Type", "application/x-www-form-urlencoded");
+        return doPost(path, requestObj, head);
+    }
+
+    /**
+    * post 请求
+    *
+    * @param path
+    * @param requestObj
+    * @return
+    * @throws Exception
+    */
+    public ModifyInstancesWithListenerResponse doPostRaw(String path, ModifyInstancesWithListenerRequest requestObj, Map<String, String> head) throws Exception {
+        if (head == null) {
+            head = new HashMap<>();
+        }
+        head.put("Content-Type", "application/x-www-form-urlencoded");
+        return doPost(path, requestObj, head);
+    }
+    /**
+     * get 请求
+     *
+     * @param path
+     * @param requestObj
+     * @return
+     * @throws Exception
+     */
+    public ModifyInstancesWithListenerResponse doGet(String path, ModifyInstancesWithListenerRequest requestObj) throws Exception {
+        Map<String, String> head = new HashMap<>();
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        return doGet(path, requestObj, null);
+    }
+
+    /**
+     * doDelete 请求
+     *
+     * @param path
+     * @param requestObj
+     * @return
+     * @throws Exception
+     */
+    public ModifyInstancesWithListenerResponse doDelete(String path, ModifyInstancesWithListenerRequest requestObj) throws Exception {
+        Map<String, String> head = new HashMap<>();
+        head.put("Content-Type", "application/x-www-form-urlencoded");
+        return doDelete(path, requestObj, null);
+    }
+
+    /**
+     * doDelete 请求
+     *
+     * @param path
+     * @param requestObj
+     * @param head
+     * @return
+     * @throws Exception
+     */
+    public ModifyInstancesWithListenerResponse doDelete(String path, ModifyInstancesWithListenerRequest requestObj, Map<String, String> head) throws Exception {
+        if (head == null) {
+            head = new HashMap<>();
+        }
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        JSONObject requestParams = getRequestParams(requestObj);
+        String response = HttpClientUtils.httpDelete(path, requestParams, head);
+        log.info("doDelete end,path:{},params:{},head:{}", path, requestParams, head);
+        ModifyInstancesWithListenerResponse ModifyInstancesWithListenerResponse = JSON.parseObject(response, ModifyInstancesWithListenerResponse.class);
+        return ModifyInstancesWithListenerResponse;
+    }
+
+
+    /**
+     * doPut 请求
+     *
+     * @param path
+     * @param requestObj
+     * @return
+     * @throws Exception
+     */
+    public ModifyInstancesWithListenerResponse doPut(String path, ModifyInstancesWithListenerRequest requestObj) throws Exception {
+        Map<String, String> head = new HashMap<>();
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        return doPut(path, requestObj, null);
+    }
+
+    /**
+     * doPut 请求
+     *
+     * @param path
+     * @param requestObj
+     * @param head
+     * @return
+     * @throws Exception
+     */
+    public ModifyInstancesWithListenerResponse doPut(String path, ModifyInstancesWithListenerRequest requestObj, Map<String, String> head) throws Exception {
+        if (head == null) {
+            head = new HashMap<>();
+        }
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        JSONObject requestParams = getRequestParams(requestObj);
+        String response = HttpClientUtils.httpPut(path, requestParams, head);
+        log.info("httpPut end,path:{},params:{},head:{}", path, requestParams, head);
+        ModifyInstancesWithListenerResponse ModifyInstancesWithListenerResponse = JSON.parseObject(response, ModifyInstancesWithListenerResponse.class);
+        return ModifyInstancesWithListenerResponse;
+    }
+
+    /**
+     * get 请求
+     *
+     * @param path
+     * @param requestObj
+     * @param head
+     * @return
+     * @throws Exception
+     */
+    public ModifyInstancesWithListenerResponse doGet(String path, ModifyInstancesWithListenerRequest requestObj, Map<String, String> head) throws Exception {
+        if (head == null) {
+            head = new HashMap<>();
+        }
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        //参数配置
+        JSONObject requestParams = getSimpleRequestParams(requestObj);
+
+        //aws4 签名
+        enhanceAws4Signature(head, requestParams, credential, "get");
+
+        String response = HttpClientUtils.httpGet(path, requestParams, head);
+        log.info("doGet end,path:{},params:{},head:{}", path, requestParams, head);
+        return JSON.parseObject(response, ModifyInstancesWithListenerResponse.class);
+    }
+
+
+    /**
+     * 构造请求参数
+     *
+     * @param requestObj
+     * @return
+     */
+    private JSONObject getRequestParams(ModifyInstancesWithListenerRequest requestObj) throws Exception {
+        JSONObject requestParams = new JSONObject();
+        //设置证书
+        getCommonParams(credential, requestParams);
+        //设置接口属性
+        requestParams.put("Service", service);
+        requestParams.put("Action", action);
+        requestParams.put("Version", version);
+
+        //设置请求体请求参数
+        setRequestField(requestObj,requestParams);
+
+        //签名
+        String signature = SignUtils.signature(requestParams, credential.getSignStr());
+        requestParams.put("Signature", signature);
+        return requestParams;
     }
 
     private static void enhanceAws4Signature(Map<String, String> head, Map<String, Object> params, Credential credential, String requestMethod) {
@@ -58,198 +265,6 @@ public class ModifyInstancesWithListenerClient extends BaseClient {
         String xAmzDate = aws4EncryptionFactory.getHead().get(AWS4EncryptionFactory.X_AMZ_DATA);
         head.put(AWS4EncryptionFactory.X_Authorization, authorization);
         head.put(AWS4EncryptionFactory.X_AMZ_DATA, xAmzDate);
-    }
-
-    /**
-     * post请求
-     *
-     * @param path
-     * @param requestObj
-     * @return
-     * @throws Exception
-     */
-    public ModifyInstancesWithListenerResponse doPost(String path, ModifyInstancesWithListenerRequest requestObj) throws Exception {
-        Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
-        return doPost(path, requestObj, head);
-    }
-
-    /**
-     * post请求
-     *
-     * @param path
-     * @param requestObj
-     * @param head
-     * @return
-     * @throws Exception
-     */
-    public ModifyInstancesWithListenerResponse doPost(String path, ModifyInstancesWithListenerRequest requestObj, Map<String, String> head) throws Exception {
-        if (head == null) {
-            head = new HashMap<>();
-        }
-        //参数配置
-        JSONObject requestParams = null;
-        if (head.get("Content-Type").equalsIgnoreCase("application/json")) {
-            requestParams = getPostRawRequestParams(requestObj);
-        } else {
-            requestParams = getSimpleRequestParams(requestObj);
-        }
-
-        //aws4 签名
-        enhanceAws4Signature(head, requestParams, credential, "post");
-
-        String response = HttpClientUtils.httpPost(path, requestParams, head);
-        log.info("doPost end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, ModifyInstancesWithListenerResponse.class);
-    }
-
-    /**
-     * post 请求
-     *
-     * @param path
-     * @param requestObj
-     * @return
-     * @throws Exception
-     */
-    public ModifyInstancesWithListenerResponse doPostRaw(String path, ModifyInstancesWithListenerRequest requestObj) throws Exception {
-        Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
-        return doPost(path, requestObj, head);
-    }
-
-    /**
-     * post 请求
-     *
-     * @param path
-     * @param requestObj
-     * @return
-     * @throws Exception
-     */
-    public ModifyInstancesWithListenerResponse doPostRaw(String path, ModifyInstancesWithListenerRequest requestObj, Map<String, String> head) throws Exception {
-        if (head == null) {
-            head = new HashMap<>();
-        }
-        head.put("Content-Type", "application/json");
-        return doPost(path, requestObj, head);
-    }
-
-    /**
-     * get 请求
-     *
-     * @param path
-     * @param requestObj
-     * @return
-     * @throws Exception
-     */
-    public ModifyInstancesWithListenerResponse doGet(String path, ModifyInstancesWithListenerRequest requestObj) throws Exception {
-        return doGet(path, requestObj, null);
-    }
-
-    /**
-     * doDelete 请求
-     *
-     * @param path
-     * @param requestObj
-     * @return
-     * @throws Exception
-     */
-    public ModifyInstancesWithListenerResponse doDelete(String path, ModifyInstancesWithListenerRequest requestObj) throws Exception {
-        return doDelete(path, requestObj, null);
-    }
-
-    /**
-     * doDelete 请求
-     *
-     * @param path
-     * @param requestObj
-     * @param head
-     * @return
-     * @throws Exception
-     */
-    public ModifyInstancesWithListenerResponse doDelete(String path, ModifyInstancesWithListenerRequest requestObj, Map<String, String> head) throws Exception {
-        JSONObject requestParams = getRequestParams(requestObj);
-        String response = HttpClientUtils.httpDelete(path, requestParams, head);
-        log.info("doDelete end,path:{},params:{},head:{}", path, requestParams, head);
-        ModifyInstancesWithListenerResponse ModifyInstancesWithListenerResponse = JSON.parseObject(response, ModifyInstancesWithListenerResponse.class);
-        return ModifyInstancesWithListenerResponse;
-    }
-
-    /**
-     * doPut 请求
-     *
-     * @param path
-     * @param requestObj
-     * @return
-     * @throws Exception
-     */
-    public ModifyInstancesWithListenerResponse doPut(String path, ModifyInstancesWithListenerRequest requestObj) throws Exception {
-        return doPut(path, requestObj, null);
-    }
-
-    /**
-     * doPut 请求
-     *
-     * @param path
-     * @param requestObj
-     * @param head
-     * @return
-     * @throws Exception
-     */
-    public ModifyInstancesWithListenerResponse doPut(String path, ModifyInstancesWithListenerRequest requestObj, Map<String, String> head) throws Exception {
-        JSONObject requestParams = getRequestParams(requestObj);
-        String response = HttpClientUtils.httpPut(path, requestParams, head);
-        log.info("httpPut end,path:{},params:{},head:{}", path, requestParams, head);
-        ModifyInstancesWithListenerResponse ModifyInstancesWithListenerResponse = JSON.parseObject(response, ModifyInstancesWithListenerResponse.class);
-        return ModifyInstancesWithListenerResponse;
-    }
-
-    /**
-     * get 请求
-     *
-     * @param path
-     * @param requestObj
-     * @param head
-     * @return
-     * @throws Exception
-     */
-    public ModifyInstancesWithListenerResponse doGet(String path, ModifyInstancesWithListenerRequest requestObj, Map<String, String> head) throws Exception {
-        if (head == null) {
-            head = new HashMap<>();
-        }
-
-        //参数配置
-        JSONObject requestParams = getSimpleRequestParams(requestObj);
-
-        //aws4 签名
-        enhanceAws4Signature(head, requestParams, credential, "get");
-
-        String response = HttpClientUtils.httpGet(path, requestParams, head);
-        log.info("doGet end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, ModifyInstancesWithListenerResponse.class);
-    }
-
-    /**
-     * 构造请求参数
-     *
-     * @param requestObj
-     * @return
-     */
-    private JSONObject getRequestParams(ModifyInstancesWithListenerRequest requestObj) throws Exception {
-        JSONObject requestParams = new JSONObject();
-        //设置证书
-        getCommonParams(credential, requestParams);
-        //设置接口属性
-        requestParams.put("Service", service);
-        requestParams.put("Action", action);
-        requestParams.put("Version", version);
-
-        //设置请求体请求参数
-        setRequestField(requestObj, requestParams);
-
-        //签名
-        String signature = SignUtils.signature(requestParams, credential.getSignStr());
-        requestParams.put("Signature", signature);
-        return requestParams;
     }
 
     private JSONObject getSimpleRequestParams(ModifyInstancesWithListenerRequest requestObj) throws Exception {

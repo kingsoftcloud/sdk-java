@@ -5,10 +5,12 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.Set;
+
 /**
- * @Classname ModifyCertificateWithGroupResponse
- * @Description ModifyCertificateWithGroup 返回体
- */
+* @Classname ModifyCertificateWithGroupResponse
+* @Description ModifyCertificateWithGroup 返回体
+*/
 @Data
 @ToString
 public class ModifyCertificateWithGroupResponse extends BaseResponseModel {

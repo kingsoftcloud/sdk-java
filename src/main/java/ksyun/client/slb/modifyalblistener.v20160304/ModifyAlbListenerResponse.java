@@ -5,10 +5,12 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.Set;
+
 /**
- * @Classname ModifyAlbListenerResponse
- * @Description ModifyAlbListener 返回体
- */
+* @Classname ModifyAlbListenerResponse
+* @Description ModifyAlbListener 返回体
+*/
 @Data
 @ToString
 public class ModifyAlbListenerResponse extends BaseResponseModel {

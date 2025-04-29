@@ -5,10 +5,12 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.Set;
+
 /**
- * @Classname SetAlbNameResponse
- * @Description SetAlbName 返回体
- */
+* @Classname SetAlbNameResponse
+* @Description SetAlbName 返回体
+*/
 @Data
 @ToString
 public class SetAlbNameResponse extends BaseResponseModel {

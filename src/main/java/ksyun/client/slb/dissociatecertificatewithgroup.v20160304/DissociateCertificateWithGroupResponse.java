@@ -5,10 +5,12 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.Set;
+
 /**
- * @Classname DissociateCertificateWithGroupResponse
- * @Description DissociateCertificateWithGroup 返回体
- */
+* @Classname DissociateCertificateWithGroupResponse
+* @Description DissociateCertificateWithGroup 返回体
+*/
 @Data
 @ToString
 public class DissociateCertificateWithGroupResponse extends BaseResponseModel {
