@@ -25,7 +25,7 @@ public class DeleteAlbBackendServerGroupClient extends BaseClient {
     /**
      * 证书
      */
-    private final Credential credential;
+    private Credential credential;
 
 
     public DeleteAlbBackendServerGroupClient(Credential credential) {

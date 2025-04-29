@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname GetMetricStatisticsResponse
-* @Description GetMetricStatistics 返回体
-*/
+ * @Classname GetMetricStatisticsResponse
+ * @Description GetMetricStatistics 返回体
+ */
 @Data
 @ToString
 public class GetMetricStatisticsResponse extends BaseResponseModel {

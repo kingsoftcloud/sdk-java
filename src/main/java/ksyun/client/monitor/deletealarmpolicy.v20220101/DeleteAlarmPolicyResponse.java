@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname DeleteAlarmPolicyResponse
-* @Description DeleteAlarmPolicy 返回体
-*/
+ * @Classname DeleteAlarmPolicyResponse
+ * @Description DeleteAlarmPolicy 返回体
+ */
 @Data
 @ToString
 public class DeleteAlarmPolicyResponse extends BaseResponseModel {

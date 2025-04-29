@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname UpdateAlertUserStatusResponse
-* @Description UpdateAlertUserStatus 返回体
-*/
+ * @Classname UpdateAlertUserStatusResponse
+ * @Description UpdateAlertUserStatus 返回体
+ */
 @Data
 @ToString
 public class UpdateAlertUserStatusResponse extends BaseResponseModel {

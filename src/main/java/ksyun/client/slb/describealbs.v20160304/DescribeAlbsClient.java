@@ -25,7 +25,7 @@ public class DescribeAlbsClient extends BaseClient {
     /**
      * 证书
      */
-    private final Credential credential;
+    private Credential credential;
 
 
     public DescribeAlbsClient(Credential credential) {

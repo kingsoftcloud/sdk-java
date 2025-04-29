@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname AddAlarmReceivesResponse
-* @Description AddAlarmReceives 返回体
-*/
+ * @Classname AddAlarmReceivesResponse
+ * @Description AddAlarmReceives 返回体
+ */
 @Data
 @ToString
 public class AddAlarmReceivesResponse extends BaseResponseModel {

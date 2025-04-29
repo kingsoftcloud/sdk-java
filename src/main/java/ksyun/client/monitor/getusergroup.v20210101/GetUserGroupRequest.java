@@ -9,9 +9,9 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname GetUserGroupRequest
-* @Description 请求参数
-*/
+ * @Classname GetUserGroupRequest
+ * @Description 请求参数
+ */
 @Data
-public class GetUserGroupRequest{
+public class GetUserGroupRequest {
 }

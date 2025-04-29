@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname GetUserGroupResponse
-* @Description GetUserGroup 返回体
-*/
+ * @Classname GetUserGroupResponse
+ * @Description GetUserGroup 返回体
+ */
 @Data
 @ToString
 public class GetUserGroupResponse extends BaseResponseModel {

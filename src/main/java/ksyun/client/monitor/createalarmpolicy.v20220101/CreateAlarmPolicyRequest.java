@@ -9,9 +9,9 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname CreateAlarmPolicyRequest
-* @Description 请求参数
-*/
+ * @Classname CreateAlarmPolicyRequest
+ * @Description 请求参数
+ */
 @Data
-public class CreateAlarmPolicyRequest{
+public class CreateAlarmPolicyRequest {
 }

@@ -25,7 +25,7 @@ public class CreateLoadBalancerAclEntryClient extends BaseClient {
     /**
      * 证书
      */
-    private final Credential credential;
+    private Credential credential;
 
 
     public CreateLoadBalancerAclEntryClient(Credential credential) {

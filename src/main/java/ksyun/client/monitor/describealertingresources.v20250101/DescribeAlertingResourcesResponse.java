@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname DescribeAlertingResourcesResponse
-* @Description DescribeAlertingResources 返回体
-*/
+ * @Classname DescribeAlertingResourcesResponse
+ * @Description DescribeAlertingResources 返回体
+ */
 @Data
 @ToString
 public class DescribeAlertingResourcesResponse extends BaseResponseModel {
