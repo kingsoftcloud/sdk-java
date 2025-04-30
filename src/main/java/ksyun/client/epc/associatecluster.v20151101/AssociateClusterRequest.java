@@ -1,7 +1,12 @@
 package ksyun.client.epc.associatecluster.v20151101;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname AssociateClusterRequest
@@ -18,7 +23,7 @@ public class AssociateClusterRequest {
     /**
      * 容器ID
      */
-    @KsYunField(name = "ClusterId")
+    @KsYunField(name="ClusterId")
     private String ClusterId;
 
 }

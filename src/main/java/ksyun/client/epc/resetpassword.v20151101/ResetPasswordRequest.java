@@ -1,7 +1,12 @@
 package ksyun.client.epc.resetpassword.v20151101;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname ResetPasswordRequest
@@ -18,7 +23,7 @@ public class ResetPasswordRequest {
     /**
      * 云物理主机的root密码
      */
-    @KsYunField(name = "Password")
+    @KsYunField(name="Password")
     private String Password;
 
 }

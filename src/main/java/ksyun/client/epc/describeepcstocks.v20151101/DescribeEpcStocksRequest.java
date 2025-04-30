@@ -1,10 +1,12 @@
 package ksyun.client.epc.describeepcstocks.v20151101;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname DescribeEpcStocksRequest
@@ -29,8 +31,8 @@ public class DescribeEpcStocksRequest {
         @KsYunField(name = "Name")
         private String Name;
         /***/
-        @KsYunField(name = "Value")
-        private List<String> ValueList;
+        @KsYunField(name="Value")
+                private List<String> ValueList;
     }
 
 }

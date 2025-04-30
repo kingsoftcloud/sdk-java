@@ -5,10 +5,12 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.Set;
+
 /**
- * @Classname DescribeImagesResponse
- * @Description DescribeImages 返回体
- */
+* @Classname DescribeImagesResponse
+* @Description DescribeImages 返回体
+*/
 @Data
 @ToString
 public class DescribeImagesResponse extends BaseResponseModel {

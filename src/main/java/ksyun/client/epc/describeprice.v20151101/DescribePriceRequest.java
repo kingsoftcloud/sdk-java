@@ -1,7 +1,12 @@
 package ksyun.client.epc.describeprice.v20151101;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname DescribePriceRequest
@@ -19,25 +24,21 @@ public class DescribePriceRequest {
     /**
      * 物理机类型
      */
-    @KsYunField(name = "HostType")
+    @KsYunField(name="HostType")
     private String HostType;
 
     /**
      * 可用区的名称
      */
-    @KsYunField(name = "AvailabilityZone")
+    @KsYunField(name="AvailabilityZone")
     private String AvailabilityZone;
 
-    /**
-     * 购买时长，计费类型为包年包月时不可缺省。
-     */
-    @KsYunField(name = "PurchaseTime")
+    /**购买时长，计费类型为包年包月时不可缺省。*/
+    @KsYunField(name="PurchaseTime")
     private Integer PurchaseTime;
 
-    /**
-     * 购买的数量
-     */
-    @KsYunField(name = "Amount")
+    /**购买的数量*/
+    @KsYunField(name="Amount")
     private Integer Amount;
 
 }

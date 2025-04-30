@@ -1,7 +1,12 @@
 package ksyun.client.epc.replyprocess.v20151101;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname ReplyProcessRequest
@@ -18,7 +23,7 @@ public class ReplyProcessRequest {
     /**
      * 回复内容
      */
-    @KsYunField(name = "Remarks")
+    @KsYunField(name="Remarks")
     private String Remarks;
 
 }

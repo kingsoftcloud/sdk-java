@@ -5,10 +5,12 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.Set;
+
 /**
- * @Classname DescribeGpuImageDriverResponse
- * @Description DescribeGpuImageDriver 返回体
- */
+* @Classname DescribeGpuImageDriverResponse
+* @Description DescribeGpuImageDriver 返回体
+*/
 @Data
 @ToString
 public class DescribeGpuImageDriverResponse extends BaseResponseModel {

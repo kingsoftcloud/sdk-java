@@ -1,7 +1,12 @@
 package ksyun.client.epc.detachvolume.v20151101;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname DetachVolumeRequest
@@ -18,7 +23,7 @@ public class DetachVolumeRequest {
     /**
      * EBS的ID
      */
-    @KsYunField(name = "VolumeId")
+    @KsYunField(name="VolumeId")
     private String VolumeId;
 
 }

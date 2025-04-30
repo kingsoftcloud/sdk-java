@@ -1,7 +1,12 @@
 package ksyun.client.epc.reinstallcustomerepc.v20151101;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname ReinstallCustomerEpcRequest
@@ -18,13 +23,13 @@ public class ReinstallCustomerEpcRequest {
     /**
      * PXE server的IP
      */
-    @KsYunField(name = "ServerIp")
+    @KsYunField(name="ServerIp")
     private String ServerIp;
 
     /**
      * PXE server的路径
      */
-    @KsYunField(name = "Path")
+    @KsYunField(name="Path")
     private String Path;
 
 }

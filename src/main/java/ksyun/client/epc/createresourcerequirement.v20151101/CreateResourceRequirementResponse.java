@@ -5,10 +5,12 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.Set;
+
 /**
- * @Classname CreateResourceRequirementResponse
- * @Description CreateResourceRequirement 返回体
- */
+* @Classname CreateResourceRequirementResponse
+* @Description CreateResourceRequirement 返回体
+*/
 @Data
 @ToString
 public class CreateResourceRequirementResponse extends BaseResponseModel {

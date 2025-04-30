@@ -1,7 +1,12 @@
 package ksyun.client.epc.describeepctrashes.v20151101;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname DescribeEpcTrashesRequest
@@ -18,7 +23,7 @@ public class DescribeEpcTrashesRequest {
     /**
      * 获取另一页返回结果的 token
      */
-    @KsYunField(name = "NextToken")
+    @KsYunField(name="NextToken")
     private String NextToken;
 
 }

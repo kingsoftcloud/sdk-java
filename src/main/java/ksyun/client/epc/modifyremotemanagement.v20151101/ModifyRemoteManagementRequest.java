@@ -1,7 +1,12 @@
 package ksyun.client.epc.modifyremotemanagement.v20151101;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname ModifyRemoteManagementRequest
@@ -18,7 +23,7 @@ public class ModifyRemoteManagementRequest {
     /**
      * 手机动态码
      */
-    @KsYunField(name = "DynamicCode")
+    @KsYunField(name ="DynamicCode")
     private String DynamicCode;
 
     /**
@@ -27,28 +32,20 @@ public class ModifyRemoteManagementRequest {
     @KsYunField(name = "Pin")
     private String Pin;
 
-    /**
-     * 新手机号码
-     */
-    @KsYunField(name = "NewPhoneNumber")
+    /**新手机号码*/
+    @KsYunField(name="NewPhoneNumber")
     private String NewPhoneNumber;
 
-    /**
-     * 个人识别码
-     */
+    /**个人识别码*/
     @KsYunField(name = "NewPin")
     private String NewPin;
 
-    /**
-     * 姓名
-     */
+    /**姓名*/
     @KsYunField(name = "Name")
     private String Name;
 
-    /**
-     * 版本ID
-     */
-    @KsYunField(name = "VersionId")
+    /**版本ID*/
+    @KsYunField(name="VersionId")
     private Integer VersionId;
 
 }

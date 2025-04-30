@@ -1,7 +1,12 @@
 package ksyun.client.epc.usehotstandbyepc.v20151101;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname UseHotStandByEpcRequest
@@ -26,7 +31,7 @@ public class UseHotStandByEpcRequest {
      * RetainPrivateIP保留内网IP
      * Notretain不保留，默认值
      */
-    @KsYunField(name = "RetainInstanceInfo")
+    @KsYunField(name="RetainInstanceInfo")
     private String RetainInstanceInfo;
 
 }

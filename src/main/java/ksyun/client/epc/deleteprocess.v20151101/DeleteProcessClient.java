@@ -8,7 +8,6 @@ import common.aws.AWS4EncryptionFactory;
 import common.utils.HttpClientUtils;
 import common.utils.SignUtils;
 import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -26,39 +25,13 @@ public class DeleteProcessClient extends BaseClient {
     /**
      * 证书
      */
-    private final Credential credential;
+    private Credential credential;
 
 
     public DeleteProcessClient(Credential credential) {
         this.credential = credential;
     }
 
-    private static void enhanceAws4Signature(Map<String, String> head, Map<String, Object> params, Credential credential, String requestMethod) {
-        AWS4EncryptionFactory aws4EncryptionFactory = new AWS4EncryptionFactory(credential.getSecretKey(), credential.getSignStr(), service, credential.getRegion());
-
-        //设置请求参数
-        if (params != null) {
-            params.entrySet().forEach(entry -> {
-                aws4EncryptionFactory.setParamMap(entry.getKey(), entry.getValue());
-            });
-        }
-
-        //设置请求头
-        if (head != null) {
-            head.entrySet().forEach(entry -> {
-                aws4EncryptionFactory.setHeadMap(entry.getKey(), entry.getValue());
-            });
-        }
-
-        //aws 加密
-        aws4EncryptionFactory.generateSignature(requestMethod);
-
-        //回填aws4 签名
-        String authorization = aws4EncryptionFactory.getHead().get(AWS4EncryptionFactory.X_Authorization);
-        String xAmzDate = aws4EncryptionFactory.getHead().get(AWS4EncryptionFactory.X_AMZ_DATA);
-        head.put(AWS4EncryptionFactory.X_Authorization, authorization);
-        head.put(AWS4EncryptionFactory.X_AMZ_DATA, xAmzDate);
-    }
 
     /**
      * post请求
@@ -87,6 +60,7 @@ public class DeleteProcessClient extends BaseClient {
         if (head == null) {
             head = new HashMap<>();
         }
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         //参数配置
         JSONObject requestParams = null;
         if (head.get("Content-Type").equalsIgnoreCase("application/json")) {
@@ -105,7 +79,6 @@ public class DeleteProcessClient extends BaseClient {
 
     /**
      * post 请求
-     *
      * @param path
      * @param requestObj
      * @return
@@ -113,7 +86,7 @@ public class DeleteProcessClient extends BaseClient {
      */
     public DeleteProcessResponse doPostRaw(String path, DeleteProcessRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
     }
 
@@ -129,10 +102,9 @@ public class DeleteProcessClient extends BaseClient {
         if (head == null) {
             head = new HashMap<>();
         }
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
     }
-
     /**
      * get 请求
      *
@@ -142,6 +114,8 @@ public class DeleteProcessClient extends BaseClient {
      * @throws Exception
      */
     public DeleteProcessResponse doGet(String path, DeleteProcessRequest requestObj) throws Exception {
+        Map<String, String> head = new HashMap<>();
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doGet(path, requestObj, null);
     }
 
@@ -154,6 +128,8 @@ public class DeleteProcessClient extends BaseClient {
      * @throws Exception
      */
     public DeleteProcessResponse doDelete(String path, DeleteProcessRequest requestObj) throws Exception {
+        Map<String, String> head = new HashMap<>();
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDelete(path, requestObj, null);
     }
 
@@ -167,12 +143,17 @@ public class DeleteProcessClient extends BaseClient {
      * @throws Exception
      */
     public DeleteProcessResponse doDelete(String path, DeleteProcessRequest requestObj, Map<String, String> head) throws Exception {
+        if (head == null) {
+            head = new HashMap<>();
+        }
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpDelete(path, requestParams, head);
         log.info("doDelete end,path:{},params:{},head:{}", path, requestParams, head);
         DeleteProcessResponse DeleteProcessResponse = JSON.parseObject(response, DeleteProcessResponse.class);
         return DeleteProcessResponse;
     }
+
 
     /**
      * doPut 请求
@@ -183,6 +164,8 @@ public class DeleteProcessClient extends BaseClient {
      * @throws Exception
      */
     public DeleteProcessResponse doPut(String path, DeleteProcessRequest requestObj) throws Exception {
+        Map<String, String> head = new HashMap<>();
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doPut(path, requestObj, null);
     }
 
@@ -196,6 +179,10 @@ public class DeleteProcessClient extends BaseClient {
      * @throws Exception
      */
     public DeleteProcessResponse doPut(String path, DeleteProcessRequest requestObj, Map<String, String> head) throws Exception {
+        if (head == null) {
+            head = new HashMap<>();
+        }
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         JSONObject requestParams = getRequestParams(requestObj);
         String response = HttpClientUtils.httpPut(path, requestParams, head);
         log.info("httpPut end,path:{},params:{},head:{}", path, requestParams, head);
@@ -216,7 +203,7 @@ public class DeleteProcessClient extends BaseClient {
         if (head == null) {
             head = new HashMap<>();
         }
-
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         //参数配置
         JSONObject requestParams = getSimpleRequestParams(requestObj);
 
@@ -227,6 +214,7 @@ public class DeleteProcessClient extends BaseClient {
         log.info("doGet end,path:{},params:{},head:{}", path, requestParams, head);
         return JSON.parseObject(response, DeleteProcessResponse.class);
     }
+
 
     /**
      * 构造请求参数
@@ -250,6 +238,33 @@ public class DeleteProcessClient extends BaseClient {
         String signature = SignUtils.signature(requestParams, credential.getSignStr());
         requestParams.put("Signature", signature);
         return requestParams;
+    }
+
+    private static void enhanceAws4Signature(Map<String, String> head, Map<String, Object> params, Credential credential, String requestMethod) {
+        AWS4EncryptionFactory aws4EncryptionFactory = new AWS4EncryptionFactory(credential.getSecretKey(), credential.getSignStr(), service, credential.getRegion());
+
+        //设置请求参数
+        if (params != null) {
+            params.entrySet().forEach(entry -> {
+                aws4EncryptionFactory.setParamMap(entry.getKey(), entry.getValue());
+            });
+        }
+
+        //设置请求头
+        if (head != null) {
+            head.entrySet().forEach(entry -> {
+                aws4EncryptionFactory.setHeadMap(entry.getKey(), entry.getValue());
+            });
+        }
+
+        //aws 加密
+        aws4EncryptionFactory.generateSignature(requestMethod);
+
+        //回填aws4 签名
+        String authorization = aws4EncryptionFactory.getHead().get(AWS4EncryptionFactory.X_Authorization);
+        String xAmzDate = aws4EncryptionFactory.getHead().get(AWS4EncryptionFactory.X_AMZ_DATA);
+        head.put(AWS4EncryptionFactory.X_Authorization, authorization);
+        head.put(AWS4EncryptionFactory.X_AMZ_DATA, xAmzDate);
     }
 
     private JSONObject getSimpleRequestParams(DeleteProcessRequest requestObj) throws Exception {
