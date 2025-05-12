@@ -1,7 +1,12 @@
 package ksyun.client.aicp.listgputypes.v20250501;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname ListGpuTypesRequest
@@ -18,7 +23,7 @@ public class ListGpuTypesRequest {
     /**
      * 每页数据大小
      */
-    @KsYunField(name = "page_size")
+    @KsYunField(name="page_size")
     private Integer Page_size;
 
 }

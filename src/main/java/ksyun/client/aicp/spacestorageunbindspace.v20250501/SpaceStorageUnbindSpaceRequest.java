@@ -1,7 +1,12 @@
 package ksyun.client.aicp.spacestorageunbindspace.v20250501;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname SpaceStorageUnbindSpaceRequest
@@ -18,7 +23,7 @@ public class SpaceStorageUnbindSpaceRequest {
     /**
      * 空间ID
      */
-    @KsYunField(name = "space_id")
+    @KsYunField(name="space_id")
     private Integer Space_id;
 
 }

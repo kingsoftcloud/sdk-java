@@ -5,6 +5,8 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.Set;
+
 /**
  * @Classname ListSpaceStorageBindedSpacesResponse
  * @Description ListSpaceStorageBindedSpaces 返回体

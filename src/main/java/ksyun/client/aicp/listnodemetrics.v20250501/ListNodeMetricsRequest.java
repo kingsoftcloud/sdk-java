@@ -1,7 +1,12 @@
 package ksyun.client.aicp.listnodemetrics.v20250501;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname ListNodeMetricsRequest
@@ -18,7 +23,7 @@ public class ListNodeMetricsRequest {
     /**
      * 是否显示每张卡的具体信息，默认 true
      */
-    @KsYunField(name = "show_detail")
+    @KsYunField(name ="show_detail")
     private Boolean Show_detail;
 
     /**
@@ -27,10 +32,8 @@ public class ListNodeMetricsRequest {
     @KsYunField(name = "sort_by")
     private String Sort_by;
 
-    /**
-     * 排序方式，default升序， desc 降序, asc 升序
-     */
-    @KsYunField(name = "order")
+    /**排序方式，default升序， desc 降序, asc 升序*/
+    @KsYunField(name="order")
     private String Order;
 
 }

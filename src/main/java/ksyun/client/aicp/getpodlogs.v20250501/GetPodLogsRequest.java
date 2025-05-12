@@ -23,7 +23,7 @@ public class GetPodLogsRequest {
     /**
      * 任务task ID
      */
-    @KsYunField(name = "task_id")
+    @KsYunField(name="task_id")
     private Integer Task_id;
 
     /**
@@ -33,23 +33,17 @@ public class GetPodLogsRequest {
     @KsYunField(name = "pod_name")
     private String Pod_name;
 
-    /**
-     * 关键词
-     * 若需要匹配多个关键字，则用空格连接
-     */
+    /**关键词
+     若需要匹配多个关键字，则用空格连接*/
     @KsYunField(name = "key_word")
     private String Key_word;
 
-    /**
-     * 尾行数
-     */
+    /**尾行数*/
     @KsYunField(name = "tail")
     private Integer Tail;
 
-    /**
-     * 空间ID
-     */
-    @KsYunField(name = "space_id")
+    /**空间ID*/
+    @KsYunField(name="space_id")
     private Integer Space_id;
 
 }

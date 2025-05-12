@@ -1,7 +1,12 @@
 package ksyun.client.aicp.stopjob.v20250501;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname StopJobRequest
@@ -18,7 +23,7 @@ public class StopJobRequest {
     /**
      * 空间ID
      */
-    @KsYunField(name = "space_id")
+    @KsYunField(name="space_id")
     private Integer Space_id;
 
 }

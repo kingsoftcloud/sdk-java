@@ -1,7 +1,12 @@
 package ksyun.client.aicp.listimages.v20250501;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname ListImagesRequest
@@ -19,7 +24,7 @@ public class ListImagesRequest {
     /**
      * available(正常)，synchronous（同步中），abnormal（异常），unavailable（不可用）
      */
-    @KsYunField(name = "status")
+    @KsYunField(name="status")
     private String Status;
 
     /**
@@ -28,10 +33,8 @@ public class ListImagesRequest {
     @KsYunField(name = "page_index")
     private Integer Page_index;
 
-    /**
-     * 每页数据条数
-     */
-    @KsYunField(name = "page_size")
+    /**每页数据条数*/
+    @KsYunField(name="page_size")
     private Integer Page_size;
 
 }

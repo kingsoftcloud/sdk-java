@@ -1,7 +1,12 @@
 package ksyun.client.aicp.listspacestorages.v20250501;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname ListSpaceStoragesRequest
@@ -28,10 +33,8 @@ public class ListSpaceStoragesRequest {
     @KsYunField(name = "page_index")
     private Integer Page_index;
 
-    /**
-     * 每页条数
-     */
-    @KsYunField(name = "page_size")
+    /**每页条数*/
+    @KsYunField(name="page_size")
     private Integer Page_size;
 
 }

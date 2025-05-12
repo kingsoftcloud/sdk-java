@@ -1,7 +1,12 @@
 package ksyun.client.aicp.createspacestorage.v20250501;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname CreateSpaceStorageRequest
@@ -18,7 +23,7 @@ public class CreateSpaceStorageRequest {
     /**
      * 最大存储配额
      */
-    @KsYunField(name = "max_quota")
+    @KsYunField(name="max_quota")
     private Integer Max_quota;
 
     /**
@@ -34,16 +39,12 @@ public class CreateSpaceStorageRequest {
     @KsYunField(name = "storage_config_id")
     private Integer Storage_config_id;
 
-    /**
-     * 描述
-     */
+    /**描述*/
     @KsYunField(name = "description")
     private String Description;
 
-    /**
-     * 已有目录路径
-     */
-    @KsYunField(name = "path")
+    /**已有目录路径*/
+    @KsYunField(name="path")
     private String Path;
 
 }

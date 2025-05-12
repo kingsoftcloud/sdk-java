@@ -1,7 +1,12 @@
 package ksyun.client.aicp.listjobs.v20250501;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname ListJobsRequest
@@ -18,7 +23,7 @@ public class ListJobsRequest {
     /**
      * 页大小
      */
-    @KsYunField(name = "page_size")
+    @KsYunField(name="page_size")
     private Integer Page_size;
 
     /**
@@ -28,23 +33,17 @@ public class ListJobsRequest {
     @KsYunField(name = "space_id")
     private Integer Space_id;
 
-    /**
-     * 任务名称
-     */
+    /**任务名称*/
     @KsYunField(name = "job_name")
     private String Job_name;
 
-    /**
-     * 用户名称
-     */
+    /**用户名称*/
     @KsYunField(name = "user_name")
     private String User_name;
 
-    /**
-     * 任务状态
-     * starting/stopped/stopping/run_start/run_running/run_succeeded/aborted/error
-     */
-    @KsYunField(name = "status")
+    /**任务状态
+     starting/stopped/stopping/run_start/run_running/run_succeeded/aborted/error*/
+    @KsYunField(name="status")
     private String Status;
 
 }
