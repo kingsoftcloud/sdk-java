@@ -1,7 +1,12 @@
 package ksyun.client.bill_union.queryprojectconsume.v20221222;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname QueryProjectConsumeRequest
@@ -18,7 +23,7 @@ public class QueryProjectConsumeRequest {
     /**
      * 账单结束时间，YYYY－MM-DD，支持当前月，不支持跨月。
      */
-    @KsYunField(name = "EndDay")
+    @KsYunField(name="EndDay")
     private String EndDay;
 
     /**
@@ -27,10 +32,8 @@ public class QueryProjectConsumeRequest {
     @KsYunField(name = "Page")
     private Integer Page;
 
-    /**
-     * 每页条数,默认值20，最大值200
-     */
-    @KsYunField(name = "Size")
+    /**每页条数,默认值20，最大值200*/
+    @KsYunField(name="Size")
     private Integer Size;
 
 }

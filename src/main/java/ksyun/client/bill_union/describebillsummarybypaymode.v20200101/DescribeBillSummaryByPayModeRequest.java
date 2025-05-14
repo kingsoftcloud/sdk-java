@@ -1,7 +1,12 @@
 package ksyun.client.bill_union.describebillsummarybypaymode.v20200101;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname DescribeBillSummaryByPayModeRequest
@@ -24,7 +29,7 @@ public class DescribeBillSummaryByPayModeRequest {
     /**
      * 成员账账号Id，非必填
      */
-    @KsYunField(name = "SubAccount")
+    @KsYunField(name="SubAccount")
     private Integer SubAccount;
 
 }

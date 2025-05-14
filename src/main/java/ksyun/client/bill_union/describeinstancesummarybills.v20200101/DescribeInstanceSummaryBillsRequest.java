@@ -1,7 +1,12 @@
 package ksyun.client.bill_union.describeinstancesummarybills.v20200101;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname DescribeInstanceSummaryBillsRequest
@@ -18,7 +23,7 @@ public class DescribeInstanceSummaryBillsRequest {
     /**
      * 产品线对应的Code
      */
-    @KsYunField(name = "ProductCode")
+    @KsYunField(name ="ProductCode")
     private String ProductCode;
 
     /**
@@ -27,10 +32,8 @@ public class DescribeInstanceSummaryBillsRequest {
     @KsYunField(name = "Page")
     private Integer Page;
 
-    /**
-     * 每页数量
-     */
-    @KsYunField(name = "Size")
+    /**每页数量*/
+    @KsYunField(name="Size")
     private Integer Size;
 
 }

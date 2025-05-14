@@ -1,7 +1,12 @@
 package ksyun.client.bill_union.describebillsummarybyproject.v20200101;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname DescribeBillSummaryByProjectRequest
@@ -24,7 +29,7 @@ public class DescribeBillSummaryByProjectRequest {
     /**
      * 成员账号Id
      */
-    @KsYunField(name = "SubAccount")
+    @KsYunField(name="SubAccount")
     private Integer SubAccount;
 
 }

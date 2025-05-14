@@ -29,31 +29,25 @@ public class DescribeSplitItemDayBillDetailsRequest {
     /**
      * 统计周期，固化传 3（代表明细）
      */
-    @KsYunField(name = "StatisticType")
+    @KsYunField(name="StatisticType")
     private Integer StatisticType;
 
-    /**
-     * 计费类别，0（预付费），1（实时付费），2（后付费）；该接口仅支持后付费
-     */
-    @KsYunField(name = "PayType")
+    /**计费类别，0（预付费），1（实时付费），2（后付费）；该接口仅支持后付费*/
+    @KsYunField(name= "PayType")
     private Integer PayType;
 
-    /**
-     * 主账号所托管的账号Id
-     */
-    @KsYunField(name = "SubAccountId")
+    /**主账号所托管的账号Id
+*/
+    @KsYunField(name="SubAccountId")
     private Integer SubAccountId;
 
-    /**
-     * 第几页
-     */
+    /**第几页*/
     @KsYunField(name = "Page")
     private Integer Page;
 
-    /**
-     * 每页条数
-     */
-    @KsYunField(name = "Size")
+    /**每页条数
+*/
+    @KsYunField(name="Size")
     private Integer Size;
 
 }
