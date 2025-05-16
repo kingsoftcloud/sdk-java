@@ -6,7 +6,7 @@
 
     <groupId>com.ksyun</groupId>
     <artifactId>ksyun-java-sdk</artifactId>
-    <version>1.8.3</version>
+    <version>1.8.4</version>
     <packaging>jar</packaging>
 
     <name>KSYUN SDK for Java</name>
@@ -92,7 +92,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.47</version>
+            <version>1.2.83</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
