@@ -23,7 +23,7 @@ public class CreateShareImageRequest {
     /**
      * 接收共享镜像的账号ID列表
      */
-    @KsYunField(name ="AccountId.N")
+    @KsYunField(name = "AccountId.N")
     private String AccountIdN;
 
 }

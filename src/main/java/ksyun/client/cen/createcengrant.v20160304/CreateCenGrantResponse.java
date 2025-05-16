@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname CreateCenGrantResponse
-* @Description CreateCenGrant 返回体
-*/
+ * @Classname CreateCenGrantResponse
+ * @Description CreateCenGrant 返回体
+ */
 @Data
 @ToString
 public class CreateCenGrantResponse extends BaseResponseModel {

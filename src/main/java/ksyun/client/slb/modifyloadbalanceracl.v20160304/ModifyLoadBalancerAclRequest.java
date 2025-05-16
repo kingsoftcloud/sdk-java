@@ -9,17 +9,21 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname ModifyLoadBalancerAclRequest
-* @Description 请求参数
-*/
+ * @Classname ModifyLoadBalancerAclRequest
+ * @Description 请求参数
+ */
 @Data
-public class ModifyLoadBalancerAclRequest{
-    /**LoadBalancerAcl的ID*/
-    @KsYunField(name="LoadBalancerAclId")
+public class ModifyLoadBalancerAclRequest {
+    /**
+     * LoadBalancerAcl的ID
+     */
+    @KsYunField(name = "LoadBalancerAclId")
     private String LoadBalancerAclId;
 
-    /**LoadBalancerAcl的名称*/
-    @KsYunField(name="LoadBalancerAclName")
+    /**
+     * LoadBalancerAcl的名称
+     */
+    @KsYunField(name = "LoadBalancerAclName")
     private String LoadBalancerAclName;
 
 }

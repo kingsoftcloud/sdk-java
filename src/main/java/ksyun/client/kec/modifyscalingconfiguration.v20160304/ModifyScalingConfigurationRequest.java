@@ -1,10 +1,12 @@
 package ksyun.client.kec.modifyscalingconfiguration.v20160304;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname ModifyScalingConfigurationRequest
@@ -77,83 +79,6 @@ public class ModifyScalingConfigurationRequest {
      */
     @KsYunField(name = "DataDisk")
     private List<DataDiskDto> DataDiskList;
-    /**
-     * 系统盘大小，最小值为0，最大值为500
-     */
-    @KsYunField(name = "SystemDisk.DiskSize")
-    private Integer SystemDiskDiskSize;
-    /**
-     * 弹性IP的带宽
-     */
-    @KsYunField(name = "AddressBandWidth")
-    private Integer AddressBandWidth;
-    /**
-     * 弹性IP指定的共享带宽ID
-     */
-    @KsYunField(name = "BandWidthShareId")
-    private String BandWidthShareId;
-    /**
-     * 弹性IP的链路类型的ID
-     */
-    @KsYunField(name = "LineId")
-    private String LineId;
-    /**
-     * 弹性IP项目的ID
-     */
-    @KsYunField(name = "AddressProjectId")
-    private Integer AddressProjectId;
-    /**
-     * 实例名称
-     */
-    @KsYunField(name = "InstanceName")
-    private String InstanceName;
-    /**
-     * 实例名称后缀
-     */
-    @KsYunField(name = "InstanceNameSuffix")
-    private String InstanceNameSuffix;
-    /**
-     * 用户自定义数据
-     */
-    @KsYunField(name = "UserData")
-    private String UserData;
-    /**
-     * 实例名称时间戳后缀，true/false
-     */
-    @KsYunField(name = "InstanceNameTimeSuffix")
-    private Boolean InstanceNameTimeSuffix;
-    /**
-     * 启动配置创建的ECS实例的标签键
-     * 支持1-128个字符，仅支持中英文字符、数字及±=._/@:
-     */
-    @KsYunField(name = "Tag")
-    private List<TagDto> TagList;
-    /***/
-    @KsYunField(name = "LoginSetAfter")
-    private Boolean LoginSetAfter;
-    /***/
-    @KsYunField(name = "IpBindAfter")
-    private Boolean IpBindAfter;
-    /**
-     * 实例名称随机生成
-     */
-    @KsYunField(name = "InstanceNameRandom")
-    private Boolean InstanceNameRandom;
-    /**
-     * 不能给默认值，不传默认按价格体系配置systemDisk属性中第一个创建
-     */
-    @KsYunField(name = "SystemDisk.DiskType")
-    private String SystemDiskDiskType;
-    /**
-     * 扩容 offline 离线扩容| online 在线扩容
-     */
-    @KsYunField(name = "SystemDisk.ResizeType")
-    private String SystemDiskResizeType;
-    /**
-     * 是否同步ebs标签
-     */
-    @KsYunField(name = "SyncTag")
-    private Boolean SyncTag;
 
     @Data
     @ToString
@@ -175,6 +100,67 @@ public class ModifyScalingConfigurationRequest {
         private Boolean DeleteWithInstance;
     }
 
+    /**
+     * 系统盘大小，最小值为0，最大值为500
+     */
+    @KsYunField(name = "SystemDisk.DiskSize")
+    private Integer SystemDiskDiskSize;
+
+    /**
+     * 弹性IP的带宽
+     */
+    @KsYunField(name = "AddressBandWidth")
+    private Integer AddressBandWidth;
+
+    /**
+     * 弹性IP指定的共享带宽ID
+     */
+    @KsYunField(name = "BandWidthShareId")
+    private String BandWidthShareId;
+
+    /**
+     * 弹性IP的链路类型的ID
+     */
+    @KsYunField(name = "LineId")
+    private String LineId;
+
+    /**
+     * 弹性IP项目的ID
+     */
+    @KsYunField(name = "AddressProjectId")
+    private Integer AddressProjectId;
+
+    /**
+     * 实例名称
+     */
+    @KsYunField(name = "InstanceName")
+    private String InstanceName;
+
+    /**
+     * 实例名称后缀
+     */
+    @KsYunField(name = "InstanceNameSuffix")
+    private String InstanceNameSuffix;
+
+    /**
+     * 用户自定义数据
+     */
+    @KsYunField(name = "UserData")
+    private String UserData;
+
+    /**
+     * 实例名称时间戳后缀，true/false
+     */
+    @KsYunField(name = "InstanceNameTimeSuffix")
+    private Boolean InstanceNameTimeSuffix;
+
+    /**
+     * 启动配置创建的ECS实例的标签键
+     * 支持1-128个字符，仅支持中英文字符、数字及±=._/@:
+     */
+    @KsYunField(name = "Tag")
+    private List<TagDto> TagList;
+
     @Data
     @ToString
     public static class TagDto {
@@ -191,5 +177,37 @@ public class ModifyScalingConfigurationRequest {
         @KsYunField(name = "Value")
         private String Value;
     }
+
+    /***/
+    @KsYunField(name = "LoginSetAfter")
+    private Boolean LoginSetAfter;
+
+    /***/
+    @KsYunField(name = "IpBindAfter")
+    private Boolean IpBindAfter;
+
+    /**
+     * 实例名称随机生成
+     */
+    @KsYunField(name = "InstanceNameRandom")
+    private Boolean InstanceNameRandom;
+
+    /**
+     * 不能给默认值，不传默认按价格体系配置systemDisk属性中第一个创建
+     */
+    @KsYunField(name = "SystemDisk.DiskType")
+    private String SystemDiskDiskType;
+
+    /**
+     * 扩容 offline 离线扩容| online 在线扩容
+     */
+    @KsYunField(name = "SystemDisk.ResizeType")
+    private String SystemDiskResizeType;
+
+    /**
+     * 是否同步ebs标签
+     */
+    @KsYunField(name = "SyncTag")
+    private Boolean SyncTag;
 
 }

@@ -23,7 +23,7 @@ public class QueryUserConsumeRequest {
     /**
      * 账单结束时间，YYYY－MM-DD，支持当前月，不支持跨月。
      */
-    @KsYunField(name="EndDay")
+    @KsYunField(name = "EndDay")
     private String EndDay;
 
     /**
@@ -32,8 +32,10 @@ public class QueryUserConsumeRequest {
     @KsYunField(name = "Page")
     private Integer Page;
 
-    /**每页条数,默认值20，最大值200*/
-    @KsYunField(name="Size")
+    /**
+     * 每页条数,默认值20，最大值200
+     */
+    @KsYunField(name = "Size")
     private Integer Size;
 
 }

@@ -1,10 +1,12 @@
 package ksyun.client.kmr.launchcluster.v20210902;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname LaunchClusterRequest
@@ -55,40 +57,6 @@ public class LaunchClusterRequest {
     @KsYunField(name = "DatabaseInfo")
 
     private DatabaseInfoDto DatabaseInfoList;
-    /**
-     * 组件列表：
-     * 1. Hadoop
-     * - 必选组件：	zookeeper(3.6.4)、hdfs(3.3.6)、yarn(3.3.6)、mapreduce(3.3.6)、tez(0.10.2)
-     * - 可选组件：hbase(2.5.5)、hive(3.1.3)、ranger(2.3.0)、spark(3.3.3)、flink(1.17.1)、presto(0.283)、trino(433)、sqoop(1.4.7)、hue(4.10.0)、zeppelin(0.10.0)、kafka(2.8.1)、iceberg(1.3.1)、hudi(0.12.3)、kudu(1.15.0)、impala(3.4.0)、prometheus(2.37.2)、grafana(8.5.15)、dolphinscheduler(3.1.9)、celeborn(0.5.0)
-     * 2. Kafka
-     * - 必选组件：zookeeper(3.4.6)、kafka(2.8.1)
-     * 3. RocketMQ
-     * - 必选组件：rocketmq(4.9.2)
-     * 4. Zookeeper
-     * - 必选组件：zookeeper(3.6.4)
-     */
-    @KsYunField(name = "Services", type = 2)
-    private List<String> ServicesList;
-    /**
-     * 项目 ID，参考「项目管理」，默认为 0
-     */
-    @KsYunField(name = "ProjectId")
-    private Integer ProjectId;
-    /**
-     * VPC 网络的 ID
-     */
-    @KsYunField(name = "VpcDomainId")
-    private String VpcDomainId;
-    /**
-     * 安全组的 ID
-     */
-    @KsYunField(name = "SecurityGroupId")
-    private String SecurityGroupId;
-    /**
-     * 节点组信息
-     */
-    @KsYunField(name = "InstanceGroups", type = 2)
-    private List<InstanceGroupsDto> InstanceGroupsList;
 
     @Data
     @ToString
@@ -121,6 +89,45 @@ public class LaunchClusterRequest {
         @KsYunField(name = "RdsInstanceId")
         private String RdsInstanceId;
     }
+
+    /**
+     * 组件列表：
+     * 1. Hadoop
+     * - 必选组件：	zookeeper(3.6.4)、hdfs(3.3.6)、yarn(3.3.6)、mapreduce(3.3.6)、tez(0.10.2)
+     * - 可选组件：hbase(2.5.5)、hive(3.1.3)、ranger(2.3.0)、spark(3.3.3)、flink(1.17.1)、presto(0.283)、trino(433)、sqoop(1.4.7)、hue(4.10.0)、zeppelin(0.10.0)、kafka(2.8.1)、iceberg(1.3.1)、hudi(0.12.3)、kudu(1.15.0)、impala(3.4.0)、prometheus(2.37.2)、grafana(8.5.15)、dolphinscheduler(3.1.9)、celeborn(0.5.0)
+     * 2. Kafka
+     * - 必选组件：zookeeper(3.4.6)、kafka(2.8.1)
+     * 3. RocketMQ
+     * - 必选组件：rocketmq(4.9.2)
+     * 4. Zookeeper
+     * - 必选组件：zookeeper(3.6.4)
+     */
+    @KsYunField(name = "Services", type = 2)
+    private List<String> ServicesList;
+
+    /**
+     * 项目 ID，参考「项目管理」，默认为 0
+     */
+    @KsYunField(name = "ProjectId")
+    private Integer ProjectId;
+
+    /**
+     * VPC 网络的 ID
+     */
+    @KsYunField(name = "VpcDomainId")
+    private String VpcDomainId;
+
+    /**
+     * 安全组的 ID
+     */
+    @KsYunField(name = "SecurityGroupId")
+    private String SecurityGroupId;
+
+    /**
+     * 节点组信息
+     */
+    @KsYunField(name = "InstanceGroups", type = 2)
+    private List<InstanceGroupsDto> InstanceGroupsList;
 
     @Data
     @ToString

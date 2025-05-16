@@ -1,10 +1,12 @@
 package ksyun.client.kce.addexistedinstances.v20190806;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname AddExistedInstancesRequest
@@ -52,6 +54,27 @@ public class AddExistedInstancesRequest {
              */
             @KsYunField(name = "DataDisk")
             private DataDiskDto DataDiskList;
+
+            @Data
+            @ToString
+            public static class DataDiskDto {
+                /**
+                 * 是否对数据盘格式化并挂载，默认值；true。若此字段填写false，则 FileSystem 和 MountTarget字段不生效
+                 */
+                @KsYunField(name = "AutoFormatAndMount")
+                private Boolean AutoFormatAndMount;
+                /**
+                 * 数据盘的文件系统，可选值：ext3，ext4，xfs，默认值ext4。若磁盘已有文件系统，则不进行处理，若没有文件系统，则按照用户的定义进行格式化，仅对第一块磁盘生效
+                 */
+                @KsYunField(name = "FileSystem")
+                private String FileSystem;
+                /**
+                 * 数据盘挂载点，并挂载，仅对第一块盘生效。
+                 */
+                @KsYunField(name = "MountTarget")
+                private String MountTarget;
+            }
+
             /**
              * 容器运行时，根据集群版本和需求选择
              * Kubernetes版本＜1.24时，有效值：
@@ -94,6 +117,17 @@ public class AddExistedInstancesRequest {
              */
             @KsYunField(name = "ExtraArg")
             private ExtraArgDto ExtraArgList;
+
+            @Data
+            @ToString
+            public static class ExtraArgDto {
+                /**
+                 * 用户自定义kubelet的参数
+                 */
+                @KsYunField(name = "Kubelet")
+                private List<Object> KubeletList;
+            }
+
             /**
              * 自定义容器日志采集文件大小，超出此大小日志将滚动写入下一文件，默认值为100m
              */
@@ -109,36 +143,6 @@ public class AddExistedInstancesRequest {
              */
             @KsYunField(name = "Taints")
             private List<Object> TaintsList;
-
-            @Data
-            @ToString
-            public static class DataDiskDto {
-                /**
-                 * 是否对数据盘格式化并挂载，默认值；true。若此字段填写false，则 FileSystem 和 MountTarget字段不生效
-                 */
-                @KsYunField(name = "AutoFormatAndMount")
-                private Boolean AutoFormatAndMount;
-                /**
-                 * 数据盘的文件系统，可选值：ext3，ext4，xfs，默认值ext4。若磁盘已有文件系统，则不进行处理，若没有文件系统，则按照用户的定义进行格式化，仅对第一块磁盘生效
-                 */
-                @KsYunField(name = "FileSystem")
-                private String FileSystem;
-                /**
-                 * 数据盘挂载点，并挂载，仅对第一块盘生效。
-                 */
-                @KsYunField(name = "MountTarget")
-                private String MountTarget;
-            }
-
-            @Data
-            @ToString
-            public static class ExtraArgDto {
-                /**
-                 * 用户自定义kubelet的参数
-                 */
-                @KsYunField(name = "Kubelet")
-                private List<Object> KubeletList;
-            }
         }
     }
 

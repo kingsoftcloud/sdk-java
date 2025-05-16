@@ -1,7 +1,12 @@
 package ksyun.client.kmr.getjobrun.v20240814;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname GetJobRunRequest

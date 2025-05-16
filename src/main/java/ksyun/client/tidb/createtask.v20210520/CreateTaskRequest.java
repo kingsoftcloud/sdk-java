@@ -1,10 +1,12 @@
 package ksyun.client.tidb.createtask.v20210520;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname CreateTaskRequest
@@ -58,13 +60,6 @@ public class CreateTaskRequest {
     @KsYunField(name = "TargetMySQL")
 
     private TargetMySQLDto TargetMySQLList;
-    /**
-     * 目标端拓展信息
-     * 若TargetType=KAFKA，根据需要填写
-     */
-    @KsYunField(name = "TargetKafka")
-
-    private TargetKafkaDto TargetKafkaList;
 
     @Data
     @ToString
@@ -92,6 +87,14 @@ public class CreateTaskRequest {
         @KsYunField(name = "MaxTxnRow")
         private Integer MaxTxnRow;
     }
+
+    /**
+     * 目标端拓展信息
+     * 若TargetType=KAFKA，根据需要填写
+     */
+    @KsYunField(name = "TargetKafka")
+
+    private TargetKafkaDto TargetKafkaList;
 
     @Data
     @ToString

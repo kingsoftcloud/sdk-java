@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname DescribeRoceEventResponse
-* @Description DescribeRoceEvent 返回体
-*/
+ * @Classname DescribeRoceEventResponse
+ * @Description DescribeRoceEvent 返回体
+ */
 @Data
 @ToString
 public class DescribeRoceEventResponse extends BaseResponseModel {

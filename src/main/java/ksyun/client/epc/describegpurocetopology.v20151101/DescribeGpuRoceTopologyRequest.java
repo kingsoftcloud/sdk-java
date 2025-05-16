@@ -9,13 +9,15 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname DescribeGpuRoceTopologyRequest
-* @Description 请求参数
-*/
+ * @Classname DescribeGpuRoceTopologyRequest
+ * @Description 请求参数
+ */
 @Data
-public class DescribeGpuRoceTopologyRequest{
-    /**Spine名称*/
-    @KsYunField(name="SpineName")
+public class DescribeGpuRoceTopologyRequest {
+    /**
+     * Spine名称
+     */
+    @KsYunField(name = "SpineName")
     private String SpineName;
 
 }

@@ -9,17 +9,21 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname CreateKeyRequest
-* @Description 请求参数
-*/
+ * @Classname CreateKeyRequest
+ * @Description 请求参数
+ */
 @Data
-public class CreateKeyRequest{
-    /**密钥名称*/
-    @KsYunField(name="KeyName")
+public class CreateKeyRequest {
+    /**
+     * 密钥名称
+     */
+    @KsYunField(name = "KeyName")
     private String KeyName;
 
-    /**描述*/
-    @KsYunField(name="Description")
+    /**
+     * 描述
+     */
+    @KsYunField(name = "Description")
     private String Description;
 
 }

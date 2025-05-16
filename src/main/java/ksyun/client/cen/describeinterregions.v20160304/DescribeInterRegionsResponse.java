@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname DescribeInterRegionsResponse
-* @Description DescribeInterRegions 返回体
-*/
+ * @Classname DescribeInterRegionsResponse
+ * @Description DescribeInterRegions 返回体
+ */
 @Data
 @ToString
 public class DescribeInterRegionsResponse extends BaseResponseModel {

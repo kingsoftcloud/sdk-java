@@ -29,7 +29,7 @@ public class DescribeBillSummaryByProjectRequest {
     /**
      * 成员账号Id
      */
-    @KsYunField(name="SubAccount")
+    @KsYunField(name = "SubAccount")
     private Integer SubAccount;
 
 }

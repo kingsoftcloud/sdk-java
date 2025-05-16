@@ -9,13 +9,15 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname DeletePrivateLinkServerRequest
-* @Description 请求参数
-*/
+ * @Classname DeletePrivateLinkServerRequest
+ * @Description 请求参数
+ */
 @Data
-public class DeletePrivateLinkServerRequest{
-    /**PrivateLinkServer的ID*/
-    @KsYunField(name="PrivateLinkServerId")
+public class DeletePrivateLinkServerRequest {
+    /**
+     * PrivateLinkServer的ID
+     */
+    @KsYunField(name = "PrivateLinkServerId")
     private String PrivateLinkServerId;
 
 }

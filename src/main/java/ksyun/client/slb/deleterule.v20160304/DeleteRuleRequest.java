@@ -9,13 +9,15 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname DeleteRuleRequest
-* @Description 请求参数
-*/
+ * @Classname DeleteRuleRequest
+ * @Description 请求参数
+ */
 @Data
-public class DeleteRuleRequest{
-    /**规则的ID*/
-    @KsYunField(name="RuleId")
+public class DeleteRuleRequest {
+    /**
+     * 规则的ID
+     */
+    @KsYunField(name = "RuleId")
     private String RuleId;
 
 }

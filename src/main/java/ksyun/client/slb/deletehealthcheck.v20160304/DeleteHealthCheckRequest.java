@@ -9,13 +9,15 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname DeleteHealthCheckRequest
-* @Description 请求参数
-*/
+ * @Classname DeleteHealthCheckRequest
+ * @Description 请求参数
+ */
 @Data
-public class DeleteHealthCheckRequest{
-    /**健康检查的ID*/
-    @KsYunField(name="HealthCheckId")
+public class DeleteHealthCheckRequest {
+    /**
+     * 健康检查的ID
+     */
+    @KsYunField(name = "HealthCheckId")
     private String HealthCheckId;
 
 }

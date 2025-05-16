@@ -5,6 +5,8 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.Set;
+
 /**
  * @Classname ModifyScalingGroupResponse
  * @Description ModifyScalingGroup 返回体

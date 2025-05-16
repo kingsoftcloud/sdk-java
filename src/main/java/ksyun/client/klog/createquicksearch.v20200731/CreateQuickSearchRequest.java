@@ -1,7 +1,12 @@
 package ksyun.client.klog.createquicksearch.v20200731;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname CreateQuickSearchRequest
@@ -28,6 +33,12 @@ public class CreateQuickSearchRequest {
     private String QuickSearchName;
 
     /**
+     * 查询语句
+     */
+    @KsYunField(name = "Query")
+    private String Query;
+
+    /**
      * 快速查询的备注
      */
     @KsYunField(name = "Description")
@@ -35,14 +46,20 @@ public class CreateQuickSearchRequest {
 
     /**
      * 查询数据的时间范围
+     * {
+     * "from": 1737388800000,
+     * "to": 1737444861000,
+     * "key": "h",
+     * "value": -24,
+     * "start": 21,
+     * "startKey": "m",
+     * "end": 2,
+     * "endKey": "s",
+     * "tab": "Absolute|Relative",
+     * "label": "近15分钟"
+     * }
      */
     @KsYunField(name = "TimeRange")
     private String TimeRange;
-
-    /**
-     * 查询语句
-     */
-    @KsYunField(name = "Query")
-    private String Query;
 
 }

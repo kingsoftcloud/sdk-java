@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname DescribeAlbListenerCertGroupsResponse
-* @Description DescribeAlbListenerCertGroups 返回体
-*/
+ * @Classname DescribeAlbListenerCertGroupsResponse
+ * @Description DescribeAlbListenerCertGroups 返回体
+ */
 @Data
 @ToString
 public class DescribeAlbListenerCertGroupsResponse extends BaseResponseModel {

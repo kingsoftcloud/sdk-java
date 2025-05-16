@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname DeleteCenBandWidthPackageResponse
-* @Description DeleteCenBandWidthPackage 返回体
-*/
+ * @Classname DeleteCenBandWidthPackageResponse
+ * @Description DeleteCenBandWidthPackage 返回体
+ */
 @Data
 @ToString
 public class DeleteCenBandWidthPackageResponse extends BaseResponseModel {

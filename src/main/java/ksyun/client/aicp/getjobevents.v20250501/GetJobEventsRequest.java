@@ -24,11 +24,13 @@ public class GetJobEventsRequest {
      * 任务Task ID
      * 若不传taskId则查询任务最新一次task的事件
      */
-    @KsYunField(name="task_id")
+    @KsYunField(name = "task_id")
     private Integer Task_id;
 
-    /**空间ID*/
-    @KsYunField(name="space_id")
+    /**
+     * 空间ID
+     */
+    @KsYunField(name = "space_id")
     private Integer Space_id;
 
 }

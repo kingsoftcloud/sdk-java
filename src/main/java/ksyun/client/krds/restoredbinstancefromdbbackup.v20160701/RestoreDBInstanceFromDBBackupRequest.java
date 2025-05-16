@@ -1,7 +1,12 @@
 package ksyun.client.krds.restoredbinstancefromdbbackup.v20160701;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname RestoreDBInstanceFromDBBackupRequest

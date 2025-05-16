@@ -9,13 +9,15 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname DeleteCenRequest
-* @Description 请求参数
-*/
+ * @Classname DeleteCenRequest
+ * @Description 请求参数
+ */
 @Data
-public class DeleteCenRequest{
-    /**云企业网的ID*/
-    @KsYunField(name="CenId")
+public class DeleteCenRequest {
+    /**
+     * 云企业网的ID
+     */
+    @KsYunField(name = "CenId")
     private String CenId;
 
 }

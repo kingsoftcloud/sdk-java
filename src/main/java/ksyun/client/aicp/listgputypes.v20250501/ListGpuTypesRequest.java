@@ -23,7 +23,7 @@ public class ListGpuTypesRequest {
     /**
      * 每页数据大小
      */
-    @KsYunField(name="page_size")
+    @KsYunField(name = "page_size")
     private Integer Page_size;
 
 }

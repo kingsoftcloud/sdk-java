@@ -1,10 +1,12 @@
 package ksyun.client.kec.describeprice.v20160304;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname DescribePriceRequest
@@ -53,16 +55,6 @@ public class DescribePriceRequest {
      */
     @KsYunField(name = "DataDisk")
     private List<DataDiskDto> DataDiskList;
-    /**
-     * 最大实例数。
-     */
-    @KsYunField(name = "MaxCount")
-    private Integer MaxCount;
-    /**
-     * 不能给默认值，不传默认按价格体系配置systemDisk属性中第一个创建
-     */
-    @KsYunField(name = "SystemDisk.DiskType")
-    private String SystemDiskDiskType;
 
     @Data
     @ToString
@@ -78,5 +70,17 @@ public class DescribePriceRequest {
         @KsYunField(name = "Size")
         private Integer Size;
     }
+
+    /**
+     * 最大实例数。
+     */
+    @KsYunField(name = "MaxCount")
+    private Integer MaxCount;
+
+    /**
+     * 不能给默认值，不传默认按价格体系配置systemDisk属性中第一个创建
+     */
+    @KsYunField(name = "SystemDisk.DiskType")
+    private String SystemDiskDiskType;
 
 }

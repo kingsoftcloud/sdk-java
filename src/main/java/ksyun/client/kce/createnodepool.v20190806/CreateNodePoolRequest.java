@@ -1,10 +1,12 @@
 package ksyun.client.kce.createnodepool.v20190806;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname CreateNodePoolRequest
@@ -36,37 +38,6 @@ public class CreateNodePoolRequest {
     @KsYunField(name = "NodeTemplate")
 
     private NodeTemplateDto NodeTemplateList;
-    /**
-     * 节点标签
-     */
-    @KsYunField(name = "Label")
-    private List<LabelDto> LabelList;
-    /**
-     * 节点污点
-     */
-    @KsYunField(name = "Taint")
-    private List<TaintDto> TaintList;
-    /**
-     * 最小节点数量，即为最小能缩容的实例数量，范围[0-50]，不大于maxSize
-     */
-    @KsYunField(name = "MinSize")
-    private Integer MinSize;
-    /**
-     * 最大节点数量，即为最大能扩容的实例数量，范围[0-50]，不小于minSize
-     */
-    @KsYunField(name = "MaxSize")
-    private Integer MaxSize;
-    /**
-     * 期望节点数量，即节点池刚创建时的实例数量，必须在最小节点数量与最大节点数量之间
-     */
-    @KsYunField(name = "DesiredCapacity")
-    private Integer DesiredCapacity;
-    /**
-     * 开启删除保护
-     * 默认值：True
-     */
-    @KsYunField(name = "EnableDelProtection")
-    private Boolean EnableDelProtection;
 
     @Data
     @ToString
@@ -90,6 +61,22 @@ public class CreateNodePoolRequest {
          */
         @KsYunField(name = "SystemDisk")
         private SystemDiskDto SystemDiskList;
+
+        @Data
+        @ToString
+        public static class SystemDiskDto {
+            /**
+             * 系统盘类型
+             */
+            @KsYunField(name = "DiskType")
+            private String DiskType;
+            /**
+             * 系统盘大小
+             */
+            @KsYunField(name = "DiskSize")
+            private Integer DiskSize;
+        }
+
         /**
          * 本地数据盘大小
          */
@@ -145,6 +132,95 @@ public class CreateNodePoolRequest {
          */
         @KsYunField(name = "AdvancedSetting")
         private AdvancedSettingDto AdvancedSettingList;
+
+        @Data
+        @ToString
+        public static class AdvancedSettingDto {
+            /**
+             * 数据盘挂载设置，仅针对于第一块数据盘生效
+             */
+            @KsYunField(name = "DataDisk")
+            private DataDiskDto DataDiskList;
+
+            @Data
+            @ToString
+            public static class DataDiskDto {
+                /**
+                 * 是否对数据盘格式化并挂载，默认值；true。若此字段填写false，则 FileSystem 和 MountTarget字段不生效
+                 */
+                @KsYunField(name = "AutoFormatAndMount")
+                private Boolean AutoFormatAndMount;
+                /**
+                 * 数据盘的文件系统，可选值：ext3，ext4，xfs，默认值ext4。若磁盘已有文件系统，则不进行处理，若没有文件系统，则按照用户的定义进行格式化，仅对第一块磁盘生效
+                 */
+                @KsYunField(name = "FileSystem")
+                private String FileSystem;
+                /**
+                 * 数据盘挂载点，并挂载，仅对第一块盘生效。
+                 */
+                @KsYunField(name = "MountTarget")
+                private String MountTarget;
+            }
+
+            /**
+             * 容器运行时，根据集群版本和需求选择
+             * Kubernetes版本＜1.24时，有效值：
+             * - docker
+             * - containerd
+             * Kubernetes版本≥1.24时，有效值：
+             * - contained
+             * 默认值：docker
+             */
+            @KsYunField(name = "ContainerRuntime")
+            private String ContainerRuntime;
+            /**
+             * 容器的存储路径，不填写的话默认为/data/container
+             */
+            @KsYunField(name = "ContainerPath")
+            private String ContainerPath;
+            /**
+             * base64 编码的用户脚本, 此脚本会在 节点上k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑,脚本和生成的日志的文件可在录/usr/local/ksyun/kce/userscript路径查看
+             */
+            @KsYunField(name = "UserScript")
+            private String UserScript;
+            /**
+             * base64 编码的用户脚本, 此脚本会在节点上 k8s 组件运行前执行, 需要用户保证脚本的可重入及重试逻辑,脚本和生成的日志的文件可在录/usr/local/ksyun/kce/pre_userscript路径查看
+             */
+            @KsYunField(name = "PreUserScript")
+            private String PreUserScript;
+            /**
+             * 节点加入集群后是否可以正常调度，默认值：true
+             */
+            @KsYunField(name = "Schedulable")
+            private Boolean Schedulable;
+            /**
+             * 自定义节点上k8s组件的参数
+             */
+            @KsYunField(name = "ExtraArg")
+            private ExtraArgDto ExtraArgList;
+
+            @Data
+            @ToString
+            public static class ExtraArgDto {
+                /**
+                 * 用户自定义kubelet的参数
+                 */
+                @KsYunField(name = "Kubelet")
+                private List<Object> KubeletList;
+            }
+
+            /**
+             * 自定义容器日志采集文件大小，超出此大小日志将滚动写入下一文件，默认值为100m
+             */
+            @KsYunField(name = "ContainerLogMaxSize")
+            private Integer ContainerLogMaxSize;
+            /**
+             * 自定义容器日志采集文件最大数量，默认值为10个
+             */
+            @KsYunField(name = "ContainerLogMaxFiles")
+            private Integer ContainerLogMaxFiles;
+        }
+
         /**
          * 云盘标签，N取值范围[1-10]
          */
@@ -195,108 +271,13 @@ public class CreateNodePoolRequest {
          */
         @KsYunField(name = "DeleteEbsTag")
         private Boolean DeleteEbsTag;
-
-        @Data
-        @ToString
-        public static class SystemDiskDto {
-            /**
-             * 系统盘类型
-             */
-            @KsYunField(name = "DiskType")
-            private String DiskType;
-            /**
-             * 系统盘大小
-             */
-            @KsYunField(name = "DiskSize")
-            private Integer DiskSize;
-        }
-
-        @Data
-        @ToString
-        public static class AdvancedSettingDto {
-            /**
-             * 数据盘挂载设置，仅针对于第一块数据盘生效
-             */
-            @KsYunField(name = "DataDisk")
-            private DataDiskDto DataDiskList;
-            /**
-             * 容器运行时，根据集群版本和需求选择
-             * Kubernetes版本＜1.24时，有效值：
-             * - docker
-             * - containerd
-             * Kubernetes版本≥1.24时，有效值：
-             * - contained
-             * 默认值：docker
-             */
-            @KsYunField(name = "ContainerRuntime")
-            private String ContainerRuntime;
-            /**
-             * 容器的存储路径，不填写的话默认为/data/container
-             */
-            @KsYunField(name = "ContainerPath")
-            private String ContainerPath;
-            /**
-             * base64 编码的用户脚本, 此脚本会在 节点上k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑,脚本和生成的日志的文件可在录/usr/local/ksyun/kce/userscript路径查看
-             */
-            @KsYunField(name = "UserScript")
-            private String UserScript;
-            /**
-             * base64 编码的用户脚本, 此脚本会在节点上 k8s 组件运行前执行, 需要用户保证脚本的可重入及重试逻辑,脚本和生成的日志的文件可在录/usr/local/ksyun/kce/pre_userscript路径查看
-             */
-            @KsYunField(name = "PreUserScript")
-            private String PreUserScript;
-            /**
-             * 节点加入集群后是否可以正常调度，默认值：true
-             */
-            @KsYunField(name = "Schedulable")
-            private Boolean Schedulable;
-            /**
-             * 自定义节点上k8s组件的参数
-             */
-            @KsYunField(name = "ExtraArg")
-            private ExtraArgDto ExtraArgList;
-            /**
-             * 自定义容器日志采集文件大小，超出此大小日志将滚动写入下一文件，默认值为100m
-             */
-            @KsYunField(name = "ContainerLogMaxSize")
-            private Integer ContainerLogMaxSize;
-            /**
-             * 自定义容器日志采集文件最大数量，默认值为10个
-             */
-            @KsYunField(name = "ContainerLogMaxFiles")
-            private Integer ContainerLogMaxFiles;
-
-            @Data
-            @ToString
-            public static class DataDiskDto {
-                /**
-                 * 是否对数据盘格式化并挂载，默认值；true。若此字段填写false，则 FileSystem 和 MountTarget字段不生效
-                 */
-                @KsYunField(name = "AutoFormatAndMount")
-                private Boolean AutoFormatAndMount;
-                /**
-                 * 数据盘的文件系统，可选值：ext3，ext4，xfs，默认值ext4。若磁盘已有文件系统，则不进行处理，若没有文件系统，则按照用户的定义进行格式化，仅对第一块磁盘生效
-                 */
-                @KsYunField(name = "FileSystem")
-                private String FileSystem;
-                /**
-                 * 数据盘挂载点，并挂载，仅对第一块盘生效。
-                 */
-                @KsYunField(name = "MountTarget")
-                private String MountTarget;
-            }
-
-            @Data
-            @ToString
-            public static class ExtraArgDto {
-                /**
-                 * 用户自定义kubelet的参数
-                 */
-                @KsYunField(name = "Kubelet")
-                private List<Object> KubeletList;
-            }
-        }
     }
+
+    /**
+     * 节点标签
+     */
+    @KsYunField(name = "Label")
+    private List<LabelDto> LabelList;
 
     @Data
     @ToString
@@ -312,6 +293,12 @@ public class CreateNodePoolRequest {
         @KsYunField(name = "Value")
         private String Value;
     }
+
+    /**
+     * 节点污点
+     */
+    @KsYunField(name = "Taint")
+    private List<TaintDto> TaintList;
 
     @Data
     @ToString
@@ -332,5 +319,30 @@ public class CreateNodePoolRequest {
         @KsYunField(name = "Effect")
         private String Effect;
     }
+
+    /**
+     * 最小节点数量，即为最小能缩容的实例数量，范围[0-50]，不大于maxSize
+     */
+    @KsYunField(name = "MinSize")
+    private Integer MinSize;
+
+    /**
+     * 最大节点数量，即为最大能扩容的实例数量，范围[0-50]，不小于minSize
+     */
+    @KsYunField(name = "MaxSize")
+    private Integer MaxSize;
+
+    /**
+     * 期望节点数量，即节点池刚创建时的实例数量，必须在最小节点数量与最大节点数量之间
+     */
+    @KsYunField(name = "DesiredCapacity")
+    private Integer DesiredCapacity;
+
+    /**
+     * 开启删除保护
+     * 默认值：True
+     */
+    @KsYunField(name = "EnableDelProtection")
+    private Boolean EnableDelProtection;
 
 }

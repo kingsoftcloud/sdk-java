@@ -1,10 +1,12 @@
 package ksyun.client.kce.addclusterepcinstances.v20190806;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname AddClusterEpcInstancesRequest
@@ -84,6 +86,17 @@ public class AddClusterEpcInstancesRequest {
          */
         @KsYunField(name = "ExtraArg")
         private ExtraArgDto ExtraArgList;
+
+        @Data
+        @ToString
+        public static class ExtraArgDto {
+            /**
+             * 用户自定义kubelet的参数
+             */
+            @KsYunField(name = "Kubelet")
+            private List<Object> KubeletList;
+        }
+
         /**
          * 自定义容器日志采集文件大小，超出此大小日志将滚动写入下一文件，默认值为100m
          */
@@ -99,15 +112,5 @@ public class AddClusterEpcInstancesRequest {
          */
         @KsYunField(name = "Taints")
         private List<Object> TaintsList;
-
-        @Data
-        @ToString
-        public static class ExtraArgDto {
-            /**
-             * 用户自定义kubelet的参数
-             */
-            @KsYunField(name = "Kubelet")
-            private List<Object> KubeletList;
-        }
     }
 }

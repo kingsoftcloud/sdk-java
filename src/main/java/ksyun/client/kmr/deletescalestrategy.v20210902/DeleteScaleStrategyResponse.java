@@ -5,6 +5,8 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.Set;
+
 /**
  * @Classname DeleteScaleStrategyResponse
  * @Description DeleteScaleStrategy 返回体

@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname AddAlbRuleResponse
-* @Description AddAlbRule 返回体
-*/
+ * @Classname AddAlbRuleResponse
+ * @Description AddAlbRule 返回体
+ */
 @Data
 @ToString
 public class AddAlbRuleResponse extends BaseResponseModel {

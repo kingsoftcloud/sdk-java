@@ -1,9 +1,12 @@
 package ksyun.client.kce2.modifynode.v20230101;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname ModifyNodeRequest
@@ -18,27 +21,33 @@ public class ModifyNodeRequest {
     private String ClusteId;
 
     /**
-     * 集群名称
+     * 节点id，同实例 id必须二选一
      */
-    @KsYunField(name = "ClusterName")
-    private String ClusterName;
+    @KsYunField(name = "KceNodeId")
+    private String KceNodeId;
 
     /**
-     * 节点ID
+     * 实例id ，同节点 id必须二选一
      */
-    @KsYunField(name = "NodeId")
-    private String NodeId;
-
-    /**
-     * 节点名称
-     */
-    @KsYunField(name = "NodeName")
-    private String NodeName;
+    @KsYunField(name = "InstanceId")
+    private String InstanceId;
 
     /**
      * 组件列表
      */
     @KsYunField(name = "Components", type = 2)
-    private List<String> ComponentsList;
+    private List<ComponentsDto> ComponentsList;
+
+    @Data
+    @ToString
+    public static class ComponentsDto {
+        /**
+         * 节点需要修改的组件
+         * • APISERVER
+         * • SCHEDULER
+         * • CONTROLLERMANAGER
+         */
+        private String Type;
+    }
 
 }

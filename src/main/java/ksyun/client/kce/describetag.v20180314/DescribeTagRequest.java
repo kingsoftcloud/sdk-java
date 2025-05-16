@@ -1,10 +1,12 @@
 package ksyun.client.kce.describetag.v20180314;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname DescribeTagRequest

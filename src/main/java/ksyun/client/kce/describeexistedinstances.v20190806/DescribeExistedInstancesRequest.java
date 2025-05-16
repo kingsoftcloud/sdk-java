@@ -1,10 +1,12 @@
 package ksyun.client.kce.describeexistedinstances.v20190806;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname DescribeExistedInstancesRequest
@@ -39,11 +41,6 @@ public class DescribeExistedInstancesRequest {
     /***/
     @KsYunField(name = "Filter")
     private List<FilterDto> FilterList;
-    /**
-     * 模糊匹配，可匹配如下字段：<br>服务器名称(InstanceName)、主网卡私有IP（PrivateIpAddress）。
-     */
-    @KsYunField(name = "Search")
-    private String Search;
 
     @Data
     @ToString
@@ -61,5 +58,11 @@ public class DescribeExistedInstancesRequest {
         @KsYunField(name = "Value")
         private List<String> ValueList;
     }
+
+    /**
+     * 模糊匹配，可匹配如下字段：<br>服务器名称(InstanceName)、主网卡私有IP（PrivateIpAddress）。
+     */
+    @KsYunField(name = "Search")
+    private String Search;
 
 }

@@ -1,10 +1,12 @@
 package ksyun.client.kce.createcluster.v20201231;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname CreateClusterRequest
@@ -122,33 +124,6 @@ public class CreateClusterRequest {
      */
     @KsYunField(name = "ManagedClusterMultiMaster")
     private List<ManagedClusterMultiMasterDto> ManagedClusterMultiMasterList;
-    /**
-     * 新建节点创建集群，定义节点角色和配置，支持云服务器机和专属云服务器。
-     */
-    @KsYunField(name = "InstanceForNode")
-    private List<InstanceForNodeDto> InstanceForNodeList;
-    /**
-     * 使用已有的云物理机创建集群，定义节点角色和配置
-     */
-    @KsYunField(name = "ExistedInstanceForEpc")
-    private List<ExistedInstanceForEpcDto> ExistedInstanceForEpcList;
-    /**
-     * 不推荐使用接口进行安装，集群会安装默认的组件，如需安装其它增强组件，请在集群创建完成后，在控制台选择安装。
-     */
-    @KsYunField(name = "Component")
-    private List<ComponentDto> ComponentList;
-    /**
-     * 控制面日志采集,当用户选择的是独立部署集群时，此选项填写无效；当选择是托管时，可选
-     */
-    @KsYunField(name = "ControlPlaneLog")
-
-    private ControlPlaneLogDto ControlPlaneLogList;
-    /**
-     * 开启删除保护
-     * 默认值：True
-     */
-    @KsYunField(name = "EnableDelProtection")
-    private Boolean EnableDelProtection;
 
     @Data
     @ToString
@@ -164,6 +139,12 @@ public class CreateClusterRequest {
         @KsYunField(name = "SecurityGroupId")
         private String SecurityGroupId;
     }
+
+    /**
+     * 新建节点创建集群，定义节点角色和配置，支持云服务器机和专属云服务器。
+     */
+    @KsYunField(name = "InstanceForNode")
+    private List<InstanceForNodeDto> InstanceForNodeList;
 
     @Data
     @ToString
@@ -189,6 +170,12 @@ public class CreateClusterRequest {
         @KsYunField(name = "NodeConfig")
         private List<Object> NodeConfigList;
     }
+
+    /**
+     * 使用已有的云物理机创建集群，定义节点角色和配置
+     */
+    @KsYunField(name = "ExistedInstanceForEpc")
+    private List<ExistedInstanceForEpcDto> ExistedInstanceForEpcList;
 
     @Data
     @ToString
@@ -217,6 +204,12 @@ public class CreateClusterRequest {
         private List<Object> EpcConfigList;
     }
 
+    /**
+     * 不推荐使用接口进行安装，集群会安装默认的组件，如需安装其它增强组件，请在集群创建完成后，在控制台选择安装。
+     */
+    @KsYunField(name = "Component")
+    private List<ComponentDto> ComponentList;
+
     @Data
     @ToString
     public static class ComponentDto {
@@ -231,6 +224,13 @@ public class CreateClusterRequest {
         @KsYunField(name = "Config")
         private String Config;
     }
+
+    /**
+     * 控制面日志采集,当用户选择的是独立部署集群时，此选项填写无效；当选择是托管时，可选
+     */
+    @KsYunField(name = "ControlPlaneLog")
+
+    private ControlPlaneLogDto ControlPlaneLogList;
 
     @Data
     @ToString
@@ -261,5 +261,12 @@ public class CreateClusterRequest {
         @KsYunField(name = "Items")
         private String Items;
     }
+
+    /**
+     * 开启删除保护
+     * 默认值：True
+     */
+    @KsYunField(name = "EnableDelProtection")
+    private Boolean EnableDelProtection;
 
 }

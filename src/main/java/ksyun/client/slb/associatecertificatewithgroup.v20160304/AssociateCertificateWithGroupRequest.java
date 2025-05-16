@@ -9,17 +9,21 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname AssociateCertificateWithGroupRequest
-* @Description 请求参数
-*/
+ * @Classname AssociateCertificateWithGroupRequest
+ * @Description 请求参数
+ */
 @Data
-public class AssociateCertificateWithGroupRequest{
-    /**证书组的ID*/
-    @KsYunField(name="AlbListenerCertGroupId")
+public class AssociateCertificateWithGroupRequest {
+    /**
+     * 证书组的ID
+     */
+    @KsYunField(name = "AlbListenerCertGroupId")
     private String AlbListenerCertGroupId;
 
-    /**证书的ID*/
-    @KsYunField(name="CertificateId")
+    /**
+     * 证书的ID
+     */
+    @KsYunField(name = "CertificateId")
     private String CertificateId;
 
 }

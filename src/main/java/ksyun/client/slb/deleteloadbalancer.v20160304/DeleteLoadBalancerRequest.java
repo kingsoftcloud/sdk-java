@@ -9,13 +9,15 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname DeleteLoadBalancerRequest
-* @Description 请求参数
-*/
+ * @Classname DeleteLoadBalancerRequest
+ * @Description 请求参数
+ */
 @Data
-public class DeleteLoadBalancerRequest{
-    /**负载均衡的ID*/
-    @KsYunField(name="LoadBalancerId")
+public class DeleteLoadBalancerRequest {
+    /**
+     * 负载均衡的ID
+     */
+    @KsYunField(name = "LoadBalancerId")
     private String LoadBalancerId;
 
 }

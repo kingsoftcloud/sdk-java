@@ -1,10 +1,12 @@
 package ksyun.client.kce.describeclusterinstance.v20190806;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname DescribeClusterInstanceRequest
@@ -33,11 +35,6 @@ public class DescribeClusterInstanceRequest {
     /***/
     @KsYunField(name = "Filter")
     private List<FilterDto> FilterList;
-    /**
-     * 模糊匹配，可以匹配如下字段：<br>主网卡私有IP（PrivateIpAddress）。
-     */
-    @KsYunField(name = "Search")
-    private String Search;
 
     @Data
     @ToString
@@ -58,5 +55,11 @@ public class DescribeClusterInstanceRequest {
         @KsYunField(name = "Value")
         private List<String> ValueList;
     }
+
+    /**
+     * 模糊匹配，可以匹配如下字段：<br>主网卡私有IP（PrivateIpAddress）。
+     */
+    @KsYunField(name = "Search")
+    private String Search;
 
 }

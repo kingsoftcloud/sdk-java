@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname DescribeEpcManagementsResponse
-* @Description DescribeEpcManagements 返回体
-*/
+ * @Classname DescribeEpcManagementsResponse
+ * @Description DescribeEpcManagements 返回体
+ */
 @Data
 @ToString
 public class DescribeEpcManagementsResponse extends BaseResponseModel {

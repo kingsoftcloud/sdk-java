@@ -9,17 +9,21 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname ModifyBackendServerGroupRequest
-* @Description 请求参数
-*/
+ * @Classname ModifyBackendServerGroupRequest
+ * @Description 请求参数
+ */
 @Data
-public class ModifyBackendServerGroupRequest{
-    /**服务器组的ID*/
-    @KsYunField(name="BackendServerGroupId")
+public class ModifyBackendServerGroupRequest {
+    /**
+     * 服务器组的ID
+     */
+    @KsYunField(name = "BackendServerGroupId")
     private String BackendServerGroupId;
 
-    /**服务器组的名称*/
-    @KsYunField(name="BackendServerGroupName")
+    /**
+     * 服务器组的名称
+     */
+    @KsYunField(name = "BackendServerGroupName")
     private String BackendServerGroupName;
 
 }

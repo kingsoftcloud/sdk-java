@@ -1,7 +1,12 @@
 package ksyun.client.resourcemanager.updateaccount.v20210320;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname UpdateAccountRequest

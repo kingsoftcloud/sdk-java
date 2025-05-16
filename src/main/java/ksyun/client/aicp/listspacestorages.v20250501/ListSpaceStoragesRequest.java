@@ -33,8 +33,10 @@ public class ListSpaceStoragesRequest {
     @KsYunField(name = "page_index")
     private Integer Page_index;
 
-    /**每页条数*/
-    @KsYunField(name="page_size")
+    /**
+     * 每页条数
+     */
+    @KsYunField(name = "page_size")
     private Integer Page_size;
 
 }

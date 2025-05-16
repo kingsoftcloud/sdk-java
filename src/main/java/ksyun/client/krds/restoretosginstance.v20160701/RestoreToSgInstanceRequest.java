@@ -1,10 +1,12 @@
 package ksyun.client.krds.restoretosginstance.v20160701;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname RestoreToSgInstanceRequest
@@ -35,11 +37,6 @@ public class RestoreToSgInstanceRequest {
      */
     @KsYunField(name = "SrcDatabases")
     private List<SrcDatabasesDto> SrcDatabasesList;
-    /**
-     * 目标		[{<br>"DatabaseName": "wang",<br>"WholeDatabase":"True",<br>"TableNames": [<br> "li"]<br> }]
-     */
-    @KsYunField(name = "DstDatabases")
-    private List<DstDatabasesDto> DstDatabasesList;
 
     @Data
     @ToString
@@ -60,6 +57,12 @@ public class RestoreToSgInstanceRequest {
         @KsYunField(name = "TableNames")
         private List<String> TableNamesList;
     }
+
+    /**
+     * 目标		[{<br>"DatabaseName": "wang",<br>"WholeDatabase":"True",<br>"TableNames": [<br> "li"]<br> }]
+     */
+    @KsYunField(name = "DstDatabases")
+    private List<DstDatabasesDto> DstDatabasesList;
 
     @Data
     @ToString

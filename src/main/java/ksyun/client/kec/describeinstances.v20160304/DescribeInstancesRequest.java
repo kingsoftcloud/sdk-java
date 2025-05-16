@@ -1,10 +1,12 @@
 package ksyun.client.kec.describeinstances.v20160304;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname DescribeInstancesRequest
@@ -47,18 +49,6 @@ public class DescribeInstancesRequest {
      */
     @KsYunField(name = "Filter")
     private List<FilterDto> FilterList;
-    /**
-     * 筛选器
-     * 支持如下筛选器名称：<br>InstanceName –主机名称<br>CreationDate –创建时间<br>PrivateIpAddress - 主机内网IP（主网卡）
-     */
-    @KsYunField(name = "Sort")
-    private String Sort;
-    /**
-     * 搜索条件，模糊匹配
-     * 支持字段：实例名（InstanceName）、主网卡私有IP地址（PrivateIpAddress）
-     */
-    @KsYunField(name = "Search")
-    private String Search;
 
     @Data
     @ToString
@@ -74,5 +64,19 @@ public class DescribeInstancesRequest {
         @KsYunField(name = "Name")
         private List<String> NameList;
     }
+
+    /**
+     * 筛选器
+     * 支持如下筛选器名称：<br>InstanceName –主机名称<br>CreationDate –创建时间<br>PrivateIpAddress - 主机内网IP（主网卡）
+     */
+    @KsYunField(name = "Sort")
+    private String Sort;
+
+    /**
+     * 搜索条件，模糊匹配
+     * 支持字段：实例名（InstanceName）、主网卡私有IP地址（PrivateIpAddress）
+     */
+    @KsYunField(name = "Search")
+    private String Search;
 
 }

@@ -31,8 +31,8 @@ public class DescribeEpcStocksRequest {
         @KsYunField(name = "Name")
         private String Name;
         /***/
-        @KsYunField(name="Value")
-                private List<String> ValueList;
+        @KsYunField(name = "Value")
+        private List<String> ValueList;
     }
 
 }

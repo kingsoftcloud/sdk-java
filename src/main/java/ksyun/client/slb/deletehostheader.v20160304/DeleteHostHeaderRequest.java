@@ -9,13 +9,15 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname DeleteHostHeaderRequest
-* @Description 请求参数
-*/
+ * @Classname DeleteHostHeaderRequest
+ * @Description 请求参数
+ */
 @Data
-public class DeleteHostHeaderRequest{
-    /**域名的ID*/
-    @KsYunField(name="HostHeaderId")
+public class DeleteHostHeaderRequest {
+    /**
+     * 域名的ID
+     */
+    @KsYunField(name = "HostHeaderId")
     private String HostHeaderId;
 
 }

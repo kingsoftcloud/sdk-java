@@ -9,17 +9,21 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname SetAlbDeleteProtectionRequest
-* @Description 请求参数
-*/
+ * @Classname SetAlbDeleteProtectionRequest
+ * @Description 请求参数
+ */
 @Data
-public class SetAlbDeleteProtectionRequest{
-    /**alb负载均衡id*/
-    @KsYunField(name="albId")
+public class SetAlbDeleteProtectionRequest {
+    /**
+     * alb负载均衡id
+     */
+    @KsYunField(name = "albId")
     private String AlbId;
 
-    /**删除保护on/off*/
-    @KsYunField(name="deleteProtection")
+    /**
+     * 删除保护on/off
+     */
+    @KsYunField(name = "deleteProtection")
     private String DeleteProtection;
 
 }

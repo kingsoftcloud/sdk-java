@@ -1,7 +1,12 @@
 package ksyun.client.ked.updatelabel.v20250501;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname UpdateLabelRequest

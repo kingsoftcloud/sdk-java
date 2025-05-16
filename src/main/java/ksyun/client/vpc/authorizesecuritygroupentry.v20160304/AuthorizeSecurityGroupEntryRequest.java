@@ -1,7 +1,12 @@
 package ksyun.client.vpc.authorizesecuritygroupentry.v20160304;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname AuthorizeSecurityGroupEntryRequest
@@ -60,19 +65,25 @@ public class AuthorizeSecurityGroupEntryRequest {
     /**
      * TCP或UDP协议的端口规则结束端口
      */
-    @KsYunField(name="PortRangeTo")
+    @KsYunField(name = "PortRangeTo")
     private Integer PortRangeTo;
 
-    /**安全组规则标签*/
+    /**
+     * 安全组规则标签
+     */
     @KsYunField(name = "RuleTag")
     private String RuleTag;
 
-    /**优先级*/
-    @KsYunField(name="Priority")
+    /**
+     * 优先级
+     */
+    @KsYunField(name = "Priority")
     private Integer Priority;
 
-    /**访问权限*/
-    @KsYunField(name="Policy")
+    /**
+     * 访问权限
+     */
+    @KsYunField(name = "Policy")
     private String Policy;
 
 }

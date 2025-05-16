@@ -1,10 +1,12 @@
 package ksyun.client.krds.createsecuritygroup.v20160701;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname CreateSecurityGroupRequest
@@ -23,16 +25,6 @@ public class CreateSecurityGroupRequest {
      */
     @KsYunField(name = "SecurityGroupRule")
     private List<SecurityGroupRuleDto> SecurityGroupRuleList;
-    /**
-     * 实例id
-     */
-    @KsYunField(name = "DBInstanceIdentifier")
-    private String DBInstanceIdentifier;
-    /**
-     * 安全组描述
-     */
-    @KsYunField(name = "SecurityGroupDescription")
-    private String SecurityGroupDescription;
 
     @Data
     @ToString
@@ -48,5 +40,17 @@ public class CreateSecurityGroupRequest {
         @KsYunField(name = "SecurityGroupRuleName")
         private String SecurityGroupRuleName;
     }
+
+    /**
+     * 实例id
+     */
+    @KsYunField(name = "DBInstanceIdentifier")
+    private String DBInstanceIdentifier;
+
+    /**
+     * 安全组描述
+     */
+    @KsYunField(name = "SecurityGroupDescription")
+    private String SecurityGroupDescription;
 
 }

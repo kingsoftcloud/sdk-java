@@ -1,10 +1,12 @@
 package ksyun.client.sqlserver.restoretocurinstance.v20190425;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname RestoreToCurInstanceRequest
@@ -42,18 +44,6 @@ public class RestoreToCurInstanceRequest {
      */
     @KsYunField(name = "SrcDatabases")
     private List<SrcDatabasesDto> SrcDatabasesList;
-    /**
-     * ```json
-     * 目标 [{
-     * “DatabaseName”: “wang”,
-     * “WholeDatabase”:“True”,
-     * “TableNames”: [
-     * “li”]
-     * }]
-     * ```
-     */
-    @KsYunField(name = "DstDatabases")
-    private List<DstDatabasesDto> DstDatabasesList;
 
     @Data
     @ToString
@@ -74,6 +64,19 @@ public class RestoreToCurInstanceRequest {
         @KsYunField(name = "TableNames")
         private List<String> TableNamesList;
     }
+
+    /**
+     * ```json
+     * 目标 [{
+     * “DatabaseName”: “wang”,
+     * “WholeDatabase”:“True”,
+     * “TableNames”: [
+     * “li”]
+     * }]
+     * ```
+     */
+    @KsYunField(name = "DstDatabases")
+    private List<DstDatabasesDto> DstDatabasesList;
 
     @Data
     @ToString

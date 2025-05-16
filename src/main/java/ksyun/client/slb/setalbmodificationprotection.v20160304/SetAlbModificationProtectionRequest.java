@@ -9,17 +9,21 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname SetAlbModificationProtectionRequest
-* @Description 请求参数
-*/
+ * @Classname SetAlbModificationProtectionRequest
+ * @Description 请求参数
+ */
 @Data
-public class SetAlbModificationProtectionRequest{
-    /**alb负载均衡id*/
-    @KsYunField(name="albId")
+public class SetAlbModificationProtectionRequest {
+    /**
+     * alb负载均衡id
+     */
+    @KsYunField(name = "albId")
     private String AlbId;
 
-    /**修改保护on/off*/
-    @KsYunField(name="modificationProtection")
+    /**
+     * 修改保护on/off
+     */
+    @KsYunField(name = "modificationProtection")
     private String ModificationProtection;
 
 }

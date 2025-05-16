@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname AcceptPrivateLinkResponse
-* @Description AcceptPrivateLink 返回体
-*/
+ * @Classname AcceptPrivateLinkResponse
+ * @Description AcceptPrivateLink 返回体
+ */
 @Data
 @ToString
 public class AcceptPrivateLinkResponse extends BaseResponseModel {

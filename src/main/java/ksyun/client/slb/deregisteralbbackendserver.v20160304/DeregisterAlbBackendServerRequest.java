@@ -9,13 +9,15 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname DeregisterAlbBackendServerRequest
-* @Description 请求参数
-*/
+ * @Classname DeregisterAlbBackendServerRequest
+ * @Description 请求参数
+ */
 @Data
-public class DeregisterAlbBackendServerRequest{
-    /**服务器id*/
-    @KsYunField(name="BackendServerId")
+public class DeregisterAlbBackendServerRequest {
+    /**
+     * 服务器id
+     */
+    @KsYunField(name = "BackendServerId")
     private String BackendServerId;
 
 }

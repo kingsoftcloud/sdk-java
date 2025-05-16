@@ -9,13 +9,15 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname DeregisterInstancesFromListenerRequest
-* @Description 请求参数
-*/
+ * @Classname DeregisterInstancesFromListenerRequest
+ * @Description 请求参数
+ */
 @Data
-public class DeregisterInstancesFromListenerRequest{
-    /**后端服务器的ID*/
-    @KsYunField(name="RegisterId")
+public class DeregisterInstancesFromListenerRequest {
+    /**
+     * 后端服务器的ID
+     */
+    @KsYunField(name = "RegisterId")
     private String RegisterId;
 
 }

@@ -1,7 +1,12 @@
 package ksyun.client.vpc.createnetworkaclentry.v20160304;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname CreateNetworkAclEntryRequest
@@ -60,15 +65,19 @@ public class CreateNetworkAclEntryRequest {
     /**
      * TCP或UDP协议的端口规则结束端口
      */
-    @KsYunField(name="PortRangeTo")
+    @KsYunField(name = "PortRangeTo")
     private Integer PortRangeTo;
 
-    /**ACL规则的网段*/
-    @KsYunField(name="CidrBlock")
+    /**
+     * ACL规则的网段
+     */
+    @KsYunField(name = "CidrBlock")
     private String CidrBlock;
 
-    /**ACL的描述*/
-    @KsYunField(name="Description")
+    /**
+     * ACL的描述
+     */
+    @KsYunField(name = "Description")
     private String Description;
 
 }

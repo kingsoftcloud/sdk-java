@@ -1,10 +1,12 @@
 package ksyun.client.kmr.cancelflinkjobrun.v20240814;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname CancelFlinkJobRunRequest
@@ -18,11 +20,7 @@ public class CancelFlinkJobRunRequest {
     @KsYunField(name = "WorkspaceId")
     private String WorkspaceId;
 
-    /**
-     * 作业的ID和作业类型组成的数组
-     * JobRunId:xxx
-     * JobType:flink
-     */
+    /***/
     @KsYunField(name = "JobRunIds", type = 2)
     private List<JobRunIdsDto> JobRunIdsList;
 

@@ -29,7 +29,7 @@ public class ModifySecurityGroupRequest {
     /**
      * 裸金属服务器关联的安全组ID，一个裸金属服务器最多可以支持3个安全组
      */
-    @KsYunField(name="SecurityGroupId")
+    @KsYunField(name = "SecurityGroupId")
     private List<String> SecurityGroupIdList;
 
 }

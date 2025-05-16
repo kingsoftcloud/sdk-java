@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname SetAlbModificationProtectionResponse
-* @Description SetAlbModificationProtection 返回体
-*/
+ * @Classname SetAlbModificationProtectionResponse
+ * @Description SetAlbModificationProtection 返回体
+ */
 @Data
 @ToString
 public class SetAlbModificationProtectionResponse extends BaseResponseModel {

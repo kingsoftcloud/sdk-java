@@ -1,7 +1,12 @@
 package ksyun.client.klog.updateproject.v20200731;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname UpdateProjectRequest
@@ -22,7 +27,7 @@ public class UpdateProjectRequest {
     private String Description;
 
     /**
-     * 项目id，不填写则不会改变绑定项目
+     * 项目制id，缺省时为默认项目
      */
     @KsYunField(name = "IamProjectId")
     private Integer IamProjectId;

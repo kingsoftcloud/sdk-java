@@ -23,7 +23,7 @@ public class ReplyProcessRequest {
     /**
      * 回复内容
      */
-    @KsYunField(name="Remarks")
+    @KsYunField(name = "Remarks")
     private String Remarks;
 
 }

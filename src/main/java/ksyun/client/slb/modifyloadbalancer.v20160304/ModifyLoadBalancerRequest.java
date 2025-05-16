@@ -9,21 +9,27 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname ModifyLoadBalancerRequest
-* @Description 请求参数
-*/
+ * @Classname ModifyLoadBalancerRequest
+ * @Description 请求参数
+ */
 @Data
-public class ModifyLoadBalancerRequest{
-    /**负载均衡的ID*/
-    @KsYunField(name="LoadBalancerId")
+public class ModifyLoadBalancerRequest {
+    /**
+     * 负载均衡的ID
+     */
+    @KsYunField(name = "LoadBalancerId")
     private String LoadBalancerId;
 
-    /**负载均衡的名称*/
-    @KsYunField(name="LoadBalancerName")
+    /**
+     * 负载均衡的名称
+     */
+    @KsYunField(name = "LoadBalancerName")
     private String LoadBalancerName;
 
-    /**负载均衡的开启状态(start|stop)*/
-    @KsYunField(name="LoadBalancerState")
+    /**
+     * 负载均衡的开启状态(start|stop)
+     */
+    @KsYunField(name = "LoadBalancerState")
     private String LoadBalancerState;
 
 }

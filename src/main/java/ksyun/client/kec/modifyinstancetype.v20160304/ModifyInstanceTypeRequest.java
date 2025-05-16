@@ -1,10 +1,12 @@
 package ksyun.client.kec.modifyinstancetype.v20160304;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname ModifyInstanceTypeRequest
@@ -62,31 +64,6 @@ public class ModifyInstanceTypeRequest {
      */
     @KsYunField(name = "DataDisk")
     private List<DataDiskDto> DataDiskList;
-    /**
-     * 是否对运行中的实例选择关机：是-true，否-false(默认)
-     */
-    @KsYunField(name = "StopInstance")
-    private Boolean StopInstance;
-    /**
-     * 变更实例类型后是否自动重启: 是-true，否-false(默认)
-     */
-    @KsYunField(name = "AutoRestart")
-    private Boolean AutoRestart;
-    /**
-     * 系统盘大小，最大值500，最小值0
-     */
-    @KsYunField(name = "SystemDisk.DiskSize")
-    private Integer SystemDiskDiskSize;
-    /**
-     * 扩容 offline 离线扩容| online 在线扩容
-     */
-    @KsYunField(name = "SystemDisk.ResizeType")
-    private String SystemDiskResizeType;
-    /**
-     * 支持快速开盘/快速变更，该参数仅对本地盘/本地盘机型/本地盘快照生效
-     */
-    @KsYunField(name = "InstantAccess")
-    private Boolean InstantAccess;
 
     @Data
     @ToString
@@ -102,5 +79,35 @@ public class ModifyInstanceTypeRequest {
         @KsYunField(name = "Size")
         private String Size;
     }
+
+    /**
+     * 是否对运行中的实例选择关机：是-true，否-false(默认)
+     */
+    @KsYunField(name = "StopInstance")
+    private Boolean StopInstance;
+
+    /**
+     * 变更实例类型后是否自动重启: 是-true，否-false(默认)
+     */
+    @KsYunField(name = "AutoRestart")
+    private Boolean AutoRestart;
+
+    /**
+     * 系统盘大小，最大值500，最小值0
+     */
+    @KsYunField(name = "SystemDisk.DiskSize")
+    private Integer SystemDiskDiskSize;
+
+    /**
+     * 扩容 offline 离线扩容| online 在线扩容
+     */
+    @KsYunField(name = "SystemDisk.ResizeType")
+    private String SystemDiskResizeType;
+
+    /**
+     * 支持快速开盘/快速变更，该参数仅对本地盘/本地盘机型/本地盘快照生效
+     */
+    @KsYunField(name = "InstantAccess")
+    private Boolean InstantAccess;
 
 }

@@ -1,10 +1,12 @@
 package ksyun.client.kce.modifynodepool.v20190806;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname ModifyNodePoolRequest
@@ -59,16 +61,6 @@ public class ModifyNodePoolRequest {
      */
     @KsYunField(name = "Label")
     private List<LabelDto> LabelList;
-    /**
-     * 节点污点
-     */
-    @KsYunField(name = "Taint")
-    private List<TaintDto> TaintList;
-    /**
-     * Label、Taints更新是否对节点池内所有已有节点生效，有效值：<br>- **True**：对节点池内已有节点以及扩容出来的节点生效<br>- **False**：只对扩容出来的节点生效<br>默认值：False
-     */
-    @KsYunField(name = "UpdateExistingNodes")
-    private Boolean UpdateExistingNodes;
 
     @Data
     @ToString
@@ -84,6 +76,12 @@ public class ModifyNodePoolRequest {
         @KsYunField(name = "Value")
         private String Value;
     }
+
+    /**
+     * 节点污点
+     */
+    @KsYunField(name = "Taint")
+    private List<TaintDto> TaintList;
 
     @Data
     @ToString
@@ -104,5 +102,11 @@ public class ModifyNodePoolRequest {
         @KsYunField(name = "Effect")
         private String Effect;
     }
+
+    /**
+     * Label、Taints更新是否对节点池内所有已有节点生效，有效值：<br>- **True**：对节点池内已有节点以及扩容出来的节点生效<br>- **False**：只对扩容出来的节点生效<br>默认值：False
+     */
+    @KsYunField(name = "UpdateExistingNodes")
+    private Boolean UpdateExistingNodes;
 
 }

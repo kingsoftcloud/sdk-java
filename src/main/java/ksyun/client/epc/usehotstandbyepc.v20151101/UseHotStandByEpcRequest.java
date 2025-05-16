@@ -31,7 +31,7 @@ public class UseHotStandByEpcRequest {
      * RetainPrivateIP保留内网IP
      * Notretain不保留，默认值
      */
-    @KsYunField(name="RetainInstanceInfo")
+    @KsYunField(name = "RetainInstanceInfo")
     private String RetainInstanceInfo;
 
 }

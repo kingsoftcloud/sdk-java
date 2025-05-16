@@ -1,9 +1,12 @@
 package ksyun.client.dmp.operatemonitorpanel.v20240101;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname OperateMonitorPanelRequest

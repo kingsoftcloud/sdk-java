@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname AssociateCertificateWithGroupResponse
-* @Description AssociateCertificateWithGroup 返回体
-*/
+ * @Classname AssociateCertificateWithGroupResponse
+ * @Description AssociateCertificateWithGroup 返回体
+ */
 @Data
 @ToString
 public class AssociateCertificateWithGroupResponse extends BaseResponseModel {

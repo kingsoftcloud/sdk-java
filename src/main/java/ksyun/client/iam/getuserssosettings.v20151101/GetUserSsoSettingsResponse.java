@@ -5,6 +5,8 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.Set;
+
 /**
  * @Classname GetUserSsoSettingsResponse
  * @Description GetUserSsoSettings 返回体

@@ -1,7 +1,12 @@
 package ksyun.client.ked.imageedit.v20250501;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname ImageeditRequest
@@ -26,5 +31,11 @@ public class ImageeditRequest {
      */
     @KsYunField(name = "imageName")
     private String ImageName;
+
+    /**
+     * 镜像描述信息
+     */
+    @KsYunField(name = "description")
+    private String Description;
 
 }

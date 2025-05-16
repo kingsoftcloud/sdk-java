@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname RegisterInstancesWithListenerResponse
-* @Description RegisterInstancesWithListener 返回体
-*/
+ * @Classname RegisterInstancesWithListenerResponse
+ * @Description RegisterInstancesWithListener 返回体
+ */
 @Data
 @ToString
 public class RegisterInstancesWithListenerResponse extends BaseResponseModel {

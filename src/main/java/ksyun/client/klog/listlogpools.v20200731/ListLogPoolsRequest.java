@@ -1,7 +1,12 @@
 package ksyun.client.klog.listlogpools.v20200731;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname ListLogPoolsRequest
@@ -16,21 +21,40 @@ public class ListLogPoolsRequest {
     private String ProjectName;
 
     /**
+     * 如果想要根据名称搜索某个日志池，该字段必须填写
+     */
+    @KsYunField(name = "LogPoolName")
+    private String LogPoolName;
+
+    /**
      * 页码，从0开始
      */
     @KsYunField(name = "Page")
     private Integer Page;
 
     /**
-     * 每页返回最大条目，默认 500（最大值）
+     * 每页返回最大条目，最大值500
      */
     @KsYunField(name = "Size")
     private Integer Size;
 
     /**
-     * 如果想要根据名称搜索某个日志池，该字段必须填写
+     * 需要筛选的标签
      */
-    @KsYunField(name = "LogPoolName")
-    private String LogPoolName;
+    @KsYunField(name = "Tags", type = 2)
+    private List<TagsDto> TagsList;
+
+    @Data
+    @ToString
+    public static class TagsDto {
+        /**
+         * 标签键
+         */
+        private String Key;
+        /**
+         * 标签值
+         */
+        private String Value;
+    }
 
 }

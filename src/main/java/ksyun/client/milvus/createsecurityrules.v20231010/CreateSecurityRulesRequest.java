@@ -1,10 +1,12 @@
 package ksyun.client.milvus.createsecurityrules.v20231010;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname CreateSecurityRulesRequest

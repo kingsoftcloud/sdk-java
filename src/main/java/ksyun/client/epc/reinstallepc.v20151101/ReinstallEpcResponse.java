@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname ReinstallEpcResponse
-* @Description ReinstallEpc 返回体
-*/
+ * @Classname ReinstallEpcResponse
+ * @Description ReinstallEpc 返回体
+ */
 @Data
 @ToString
 public class ReinstallEpcResponse extends BaseResponseModel {

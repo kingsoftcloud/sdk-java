@@ -1,10 +1,12 @@
 package ksyun.client.kmr.scaleoutinstancegroups.v20210902;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname ScaleOutInstanceGroupsRequest
@@ -23,11 +25,6 @@ public class ScaleOutInstanceGroupsRequest {
      */
     @KsYunField(name = "InstanceGroups", type = 2)
     private List<InstanceGroupsDto> InstanceGroupsList;
-    /**
-     * 项目 ID，参考「项目管理」
-     */
-    @KsYunField(name = "ProjectId")
-    private Integer ProjectId;
 
     @Data
     @ToString
@@ -138,5 +135,11 @@ public class ScaleOutInstanceGroupsRequest {
          */
         private Integer InstanceGroupIndex;
     }
+
+    /**
+     * 项目 ID，参考「项目管理」
+     */
+    @KsYunField(name = "ProjectId")
+    private Integer ProjectId;
 
 }

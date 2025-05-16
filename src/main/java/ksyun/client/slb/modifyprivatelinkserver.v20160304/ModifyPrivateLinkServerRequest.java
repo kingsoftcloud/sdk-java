@@ -9,25 +9,33 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname ModifyPrivateLinkServerRequest
-* @Description 请求参数
-*/
+ * @Classname ModifyPrivateLinkServerRequest
+ * @Description 请求参数
+ */
 @Data
-public class ModifyPrivateLinkServerRequest{
-    /**PrivateLinkServer的ID*/
-    @KsYunField(name="PrivateLinkServerId")
+public class ModifyPrivateLinkServerRequest {
+    /**
+     * PrivateLinkServer的ID
+     */
+    @KsYunField(name = "PrivateLinkServerId")
     private String PrivateLinkServerId;
 
-    /**PrivateLinkServer名称*/
-    @KsYunField(name="PrivateLinkServerName")
+    /**
+     * PrivateLinkServer名称
+     */
+    @KsYunField(name = "PrivateLinkServerName")
     private String PrivateLinkServerName;
 
-    /**描述*/
-    @KsYunField(name="Description")
+    /**
+     * 描述
+     */
+    @KsYunField(name = "Description")
     private String Description;
 
-    /**删除保护*/
-    @KsYunField(name="DeleteProtection")
+    /**
+     * 删除保护
+     */
+    @KsYunField(name = "DeleteProtection")
     private String DeleteProtection;
 
 }

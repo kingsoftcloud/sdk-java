@@ -1,9 +1,12 @@
 package ksyun.client.kce2.describeclusters.v20230101;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname DescribeClustersRequest
@@ -12,19 +15,14 @@ import java.util.List;
 @Data
 public class DescribeClustersRequest {
     /**
-     * 集群名称
-     */
-    @KsYunField(name = "ClusterNames", type = 2)
-    private List<String> ClusterNamesList;
-
-    /**
      * 集群ID
      */
     @KsYunField(name = "ClusterIds", type = 2)
     private List<String> ClusterIdsList;
 
     /**
-     * 分页参数，每页最大数
+     * 值范围0-50
+     * 默认值：10
      */
     @KsYunField(name = "MaxResults")
     private Integer MaxResults;

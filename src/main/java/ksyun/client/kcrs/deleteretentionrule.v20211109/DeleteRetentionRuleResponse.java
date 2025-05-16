@@ -5,6 +5,8 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.Set;
+
 /**
  * @Classname DeleteRetentionRuleResponse
  * @Description DeleteRetentionRule 返回体

@@ -9,13 +9,15 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname ReturnEpcRequest
-* @Description 请求参数
-*/
+ * @Classname ReturnEpcRequest
+ * @Description 请求参数
+ */
 @Data
-public class ReturnEpcRequest{
-    /**裸金属服务器资源ID*/
-    @KsYunField(name="HostId")
+public class ReturnEpcRequest {
+    /**
+     * 裸金属服务器资源ID
+     */
+    @KsYunField(name = "HostId")
     private String HostId;
 
 }

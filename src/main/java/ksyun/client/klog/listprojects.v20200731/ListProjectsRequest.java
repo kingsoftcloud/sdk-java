@@ -1,7 +1,12 @@
 package ksyun.client.klog.listprojects.v20200731;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname ListProjectsRequest
@@ -16,7 +21,7 @@ public class ListProjectsRequest {
     private Integer Page;
 
     /**
-     * 每页返回最大条目，默认 500（最大值）
+     * 每页返回最大条目，最大值500
      */
     @KsYunField(name = "Size")
     private Integer Size;

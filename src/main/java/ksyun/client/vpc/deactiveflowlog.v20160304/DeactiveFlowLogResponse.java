@@ -5,6 +5,8 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.Set;
+
 /**
  * @Classname DeactiveFlowLogResponse
  * @Description DeactiveFlowLog 返回体

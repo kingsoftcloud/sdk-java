@@ -1,10 +1,12 @@
 package ksyun.client.kec.modifyscalinggroup.v20160304;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname ModifyScalingGroupRequest
@@ -73,11 +75,6 @@ public class ModifyScalingGroupRequest {
      */
     @KsYunField(name = "Slb")
     private List<SlbDto> SlbList;
-    /**
-     * 支持容器业务线指定子网扩容
-     */
-    @KsYunField(name = "ContainerSubnetId")
-    private List<String> ContainerSubnetIdList;
 
     @Data
     @ToString
@@ -103,5 +100,11 @@ public class ModifyScalingGroupRequest {
         @KsYunField(name = "Weight")
         private Integer Weight;
     }
+
+    /**
+     * 支持容器业务线指定子网扩容
+     */
+    @KsYunField(name = "ContainerSubnetId")
+    private List<String> ContainerSubnetIdList;
 
 }

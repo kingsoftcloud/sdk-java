@@ -1,7 +1,12 @@
 package ksyun.client.vpc.createflowlog.v20160304;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname CreateFlowLogRequest
@@ -56,7 +61,7 @@ public class CreateFlowLogRequest {
     /**
      * 流日志描述
      */
-    @KsYunField(name ="Description")
+    @KsYunField(name = "Description")
     private String Description;
 
 }

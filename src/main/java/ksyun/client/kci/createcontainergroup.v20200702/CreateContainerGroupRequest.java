@@ -1,10 +1,12 @@
 package ksyun.client.kci.createcontainergroup.v20200702;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname CreateContainerGroupRequest
@@ -115,6 +117,13 @@ public class CreateContainerGroupRequest {
     private String EipAllocationId;
 
     /**
+     * EIP实例ID(多值传参用法)，
+     * MultiEipAllocationId 和 EipAllocationId只能同时传一个
+     */
+    @KsYunField(name = "MultiEipAllocationId")
+    private List<String> MultiEipAllocationIdList;
+
+    /**
      * 自动匹配镜像缓存，默认False
      */
     @KsYunField(name = "AutoMatchImageCache")
@@ -132,68 +141,6 @@ public class CreateContainerGroupRequest {
     @KsYunField(name = "AdvanceSettings")
 
     private AdvanceSettingsDto AdvanceSettingsList;
-    /**
-     * 容器实例底层云服务器DNS配置
-     */
-    @KsYunField(name = "MachineDnsConfig")
-
-    private MachineDnsConfigDto MachineDnsConfigList;
-    /**
-     * 容器实例底层云主机host配置，如使用场景：当有自建镜像仓库时，可通过此参数配置host，通过域名拉取vpc下自建仓库镜像
-     */
-    @KsYunField(name = "MachineHostAliase")
-    private List<MachineHostAliaseDto> MachineHostAliaseList;
-    /****创建无集群模式实例时该字段才生效**，Pod重启策略，不填写默认 Always
-
-     - Always 总是重启
-     - OnFailure 失败时重启
-     - Never 从不重启*/
-    @KsYunField(name = "RestartPolicy")
-    private String RestartPolicy;
-    /****创建无集群模式实例时该字段才生效**拉取镜像仓库私有镜像凭据，公开镜像无须填写。*/
-    @KsYunField(name = "ImageRegistryCredential")
-    private List<ImageRegistryCredentialDto> ImageRegistryCredentialList;
-    /****创建无集群模式实例时该字段必填***/
-    @KsYunField(name = "Volume")
-    private List<VolumeDto> VolumeList;
-    /****创建无集群模式实例时该字段必填***/
-    @KsYunField(name = "Container")
-    private List<ContainerDto> ContainerList;
-    /****创建无集群模式实例时该字段必填**pod dns配置*/
-    @KsYunField(name = "DnsConfig")
-
-    private DnsConfigDto DnsConfigList;
-    /****创建无集群模式实例时该字段必填**pod host配置*/
-    @KsYunField(name = "HostAliase")
-    private List<HostAliaseDto> HostAliaseList;
-    /****非Serverless集群模式容器实例创建时必填**集群DNS*/
-    @KsYunField(name = "ClusterDns")
-    private String ClusterDns;
-    /****非Serverless集群模式容器实例创建时必填**集群域名*/
-    @KsYunField(name = "ClusterDomain")
-    private String ClusterDomain;
-    /**
-     * 创建集群模式容器实例时，cluster-id、namespace、pod-name标签必填，通常该标签由virtual-kubelet组件自动传递。
-     */
-    @KsYunField(name = "Label")
-    private List<LabelDto> LabelList;
-    /****创建集群模式容器实例时该字段才生效**KubeProxy配置*/
-    @KsYunField(name = "KubeProxy")
-
-    private KubeProxyDto KubeProxyList;
-    /****创建集群模式容器实例该字段才生效**pod日志是否采集到klog，默认false，若开启，则按照kce集群的配置的采集规则将日志输出到klog。*/
-    @KsYunField(name = "KlogEnabled")
-    private Boolean KlogEnabled;
-    /****创建集群模式容器实例该字段生效**
-     实例开机时需要创建的ebs数据盘，主要用于创建集群工作负载中指定了ebs类型的存储卷，最大8块ebs盘，这是底层云服务器的限制。*/
-    @KsYunField(name = "DataDisk")
-    private List<DataDiskDto> DataDiskList;
-    /****创建集群模式容器实例该字段生效**
-
-     pod内部所有容器申请的资源列表，不填写，开出的容器实例就是默认规格大小。
-     计算规格时，优先以Limit值进行计算，Limit值为空，再以Request值累加计算。*/
-    @KsYunField(name = "ContainerSpec")
-    private List<ContainerSpecDto> ContainerSpecList;
 
     @Data
     @ToString
@@ -230,6 +177,13 @@ public class CreateContainerGroupRequest {
         }
     }
 
+    /**
+     * 容器实例底层云服务器DNS配置
+     */
+    @KsYunField(name = "MachineDnsConfig")
+
+    private MachineDnsConfigDto MachineDnsConfigList;
+
     @Data
     @ToString
     public static class MachineDnsConfigDto {
@@ -244,6 +198,12 @@ public class CreateContainerGroupRequest {
         private List<Object> OptionList;
     }
 
+    /**
+     * 容器实例底层云主机host配置，如使用场景：当有自建镜像仓库时，可通过此参数配置host，通过域名拉取vpc下自建仓库镜像
+     */
+    @KsYunField(name = "MachineHostAliase")
+    private List<MachineHostAliaseDto> MachineHostAliaseList;
+
     @Data
     @ToString
     public static class MachineHostAliaseDto {
@@ -254,6 +214,18 @@ public class CreateContainerGroupRequest {
         @KsYunField(name = "Hostname")
         private List<String> HostnameList;
     }
+
+    /****创建无集群模式实例时该字段才生效**，Pod重启策略，不填写默认 Always
+
+     - Always 总是重启
+     - OnFailure 失败时重启
+     - Never 从不重启*/
+    @KsYunField(name = "RestartPolicy")
+    private String RestartPolicy;
+
+    /****创建无集群模式实例时该字段才生效**拉取镜像仓库私有镜像凭据，公开镜像无须填写。*/
+    @KsYunField(name = "ImageRegistryCredential")
+    private List<ImageRegistryCredentialDto> ImageRegistryCredentialList;
 
     @Data
     @ToString
@@ -274,6 +246,10 @@ public class CreateContainerGroupRequest {
         @KsYunField(name = "Password")
         private String Password;
     }
+
+    /****创建无集群模式实例时该字段必填***/
+    @KsYunField(name = "Volume")
+    private List<VolumeDto> VolumeList;
 
     @Data
     @ToString
@@ -298,21 +274,6 @@ public class CreateContainerGroupRequest {
          */
         @KsYunField(name = "NFSVolume")
         private NFSVolumeDto NFSVolumeList;
-        /**
-         * 当Volume.Type=HostPathVolume时，该配置必填
-         */
-        @KsYunField(name = "HostPathVolume")
-        private HostPathVolumeDto HostPathVolumeList;
-        /**
-         * 当Volume.Type=EBSVolume时，该配置必填
-         */
-        @KsYunField(name = "EBSVolume")
-        private EBSVolumeDto EBSVolumeList;
-        /**
-         * 当Volume.Type=ConfigFileVolume时，该配置必填
-         */
-        @KsYunField(name = "ConfigFileVolume")
-        private ConfigFileVolumeDto ConfigFileVolumeList;
 
         @Data
         @ToString
@@ -332,6 +293,12 @@ public class CreateContainerGroupRequest {
             private Boolean ReadOnly;
         }
 
+        /**
+         * 当Volume.Type=HostPathVolume时，该配置必填
+         */
+        @KsYunField(name = "HostPathVolume")
+        private HostPathVolumeDto HostPathVolumeList;
+
         @Data
         @ToString
         public static class HostPathVolumeDto {
@@ -341,6 +308,12 @@ public class CreateContainerGroupRequest {
             @KsYunField(name = "Path")
             private String Path;
         }
+
+        /**
+         * 当Volume.Type=EBSVolume时，该配置必填
+         */
+        @KsYunField(name = "EBSVolume")
+        private EBSVolumeDto EBSVolumeList;
 
         @Data
         @ToString
@@ -377,6 +350,12 @@ public class CreateContainerGroupRequest {
             private Integer SnapshotId;
         }
 
+        /**
+         * 当Volume.Type=ConfigFileVolume时，该配置必填
+         */
+        @KsYunField(name = "ConfigFileVolume")
+        private ConfigFileVolumeDto ConfigFileVolumeList;
+
         @Data
         @ToString
         public static class ConfigFileVolumeDto {
@@ -412,6 +391,10 @@ public class CreateContainerGroupRequest {
             private List<Object> ConfigFileToPathList;
         }
     }
+
+    /****创建无集群模式实例时该字段必填***/
+    @KsYunField(name = "Container")
+    private List<ContainerDto> ContainerList;
 
     @Data
     @ToString
@@ -464,24 +447,6 @@ public class CreateContainerGroupRequest {
          */
         @KsYunField(name = "LivenessProbe")
         private LivenessProbeDto LivenessProbeList;
-        /**
-         * 就绪探测配置，各参数说明请参考LivenessProbe
-         */
-        @KsYunField(name = "ReadinessProbe")
-        private ReadinessProbeDto ReadinessProbeList;
-        /**
-         * 环境变量
-         */
-        @KsYunField(name = "EnvironmentVar")
-        private List<Object> EnvironmentVarList;
-        /***/
-        @KsYunField(name = "Port")
-        private List<Object> PortList;
-        /**
-         * 挂载点信息
-         */
-        @KsYunField(name = "VolumeMount")
-        private List<Object> VolumeMountList;
 
         @Data
         @ToString
@@ -516,16 +481,6 @@ public class CreateContainerGroupRequest {
              */
             @KsYunField(name = "HttpGet")
             private HttpGetDto HttpGetList;
-            /**
-             * 探测方式HttpGet、TcpSocket、Exec三选一，发送tcp探测
-             */
-            @KsYunField(name = "TcpSocket")
-            private TcpSocketDto TcpSocketList;
-            /**
-             * 探测方式HttpGet、TcpSocket、Exec三选一， 执行命令探测
-             */
-            @KsYunField(name = "Exec")
-            private ExecDto ExecList;
 
             @Data
             @ToString
@@ -547,6 +502,12 @@ public class CreateContainerGroupRequest {
                 private String Scheme;
             }
 
+            /**
+             * 探测方式HttpGet、TcpSocket、Exec三选一，发送tcp探测
+             */
+            @KsYunField(name = "TcpSocket")
+            private TcpSocketDto TcpSocketList;
+
             @Data
             @ToString
             public static class TcpSocketDto {
@@ -556,6 +517,12 @@ public class CreateContainerGroupRequest {
                 @KsYunField(name = "Port")
                 private Integer Port;
             }
+
+            /**
+             * 探测方式HttpGet、TcpSocket、Exec三选一， 执行命令探测
+             */
+            @KsYunField(name = "Exec")
+            private ExecDto ExecList;
 
             @Data
             @ToString
@@ -567,6 +534,12 @@ public class CreateContainerGroupRequest {
                 private List<String> CommandList;
             }
         }
+
+        /**
+         * 就绪探测配置，各参数说明请参考LivenessProbe
+         */
+        @KsYunField(name = "ReadinessProbe")
+        private ReadinessProbeDto ReadinessProbeList;
 
         @Data
         @ToString
@@ -599,12 +572,6 @@ public class CreateContainerGroupRequest {
             /***/
             @KsYunField(name = "HttpGet")
             private HttpGetDto HttpGetList;
-            /***/
-            @KsYunField(name = "Exec")
-            private ExecDto ExecList;
-            /***/
-            @KsYunField(name = "TcpSocket")
-            private TcpSocketDto TcpSocketList;
 
             @Data
             @ToString
@@ -622,6 +589,10 @@ public class CreateContainerGroupRequest {
                 private String Scheme;
             }
 
+            /***/
+            @KsYunField(name = "Exec")
+            private ExecDto ExecList;
+
             @Data
             @ToString
             public static class ExecDto {
@@ -629,6 +600,10 @@ public class CreateContainerGroupRequest {
                 @KsYunField(name = "Command")
                 private List<String> CommandList;
             }
+
+            /***/
+            @KsYunField(name = "TcpSocket")
+            private TcpSocketDto TcpSocketList;
 
             @Data
             @ToString
@@ -638,7 +613,26 @@ public class CreateContainerGroupRequest {
                 private Integer Port;
             }
         }
+
+        /**
+         * 环境变量
+         */
+        @KsYunField(name = "EnvironmentVar")
+        private List<Object> EnvironmentVarList;
+        /***/
+        @KsYunField(name = "Port")
+        private List<Object> PortList;
+        /**
+         * 挂载点信息
+         */
+        @KsYunField(name = "VolumeMount")
+        private List<Object> VolumeMountList;
     }
+
+    /****创建无集群模式实例时该字段必填**pod dns配置*/
+    @KsYunField(name = "DnsConfig")
+
+    private DnsConfigDto DnsConfigList;
 
     @Data
     @ToString
@@ -654,6 +648,10 @@ public class CreateContainerGroupRequest {
         private List<Object> OptionList;
     }
 
+    /****创建无集群模式实例时该字段必填**pod host配置*/
+    @KsYunField(name = "HostAliase")
+    private List<HostAliaseDto> HostAliaseList;
+
     @Data
     @ToString
     public static class HostAliaseDto {
@@ -664,6 +662,20 @@ public class CreateContainerGroupRequest {
         @KsYunField(name = "Hostname")
         private List<String> HostnameList;
     }
+
+    /****非Serverless集群模式容器实例创建时必填**集群DNS*/
+    @KsYunField(name = "ClusterDns")
+    private String ClusterDns;
+
+    /****非Serverless集群模式容器实例创建时必填**集群域名*/
+    @KsYunField(name = "ClusterDomain")
+    private String ClusterDomain;
+
+    /**
+     * 创建集群模式容器实例时，cluster-id、namespace、pod-name标签必填，通常该标签由virtual-kubelet组件自动传递。
+     */
+    @KsYunField(name = "Label")
+    private List<LabelDto> LabelList;
 
     @Data
     @ToString
@@ -680,6 +692,11 @@ public class CreateContainerGroupRequest {
         private String Value;
     }
 
+    /****创建集群模式容器实例时该字段才生效**KubeProxy配置*/
+    @KsYunField(name = "KubeProxy")
+
+    private KubeProxyDto KubeProxyList;
+
     @Data
     @ToString
     public static class KubeProxyDto {
@@ -689,6 +706,15 @@ public class CreateContainerGroupRequest {
         @KsYunField(name = "Enabled")
         private Boolean Enabled;
     }
+
+    /****创建集群模式容器实例该字段才生效**pod日志是否采集到klog，默认false，若开启，则按照kce集群的配置的采集规则将日志输出到klog。*/
+    @KsYunField(name = "KlogEnabled")
+    private Boolean KlogEnabled;
+
+    /****创建集群模式容器实例该字段生效**
+     实例开机时需要创建的ebs数据盘，主要用于创建集群工作负载中指定了ebs类型的存储卷，最大8块ebs盘，这是底层云服务器的限制。*/
+    @KsYunField(name = "DataDisk")
+    private List<DataDiskDto> DataDiskList;
 
     @Data
     @ToString
@@ -731,6 +757,13 @@ public class CreateContainerGroupRequest {
         @KsYunField(name = "SnapshotId")
         private String SnapshotId;
     }
+
+    /****创建集群模式容器实例该字段生效**
+
+     pod内部所有容器申请的资源列表，不填写，开出的容器实例就是默认规格大小。
+     计算规格时，优先以Limit值进行计算，Limit值为空，再以Request值累加计算。*/
+    @KsYunField(name = "ContainerSpec")
+    private List<ContainerSpecDto> ContainerSpecList;
 
     @Data
     @ToString

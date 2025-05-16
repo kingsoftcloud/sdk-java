@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname ModifyEpcResponse
-* @Description ModifyEpc 返回体
-*/
+ * @Classname ModifyEpcResponse
+ * @Description ModifyEpc 返回体
+ */
 @Data
 @ToString
 public class ModifyEpcResponse extends BaseResponseModel {

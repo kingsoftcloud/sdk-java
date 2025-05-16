@@ -9,17 +9,21 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname SetLBModificationProtectionRequest
-* @Description 请求参数
-*/
+ * @Classname SetLBModificationProtectionRequest
+ * @Description 请求参数
+ */
 @Data
-public class SetLBModificationProtectionRequest{
-    /**负载均衡id*/
-    @KsYunField(name="LoadBalancerId")
+public class SetLBModificationProtectionRequest {
+    /**
+     * 负载均衡id
+     */
+    @KsYunField(name = "LoadBalancerId")
     private String LoadBalancerId;
 
-    /**修改保护状态(on|off)*/
-    @KsYunField(name="ModificationProtection")
+    /**
+     * 修改保护状态(on|off)
+     */
+    @KsYunField(name = "ModificationProtection")
     private String ModificationProtection;
 
 }

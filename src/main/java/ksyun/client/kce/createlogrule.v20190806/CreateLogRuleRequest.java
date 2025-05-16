@@ -1,10 +1,12 @@
 package ksyun.client.kce.createlogrule.v20190806;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname CreateLogRuleRequest
@@ -31,12 +33,6 @@ public class CreateLogRuleRequest {
     @KsYunField(name = "InputConfig")
 
     private InputConfigDto InputConfigList;
-    /**
-     * 消费端
-     */
-    @KsYunField(name = "OutputConfig")
-
-    private OutputConfigDto OutputConfigList;
 
     @Data
     @ToString
@@ -54,16 +50,6 @@ public class CreateLogRuleRequest {
          */
         @KsYunField(name = "ContainerStandout")
         private ContainerStandoutDto ContainerStandoutList;
-        /**
-         * 容器文件路径，如果 InputType=2，则该项必填
-         */
-        @KsYunField(name = "ContainerFile")
-        private ContainerFileDto ContainerFileList;
-        /**
-         * 主机文件路径，如果 InputType=3，则该项必填
-         */
-        @KsYunField(name = "HostFile")
-        private HostFileDto HostFileList;
 
         @Data
         @ToString
@@ -80,12 +66,6 @@ public class CreateLogRuleRequest {
              */
             @KsYunField(name = "SpecifiedWorkload")
             private SpecifiedWorkloadDto SpecifiedWorkloadList;
-            /**
-             * 指定PodLable采集
-             * - 如果 AllContainer 为false，SpecifiedWorkload 或 SpecifiedPodLabel 必须指定一项
-             */
-            @KsYunField(name = "SpecifiedPodLabel")
-            private SpecifiedPodLabelDto SpecifiedPodLabelList;
 
             @Data
             @ToString
@@ -94,6 +74,13 @@ public class CreateLogRuleRequest {
                 @KsYunField(name = "NamespaceList")
                 private List<Object> NamespaceListList;
             }
+
+            /**
+             * 指定PodLable采集
+             * - 如果 AllContainer 为false，SpecifiedWorkload 或 SpecifiedPodLabel 必须指定一项
+             */
+            @KsYunField(name = "SpecifiedPodLabel")
+            private SpecifiedPodLabelDto SpecifiedPodLabelList;
 
             @Data
             @ToString
@@ -128,6 +115,12 @@ public class CreateLogRuleRequest {
             }
         }
 
+        /**
+         * 容器文件路径，如果 InputType=2，则该项必填
+         */
+        @KsYunField(name = "ContainerFile")
+        private ContainerFileDto ContainerFileList;
+
         @Data
         @ToString
         public static class ContainerFileDto {
@@ -136,11 +129,6 @@ public class CreateLogRuleRequest {
              */
             @KsYunField(name = "SpecifiedContainer")
             private SpecifiedContainerDto SpecifiedContainerList;
-            /**
-             * 指定 PodLabel
-             */
-            @KsYunField(name = "SpecifiedPodLabel")
-            private SpecifiedPodLabelDto SpecifiedPodLabelList;
 
             @Data
             @ToString
@@ -175,6 +163,12 @@ public class CreateLogRuleRequest {
                 @KsYunField(name = "ContainerPath")
                 private String ContainerPath;
             }
+
+            /**
+             * 指定 PodLabel
+             */
+            @KsYunField(name = "SpecifiedPodLabel")
+            private SpecifiedPodLabelDto SpecifiedPodLabelList;
 
             @Data
             @ToString
@@ -214,6 +208,12 @@ public class CreateLogRuleRequest {
             }
         }
 
+        /**
+         * 主机文件路径，如果 InputType=3，则该项必填
+         */
+        @KsYunField(name = "HostFile")
+        private HostFileDto HostFileList;
+
         @Data
         @ToString
         public static class HostFileDto {
@@ -227,6 +227,13 @@ public class CreateLogRuleRequest {
             private List<Object> LabelList;
         }
     }
+
+    /**
+     * 消费端
+     */
+    @KsYunField(name = "OutputConfig")
+
+    private OutputConfigDto OutputConfigList;
 
     @Data
     @ToString

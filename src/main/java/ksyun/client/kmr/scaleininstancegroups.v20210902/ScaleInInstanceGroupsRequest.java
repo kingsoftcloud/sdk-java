@@ -1,10 +1,12 @@
 package ksyun.client.kmr.scaleininstancegroups.v20210902;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname ScaleInInstanceGroupsRequest
@@ -23,16 +25,6 @@ public class ScaleInInstanceGroupsRequest {
      */
     @KsYunField(name = "InstanceGroups", type = 2)
     private List<InstanceGroupsDto> InstanceGroupsList;
-    /**
-     * 是否开启优雅缩容
-     */
-    @KsYunField(name = "GracefulScaleIn")
-    private Boolean GracefulScaleIn;
-    /**
-     * 优雅缩容等待时间，如果开启优雅缩容，则需要设定该参数，范围0-120, 单位秒
-     */
-    @KsYunField(name = "GracefulScaleInTimeout")
-    private Integer GracefulScaleInTimeout;
 
     @Data
     @ToString
@@ -47,5 +39,17 @@ public class ScaleInInstanceGroupsRequest {
         @KsYunField(name = "instances", type = 2)
         private List<Object> InstancesList;
     }
+
+    /**
+     * 是否开启优雅缩容
+     */
+    @KsYunField(name = "GracefulScaleIn")
+    private Boolean GracefulScaleIn;
+
+    /**
+     * 优雅缩容等待时间，如果开启优雅缩容，则需要设定该参数，范围0-120, 单位秒
+     */
+    @KsYunField(name = "GracefulScaleInTimeout")
+    private Integer GracefulScaleInTimeout;
 
 }

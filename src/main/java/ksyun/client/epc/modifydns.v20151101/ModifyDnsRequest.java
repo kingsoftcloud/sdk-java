@@ -23,7 +23,7 @@ public class ModifyDnsRequest {
     /**
      * 裸金属服务器资源ID
      */
-    @KsYunField(name="HostId")
+    @KsYunField(name = "HostId")
     private String HostId;
 
     /**
@@ -32,8 +32,10 @@ public class ModifyDnsRequest {
     @KsYunField(name = "DNS1")
     private String DNS1;
 
-    /**DNS2的值*/
-    @KsYunField(name="DNS2")
+    /**
+     * DNS2的值
+     */
+    @KsYunField(name = "DNS2")
     private String DNS2;
 
 }

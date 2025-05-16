@@ -1,10 +1,12 @@
 package ksyun.client.kci.createimagecache.v20200702;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname CreateImageCacheRequest
@@ -54,18 +56,6 @@ public class CreateImageCacheRequest {
      */
     @KsYunField(name = "ImageRegistryCredential")
     private List<ImageRegistryCredentialDto> ImageRegistryCredentialList;
-    /**
-     * 镜像缓存类型
-     * - Common 普通型
-     * - Rapid 极速型
-     */
-    @KsYunField(name = "ImageCacheType")
-    private String ImageCacheType;
-    /**
-     * 是否预热，默认false
-     */
-    @KsYunField(name = "EnableWarm")
-    private Boolean EnableWarm;
 
     @Data
     @ToString
@@ -86,5 +76,19 @@ public class CreateImageCacheRequest {
         @KsYunField(name = "Password")
         private String Password;
     }
+
+    /**
+     * 镜像缓存类型
+     * - Common 普通型
+     * - Rapid 极速型
+     */
+    @KsYunField(name = "ImageCacheType")
+    private String ImageCacheType;
+
+    /**
+     * 是否预热，默认false
+     */
+    @KsYunField(name = "EnableWarm")
+    private Boolean EnableWarm;
 
 }

@@ -1,7 +1,12 @@
 package ksyun.client.iam.createuser.v20151101;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname CreateUserRequest
@@ -68,5 +73,11 @@ public class CreateUserRequest {
      */
     @KsYunField(name = "ViewAllProject")
     private Integer ViewAllProject;
+
+    /**
+     * 项目ID，默认项目传0
+     */
+    @KsYunField(name = "AddProjectId")
+    private Integer AddProjectId;
 
 }

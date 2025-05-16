@@ -9,13 +9,15 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname CreateAlbListenerCertGroupRequest
-* @Description 请求参数
-*/
+ * @Classname CreateAlbListenerCertGroupRequest
+ * @Description 请求参数
+ */
 @Data
-public class CreateAlbListenerCertGroupRequest{
-    /**应用型负载均衡监听器的ID*/
-    @KsYunField(name="AlbListenerId")
+public class CreateAlbListenerCertGroupRequest {
+    /**
+     * 应用型负载均衡监听器的ID
+     */
+    @KsYunField(name = "AlbListenerId")
     private String AlbListenerId;
 
 }

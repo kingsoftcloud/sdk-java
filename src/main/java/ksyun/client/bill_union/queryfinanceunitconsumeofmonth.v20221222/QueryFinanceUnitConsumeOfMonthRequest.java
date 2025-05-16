@@ -23,13 +23,13 @@ public class QueryFinanceUnitConsumeOfMonthRequest {
     /**
      * 第几页,默认值为1
      */
-    @KsYunField(name="Page")
+    @KsYunField(name = "Page")
     private Integer Page;
 
     /**
      * 每页条数,默认值20，最大值200
      */
-    @KsYunField(name="Size")
+    @KsYunField(name = "Size")
     private Integer Size;
 
 }

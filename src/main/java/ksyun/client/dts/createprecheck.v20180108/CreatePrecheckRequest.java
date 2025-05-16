@@ -1,10 +1,12 @@
 package ksyun.client.dts.createprecheck.v20180108;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname CreatePrecheckRequest
@@ -160,6 +162,22 @@ public class CreatePrecheckRequest {
      */
     @KsYunField(name = "DTSParameter")
     private List<DTSParameterDto> DTSParameterList;
+
+    @Data
+    @ToString
+    public static class DTSParameterDto {
+        /**
+         * 参数名
+         */
+        @KsYunField(name = "DBParameter")
+        private String DBParameter;
+        /**
+         * 预期值(目标库预期值)
+         */
+        @KsYunField(name = "TargetDBParameterValue")
+        private String TargetDBParameterValue;
+    }
+
     /**
      * 需要往目标库迁移'账号'时传递
      * <p>
@@ -199,21 +217,6 @@ public class CreatePrecheckRequest {
      */
     @KsYunField(name = "SourceUser")
     private List<SourceUserDto> SourceUserList;
-
-    @Data
-    @ToString
-    public static class DTSParameterDto {
-        /**
-         * 参数名
-         */
-        @KsYunField(name = "DBParameter")
-        private String DBParameter;
-        /**
-         * 预期值(目标库预期值)
-         */
-        @KsYunField(name = "TargetDBParameterValue")
-        private String TargetDBParameterValue;
-    }
 
     @Data
     @ToString

@@ -9,13 +9,15 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname DeleteCenRegionBandwidthRequest
-* @Description 请求参数
-*/
+ * @Classname DeleteCenRegionBandwidthRequest
+ * @Description 请求参数
+ */
 @Data
-public class DeleteCenRegionBandwidthRequest{
-    /**跨地域带宽的ID*/
-    @KsYunField(name="CenRegionBandwidthId")
+public class DeleteCenRegionBandwidthRequest {
+    /**
+     * 跨地域带宽的ID
+     */
+    @KsYunField(name = "CenRegionBandwidthId")
     private String CenRegionBandwidthId;
 
 }

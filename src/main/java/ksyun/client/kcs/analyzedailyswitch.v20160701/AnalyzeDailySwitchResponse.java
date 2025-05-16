@@ -5,6 +5,8 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.Set;
+
 /**
  * @Classname AnalyzeDailySwitchResponse
  * @Description AnalyzeDailySwitch 返回体

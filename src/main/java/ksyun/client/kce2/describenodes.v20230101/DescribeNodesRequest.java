@@ -1,9 +1,12 @@
 package ksyun.client.kce2.describenodes.v20230101;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname DescribeNodesRequest
@@ -12,45 +15,36 @@ import java.util.List;
 @Data
 public class DescribeNodesRequest {
     /**
-     * 集群名称
-     */
-    @KsYunField(name = "ClusterName")
-    private String ClusterName;
-
-    /**
      * 集群ID
      */
     @KsYunField(name = "ClusterId")
     private String ClusterId;
 
     /**
-     * 节点名称
+     * 节点id，与InstanceIds 二选一填即可，如果两者均为空，则查询集群下所有的节点
      */
-    @KsYunField(name = "NodeNames", type = 2)
-    private List<String> NodeNamesList;
-
-    /**
-     * 节点ID
-     */
-    @KsYunField(name = "NodeIds", type = 2)
-    private List<String> NodeIdsList;
+    @KsYunField(name = "KceNodeIds", type = 2)
+    private List<String> KceNodeIdsList;
 
     /**
      * 游标起始位置
+     * 默认值：0
      */
     @KsYunField(name = "Marker")
     private Integer Marker;
 
     /**
      * 分页参数，每页最大数
+     * 值范围0-50
+     * 默认值：10
      */
     @KsYunField(name = "MaxResults")
     private Integer MaxResults;
 
     /**
-     * 模糊查询条件
+     * 实例id ，与KceNodeIds 二选一填即可，如果两者均为空，则查询集群下所有的节点
      */
-    @KsYunField(name = "Search")
-    private String Search;
+    @KsYunField(name = "InstanceIds", type = 2)
+    private List<String> InstanceIdsList;
 
 }

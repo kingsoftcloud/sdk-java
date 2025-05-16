@@ -1,7 +1,12 @@
 package ksyun.client.klog.updatelogpool.v20200731;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname UpdateLogPoolRequest
@@ -39,4 +44,18 @@ public class UpdateLogPoolRequest {
     @KsYunField(name = "Description")
     private String Description;
 
+    /***/
+    @KsYunField(name = "Config")
+
+    private ConfigDto ConfigList;
+
+    @Data
+    @ToString
+    public static class ConfigDto {
+        /**
+         * 字段信息
+         */
+        @KsYunField(name = "Columns")
+        private List<Object> ColumnsList;
+    }
 }

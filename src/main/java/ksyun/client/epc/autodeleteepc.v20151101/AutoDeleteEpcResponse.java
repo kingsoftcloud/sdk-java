@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname AutoDeleteEpcResponse
-* @Description AutoDeleteEpc 返回体
-*/
+ * @Classname AutoDeleteEpcResponse
+ * @Description AutoDeleteEpc 返回体
+ */
 @Data
 @ToString
 public class AutoDeleteEpcResponse extends BaseResponseModel {

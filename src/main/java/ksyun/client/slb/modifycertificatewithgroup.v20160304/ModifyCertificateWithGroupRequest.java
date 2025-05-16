@@ -9,21 +9,27 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname ModifyCertificateWithGroupRequest
-* @Description 请求参数
-*/
+ * @Classname ModifyCertificateWithGroupRequest
+ * @Description 请求参数
+ */
 @Data
-public class ModifyCertificateWithGroupRequest{
-    /**证书组的ID*/
-    @KsYunField(name="AlbListenerCertGroupId")
+public class ModifyCertificateWithGroupRequest {
+    /**
+     * 证书组的ID
+     */
+    @KsYunField(name = "AlbListenerCertGroupId")
     private String AlbListenerCertGroupId;
 
-    /**旧证书的ID*/
-    @KsYunField(name="OldCertificateId")
+    /**
+     * 旧证书的ID
+     */
+    @KsYunField(name = "OldCertificateId")
     private String OldCertificateId;
 
-    /**新证书的ID*/
-    @KsYunField(name="CertificateId")
+    /**
+     * 新证书的ID
+     */
+    @KsYunField(name = "CertificateId")
     private String CertificateId;
 
 }

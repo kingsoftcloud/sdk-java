@@ -23,18 +23,19 @@ public class GetWebTerminalRequest {
     /**
      * 任务Task ID
      */
-    @KsYunField(name="task_id")
+    @KsYunField(name = "task_id")
     private Integer Task_id;
 
     /**
      * 任务Task Pod 名称
      */
-    @KsYunField(name="pod_name")
+    @KsYunField(name = "pod_name")
     private String Pod_name;
 
-    /**空间ID
-*/
-    @KsYunField(name="space_id")
+    /**
+     * 空间ID
+     */
+    @KsYunField(name = "space_id")
     private Integer Space_id;
 
 }

@@ -9,13 +9,15 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname DeleteCenBandWidthPackageRequest
-* @Description 请求参数
-*/
+ * @Classname DeleteCenBandWidthPackageRequest
+ * @Description 请求参数
+ */
 @Data
-public class DeleteCenBandWidthPackageRequest{
-    /**云企业网带宽包的ID*/
-    @KsYunField(name="CenBandWidthPackageId")
+public class DeleteCenBandWidthPackageRequest {
+    /**
+     * 云企业网带宽包的ID
+     */
+    @KsYunField(name = "CenBandWidthPackageId")
     private String CenBandWidthPackageId;
 
 }

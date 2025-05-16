@@ -23,23 +23,25 @@ public class ModifyNetworkInterfaceAttributeRequest {
     /**
      * 物理机实例ID
      */
-    @KsYunField(name="HostId")
+    @KsYunField(name = "HostId")
     private String HostId;
 
     /**
      * SubnetId
      */
-    @KsYunField(name= "SubnetId")
+    @KsYunField(name = "SubnetId")
     private String SubnetId;
 
-    /**ip地址*/
-    @KsYunField(name="IpAddress")
+    /**
+     * ip地址
+     */
+    @KsYunField(name = "IpAddress")
     private String IpAddress;
 
     /**
      * 云物理主机关联的安全组ID，一个云物理主机最多可以支持3个安全组
      */
-    @KsYunField(name="SecurityGroupIdList",type=2)
+    @KsYunField(name = "SecurityGroupIdList", type = 2)
     private List<String> SecurityGroupIdListList;
 
 }

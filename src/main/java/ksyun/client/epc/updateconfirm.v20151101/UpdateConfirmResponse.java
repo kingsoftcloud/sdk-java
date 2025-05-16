@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname UpdateConfirmResponse
-* @Description UpdateConfirm 返回体
-*/
+ * @Classname UpdateConfirmResponse
+ * @Description UpdateConfirm 返回体
+ */
 @Data
 @ToString
 public class UpdateConfirmResponse extends BaseResponseModel {

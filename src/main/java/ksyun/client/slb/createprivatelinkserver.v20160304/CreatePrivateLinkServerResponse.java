@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname CreatePrivateLinkServerResponse
-* @Description CreatePrivateLinkServer 返回体
-*/
+ * @Classname CreatePrivateLinkServerResponse
+ * @Description CreatePrivateLinkServer 返回体
+ */
 @Data
 @ToString
 public class CreatePrivateLinkServerResponse extends BaseResponseModel {

@@ -29,7 +29,7 @@ public class DescribeBillSummaryByPayModeRequest {
     /**
      * 成员账账号Id，非必填
      */
-    @KsYunField(name="SubAccount")
+    @KsYunField(name = "SubAccount")
     private Integer SubAccount;
 
 }

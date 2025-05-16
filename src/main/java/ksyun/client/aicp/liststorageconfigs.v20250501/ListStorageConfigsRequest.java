@@ -23,7 +23,7 @@ public class ListStorageConfigsRequest {
     /**
      * 每页条数
      */
-    @KsYunField(name="page_size")
+    @KsYunField(name = "page_size")
     private Integer Page_size;
 
 }

@@ -1,10 +1,12 @@
 package ksyun.client.eip.describeaddresses.v20160304;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname DescribeAddressesRequest
@@ -29,41 +31,6 @@ public class DescribeAddressesRequest {
      */
     @KsYunField(name = "Filter")
     private List<FilterDto> FilterList;
-    /**
-     * 是否在返回值中包含资源标签信息
-     */
-    @KsYunField(name = "IsContainTag")
-    private Boolean IsContainTag;
-    /**
-     * 多个标签的键
-     */
-    @KsYunField(name = "TagKey")
-    private List<String> TagKeyList;
-    /**
-     * 多个标签的键
-     */
-    @KsYunField(name = "TagKV")
-    private List<TagKVDto> TagKVList;
-    /**
-     * 单次调用可返回的最大条目数量
-     */
-    @KsYunField(name = "MaxResults")
-    private Integer MaxResults;
-    /**
-     * 获取另一页返回结果的 token.
-     */
-    @KsYunField(name = "NextToken")
-    private String NextToken;
-    /**
-     * 弹性IP的状态，已绑定(associate)，未绑定(disassociate)
-     */
-    @KsYunField(name = "State")
-    private String State;
-    /**
-     * IP版本
-     */
-    @KsYunField(name = "IpVersion")
-    private String IpVersion;
 
     @Data
     @ToString
@@ -83,6 +50,24 @@ public class DescribeAddressesRequest {
         private List<String> ValueList;
     }
 
+    /**
+     * 是否在返回值中包含资源标签信息
+     */
+    @KsYunField(name = "IsContainTag")
+    private Boolean IsContainTag;
+
+    /**
+     * 多个标签的键
+     */
+    @KsYunField(name = "TagKey")
+    private List<String> TagKeyList;
+
+    /**
+     * 多个标签的键
+     */
+    @KsYunField(name = "TagKV")
+    private List<TagKVDto> TagKVList;
+
     @Data
     @ToString
     public static class TagKVDto {
@@ -97,5 +82,29 @@ public class DescribeAddressesRequest {
         @KsYunField(name = "Value")
         private String Value;
     }
+
+    /**
+     * 单次调用可返回的最大条目数量
+     */
+    @KsYunField(name = "MaxResults")
+    private Integer MaxResults;
+
+    /**
+     * 获取另一页返回结果的 token.
+     */
+    @KsYunField(name = "NextToken")
+    private String NextToken;
+
+    /**
+     * 弹性IP的状态，已绑定(associate)，未绑定(disassociate)
+     */
+    @KsYunField(name = "State")
+    private String State;
+
+    /**
+     * IP版本
+     */
+    @KsYunField(name = "IpVersion")
+    private String IpVersion;
 
 }

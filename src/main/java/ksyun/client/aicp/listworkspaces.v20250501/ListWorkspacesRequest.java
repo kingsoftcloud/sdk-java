@@ -23,13 +23,13 @@ public class ListWorkspacesRequest {
     /**
      * 页码
      */
-    @KsYunField(name="page_index")
+    @KsYunField(name = "page_index")
     private Integer Page_index;
 
     /**
      * 每页条数
      */
-    @KsYunField(name="page_size")
+    @KsYunField(name = "page_size")
     private Integer Page_size;
 
 }

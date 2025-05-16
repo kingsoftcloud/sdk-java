@@ -9,29 +9,39 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname CenCidrPublishRequest
-* @Description 请求参数
-*/
+ * @Classname CenCidrPublishRequest
+ * @Description 请求参数
+ */
 @Data
-public class CenCidrPublishRequest{
-    /**网络实例的ID*/
-    @KsYunField(name="NetworkInstanceId")
+public class CenCidrPublishRequest {
+    /**
+     * 网络实例的ID
+     */
+    @KsYunField(name = "NetworkInstanceId")
     private String NetworkInstanceId;
 
-    /**网络实例类型*/
-    @KsYunField(name="InstanceType")
+    /**
+     * 网络实例类型
+     */
+    @KsYunField(name = "InstanceType")
     private String InstanceType;
 
-    /**网络路由的ID*/
-    @KsYunField(name="NetworkRouteId")
+    /**
+     * 网络路由的ID
+     */
+    @KsYunField(name = "NetworkRouteId")
     private List<String> NetworkRouteIdList;
 
-    /**网络实例发布的自定义网段*/
-    @KsYunField(name="SelfDefineCidr")
+    /**
+     * 网络实例发布的自定义网段
+     */
+    @KsYunField(name = "SelfDefineCidr")
     private List<String> SelfDefineCidrList;
 
-    /**CenId*/
-    @KsYunField(name="CenId")
+    /**
+     * CenId
+     */
+    @KsYunField(name = "CenId")
     private String CenId;
 
 }

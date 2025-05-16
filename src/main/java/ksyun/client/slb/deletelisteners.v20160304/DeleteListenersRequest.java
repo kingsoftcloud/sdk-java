@@ -9,13 +9,15 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname DeleteListenersRequest
-* @Description 请求参数
-*/
+ * @Classname DeleteListenersRequest
+ * @Description 请求参数
+ */
 @Data
-public class DeleteListenersRequest{
-    /**监听器的ID*/
-    @KsYunField(name="ListenerId")
+public class DeleteListenersRequest {
+    /**
+     * 监听器的ID
+     */
+    @KsYunField(name = "ListenerId")
     private String ListenerId;
 
 }

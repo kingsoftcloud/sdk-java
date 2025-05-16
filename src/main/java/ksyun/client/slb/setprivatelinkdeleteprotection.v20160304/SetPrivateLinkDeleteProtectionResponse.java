@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname SetPrivateLinkDeleteProtectionResponse
-* @Description SetPrivateLinkDeleteProtection 返回体
-*/
+ * @Classname SetPrivateLinkDeleteProtectionResponse
+ * @Description SetPrivateLinkDeleteProtection 返回体
+ */
 @Data
 @ToString
 public class SetPrivateLinkDeleteProtectionResponse extends BaseResponseModel {

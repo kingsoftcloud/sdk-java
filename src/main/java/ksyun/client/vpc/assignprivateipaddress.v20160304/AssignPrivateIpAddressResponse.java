@@ -5,6 +5,8 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.Set;
+
 /**
  * @Classname AssignPrivateIpAddressResponse
  * @Description AssignPrivateIpAddress 返回体

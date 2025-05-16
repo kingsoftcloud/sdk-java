@@ -23,7 +23,7 @@ public class ListNodeMetricsRequest {
     /**
      * 是否显示每张卡的具体信息，默认 true
      */
-    @KsYunField(name ="show_detail")
+    @KsYunField(name = "show_detail")
     private Boolean Show_detail;
 
     /**
@@ -32,8 +32,10 @@ public class ListNodeMetricsRequest {
     @KsYunField(name = "sort_by")
     private String Sort_by;
 
-    /**排序方式，default升序， desc 降序, asc 升序*/
-    @KsYunField(name="order")
+    /**
+     * 排序方式，default升序， desc 降序, asc 升序
+     */
+    @KsYunField(name = "order")
     private String Order;
 
 }

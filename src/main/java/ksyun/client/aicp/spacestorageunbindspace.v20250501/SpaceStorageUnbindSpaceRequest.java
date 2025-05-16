@@ -23,7 +23,7 @@ public class SpaceStorageUnbindSpaceRequest {
     /**
      * 空间ID
      */
-    @KsYunField(name="space_id")
+    @KsYunField(name = "space_id")
     private Integer Space_id;
 
 }

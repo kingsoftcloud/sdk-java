@@ -9,17 +9,21 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname SetPrivateLinkDeleteProtectionRequest
-* @Description 请求参数
-*/
+ * @Classname SetPrivateLinkDeleteProtectionRequest
+ * @Description 请求参数
+ */
 @Data
-public class SetPrivateLinkDeleteProtectionRequest{
-    /**实例的ID*/
-    @KsYunField(name="InstanceId")
+public class SetPrivateLinkDeleteProtectionRequest {
+    /**
+     * 实例的ID
+     */
+    @KsYunField(name = "InstanceId")
     private String InstanceId;
 
-    /**删除保护*/
-    @KsYunField(name="DeleteProtection")
+    /**
+     * 删除保护
+     */
+    @KsYunField(name = "DeleteProtection")
     private String DeleteProtection;
 
 }

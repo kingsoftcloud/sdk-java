@@ -1,7 +1,12 @@
 package ksyun.client.kce2.deletecluster.v20230101;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname DeleteClusterRequest
@@ -9,12 +14,6 @@ import lombok.Data;
  */
 @Data
 public class DeleteClusterRequest {
-    /**
-     * 集群名称
-     */
-    @KsYunField(name = "ClusterName")
-    private String ClusterName;
-
     /**
      * 集群ID
      */

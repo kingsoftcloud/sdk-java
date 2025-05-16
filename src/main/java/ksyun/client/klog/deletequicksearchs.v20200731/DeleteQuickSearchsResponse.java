@@ -5,6 +5,8 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.Set;
+
 /**
  * @Classname DeleteQuickSearchsResponse
  * @Description DeleteQuickSearchs 返回体

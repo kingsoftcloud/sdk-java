@@ -29,23 +29,31 @@ public class DescribeSplitItemBillDetailsRequest {
     /**
      * 统计周期
      */
-    @KsYunField(name="StatisticType")
+    @KsYunField(name = "StatisticType")
     private Integer StatisticType;
 
-    /**计费类别*/
+    /**
+     * 计费类别
+     */
     @KsYunField(name = "PayType")
     private Integer PayType;
 
-    /**主账号所托管的账号Id*/
-    @KsYunField(name="SubAccountId")
+    /**
+     * 主账号所托管的账号Id
+     */
+    @KsYunField(name = "SubAccountId")
     private Integer SubAccountId;
 
-    /**第几页*/
+    /**
+     * 第几页
+     */
     @KsYunField(name = "Page")
     private Integer Page;
 
-    /**每页条数*/
-    @KsYunField(name="Size")
+    /**
+     * 每页条数
+     */
+    @KsYunField(name = "Size")
     private String Size;
 
 }

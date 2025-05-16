@@ -23,17 +23,19 @@ public class CopyImageRequest {
     /**
      * 自定义镜像ID
      */
-    @KsYunField(name="ImageId")
+    @KsYunField(name = "ImageId")
     private String ImageId;
 
     /**
      * 目标机房
      */
-    @KsYunField(name="DestinationRegion")
+    @KsYunField(name = "DestinationRegion")
     private String DestinationRegion;
 
-    /**是否复制Tag,yes|no*/
-    @KsYunField(name="CopyTag")
+    /**
+     * 是否复制Tag,yes|no
+     */
+    @KsYunField(name = "CopyTag")
     private String CopyTag;
 
 }

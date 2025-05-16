@@ -1,8 +1,12 @@
 package ksyun.client.ked.strategyruleedit.v20250501;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname StrategyruleeditRequest
@@ -16,11 +20,6 @@ public class StrategyruleeditRequest {
     @KsYunField(name = "policies")
 
     private PoliciesDto PoliciesList;
-    /**
-     * 策略组 id
-     */
-    @KsYunField(name = "securityGroupId")
-    private String SecurityGroupId;
 
     @Data
     @ToString
@@ -60,5 +59,11 @@ public class StrategyruleeditRequest {
         @KsYunField(name = "protocol")
         private String Protocol;
     }
+
+    /**
+     * 策略组 id
+     */
+    @KsYunField(name = "securityGroupId")
+    private String SecurityGroupId;
 
 }

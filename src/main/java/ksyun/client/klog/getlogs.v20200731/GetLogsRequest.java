@@ -1,7 +1,12 @@
 package ksyun.client.klog.getlogs.v20200731;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname GetLogsRequest
@@ -16,7 +21,7 @@ public class GetLogsRequest {
     private String ProjectName;
 
     /**
-     * 日志池名称，多个日志池按逗号（,）分隔
+     * 日志池名称
      */
     @KsYunField(name = "LogPoolName")
     private String LogPoolName;
@@ -34,16 +39,24 @@ public class GetLogsRequest {
     private Integer To;
 
     /**
-     * 查询分析语法。关于查询分析的详细语法，详见[查询语法](https://docs.ksyun.com/documents/37865)，不填的情况下 返回原始日志
+     * 查询分析语法。关于查询分析的详细语法，详见查询语法，不填的情况下 返回原始日志
      */
     @KsYunField(name = "Query")
     private String Query;
 
     /**
-     * 日志池id
+     * 偏移页数，从0开始
+     * 仅支持运算符语法
      */
-    @KsYunField(name = "LogPoolId")
-    private String LogPoolId;
+    @KsYunField(name = "Offset")
+    private Integer Offset;
+
+    /**
+     * 查询结果条数
+     * 仅支持运算符语法
+     */
+    @KsYunField(name = "Size")
+    private Integer Size;
 
     /**
      * 如果需要查询结果展示日志趋势，则需将该字段设为true。默认不会展示日志趋势。
@@ -56,23 +69,5 @@ public class GetLogsRequest {
      */
     @KsYunField(name = "Interval")
     private String Interval;
-
-    /**
-     * 用于进行结果排序的字段，List<Map<String,String>>，key是需要排序的字段value是排序方式，值为asc或者descValuesKey
-     */
-    @KsYunField(name = "SortBy")
-    private String SortBy;
-
-    /**
-     * 表示页数
-     */
-    @KsYunField(name = "Offset")
-    private Integer Offset;
-
-    /**
-     * 分页大小
-     */
-    @KsYunField(name = "Size")
-    private Integer Size;
 
 }

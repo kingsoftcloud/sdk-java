@@ -9,13 +9,15 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname DeleteBackendServerGroupRequest
-* @Description 请求参数
-*/
+ * @Classname DeleteBackendServerGroupRequest
+ * @Description 请求参数
+ */
 @Data
-public class DeleteBackendServerGroupRequest{
-    /**后端服务组的ID*/
-    @KsYunField(name="BackendServerGroupId")
+public class DeleteBackendServerGroupRequest {
+    /**
+     * 后端服务组的ID
+     */
+    @KsYunField(name = "BackendServerGroupId")
     private String BackendServerGroupId;
 
 }

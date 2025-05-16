@@ -4,17 +4,17 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import common.BaseClient;
 import common.Credential;
-import common.aws.AWS4EncryptionFactory;
-import common.utils.HttpClientUtils;
-import common.utils.SignUtils;
+import common.RpcRequestContentModel;
+import common.utils.RequestHelpUtils;
+import common.utils.RpcRequestClient;
 import lombok.extern.slf4j.Slf4j;
-import java.util.HashMap;
-import java.util.Map;
+
+import java.util.*;
 
 /**
-* @Classname CreateSlbRuleClient
-* @Description 创建域名规则
-*/
+ * @Classname CreateSlbRuleClient
+ * @Description 创建域名规则
+ */
 @Slf4j
 public class CreateSlbRuleClient extends BaseClient {
     private final static String service = "slb";
@@ -57,54 +57,41 @@ public class CreateSlbRuleClient extends BaseClient {
      * @throws Exception
      */
     public CreateSlbRuleResponse doPost(String path, CreateSlbRuleRequest requestObj, Map<String, String> head) throws Exception {
-         if (head == null) {
-             head = new HashMap<>();
-         }
-        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
-        //参数配置
-        JSONObject requestParams = null;
-        if (head.get("Content-Type").equalsIgnoreCase("application/json")){
-             requestParams = getPostRawRequestParams(requestObj);
-        }else {
-             requestParams = getSimpleRequestParams(requestObj);
-        }
-
-        //aws4 签名
-        enhanceAws4Signature(head, requestParams, credential, "post");
-
-        String response = HttpClientUtils.httpPost(path, requestParams, head);
-        log.info("doPost end,path:{},params:{},head:{}", path, requestParams, head);
+        final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        String response = doRpc(path, requestObj, requestHeaders, "post");
         return JSON.parseObject(response, CreateSlbRuleResponse.class);
     }
 
     /**
-    * post 请求
-    * @param path
-    * @param requestObj
-    * @return
-    * @throws Exception
-    */
+     * post 请求
+     *
+     * @param path
+     * @param requestObj
+     * @return
+     * @throws Exception
+     */
     public CreateSlbRuleResponse doPostRaw(String path, CreateSlbRuleRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
-        return doPost(path, requestObj, head);
+        return doPostRaw(path, requestObj, head);
     }
 
     /**
-    * post 请求
-    *
-    * @param path
-    * @param requestObj
-    * @return
-    * @throws Exception
-    */
+     * post 请求
+     *
+     * @param path
+     * @param requestObj
+     * @return
+     * @throws Exception
+     */
     public CreateSlbRuleResponse doPostRaw(String path, CreateSlbRuleRequest requestObj, Map<String, String> head) throws Exception {
-        if (head == null) {
-            head = new HashMap<>();
-        }
-        head.put("Content-Type", "application/x-www-form-urlencoded");
-        return doPost(path, requestObj, head);
+        final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        String response = doRpc(path, requestObj, requestHeaders, "post");
+        return JSON.parseObject(response, CreateSlbRuleResponse.class);
     }
+
     /**
      * get 请求
      *
@@ -116,7 +103,23 @@ public class CreateSlbRuleClient extends BaseClient {
     public CreateSlbRuleResponse doGet(String path, CreateSlbRuleRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
-        return doGet(path, requestObj, null);
+        return doGet(path, requestObj, head);
+    }
+
+    /**
+     * get 请求
+     *
+     * @param path
+     * @param requestObj
+     * @param head
+     * @return
+     * @throws Exception
+     */
+    public CreateSlbRuleResponse doGet(String path, CreateSlbRuleRequest requestObj, Map<String, String> head) throws Exception {
+        final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        String response = doRpc(path, requestObj, requestHeaders, "get");
+        return JSON.parseObject(response, CreateSlbRuleResponse.class);
     }
 
     /**
@@ -130,7 +133,7 @@ public class CreateSlbRuleClient extends BaseClient {
     public CreateSlbRuleResponse doDelete(String path, CreateSlbRuleRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
-        return doDelete(path, requestObj, null);
+        return doDelete(path, requestObj, head);
     }
 
     /**
@@ -143,15 +146,10 @@ public class CreateSlbRuleClient extends BaseClient {
      * @throws Exception
      */
     public CreateSlbRuleResponse doDelete(String path, CreateSlbRuleRequest requestObj, Map<String, String> head) throws Exception {
-        if (head == null) {
-            head = new HashMap<>();
-        }
-        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
-        JSONObject requestParams = getRequestParams(requestObj);
-        String response = HttpClientUtils.httpDelete(path, requestParams, head);
-        log.info("doDelete end,path:{},params:{},head:{}", path, requestParams, head);
-        CreateSlbRuleResponse CreateSlbRuleResponse = JSON.parseObject(response, CreateSlbRuleResponse.class);
-        return CreateSlbRuleResponse;
+        final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        String response = doRpc(path, requestObj, requestHeaders, "delete");
+        return JSON.parseObject(response, CreateSlbRuleResponse.class);
     }
 
 
@@ -166,7 +164,7 @@ public class CreateSlbRuleClient extends BaseClient {
     public CreateSlbRuleResponse doPut(String path, CreateSlbRuleRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
-        return doPut(path, requestObj, null);
+        return doPut(path, requestObj, head);
     }
 
     /**
@@ -179,19 +177,14 @@ public class CreateSlbRuleClient extends BaseClient {
      * @throws Exception
      */
     public CreateSlbRuleResponse doPut(String path, CreateSlbRuleRequest requestObj, Map<String, String> head) throws Exception {
-        if (head == null) {
-            head = new HashMap<>();
-        }
-        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
-        JSONObject requestParams = getRequestParams(requestObj);
-        String response = HttpClientUtils.httpPut(path, requestParams, head);
-        log.info("httpPut end,path:{},params:{},head:{}", path, requestParams, head);
-        CreateSlbRuleResponse CreateSlbRuleResponse = JSON.parseObject(response, CreateSlbRuleResponse.class);
-        return CreateSlbRuleResponse;
+        final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        String response = doRpc(path, requestObj, requestHeaders, "put");
+        return JSON.parseObject(response, CreateSlbRuleResponse.class);
     }
 
     /**
-     * get 请求
+     * rpc
      *
      * @param path
      * @param requestObj
@@ -199,79 +192,49 @@ public class CreateSlbRuleClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CreateSlbRuleResponse doGet(String path, CreateSlbRuleRequest requestObj, Map<String, String> head) throws Exception {
-        if (head == null) {
-            head = new HashMap<>();
-        }
-        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
-        //参数配置
-        JSONObject requestParams = getSimpleRequestParams(requestObj);
+    private String doRpc(String path, CreateSlbRuleRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
+        //断言
+        Objects.requireNonNull(path, "path cannot be null");
+        Objects.requireNonNull(requestObj, "requestObj cannot be null");
+        Objects.requireNonNull(requestMethod, "requestMethod cannot be null");
+        Objects.requireNonNull(head, "head cannot be null");
 
-        //aws4 签名
-        enhanceAws4Signature(head, requestParams, credential, "get");
+        //请求上下文
+        RpcRequestContentModel requestContentModel = RpcRequestContentModel.builder()
+                .action(action)
+                .version(version)
+                .service(service)
+                .region(credential.getRegion())
+                .accessKeyId(credential.getSecretKey())
+                .secretAccessKey(credential.getSignStr())
+                .build();
 
-        String response = HttpClientUtils.httpGet(path, requestParams, head);
-        log.info("doGet end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, CreateSlbRuleResponse.class);
+        // 根据内容类型设置请求体
+        String contentType = head.getOrDefault("Content-Type", "application/x-www-form-urlencoded");
+        JSONObject requestParam = getRequestParam(requestObj, contentType);
+
+        //uri
+        path = path + "?Action=" + action + "&Version=" + version;
+
+        //发起请求
+        String response = new RpcRequestClient(requestContentModel).beginRpcRequest(path, requestMethod, requestParam, head);
+        log.info("doRpc end,path:{},params:{},head:{}", path, JSONObject.toJSON(requestParam), head);
+        return response;
+
     }
 
 
-    /**
-     * 构造请求参数
-     *
-     * @param requestObj
-     * @return
-     */
-    private JSONObject getRequestParams(CreateSlbRuleRequest requestObj) throws Exception {
-        JSONObject requestParams = new JSONObject();
-        //设置证书
-        getCommonParams(credential, requestParams);
-        //设置接口属性
-        requestParams.put("Service", service);
-        requestParams.put("Action", action);
-        requestParams.put("Version", version);
-
-        //设置请求体请求参数
-        setRequestField(requestObj,requestParams);
-
-        //签名
-        String signature = SignUtils.signature(requestParams, credential.getSignStr());
-        requestParams.put("Signature", signature);
-        return requestParams;
+    private JSONObject getRequestParam(CreateSlbRuleRequest requestObj, String contentType) throws Exception {
+        //请求参数
+        if (contentType.equalsIgnoreCase("application/json")) {
+            return getPostRawRequestParams(requestObj);
+        }
+        return getSimpleRequestParams(requestObj);
     }
 
-    private static void enhanceAws4Signature(Map<String, String> head, Map<String, Object> params, Credential credential, String requestMethod) {
-        AWS4EncryptionFactory aws4EncryptionFactory = new AWS4EncryptionFactory(credential.getSecretKey(), credential.getSignStr(), service, credential.getRegion());
-
-        //设置请求参数
-        if (params != null) {
-            params.entrySet().forEach(entry -> {
-                aws4EncryptionFactory.setParamMap(entry.getKey(), entry.getValue());
-            });
-        }
-
-        //设置请求头
-        if (head != null) {
-            head.entrySet().forEach(entry -> {
-                aws4EncryptionFactory.setHeadMap(entry.getKey(), entry.getValue());
-            });
-        }
-
-        //aws 加密
-        aws4EncryptionFactory.generateSignature(requestMethod);
-
-        //回填aws4 签名
-        String authorization = aws4EncryptionFactory.getHead().get(AWS4EncryptionFactory.X_Authorization);
-        String xAmzDate = aws4EncryptionFactory.getHead().get(AWS4EncryptionFactory.X_AMZ_DATA);
-        head.put(AWS4EncryptionFactory.X_Authorization, authorization);
-        head.put(AWS4EncryptionFactory.X_AMZ_DATA, xAmzDate);
-    }
 
     private JSONObject getSimpleRequestParams(CreateSlbRuleRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
-        //设置接口属性
-        requestParams.put("Action", action);
-        requestParams.put("Version", version);
 
         //设置请求体请求参数
         setRequestField(requestObj, requestParams);
@@ -280,9 +243,6 @@ public class CreateSlbRuleClient extends BaseClient {
 
     private JSONObject getPostRawRequestParams(CreateSlbRuleRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
-        //设置接口属性
-        requestParams.put("Action", action);
-        requestParams.put("Version", version);
 
         //设置请求体请求参数
         setRequestFieldForPostRaw(requestObj, requestParams);

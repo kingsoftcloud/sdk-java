@@ -1,10 +1,12 @@
 package ksyun.client.tagv2.listresources.v20200901;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname ListResourcesRequest
@@ -45,16 +47,6 @@ public class ListResourcesRequest {
     /***/
     @KsYunField(name = "TagFilters", type = 2)
     private List<TagFiltersDto> TagFiltersList;
-    /**
-     * 页码
-     */
-    @KsYunField(name = "Page")
-    private Integer Page;
-    /**
-     * 分页数
-     */
-    @KsYunField(name = "PageSize")
-    private Integer PageSize;
 
     @Data
     @ToString
@@ -69,5 +61,17 @@ public class ListResourcesRequest {
         @KsYunField(name = "Value", type = 2)
         private List<String> ValueList;
     }
+
+    /**
+     * 页码
+     */
+    @KsYunField(name = "Page")
+    private Integer Page;
+
+    /**
+     * 分页数
+     */
+    @KsYunField(name = "PageSize")
+    private Integer PageSize;
 
 }

@@ -1,7 +1,12 @@
 package ksyun.client.klog.createproject.v20200731;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname CreateProjectRequest
@@ -22,21 +27,9 @@ public class CreateProjectRequest {
     private String Description;
 
     /**
-     * 所属地域
-     */
-    @KsYunField(name = "Region")
-    private String Region;
-
-    /**
-     * 项目id，不填则默认为默认项目id
+     * 项目制ID，缺省时为默认项目
      */
     @KsYunField(name = "IamProjectId")
     private Integer IamProjectId;
-
-    /**
-     * 项目名称，不填则为默认项目名称，以IamProjectId为准
-     */
-    @KsYunField(name = "IamProjectName")
-    private String IamProjectName;
 
 }

@@ -9,13 +9,15 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname RejectPrivateLinkRequest
-* @Description 请求参数
-*/
+ * @Classname RejectPrivateLinkRequest
+ * @Description 请求参数
+ */
 @Data
-public class RejectPrivateLinkRequest{
-    /**PrivateLink的ID*/
-    @KsYunField(name="PrivateLinkId")
+public class RejectPrivateLinkRequest {
+    /**
+     * PrivateLink的ID
+     */
+    @KsYunField(name = "PrivateLinkId")
     private String PrivateLinkId;
 
 }

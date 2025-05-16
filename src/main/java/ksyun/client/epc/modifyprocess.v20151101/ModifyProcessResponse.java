@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname ModifyProcessResponse
-* @Description ModifyProcess 返回体
-*/
+ * @Classname ModifyProcessResponse
+ * @Description ModifyProcess 返回体
+ */
 @Data
 @ToString
 public class ModifyProcessResponse extends BaseResponseModel {

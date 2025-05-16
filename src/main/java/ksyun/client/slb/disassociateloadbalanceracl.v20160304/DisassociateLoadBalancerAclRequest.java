@@ -9,13 +9,15 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname DisassociateLoadBalancerAclRequest
-* @Description 请求参数
-*/
+ * @Classname DisassociateLoadBalancerAclRequest
+ * @Description 请求参数
+ */
 @Data
-public class DisassociateLoadBalancerAclRequest{
-    /**监听器的ID*/
-    @KsYunField(name="ListenerId")
+public class DisassociateLoadBalancerAclRequest {
+    /**
+     * 监听器的ID
+     */
+    @KsYunField(name = "ListenerId")
     private String ListenerId;
 
 }

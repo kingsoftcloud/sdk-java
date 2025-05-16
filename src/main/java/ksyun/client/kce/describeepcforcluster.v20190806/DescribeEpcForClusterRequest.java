@@ -29,21 +29,6 @@ public class DescribeEpcForClusterRequest {
     /***/
     @KsYunField(name = "Filter")
     private List<FilterDto> FilterList;
-    /**
-     * 分页标识，单次调用未返回全部实例时，标记下次调用的返回值的起点，默认值是0。
-     */
-    @KsYunField(name = "Marker")
-    private Integer Marker;
-    /**
-     * 单次调用所返回的最大实例数目，默认20， 范围(1-50]。
-     */
-    @KsYunField(name = "MaxResults")
-    private Integer MaxResults;
-    /**
-     * 操作类型，可取值：AddNode，传递该值后，返回的数据则自动增加状态过滤，只返回Running、HotStandby状态的EPC实例
-     */
-    @KsYunField(name = "OperatorType")
-    private String OperatorType;
 
     @Data
     @ToString
@@ -57,5 +42,23 @@ public class DescribeEpcForClusterRequest {
         @KsYunField(name = "Value")
         private List<String> ValueList;
     }
+
+    /**
+     * 分页标识，单次调用未返回全部实例时，标记下次调用的返回值的起点，默认值是0。
+     */
+    @KsYunField(name = "Marker")
+    private Integer Marker;
+
+    /**
+     * 单次调用所返回的最大实例数目，默认20， 范围(1-50]。
+     */
+    @KsYunField(name = "MaxResults")
+    private Integer MaxResults;
+
+    /**
+     * 操作类型，可取值：AddNode，传递该值后，返回的数据则自动增加状态过滤，只返回Running、HotStandby状态的EPC实例
+     */
+    @KsYunField(name = "OperatorType")
+    private String OperatorType;
 
 }

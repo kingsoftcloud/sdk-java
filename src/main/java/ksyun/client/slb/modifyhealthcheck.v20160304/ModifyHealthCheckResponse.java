@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname ModifyHealthCheckResponse
-* @Description ModifyHealthCheck 返回体
-*/
+ * @Classname ModifyHealthCheckResponse
+ * @Description ModifyHealthCheck 返回体
+ */
 @Data
 @ToString
 public class ModifyHealthCheckResponse extends BaseResponseModel {

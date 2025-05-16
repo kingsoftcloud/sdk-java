@@ -4,13 +4,12 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import common.BaseClient;
 import common.Credential;
-import common.aws.AWS4EncryptionFactory;
-import common.utils.HttpClientUtils;
-import common.utils.SignUtils;
+import common.RpcRequestContentModel;
+import common.utils.RequestHelpUtils;
+import common.utils.RpcRequestClient;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @Classname UserslistClient
@@ -26,39 +25,13 @@ public class UserslistClient extends BaseClient {
     /**
      * 证书
      */
-    private final Credential credential;
+    private Credential credential;
 
 
     public UserslistClient(Credential credential) {
         this.credential = credential;
     }
 
-    private static void enhanceAws4Signature(Map<String, String> head, Map<String, Object> params, Credential credential, String requestMethod) {
-        AWS4EncryptionFactory aws4EncryptionFactory = new AWS4EncryptionFactory(credential.getSecretKey(), credential.getSignStr(), service, credential.getRegion());
-
-        //设置请求参数
-        if (params != null) {
-            params.entrySet().forEach(entry -> {
-                aws4EncryptionFactory.setParamMap(entry.getKey(), entry.getValue());
-            });
-        }
-
-        //设置请求头
-        if (head != null) {
-            head.entrySet().forEach(entry -> {
-                aws4EncryptionFactory.setHeadMap(entry.getKey(), entry.getValue());
-            });
-        }
-
-        //aws 加密
-        aws4EncryptionFactory.generateSignature(requestMethod);
-
-        //回填aws4 签名
-        String authorization = aws4EncryptionFactory.getHead().get(AWS4EncryptionFactory.X_Authorization);
-        String xAmzDate = aws4EncryptionFactory.getHead().get(AWS4EncryptionFactory.X_AMZ_DATA);
-        head.put(AWS4EncryptionFactory.X_Authorization, authorization);
-        head.put(AWS4EncryptionFactory.X_AMZ_DATA, xAmzDate);
-    }
 
     /**
      * post请求
@@ -84,23 +57,9 @@ public class UserslistClient extends BaseClient {
      * @throws Exception
      */
     public UserslistResponse doPost(String path, UserslistRequest requestObj, Map<String, String> head) throws Exception {
-        if (head == null) {
-            head = new HashMap<>();
-        }
-        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
-        //参数配置
-        JSONObject requestParams = null;
-        if (head.get("Content-Type").equalsIgnoreCase("application/json")) {
-            requestParams = getPostRawRequestParams(requestObj);
-        } else {
-            requestParams = getSimpleRequestParams(requestObj);
-        }
-
-        //aws4 签名
-        enhanceAws4Signature(head, requestParams, credential, "post");
-
-        String response = HttpClientUtils.httpPost(path, requestParams, head);
-        log.info("doPost end,path:{},params:{},head:{}", path, requestParams, head);
+        final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        String response = doRpc(path, requestObj, requestHeaders, "post");
         return JSON.parseObject(response, UserslistResponse.class);
     }
 
@@ -115,7 +74,7 @@ public class UserslistClient extends BaseClient {
     public UserslistResponse doPostRaw(String path, UserslistRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
-        return doPost(path, requestObj, head);
+        return doPostRaw(path, requestObj, head);
     }
 
     /**
@@ -127,11 +86,10 @@ public class UserslistClient extends BaseClient {
      * @throws Exception
      */
     public UserslistResponse doPostRaw(String path, UserslistRequest requestObj, Map<String, String> head) throws Exception {
-        if (head == null) {
-            head = new HashMap<>();
-        }
-        head.put("Content-Type", "application/x-www-form-urlencoded");
-        return doPost(path, requestObj, head);
+        final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        String response = doRpc(path, requestObj, requestHeaders, "post");
+        return JSON.parseObject(response, UserslistResponse.class);
     }
 
     /**
@@ -145,7 +103,23 @@ public class UserslistClient extends BaseClient {
     public UserslistResponse doGet(String path, UserslistRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
-        return doGet(path, requestObj, null);
+        return doGet(path, requestObj, head);
+    }
+
+    /**
+     * get 请求
+     *
+     * @param path
+     * @param requestObj
+     * @param head
+     * @return
+     * @throws Exception
+     */
+    public UserslistResponse doGet(String path, UserslistRequest requestObj, Map<String, String> head) throws Exception {
+        final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        String response = doRpc(path, requestObj, requestHeaders, "get");
+        return JSON.parseObject(response, UserslistResponse.class);
     }
 
     /**
@@ -159,7 +133,7 @@ public class UserslistClient extends BaseClient {
     public UserslistResponse doDelete(String path, UserslistRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
-        return doDelete(path, requestObj, null);
+        return doDelete(path, requestObj, head);
     }
 
     /**
@@ -172,16 +146,12 @@ public class UserslistClient extends BaseClient {
      * @throws Exception
      */
     public UserslistResponse doDelete(String path, UserslistRequest requestObj, Map<String, String> head) throws Exception {
-        if (head == null) {
-            head = new HashMap<>();
-        }
-        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
-        JSONObject requestParams = getRequestParams(requestObj);
-        String response = HttpClientUtils.httpDelete(path, requestParams, head);
-        log.info("doDelete end,path:{},params:{},head:{}", path, requestParams, head);
-        UserslistResponse UserslistResponse = JSON.parseObject(response, UserslistResponse.class);
-        return UserslistResponse;
+        final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        String response = doRpc(path, requestObj, requestHeaders, "delete");
+        return JSON.parseObject(response, UserslistResponse.class);
     }
+
 
     /**
      * doPut 请求
@@ -194,7 +164,7 @@ public class UserslistClient extends BaseClient {
     public UserslistResponse doPut(String path, UserslistRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
-        return doPut(path, requestObj, null);
+        return doPut(path, requestObj, head);
     }
 
     /**
@@ -207,19 +177,14 @@ public class UserslistClient extends BaseClient {
      * @throws Exception
      */
     public UserslistResponse doPut(String path, UserslistRequest requestObj, Map<String, String> head) throws Exception {
-        if (head == null) {
-            head = new HashMap<>();
-        }
-        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
-        JSONObject requestParams = getRequestParams(requestObj);
-        String response = HttpClientUtils.httpPut(path, requestParams, head);
-        log.info("httpPut end,path:{},params:{},head:{}", path, requestParams, head);
-        UserslistResponse UserslistResponse = JSON.parseObject(response, UserslistResponse.class);
-        return UserslistResponse;
+        final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        String response = doRpc(path, requestObj, requestHeaders, "put");
+        return JSON.parseObject(response, UserslistResponse.class);
     }
 
     /**
-     * get 请求
+     * rpc
      *
      * @param path
      * @param requestObj
@@ -227,51 +192,49 @@ public class UserslistClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public UserslistResponse doGet(String path, UserslistRequest requestObj, Map<String, String> head) throws Exception {
-        if (head == null) {
-            head = new HashMap<>();
+    private String doRpc(String path, UserslistRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
+        //断言
+        Objects.requireNonNull(path, "path cannot be null");
+        Objects.requireNonNull(requestObj, "requestObj cannot be null");
+        Objects.requireNonNull(requestMethod, "requestMethod cannot be null");
+        Objects.requireNonNull(head, "head cannot be null");
+
+        //请求上下文
+        RpcRequestContentModel requestContentModel = RpcRequestContentModel.builder()
+                .action(action)
+                .version(version)
+                .service(service)
+                .region(credential.getRegion())
+                .accessKeyId(credential.getSecretKey())
+                .secretAccessKey(credential.getSignStr())
+                .build();
+
+        // 根据内容类型设置请求体
+        String contentType = head.getOrDefault("Content-Type", "application/x-www-form-urlencoded");
+        JSONObject requestParam = getRequestParam(requestObj, contentType);
+
+        //uri
+        path = path + "?Action=" + action + "&Version=" + version;
+
+        //发起请求
+        String response = new RpcRequestClient(requestContentModel).beginRpcRequest(path, requestMethod, requestParam, head);
+        log.info("doRpc end,path:{},params:{},head:{}", path, JSONObject.toJSON(requestParam), head);
+        return response;
+
+    }
+
+
+    private JSONObject getRequestParam(UserslistRequest requestObj, String contentType) throws Exception {
+        //请求参数
+        if (contentType.equalsIgnoreCase("application/json")) {
+            return getPostRawRequestParams(requestObj);
         }
-        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
-        //参数配置
-        JSONObject requestParams = getSimpleRequestParams(requestObj);
-
-        //aws4 签名
-        enhanceAws4Signature(head, requestParams, credential, "get");
-
-        String response = HttpClientUtils.httpGet(path, requestParams, head);
-        log.info("doGet end,path:{},params:{},head:{}", path, requestParams, head);
-        return JSON.parseObject(response, UserslistResponse.class);
+        return getSimpleRequestParams(requestObj);
     }
 
-    /**
-     * 构造请求参数
-     *
-     * @param requestObj
-     * @return
-     */
-    private JSONObject getRequestParams(UserslistRequest requestObj) throws Exception {
-        JSONObject requestParams = new JSONObject();
-        //设置证书
-        getCommonParams(credential, requestParams);
-        //设置接口属性
-        requestParams.put("Service", service);
-        requestParams.put("Action", action);
-        requestParams.put("Version", version);
-
-        //设置请求体请求参数
-        setRequestField(requestObj, requestParams);
-
-        //签名
-        String signature = SignUtils.signature(requestParams, credential.getSignStr());
-        requestParams.put("Signature", signature);
-        return requestParams;
-    }
 
     private JSONObject getSimpleRequestParams(UserslistRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
-        //设置接口属性
-        requestParams.put("Action", action);
-        requestParams.put("Version", version);
 
         //设置请求体请求参数
         setRequestField(requestObj, requestParams);
@@ -280,9 +243,6 @@ public class UserslistClient extends BaseClient {
 
     private JSONObject getPostRawRequestParams(UserslistRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
-        //设置接口属性
-        requestParams.put("Action", action);
-        requestParams.put("Version", version);
 
         //设置请求体请求参数
         setRequestFieldForPostRaw(requestObj, requestParams);

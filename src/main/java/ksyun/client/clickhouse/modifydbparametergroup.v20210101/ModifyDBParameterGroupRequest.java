@@ -1,10 +1,12 @@
 package ksyun.client.clickhouse.modifydbparametergroup.v20210101;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname ModifyDBParameterGroupRequest
@@ -29,15 +31,16 @@ public class ModifyDBParameterGroupRequest {
      */
     @KsYunField(name = "Parameters")
     private List<ParametersDto> ParametersList;
-    /**
-     * 参数类型。可选：Users，Config。
-     */
-    @KsYunField(name = "ConfigType")
-    private String ConfigType;
 
     @Data
     @ToString
     public static class ParametersDto {
     }
+
+    /**
+     * 参数类型。可选：Users，Config。
+     */
+    @KsYunField(name = "ConfigType")
+    private String ConfigType;
 
 }

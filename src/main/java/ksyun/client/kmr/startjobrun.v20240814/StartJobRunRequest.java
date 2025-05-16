@@ -1,10 +1,12 @@
 package ksyun.client.kmr.startjobrun.v20240814;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname StartJobRunRequest
@@ -80,7 +82,7 @@ public class StartJobRunRequest {
          * Java作业的主类，其中包含启动的main函数
          */
         @KsYunField(name = "Class")
-        private String ClassField;
+        private String ClassParam;
         /**
          * 作业应用程序代码的资源文件路径
          */

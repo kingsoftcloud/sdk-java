@@ -1,10 +1,12 @@
 package ksyun.client.krds.modifydbparametergroup.v20160701;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname ModifyDBParameterGroupRequest
@@ -23,16 +25,6 @@ public class ModifyDBParameterGroupRequest {
      */
     @KsYunField(name = "Parameters")
     private List<ParametersDto> ParametersList;
-    /**
-     * 参数组名称	请勿修改实例唯一参数组；参数组名-参数值/参数组名称/参数组描述，至少填写一项
-     */
-    @KsYunField(name = "DBParameterGroupName")
-    private String DBParameterGroupName;
-    /**
-     * 参数组描述	请勿修改实例唯一参数组；参数组名-参数值/参数组名称/参数组描述，至少填写一项
-     */
-    @KsYunField(name = "Description")
-    private String Description;
 
     @Data
     @ToString
@@ -48,5 +40,17 @@ public class ModifyDBParameterGroupRequest {
         @KsYunField(name = "Value")
         private String Value;
     }
+
+    /**
+     * 参数组名称	请勿修改实例唯一参数组；参数组名-参数值/参数组名称/参数组描述，至少填写一项
+     */
+    @KsYunField(name = "DBParameterGroupName")
+    private String DBParameterGroupName;
+
+    /**
+     * 参数组描述	请勿修改实例唯一参数组；参数组名-参数值/参数组名称/参数组描述，至少填写一项
+     */
+    @KsYunField(name = "Description")
+    private String Description;
 
 }

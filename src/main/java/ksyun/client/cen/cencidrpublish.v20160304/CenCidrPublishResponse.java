@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname CenCidrPublishResponse
-* @Description CenCidrPublish 返回体
-*/
+ * @Classname CenCidrPublishResponse
+ * @Description CenCidrPublish 返回体
+ */
 @Data
 @ToString
 public class CenCidrPublishResponse extends BaseResponseModel {

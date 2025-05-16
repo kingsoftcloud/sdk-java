@@ -1,10 +1,12 @@
 package ksyun.client.kec.runinstances.v20160304;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * @Classname RunInstancesRequest
@@ -107,152 +109,6 @@ public class RunInstancesRequest {
      */
     @KsYunField(name = "DataDisk")
     private List<DataDiskDto> DataDiskList;
-    /**
-     * 辅网卡
-     */
-    @KsYunField(name = "NetworkInterface")
-    private List<NetworkInterfaceDto> NetworkInterfaceList;
-    /**
-     * 用户自定义数据
-     */
-    @KsYunField(name = "UserData")
-    private String UserData;
-    /**
-     * 系统盘
-     */
-    @KsYunField(name = "SystemDisk")
-
-    private SystemDiskDto SystemDiskList;
-    /**
-     * 实例启动模版ID，如填写了此项，则启动模板中已包含的RunInstances其他参数不生效，启动模板未指定的参数若调用RunInstances时额外传入则可生效，如果批量创建，实例名称后缀依然存在。【传modelId，使用默认版本。传modelId和modelVersion，使用传递的版本】
-     * 示例值：3f0d6229-ed2d-4c9c-8554-b9433517cf8b
-     */
-    @KsYunField(name = "ModelId")
-    private String ModelId;
-    /**
-     * 实例启动模板版本号。如不指定，则采用默认版本号
-     */
-    @KsYunField(name = "ModelVersion")
-    private Integer ModelVersion;
-    /**
-     * 整机镜像所开云盘数据盘的类型
-     */
-    @KsYunField(name = "AssembledImageDataDiskType")
-    private String AssembledImageDataDiskType;
-    /**
-     * 整机镜像是否展开镜像中的数据盘
-     */
-    @KsYunField(name = "AutoCreateEbs")
-    private Boolean AutoCreateEbs;
-    /**
-     * 弹性IP的链路类型的ID
-     */
-    @KsYunField(name = "LineId")
-    private String LineId;
-    /**
-     * 弹性IP的带宽，1，如果购买EIP，AddressBandWidth、LineId、AddressChargeType三个接口参数必须同时存在，如有其中任意一个接口参数，判断是否存在其他两个参数；2，如果选择预付费计费方式，必须有购买时长参数； |
-     */
-    @KsYunField(name = "AddressBandWidth")
-    private Integer AddressBandWidth;
-    /**
-     * PrePaidByMonth ：包年包月，有到期时间，只能升带宽；PostPaidByPeak：按峰值月结，无到期时间，可升降带宽；PostPaidByDay：按日月结，无到期时间，可升降带宽；PostPaidByTransfer：按流量月结，无到期时间，可升降带宽；PostPaidByHour：按小时月结，无到期时间，可升降带宽
-     */
-    @KsYunField(name = "AddressChargeType")
-    private String AddressChargeType;
-    /**
-     * 弹性IP项目的ID,默认值为0
-     */
-    @KsYunField(name = "AddressProjectId")
-    private String AddressProjectId;
-    /**
-     * 共享带宽ID
-     */
-    @KsYunField(name = "BandWidthShareId")
-    private String BandWidthShareId;
-    /**
-     * 购买时长
-     */
-    @KsYunField(name = "AddressPurchaseTime")
-    private Integer AddressPurchaseTime;
-    /**
-     * 秘钥ID
-     */
-    @KsYunField(name = "KeyId")
-    private List<String> KeyIdList;
-    /**
-     * 是否保留镜像设置
-     */
-    @KsYunField(name = "KeepImageLogin")
-    private Boolean KeepImageLogin;
-    /**
-     * 操作系统内部的计算机名
-     */
-    @KsYunField(name = "HostName")
-    private String HostName;
-    /**
-     * 创建多台实例时为HostName增加有序后缀，有序后缀从1增加，例如host-1
-     */
-    @KsYunField(name = "HostNameSuffix")
-    private Integer HostNameSuffix;
-    /**
-     * 开机失败是否对外删除 ，默认值是false
-     */
-    @KsYunField(name = "FailureAutoDelete")
-    private Boolean FailureAutoDelete;
-    /**
-     * 标签信息
-     */
-    @KsYunField(name = "Tag")
-    private List<TagDto> TagList;
-    /**
-     * 容灾组id
-     */
-    @KsYunField(name = "DataGuardId")
-    private String DataGuardId;
-    /***/
-    @KsYunField(name = "InstanceConfigure")
-
-    private InstanceConfigureDto InstanceConfigureList;
-    /**
-     * 是否支持联网增强
-     */
-    @KsYunField(name = "SriovNetSupport")
-    private Boolean SriovNetSupport;
-    /**
-     * 是否分配ipv6
-     */
-    @KsYunField(name = "DistributeIpv6")
-    private Boolean DistributeIpv6;
-    /**
-     * 本地盘快照id
-     */
-    @KsYunField(name = "LocalVolumeSnapshotId")
-    private String LocalVolumeSnapshotId;
-    /**
-     * 是否同步ebs标签
-     */
-    @KsYunField(name = "SyncTag")
-    private Boolean SyncTag;
-    /**
-     * iam角色名称
-     */
-    @KsYunField(name = "IamRoleName")
-    private String IamRoleName;
-    /**
-     * 定时删除时间
-     */
-    @KsYunField(name = "AutoDeleteTime")
-    private String AutoDeleteTime;
-    /**
-     * 是否自动删除eip
-     */
-    @KsYunField(name = "AutoDeleteEip")
-    private Boolean AutoDeleteEip;
-    /**
-     * 是否开启资源保护
-     */
-    @KsYunField(name = "IsProtect")
-    private Boolean IsProtect;
 
     @Data
     @ToString
@@ -279,6 +135,12 @@ public class RunInstancesRequest {
         private String SnapshotId;
     }
 
+    /**
+     * 辅网卡
+     */
+    @KsYunField(name = "NetworkInterface")
+    private List<NetworkInterfaceDto> NetworkInterfaceList;
+
     @Data
     @ToString
     public static class NetworkInterfaceDto {
@@ -299,6 +161,19 @@ public class RunInstancesRequest {
         private String PrivateIpAddress;
     }
 
+    /**
+     * 用户自定义数据
+     */
+    @KsYunField(name = "UserData")
+    private String UserData;
+
+    /**
+     * 系统盘
+     */
+    @KsYunField(name = "SystemDisk")
+
+    private SystemDiskDto SystemDiskList;
+
     @Data
     @ToString
     public static class SystemDiskDto {
@@ -313,6 +188,103 @@ public class RunInstancesRequest {
         @KsYunField(name = "DiskSize")
         private Integer DiskSize;
     }
+
+    /**
+     * 实例启动模版ID，如填写了此项，则启动模板中已包含的RunInstances其他参数不生效，启动模板未指定的参数若调用RunInstances时额外传入则可生效，如果批量创建，实例名称后缀依然存在。【传modelId，使用默认版本。传modelId和modelVersion，使用传递的版本】
+     * 示例值：3f0d6229-ed2d-4c9c-8554-b9433517cf8b
+     */
+    @KsYunField(name = "ModelId")
+    private String ModelId;
+
+    /**
+     * 实例启动模板版本号。如不指定，则采用默认版本号
+     */
+    @KsYunField(name = "ModelVersion")
+    private Integer ModelVersion;
+
+    /**
+     * 整机镜像所开云盘数据盘的类型
+     */
+    @KsYunField(name = "AssembledImageDataDiskType")
+    private String AssembledImageDataDiskType;
+
+    /**
+     * 整机镜像是否展开镜像中的数据盘
+     */
+    @KsYunField(name = "AutoCreateEbs")
+    private Boolean AutoCreateEbs;
+
+    /**
+     * 弹性IP的链路类型的ID
+     */
+    @KsYunField(name = "LineId")
+    private String LineId;
+
+    /**
+     * 弹性IP的带宽，1，如果购买EIP，AddressBandWidth、LineId、AddressChargeType三个接口参数必须同时存在，如有其中任意一个接口参数，判断是否存在其他两个参数；2，如果选择预付费计费方式，必须有购买时长参数； |
+     */
+    @KsYunField(name = "AddressBandWidth")
+    private Integer AddressBandWidth;
+
+    /**
+     * PrePaidByMonth ：包年包月，有到期时间，只能升带宽；PostPaidByPeak：按峰值月结，无到期时间，可升降带宽；PostPaidByDay：按日月结，无到期时间，可升降带宽；PostPaidByTransfer：按流量月结，无到期时间，可升降带宽；PostPaidByHour：按小时月结，无到期时间，可升降带宽
+     */
+    @KsYunField(name = "AddressChargeType")
+    private String AddressChargeType;
+
+    /**
+     * 弹性IP项目的ID,默认值为0
+     */
+    @KsYunField(name = "AddressProjectId")
+    private String AddressProjectId;
+
+    /**
+     * 共享带宽ID
+     */
+    @KsYunField(name = "BandWidthShareId")
+    private String BandWidthShareId;
+
+    /**
+     * 购买时长
+     */
+    @KsYunField(name = "AddressPurchaseTime")
+    private Integer AddressPurchaseTime;
+
+    /**
+     * 秘钥ID
+     */
+    @KsYunField(name = "KeyId")
+    private List<String> KeyIdList;
+
+    /**
+     * 是否保留镜像设置
+     */
+    @KsYunField(name = "KeepImageLogin")
+    private Boolean KeepImageLogin;
+
+    /**
+     * 操作系统内部的计算机名
+     */
+    @KsYunField(name = "HostName")
+    private String HostName;
+
+    /**
+     * 创建多台实例时为HostName增加有序后缀，有序后缀从1增加，例如host-1
+     */
+    @KsYunField(name = "HostNameSuffix")
+    private Integer HostNameSuffix;
+
+    /**
+     * 开机失败是否对外删除 ，默认值是false
+     */
+    @KsYunField(name = "FailureAutoDelete")
+    private Boolean FailureAutoDelete;
+
+    /**
+     * 标签信息
+     */
+    @KsYunField(name = "Tag")
+    private List<TagDto> TagList;
 
     @Data
     @ToString
@@ -334,6 +306,17 @@ public class RunInstancesRequest {
         private String Value;
     }
 
+    /**
+     * 容灾组id
+     */
+    @KsYunField(name = "DataGuardId")
+    private String DataGuardId;
+
+    /***/
+    @KsYunField(name = "InstanceConfigure")
+
+    private InstanceConfigureDto InstanceConfigureList;
+
     @Data
     @ToString
     public static class InstanceConfigureDto {
@@ -353,5 +336,53 @@ public class RunInstancesRequest {
         @KsYunField(name = "DataDiskGb")
         private String DataDiskGb;
     }
+
+    /**
+     * 是否支持联网增强
+     */
+    @KsYunField(name = "SriovNetSupport")
+    private Boolean SriovNetSupport;
+
+    /**
+     * 是否分配ipv6
+     */
+    @KsYunField(name = "DistributeIpv6")
+    private Boolean DistributeIpv6;
+
+    /**
+     * 本地盘快照id
+     */
+    @KsYunField(name = "LocalVolumeSnapshotId")
+    private String LocalVolumeSnapshotId;
+
+    /**
+     * 是否同步ebs标签
+     */
+    @KsYunField(name = "SyncTag")
+    private Boolean SyncTag;
+
+    /**
+     * iam角色名称
+     */
+    @KsYunField(name = "IamRoleName")
+    private String IamRoleName;
+
+    /**
+     * 定时删除时间
+     */
+    @KsYunField(name = "AutoDeleteTime")
+    private String AutoDeleteTime;
+
+    /**
+     * 是否自动删除eip
+     */
+    @KsYunField(name = "AutoDeleteEip")
+    private Boolean AutoDeleteEip;
+
+    /**
+     * 是否开启资源保护
+     */
+    @KsYunField(name = "IsProtect")
+    private Boolean IsProtect;
 
 }
