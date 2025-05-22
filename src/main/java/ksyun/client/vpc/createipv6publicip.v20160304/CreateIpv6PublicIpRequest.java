@@ -23,25 +23,21 @@ public class CreateIpv6PublicIpRequest {
     /**
      * Ipv6公网的带宽
      */
-    @KsYunField(name = "BandWidth")
+    @KsYunField(name="BandWidth")
     private Integer BandWidth;
 
     /**
      * Ipv6公网的地址
      */
-    @KsYunField(name = "Ipv6PublicIpAddress")
+    @KsYunField(name="Ipv6PublicIpAddress")
     private String Ipv6PublicIpAddress;
 
-    /**
-     * Nat的计费类型
-     */
-    @KsYunField(name = "ChargeType")
+    /**Nat的计费类型*/
+    @KsYunField(name="ChargeType")
     private String ChargeType;
 
-    /**
-     * 购买时长，计费类型为包年包月时不可缺省。
-     */
-    @KsYunField(name = "PurchaseTime")
+    /**购买时长，计费类型为包年包月时不可缺省。*/
+    @KsYunField(name="PurchaseTime")
     private Integer PurchaseTime;
 
 }

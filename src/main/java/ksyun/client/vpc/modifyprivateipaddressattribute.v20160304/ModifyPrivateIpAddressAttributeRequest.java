@@ -32,10 +32,8 @@ public class ModifyPrivateIpAddressAttributeRequest {
     @KsYunField(name = "Status")
     private String Status;
 
-    /**
-     * IP预留状态
-     */
-    @KsYunField(name = "AllocateStatus")
+    /**IP预留状态*/
+    @KsYunField(name="AllocateStatus")
     private String AllocateStatus;
 
 }

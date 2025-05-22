@@ -23,13 +23,13 @@ public class ModifyNatRequest {
     /**
      * Nat的名称
      */
-    @KsYunField(name = "NatName")
+    @KsYunField(name="NatName")
     private String NatName;
 
     /**
      * Nat的带宽
      */
-    @KsYunField(name = "BandWidth")
+    @KsYunField(name="BandWidth")
     private Integer BandWidth;
 
 }

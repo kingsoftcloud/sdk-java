@@ -23,7 +23,7 @@ public class UnAssociateHaVipRequest {
     /**
      * 高可用虚拟IP的ID
      */
-    @KsYunField(name = "HaVipId")
+    @KsYunField(name="HaVipId")
     private String HaVipId;
 
 }

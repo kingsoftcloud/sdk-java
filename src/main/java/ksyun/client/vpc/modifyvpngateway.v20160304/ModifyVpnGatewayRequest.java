@@ -23,13 +23,13 @@ public class ModifyVpnGatewayRequest {
     /**
      * VPN网关的带宽
      */
-    @KsYunField(name = "BandWidth")
+    @KsYunField(name="BandWidth")
     private Integer BandWidth;
 
     /**
      * VPN网关的名称
      */
-    @KsYunField(name = "VpnGatewayName")
+    @KsYunField(name="VpnGatewayName")
     private String VpnGatewayName;
 
 }

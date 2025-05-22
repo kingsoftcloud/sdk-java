@@ -23,7 +23,7 @@ public class ModifySubnetRequest {
     /**
      * 子网的名称
      */
-    @KsYunField(name = "SubnetName")
+    @KsYunField(name="SubnetName")
     private String SubnetName;
 
     /**
@@ -32,10 +32,8 @@ public class ModifySubnetRequest {
     @KsYunField(name = "Dns1")
     private String Dns1;
 
-    /**
-     * 子网的Dns2
-     */
-    @KsYunField(name = "Dns2")
+    /**子网的Dns2*/
+    @KsYunField(name="Dns2")
     private String Dns2;
 
 }

@@ -23,7 +23,7 @@ public class UpdateCertificateRequest {
     /**
      * 验证方式（除Sectigo外仅针对DV证书，Sectigo全部需要）
      */
-    @KsYunField(name = "AuthMethod")
+    @KsYunField(name="AuthMethod")
     private String AuthMethod;
 
     /**
@@ -32,133 +32,99 @@ public class UpdateCertificateRequest {
     @KsYunField(name = "CSR")
     private String CSR;
 
-    /**
-     * 联系人ID，当ContactId不为空时，Contact参数可缺省，两者并存时以ContactId为准，当ContactId不为空时，City、State、Country都不能为空
-     */
-    @KsYunField(name = "ContactId")
+    /**联系人ID，当ContactId不为空时，Contact参数可缺省，两者并存时以ContactId为准，当ContactId不为空时，City、State、Country都不能为空*/
+    @KsYunField(name="ContactId")
     private Integer ContactId;
 
-    /**
-     * 企业信息ID，当CompanyId不为空时，CompanyName、Department、State、City、Address、CompanyPhone、PostalCode可缺省，两者并存时以CompanyId为准
-     */
-    @KsYunField(name = "CompanyId")
+    /**企业信息ID，当CompanyId不为空时，CompanyName、Department、State、City、Address、CompanyPhone、PostalCode可缺省，两者并存时以CompanyId为准*/
+    @KsYunField(name="CompanyId")
     private Integer CompanyId;
 
-    /**
-     * 企业名称
-     */
-    @KsYunField(name = "CompanyName")
+    /**企业名称*/
+    @KsYunField(name="CompanyName")
     private String CompanyName;
 
-    /**
-     * 部门名称
-     */
-    @KsYunField(name = "Department")
+    /**部门名称*/
+    @KsYunField(name="Department")
     private String Department;
 
-    /**
-     * 省份
-     */
+    /**省份*/
     @KsYunField(name = "State")
     private String State;
 
-    /**
-     * 城市
-     */
+    /**城市*/
     @KsYunField(name = "City")
     private String City;
 
-    /**
-     * 地址
-     */
+    /**地址*/
     @KsYunField(name = "Address")
     private String Address;
 
-    /**
-     * 公司电话，可为座机或者手机
-     */
-    @KsYunField(name = "CompanyPhone")
+    /**公司电话，可为座机或者手机*/
+    @KsYunField(name="CompanyPhone")
     private String CompanyPhone;
 
-    /**
-     * 邮编
-     */
-    @KsYunField(name = "PostalCode")
+    /**邮编*/
+    @KsYunField(name="PostalCode")
     private String PostalCode;
 
-    /**
-     * 可从whois查询到的注册域名时填写的邮箱信息
-     */
-    @KsYunField(name = "DcvEmail")
+    /**可从whois查询到的注册域名时填写的邮箱信息*/
+    @KsYunField(name= "DcvEmail")
     private String DcvEmail;
 
     /**
      * 附加域名,多个域名以英文,分隔
      */
-    @KsYunField(name = "AdditionalDomains")
+    @KsYunField(name="AdditionalDomains")
     private String AdditionalDomains;
 
-    /**
-     * 通配符域名,多个通配符域名以英文,分隔
-     */
+    /**通配符域名,多个通配符域名以英文,分隔*/
     @KsYunField(name = "Wildcards")
     private String Wildcards;
 
-    /**
-     * 联系人,DV证书只需要技术联系人
-     */
+    /**联系人,DV证书只需要技术联系人*/
     @KsYunField(name = "Contact")
     private String Contact;
 
-    /**
-     * 是否提交，提交后将把订单数据提交给第三方，可选值0 否|1 是
-     * <p>
-     * 约束：
-     * - 当值为0时：
-     * 可以用来修改Contact、CompanyName、State、City、Address、CompanyPhone、PostalCode、Department等信息；
-     * - 当值为1时：
-     * - 必须保证Contact不为空
-     * - 且CompanyName、State、City、Address、CompanyPhone、PostalCode、Department不为空，或在IsSubmit为0时已经设置过
-     * - 对于DV证书，以上规则有两个例外
-     * - Department可为空
-     * - CompanyPhone可为空，但contact当中必须设置phone
-     */
+    /**是否提交，提交后将把订单数据提交给第三方，可选值0 否|1 是
+
+     约束：
+     - 当值为0时：
+     可以用来修改Contact、CompanyName、State、City、Address、CompanyPhone、PostalCode、Department等信息；
+     - 当值为1时：
+     - 必须保证Contact不为空
+     - 且CompanyName、State、City、Address、CompanyPhone、PostalCode、Department不为空，或在IsSubmit为0时已经设置过
+     - 对于DV证书，以上规则有两个例外
+     - Department可为空
+     - CompanyPhone可为空，但contact当中必须设置phone*/
     @KsYunField(name = "IsSubmit")
     private String IsSubmit;
 
-    /**
-     * 企业营业执照图片文件，图片的base64值，图片大小不超过600K
-     */
-    @KsYunField(name = "BusinessLicence")
+    /**企业营业执照图片文件，图片的base64值，图片大小不超过600K*/
+    @KsYunField(name= "BusinessLicence")
     private String BusinessLicence;
 
-    /**
-     * CSR字符串来源
-     * - 约束
-     * - IsSubmit为0时，此参数可缺省
-     * - IsSubmit为1时
-     * - 当值为USER时，参数CSR不可缺省或此前在IsSubmit为0时设置过；
-     * - 当值为SYSTEM时，CSR参数或此前设置的CSR无效
-     */
+    /**CSR字符串来源
+     - 约束
+     - IsSubmit为0时，此参数可缺省
+     - IsSubmit为1时
+     - 当值为USER时，参数CSR不可缺省或此前在IsSubmit为0时设置过；
+     - 当值为SYSTEM时，CSR参数或此前设置的CSR无效*/
     @KsYunField(name = "CsrSource")
     private String CsrSource;
 
-    /**
-     * 编码算法类型，可选值
-     * <p>
-     * - ECC
-     * - RSA 默认值
-     */
+    /**编码算法类型，可选值
+
+- ECC
+- RSA 默认值*/
     @KsYunField(name = "Algorithm")
     private String Algorithm;
 
-    /**
-     * 证书签名算法。可选值
-     * <p>
-     * SHA256-FULLCHAIN
-     * SHA2-256 默认值
-     */
-    @KsYunField(name = "CertSignature")
+    /**证书签名算法。可选值
+
+     SHA256-FULLCHAIN
+SHA2-256 默认值*/
+    @KsYunField(name="CertSignature")
     private String CertSignature;
 
 }

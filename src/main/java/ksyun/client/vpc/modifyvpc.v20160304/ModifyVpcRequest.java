@@ -23,7 +23,7 @@ public class ModifyVpcRequest {
     /**
      * Vpc的ID
      */
-    @KsYunField(name = "VpcId")
+    @KsYunField(name="VpcId")
     private String VpcId;
 
 }

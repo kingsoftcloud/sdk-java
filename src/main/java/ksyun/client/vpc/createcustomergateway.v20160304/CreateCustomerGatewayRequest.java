@@ -29,7 +29,7 @@ public class CreateCustomerGatewayRequest {
     /**
      * HA模式客户网关的公网IP
      */
-    @KsYunField(name = "HaCustomerGatewayAddress")
+    @KsYunField(name="HaCustomerGatewayAddress")
     private String HaCustomerGatewayAddress;
 
 }

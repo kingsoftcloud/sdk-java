@@ -29,7 +29,7 @@ public class CreateNatRateLimitRequest {
     /**
      * 入网带宽限速
      */
-    @KsYunField(name = "inBandwidthLimit")
+    @KsYunField(name="inBandwidthLimit")
     private Integer InBandwidthLimit;
 
 }

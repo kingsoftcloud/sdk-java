@@ -24,7 +24,7 @@ public class ReIssueCertificateRequest {
      * 是否重新生成csr。
      * 值：new：重新生成csr。不传则用老的csr
      */
-    @KsYunField(name = "CsrSource")
+    @KsYunField(name="CsrSource")
     private String CsrSource;
 
 }

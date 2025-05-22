@@ -29,7 +29,7 @@ public class CreateRouteTableRequest {
     /**
      * 路由表的描述信息(部分机房支持，不支持该参数的机房忽略此传值)
      */
-    @KsYunField(name = "Description")
+    @KsYunField(name="Description")
     private String Description;
 
 }

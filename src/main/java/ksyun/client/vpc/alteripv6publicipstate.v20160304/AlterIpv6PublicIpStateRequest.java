@@ -23,7 +23,7 @@ public class AlterIpv6PublicIpStateRequest {
     /**
      * 状态(start|stop)
      */
-    @KsYunField(name = "State")
+    @KsYunField(name="State")
     private String State;
 
 }

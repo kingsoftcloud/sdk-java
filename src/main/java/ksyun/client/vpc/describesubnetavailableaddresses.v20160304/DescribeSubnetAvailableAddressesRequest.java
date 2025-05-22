@@ -34,16 +34,12 @@ public class DescribeSubnetAvailableAddressesRequest {
         private List<String> ValueList;
     }
 
-    /**
-     * 单次调用可返回的最大条目数量
-     */
-    @KsYunField(name = "MaxResults")
+    /**单次调用可返回的最大条目数量*/
+    @KsYunField(name= "MaxResults")
     private Integer MaxResults;
 
-    /**
-     * 获取另一页返回结果的 token.
-     */
-    @KsYunField(name = "NextToken")
+    /**获取另一页返回结果的 token.*/
+    @KsYunField(name="NextToken")
     private String NextToken;
 
 }

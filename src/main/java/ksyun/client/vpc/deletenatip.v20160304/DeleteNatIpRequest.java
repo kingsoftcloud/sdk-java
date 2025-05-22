@@ -23,7 +23,7 @@ public class DeleteNatIpRequest {
     /**
      * Nat IP的ID
      */
-    @KsYunField(name = "NatIpId")
+    @KsYunField(name="NatIpId")
     private String NatIpId;
 
 }

@@ -23,7 +23,7 @@ public class CreateHaVipRequest {
     /**
      * 高可用虚拟IP的IP地址
      */
-    @KsYunField(name = "IpAddress")
+    @KsYunField(name="IpAddress")
     private String IpAddress;
 
 }

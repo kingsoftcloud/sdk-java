@@ -23,7 +23,7 @@ public class QueryPeerTopVifMonitorRequest {
     /**
      * 开始时间，开始时间和结束时间相差10分钟。例如：2023-12-21T00:01:00
      */
-    @KsYunField(name = "StartTime")
+    @KsYunField(name="StartTime")
     private String StartTime;
 
     /**
@@ -32,16 +32,12 @@ public class QueryPeerTopVifMonitorRequest {
     @KsYunField(name = "EndTime")
     private String EndTime;
 
-    /**
-     * 排序顺序，默认是OUT，可选OUT|IN,区分大小写，填写其他的字符按OUT排序
-     */
-    @KsYunField(name = "SortType")
+    /**排序顺序，默认是OUT，可选OUT|IN,区分大小写，填写其他的字符按OUT排序*/
+    @KsYunField(name= "SortType")
     private String SortType;
 
-    /**
-     * 筛选IP。
-     */
-    @KsYunField(name = "ip")
+    /**筛选IP。*/
+    @KsYunField(name="ip")
     private String Ip;
 
 }

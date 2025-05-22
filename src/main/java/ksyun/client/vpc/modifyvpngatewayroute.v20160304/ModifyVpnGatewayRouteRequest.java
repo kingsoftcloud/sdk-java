@@ -23,7 +23,7 @@ public class ModifyVpnGatewayRouteRequest {
     /**
      * 描述
      */
-    @KsYunField(name = "Description")
+    @KsYunField(name ="Description")
     private String Description;
 
 }

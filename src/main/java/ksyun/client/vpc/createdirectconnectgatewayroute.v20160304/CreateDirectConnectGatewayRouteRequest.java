@@ -29,25 +29,19 @@ public class CreateDirectConnectGatewayRouteRequest {
     /**
      * 下一跳类型
      */
-    @KsYunField(name = "NextHopType")
+    @KsYunField(name="NextHopType")
     private String NextHopType;
 
-    /**
-     * 优先级
-     */
-    @KsYunField(name = "Priority")
+    /**优先级*/
+    @KsYunField(name="Priority")
     private Integer Priority;
 
-    /**
-     * 下一跳实例ID
-     */
-    @KsYunField(name = "NextHopInstance")
+    /**下一跳实例ID*/
+    @KsYunField(name="NextHopInstance")
     private String NextHopInstance;
 
-    /**
-     * 是否开启Ipv6
-     */
-    @KsYunField(name = "EnableIpv6")
+    /**是否开启Ipv6*/
+    @KsYunField(name="EnableIpv6")
     private Boolean EnableIpv6;
 
 }

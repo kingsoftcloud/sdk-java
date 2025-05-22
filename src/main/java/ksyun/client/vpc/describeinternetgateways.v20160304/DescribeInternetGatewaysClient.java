@@ -65,7 +65,6 @@ public class DescribeInternetGatewaysClient extends BaseClient {
 
     /**
      * post 请求
-     *
      * @param path
      * @param requestObj
      * @return
@@ -91,7 +90,6 @@ public class DescribeInternetGatewaysClient extends BaseClient {
         String response = doRpc(path, requestObj, requestHeaders, "post");
         return JSON.parseObject(response, DescribeInternetGatewaysResponse.class);
     }
-
     /**
      * get 请求
      *
@@ -178,14 +176,14 @@ public class DescribeInternetGatewaysClient extends BaseClient {
      */
     public DescribeInternetGatewaysResponse doPut(String path, DescribeInternetGatewaysRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+       requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "put");
         return JSON.parseObject(response, DescribeInternetGatewaysResponse.class);
     }
 
     /**
-     * rpc
-     *
+         * rpc
+         *
      * @param path
      * @param requestObj
      * @param head

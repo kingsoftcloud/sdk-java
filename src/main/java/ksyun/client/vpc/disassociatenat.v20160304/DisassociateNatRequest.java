@@ -23,7 +23,7 @@ public class DisassociateNatRequest {
     /**
      * 子网的ID
      */
-    @KsYunField(name = "SubnetId")
+    @KsYunField(name="SubnetId")
     private String SubnetId;
 
 }

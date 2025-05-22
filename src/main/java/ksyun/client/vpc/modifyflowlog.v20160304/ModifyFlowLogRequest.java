@@ -23,19 +23,17 @@ public class ModifyFlowLogRequest {
     /**
      * 流日志的名称
      */
-    @KsYunField(name = "FlowLogName")
+    @KsYunField(name ="FlowLogName")
     private String FlowLogName;
 
     /**
      * 采集窗口时间（60s~600s）
      */
-    @KsYunField(name = "WindowTime")
+    @KsYunField(name="WindowTime")
     private Integer WindowTime;
 
-    /**
-     * 流日志描述
-     */
-    @KsYunField(name = "Description")
+    /**流日志描述*/
+    @KsYunField(name="Description")
     private String Description;
 
 }

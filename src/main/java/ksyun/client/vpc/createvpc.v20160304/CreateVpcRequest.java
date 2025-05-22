@@ -23,13 +23,13 @@ public class CreateVpcRequest {
     /**
      * Vpc的网络范围，例如：10.0.0.0/16
      */
-    @KsYunField(name = "CidrBlock")
+    @KsYunField(name="CidrBlock")
     private String CidrBlock;
 
     /**
      * 是否支持IPv6网段，目前只支持部分机房
      */
-    @KsYunField(name = "ProvidedIpv6CidrBlock")
+    @KsYunField(name="ProvidedIpv6CidrBlock")
     private Boolean ProvidedIpv6CidrBlock;
 
 }

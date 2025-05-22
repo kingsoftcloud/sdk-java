@@ -29,13 +29,11 @@ public class ModifyCertificateRequest {
     /**
      * 私钥
      */
-    @KsYunField(name = "PrivateKey")
+    @KsYunField(name="PrivateKey")
     private String PrivateKey;
 
-    /**
-     * 公钥
-     */
-    @KsYunField(name = "PublicKey")
+    /**公钥*/
+    @KsYunField(name="PublicKey")
     private String PublicKey;
 
 }

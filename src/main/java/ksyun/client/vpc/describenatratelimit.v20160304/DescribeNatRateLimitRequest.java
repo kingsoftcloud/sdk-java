@@ -23,7 +23,7 @@ public class DescribeNatRateLimitRequest {
     /**
      * 筛选Filter
      */
-    @KsYunField(name = "Filter")
+    @KsYunField(name="Filter")
     private List<FilterDto> FilterList;
 
     @Data
@@ -37,8 +37,8 @@ public class DescribeNatRateLimitRequest {
         @KsYunField(name = "Name")
         private String Name;
         /***/
-        @KsYunField(name = "Value")
-        private List<String> ValueList;
+        @KsYunField(name="Value")
+                private List<String> ValueList;
     }
 
 }

@@ -26,7 +26,7 @@ public class CreateCertificateRequest {
     private String PrivateKey;
 
     /***/
-    @KsYunField(name = "PublicKey")
+    @KsYunField(name="PublicKey")
     private String PublicKey;
 
     /**
@@ -34,7 +34,7 @@ public class CreateCertificateRequest {
      * 服务端证书|客户端CA证书
      * 默认是服务端证书
      */
-    @KsYunField(name = "CertificateType")
+    @KsYunField(name="CertificateType")
     private String CertificateType;
 
 }

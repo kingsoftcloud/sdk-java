@@ -29,7 +29,7 @@ public class CreateNetworkAclRequest {
     /**
      * ACL的描述
      */
-    @KsYunField(name = "Description")
+    @KsYunField(name="Description")
     private String Description;
 
 }

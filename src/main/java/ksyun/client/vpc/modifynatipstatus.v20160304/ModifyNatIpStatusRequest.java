@@ -23,7 +23,7 @@ public class ModifyNatIpStatusRequest {
     /**
      * NatIp的禁用状态
      */
-    @KsYunField(name = "Enabled")
+    @KsYunField(name="Enabled")
     private Boolean Enabled;
 
 }

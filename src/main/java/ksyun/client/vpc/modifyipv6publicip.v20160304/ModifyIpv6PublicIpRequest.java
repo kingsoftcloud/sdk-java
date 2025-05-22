@@ -23,7 +23,7 @@ public class ModifyIpv6PublicIpRequest {
     /**
      * Ipv6公网的带宽
      */
-    @KsYunField(name = "BandWidth")
+    @KsYunField(name="BandWidth")
     private Integer BandWidth;
 
 }

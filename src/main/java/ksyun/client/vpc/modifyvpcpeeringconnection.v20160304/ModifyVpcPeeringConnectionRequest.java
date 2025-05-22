@@ -23,13 +23,13 @@ public class ModifyVpcPeeringConnectionRequest {
     /**
      * 对等连接的名称
      */
-    @KsYunField(name = "PeeringName")
+    @KsYunField(name ="PeeringName")
     private String PeeringName;
 
     /**
      * 对等连接的带宽
      */
-    @KsYunField(name = "BandWidth")
+    @KsYunField(name="BandWidth")
     private Integer BandWidth;
 
 }

@@ -23,7 +23,7 @@ public class QueryNatTopVifMonitorRequest {
     /**
      * 开始时间，开始时间和结束时间相差10分钟,例如：2023-09-14T13:30:01
      */
-    @KsYunField(name = "StartTime")
+    @KsYunField(name="StartTime")
     private String StartTime;
 
     /**
@@ -32,22 +32,16 @@ public class QueryNatTopVifMonitorRequest {
     @KsYunField(name = "EndTime")
     private String EndTime;
 
-    /**
-     * 排序顺序，默认是BPS_OUT，可选BPS_IN|BPS_OUT|PEAK_IN|PEAK_OUT,区分大小写，填写其他的字符按BPS_OUT排序
-     */
-    @KsYunField(name = "SortType")
+    /**排序顺序，默认是BPS_OUT，可选BPS_IN|BPS_OUT|PEAK_IN|PEAK_OUT,区分大小写，填写其他的字符按BPS_OUT排序*/
+    @KsYunField(name= "SortType")
     private String SortType;
 
-    /**
-     * 查询实例类型，不填默认是kec，epc/kec
-     */
-    @KsYunField(name = "InstanceType")
+    /**查询实例类型，不填默认是kec，epc/kec*/
+    @KsYunField(name="InstanceType")
     private String InstanceType;
 
-    /**
-     * ip
-     */
-    @KsYunField(name = "ip")
+    /**ip*/
+    @KsYunField(name="ip")
     private String Ip;
 
 }

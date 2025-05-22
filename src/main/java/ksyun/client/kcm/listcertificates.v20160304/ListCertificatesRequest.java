@@ -23,25 +23,21 @@ public class ListCertificatesRequest {
     /**
      * 一个或多个项目ID，若缺省则默认值为0
      */
-    @KsYunField(name = "ProjectId")
+    @KsYunField(name="ProjectId")
     private List<Integer> ProjectId;
 
     /**
      * 主域名
      */
-    @KsYunField(name = "Filter")
+    @KsYunField(name="Filter")
     private List<String> FilterList;
 
-    /**
-     * 页码
-     */
+    /**页码*/
     @KsYunField(name = "Page")
     private Integer Page;
 
-    /**
-     * 默认20
-     */
-    @KsYunField(name = "PageSize")
+    /**默认20*/
+    @KsYunField(name="PageSize")
     private Integer PageSize;
 
 }

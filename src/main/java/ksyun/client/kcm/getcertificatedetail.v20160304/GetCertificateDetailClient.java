@@ -65,7 +65,6 @@ public class GetCertificateDetailClient extends BaseClient {
 
     /**
      * post 请求
-     *
      * @param path
      * @param requestObj
      * @return
@@ -91,7 +90,6 @@ public class GetCertificateDetailClient extends BaseClient {
         String response = doRpc(path, requestObj, requestHeaders, "post");
         return JSON.parseObject(response, GetCertificateDetailResponse.class);
     }
-
     /**
      * get 请求
      *
@@ -178,14 +176,14 @@ public class GetCertificateDetailClient extends BaseClient {
      */
     public GetCertificateDetailResponse doPut(String path, GetCertificateDetailRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+       requestHeaders.putIfAbsent("Content-Type", "application/json");
         String response = doRpc(path, requestObj, requestHeaders, "put");
         return JSON.parseObject(response, GetCertificateDetailResponse.class);
     }
 
     /**
-     * rpc
-     *
+         * rpc
+         *
      * @param path
      * @param requestObj
      * @param head

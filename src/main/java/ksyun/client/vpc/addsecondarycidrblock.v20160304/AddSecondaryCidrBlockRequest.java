@@ -23,7 +23,7 @@ public class AddSecondaryCidrBlockRequest {
     /**
      * Vpc附加Ipv4网段的网络范围，不能与VPC已有Ipv4网段重叠，例如：10.0.0.0/16
      */
-    @KsYunField(name = "CidrBlock")
+    @KsYunField(name="CidrBlock")
     private String CidrBlock;
 
 }

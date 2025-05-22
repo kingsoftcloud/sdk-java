@@ -23,13 +23,13 @@ public class DescribeNatsRequest {
     /**
      * 多个Nat的ID
      */
-    @KsYunField(name = "NatId")
+    @KsYunField(name="NatId")
     private List<String> NatIdList;
 
     /**
      * 筛选Filter
      */
-    @KsYunField(name = "Filter")
+    @KsYunField(name="Filter")
     private List<FilterDto> FilterList;
 
     @Data
@@ -51,18 +51,16 @@ public class DescribeNatsRequest {
     /**
      * 是否在返回值中包含资源标签信息
      */
-    @KsYunField(name = "IsContainTag")
+    @KsYunField(name ="IsContainTag")
     private Boolean IsContainTag;
 
     /**
      * 多个标签的键
      */
-    @KsYunField(name = "TagKey")
+    @KsYunField(name="TagKey")
     private List<String> TagKeyList;
 
-    /**
-     * 多个标签的键
-     */
+    /**多个标签的键*/
     @KsYunField(name = "TagKV")
     private List<TagKVDto> TagKVList;
 
@@ -74,23 +72,17 @@ public class DescribeNatsRequest {
          */
         @KsYunField(name = "Name")
         private String Name;
-        /**
-         * 标签值
-         */
+        /**标签值*/
         @KsYunField(name = "Value")
         private String Value;
     }
 
-    /**
-     * 单次调用可返回的最大条目数量
-     */
-    @KsYunField(name = "MaxResults")
+    /**单次调用可返回的最大条目数量*/
+    @KsYunField(name="MaxResults")
     private Integer MaxResults;
 
-    /**
-     * 获取另一页返回结果的 token.
-     */
-    @KsYunField(name = "NextToken")
+    /**获取另一页返回结果的 token.*/
+    @KsYunField(name="NextToken")
     private String NextToken;
 
 }

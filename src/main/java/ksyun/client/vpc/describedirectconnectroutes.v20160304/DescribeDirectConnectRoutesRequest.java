@@ -23,13 +23,13 @@ public class DescribeDirectConnectRoutesRequest {
     /**
      * 单次调用可返回的最大条目数量
      */
-    @KsYunField(name = "MaxResults")
+    @KsYunField(name="MaxResults")
     private Integer MaxResults;
 
     /**
      * 筛选Filter
      */
-    @KsYunField(name = "Filter")
+    @KsYunField(name="Filter")
     private List<FilterDto> FilterList;
 
     @Data
@@ -47,10 +47,8 @@ public class DescribeDirectConnectRoutesRequest {
         private List<String> ValueList;
     }
 
-    /**
-     * 获取另一页返回结果的 token.
-     */
-    @KsYunField(name = "NextToken")
+    /**获取另一页返回结果的 token.*/
+    @KsYunField(name="NextToken")
     private String NextToken;
 
 }

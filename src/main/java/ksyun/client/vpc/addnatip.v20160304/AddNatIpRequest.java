@@ -23,7 +23,7 @@ public class AddNatIpRequest {
     /**
      * 新增的NAT IP数量，每个NAT的IP数量不得超过20个，否则无法添加
      */
-    @KsYunField(name = "AddNumber")
+    @KsYunField(name="AddNumber")
     private Integer AddNumber;
 
 }

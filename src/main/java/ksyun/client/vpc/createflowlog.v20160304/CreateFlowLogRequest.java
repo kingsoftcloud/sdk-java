@@ -33,35 +33,25 @@ public class CreateFlowLogRequest {
     @KsYunField(name = "ResourceId")
     private String ResourceId;
 
-    /**
-     * 采集的流量类型,可选值
-     * - All 全部流量
-     */
-    @KsYunField(name = "TrafficType")
+    /**采集的流量类型,可选值
+     - All 全部流量*/
+    @KsYunField(name="TrafficType")
     private String TrafficType;
 
-    /**
-     * 管理捕获到的流量的 Project 名称
-     */
-    @KsYunField(name = "ProjectName")
+    /**管理捕获到的流量的 Project 名称*/
+    @KsYunField(name="ProjectName")
     private String ProjectName;
 
-    /**
-     * 存储捕获到的流量的 LogPool 名称
-     */
-    @KsYunField(name = "LogPoolName")
+    /**存储捕获到的流量的 LogPool 名称*/
+    @KsYunField(name="LogPoolName")
     private String LogPoolName;
 
-    /**
-     * 采集窗口时间（60s~600s）
-     */
-    @KsYunField(name = "WindowTime")
+    /**采集窗口时间（60s~600s）*/
+    @KsYunField(name= "WindowTime")
     private Integer WindowTime;
 
-    /**
-     * 流日志描述
-     */
-    @KsYunField(name = "Description")
+    /**流日志描述*/
+    @KsYunField(name="Description")
     private String Description;
 
 }

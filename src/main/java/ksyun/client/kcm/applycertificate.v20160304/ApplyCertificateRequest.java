@@ -29,37 +29,27 @@ public class ApplyCertificateRequest {
     /**
      * 证书年限，默认值为1
      */
-    @KsYunField(name = "YearLength")
+    @KsYunField(name="YearLength")
     private Integer YearLength;
 
-    /**
-     * 域名数量，最小值为1
-     */
-    @KsYunField(name = "DomainCount")
+    /**域名数量，最小值为1*/
+    @KsYunField(name="DomainCount")
     private Integer DomainCount;
 
-    /**
-     * 通配符域名数量，最小值为0
-     */
-    @KsYunField(name = "WildcardCount")
+    /**通配符域名数量，最小值为0*/
+    @KsYunField(name="WildcardCount")
     private Integer WildcardCount;
 
-    /**
-     * 生成订单时产生的商品ID
-     */
-    @KsYunField(name = "ProductId")
+    /**生成订单时产生的商品ID*/
+    @KsYunField(name="ProductId")
     private String ProductId;
 
-    /**
-     * 产生的子订单ID
-     */
-    @KsYunField(name = "SubOrderId")
+    /**产生的子订单ID*/
+    @KsYunField(name="SubOrderId")
     private String SubOrderId;
 
-    /**
-     * 资源所属项目ID
-     */
-    @KsYunField(name = "ProjectId")
+    /**资源所属项目ID*/
+    @KsYunField(name="ProjectId")
     private Integer ProjectId;
 
 }

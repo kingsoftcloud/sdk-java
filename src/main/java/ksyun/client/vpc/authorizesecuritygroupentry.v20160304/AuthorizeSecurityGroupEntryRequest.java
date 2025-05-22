@@ -29,61 +29,43 @@ public class AuthorizeSecurityGroupEntryRequest {
     /**
      * 安全组规则的网段
      */
-    @KsYunField(name = "CidrBlock")
+    @KsYunField(name="CidrBlock")
     private String CidrBlock;
 
-    /**
-     * 安全组规则方向，in为入站规则，out为出站规则
-     */
-    @KsYunField(name = "Direction")
+    /**安全组规则方向，in为入站规则，out为出站规则*/
+    @KsYunField(name="Direction")
     private String Direction;
 
-    /**
-     * 协议，IP代表所有协议
-     */
-    @KsYunField(name = "Protocol")
+    /**协议，IP代表所有协议*/
+    @KsYunField(name= "Protocol")
     private String Protocol;
 
-    /**
-     * ICMP协议，ICMP类型，只有协议为ICMP类型，才必填
-     */
-    @KsYunField(name = "IcmpType")
+    /**ICMP协议，ICMP类型，只有协议为ICMP类型，才必填*/
+    @KsYunField(name="IcmpType")
     private Integer IcmpType;
 
-    /**
-     * ICMP协议，ICMP代码，只有协议为ICMP类型，才必填
-     */
-    @KsYunField(name = "IcmpCode")
+    /**ICMP协议，ICMP代码，只有协议为ICMP类型，才必填*/
+    @KsYunField(name="IcmpCode")
     private Integer IcmpCode;
 
-    /**
-     * TCP或UDP协议的端口规则起始端口
-     */
-    @KsYunField(name = "PortRangeFrom")
+    /**TCP或UDP协议的端口规则起始端口*/
+    @KsYunField(name="PortRangeFrom")
     private Integer PortRangeFrom;
 
-    /**
-     * TCP或UDP协议的端口规则结束端口
-     */
-    @KsYunField(name = "PortRangeTo")
+    /**TCP或UDP协议的端口规则结束端口*/
+    @KsYunField(name="PortRangeTo")
     private Integer PortRangeTo;
 
-    /**
-     * 安全组规则标签
-     */
+    /**安全组规则标签*/
     @KsYunField(name = "RuleTag")
     private String RuleTag;
 
-    /**
-     * 优先级
-     */
-    @KsYunField(name = "Priority")
+    /**优先级*/
+    @KsYunField(name="Priority")
     private Integer Priority;
 
-    /**
-     * 访问权限
-     */
-    @KsYunField(name = "Policy")
+    /**访问权限*/
+    @KsYunField(name="Policy")
     private String Policy;
 
 }

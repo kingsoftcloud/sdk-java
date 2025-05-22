@@ -29,13 +29,11 @@ public class CreateNetworkInterfaceRequest {
     /**
      * 网卡的私网IP
      */
-    @KsYunField(name = "PrivateIpAddress")
+    @KsYunField(name="PrivateIpAddress")
     private String PrivateIpAddress;
 
-    /**
-     * 一个或多个安全组的ID，不能为空
-     */
-    @KsYunField(name = "SecurityGroupId")
+    /**一个或多个安全组的ID，不能为空*/
+    @KsYunField(name="SecurityGroupId")
     private List<String> SecurityGroupIdList;
 
 }

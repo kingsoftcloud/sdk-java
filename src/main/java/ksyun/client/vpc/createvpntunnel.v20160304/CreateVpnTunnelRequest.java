@@ -29,121 +29,85 @@ public class CreateVpnTunnelRequest {
     /**
      * Vpn通道的名称
      */
-    @KsYunField(name = "VpnTunnelName")
+    @KsYunField(name="VpnTunnelName")
     private String VpnTunnelName;
 
     /**
      * Ipsec认证算法
      */
-    @KsYunField(name = "IpsecAuthenAlgorithm")
+    @KsYunField(name="IpsecAuthenAlgorithm")
     private String IpsecAuthenAlgorithm;
 
-    /**
-     * Ipsec加密算法
-     */
-    @KsYunField(name = "IpsecEncryAlgorithm")
+    /**Ipsec加密算法*/
+    @KsYunField(name="IpsecEncryAlgorithm")
     private String IpsecEncryAlgorithm;
 
-    /**
-     * IKE认证算法(md5|sha)
-     */
-    @KsYunField(name = "IkeAuthenAlgorithm")
+    /**IKE认证算法(md5|sha)*/
+    @KsYunField(name="IkeAuthenAlgorithm")
     private String IkeAuthenAlgorithm;
 
-    /**
-     * IKE加密算法
-     */
-    @KsYunField(name = "IkeEncryAlgorithm")
+    /**IKE加密算法*/
+    @KsYunField(name="IkeEncryAlgorithm")
     private String IkeEncryAlgorithm;
 
-    /**
-     * 客户网关的类型(GreOverIpsec|Ipsec|route_ipsec|ipsec)
-     */
+    /**客户网关的类型(GreOverIpsec|Ipsec|route_ipsec|ipsec)*/
     @KsYunField(name = "Type")
     private String Type;
 
-    /**
-     * 开启健康检查
-     */
-    @KsYunField(name = "OpenHealthCheck")
+    /**开启健康检查*/
+    @KsYunField(name="OpenHealthCheck")
     private Boolean OpenHealthCheck;
 
-    /**
-     * 预共享密钥。对称加密的KEY，VPN端和客户端统一，用户自行填写
-     */
+    /**预共享密钥。对称加密的KEY，VPN端和客户端统一，用户自行填写*/
     @KsYunField(name = "PreSharedKey")
     private String PreSharedKey;
 
-    /**
-     * 生存周期（S）
-     */
-    @KsYunField(name = "IpsecLifetimeSecond")
+    /**生存周期（S）*/
+    @KsYunField(name="IpsecLifetimeSecond")
     private Integer IpsecLifetimeSecond;
 
-    /**
-     * 生存周期（Kb）
-     */
-    @KsYunField(name = "IpsecLifetimeTraffic")
+    /**生存周期（Kb）*/
+    @KsYunField(name="IpsecLifetimeTraffic")
     private Integer IpsecLifetimeTraffic;
 
-    /**
-     * 密钥加密算法的类型(1|2|5|14|24)
-     */
+    /**密钥加密算法的类型(1|2|5|14|24)*/
     @KsYunField(name = "IkeDHGroup")
     private String IkeDHGroup;
 
-    /**
-     * 是否开启野蛮模式
-     */
-    @KsYunField(name = "EnableNatTraversal")
+    /**是否开启野蛮模式*/
+    @KsYunField(name="EnableNatTraversal")
     private Boolean EnableNatTraversal;
 
-    /**
-     * GRE模式VPN的IP
-     */
+    /**GRE模式VPN的IP*/
     @KsYunField(name = "VpnGreIp")
     private String VpnGreIp;
 
-    /**
-     * GRE模式开启HA模式VPN的IP
-     */
+    /**GRE模式开启HA模式VPN的IP*/
     @KsYunField(name = "HaVpnGreIp")
     private String HaVpnGreIp;
 
-    /**
-     * GRE模式客户的IP
-     */
+    /**GRE模式客户的IP*/
     @KsYunField(name = "CustomerGreIp")
     private String CustomerGreIp;
 
-    /**
-     * GRE模式开启HA模式客户的IP
-     */
-    @KsYunField(name = "HaCustomerGreIp")
+    /**GRE模式开启HA模式客户的IP*/
+    @KsYunField(name= "HaCustomerGreIp")
     private String HaCustomerGreIp;
 
-    /**
-     * •高可用模式, active_active （负载） 、active_standby（主备）
-     */
+    /**•高可用模式, active_active （负载） 、active_standby（主备）*/
     @KsYunField(name = "HaMode")
     private String HaMode;
 
-    /**
-     * 金山侧互联IP
-     */
+    /**金山侧互联IP*/
     @KsYunField(name = "LocalPeerIp")
     private String LocalPeerIp;
 
-    /**
-     * •客户侧互联IP
-     */
+    /**•客户侧互联IP*/
     @KsYunField(name = "CustomerPeerIp")
     private String CustomerPeerIp;
 
-    /**
-     * ••IKE版本
-     */
-    @KsYunField(name = "IkeVersion")
+    /**••IKE版本*/
+    @KsYunField(name="IkeVersion")
     private String IkeVersion;
 
 }
