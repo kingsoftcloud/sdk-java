@@ -9,15 +9,13 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DeleteDirectConnectGatewayRouteRequest
- * @Description 请求参数
- */
+* @Classname DeleteDirectConnectGatewayRouteRequest
+* @Description 请求参数
+*/
 @Data
-public class DeleteDirectConnectGatewayRouteRequest {
-    /**
-     * 边界网关路由ID
-     */
-    @KsYunField(name = "DirectConnectGatewayRouteId")
+public class DeleteDirectConnectGatewayRouteRequest{
+    /**边界网关路由ID*/
+    @KsYunField(name="DirectConnectGatewayRouteId")
     private String DirectConnectGatewayRouteId;
 
 }

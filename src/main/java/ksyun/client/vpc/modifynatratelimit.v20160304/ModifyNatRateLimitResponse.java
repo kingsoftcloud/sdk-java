@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname ModifyNatRateLimitResponse
- * @Description ModifyNatRateLimit 返回体
- */
+* @Classname ModifyNatRateLimitResponse
+* @Description ModifyNatRateLimit 返回体
+*/
 @Data
 @ToString
 public class ModifyNatRateLimitResponse extends BaseResponseModel {

@@ -9,26 +9,20 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname CreateRouteRequest
- * @Description 请求参数
- */
+* @Classname CreateRouteRequest
+* @Description 请求参数
+*/
 @Data
-public class CreateRouteRequest {
-    /**
-     * Vpc的ID
-     */
-    @KsYunField(name = "VpcId")
+public class CreateRouteRequest{
+    /**Vpc的ID*/
+    @KsYunField(name="VpcId")
     private String VpcId;
 
-    /**
-     * 下一跳类型
-     */
+    /**下一跳类型*/
     @KsYunField(name="RouteType")
     private String RouteType;
 
-    /**
-     * 目标网段
-     */
+    /**目标网段*/
     @KsYunField(name="DestinationCidrBlock")
     private String DestinationCidrBlock;
 
@@ -36,9 +30,7 @@ public class CreateRouteRequest {
     @KsYunField(name="InstanceId")
     private String InstanceId;
 
-    /**
-     * 对等连接ID
-     */
+    /**对等连接ID*/
     @KsYunField(name="VpcPeeringConnectionId")
     private String VpcPeeringConnectionId;
 
@@ -47,11 +39,11 @@ public class CreateRouteRequest {
     private String DirectConnectGatewayId;
 
     /**VPN通道的ID*/
-    @KsYunField(name = "VpnTunnelId")
+    @KsYunField(name="VpnTunnelId")
     private String VpnTunnelId;
 
     /**VPN网关的ID*/
-    @KsYunField(name = "VpnGatewayId")
+    @KsYunField(name="VpnGatewayId")
     private String VpnGatewayId;
 
     /**网卡ID*/
@@ -59,7 +51,7 @@ public class CreateRouteRequest {
     private String NetworkInterfaceId;
 
     /**高可用虚拟IP的ID*/
-    @KsYunField(name = "HaVipId")
+    @KsYunField(name="HaVipId")
     private String HaVipId;
 
     /**高可用虚拟IP的主网卡ID*/
@@ -67,11 +59,11 @@ public class CreateRouteRequest {
     private String HaVipMasterNetworkInterfaceId;
 
     /**云企业网的ID*/
-    @KsYunField(name = "CenId")
+    @KsYunField(name="CenId")
     private String CenId;
 
     /**路由描述(部分机房支持，不支持该参数的机房忽略此传值)*/
-    @KsYunField(name = "Description")
+    @KsYunField(name="Description")
     private String Description;
 
     /**路由表ID(部分机房支持，不支持该参数的机房忽略此传值)*/

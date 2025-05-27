@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname ModifyCustomerGatewayResponse
- * @Description ModifyCustomerGateway 返回体
- */
+* @Classname ModifyCustomerGatewayResponse
+* @Description ModifyCustomerGateway 返回体
+*/
 @Data
 @ToString
 public class ModifyCustomerGatewayResponse extends BaseResponseModel {

@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname PublishDirectConnectRouteResponse
- * @Description PublishDirectConnectRoute 返回体
- */
+* @Classname PublishDirectConnectRouteResponse
+* @Description PublishDirectConnectRoute 返回体
+*/
 @Data
 @ToString
 public class PublishDirectConnectRouteResponse extends BaseResponseModel {

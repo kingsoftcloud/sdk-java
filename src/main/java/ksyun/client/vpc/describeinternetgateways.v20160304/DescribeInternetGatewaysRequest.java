@@ -9,39 +9,33 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DescribeInternetGatewaysRequest
- * @Description 请求参数
- */
+* @Classname DescribeInternetGatewaysRequest
+* @Description 请求参数
+*/
 @Data
-public class DescribeInternetGatewaysRequest {
-    /**
-     * 多个InternetGateway的ID
-     */
-    @KsYunField(name = "InternetGatewayId")
+public class DescribeInternetGatewaysRequest{
+    /**多个InternetGateway的ID*/
+    @KsYunField(name="InternetGatewayId")
     private List<String> InternetGatewayIdList;
 
-    /**
-     * 筛选Filter
-     */
+    /**筛选Filter*/
     @KsYunField(name="Filter")
     private List<FilterDto> FilterList;
 
     @Data
     @ToString
     public static class FilterDto {
-        /**
-         * 有效值：
-         * - vpc-id，Vpc的ID
-         */
-        @KsYunField(name = "Name")
-        private String Name;
+        /**有效值：
+- vpc-id，Vpc的ID*/
+        @KsYunField(name="Name")
+                private String Name;
         /***/
         @KsYunField(name="Value")
-        private List<String> ValueList;
+                private List<String> ValueList;
     }
 
     /**单次调用可返回的最大条目数量*/
-    @KsYunField(name = "MaxResults")
+    @KsYunField(name="MaxResults")
     private Integer MaxResults;
 
     /**获取另一页返回结果的 token.*/

@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname DescribeInternetGatewaysResponse
- * @Description DescribeInternetGateways 返回体
- */
+* @Classname DescribeInternetGatewaysResponse
+* @Description DescribeInternetGateways 返回体
+*/
 @Data
 @ToString
 public class DescribeInternetGatewaysResponse extends BaseResponseModel {

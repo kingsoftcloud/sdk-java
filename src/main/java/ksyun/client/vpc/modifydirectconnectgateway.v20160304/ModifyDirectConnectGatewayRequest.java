@@ -9,21 +9,17 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname ModifyDirectConnectGatewayRequest
- * @Description 请求参数
- */
+* @Classname ModifyDirectConnectGatewayRequest
+* @Description 请求参数
+*/
 @Data
-public class ModifyDirectConnectGatewayRequest {
-    /**
-     * 边界网关的ID
-     */
-    @KsYunField(name = "DirectConnectGatewayId")
+public class ModifyDirectConnectGatewayRequest{
+    /**边界网关的ID*/
+    @KsYunField(name="DirectConnectGatewayId")
     private String DirectConnectGatewayId;
 
-    /**
-     * 边界网关的名称
-     */
-    @KsYunField(name = "DirectConnectGatewayName")
+    /**边界网关的名称*/
+    @KsYunField(name="DirectConnectGatewayName")
     private String DirectConnectGatewayName;
 
 }

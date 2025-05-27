@@ -9,26 +9,20 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname CreateSecurityGroupRequest
- * @Description 请求参数
- */
+* @Classname CreateSecurityGroupRequest
+* @Description 请求参数
+*/
 @Data
-public class CreateSecurityGroupRequest {
-    /**
-     * Vpc的ID
-     */
-    @KsYunField(name = "VpcId")
+public class CreateSecurityGroupRequest{
+    /**Vpc的ID*/
+    @KsYunField(name="VpcId")
     private String VpcId;
 
-    /**
-     * 安全组的名称
-     */
-    @KsYunField(name = "SecurityGroupName")
+    /**安全组的名称*/
+    @KsYunField(name="SecurityGroupName")
     private String SecurityGroupName;
 
-    /**
-     * 安全组的描述
-     */
+    /**安全组的描述*/
     @KsYunField(name="Description")
     private String Description;
 

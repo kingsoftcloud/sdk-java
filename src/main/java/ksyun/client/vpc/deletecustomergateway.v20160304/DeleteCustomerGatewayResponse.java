@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname DeleteCustomerGatewayResponse
- * @Description DeleteCustomerGateway 返回体
- */
+* @Classname DeleteCustomerGatewayResponse
+* @Description DeleteCustomerGateway 返回体
+*/
 @Data
 @ToString
 public class DeleteCustomerGatewayResponse extends BaseResponseModel {

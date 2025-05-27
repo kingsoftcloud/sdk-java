@@ -9,26 +9,20 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname CreateDirectConnectGatewayRouteRequest
- * @Description 请求参数
- */
+* @Classname CreateDirectConnectGatewayRouteRequest
+* @Description 请求参数
+*/
 @Data
-public class CreateDirectConnectGatewayRouteRequest {
-    /**
-     * 边界网关的ID
-     */
-    @KsYunField(name = "DirectConnectGatewayId")
+public class CreateDirectConnectGatewayRouteRequest{
+    /**边界网关的ID*/
+    @KsYunField(name="DirectConnectGatewayId")
     private String DirectConnectGatewayId;
 
-    /**
-     * 目标网段
-     */
-    @KsYunField(name = "DestinationCidrBlock")
+    /**目标网段*/
+    @KsYunField(name="DestinationCidrBlock")
     private String DestinationCidrBlock;
 
-    /**
-     * 下一跳类型
-     */
+    /**下一跳类型*/
     @KsYunField(name="NextHopType")
     private String NextHopType;
 

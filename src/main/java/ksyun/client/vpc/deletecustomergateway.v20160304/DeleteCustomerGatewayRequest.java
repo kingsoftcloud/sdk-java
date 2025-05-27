@@ -9,15 +9,13 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DeleteCustomerGatewayRequest
- * @Description 请求参数
- */
+* @Classname DeleteCustomerGatewayRequest
+* @Description 请求参数
+*/
 @Data
-public class DeleteCustomerGatewayRequest {
-    /**
-     * 客户网关的ID
-     */
-    @KsYunField(name = "CustomerGatewayId")
+public class DeleteCustomerGatewayRequest{
+    /**客户网关的ID*/
+    @KsYunField(name="CustomerGatewayId")
     private String CustomerGatewayId;
 
 }

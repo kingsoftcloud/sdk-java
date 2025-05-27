@@ -9,26 +9,20 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname CreateIpv6PublicIpRequest
- * @Description 请求参数
- */
+* @Classname CreateIpv6PublicIpRequest
+* @Description 请求参数
+*/
 @Data
-public class CreateIpv6PublicIpRequest {
-    /**
-     * 弹性网卡的ID
-     */
-    @KsYunField(name = "NetworkInterfaceId")
+public class CreateIpv6PublicIpRequest{
+    /**弹性网卡的ID*/
+    @KsYunField(name="NetworkInterfaceId")
     private String NetworkInterfaceId;
 
-    /**
-     * Ipv6公网的带宽
-     */
+    /**Ipv6公网的带宽*/
     @KsYunField(name="BandWidth")
     private Integer BandWidth;
 
-    /**
-     * Ipv6公网的地址
-     */
+    /**Ipv6公网的地址*/
     @KsYunField(name="Ipv6PublicIpAddress")
     private String Ipv6PublicIpAddress;
 

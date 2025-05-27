@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname ModifyVpcPeeringConnectionResponse
- * @Description ModifyVpcPeeringConnection 返回体
- */
+* @Classname ModifyVpcPeeringConnectionResponse
+* @Description ModifyVpcPeeringConnection 返回体
+*/
 @Data
 @ToString
 public class ModifyVpcPeeringConnectionResponse extends BaseResponseModel {

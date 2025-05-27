@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname DeleteVpcResponse
- * @Description DeleteVpc 返回体
- */
+* @Classname DeleteVpcResponse
+* @Description DeleteVpc 返回体
+*/
 @Data
 @ToString
 public class DeleteVpcResponse extends BaseResponseModel {

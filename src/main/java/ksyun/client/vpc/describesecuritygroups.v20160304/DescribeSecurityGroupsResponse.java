@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname DescribeSecurityGroupsResponse
- * @Description DescribeSecurityGroups 返回体
- */
+* @Classname DescribeSecurityGroupsResponse
+* @Description DescribeSecurityGroups 返回体
+*/
 @Data
 @ToString
 public class DescribeSecurityGroupsResponse extends BaseResponseModel {

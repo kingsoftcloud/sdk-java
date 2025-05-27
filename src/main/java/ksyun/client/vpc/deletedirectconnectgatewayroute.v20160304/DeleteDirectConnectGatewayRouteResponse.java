@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname DeleteDirectConnectGatewayRouteResponse
- * @Description DeleteDirectConnectGatewayRoute 返回体
- */
+* @Classname DeleteDirectConnectGatewayRouteResponse
+* @Description DeleteDirectConnectGatewayRoute 返回体
+*/
 @Data
 @ToString
 public class DeleteDirectConnectGatewayRouteResponse extends BaseResponseModel {

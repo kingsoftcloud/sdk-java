@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname ModifyPrivateIpAddressAttributeResponse
- * @Description ModifyPrivateIpAddressAttribute 返回体
- */
+* @Classname ModifyPrivateIpAddressAttributeResponse
+* @Description ModifyPrivateIpAddressAttribute 返回体
+*/
 @Data
 @ToString
 public class ModifyPrivateIpAddressAttributeResponse extends BaseResponseModel {

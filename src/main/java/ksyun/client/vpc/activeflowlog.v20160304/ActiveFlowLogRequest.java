@@ -9,15 +9,13 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname ActiveFlowLogRequest
- * @Description 请求参数
- */
+* @Classname ActiveFlowLogRequest
+* @Description 请求参数
+*/
 @Data
-public class ActiveFlowLogRequest {
-    /**
-     * 流日志的ID
-     */
-    @KsYunField(name = "FlowLogId")
+public class ActiveFlowLogRequest{
+    /**流日志的ID*/
+    @KsYunField(name="FlowLogId")
     private String FlowLogId;
 
 }

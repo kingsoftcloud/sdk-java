@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname QueryPeerTopVifMonitorResponse
- * @Description QueryPeerTopVifMonitor 返回体
- */
+* @Classname QueryPeerTopVifMonitorResponse
+* @Description QueryPeerTopVifMonitor 返回体
+*/
 @Data
 @ToString
 public class QueryPeerTopVifMonitorResponse extends BaseResponseModel {

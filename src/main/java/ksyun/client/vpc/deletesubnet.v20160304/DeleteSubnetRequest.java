@@ -9,15 +9,13 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DeleteSubnetRequest
- * @Description 请求参数
- */
+* @Classname DeleteSubnetRequest
+* @Description 请求参数
+*/
 @Data
-public class DeleteSubnetRequest {
-    /**
-     * 子网的ID
-     */
-    @KsYunField(name = "SubnetId")
+public class DeleteSubnetRequest{
+    /**子网的ID*/
+    @KsYunField(name="SubnetId")
     private String SubnetId;
 
 }

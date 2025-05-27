@@ -9,26 +9,20 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname CreateVpcPeeringConnectionRequest
- * @Description 请求参数
- */
+* @Classname CreateVpcPeeringConnectionRequest
+* @Description 请求参数
+*/
 @Data
-public class CreateVpcPeeringConnectionRequest {
-    /**
-     * 发起端Vpc的ID
-     */
-    @KsYunField(name = "VpcId")
+public class CreateVpcPeeringConnectionRequest{
+    /**发起端Vpc的ID*/
+    @KsYunField(name="VpcId")
     private String VpcId;
 
-    /**
-     * 对等连接的名称
-     */
-    @KsYunField(name ="PeeringName")
+    /**对等连接的名称*/
+    @KsYunField(name="PeeringName")
     private String PeeringName;
 
-    /**
-     * 接受端Vpc的ID
-     */
+    /**接受端Vpc的ID*/
     @KsYunField(name="PeerVpcId")
     private String PeerVpcId;
 

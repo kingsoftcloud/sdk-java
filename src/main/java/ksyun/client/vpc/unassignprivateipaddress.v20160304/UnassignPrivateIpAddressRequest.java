@@ -9,21 +9,17 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname UnassignPrivateIpAddressRequest
- * @Description 请求参数
- */
+* @Classname UnassignPrivateIpAddressRequest
+* @Description 请求参数
+*/
 @Data
-public class UnassignPrivateIpAddressRequest {
-    /**
-     * 网卡的ID
-     */
-    @KsYunField(name = "NetworkInterfaceId")
+public class UnassignPrivateIpAddressRequest{
+    /**网卡的ID*/
+    @KsYunField(name="NetworkInterfaceId")
     private String NetworkInterfaceId;
 
-    /**
-     * 辅助私有IP地址
-     */
-    @KsYunField(name = "PrivateIpAddress")
+    /**辅助私有IP地址*/
+    @KsYunField(name="PrivateIpAddress")
     private List<String> PrivateIpAddressList;
 
 }

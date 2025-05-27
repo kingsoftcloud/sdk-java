@@ -9,26 +9,20 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname ModifyVpnGatewayRequest
- * @Description 请求参数
- */
+* @Classname ModifyVpnGatewayRequest
+* @Description 请求参数
+*/
 @Data
-public class ModifyVpnGatewayRequest {
-    /**
-     * VPN网关的ID
-     */
-    @KsYunField(name = "VpnGatewayId")
+public class ModifyVpnGatewayRequest{
+    /**VPN网关的ID*/
+    @KsYunField(name="VpnGatewayId")
     private String VpnGatewayId;
 
-    /**
-     * VPN网关的带宽
-     */
+    /**VPN网关的带宽*/
     @KsYunField(name="BandWidth")
     private Integer BandWidth;
 
-    /**
-     * VPN网关的名称
-     */
+    /**VPN网关的名称*/
     @KsYunField(name="VpnGatewayName")
     private String VpnGatewayName;
 

@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname DetachDirectConnectGatewayWithVpcResponse
- * @Description DetachDirectConnectGatewayWithVpc 返回体
- */
+* @Classname DetachDirectConnectGatewayWithVpcResponse
+* @Description DetachDirectConnectGatewayWithVpc 返回体
+*/
 @Data
 @ToString
 public class DetachDirectConnectGatewayWithVpcResponse extends BaseResponseModel {

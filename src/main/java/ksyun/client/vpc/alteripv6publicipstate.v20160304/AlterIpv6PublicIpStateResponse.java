@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname AlterIpv6PublicIpStateResponse
- * @Description AlterIpv6PublicIpState 返回体
- */
+* @Classname AlterIpv6PublicIpStateResponse
+* @Description AlterIpv6PublicIpState 返回体
+*/
 @Data
 @ToString
 public class AlterIpv6PublicIpStateResponse extends BaseResponseModel {

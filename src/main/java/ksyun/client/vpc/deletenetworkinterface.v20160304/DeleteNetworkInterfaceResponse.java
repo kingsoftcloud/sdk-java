@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname DeleteNetworkInterfaceResponse
- * @Description DeleteNetworkInterface 返回体
- */
+* @Classname DeleteNetworkInterfaceResponse
+* @Description DeleteNetworkInterface 返回体
+*/
 @Data
 @ToString
 public class DeleteNetworkInterfaceResponse extends BaseResponseModel {

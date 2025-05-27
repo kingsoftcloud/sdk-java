@@ -9,21 +9,17 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname AssociateRouteTableRequest
- * @Description 请求参数
- */
+* @Classname AssociateRouteTableRequest
+* @Description 请求参数
+*/
 @Data
-public class AssociateRouteTableRequest {
-    /**
-     * 子网的ID
-     */
-    @KsYunField(name = "SubnetId")
+public class AssociateRouteTableRequest{
+    /**子网的ID*/
+    @KsYunField(name="SubnetId")
     private String SubnetId;
 
-    /**
-     * 路由表的ID
-     */
-    @KsYunField(name = "RouteTableId")
+    /**路由表的ID*/
+    @KsYunField(name="RouteTableId")
     private String RouteTableId;
 
 }

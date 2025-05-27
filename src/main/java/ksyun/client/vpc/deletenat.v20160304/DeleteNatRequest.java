@@ -9,15 +9,13 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DeleteNatRequest
- * @Description 请求参数
- */
+* @Classname DeleteNatRequest
+* @Description 请求参数
+*/
 @Data
-public class DeleteNatRequest {
-    /**
-     * Nat的ID
-     */
-    @KsYunField(name = "NatId")
+public class DeleteNatRequest{
+    /**Nat的ID*/
+    @KsYunField(name="NatId")
     private String NatId;
 
 }

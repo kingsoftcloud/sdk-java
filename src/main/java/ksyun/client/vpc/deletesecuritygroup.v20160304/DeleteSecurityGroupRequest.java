@@ -9,15 +9,13 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DeleteSecurityGroupRequest
- * @Description 请求参数
- */
+* @Classname DeleteSecurityGroupRequest
+* @Description 请求参数
+*/
 @Data
-public class DeleteSecurityGroupRequest {
-    /**
-     * 安全组的ID
-     */
-    @KsYunField(name = "SecurityGroupId")
+public class DeleteSecurityGroupRequest{
+    /**安全组的ID*/
+    @KsYunField(name="SecurityGroupId")
     private String SecurityGroupId;
 
 }

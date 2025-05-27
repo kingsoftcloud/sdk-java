@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname ReleaseIpv6PublicIpResponse
- * @Description ReleaseIpv6PublicIp 返回体
- */
+* @Classname ReleaseIpv6PublicIpResponse
+* @Description ReleaseIpv6PublicIp 返回体
+*/
 @Data
 @ToString
 public class ReleaseIpv6PublicIpResponse extends BaseResponseModel {

@@ -9,15 +9,13 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DeleteVpnGatewayRequest
- * @Description 请求参数
- */
+* @Classname DeleteVpnGatewayRequest
+* @Description 请求参数
+*/
 @Data
-public class DeleteVpnGatewayRequest {
-    /**
-     * VPN网关的ID
-     */
-    @KsYunField(name = "VpnGatewayId")
+public class DeleteVpnGatewayRequest{
+    /**VPN网关的ID*/
+    @KsYunField(name="VpnGatewayId")
     private String VpnGatewayId;
 
 }

@@ -9,15 +9,13 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DeleteNetworkInterfaceRequest
- * @Description 请求参数
- */
+* @Classname DeleteNetworkInterfaceRequest
+* @Description 请求参数
+*/
 @Data
-public class DeleteNetworkInterfaceRequest {
-    /**
-     * 网卡的ID
-     */
-    @KsYunField(name = "NetworkInterfaceId")
+public class DeleteNetworkInterfaceRequest{
+    /**网卡的ID*/
+    @KsYunField(name="NetworkInterfaceId")
     private String NetworkInterfaceId;
 
 }

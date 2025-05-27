@@ -9,44 +9,36 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DescribeVpcPeeringConnectionsRequest
- * @Description 请求参数
- */
+* @Classname DescribeVpcPeeringConnectionsRequest
+* @Description 请求参数
+*/
 @Data
-public class DescribeVpcPeeringConnectionsRequest {
-    /**
-     * 项目的ID
-     */
-    @KsYunField(name = "ProjectId")
+public class DescribeVpcPeeringConnectionsRequest{
+    /**项目的ID*/
+    @KsYunField(name="ProjectId")
     private List<String> ProjectIdList;
 
-    /**
-     * 多个对等连接的ID
-     */
-    @KsYunField(name = "VpcPeeringConnectionId")
+    /**多个对等连接的ID*/
+    @KsYunField(name="VpcPeeringConnectionId")
     private List<String> VpcPeeringConnectionIdList;
 
-    /**
-     * 筛选Filter
-     */
+    /**筛选Filter*/
     @KsYunField(name="Filter")
     private List<FilterDto> FilterList;
 
     @Data
     @ToString
     public static class FilterDto {
-        /**
-         * 有效值： vpc-id，Vpc的ID<br>state，对等连接状态<br>
-         */
-        @KsYunField(name = "Name")
-        private String Name;
+        /**有效值： vpc-id，Vpc的ID<br>state，对等连接状态<br>*/
+        @KsYunField(name="Name")
+                private String Name;
         /***/
-        @KsYunField(name= "Value")
-        private List<String> ValueList;
+        @KsYunField(name="Value")
+                private List<String> ValueList;
     }
 
     /**单次调用可返回的最大条目数量*/
-    @KsYunField(name = "MaxResults")
+    @KsYunField(name="MaxResults")
     private Integer MaxResults;
 
     /**获取另一页返回结果的 token.*/

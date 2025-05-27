@@ -9,27 +9,21 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname AssignPrivateIpAddressRequest
- * @Description 请求参数
- */
+* @Classname AssignPrivateIpAddressRequest
+* @Description 请求参数
+*/
 @Data
-public class AssignPrivateIpAddressRequest {
-    /**
-     * 网卡的ID
-     */
-    @KsYunField(name = "NetworkInterfaceId")
+public class AssignPrivateIpAddressRequest{
+    /**网卡的ID*/
+    @KsYunField(name="NetworkInterfaceId")
     private String NetworkInterfaceId;
 
-    /**
-     * 辅助私有IP地址
-     */
-    @KsYunField(name = "PrivateIpAddress")
+    /**辅助私有IP地址*/
+    @KsYunField(name="PrivateIpAddress")
     private List<String> PrivateIpAddressList;
 
-    /**
-     * 分配辅助私网IP数量
-     */
-    @KsYunField(name = "SecondaryPrivateIpAddressCount")
+    /**分配辅助私网IP数量*/
+    @KsYunField(name="SecondaryPrivateIpAddressCount")
     private Integer SecondaryPrivateIpAddressCount;
 
 }

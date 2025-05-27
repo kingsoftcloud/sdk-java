@@ -9,21 +9,17 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname RevokeSecurityGroupEntryRequest
- * @Description 请求参数
- */
+* @Classname RevokeSecurityGroupEntryRequest
+* @Description 请求参数
+*/
 @Data
-public class RevokeSecurityGroupEntryRequest {
-    /**
-     * 安全组的ID
-     */
-    @KsYunField(name = "SecurityGroupId")
+public class RevokeSecurityGroupEntryRequest{
+    /**安全组的ID*/
+    @KsYunField(name="SecurityGroupId")
     private String SecurityGroupId;
 
-    /**
-     * 安全组规则的ID
-     */
-    @KsYunField(name = "SecurityGroupEntryId")
+    /**安全组规则的ID*/
+    @KsYunField(name="SecurityGroupEntryId")
     private String SecurityGroupEntryId;
 
 }

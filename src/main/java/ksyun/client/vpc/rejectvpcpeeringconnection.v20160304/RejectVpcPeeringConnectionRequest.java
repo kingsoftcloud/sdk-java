@@ -9,15 +9,13 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname RejectVpcPeeringConnectionRequest
- * @Description 请求参数
- */
+* @Classname RejectVpcPeeringConnectionRequest
+* @Description 请求参数
+*/
 @Data
-public class RejectVpcPeeringConnectionRequest {
-    /**
-     * 对等连接的ID
-     */
-    @KsYunField(name = "VpcPeeringConnectionId")
+public class RejectVpcPeeringConnectionRequest{
+    /**对等连接的ID*/
+    @KsYunField(name="VpcPeeringConnectionId")
     private String VpcPeeringConnectionId;
 
 }

@@ -9,15 +9,13 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname AllocateSubnetIpv6CidrBlockRequest
- * @Description 请求参数
- */
+* @Classname AllocateSubnetIpv6CidrBlockRequest
+* @Description 请求参数
+*/
 @Data
-public class AllocateSubnetIpv6CidrBlockRequest {
-    /**
-     * 子网ID
-     */
-    @KsYunField(name = "SubnetId")
+public class AllocateSubnetIpv6CidrBlockRequest{
+    /**子网ID*/
+    @KsYunField(name="SubnetId")
     private String SubnetId;
 
 }

@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname CreateDirectConnectGatewayRouteResponse
- * @Description CreateDirectConnectGatewayRoute 返回体
- */
+* @Classname CreateDirectConnectGatewayRouteResponse
+* @Description CreateDirectConnectGatewayRoute 返回体
+*/
 @Data
 @ToString
 public class CreateDirectConnectGatewayRouteResponse extends BaseResponseModel {

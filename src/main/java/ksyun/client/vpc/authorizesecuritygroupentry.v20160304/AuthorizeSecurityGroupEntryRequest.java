@@ -9,26 +9,20 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname AuthorizeSecurityGroupEntryRequest
- * @Description 请求参数
- */
+* @Classname AuthorizeSecurityGroupEntryRequest
+* @Description 请求参数
+*/
 @Data
-public class AuthorizeSecurityGroupEntryRequest {
-    /**
-     * 安全组规则的描述
-     */
-    @KsYunField(name = "Description")
+public class AuthorizeSecurityGroupEntryRequest{
+    /**安全组规则的描述*/
+    @KsYunField(name="Description")
     private String Description;
 
-    /**
-     * 安全组的ID
-     */
-    @KsYunField(name = "SecurityGroupId")
+    /**安全组的ID*/
+    @KsYunField(name="SecurityGroupId")
     private String SecurityGroupId;
 
-    /**
-     * 安全组规则的网段
-     */
+    /**安全组规则的网段*/
     @KsYunField(name="CidrBlock")
     private String CidrBlock;
 
@@ -37,7 +31,7 @@ public class AuthorizeSecurityGroupEntryRequest {
     private String Direction;
 
     /**协议，IP代表所有协议*/
-    @KsYunField(name= "Protocol")
+    @KsYunField(name="Protocol")
     private String Protocol;
 
     /**ICMP协议，ICMP类型，只有协议为ICMP类型，才必填*/
@@ -57,7 +51,7 @@ public class AuthorizeSecurityGroupEntryRequest {
     private Integer PortRangeTo;
 
     /**安全组规则标签*/
-    @KsYunField(name = "RuleTag")
+    @KsYunField(name="RuleTag")
     private String RuleTag;
 
     /**优先级*/

@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname DeleteSecondaryCidrBlockResponse
- * @Description DeleteSecondaryCidrBlock 返回体
- */
+* @Classname DeleteSecondaryCidrBlockResponse
+* @Description DeleteSecondaryCidrBlock 返回体
+*/
 @Data
 @ToString
 public class DeleteSecondaryCidrBlockResponse extends BaseResponseModel {

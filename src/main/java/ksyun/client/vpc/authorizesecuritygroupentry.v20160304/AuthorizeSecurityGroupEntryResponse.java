@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname AuthorizeSecurityGroupEntryResponse
- * @Description AuthorizeSecurityGroupEntry 返回体
- */
+* @Classname AuthorizeSecurityGroupEntryResponse
+* @Description AuthorizeSecurityGroupEntry 返回体
+*/
 @Data
 @ToString
 public class AuthorizeSecurityGroupEntryResponse extends BaseResponseModel {

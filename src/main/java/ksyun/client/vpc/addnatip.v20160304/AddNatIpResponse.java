@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname AddNatIpResponse
- * @Description AddNatIp 返回体
- */
+* @Classname AddNatIpResponse
+* @Description AddNatIp 返回体
+*/
 @Data
 @ToString
 public class AddNatIpResponse extends BaseResponseModel {

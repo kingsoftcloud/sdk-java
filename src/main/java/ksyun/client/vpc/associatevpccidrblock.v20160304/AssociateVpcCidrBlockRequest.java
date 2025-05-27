@@ -9,15 +9,13 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname AssociateVpcCidrBlockRequest
- * @Description 请求参数
- */
+* @Classname AssociateVpcCidrBlockRequest
+* @Description 请求参数
+*/
 @Data
-public class AssociateVpcCidrBlockRequest {
-    /**
-     * Vpc的ID
-     */
-    @KsYunField(name = "VpcId")
+public class AssociateVpcCidrBlockRequest{
+    /**Vpc的ID*/
+    @KsYunField(name="VpcId")
     private String VpcId;
 
 }

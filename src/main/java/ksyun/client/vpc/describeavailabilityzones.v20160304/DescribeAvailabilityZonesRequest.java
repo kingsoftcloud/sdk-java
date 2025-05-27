@@ -9,9 +9,9 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DescribeAvailabilityZonesRequest
- * @Description 请求参数
- */
+* @Classname DescribeAvailabilityZonesRequest
+* @Description 请求参数
+*/
 @Data
-public class DescribeAvailabilityZonesRequest {
+public class DescribeAvailabilityZonesRequest{
 }

@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname DeleteSecurityGroupResponse
- * @Description DeleteSecurityGroup 返回体
- */
+* @Classname DeleteSecurityGroupResponse
+* @Description DeleteSecurityGroup 返回体
+*/
 @Data
 @ToString
 public class DeleteSecurityGroupResponse extends BaseResponseModel {

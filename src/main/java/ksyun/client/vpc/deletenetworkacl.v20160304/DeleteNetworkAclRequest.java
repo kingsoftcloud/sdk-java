@@ -9,15 +9,13 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DeleteNetworkAclRequest
- * @Description 请求参数
- */
+* @Classname DeleteNetworkAclRequest
+* @Description 请求参数
+*/
 @Data
-public class DeleteNetworkAclRequest {
-    /**
-     * ACL的ID
-     */
-    @KsYunField(name = "NetworkAclId")
+public class DeleteNetworkAclRequest{
+    /**ACL的ID*/
+    @KsYunField(name="NetworkAclId")
     private String NetworkAclId;
 
 }

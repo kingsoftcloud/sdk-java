@@ -9,31 +9,25 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname CreateNetworkAclEntryRequest
- * @Description 请求参数
- */
+* @Classname CreateNetworkAclEntryRequest
+* @Description 请求参数
+*/
 @Data
-public class CreateNetworkAclEntryRequest {
-    /**
-     * ACL的ID
-     */
-    @KsYunField(name = "NetworkAclId")
+public class CreateNetworkAclEntryRequest{
+    /**ACL的ID*/
+    @KsYunField(name="NetworkAclId")
     private String NetworkAclId;
 
-    /**
-     * ACL规则方向，in为入站规则，out为出站规则
-     */
+    /**ACL规则方向，in为入站规则，out为出站规则*/
     @KsYunField(name="Direction")
     private String Direction;
 
-    /**
-     * ACL规则优先级，数字越小优先级越高，不可重复
-     */
+    /**ACL规则优先级，数字越小优先级越高，不可重复*/
     @KsYunField(name="RuleNumber")
     private Integer RuleNumber;
 
     /**协议(udp|tcp|ip|icmp)，IP代表所有协议*/
-    @KsYunField(name= "Protocol")
+    @KsYunField(name="Protocol")
     private String Protocol;
 
     /**ICMP协议，ICMP类型，只有协议为ICMP类型，才必填*/

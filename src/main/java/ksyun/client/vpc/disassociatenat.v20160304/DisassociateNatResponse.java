@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname DisassociateNatResponse
- * @Description DisassociateNat 返回体
- */
+* @Classname DisassociateNatResponse
+* @Description DisassociateNat 返回体
+*/
 @Data
 @ToString
 public class DisassociateNatResponse extends BaseResponseModel {

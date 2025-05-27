@@ -9,15 +9,13 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DeleteHaVipRequest
- * @Description 请求参数
- */
+* @Classname DeleteHaVipRequest
+* @Description 请求参数
+*/
 @Data
-public class DeleteHaVipRequest {
-    /**
-     * 高可用虚拟IP的ID
-     */
-    @KsYunField(name = "HaVipId")
+public class DeleteHaVipRequest{
+    /**高可用虚拟IP的ID*/
+    @KsYunField(name="HaVipId")
     private String HaVipId;
 
 }

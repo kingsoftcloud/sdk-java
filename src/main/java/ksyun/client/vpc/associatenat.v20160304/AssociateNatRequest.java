@@ -9,26 +9,20 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname AssociateNatRequest
- * @Description 请求参数
- */
+* @Classname AssociateNatRequest
+* @Description 请求参数
+*/
 @Data
-public class AssociateNatRequest {
-    /**
-     * Nat的ID
-     */
-    @KsYunField(name = "NatId")
+public class AssociateNatRequest{
+    /**Nat的ID*/
+    @KsYunField(name="NatId")
     private String NatId;
 
-    /**
-     * 子网的ID
-     */
+    /**子网的ID*/
     @KsYunField(name="SubnetId")
     private String SubnetId;
 
-    /**
-     * 要绑定的NatIp的ID值
-     */
+    /**要绑定的NatIp的ID值*/
     @KsYunField(name="NatIpId")
     private List<String> NatIpIdList;
 

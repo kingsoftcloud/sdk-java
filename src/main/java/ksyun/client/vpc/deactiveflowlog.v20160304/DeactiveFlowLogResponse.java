@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname DeactiveFlowLogResponse
- * @Description DeactiveFlowLog 返回体
- */
+* @Classname DeactiveFlowLogResponse
+* @Description DeactiveFlowLog 返回体
+*/
 @Data
 @ToString
 public class DeactiveFlowLogResponse extends BaseResponseModel {

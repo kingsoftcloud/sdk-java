@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname AssociateVpcCidrBlockResponse
- * @Description AssociateVpcCidrBlock 返回体
- */
+* @Classname AssociateVpcCidrBlockResponse
+* @Description AssociateVpcCidrBlock 返回体
+*/
 @Data
 @ToString
 public class AssociateVpcCidrBlockResponse extends BaseResponseModel {

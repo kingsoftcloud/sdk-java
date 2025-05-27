@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname CreateNatResponse
- * @Description CreateNat 返回体
- */
+* @Classname CreateNatResponse
+* @Description CreateNat 返回体
+*/
 @Data
 @ToString
 public class CreateNatResponse extends BaseResponseModel {

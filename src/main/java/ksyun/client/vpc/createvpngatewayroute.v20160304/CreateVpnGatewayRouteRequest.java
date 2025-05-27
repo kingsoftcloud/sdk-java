@@ -9,26 +9,20 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname CreateVpnGatewayRouteRequest
- * @Description 请求参数
- */
+* @Classname CreateVpnGatewayRouteRequest
+* @Description 请求参数
+*/
 @Data
-public class CreateVpnGatewayRouteRequest {
-    /**
-     * VPN网关ID
-     */
-    @KsYunField(name = "VpnGatewayId")
+public class CreateVpnGatewayRouteRequest{
+    /**VPN网关ID*/
+    @KsYunField(name="VpnGatewayId")
     private String VpnGatewayId;
 
-    /**
-     * 目标网段
-     */
-    @KsYunField(name = "DestinationCidrBlock")
+    /**目标网段*/
+    @KsYunField(name="DestinationCidrBlock")
     private String DestinationCidrBlock;
 
-    /**
-     * 下一跳实例id，下一跳类型为VPC-是；下一跳类型为VPN通道-否
-     */
+    /**下一跳实例id，下一跳类型为VPC-是；下一跳类型为VPN通道-否*/
     @KsYunField(name="NextHopInstanceId")
     private String NextHopInstanceId;
 

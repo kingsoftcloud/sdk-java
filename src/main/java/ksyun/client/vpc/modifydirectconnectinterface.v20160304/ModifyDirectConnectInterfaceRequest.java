@@ -9,21 +9,17 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname ModifyDirectConnectInterfaceRequest
- * @Description 请求参数
- */
+* @Classname ModifyDirectConnectInterfaceRequest
+* @Description 请求参数
+*/
 @Data
-public class ModifyDirectConnectInterfaceRequest {
-    /**
-     * 连接通道的ID
-     */
-    @KsYunField(name = "DirectConnectInterfaceId")
+public class ModifyDirectConnectInterfaceRequest{
+    /**连接通道的ID*/
+    @KsYunField(name="DirectConnectInterfaceId")
     private String DirectConnectInterfaceId;
 
-    /**
-     * 连接通道的名称
-     */
-    @KsYunField(name = "DirectConnectInterfaceName")
+    /**连接通道的名称*/
+    @KsYunField(name="DirectConnectInterfaceName")
     private String DirectConnectInterfaceName;
 
 }

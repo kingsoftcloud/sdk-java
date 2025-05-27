@@ -9,15 +9,13 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DescribeDirectConnectInterfacesBgpStatusRequest
- * @Description 请求参数
- */
+* @Classname DescribeDirectConnectInterfacesBgpStatusRequest
+* @Description 请求参数
+*/
 @Data
-public class DescribeDirectConnectInterfacesBgpStatusRequest {
-    /**
-     * 专线通道id
-     */
-    @KsYunField(name = "DirectConnectInterfaceId.N")
+public class DescribeDirectConnectInterfacesBgpStatusRequest{
+    /**专线通道id*/
+    @KsYunField(name="DirectConnectInterfaceId.N")
     private String DirectConnectInterfaceIdN;
 
 }

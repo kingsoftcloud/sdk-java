@@ -9,20 +9,16 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname AlterIpv6PublicIpStateRequest
- * @Description 请求参数
- */
+* @Classname AlterIpv6PublicIpStateRequest
+* @Description 请求参数
+*/
 @Data
-public class AlterIpv6PublicIpStateRequest {
-    /**
-     * Ipv6公网的ID
-     */
-    @KsYunField(name = "Ipv6PublicIpAddressId")
+public class AlterIpv6PublicIpStateRequest{
+    /**Ipv6公网的ID*/
+    @KsYunField(name="Ipv6PublicIpAddressId")
     private String Ipv6PublicIpAddressId;
 
-    /**
-     * 状态(start|stop)
-     */
+    /**状态(start|stop)*/
     @KsYunField(name="State")
     private String State;
 

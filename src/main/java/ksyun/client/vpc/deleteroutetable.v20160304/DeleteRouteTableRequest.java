@@ -9,15 +9,13 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DeleteRouteTableRequest
- * @Description 请求参数
- */
+* @Classname DeleteRouteTableRequest
+* @Description 请求参数
+*/
 @Data
-public class DeleteRouteTableRequest {
-    /**
-     * 路由表的ID
-     */
-    @KsYunField(name = "RouteTableId")
+public class DeleteRouteTableRequest{
+    /**路由表的ID*/
+    @KsYunField(name="RouteTableId")
     private String RouteTableId;
 
 }

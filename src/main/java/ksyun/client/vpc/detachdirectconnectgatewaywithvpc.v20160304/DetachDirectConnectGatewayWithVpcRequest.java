@@ -9,20 +9,16 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DetachDirectConnectGatewayWithVpcRequest
- * @Description 请求参数
- */
+* @Classname DetachDirectConnectGatewayWithVpcRequest
+* @Description 请求参数
+*/
 @Data
-public class DetachDirectConnectGatewayWithVpcRequest {
-    /**
-     * 边界网关的ID
-     */
-    @KsYunField(name = "DirectConnectGatewayId")
+public class DetachDirectConnectGatewayWithVpcRequest{
+    /**边界网关的ID*/
+    @KsYunField(name="DirectConnectGatewayId")
     private String DirectConnectGatewayId;
 
-    /**
-     * Vpc的ID
-     */
+    /**Vpc的ID*/
     @KsYunField(name="VpcId")
     private String VpcId;
 

@@ -9,20 +9,16 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname ModifyNatIpStatusRequest
- * @Description 请求参数
- */
+* @Classname ModifyNatIpStatusRequest
+* @Description 请求参数
+*/
 @Data
-public class ModifyNatIpStatusRequest {
-    /**
-     * NatIp的ID
-     */
-    @KsYunField(name = "NatIpId")
+public class ModifyNatIpStatusRequest{
+    /**NatIp的ID*/
+    @KsYunField(name="NatIpId")
     private String NatIpId;
 
-    /**
-     * NatIp的禁用状态
-     */
+    /**NatIp的禁用状态*/
     @KsYunField(name="Enabled")
     private Boolean Enabled;
 

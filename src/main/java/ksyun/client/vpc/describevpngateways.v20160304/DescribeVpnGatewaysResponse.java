@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname DescribeVpnGatewaysResponse
- * @Description DescribeVpnGateways 返回体
- */
+* @Classname DescribeVpnGatewaysResponse
+* @Description DescribeVpnGateways 返回体
+*/
 @Data
 @ToString
 public class DescribeVpnGatewaysResponse extends BaseResponseModel {

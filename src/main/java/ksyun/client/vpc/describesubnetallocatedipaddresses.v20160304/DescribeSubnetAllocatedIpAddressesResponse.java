@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname DescribeSubnetAllocatedIpAddressesResponse
- * @Description DescribeSubnetAllocatedIpAddresses 返回体
- */
+* @Classname DescribeSubnetAllocatedIpAddressesResponse
+* @Description DescribeSubnetAllocatedIpAddresses 返回体
+*/
 @Data
 @ToString
 public class DescribeSubnetAllocatedIpAddressesResponse extends BaseResponseModel {

@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname DescribeNetworkAclsResponse
- * @Description DescribeNetworkAcls 返回体
- */
+* @Classname DescribeNetworkAclsResponse
+* @Description DescribeNetworkAcls 返回体
+*/
 @Data
 @ToString
 public class DescribeNetworkAclsResponse extends BaseResponseModel {

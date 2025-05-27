@@ -9,21 +9,17 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname ModifyNetworkInterfaceRequest
- * @Description 请求参数
- */
+* @Classname ModifyNetworkInterfaceRequest
+* @Description 请求参数
+*/
 @Data
-public class ModifyNetworkInterfaceRequest {
-    /**
-     * 网卡的名称
-     */
-    @KsYunField(name = "NetworkInterfaceName")
+public class ModifyNetworkInterfaceRequest{
+    /**网卡的名称*/
+    @KsYunField(name="NetworkInterfaceName")
     private String NetworkInterfaceName;
 
-    /**
-     * 网卡ID
-     */
-    @KsYunField(name = "NetworkInterfaceId")
+    /**网卡ID*/
+    @KsYunField(name="NetworkInterfaceId")
     private String NetworkInterfaceId;
 
 }

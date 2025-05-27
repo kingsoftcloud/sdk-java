@@ -9,42 +9,36 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DescribeFlowLogsRequest
- * @Description 请求参数
- */
+* @Classname DescribeFlowLogsRequest
+* @Description 请求参数
+*/
 @Data
-public class DescribeFlowLogsRequest {
-    /**
-     * 流日志的ID
-     */
-    @KsYunField(name = "FlowLogId")
+public class DescribeFlowLogsRequest{
+    /**流日志的ID*/
+    @KsYunField(name="FlowLogId")
     private List<String> FlowLogIdList;
 
-    /**
-     * 筛选Filter
-     */
+    /**筛选Filter*/
     @KsYunField(name="Filter")
     private List<FilterDto> FilterList;
 
     @Data
     @ToString
     public static class FilterDto {
-        /**
-         * 有效值：
-         * FlowLogName，流日志名称
-         * ResourceId，捕获的流量的资源 ID
-         * ProjectName，工程的名称
-         * LogPoolName，日志池的名称
-         */
-        @KsYunField(name = "Name")
-        private String Name;
+        /**有效值：
+ FlowLogName，流日志名称 
+ ResourceId，捕获的流量的资源 ID 
+ ProjectName，工程的名称 
+ LogPoolName，日志池的名称*/
+        @KsYunField(name="Name")
+                private String Name;
         /***/
-        @KsYunField(name = "Value")
-        private List<String> ValueList;
+        @KsYunField(name="Value")
+                private List<String> ValueList;
     }
 
     /**单次调用可返回的最大条目数量*/
-    @KsYunField(name = "MaxResults")
+    @KsYunField(name="MaxResults")
     private Integer MaxResults;
 
     /**获取另一页返回结果的 token.*/

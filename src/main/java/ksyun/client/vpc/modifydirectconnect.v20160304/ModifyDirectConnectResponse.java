@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname ModifyDirectConnectResponse
- * @Description ModifyDirectConnect 返回体
- */
+* @Classname ModifyDirectConnectResponse
+* @Description ModifyDirectConnect 返回体
+*/
 @Data
 @ToString
 public class ModifyDirectConnectResponse extends BaseResponseModel {

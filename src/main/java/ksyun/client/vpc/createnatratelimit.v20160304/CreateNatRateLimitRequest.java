@@ -9,26 +9,20 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname CreateNatRateLimitRequest
- * @Description 请求参数
- */
+* @Classname CreateNatRateLimitRequest
+* @Description 请求参数
+*/
 @Data
-public class CreateNatRateLimitRequest {
-    /**
-     * 网卡ID
-     */
-    @KsYunField(name = "NetworkInterfaceId")
+public class CreateNatRateLimitRequest{
+    /**网卡ID*/
+    @KsYunField(name="NetworkInterfaceId")
     private String NetworkInterfaceId;
 
-    /**
-     * 出网带宽限速
-     */
-    @KsYunField(name = "BandwidthLimit")
+    /**出网带宽限速*/
+    @KsYunField(name="BandwidthLimit")
     private Integer BandwidthLimit;
 
-    /**
-     * 入网带宽限速
-     */
+    /**入网带宽限速*/
     @KsYunField(name="inBandwidthLimit")
     private Integer InBandwidthLimit;
 

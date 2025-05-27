@@ -9,21 +9,17 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DeleteSecondaryCidrBlockRequest
- * @Description 请求参数
- */
+* @Classname DeleteSecondaryCidrBlockRequest
+* @Description 请求参数
+*/
 @Data
-public class DeleteSecondaryCidrBlockRequest {
-    /**
-     * Vpc的ID
-     */
-    @KsYunField(name = "VpcId")
+public class DeleteSecondaryCidrBlockRequest{
+    /**Vpc的ID*/
+    @KsYunField(name="VpcId")
     private String VpcId;
 
-    /**
-     * Vpc附加网段的ID
-     */
-    @KsYunField(name = "SecondaryCidrId")
+    /**Vpc附加网段的ID*/
+    @KsYunField(name="SecondaryCidrId")
     private String SecondaryCidrId;
 
 }

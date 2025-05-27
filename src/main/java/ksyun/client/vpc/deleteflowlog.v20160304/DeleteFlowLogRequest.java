@@ -9,15 +9,13 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DeleteFlowLogRequest
- * @Description 请求参数
- */
+* @Classname DeleteFlowLogRequest
+* @Description 请求参数
+*/
 @Data
-public class DeleteFlowLogRequest {
-    /**
-     * 流日志的Id
-     */
-    @KsYunField(name = "FlowLogId")
+public class DeleteFlowLogRequest{
+    /**流日志的Id*/
+    @KsYunField(name="FlowLogId")
     private String FlowLogId;
 
 }

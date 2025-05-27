@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname AllocateSubnetIpv6CidrBlockResponse
- * @Description AllocateSubnetIpv6CidrBlock 返回体
- */
+* @Classname AllocateSubnetIpv6CidrBlockResponse
+* @Description AllocateSubnetIpv6CidrBlock 返回体
+*/
 @Data
 @ToString
 public class AllocateSubnetIpv6CidrBlockResponse extends BaseResponseModel {

@@ -9,21 +9,17 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname ModifyVpnGatewayRouteRequest
- * @Description 请求参数
- */
+* @Classname ModifyVpnGatewayRouteRequest
+* @Description 请求参数
+*/
 @Data
-public class ModifyVpnGatewayRouteRequest {
-    /**
-     * VPN网关路由的ID
-     */
-    @KsYunField(name = "VpnGatewayRouteId")
+public class ModifyVpnGatewayRouteRequest{
+    /**VPN网关路由的ID*/
+    @KsYunField(name="VpnGatewayRouteId")
     private String VpnGatewayRouteId;
 
-    /**
-     * 描述
-     */
-    @KsYunField(name ="Description")
+    /**描述*/
+    @KsYunField(name="Description")
     private String Description;
 
 }

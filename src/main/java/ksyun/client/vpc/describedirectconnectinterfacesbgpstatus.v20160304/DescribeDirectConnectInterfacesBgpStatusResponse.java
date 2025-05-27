@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname DescribeDirectConnectInterfacesBgpStatusResponse
- * @Description DescribeDirectConnectInterfacesBgpStatus 返回体
- */
+* @Classname DescribeDirectConnectInterfacesBgpStatusResponse
+* @Description DescribeDirectConnectInterfacesBgpStatus 返回体
+*/
 @Data
 @ToString
 public class DescribeDirectConnectInterfacesBgpStatusResponse extends BaseResponseModel {

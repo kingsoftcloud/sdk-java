@@ -9,35 +9,29 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname CreateNatRequest
- * @Description 请求参数
- */
+* @Classname CreateNatRequest
+* @Description 请求参数
+*/
 @Data
-public class CreateNatRequest {
-    /**
-     * Vpc的ID
-     */
-    @KsYunField(name = "VpcId")
+public class CreateNatRequest{
+    /**Vpc的ID*/
+    @KsYunField(name="VpcId")
     private String VpcId;
 
-    /**
-     * Nat的线路ID
-     */
+    /**Nat的线路ID*/
     @KsYunField(name="NatLineId")
     private String NatLineId;
 
-    /**
-     * Nat的带宽
-     */
+    /**Nat的带宽*/
     @KsYunField(name="BandWidth")
     private Integer BandWidth;
 
     /**Nat的名称*/
-    @KsYunField(name = "NatName")
+    @KsYunField(name="NatName")
     private String NatName;
 
     /**Nat的类型，目前只支持public*/
-    @KsYunField(name = "NatType")
+    @KsYunField(name="NatType")
     private String NatType;
 
     /**Nat的IP数量*/
@@ -45,7 +39,7 @@ public class CreateNatRequest {
     private Integer NatIpNumber;
 
     /**Nat的映射范围*/
-    @KsYunField(name = "NatMode")
+    @KsYunField(name="NatMode")
     private String NatMode;
 
     /**项目的ID*/

@@ -9,15 +9,13 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DeleteNatRateLimitRequest
- * @Description 请求参数
- */
+* @Classname DeleteNatRateLimitRequest
+* @Description 请求参数
+*/
 @Data
-public class DeleteNatRateLimitRequest {
-    /**
-     * 网关限速规则ID
-     */
-    @KsYunField(name = "NatRateLimitId")
+public class DeleteNatRateLimitRequest{
+    /**网关限速规则ID*/
+    @KsYunField(name="NatRateLimitId")
     private String NatRateLimitId;
 
 }

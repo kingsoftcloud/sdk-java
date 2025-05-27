@@ -9,26 +9,20 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname BatchModifyNatRateLimitRequest
- * @Description 请求参数
- */
+* @Classname BatchModifyNatRateLimitRequest
+* @Description 请求参数
+*/
 @Data
-public class BatchModifyNatRateLimitRequest {
-    /**
-     * 出向带宽限速
-     */
-    @KsYunField(name = "BandwidthLimit")
+public class BatchModifyNatRateLimitRequest{
+    /**出向带宽限速*/
+    @KsYunField(name="BandwidthLimit")
     private String BandwidthLimit;
 
-    /**
-     * 入向带宽限速
-     */
-    @KsYunField(name = "InBandwidthLimit")
+    /**入向带宽限速*/
+    @KsYunField(name="InBandwidthLimit")
     private Integer InBandwidthLimit;
 
-    /**
-     * Nat网卡限速规则ID
-     */
+    /**Nat网卡限速规则ID*/
     @KsYunField(name="NatRateLimitId")
     private List<String> NatRateLimitIdList;
 

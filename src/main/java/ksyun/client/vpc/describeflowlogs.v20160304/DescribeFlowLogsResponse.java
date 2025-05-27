@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname DescribeFlowLogsResponse
- * @Description DescribeFlowLogs 返回体
- */
+* @Classname DescribeFlowLogsResponse
+* @Description DescribeFlowLogs 返回体
+*/
 @Data
 @ToString
 public class DescribeFlowLogsResponse extends BaseResponseModel {

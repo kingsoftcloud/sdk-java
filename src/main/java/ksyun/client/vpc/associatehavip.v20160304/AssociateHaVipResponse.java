@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname AssociateHaVipResponse
- * @Description AssociateHaVip 返回体
- */
+* @Classname AssociateHaVipResponse
+* @Description AssociateHaVip 返回体
+*/
 @Data
 @ToString
 public class AssociateHaVipResponse extends BaseResponseModel {

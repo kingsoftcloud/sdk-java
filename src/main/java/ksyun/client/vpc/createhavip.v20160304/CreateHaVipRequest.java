@@ -9,20 +9,16 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname CreateHaVipRequest
- * @Description 请求参数
- */
+* @Classname CreateHaVipRequest
+* @Description 请求参数
+*/
 @Data
-public class CreateHaVipRequest {
-    /**
-     * 子网的ID
-     */
-    @KsYunField(name = "SubnetId")
+public class CreateHaVipRequest{
+    /**子网的ID*/
+    @KsYunField(name="SubnetId")
     private String SubnetId;
 
-    /**
-     * 高可用虚拟IP的IP地址
-     */
+    /**高可用虚拟IP的IP地址*/
     @KsYunField(name="IpAddress")
     private String IpAddress;
 
