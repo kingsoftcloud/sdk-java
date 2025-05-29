@@ -6,7 +6,7 @@
 
     <groupId>com.ksyun</groupId>
     <artifactId>ksyun-java-sdk</artifactId>
-    <version>1.8.6.1</version>
+    <version>1.8.6.2</version>
     <packaging>jar</packaging>
 
     <name>KSYUN SDK for Java</name>
@@ -126,7 +126,7 @@
         <dependency>
             <groupId>com.ksyun</groupId>
             <artifactId>ksyun-sdk-java-common</artifactId>
-            <version>0.0.10</version>
+            <version>0.0.13</version>
         </dependency>
 
          <dependency>
