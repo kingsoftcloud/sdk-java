@@ -23,7 +23,7 @@ public class ValidateAttachInstanceRequest {
     /**
      * 需要校验的主机实例ID，长度为36个字符，包括字母，数字，-
      */
-    @KsYunField(name = "InstanceId")
+    @KsYunField(name="InstanceId")
     private String InstanceId;
 
 }

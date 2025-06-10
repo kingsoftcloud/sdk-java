@@ -9,15 +9,14 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DisableScalingGroupRequest
- * @Description 请求参数
- */
+* @Classname DisableScalingGroupRequest
+* @Description 请求参数
+*/
 @Data
-public class DisableScalingGroupRequest {
-    /**
-     * 需要停用得伸缩组ID
-     */
-    @KsYunField(name = "ScalingGroupId")
+public class DisableScalingGroupRequest{
+    /**需要停用得伸缩组ID 
+ */
+    @KsYunField(name="ScalingGroupId")
     private String ScalingGroupId;
 
 }

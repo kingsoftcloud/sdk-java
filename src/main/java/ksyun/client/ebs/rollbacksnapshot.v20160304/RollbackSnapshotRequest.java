@@ -23,7 +23,7 @@ public class RollbackSnapshotRequest {
     /**
      * 快照ID
      */
-    @KsYunField(name = "SnapshotId")
+    @KsYunField(name="SnapshotId")
     private String SnapshotId;
 
 }

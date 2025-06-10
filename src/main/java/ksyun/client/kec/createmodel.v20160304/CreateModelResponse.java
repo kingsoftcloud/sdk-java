@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname CreateModelResponse
- * @Description CreateModel 返回体
- */
+* @Classname CreateModelResponse
+* @Description CreateModel 返回体
+*/
 @Data
 @ToString
 public class CreateModelResponse extends BaseResponseModel {

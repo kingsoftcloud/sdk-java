@@ -9,16 +9,14 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DisableImageCachingRequest
- * @Description 请求参数
- */
+* @Classname DisableImageCachingRequest
+* @Description 请求参数
+*/
 @Data
-public class DisableImageCachingRequest {
-    /**
-     * 预热的镜像ID。
-     * ——
-     */
-    @KsYunField(name = "ImageId")
+public class DisableImageCachingRequest{
+    /**预热的镜像ID。
+——*/
+    @KsYunField(name="ImageId")
     private List<String> ImageIdList;
 
 }

@@ -9,21 +9,19 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname ModifyDataGuardGroupsRequest
- * @Description 请求参数
- */
+* @Classname ModifyDataGuardGroupsRequest
+* @Description 请求参数
+*/
 @Data
-public class ModifyDataGuardGroupsRequest {
-    /**
-     * 待修改的容灾分组ID
-     */
-    @KsYunField(name = "DataGuardId")
+public class ModifyDataGuardGroupsRequest{
+    /**待修改的容灾分组ID
+*/
+    @KsYunField(name="DataGuardId")
     private String DataGuardId;
 
-    /**
-     * 容灾分组名称
-     */
-    @KsYunField(name = "DataGuardName")
+    /**容灾分组名称
+*/
+    @KsYunField(name="DataGuardName")
     private String DataGuardName;
 
 }

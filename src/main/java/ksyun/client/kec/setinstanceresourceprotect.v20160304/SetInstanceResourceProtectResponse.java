@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname SetInstanceResourceProtectResponse
- * @Description SetInstanceResourceProtect 返回体
- */
+* @Classname SetInstanceResourceProtectResponse
+* @Description SetInstanceResourceProtect 返回体
+*/
 @Data
 @ToString
 public class SetInstanceResourceProtectResponse extends BaseResponseModel {

@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname AttachInstanceResponse
- * @Description AttachInstance 返回体
- */
+* @Classname AttachInstanceResponse
+* @Description AttachInstance 返回体
+*/
 @Data
 @ToString
 public class AttachInstanceResponse extends BaseResponseModel {

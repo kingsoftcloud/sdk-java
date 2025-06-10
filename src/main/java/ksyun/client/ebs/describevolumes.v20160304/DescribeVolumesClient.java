@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
  * @Classname DescribeVolumesClient
- * @Description DescribeVolumes
+ * @Description DescribeVolumes查询硬盘列表
  */
 @Slf4j
 public class DescribeVolumesClient extends BaseClient {
@@ -65,7 +65,6 @@ public class DescribeVolumesClient extends BaseClient {
 
     /**
      * post 请求
-     *
      * @param path
      * @param requestObj
      * @return
@@ -91,7 +90,6 @@ public class DescribeVolumesClient extends BaseClient {
         String response = doRpc(path, requestObj, requestHeaders, "post");
         return JSON.parseObject(response, DescribeVolumesResponse.class);
     }
-
     /**
      * get 请求
      *
@@ -178,14 +176,14 @@ public class DescribeVolumesClient extends BaseClient {
      */
     public DescribeVolumesResponse doPut(String path, DescribeVolumesRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+       requestHeaders.putIfAbsent("Content-Type", "application/json");
         String response = doRpc(path, requestObj, requestHeaders, "put");
         return JSON.parseObject(response, DescribeVolumesResponse.class);
     }
 
     /**
-     * rpc
-     *
+         * rpc
+         *
      * @param path
      * @param requestObj
      * @param head

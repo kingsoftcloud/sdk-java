@@ -9,9 +9,9 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DescribeRegionsRequest
- * @Description 请求参数
- */
+* @Classname DescribeRegionsRequest
+* @Description 请求参数
+*/
 @Data
-public class DescribeRegionsRequest {
+public class DescribeRegionsRequest{
 }

@@ -9,15 +9,13 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname GetVNCAddressRequest
- * @Description 请求参数
- */
+* @Classname GetVNCAddressRequest
+* @Description 请求参数
+*/
 @Data
-public class GetVNCAddressRequest {
-    /**
-     * 实例ID
-     */
-    @KsYunField(name = "InstanceId")
+public class GetVNCAddressRequest{
+    /**实例ID*/
+    @KsYunField(name="InstanceId")
     private String InstanceId;
 
 }

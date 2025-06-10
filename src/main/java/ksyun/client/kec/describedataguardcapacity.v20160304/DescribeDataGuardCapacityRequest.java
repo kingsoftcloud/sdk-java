@@ -9,9 +9,9 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DescribeDataGuardCapacityRequest
- * @Description 请求参数
- */
+* @Classname DescribeDataGuardCapacityRequest
+* @Description 请求参数
+*/
 @Data
-public class DescribeDataGuardCapacityRequest {
+public class DescribeDataGuardCapacityRequest{
 }

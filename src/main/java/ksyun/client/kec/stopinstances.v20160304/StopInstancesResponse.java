@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname StopInstancesResponse
- * @Description StopInstances 返回体
- */
+* @Classname StopInstancesResponse
+* @Description StopInstances 返回体
+*/
 @Data
 @ToString
 public class StopInstancesResponse extends BaseResponseModel {

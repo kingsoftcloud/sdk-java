@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname AttachKeyResponse
- * @Description AttachKey 返回体
- */
+* @Classname AttachKeyResponse
+* @Description AttachKey 返回体
+*/
 @Data
 @ToString
 public class AttachKeyResponse extends BaseResponseModel {

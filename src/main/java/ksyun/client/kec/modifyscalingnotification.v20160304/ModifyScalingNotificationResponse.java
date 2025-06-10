@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname ModifyScalingNotificationResponse
- * @Description ModifyScalingNotification 返回体
- */
+* @Classname ModifyScalingNotificationResponse
+* @Description ModifyScalingNotification 返回体
+*/
 @Data
 @ToString
 public class ModifyScalingNotificationResponse extends BaseResponseModel {

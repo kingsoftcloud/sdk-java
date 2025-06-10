@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname CreateScalingPolicyResponse
- * @Description CreateScalingPolicy 返回体
- */
+* @Classname CreateScalingPolicyResponse
+* @Description CreateScalingPolicy 返回体
+*/
 @Data
 @ToString
 public class CreateScalingPolicyResponse extends BaseResponseModel {

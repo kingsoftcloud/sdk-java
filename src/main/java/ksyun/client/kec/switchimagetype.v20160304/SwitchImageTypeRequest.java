@@ -9,15 +9,13 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname SwitchImageTypeRequest
- * @Description 请求参数
- */
+* @Classname SwitchImageTypeRequest
+* @Description 请求参数
+*/
 @Data
-public class SwitchImageTypeRequest {
-    /**
-     * 镜像类型转换
-     */
-    @KsYunField(name = "ImageId")
+public class SwitchImageTypeRequest{
+    /**镜像类型转换*/
+    @KsYunField(name="ImageId")
     private List<String> ImageIdList;
 
 }

@@ -24,7 +24,7 @@ public class DeleteVolumeRequest {
     /**
      * true直接彻底删除，false进入回收站，回收中云盘传true会从回收站删除；默认为false
      */
-    @KsYunField(name = "ForceDelete")
+    @KsYunField(name="ForceDelete")
     private Boolean ForceDelete;
 
 }

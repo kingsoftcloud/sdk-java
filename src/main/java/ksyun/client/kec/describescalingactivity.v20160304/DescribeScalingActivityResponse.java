@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname DescribeScalingActivityResponse
- * @Description DescribeScalingActivity 返回体
- */
+* @Classname DescribeScalingActivityResponse
+* @Description DescribeScalingActivity 返回体
+*/
 @Data
 @ToString
 public class DescribeScalingActivityResponse extends BaseResponseModel {

@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname CreateDedicatedClusterResponse
- * @Description CreateDedicatedCluster 返回体
- */
+* @Classname CreateDedicatedClusterResponse
+* @Description CreateDedicatedCluster 返回体
+*/
 @Data
 @ToString
 public class CreateDedicatedClusterResponse extends BaseResponseModel {

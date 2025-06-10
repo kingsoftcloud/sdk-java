@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname RemoveVmFromDataGuardResponse
- * @Description RemoveVmFromDataGuard 返回体
- */
+* @Classname RemoveVmFromDataGuardResponse
+* @Description RemoveVmFromDataGuard 返回体
+*/
 @Data
 @ToString
 public class RemoveVmFromDataGuardResponse extends BaseResponseModel {

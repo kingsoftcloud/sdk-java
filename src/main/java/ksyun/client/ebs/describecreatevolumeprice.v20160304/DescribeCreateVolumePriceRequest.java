@@ -23,28 +23,24 @@ public class DescribeCreateVolumePriceRequest {
     /**
      * 磁盘容量大小，单位GB，步长：1GB
      */
-    @KsYunField(name = "Size")
+    @KsYunField(name="Size")
     private Integer Size;
 
     /**
      * 购买云硬盘所处的可用区
      */
-    @KsYunField(name = "AvailabilityZone")
+    @KsYunField(name="AvailabilityZone")
     private String AvailabilityZone;
 
-    /**
-     * 计费类型
-     * Monthly（预付费，包年包月）
-     * HourlyInstantSettlement（后付费，按小时实时结算）
-     * Daily（后付费，按日月结）
-     */
-    @KsYunField(name = "ChargeType")
+    /**计费类型
+     Monthly（预付费，包年包月）
+     HourlyInstantSettlement（后付费，按小时实时结算）
+     Daily（后付费，按日月结）*/
+    @KsYunField(name="ChargeType")
     private String ChargeType;
 
-    /**
-     * 预付费计费类型必填字段；有效值为1-36，单位月
-     */
-    @KsYunField(name = "PurchaseTime")
+    /**预付费计费类型必填字段；有效值为1-36，单位月*/
+    @KsYunField(name="PurchaseTime")
     private Integer PurchaseTime;
 
 }

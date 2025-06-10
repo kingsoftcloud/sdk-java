@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname CancelPreMigrateInstanceResponse
- * @Description CancelPreMigrateInstance 返回体
- */
+* @Classname CancelPreMigrateInstanceResponse
+* @Description CancelPreMigrateInstance 返回体
+*/
 @Data
 @ToString
 public class CancelPreMigrateInstanceResponse extends BaseResponseModel {

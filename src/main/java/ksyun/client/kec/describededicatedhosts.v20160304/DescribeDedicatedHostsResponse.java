@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname DescribeDedicatedHostsResponse
- * @Description DescribeDedicatedHosts 返回体
- */
+* @Classname DescribeDedicatedHostsResponse
+* @Description DescribeDedicatedHosts 返回体
+*/
 @Data
 @ToString
 public class DescribeDedicatedHostsResponse extends BaseResponseModel {

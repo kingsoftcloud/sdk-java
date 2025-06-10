@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname SetKvmProtectedDetachResponse
- * @Description SetKvmProtectedDetach 返回体
- */
+* @Classname SetKvmProtectedDetachResponse
+* @Description SetKvmProtectedDetach 返回体
+*/
 @Data
 @ToString
 public class SetKvmProtectedDetachResponse extends BaseResponseModel {

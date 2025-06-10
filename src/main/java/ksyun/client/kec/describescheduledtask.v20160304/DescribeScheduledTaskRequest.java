@@ -9,35 +9,29 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DescribeScheduledTaskRequest
- * @Description 请求参数
- */
+* @Classname DescribeScheduledTaskRequest
+* @Description 请求参数
+*/
 @Data
-public class DescribeScheduledTaskRequest {
-    /**
-     * 弹性伸缩组id
-     */
-    @KsYunField(name = "ScalingGroupId")
+public class DescribeScheduledTaskRequest{
+    /**弹性伸缩组id*/
+    @KsYunField(name="ScalingGroupId")
     private String ScalingGroupId;
 
-    /**
-     * 弹性伸缩定时任务id列表
-     */
-    @KsYunField(name = "ScalingScheduledTaskId")
+    /**弹性伸缩定时任务id列表*/
+    @KsYunField(name="ScalingScheduledTaskId")
     private List<String> ScalingScheduledTaskIdList;
 
-    /**
-     * 弹性伸缩定时任务名称
-     */
-    @KsYunField(name = "ScalingScheduledTaskName")
+    /**弹性伸缩定时任务名称*/
+    @KsYunField(name="ScalingScheduledTaskName")
     private String ScalingScheduledTaskName;
 
     /***/
-    @KsYunField(name = "Marker")
+    @KsYunField(name="Marker")
     private Integer Marker;
 
     /***/
-    @KsYunField(name = "MaxResults")
+    @KsYunField(name="MaxResults")
     private Integer MaxResults;
 
 }

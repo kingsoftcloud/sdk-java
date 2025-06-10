@@ -9,27 +9,21 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname CreateDedicatedClusterRequest
- * @Description 请求参数
- */
+* @Classname CreateDedicatedClusterRequest
+* @Description 请求参数
+*/
 @Data
-public class CreateDedicatedClusterRequest {
-    /**
-     * 集群名称
-     */
-    @KsYunField(name = "DedicatedClusterName")
+public class CreateDedicatedClusterRequest{
+    /**集群名称*/
+    @KsYunField(name="DedicatedClusterName")
     private String DedicatedClusterName;
 
-    /**
-     * 集群类型
-     */
-    @KsYunField(name = "Model")
+    /**集群类型*/
+    @KsYunField(name="Model")
     private String Model;
 
-    /**
-     * 类型：String
-     */
-    @KsYunField(name = "AvailabilityZone")
+    /**类型：String*/
+    @KsYunField(name="AvailabilityZone")
     private String AvailabilityZone;
 
 }

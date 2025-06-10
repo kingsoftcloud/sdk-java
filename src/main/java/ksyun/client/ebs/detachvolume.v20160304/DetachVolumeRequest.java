@@ -24,7 +24,7 @@ public class DetachVolumeRequest {
     /**
      * 待卸载的云硬盘ID，云硬盘和云主机必须在同一可用区。长度36个字符，包括字母、数字、-、_
      */
-    @KsYunField(name = "VolumeId")
+    @KsYunField(name="VolumeId")
     private String VolumeId;
 
 }

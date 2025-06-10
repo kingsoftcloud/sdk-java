@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname EnableImageCachingResponse
- * @Description EnableImageCaching 返回体
- */
+* @Classname EnableImageCachingResponse
+* @Description EnableImageCaching 返回体
+*/
 @Data
 @ToString
 public class EnableImageCachingResponse extends BaseResponseModel {

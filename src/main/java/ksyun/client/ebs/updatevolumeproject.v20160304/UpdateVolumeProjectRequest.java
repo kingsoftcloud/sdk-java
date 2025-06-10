@@ -23,7 +23,7 @@ public class UpdateVolumeProjectRequest {
     /**
      * 目标项目组id，项目组状态必须为可用
      */
-    @KsYunField(name = "ProjectId")
+    @KsYunField(name="ProjectId")
     private String ProjectId;
 
 }

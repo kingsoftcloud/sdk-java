@@ -9,15 +9,13 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname ModifyLoadBalancersRequest
- * @Description 请求参数
- */
+* @Classname ModifyLoadBalancersRequest
+* @Description 请求参数
+*/
 @Data
-public class ModifyLoadBalancersRequest {
-    /**
-     * 待修改负载均衡的伸缩组ID
-     */
-    @KsYunField(name = "ScalingGroupId")
+public class ModifyLoadBalancersRequest{
+    /**待修改负载均衡的伸缩组ID*/
+    @KsYunField(name="ScalingGroupId")
     private String ScalingGroupId;
 
 }

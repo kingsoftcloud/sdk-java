@@ -9,9 +9,9 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DescribeInstanceFamilysRequest
- * @Description 请求参数
- */
+* @Classname DescribeInstanceFamilysRequest
+* @Description 请求参数
+*/
 @Data
-public class DescribeInstanceFamilysRequest {
+public class DescribeInstanceFamilysRequest{
 }

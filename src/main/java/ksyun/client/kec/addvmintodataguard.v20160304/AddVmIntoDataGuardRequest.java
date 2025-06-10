@@ -9,21 +9,17 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname AddVmIntoDataGuardRequest
- * @Description 请求参数
- */
+* @Classname AddVmIntoDataGuardRequest
+* @Description 请求参数
+*/
 @Data
-public class AddVmIntoDataGuardRequest {
-    /**
-     * 容灾分组ID
-     */
-    @KsYunField(name = "DataGuardId")
+public class AddVmIntoDataGuardRequest{
+    /**容灾分组ID*/
+    @KsYunField(name="DataGuardId")
     private String DataGuardId;
 
-    /**
-     * 实例ID
-     */
-    @KsYunField(name = "InstanceId")
+    /**实例ID*/
+    @KsYunField(name="InstanceId")
     private List<String> InstanceIdList;
 
 }

@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname ModifyInstanceAttributeResponse
- * @Description ModifyInstanceAttribute 返回体
- */
+* @Classname ModifyInstanceAttributeResponse
+* @Description ModifyInstanceAttribute 返回体
+*/
 @Data
 @ToString
 public class ModifyInstanceAttributeResponse extends BaseResponseModel {

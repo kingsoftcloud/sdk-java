@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname InstanceMigrateResponse
- * @Description InstanceMigrate 返回体
- */
+* @Classname InstanceMigrateResponse
+* @Description InstanceMigrate 返回体
+*/
 @Data
 @ToString
 public class InstanceMigrateResponse extends BaseResponseModel {

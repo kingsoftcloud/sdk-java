@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname DeleteScheduledTaskResponse
- * @Description DeleteScheduledTask 返回体
- */
+* @Classname DeleteScheduledTaskResponse
+* @Description DeleteScheduledTask 返回体
+*/
 @Data
 @ToString
 public class DeleteScheduledTaskResponse extends BaseResponseModel {

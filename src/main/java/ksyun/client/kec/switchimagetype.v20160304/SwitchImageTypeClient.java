@@ -12,9 +12,9 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.*;
 
 /**
- * @Classname SwitchImageTypeClient
- * @Description 镜像类型转换
- */
+* @Classname SwitchImageTypeClient
+* @Description 镜像类型转换
+*/
 @Slf4j
 public class SwitchImageTypeClient extends BaseClient {
     private final static String service = "kec";
@@ -64,13 +64,12 @@ public class SwitchImageTypeClient extends BaseClient {
     }
 
     /**
-     * post 请求
-     *
-     * @param path
-     * @param requestObj
-     * @return
-     * @throws Exception
-     */
+    * post 请求
+    * @param path
+    * @param requestObj
+    * @return
+    * @throws Exception
+    */
     public SwitchImageTypeResponse doPostRaw(String path, SwitchImageTypeRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
@@ -78,20 +77,19 @@ public class SwitchImageTypeClient extends BaseClient {
     }
 
     /**
-     * post 请求
-     *
-     * @param path
-     * @param requestObj
-     * @return
-     * @throws Exception
-     */
+    * post 请求
+    *
+    * @param path
+    * @param requestObj
+    * @return
+    * @throws Exception
+    */
     public SwitchImageTypeResponse doPostRaw(String path, SwitchImageTypeRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
         return JSON.parseObject(response, SwitchImageTypeResponse.class);
     }
-
     /**
      * get 请求
      *
@@ -106,21 +104,21 @@ public class SwitchImageTypeClient extends BaseClient {
         return doGet(path, requestObj, head);
     }
 
-    /**
-     * get 请求
-     *
-     * @param path
-     * @param requestObj
-     * @param head
-     * @return
-     * @throws Exception
-     */
-    public SwitchImageTypeResponse doGet(String path, SwitchImageTypeRequest requestObj, Map<String, String> head) throws Exception {
-        final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
-        String response = doRpc(path, requestObj, requestHeaders, "get");
-        return JSON.parseObject(response, SwitchImageTypeResponse.class);
-    }
+        /**
+         * get 请求
+         *
+         * @param path
+         * @param requestObj
+         * @param head
+         * @return
+         * @throws Exception
+         */
+        public SwitchImageTypeResponse doGet(String path, SwitchImageTypeRequest requestObj, Map<String, String> head) throws Exception {
+            final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
+            requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+            String response = doRpc(path, requestObj, requestHeaders, "get");
+            return JSON.parseObject(response, SwitchImageTypeResponse.class);
+        }
 
     /**
      * doDelete 请求
@@ -178,74 +176,74 @@ public class SwitchImageTypeClient extends BaseClient {
      */
     public SwitchImageTypeResponse doPut(String path, SwitchImageTypeRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+       requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "put");
         return JSON.parseObject(response, SwitchImageTypeResponse.class);
     }
 
     /**
-     * rpc
-     *
-     * @param path
-     * @param requestObj
-     * @param head
-     * @return
-     * @throws Exception
-     */
-    private String doRpc(String path, SwitchImageTypeRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
-        //断言
-        Objects.requireNonNull(path, "path cannot be null");
-        Objects.requireNonNull(requestObj, "requestObj cannot be null");
-        Objects.requireNonNull(requestMethod, "requestMethod cannot be null");
-        Objects.requireNonNull(head, "head cannot be null");
+         * rpc
+         *
+         * @param path
+         * @param requestObj
+         * @param head
+         * @return
+         * @throws Exception
+         */
+        private String doRpc(String path, SwitchImageTypeRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
+            //断言
+            Objects.requireNonNull(path, "path cannot be null");
+            Objects.requireNonNull(requestObj, "requestObj cannot be null");
+            Objects.requireNonNull(requestMethod, "requestMethod cannot be null");
+            Objects.requireNonNull(head, "head cannot be null");
 
-        //请求上下文
-        RpcRequestContentModel requestContentModel = RpcRequestContentModel.builder()
-                .action(action)
-                .version(version)
-                .service(service)
-                .region(credential.getRegion())
-                .accessKeyId(credential.getSecretKey())
-                .secretAccessKey(credential.getSignStr())
-                .build();
+            //请求上下文
+            RpcRequestContentModel requestContentModel = RpcRequestContentModel.builder()
+                    .action(action)
+                    .version(version)
+                    .service(service)
+                    .region(credential.getRegion())
+                    .accessKeyId(credential.getSecretKey())
+                    .secretAccessKey(credential.getSignStr())
+                    .build();
 
-        // 根据内容类型设置请求体
-        String contentType = head.getOrDefault("Content-Type", "application/x-www-form-urlencoded");
-        JSONObject requestParam = getRequestParam(requestObj, contentType);
+            // 根据内容类型设置请求体
+            String contentType = head.getOrDefault("Content-Type", "application/x-www-form-urlencoded");
+            JSONObject requestParam = getRequestParam(requestObj, contentType);
 
-        //uri
-        path = path + "?Action=" + action + "&Version=" + version;
+            //uri
+            path = path + "?Action=" + action + "&Version=" + version;
 
-        //发起请求
-        String response = new RpcRequestClient(requestContentModel).beginRpcRequest(path, requestMethod, requestParam, head);
-        log.info("doRpc end,path:{},params:{},head:{}", path, JSONObject.toJSON(requestParam), head);
-        return response;
+            //发起请求
+            String response = new RpcRequestClient(requestContentModel).beginRpcRequest(path, requestMethod, requestParam, head);
+            log.info("doRpc end,path:{},params:{},head:{}", path, JSONObject.toJSON(requestParam), head);
+            return response;
 
-    }
-
-
-    private JSONObject getRequestParam(SwitchImageTypeRequest requestObj, String contentType) throws Exception {
-        //请求参数
-        if (contentType.equalsIgnoreCase("application/json")) {
-            return getPostRawRequestParams(requestObj);
         }
-        return getSimpleRequestParams(requestObj);
-    }
 
 
-    private JSONObject getSimpleRequestParams(SwitchImageTypeRequest requestObj) throws Exception {
-        JSONObject requestParams = new JSONObject();
+        private JSONObject getRequestParam(SwitchImageTypeRequest requestObj, String contentType) throws Exception {
+            //请求参数
+            if (contentType.equalsIgnoreCase("application/json")) {
+                return getPostRawRequestParams(requestObj);
+            }
+            return getSimpleRequestParams(requestObj);
+        }
 
-        //设置请求体请求参数
-        setRequestField(requestObj, requestParams);
-        return requestParams;
-    }
 
-    private JSONObject getPostRawRequestParams(SwitchImageTypeRequest requestObj) throws Exception {
-        JSONObject requestParams = new JSONObject();
+        private JSONObject getSimpleRequestParams(SwitchImageTypeRequest requestObj) throws Exception {
+            JSONObject requestParams = new JSONObject();
 
-        //设置请求体请求参数
-        setRequestFieldForPostRaw(requestObj, requestParams);
-        return requestParams;
-    }
+            //设置请求体请求参数
+            setRequestField(requestObj, requestParams);
+            return requestParams;
+        }
+
+        private JSONObject getPostRawRequestParams(SwitchImageTypeRequest requestObj) throws Exception {
+            JSONObject requestParams = new JSONObject();
+
+            //设置请求体请求参数
+            setRequestFieldForPostRaw(requestObj, requestParams);
+            return requestParams;
+        }
 }

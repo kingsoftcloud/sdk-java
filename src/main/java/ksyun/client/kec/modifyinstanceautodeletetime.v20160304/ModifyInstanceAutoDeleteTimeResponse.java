@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname ModifyInstanceAutoDeleteTimeResponse
- * @Description ModifyInstanceAutoDeleteTime 返回体
- */
+* @Classname ModifyInstanceAutoDeleteTimeResponse
+* @Description ModifyInstanceAutoDeleteTime 返回体
+*/
 @Data
 @ToString
 public class ModifyInstanceAutoDeleteTimeResponse extends BaseResponseModel {

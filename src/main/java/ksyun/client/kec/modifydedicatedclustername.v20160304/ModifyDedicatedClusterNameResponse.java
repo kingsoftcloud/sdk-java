@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname ModifyDedicatedClusterNameResponse
- * @Description ModifyDedicatedClusterName 返回体
- */
+* @Classname ModifyDedicatedClusterNameResponse
+* @Description ModifyDedicatedClusterName 返回体
+*/
 @Data
 @ToString
 public class ModifyDedicatedClusterNameResponse extends BaseResponseModel {

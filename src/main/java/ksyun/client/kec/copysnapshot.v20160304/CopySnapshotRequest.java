@@ -9,33 +9,25 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname CopySnapshotRequest
- * @Description 请求参数
- */
+* @Classname CopySnapshotRequest
+* @Description 请求参数
+*/
 @Data
-public class CopySnapshotRequest {
-    /**
-     * CopySnapshot
-     */
-    @KsYunField(name = "SnapshotId")
+public class CopySnapshotRequest{
+    /**CopySnapshot*/
+    @KsYunField(name="SnapshotId")
     private List<String> SnapshotIdList;
 
-    /**
-     * 目标省区
-     */
-    @KsYunField(name = "DestinationRegion")
+    /**目标省区*/
+    @KsYunField(name="DestinationRegion")
     private List<String> DestinationRegionList;
 
-    /**
-     * 快照名称
-     */
-    @KsYunField(name = "DestinationSnapshotName")
+    /**快照名称*/
+    @KsYunField(name="DestinationSnapshotName")
     private String DestinationSnapshotName;
 
-    /**
-     * 快照描述
-     */
-    @KsYunField(name = "DestinationSnapshotDesc")
+    /**快照描述*/
+    @KsYunField(name="DestinationSnapshotDesc")
     private String DestinationSnapshotDesc;
 
 }

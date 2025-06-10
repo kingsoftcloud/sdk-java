@@ -23,7 +23,7 @@ public class AttachVolumeRequest {
     /**
      * 待挂载的云主机实例ID
      */
-    @KsYunField(name = "InstanceId")
+    @KsYunField(name="InstanceId")
     private String InstanceId;
 
     /**
@@ -31,7 +31,7 @@ public class AttachVolumeRequest {
      * true：删除云主机时，该云硬盘随云主机一起删除
      * false：删除云主机时，保留该云硬盘，仅卸载，不随云主机一起释放
      */
-    @KsYunField(name = "DeleteWithInstance")
+    @KsYunField(name="DeleteWithInstance")
     private String DeleteWithInstance;
 
 }

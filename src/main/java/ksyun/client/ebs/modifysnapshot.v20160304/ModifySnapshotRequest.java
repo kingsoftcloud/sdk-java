@@ -29,7 +29,7 @@ public class ModifySnapshotRequest {
     /**
      * 快照描述，长度0-128字符
      */
-    @KsYunField(name = "SnapshotDesc")
+    @KsYunField(name="SnapshotDesc")
     private String SnapshotDesc;
 
 }

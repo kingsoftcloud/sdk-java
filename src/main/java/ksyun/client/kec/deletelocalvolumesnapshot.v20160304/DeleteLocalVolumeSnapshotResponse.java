@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname DeleteLocalVolumeSnapshotResponse
- * @Description DeleteLocalVolumeSnapshot 返回体
- */
+* @Classname DeleteLocalVolumeSnapshotResponse
+* @Description DeleteLocalVolumeSnapshot 返回体
+*/
 @Data
 @ToString
 public class DeleteLocalVolumeSnapshotResponse extends BaseResponseModel {

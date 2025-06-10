@@ -29,31 +29,23 @@ public class DescribeSnapshotsRequest {
     /**
      * 快照ID，传入该参数可获取指定快照的信息，此时其他参数无效
      */
-    @KsYunField(name = "SnapshotId")
+    @KsYunField(name="SnapshotId")
     private String SnapshotId;
 
-    /**
-     * 可用区，传入该参数可获取指定可用区的快照信息
-     */
-    @KsYunField(name = "AvailabilityZone")
+    /**可用区，传入该参数可获取指定可用区的快照信息*/
+    @KsYunField(name="AvailabilityZone")
     private String AvailabilityZone;
 
-    /**
-     * 快照名称，传入可进行快照名称的查询
-     */
-    @KsYunField(name = "SnapshotName")
+    /**快照名称，传入可进行快照名称的查询*/
+    @KsYunField(name="SnapshotName")
     private String SnapshotName;
 
-    /**
-     * 页码，默认1，范围1-intMax
-     */
-    @KsYunField(name = "PageNumber")
+    /**页码，默认1，范围1-intMax*/
+    @KsYunField(name="PageNumber")
     private Integer PageNumber;
 
-    /**
-     * 每页大小，默认10，范围1-intMax
-     */
-    @KsYunField(name = "PageSize")
+    /**每页大小，默认10，范围1-intMax*/
+    @KsYunField(name="PageSize")
     private Integer PageSize;
 
 }

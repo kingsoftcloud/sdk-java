@@ -9,9 +9,9 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname ModifyScheduledTaskRequest
- * @Description 请求参数
- */
+* @Classname ModifyScheduledTaskRequest
+* @Description 请求参数
+*/
 @Data
-public class ModifyScheduledTaskRequest {
+public class ModifyScheduledTaskRequest{
 }

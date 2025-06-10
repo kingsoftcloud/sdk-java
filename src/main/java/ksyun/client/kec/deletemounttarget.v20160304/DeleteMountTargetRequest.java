@@ -9,15 +9,13 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DeleteMountTargetRequest
- * @Description 请求参数
- */
+* @Classname DeleteMountTargetRequest
+* @Description 请求参数
+*/
 @Data
-public class DeleteMountTargetRequest {
-    /**
-     * 挂载点ID
-     */
-    @KsYunField(name = "MountTargetId")
+public class DeleteMountTargetRequest{
+    /**挂载点ID*/
+    @KsYunField(name="MountTargetId")
     private String MountTargetId;
 
 }

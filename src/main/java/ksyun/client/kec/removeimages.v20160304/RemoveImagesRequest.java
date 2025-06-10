@@ -9,16 +9,14 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname RemoveImagesRequest
- * @Description 请求参数
- */
+* @Classname RemoveImagesRequest
+* @Description 请求参数
+*/
 @Data
-public class RemoveImagesRequest {
-    /**
-     * 待删除的镜像ID。
-     * 标准UUID格式，形如^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
-     */
-    @KsYunField(name = "ImageId")
+public class RemoveImagesRequest{
+    /**待删除的镜像ID。
+标准UUID格式，形如^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$*/
+    @KsYunField(name="ImageId")
     private String ImageId;
 
 }

@@ -9,15 +9,14 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DeleteScalingGroupRequest
- * @Description 请求参数
- */
+* @Classname DeleteScalingGroupRequest
+* @Description 请求参数
+*/
 @Data
-public class DeleteScalingGroupRequest {
-    /**
-     *
-     */
-    @KsYunField(name = "ScalingGroupId")
+public class DeleteScalingGroupRequest{
+    /** 
+ */
+    @KsYunField(name="ScalingGroupId")
     private String ScalingGroupId;
 
 }

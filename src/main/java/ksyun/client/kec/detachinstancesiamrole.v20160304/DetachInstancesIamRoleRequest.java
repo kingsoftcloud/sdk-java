@@ -9,15 +9,13 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DetachInstancesIamRoleRequest
- * @Description 请求参数
- */
+* @Classname DetachInstancesIamRoleRequest
+* @Description 请求参数
+*/
 @Data
-public class DetachInstancesIamRoleRequest {
-    /**
-     * 待解绑IAM角色实例ID列表，N的范围为1-100
-     */
-    @KsYunField(name = "InstanceId")
+public class DetachInstancesIamRoleRequest{
+    /**待解绑IAM角色实例ID列表，N的范围为1-100*/
+    @KsYunField(name="InstanceId")
     private List<String> InstanceIdList;
 
 }

@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname DescribeDataGuardCapacityResponse
- * @Description DescribeDataGuardCapacity 返回体
- */
+* @Classname DescribeDataGuardCapacityResponse
+* @Description DescribeDataGuardCapacity 返回体
+*/
 @Data
 @ToString
 public class DescribeDataGuardCapacityResponse extends BaseResponseModel {

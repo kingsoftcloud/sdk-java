@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname DescribeInstanceTypeConfigsResponse
- * @Description DescribeInstanceTypeConfigs 返回体
- */
+* @Classname DescribeInstanceTypeConfigsResponse
+* @Description DescribeInstanceTypeConfigs 返回体
+*/
 @Data
 @ToString
 public class DescribeInstanceTypeConfigsResponse extends BaseResponseModel {

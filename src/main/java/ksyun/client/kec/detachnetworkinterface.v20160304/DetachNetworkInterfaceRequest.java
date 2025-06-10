@@ -9,21 +9,17 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DetachNetworkInterfaceRequest
- * @Description 请求参数
- */
+* @Classname DetachNetworkInterfaceRequest
+* @Description 请求参数
+*/
 @Data
-public class DetachNetworkInterfaceRequest {
-    /**
-     * 实例ID
-     */
-    @KsYunField(name = "InstanceId")
+public class DetachNetworkInterfaceRequest{
+    /**实例ID*/
+    @KsYunField(name="InstanceId")
     private String InstanceId;
 
-    /**
-     * 弹性网卡ID
-     */
-    @KsYunField(name = "NetworkInterfaceId")
+    /**弹性网卡ID*/
+    @KsYunField(name="NetworkInterfaceId")
     private String NetworkInterfaceId;
 
 }

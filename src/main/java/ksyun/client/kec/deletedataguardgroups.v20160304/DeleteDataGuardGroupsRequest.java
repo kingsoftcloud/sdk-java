@@ -9,15 +9,13 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DeleteDataGuardGroupsRequest
- * @Description 请求参数
- */
+* @Classname DeleteDataGuardGroupsRequest
+* @Description 请求参数
+*/
 @Data
-public class DeleteDataGuardGroupsRequest {
-    /**
-     * 待删除的容灾分组ID
-     */
-    @KsYunField(name = "DataGuardId")
+public class DeleteDataGuardGroupsRequest{
+    /**待删除的容灾分组ID*/
+    @KsYunField(name="DataGuardId")
     private List<String> DataGuardIdList;
 
 }

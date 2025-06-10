@@ -29,19 +29,17 @@ public class CreateSnapshotRequest {
     /**
      * 快照描述，长度0-128字符
      */
-    @KsYunField(name = "SnapshotDesc")
+    @KsYunField(name="SnapshotDesc")
     private String SnapshotDesc;
 
-    /**
-     * 快照类型支持极速可用快照（LocalSnapShot）、普通快照（CommonSnapShot），默认CommonSnapShot
-     */
-    @KsYunField(name = "SnapshotType")
+    /**快照类型支持极速可用快照（LocalSnapShot）、普通快照（CommonSnapShot），默认CommonSnapShot*/
+    @KsYunField(name="SnapshotType")
     private String SnapshotType;
 
     /**
      * 快照定时删除时间，格式为 2021-07-30T00:00:00，可选，不传则默认为永久保留
      */
-    @KsYunField(name = "ScheduledDeleteTime")
+    @KsYunField(name="ScheduledDeleteTime")
     private String ScheduledDeleteTime;
 
 }

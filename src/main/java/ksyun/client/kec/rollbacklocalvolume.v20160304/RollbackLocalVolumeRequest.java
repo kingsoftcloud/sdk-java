@@ -9,15 +9,13 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname RollbackLocalVolumeRequest
- * @Description 请求参数
- */
+* @Classname RollbackLocalVolumeRequest
+* @Description 请求参数
+*/
 @Data
-public class RollbackLocalVolumeRequest {
-    /**
-     * 快照Id。
-     */
-    @KsYunField(name = "LocalVolumeSnapshotId")
+public class RollbackLocalVolumeRequest{
+    /**快照Id。*/
+    @KsYunField(name="LocalVolumeSnapshotId")
     private String LocalVolumeSnapshotId;
 
 }

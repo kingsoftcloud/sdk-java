@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname DetachInstancesIamRoleResponse
- * @Description DetachInstancesIamRole 返回体
- */
+* @Classname DetachInstancesIamRoleResponse
+* @Description DetachInstancesIamRole 返回体
+*/
 @Data
 @ToString
 public class DetachInstancesIamRoleResponse extends BaseResponseModel {

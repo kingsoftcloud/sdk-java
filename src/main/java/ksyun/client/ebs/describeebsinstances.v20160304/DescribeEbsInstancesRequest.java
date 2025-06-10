@@ -23,7 +23,7 @@ public class DescribeEbsInstancesRequest {
     /**
      * 硬盘类型，SSD3.0/EHDD/ESSD_PL0/ESSD_PL1/ESSD_PL2/ESSD_PL3
      */
-    @KsYunField(name = "VolumeType")
+    @KsYunField(name="VolumeType")
     private String VolumeType;
 
 }

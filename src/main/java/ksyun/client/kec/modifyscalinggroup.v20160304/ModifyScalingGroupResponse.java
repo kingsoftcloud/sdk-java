@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname ModifyScalingGroupResponse
- * @Description ModifyScalingGroup 返回体
- */
+* @Classname ModifyScalingGroupResponse
+* @Description ModifyScalingGroup 返回体
+*/
 @Data
 @ToString
 public class ModifyScalingGroupResponse extends BaseResponseModel {

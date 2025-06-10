@@ -33,42 +33,34 @@ public class CreateScalingGroupRequest {
     @KsYunField(name = "MinSize")
     private String MinSize;
 
-    /**
-     * 期望实例数期望实例数，即伸缩组刚创建时的云服务器数量
-     * 0-10,必须在最小伸缩数与最大伸缩数之间
-     */
-    @KsYunField(name = "DesiredCapacity")
+    /**期望实例数期望实例数，即伸缩组刚创建时的云服务器数量 
+     0-10,必须在最小伸缩数与最大伸缩数之间*/
+    @KsYunField(name="DesiredCapacity")
     private Integer DesiredCapacity;
 
-    /**
-     * 移除策略
-     * 有效值：RemoveOldestInstance，表示移除最旧云服务器；RemoveNewestInstance，表示移除最新云服务器
-     */
-    @KsYunField(name = "RemovePolicy")
+    /**移除策略 
+     有效值：RemoveOldestInstance，表示移除最旧云服务器；RemoveNewestInstance，表示移除最新云服务器*/
+    @KsYunField(name="RemovePolicy")
     private String RemovePolicy;
 
-    /**
-     * 子网ID
-     */
-    @KsYunField(name = "SubnetId")
+    /**子网ID 
+ */
+    @KsYunField(name="SubnetId")
     private List<String> SubnetIdList;
 
-    /**
-     * 多子网扩展策略当绑定多个子网时，此项必填，有效值：balanced-distribution(均衡分布），choice-first（选择优先）默认值：balanced-distribution
+    /**多子网扩展策略当绑定多个子网时，此项必填，有效值：balanced-distribution(均衡分布），choice-first（选择优先）默认值：balanced-distribution 
      */
-    @KsYunField(name = "SubnetStrategy")
+    @KsYunField(name="SubnetStrategy")
     private String SubnetStrategy;
 
-    /**
-     * 安全组ID
+    /**安全组ID 
      */
-    @KsYunField(name = "SecurityGroupId")
+    @KsYunField(name="SecurityGroupId")
     private String SecurityGroupId;
 
-    /**
-     * 与伸缩组绑定的各负载均衡的ID
-     */
-    @KsYunField(name = "Slb")
+    /**与伸缩组绑定的各负载均衡的ID 
+ */
+    @KsYunField(name="Slb")
     private List<SlbDto> SlbList;
 
     @Data
@@ -93,7 +85,7 @@ public class CreateScalingGroupRequest {
          * 端口权重
          */
         @KsYunField(name = "Weight")
-        private Integer Weight;
+                private Integer Weight;
     }
 
 }

@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname DescribeAvailabilityZonesResponse
- * @Description DescribeAvailabilityZones 返回体
- */
+* @Classname DescribeAvailabilityZonesResponse
+* @Description DescribeAvailabilityZones 返回体
+*/
 @Data
 @ToString
 public class DescribeAvailabilityZonesResponse extends BaseResponseModel {

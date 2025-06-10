@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname DeleteScalingPolicyResponse
- * @Description DeleteScalingPolicy 返回体
- */
+* @Classname DeleteScalingPolicyResponse
+* @Description DeleteScalingPolicy 返回体
+*/
 @Data
 @ToString
 public class DeleteScalingPolicyResponse extends BaseResponseModel {

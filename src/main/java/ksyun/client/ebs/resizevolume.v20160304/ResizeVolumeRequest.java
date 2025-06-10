@@ -23,7 +23,7 @@ public class ResizeVolumeRequest {
     /**
      * 云硬盘扩容后的大小，单位GB。区间必须比原云盘容量大，单盘容量不可大于32TB。
      */
-    @KsYunField(name = "Size")
+    @KsYunField(name="Size")
     private String Size;
 
     /**
@@ -34,10 +34,8 @@ public class ResizeVolumeRequest {
     @KsYunField(name = "OnlineResize")
     private Boolean OnlineResize;
 
-    /**
-     * 子订单ID
-     */
-    @KsYunField(name = "SubOrderId")
+    /**子订单ID*/
+    @KsYunField(name="SubOrderId")
     private String SubOrderId;
 
 }

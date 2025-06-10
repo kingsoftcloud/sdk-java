@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname CopySnapshotResponse
- * @Description CopySnapshot 返回体
- */
+* @Classname CopySnapshotResponse
+* @Description CopySnapshot 返回体
+*/
 @Data
 @ToString
 public class CopySnapshotResponse extends BaseResponseModel {
