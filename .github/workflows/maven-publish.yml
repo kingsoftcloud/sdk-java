@@ -23,6 +23,6 @@ jobs:
           gpg --list-secret-keys
       - name: Publish package
         env:
-          MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-          MAVEN_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
+          MAVEN_USERNAME: ${{ secrets.mvn_central_portal_user_name }}
+          MAVEN_PASSWORD: ${{ secrets.mvn_central_portal_password }}
         run: mvn clean deploy  --batch-mode -Dgpg.passphrase=ksyun@123!  -Dmaven.skip.Test=true
