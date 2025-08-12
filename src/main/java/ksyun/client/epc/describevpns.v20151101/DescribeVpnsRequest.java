@@ -23,13 +23,13 @@ public class DescribeVpnsRequest {
     /**
      * 个人识别码
      */
-    @KsYunField(name = "Pin")
+    @KsYunField(name="Pin")
     private String Pin;
 
     /**
      * 带外管理的ID
      */
-    @KsYunField(name = "RemoteManagementId")
+    @KsYunField(name="RemoteManagementId")
     private String RemoteManagementId;
 
 }

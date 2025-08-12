@@ -43,7 +43,7 @@ public class DescribeShareImageAccountListClient extends BaseClient {
      */
     public DescribeShareImageAccountListResponse doPost(String path, DescribeShareImageAccountListRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
     }
 
@@ -58,14 +58,13 @@ public class DescribeShareImageAccountListClient extends BaseClient {
      */
     public DescribeShareImageAccountListResponse doPost(String path, DescribeShareImageAccountListRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
         return JSON.parseObject(response, DescribeShareImageAccountListResponse.class);
     }
 
     /**
      * post 请求
-     *
      * @param path
      * @param requestObj
      * @return
@@ -73,7 +72,7 @@ public class DescribeShareImageAccountListClient extends BaseClient {
      */
     public DescribeShareImageAccountListResponse doPostRaw(String path, DescribeShareImageAccountListRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPostRaw(path, requestObj, head);
     }
 
@@ -87,11 +86,10 @@ public class DescribeShareImageAccountListClient extends BaseClient {
      */
     public DescribeShareImageAccountListResponse doPostRaw(String path, DescribeShareImageAccountListRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
         return JSON.parseObject(response, DescribeShareImageAccountListResponse.class);
     }
-
     /**
      * get 请求
      *
@@ -102,7 +100,7 @@ public class DescribeShareImageAccountListClient extends BaseClient {
      */
     public DescribeShareImageAccountListResponse doGet(String path, DescribeShareImageAccountListRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.putIfAbsent("Content-Type", "application/json");
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doGet(path, requestObj, head);
     }
 
@@ -117,7 +115,7 @@ public class DescribeShareImageAccountListClient extends BaseClient {
      */
     public DescribeShareImageAccountListResponse doGet(String path, DescribeShareImageAccountListRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "get");
         return JSON.parseObject(response, DescribeShareImageAccountListResponse.class);
     }
@@ -132,7 +130,7 @@ public class DescribeShareImageAccountListClient extends BaseClient {
      */
     public DescribeShareImageAccountListResponse doDelete(String path, DescribeShareImageAccountListRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDelete(path, requestObj, head);
     }
 
@@ -147,7 +145,7 @@ public class DescribeShareImageAccountListClient extends BaseClient {
      */
     public DescribeShareImageAccountListResponse doDelete(String path, DescribeShareImageAccountListRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "delete");
         return JSON.parseObject(response, DescribeShareImageAccountListResponse.class);
     }
@@ -163,7 +161,7 @@ public class DescribeShareImageAccountListClient extends BaseClient {
      */
     public DescribeShareImageAccountListResponse doPut(String path, DescribeShareImageAccountListRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.putIfAbsent("Content-Type", "application/json");
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doPut(path, requestObj, head);
     }
 
@@ -178,14 +176,14 @@ public class DescribeShareImageAccountListClient extends BaseClient {
      */
     public DescribeShareImageAccountListResponse doPut(String path, DescribeShareImageAccountListRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+       requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "put");
         return JSON.parseObject(response, DescribeShareImageAccountListResponse.class);
     }
 
     /**
-     * rpc
-     *
+         * rpc
+         *
      * @param path
      * @param requestObj
      * @param head

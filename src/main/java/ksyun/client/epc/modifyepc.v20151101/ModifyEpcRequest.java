@@ -23,13 +23,13 @@ public class ModifyEpcRequest {
     /**
      * 云物理主机名称
      */
-    @KsYunField(name = "HostName")
+    @KsYunField(name="HostName")
     private String HostName;
 
     /**
      * 描述信息
      */
-    @KsYunField(name = "Description")
+    @KsYunField(name="Description")
     private String Description;
 
 }

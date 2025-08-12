@@ -23,7 +23,7 @@ public class DescribeGpuImageDriverRequest {
     /**
      * 获取另一页返回结果的 token.
      */
-    @KsYunField(name = "NextToken")
+    @KsYunField(name="NextToken")
     private String NextToken;
 
     /**
@@ -32,10 +32,8 @@ public class DescribeGpuImageDriverRequest {
     @KsYunField(name = "ImageId")
     private String ImageId;
 
-    /**
-     * 云物理主机类型
-     */
-    @KsYunField(name = "HostType")
+    /**云物理主机类型*/
+    @KsYunField(name="HostType")
     private String HostType;
 
 }

@@ -23,13 +23,13 @@ public class DescribeInspectionsRequest {
     /**
      * 获取另一页返回结果的 token.
      */
-    @KsYunField(name = "NextToken")
+    @KsYunField(name="NextToken")
     private String NextToken;
 
     /**
      * 筛选Filter
      */
-    @KsYunField(name = "Filter")
+    @KsYunField(name="Filter")
     private List<FilterDto> FilterList;
 
     @Data
@@ -42,8 +42,8 @@ public class DescribeInspectionsRequest {
         @KsYunField(name = "Name")
         private String Name;
         /***/
-        @KsYunField(name = "Value")
-        private List<String> ValueList;
+        @KsYunField(name="Value")
+                private List<String> ValueList;
     }
 
 }

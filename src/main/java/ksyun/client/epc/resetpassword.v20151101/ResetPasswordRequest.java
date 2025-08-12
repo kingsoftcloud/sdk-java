@@ -23,7 +23,7 @@ public class ResetPasswordRequest {
     /**
      * 云物理主机的root密码
      */
-    @KsYunField(name = "Password")
+    @KsYunField(name="Password")
     private String Password;
 
 }

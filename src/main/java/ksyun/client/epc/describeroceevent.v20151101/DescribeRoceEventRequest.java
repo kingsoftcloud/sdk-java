@@ -23,11 +23,11 @@ public class DescribeRoceEventRequest {
     /**
      * 第几条
      */
-    @KsYunField(name = "NextToken")
+    @KsYunField(name="NextToken")
     private String NextToken;
 
     /***/
-    @KsYunField(name = "Filter.N")
+    @KsYunField(name="Filter.N")
 
     private FilterNDto FilterNList;
 
@@ -41,19 +41,16 @@ public class DescribeRoceEventRequest {
          * event-start-time:事件发生时间-开始
          * event-end-time:事件发生事件-截止
          */
-        @KsYunField(name = "Name")
+        @KsYunField(name="Name")
         private String Name;
         /**
          * 参数值
          */
-        @KsYunField(name = "Value.M")
+        @KsYunField(name ="Value.M")
         private String ValueM;
     }
-
-    /**
-     * 实例ID
-     */
-    @KsYunField(name = "HostId.N")
+    /**实例ID*/
+    @KsYunField(name="HostId.N")
     private String HostIdN;
 
 }

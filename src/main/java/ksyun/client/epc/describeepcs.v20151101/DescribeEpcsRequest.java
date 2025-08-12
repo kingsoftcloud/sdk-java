@@ -23,13 +23,13 @@ public class DescribeEpcsRequest {
     /**
      * 裸金属服务器资源ID，可查询多个ID的实例信息
      */
-    @KsYunField(name = "HostId")
+    @KsYunField(name="HostId")
     private List<String> HostIdList;
 
     /**
      * 筛选Filter
      */
-    @KsYunField(name = "Filter")
+    @KsYunField(name="Filter")
     private List<FilterDto> FilterList;
 
     @Data
@@ -57,16 +57,12 @@ public class DescribeEpcsRequest {
         private List<String> ValueList;
     }
 
-    /**
-     * 单次调用可返回的最大条目数量
-     */
-    @KsYunField(name = "MaxResults")
+    /**单次调用可返回的最大条目数量*/
+    @KsYunField(name="MaxResults")
     private Integer MaxResults;
 
-    /**
-     * 获取另一页返回结果的 token.
-     */
-    @KsYunField(name = "NextToken")
+    /**获取另一页返回结果的 token.*/
+    @KsYunField(name="NextToken")
     private String NextToken;
 
 }

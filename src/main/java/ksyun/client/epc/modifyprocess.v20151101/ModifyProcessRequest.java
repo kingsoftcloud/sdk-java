@@ -28,12 +28,16 @@ public class ModifyProcessRequest {
     @KsYunField(name = "Confirm")
     private String Confirm;
 
-    /**
-     * 客户主动修改工单状态，支持客户关闭，用户选择关闭后如已发起NOC工单则需要取消NOC工单
-     * 有效值：
-     * • UserClose
-     */
+    /**客户主动修改工单状态，支持客户关闭，用户选择关闭后如已发起NOC工单则需要取消NOC工单
+     有效值：
+     • UserClose*/
     @KsYunField(name = "Status")
     private String Status;
+
+    /**
+     * 工单内容
+     */
+    @KsYunField(name="Content")
+    private String Content;
 
 }

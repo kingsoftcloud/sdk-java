@@ -23,7 +23,7 @@ public class ModifyImageRequest {
     /**
      * 原镜像ID
      */
-    @KsYunField(name = "ImageId")
+    @KsYunField(name="ImageId")
     private String ImageId;
 
 }

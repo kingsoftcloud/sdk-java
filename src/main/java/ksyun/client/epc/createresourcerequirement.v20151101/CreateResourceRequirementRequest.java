@@ -29,25 +29,19 @@ public class CreateResourceRequirementRequest {
     /**
      * 项目名称
      */
-    @KsYunField(name = "ProjectName")
+    @KsYunField(name="ProjectName")
     private String ProjectName;
 
-    /**
-     * 使用时间，yyyyMMdd
-     */
-    @KsYunField(name = "UsageDate")
+    /**使用时间，yyyyMMdd*/
+    @KsYunField(name="UsageDate")
     private String UsageDate;
 
-    /**
-     * 描述
-     */
-    @KsYunField(name = "Description")
+    /**描述*/
+    @KsYunField(name="Description")
     private String Description;
 
-    /**
-     * 物理机类型
-     */
-    @KsYunField(name = "HostType")
+    /**物理机类型*/
+    @KsYunField(name="HostType")
     private String HostType;
 
 }

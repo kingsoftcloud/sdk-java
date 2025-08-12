@@ -23,13 +23,13 @@ public class ReinstallCustomerEpcRequest {
     /**
      * PXE server的IP
      */
-    @KsYunField(name = "ServerIp")
+    @KsYunField(name="ServerIp")
     private String ServerIp;
 
     /**
      * PXE server的路径
      */
-    @KsYunField(name = "Path")
+    @KsYunField(name="Path")
     private String Path;
 
 }

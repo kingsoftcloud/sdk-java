@@ -23,7 +23,7 @@ public class AssociateClusterRequest {
     /**
      * 容器ID
      */
-    @KsYunField(name = "ClusterId")
+    @KsYunField(name="ClusterId")
     private String ClusterId;
 
 }

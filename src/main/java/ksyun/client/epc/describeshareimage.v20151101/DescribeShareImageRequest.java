@@ -23,7 +23,7 @@ public class DescribeShareImageRequest {
     /**
      * 获取另一页返回结果的token.
      */
-    @KsYunField(name = "NextToken")
+    @KsYunField(name="NextToken")
     private String NextToken;
 
 }

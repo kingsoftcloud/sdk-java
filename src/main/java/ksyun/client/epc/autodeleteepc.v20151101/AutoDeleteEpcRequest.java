@@ -30,7 +30,7 @@ public class AutoDeleteEpcRequest {
      * 是否删除EIP信息
      * yes/no 默认no
      */
-    @KsYunField(name = "AutoDeleteEip")
+    @KsYunField(name="AutoDeleteEip")
     private String AutoDeleteEip;
 
 }

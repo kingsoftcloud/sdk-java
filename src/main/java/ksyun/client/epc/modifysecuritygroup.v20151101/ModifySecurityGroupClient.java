@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
  * @Classname ModifySecurityGroupClient
- * @Description ModifySecurityGroup
+ * @Description 修改安全组
  */
 @Slf4j
 public class ModifySecurityGroupClient extends BaseClient {
@@ -43,7 +43,7 @@ public class ModifySecurityGroupClient extends BaseClient {
      */
     public ModifySecurityGroupResponse doPost(String path, ModifySecurityGroupRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
     }
 
@@ -58,14 +58,13 @@ public class ModifySecurityGroupClient extends BaseClient {
      */
     public ModifySecurityGroupResponse doPost(String path, ModifySecurityGroupRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
         return JSON.parseObject(response, ModifySecurityGroupResponse.class);
     }
 
     /**
      * post 请求
-     *
      * @param path
      * @param requestObj
      * @return
@@ -73,7 +72,7 @@ public class ModifySecurityGroupClient extends BaseClient {
      */
     public ModifySecurityGroupResponse doPostRaw(String path, ModifySecurityGroupRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPostRaw(path, requestObj, head);
     }
 
@@ -87,11 +86,10 @@ public class ModifySecurityGroupClient extends BaseClient {
      */
     public ModifySecurityGroupResponse doPostRaw(String path, ModifySecurityGroupRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
         return JSON.parseObject(response, ModifySecurityGroupResponse.class);
     }
-
     /**
      * get 请求
      *
@@ -102,7 +100,7 @@ public class ModifySecurityGroupClient extends BaseClient {
      */
     public ModifySecurityGroupResponse doGet(String path, ModifySecurityGroupRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.putIfAbsent("Content-Type", "application/json");
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doGet(path, requestObj, head);
     }
 
@@ -117,7 +115,7 @@ public class ModifySecurityGroupClient extends BaseClient {
      */
     public ModifySecurityGroupResponse doGet(String path, ModifySecurityGroupRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "get");
         return JSON.parseObject(response, ModifySecurityGroupResponse.class);
     }
@@ -132,7 +130,7 @@ public class ModifySecurityGroupClient extends BaseClient {
      */
     public ModifySecurityGroupResponse doDelete(String path, ModifySecurityGroupRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDelete(path, requestObj, head);
     }
 
@@ -147,7 +145,7 @@ public class ModifySecurityGroupClient extends BaseClient {
      */
     public ModifySecurityGroupResponse doDelete(String path, ModifySecurityGroupRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "delete");
         return JSON.parseObject(response, ModifySecurityGroupResponse.class);
     }
@@ -163,7 +161,7 @@ public class ModifySecurityGroupClient extends BaseClient {
      */
     public ModifySecurityGroupResponse doPut(String path, ModifySecurityGroupRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.putIfAbsent("Content-Type", "application/json");
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doPut(path, requestObj, head);
     }
 
@@ -178,14 +176,14 @@ public class ModifySecurityGroupClient extends BaseClient {
      */
     public ModifySecurityGroupResponse doPut(String path, ModifySecurityGroupRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+       requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "put");
         return JSON.parseObject(response, ModifySecurityGroupResponse.class);
     }
 
     /**
-     * rpc
-     *
+         * rpc
+         *
      * @param path
      * @param requestObj
      * @param head

@@ -30,22 +30,16 @@ public class DescribeModelConfigRequest {
     @KsYunField(name = "NextToken")
     private String NextToken;
 
-    /**
-     * 镜像ID
-     */
+    /**镜像ID*/
     @KsYunField(name = "ImageId")
     private String ImageId;
 
-    /**
-     * 实例类型
-     */
+    /**实例类型*/
     @KsYunField(name = "HostType")
     private String HostType;
 
-    /**
-     * gpu驱动ID
-     */
-    @KsYunField(name = "GpuImageDriverId")
+    /**gpu驱动ID*/
+    @KsYunField(name="GpuImageDriverId")
     private String GpuImageDriverId;
 
 }

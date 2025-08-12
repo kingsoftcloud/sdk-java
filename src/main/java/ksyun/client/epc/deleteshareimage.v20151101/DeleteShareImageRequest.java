@@ -23,7 +23,7 @@ public class DeleteShareImageRequest {
     /**
      * 接收共享镜像的账号ID列表
      */
-    @KsYunField(name = "AccountId.N")
-    private String AccountIdN;
+    @KsYunField(name = "AccountId")
+    private List<String> AccountIdList;
 
 }

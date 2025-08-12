@@ -23,25 +23,21 @@ public class CreateRemoteManagementRequest {
     /**
      * 个人识别码
      */
-    @KsYunField(name = "Pin")
+    @KsYunField(name="Pin")
     private String Pin;
 
     /**
      * 手机号码
      */
-    @KsYunField(name = "PhoneNumber")
+    @KsYunField(name="PhoneNumber")
     private String PhoneNumber;
 
-    /**
-     * 姓名
-     */
+    /**姓名*/
     @KsYunField(name = "Name")
     private String Name;
 
-    /**
-     * 版本ID
-     */
-    @KsYunField(name = "VersionId")
+    /**版本ID*/
+    @KsYunField(name="VersionId")
     private Integer VersionId;
 
 }

@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
  * @Classname ModifyNetworkInterfaceAttributeClient
- * @Description ModifyNetworkInterfaceAttribute
+ * @Description 修改网卡信息
  */
 @Slf4j
 public class ModifyNetworkInterfaceAttributeClient extends BaseClient {
@@ -65,7 +65,6 @@ public class ModifyNetworkInterfaceAttributeClient extends BaseClient {
 
     /**
      * post 请求
-     *
      * @param path
      * @param requestObj
      * @return
@@ -91,7 +90,6 @@ public class ModifyNetworkInterfaceAttributeClient extends BaseClient {
         String response = doRpc(path, requestObj, requestHeaders, "post");
         return JSON.parseObject(response, ModifyNetworkInterfaceAttributeResponse.class);
     }
-
     /**
      * get 请求
      *
@@ -178,14 +176,14 @@ public class ModifyNetworkInterfaceAttributeClient extends BaseClient {
      */
     public ModifyNetworkInterfaceAttributeResponse doPut(String path, ModifyNetworkInterfaceAttributeRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+       requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "put");
         return JSON.parseObject(response, ModifyNetworkInterfaceAttributeResponse.class);
     }
 
     /**
-     * rpc
-     *
+         * rpc
+         *
      * @param path
      * @param requestObj
      * @param head
