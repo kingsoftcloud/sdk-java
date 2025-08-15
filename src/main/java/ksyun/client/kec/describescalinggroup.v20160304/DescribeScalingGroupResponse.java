@@ -5,22 +5,17 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
-* @Classname DescribeScalingGroupResponse
-* @Description DescribeScalingGroup 返回体
-*/
+ * @Classname DescribeScalingGroupResponse @Description DescribeScalingGroup 返回体
+ */
 @Data
 @ToString
 public class DescribeScalingGroupResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+  /** 请求id */
+  @JsonProperty("RequestId")
+  private String requestId;
 
-    //返回结果，需要按需扩展
+  // 返回结果，需要按需扩展
 
 }

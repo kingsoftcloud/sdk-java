@@ -1,35 +1,22 @@
 package ksyun.client.ked.imagecreate.v20250501;
 
 import common.annotation.KsYunField;
-import lombok.Builder;
 import lombok.Data;
-import lombok.ToString;
-
-import java.util.List;
-import java.util.Arrays;
 
 /**
- * @Classname ImagecreateRequest
- * @Description 请求参数
+ * @Classname ImagecreateRequest @Description 请求参数
  */
 @Data
 public class ImagecreateRequest {
-    /**
-     * 镜像名称
-     */
-    @KsYunField(name = "imageName")
-    private String ImageName;
+  /** 镜像名称 */
+  @KsYunField(name = "imageName")
+  private String ImageName;
 
-    /**
-     * 描述信息
-     */
-    @KsYunField(name = "description")
-    private String Description;
+  /** 描述信息 */
+  @KsYunField(name = "description")
+  private String Description;
 
-    /**
-     * 云电脑id
-     */
-    @KsYunField(name = "instanceId")
-    private String InstanceId;
-
+  /** 云电脑id */
+  @KsYunField(name = "instanceId")
+  private String InstanceId;
 }

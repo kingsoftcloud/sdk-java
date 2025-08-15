@@ -5,22 +5,17 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
-
 /**
- * @Classname SetProxyIpResponse
- * @Description SetProxyIp 返回体
+ * @Classname SetProxyIpResponse @Description SetProxyIp 返回体
  */
 @Data
 @ToString
 public class SetProxyIpResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+  /** 请求id */
+  @JsonProperty("RequestId")
+  private String requestId;
 
-    //返回结果，需要按需扩展
+  // 返回结果，需要按需扩展
 
 }

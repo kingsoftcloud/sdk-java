@@ -1,35 +1,22 @@
 package ksyun.client.iam.updateprojectinfo.v20151101;
 
 import common.annotation.KsYunField;
-import lombok.Builder;
 import lombok.Data;
-import lombok.ToString;
-
-import java.util.List;
-import java.util.Arrays;
 
 /**
- * @Classname UpdateProjectInfoRequest
- * @Description 请求参数
+ * @Classname UpdateProjectInfoRequest @Description 请求参数
  */
 @Data
 public class UpdateProjectInfoRequest {
-    /**
-     * ProjectId
-     */
-    @KsYunField(name = "ProjectId")
-    private Integer ProjectId;
+  /** ProjectId */
+  @KsYunField(name = "ProjectId")
+  private Integer ProjectId;
 
-    /**
-     * 项目名称，最多64个字符
-     */
-    @KsYunField(name = "ProjectName")
-    private String ProjectName;
+  /** 项目名称，最多64个字符 */
+  @KsYunField(name = "ProjectName")
+  private String ProjectName;
 
-    /**
-     * 项目描述，最多64个字符
-     */
-    @KsYunField(name = "ProjectDesc")
-    private String ProjectDesc;
-
+  /** 项目描述，最多64个字符 */
+  @KsYunField(name = "ProjectDesc")
+  private String ProjectDesc;
 }

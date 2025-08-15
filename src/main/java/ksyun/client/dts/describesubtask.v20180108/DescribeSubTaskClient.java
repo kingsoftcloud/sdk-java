@@ -5,247 +5,254 @@ import com.alibaba.fastjson.JSONObject;
 import common.BaseClient;
 import common.Credential;
 import common.RpcRequestContentModel;
-import common.utils.RequestHelpUtils;
 import common.utils.RpcRequestClient;
+import java.util.*;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.*;
-
 /**
- * @Classname DescribeSubTaskClient
- * @Description 查询子任务信息
+ * @Classname DescribeSubTaskClient @Description 查询子任务信息
  */
 @Slf4j
 public class DescribeSubTaskClient extends BaseClient {
-    private final static String service = "dts";
-    private final static String version = "2018-01-08";
-    private final static String action = "DescribeSubTask";
+  private static final String service = "dts";
+  private static final String version = "2018-01-08";
+  private static final String action = "DescribeSubTask";
 
+  /** 证书 */
+  private Credential credential;
 
-    /**
-     * 证书
-     */
-    private Credential credential;
+  public DescribeSubTaskClient(Credential credential) {
+    this.credential = credential;
+  }
 
+  /**
+   * post请求
+   *
+   * @param path
+   * @param requestObj
+   * @return
+   * @throws Exception
+   */
+  public DescribeSubTaskResponse doPost(String path, DescribeSubTaskRequest requestObj)
+      throws Exception {
+    Map<String, String> head = new HashMap<>();
+    head.put("Content-Type", "application/json");
+    return doPost(path, requestObj, head);
+  }
 
-    public DescribeSubTaskClient(Credential credential) {
-        this.credential = credential;
+  /**
+   * post请求
+   *
+   * @param path
+   * @param requestObj
+   * @param head
+   * @return
+   * @throws Exception
+   */
+  public DescribeSubTaskResponse doPost(
+      String path, DescribeSubTaskRequest requestObj, Map<String, String> head) throws Exception {
+    final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
+    requestHeaders.putIfAbsent("Content-Type", "application/json");
+    String response = doRpc(path, requestObj, requestHeaders, "post");
+    return JSON.parseObject(response, DescribeSubTaskResponse.class);
+  }
+
+  /**
+   * post 请求
+   *
+   * @param path
+   * @param requestObj
+   * @return
+   * @throws Exception
+   */
+  public DescribeSubTaskResponse doPostRaw(String path, DescribeSubTaskRequest requestObj)
+      throws Exception {
+    Map<String, String> head = new HashMap<>();
+    head.put("Content-Type", "application/json");
+    return doPostRaw(path, requestObj, head);
+  }
+
+  /**
+   * post 请求
+   *
+   * @param path
+   * @param requestObj
+   * @return
+   * @throws Exception
+   */
+  public DescribeSubTaskResponse doPostRaw(
+      String path, DescribeSubTaskRequest requestObj, Map<String, String> head) throws Exception {
+    final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
+    requestHeaders.putIfAbsent("Content-Type", "application/json");
+    String response = doRpc(path, requestObj, requestHeaders, "post");
+    return JSON.parseObject(response, DescribeSubTaskResponse.class);
+  }
+
+  /**
+   * get 请求
+   *
+   * @param path
+   * @param requestObj
+   * @return
+   * @throws Exception
+   */
+  public DescribeSubTaskResponse doGet(String path, DescribeSubTaskRequest requestObj)
+      throws Exception {
+    Map<String, String> head = new HashMap<>();
+    head.putIfAbsent("Content-Type", "application/json");
+    return doGet(path, requestObj, head);
+  }
+
+  /**
+   * get 请求
+   *
+   * @param path
+   * @param requestObj
+   * @param head
+   * @return
+   * @throws Exception
+   */
+  public DescribeSubTaskResponse doGet(
+      String path, DescribeSubTaskRequest requestObj, Map<String, String> head) throws Exception {
+    final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
+    requestHeaders.putIfAbsent("Content-Type", "application/json");
+    String response = doRpc(path, requestObj, requestHeaders, "get");
+    return JSON.parseObject(response, DescribeSubTaskResponse.class);
+  }
+
+  /**
+   * doDelete 请求
+   *
+   * @param path
+   * @param requestObj
+   * @return
+   * @throws Exception
+   */
+  public DescribeSubTaskResponse doDelete(String path, DescribeSubTaskRequest requestObj)
+      throws Exception {
+    Map<String, String> head = new HashMap<>();
+    head.put("Content-Type", "application/json");
+    return doDelete(path, requestObj, head);
+  }
+
+  /**
+   * doDelete 请求
+   *
+   * @param path
+   * @param requestObj
+   * @param head
+   * @return
+   * @throws Exception
+   */
+  public DescribeSubTaskResponse doDelete(
+      String path, DescribeSubTaskRequest requestObj, Map<String, String> head) throws Exception {
+    final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
+    requestHeaders.putIfAbsent("Content-Type", "application/json");
+    String response = doRpc(path, requestObj, requestHeaders, "delete");
+    return JSON.parseObject(response, DescribeSubTaskResponse.class);
+  }
+
+  /**
+   * doPut 请求
+   *
+   * @param path
+   * @param requestObj
+   * @return
+   * @throws Exception
+   */
+  public DescribeSubTaskResponse doPut(String path, DescribeSubTaskRequest requestObj)
+      throws Exception {
+    Map<String, String> head = new HashMap<>();
+    head.putIfAbsent("Content-Type", "application/json");
+    return doPut(path, requestObj, head);
+  }
+
+  /**
+   * doPut 请求
+   *
+   * @param path
+   * @param requestObj
+   * @param head
+   * @return
+   * @throws Exception
+   */
+  public DescribeSubTaskResponse doPut(
+      String path, DescribeSubTaskRequest requestObj, Map<String, String> head) throws Exception {
+    final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
+    requestHeaders.putIfAbsent("Content-Type", "application/json");
+    String response = doRpc(path, requestObj, requestHeaders, "put");
+    return JSON.parseObject(response, DescribeSubTaskResponse.class);
+  }
+
+  /**
+   * rpc
+   *
+   * @param path
+   * @param requestObj
+   * @param head
+   * @return
+   * @throws Exception
+   */
+  private String doRpc(
+      String path,
+      DescribeSubTaskRequest requestObj,
+      Map<String, String> head,
+      String requestMethod)
+      throws Exception {
+    // 断言
+    Objects.requireNonNull(path, "path cannot be null");
+    Objects.requireNonNull(requestObj, "requestObj cannot be null");
+    Objects.requireNonNull(requestMethod, "requestMethod cannot be null");
+    Objects.requireNonNull(head, "head cannot be null");
+
+    // 请求上下文
+    RpcRequestContentModel requestContentModel =
+        RpcRequestContentModel.builder()
+            .action(action)
+            .version(version)
+            .service(service)
+            .region(credential.getRegion())
+            .accessKeyId(credential.getSecretKey())
+            .secretAccessKey(credential.getSignStr())
+            .build();
+
+    // 根据内容类型设置请求体
+    String contentType = head.getOrDefault("Content-Type", "application/x-www-form-urlencoded");
+    JSONObject requestParam = getRequestParam(requestObj, contentType);
+
+    // uri
+    path = path + "?Action=" + action + "&Version=" + version;
+
+    // 发起请求
+    String response =
+        new RpcRequestClient(requestContentModel)
+            .beginRpcRequest(path, requestMethod, requestParam, head);
+    log.info("doRpc end,path:{},params:{},head:{}", path, JSONObject.toJSON(requestParam), head);
+    return response;
+  }
+
+  private JSONObject getRequestParam(DescribeSubTaskRequest requestObj, String contentType)
+      throws Exception {
+    // 请求参数
+    if (contentType.equalsIgnoreCase("application/json")) {
+      return getPostRawRequestParams(requestObj);
     }
+    return getSimpleRequestParams(requestObj);
+  }
 
+  private JSONObject getSimpleRequestParams(DescribeSubTaskRequest requestObj) throws Exception {
+    JSONObject requestParams = new JSONObject();
 
-    /**
-     * post请求
-     *
-     * @param path
-     * @param requestObj
-     * @return
-     * @throws Exception
-     */
-    public DescribeSubTaskResponse doPost(String path, DescribeSubTaskRequest requestObj) throws Exception {
-        Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
-        return doPost(path, requestObj, head);
-    }
+    // 设置请求体请求参数
+    setRequestField(requestObj, requestParams);
+    return requestParams;
+  }
 
-    /**
-     * post请求
-     *
-     * @param path
-     * @param requestObj
-     * @param head
-     * @return
-     * @throws Exception
-     */
-    public DescribeSubTaskResponse doPost(String path, DescribeSubTaskRequest requestObj, Map<String, String> head) throws Exception {
-        final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
-        String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, DescribeSubTaskResponse.class);
-    }
+  private JSONObject getPostRawRequestParams(DescribeSubTaskRequest requestObj) throws Exception {
+    JSONObject requestParams = new JSONObject();
 
-    /**
-     * post 请求
-     *
-     * @param path
-     * @param requestObj
-     * @return
-     * @throws Exception
-     */
-    public DescribeSubTaskResponse doPostRaw(String path, DescribeSubTaskRequest requestObj) throws Exception {
-        Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
-        return doPostRaw(path, requestObj, head);
-    }
-
-    /**
-     * post 请求
-     *
-     * @param path
-     * @param requestObj
-     * @return
-     * @throws Exception
-     */
-    public DescribeSubTaskResponse doPostRaw(String path, DescribeSubTaskRequest requestObj, Map<String, String> head) throws Exception {
-        final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
-        String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, DescribeSubTaskResponse.class);
-    }
-
-    /**
-     * get 请求
-     *
-     * @param path
-     * @param requestObj
-     * @return
-     * @throws Exception
-     */
-    public DescribeSubTaskResponse doGet(String path, DescribeSubTaskRequest requestObj) throws Exception {
-        Map<String, String> head = new HashMap<>();
-        head.putIfAbsent("Content-Type", "application/json");
-        return doGet(path, requestObj, head);
-    }
-
-    /**
-     * get 请求
-     *
-     * @param path
-     * @param requestObj
-     * @param head
-     * @return
-     * @throws Exception
-     */
-    public DescribeSubTaskResponse doGet(String path, DescribeSubTaskRequest requestObj, Map<String, String> head) throws Exception {
-        final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
-        String response = doRpc(path, requestObj, requestHeaders, "get");
-        return JSON.parseObject(response, DescribeSubTaskResponse.class);
-    }
-
-    /**
-     * doDelete 请求
-     *
-     * @param path
-     * @param requestObj
-     * @return
-     * @throws Exception
-     */
-    public DescribeSubTaskResponse doDelete(String path, DescribeSubTaskRequest requestObj) throws Exception {
-        Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
-        return doDelete(path, requestObj, head);
-    }
-
-    /**
-     * doDelete 请求
-     *
-     * @param path
-     * @param requestObj
-     * @param head
-     * @return
-     * @throws Exception
-     */
-    public DescribeSubTaskResponse doDelete(String path, DescribeSubTaskRequest requestObj, Map<String, String> head) throws Exception {
-        final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
-        String response = doRpc(path, requestObj, requestHeaders, "delete");
-        return JSON.parseObject(response, DescribeSubTaskResponse.class);
-    }
-
-
-    /**
-     * doPut 请求
-     *
-     * @param path
-     * @param requestObj
-     * @return
-     * @throws Exception
-     */
-    public DescribeSubTaskResponse doPut(String path, DescribeSubTaskRequest requestObj) throws Exception {
-        Map<String, String> head = new HashMap<>();
-        head.putIfAbsent("Content-Type", "application/json");
-        return doPut(path, requestObj, head);
-    }
-
-    /**
-     * doPut 请求
-     *
-     * @param path
-     * @param requestObj
-     * @param head
-     * @return
-     * @throws Exception
-     */
-    public DescribeSubTaskResponse doPut(String path, DescribeSubTaskRequest requestObj, Map<String, String> head) throws Exception {
-        final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
-        String response = doRpc(path, requestObj, requestHeaders, "put");
-        return JSON.parseObject(response, DescribeSubTaskResponse.class);
-    }
-
-    /**
-     * rpc
-     *
-     * @param path
-     * @param requestObj
-     * @param head
-     * @return
-     * @throws Exception
-     */
-    private String doRpc(String path, DescribeSubTaskRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
-        //断言
-        Objects.requireNonNull(path, "path cannot be null");
-        Objects.requireNonNull(requestObj, "requestObj cannot be null");
-        Objects.requireNonNull(requestMethod, "requestMethod cannot be null");
-        Objects.requireNonNull(head, "head cannot be null");
-
-        //请求上下文
-        RpcRequestContentModel requestContentModel = RpcRequestContentModel.builder()
-                .action(action)
-                .version(version)
-                .service(service)
-                .region(credential.getRegion())
-                .accessKeyId(credential.getSecretKey())
-                .secretAccessKey(credential.getSignStr())
-                .build();
-
-        // 根据内容类型设置请求体
-        String contentType = head.getOrDefault("Content-Type", "application/x-www-form-urlencoded");
-        JSONObject requestParam = getRequestParam(requestObj, contentType);
-
-        //uri
-        path = path + "?Action=" + action + "&Version=" + version;
-
-        //发起请求
-        String response = new RpcRequestClient(requestContentModel).beginRpcRequest(path, requestMethod, requestParam, head);
-        log.info("doRpc end,path:{},params:{},head:{}", path, JSONObject.toJSON(requestParam), head);
-        return response;
-
-    }
-
-
-    private JSONObject getRequestParam(DescribeSubTaskRequest requestObj, String contentType) throws Exception {
-        //请求参数
-        if (contentType.equalsIgnoreCase("application/json")) {
-            return getPostRawRequestParams(requestObj);
-        }
-        return getSimpleRequestParams(requestObj);
-    }
-
-
-    private JSONObject getSimpleRequestParams(DescribeSubTaskRequest requestObj) throws Exception {
-        JSONObject requestParams = new JSONObject();
-
-        //设置请求体请求参数
-        setRequestField(requestObj, requestParams);
-        return requestParams;
-    }
-
-    private JSONObject getPostRawRequestParams(DescribeSubTaskRequest requestObj) throws Exception {
-        JSONObject requestParams = new JSONObject();
-
-        //设置请求体请求参数
-        setRequestFieldForPostRaw(requestObj, requestParams);
-        return requestParams;
-    }
+    // 设置请求体请求参数
+    setRequestFieldForPostRaw(requestObj, requestParams);
+    return requestParams;
+  }
 }

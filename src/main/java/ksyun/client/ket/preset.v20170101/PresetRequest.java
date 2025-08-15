@@ -1,41 +1,34 @@
 package ksyun.client.ket.preset.v20170101;
 
 import common.annotation.KsYunField;
-import lombok.Builder;
 import lombok.Data;
-import lombok.ToString;
-
-import java.util.List;
-import java.util.Arrays;
 
 /**
- * @Classname PresetRequest
- * @Description 请求参数
+ * @Classname PresetRequest @Description 请求参数
  */
 @Data
 public class PresetRequest {
-    /***/
-    @KsYunField(name = "UniqName")
-    private String UniqName;
+  /***/
+  @KsYunField(name = "UniqName")
+  private String UniqName;
 
-    /***/
-    @KsYunField(name = "App")
-    private String App;
+  /***/
+  @KsYunField(name = "App")
+  private String App;
 
-    /***/
-    @KsYunField(name = "Preset")
-    private String Preset;
+  /***/
+  @KsYunField(name = "Preset")
+  private String Preset;
 
-    /***/
-    @KsYunField(name = "Description")
-    private String Description;
+  /***/
+  @KsYunField(name = "Description")
+  private String Description;
 
-    /***/
-    @KsYunField(name = "Output")
-    private String Output;
+  /***/
+  @KsYunField(name = "Output")
+  private String Output;
 
-    /***/
-    @KsYunField(name = "Video")
-    private String Video;
-
+  /***/
+  @KsYunField(name = "Video")
+  private String Video;
 }

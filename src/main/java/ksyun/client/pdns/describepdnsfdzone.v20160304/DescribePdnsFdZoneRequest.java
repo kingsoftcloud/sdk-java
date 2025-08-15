@@ -1,34 +1,24 @@
 package ksyun.client.pdns.describepdnsfdzone.v20160304;
 
 import common.annotation.KsYunField;
-import lombok.Builder;
+import java.util.List;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
-import java.util.Arrays;
-
 /**
- * @Classname DescribePdnsFdZoneRequest
- * @Description 请求参数
+ * @Classname DescribePdnsFdZoneRequest @Description 请求参数
  */
 @Data
 public class DescribePdnsFdZoneRequest {
-    /**
-     * 转发Zone的ID
-     */
-    @KsYunField(name = "FdZoneId")
-    private List<String> FdZoneIdList;
+  /** 转发Zone的ID */
+  @KsYunField(name = "FdZoneId")
+  private List<String> FdZoneIdList;
 
-    /**
-     * 筛选Filter
-     */
-    @KsYunField(name = "Filter")
-    private List<FilterDto> FilterList;
+  /** 筛选Filter */
+  @KsYunField(name = "Filter")
+  private List<FilterDto> FilterList;
 
-    @Data
-    @ToString
-    public static class FilterDto {
-    }
-
+  @Data
+  @ToString
+  public static class FilterDto {}
 }

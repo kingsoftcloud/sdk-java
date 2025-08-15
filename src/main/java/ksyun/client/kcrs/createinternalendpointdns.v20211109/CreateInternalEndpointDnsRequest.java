@@ -1,41 +1,29 @@
 package ksyun.client.kcrs.createinternalendpointdns.v20211109;
 
 import common.annotation.KsYunField;
-import lombok.Builder;
 import lombok.Data;
-import lombok.ToString;
-
-import java.util.List;
-import java.util.Arrays;
 
 /**
- * @Classname CreateInternalEndpointDnsRequest
- * @Description 请求参数
+ * @Classname CreateInternalEndpointDnsRequest @Description 请求参数
  */
 @Data
 public class CreateInternalEndpointDnsRequest {
-    /**
-     * 实例id
-     */
-    @KsYunField(name = "InstanceId")
-    private String InstanceId;
+  /** 实例id */
+  @KsYunField(name = "InstanceId")
+  private String InstanceId;
 
-    /**
-     * vpcid
-     */
-    @KsYunField(name = "VpcId")
-    private String VpcId;
+  /** vpcid */
+  @KsYunField(name = "VpcId")
+  private String VpcId;
 
-    /**
-     * 实例内网访问链路ip
-     */
-    @KsYunField(name = "EniLBIp")
-    private String EniLBIp;
+  /** 实例内网访问链路ip */
+  @KsYunField(name = "EniLBIp")
+  private String EniLBIp;
 
-    /**
-     * 解析的域名，有效值：<br/>PrivateDomain：内网域名
-     */
-    @KsYunField(name = "InternalEndpointDns")
-    private String InternalEndpointDns;
-
+  /**
+   * 解析的域名，有效值：<br>
+   * PrivateDomain：内网域名
+   */
+  @KsYunField(name = "InternalEndpointDns")
+  private String InternalEndpointDns;
 }

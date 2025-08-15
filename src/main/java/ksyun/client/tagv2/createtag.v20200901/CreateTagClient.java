@@ -5,247 +5,246 @@ import com.alibaba.fastjson.JSONObject;
 import common.BaseClient;
 import common.Credential;
 import common.RpcRequestContentModel;
-import common.utils.RequestHelpUtils;
 import common.utils.RpcRequestClient;
+import java.util.*;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.*;
-
 /**
- * @Classname CreateTagClient
- * @Description 创建标签
+ * @Classname CreateTagClient @Description 创建标签
  */
 @Slf4j
 public class CreateTagClient extends BaseClient {
-    private final static String service = "tagv2";
-    private final static String version = "2020-09-01";
-    private final static String action = "CreateTag";
+  private static final String service = "tagv2";
+  private static final String version = "2020-09-01";
+  private static final String action = "CreateTag";
 
+  /** 证书 */
+  private Credential credential;
 
-    /**
-     * 证书
-     */
-    private Credential credential;
+  public CreateTagClient(Credential credential) {
+    this.credential = credential;
+  }
 
+  /**
+   * post请求
+   *
+   * @param path
+   * @param requestObj
+   * @return
+   * @throws Exception
+   */
+  public CreateTagResponse doPost(String path, CreateTagRequest requestObj) throws Exception {
+    Map<String, String> head = new HashMap<>();
+    head.put("Content-Type", "application/json");
+    return doPost(path, requestObj, head);
+  }
 
-    public CreateTagClient(Credential credential) {
-        this.credential = credential;
+  /**
+   * post请求
+   *
+   * @param path
+   * @param requestObj
+   * @param head
+   * @return
+   * @throws Exception
+   */
+  public CreateTagResponse doPost(
+      String path, CreateTagRequest requestObj, Map<String, String> head) throws Exception {
+    final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
+    requestHeaders.putIfAbsent("Content-Type", "application/json");
+    String response = doRpc(path, requestObj, requestHeaders, "post");
+    return JSON.parseObject(response, CreateTagResponse.class);
+  }
+
+  /**
+   * post 请求
+   *
+   * @param path
+   * @param requestObj
+   * @return
+   * @throws Exception
+   */
+  public CreateTagResponse doPostRaw(String path, CreateTagRequest requestObj) throws Exception {
+    Map<String, String> head = new HashMap<>();
+    head.put("Content-Type", "application/json");
+    return doPostRaw(path, requestObj, head);
+  }
+
+  /**
+   * post 请求
+   *
+   * @param path
+   * @param requestObj
+   * @return
+   * @throws Exception
+   */
+  public CreateTagResponse doPostRaw(
+      String path, CreateTagRequest requestObj, Map<String, String> head) throws Exception {
+    final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
+    requestHeaders.putIfAbsent("Content-Type", "application/json");
+    String response = doRpc(path, requestObj, requestHeaders, "post");
+    return JSON.parseObject(response, CreateTagResponse.class);
+  }
+
+  /**
+   * get 请求
+   *
+   * @param path
+   * @param requestObj
+   * @return
+   * @throws Exception
+   */
+  public CreateTagResponse doGet(String path, CreateTagRequest requestObj) throws Exception {
+    Map<String, String> head = new HashMap<>();
+    head.putIfAbsent("Content-Type", "application/json");
+    return doGet(path, requestObj, head);
+  }
+
+  /**
+   * get 请求
+   *
+   * @param path
+   * @param requestObj
+   * @param head
+   * @return
+   * @throws Exception
+   */
+  public CreateTagResponse doGet(String path, CreateTagRequest requestObj, Map<String, String> head)
+      throws Exception {
+    final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
+    requestHeaders.putIfAbsent("Content-Type", "application/json");
+    String response = doRpc(path, requestObj, requestHeaders, "get");
+    return JSON.parseObject(response, CreateTagResponse.class);
+  }
+
+  /**
+   * doDelete 请求
+   *
+   * @param path
+   * @param requestObj
+   * @return
+   * @throws Exception
+   */
+  public CreateTagResponse doDelete(String path, CreateTagRequest requestObj) throws Exception {
+    Map<String, String> head = new HashMap<>();
+    head.put("Content-Type", "application/json");
+    return doDelete(path, requestObj, head);
+  }
+
+  /**
+   * doDelete 请求
+   *
+   * @param path
+   * @param requestObj
+   * @param head
+   * @return
+   * @throws Exception
+   */
+  public CreateTagResponse doDelete(
+      String path, CreateTagRequest requestObj, Map<String, String> head) throws Exception {
+    final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
+    requestHeaders.putIfAbsent("Content-Type", "application/json");
+    String response = doRpc(path, requestObj, requestHeaders, "delete");
+    return JSON.parseObject(response, CreateTagResponse.class);
+  }
+
+  /**
+   * doPut 请求
+   *
+   * @param path
+   * @param requestObj
+   * @return
+   * @throws Exception
+   */
+  public CreateTagResponse doPut(String path, CreateTagRequest requestObj) throws Exception {
+    Map<String, String> head = new HashMap<>();
+    head.putIfAbsent("Content-Type", "application/json");
+    return doPut(path, requestObj, head);
+  }
+
+  /**
+   * doPut 请求
+   *
+   * @param path
+   * @param requestObj
+   * @param head
+   * @return
+   * @throws Exception
+   */
+  public CreateTagResponse doPut(String path, CreateTagRequest requestObj, Map<String, String> head)
+      throws Exception {
+    final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
+    requestHeaders.putIfAbsent("Content-Type", "application/json");
+    String response = doRpc(path, requestObj, requestHeaders, "put");
+    return JSON.parseObject(response, CreateTagResponse.class);
+  }
+
+  /**
+   * rpc
+   *
+   * @param path
+   * @param requestObj
+   * @param head
+   * @return
+   * @throws Exception
+   */
+  private String doRpc(
+      String path, CreateTagRequest requestObj, Map<String, String> head, String requestMethod)
+      throws Exception {
+    // 断言
+    Objects.requireNonNull(path, "path cannot be null");
+    Objects.requireNonNull(requestObj, "requestObj cannot be null");
+    Objects.requireNonNull(requestMethod, "requestMethod cannot be null");
+    Objects.requireNonNull(head, "head cannot be null");
+
+    // 请求上下文
+    RpcRequestContentModel requestContentModel =
+        RpcRequestContentModel.builder()
+            .action(action)
+            .version(version)
+            .service(service)
+            .region(credential.getRegion())
+            .accessKeyId(credential.getSecretKey())
+            .secretAccessKey(credential.getSignStr())
+            .build();
+
+    // 根据内容类型设置请求体
+    String contentType = head.getOrDefault("Content-Type", "application/x-www-form-urlencoded");
+    JSONObject requestParam = getRequestParam(requestObj, contentType);
+
+    // uri
+    path = path + "?Action=" + action + "&Version=" + version;
+
+    // 发起请求
+    String response =
+        new RpcRequestClient(requestContentModel)
+            .beginRpcRequest(path, requestMethod, requestParam, head);
+    log.info("doRpc end,path:{},params:{},head:{}", path, JSONObject.toJSON(requestParam), head);
+    return response;
+  }
+
+  private JSONObject getRequestParam(CreateTagRequest requestObj, String contentType)
+      throws Exception {
+    // 请求参数
+    if (contentType.equalsIgnoreCase("application/json")) {
+      return getPostRawRequestParams(requestObj);
     }
+    return getSimpleRequestParams(requestObj);
+  }
 
+  private JSONObject getSimpleRequestParams(CreateTagRequest requestObj) throws Exception {
+    JSONObject requestParams = new JSONObject();
 
-    /**
-     * post请求
-     *
-     * @param path
-     * @param requestObj
-     * @return
-     * @throws Exception
-     */
-    public CreateTagResponse doPost(String path, CreateTagRequest requestObj) throws Exception {
-        Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
-        return doPost(path, requestObj, head);
-    }
+    // 设置请求体请求参数
+    setRequestField(requestObj, requestParams);
+    return requestParams;
+  }
 
-    /**
-     * post请求
-     *
-     * @param path
-     * @param requestObj
-     * @param head
-     * @return
-     * @throws Exception
-     */
-    public CreateTagResponse doPost(String path, CreateTagRequest requestObj, Map<String, String> head) throws Exception {
-        final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
-        String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, CreateTagResponse.class);
-    }
+  private JSONObject getPostRawRequestParams(CreateTagRequest requestObj) throws Exception {
+    JSONObject requestParams = new JSONObject();
 
-    /**
-     * post 请求
-     *
-     * @param path
-     * @param requestObj
-     * @return
-     * @throws Exception
-     */
-    public CreateTagResponse doPostRaw(String path, CreateTagRequest requestObj) throws Exception {
-        Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
-        return doPostRaw(path, requestObj, head);
-    }
-
-    /**
-     * post 请求
-     *
-     * @param path
-     * @param requestObj
-     * @return
-     * @throws Exception
-     */
-    public CreateTagResponse doPostRaw(String path, CreateTagRequest requestObj, Map<String, String> head) throws Exception {
-        final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
-        String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, CreateTagResponse.class);
-    }
-
-    /**
-     * get 请求
-     *
-     * @param path
-     * @param requestObj
-     * @return
-     * @throws Exception
-     */
-    public CreateTagResponse doGet(String path, CreateTagRequest requestObj) throws Exception {
-        Map<String, String> head = new HashMap<>();
-        head.putIfAbsent("Content-Type", "application/json");
-        return doGet(path, requestObj, head);
-    }
-
-    /**
-     * get 请求
-     *
-     * @param path
-     * @param requestObj
-     * @param head
-     * @return
-     * @throws Exception
-     */
-    public CreateTagResponse doGet(String path, CreateTagRequest requestObj, Map<String, String> head) throws Exception {
-        final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
-        String response = doRpc(path, requestObj, requestHeaders, "get");
-        return JSON.parseObject(response, CreateTagResponse.class);
-    }
-
-    /**
-     * doDelete 请求
-     *
-     * @param path
-     * @param requestObj
-     * @return
-     * @throws Exception
-     */
-    public CreateTagResponse doDelete(String path, CreateTagRequest requestObj) throws Exception {
-        Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
-        return doDelete(path, requestObj, head);
-    }
-
-    /**
-     * doDelete 请求
-     *
-     * @param path
-     * @param requestObj
-     * @param head
-     * @return
-     * @throws Exception
-     */
-    public CreateTagResponse doDelete(String path, CreateTagRequest requestObj, Map<String, String> head) throws Exception {
-        final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
-        String response = doRpc(path, requestObj, requestHeaders, "delete");
-        return JSON.parseObject(response, CreateTagResponse.class);
-    }
-
-
-    /**
-     * doPut 请求
-     *
-     * @param path
-     * @param requestObj
-     * @return
-     * @throws Exception
-     */
-    public CreateTagResponse doPut(String path, CreateTagRequest requestObj) throws Exception {
-        Map<String, String> head = new HashMap<>();
-        head.putIfAbsent("Content-Type", "application/json");
-        return doPut(path, requestObj, head);
-    }
-
-    /**
-     * doPut 请求
-     *
-     * @param path
-     * @param requestObj
-     * @param head
-     * @return
-     * @throws Exception
-     */
-    public CreateTagResponse doPut(String path, CreateTagRequest requestObj, Map<String, String> head) throws Exception {
-        final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
-        String response = doRpc(path, requestObj, requestHeaders, "put");
-        return JSON.parseObject(response, CreateTagResponse.class);
-    }
-
-    /**
-     * rpc
-     *
-     * @param path
-     * @param requestObj
-     * @param head
-     * @return
-     * @throws Exception
-     */
-    private String doRpc(String path, CreateTagRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
-        //断言
-        Objects.requireNonNull(path, "path cannot be null");
-        Objects.requireNonNull(requestObj, "requestObj cannot be null");
-        Objects.requireNonNull(requestMethod, "requestMethod cannot be null");
-        Objects.requireNonNull(head, "head cannot be null");
-
-        //请求上下文
-        RpcRequestContentModel requestContentModel = RpcRequestContentModel.builder()
-                .action(action)
-                .version(version)
-                .service(service)
-                .region(credential.getRegion())
-                .accessKeyId(credential.getSecretKey())
-                .secretAccessKey(credential.getSignStr())
-                .build();
-
-        // 根据内容类型设置请求体
-        String contentType = head.getOrDefault("Content-Type", "application/x-www-form-urlencoded");
-        JSONObject requestParam = getRequestParam(requestObj, contentType);
-
-        //uri
-        path = path + "?Action=" + action + "&Version=" + version;
-
-        //发起请求
-        String response = new RpcRequestClient(requestContentModel).beginRpcRequest(path, requestMethod, requestParam, head);
-        log.info("doRpc end,path:{},params:{},head:{}", path, JSONObject.toJSON(requestParam), head);
-        return response;
-
-    }
-
-
-    private JSONObject getRequestParam(CreateTagRequest requestObj, String contentType) throws Exception {
-        //请求参数
-        if (contentType.equalsIgnoreCase("application/json")) {
-            return getPostRawRequestParams(requestObj);
-        }
-        return getSimpleRequestParams(requestObj);
-    }
-
-
-    private JSONObject getSimpleRequestParams(CreateTagRequest requestObj) throws Exception {
-        JSONObject requestParams = new JSONObject();
-
-        //设置请求体请求参数
-        setRequestField(requestObj, requestParams);
-        return requestParams;
-    }
-
-    private JSONObject getPostRawRequestParams(CreateTagRequest requestObj) throws Exception {
-        JSONObject requestParams = new JSONObject();
-
-        //设置请求体请求参数
-        setRequestFieldForPostRaw(requestObj, requestParams);
-        return requestParams;
-    }
+    // 设置请求体请求参数
+    setRequestFieldForPostRaw(requestObj, requestParams);
+    return requestParams;
+  }
 }

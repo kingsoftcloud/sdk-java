@@ -1,45 +1,30 @@
 package ksyun.client.knad.getbwiplist.v20230323;
 
 import common.annotation.KsYunField;
-import lombok.Builder;
 import lombok.Data;
-import lombok.ToString;
-
-import java.util.List;
-import java.util.Arrays;
 
 /**
- * @Classname GetBWIpListRequest
- * @Description 请求参数
+ * @Classname GetBWIpListRequest @Description 请求参数
  */
 @Data
 public class GetBWIpListRequest {
-    /***/
-    @KsYunField(name = "KnadId")
-    private String KnadId;
+  /***/
+  @KsYunField(name = "KnadId")
+  private String KnadId;
 
-    /**
-     * 策略类型（1: black, 2: white）
-     */
-    @KsYunField(name = "type")
-    private Integer Type;
+  /** 策略类型（1: black, 2: white） */
+  @KsYunField(name = "type")
+  private Integer Type;
 
-    /**
-     * 要搜索的ip
-     */
-    @KsYunField(name = "Ip")
-    private String Ip;
+  /** 要搜索的ip */
+  @KsYunField(name = "Ip")
+  private String Ip;
 
-    /**
-     * 每页条数
-     */
-    @KsYunField(name = "PageSize")
-    private Integer PageSize;
+  /** 每页条数 */
+  @KsYunField(name = "PageSize")
+  private Integer PageSize;
 
-    /**
-     * 开始条数
-     */
-    @KsYunField(name = "OffSet")
-    private Integer OffSet;
-
+  /** 开始条数 */
+  @KsYunField(name = "OffSet")
+  private Integer OffSet;
 }
