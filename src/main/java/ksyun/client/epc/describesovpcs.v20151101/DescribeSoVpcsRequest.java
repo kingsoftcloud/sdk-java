@@ -1,27 +1,37 @@
 package ksyun.client.epc.describesovpcs.v20151101;
 
 import common.annotation.KsYunField;
-import java.util.List;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
- * @Classname DescribeSoVpcsRequest @Description 请求参数
- */
+* @Classname DescribeSoVpcsRequest
+* @Description 请求参数
+*/
 @Data
-public class DescribeSoVpcsRequest {
-  /** VPC的名称。 */
-  @KsYunField(name = "VpcName")
-  private String VpcName;
+public class DescribeSoVpcsRequest{
+    /**VPC的名称。*/
+    @KsYunField(name="VpcName")
+    private String VpcName;
 
-  /** VPC的ID。 • 参数 - N：表示VPC ID的序号，单次调用数量上限为100个。 • 多个VPC ID之间用&分隔。 */
-  @KsYunField(name = "VpcIds")
-  private List<String> VpcIdsList;
+    /**VPC的ID。
+• 参数 - N：表示VPC ID的序号，单次调用数量上限为100个。
+• 多个VPC ID之间用&分隔。*/
+    @KsYunField(name="VpcIds")
+    private List<String> VpcIdsList;
 
-  /** 分页查询凭证，用于标记分页的位置。 • 不填则从头开始查询。 • 传入之前调用本API返回的NextToken，则从该次API调用标记分页的位置往后开始查询。 */
-  @KsYunField(name = "NextToken")
-  private String NextToken;
+    /**分页查询凭证，用于标记分页的位置。
+• 不填则从头开始查询。
+• 传入之前调用本API返回的NextToken，则从该次API调用标记分页的位置往后开始查询。*/
+    @KsYunField(name="NextToken")
+    private String NextToken;
 
-  /***/
-  @KsYunField(name = "MaxResults")
-  private Integer MaxResults;
+    /***/
+    @KsYunField(name="MaxResults")
+    private Integer MaxResults;
+
 }
