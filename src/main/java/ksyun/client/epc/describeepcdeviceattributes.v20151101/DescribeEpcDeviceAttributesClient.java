@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
 * @Classname DescribeEpcDeviceAttributesClient
-* @Description DescribeEpcDeviceAttributes
+* @Description 查询云物理机型配置信息
 */
 @Slf4j
 public class DescribeEpcDeviceAttributesClient extends BaseClient {

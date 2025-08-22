@@ -22,4 +22,8 @@ public class DescribeImagesRequest{
     @KsYunField(name="NextToken")
     private String NextToken;
 
+    /**镜像ID*/
+    @KsYunField(name="ImageId.N")
+    private String ImageIdN;
+
 }
