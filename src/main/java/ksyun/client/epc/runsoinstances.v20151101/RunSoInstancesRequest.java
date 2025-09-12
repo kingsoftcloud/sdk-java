@@ -45,7 +45,6 @@ public class RunSoInstancesRequest{
         /**硬盘大小*/
         @KsYunField(name="Size")
         private List<Integer> SizeList;
-        private List<Int> SizeList;
     }
     /**可用区*/
     @KsYunField(name="ZoneId")
