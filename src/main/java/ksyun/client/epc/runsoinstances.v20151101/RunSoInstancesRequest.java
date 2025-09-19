@@ -45,6 +45,7 @@ public class RunSoInstancesRequest{
         /**硬盘大小*/
         @KsYunField(name="Size")
         private List<Integer> SizeList;
+        private List<Int> SizeList;
     }
     /**可用区*/
     @KsYunField(name="ZoneId")
@@ -117,5 +118,17 @@ public class RunSoInstancesRequest{
     ◦ false（默认）：关闭有序后缀。*/
     @KsYunField(name="UniqueSuffix")
     private Boolean UniqueSuffix;
+
+    /**创建实例时是否安装云助手Agent，取值：
+    ◦ true：创建时安装。
+    ◦ false（默认）：创建时不安装。
+*/
+    @KsYunField(name="InstallRunCommandAgent")
+    private Boolean InstallRunCommandAgent;
+
+    /**创建数量，取值范围：1～100；传入0时，会默认为1。
+示例值：1*/
+    @KsYunField(name="Count")
+    private Integer Count;
 
 }
