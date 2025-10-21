@@ -29,4 +29,8 @@ public class CreateSoKeyPairRequest{
     @KsYunField(name="Description")
     private String Description;
 
+    /**星海专区*/
+    @KsYunField(name="SoZoneId")
+    private String SoZoneId;
+
 }

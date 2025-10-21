@@ -18,4 +18,8 @@ public class DeleteSoSubnetRequest{
     @KsYunField(name="SubnetId")
     private String SubnetId;
 
+    /**星海专区*/
+    @KsYunField(name="SoZoneId")
+    private String SoZoneId;
+
 }

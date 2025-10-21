@@ -32,4 +32,8 @@ public class ModifySoImageAttributeRequest{
     @KsYunField(name="ImageName")
     private String ImageName;
 
+    /**星海专区*/
+    @KsYunField(name="SoZoneId")
+    private String SoZoneId;
+
 }

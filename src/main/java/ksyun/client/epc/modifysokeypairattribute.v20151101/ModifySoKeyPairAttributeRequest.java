@@ -34,4 +34,8 @@ public class ModifySoKeyPairAttributeRequest{
     @KsYunField(name="KeyPairName")
     private String KeyPairName;
 
+    /**星海专区*/
+    @KsYunField(name="SoZoneId")
+    private String SoZoneId;
+
 }

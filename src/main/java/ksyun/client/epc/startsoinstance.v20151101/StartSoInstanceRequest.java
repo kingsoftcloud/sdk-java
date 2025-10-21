@@ -18,4 +18,8 @@ public class StartSoInstanceRequest{
     @KsYunField(name="InstanceIds")
     private List<String> InstanceIdsList;
 
+    /**星海专区*/
+    @KsYunField(name="SoZoneId")
+    private String SoZoneId;
+
 }

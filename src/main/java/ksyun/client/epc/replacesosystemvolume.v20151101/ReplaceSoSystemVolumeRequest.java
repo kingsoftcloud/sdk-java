@@ -43,4 +43,8 @@ public class ReplaceSoSystemVolumeRequest{
     @KsYunField(name="Password")
     private String Password;
 
+    /**星海专区*/
+    @KsYunField(name="SoZoneId")
+    private String SoZoneId;
+
 }

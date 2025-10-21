@@ -34,4 +34,8 @@ public class DescribeSoAvailableResourceRequest{
     @KsYunField(name="ZoneId")
     private String ZoneId;
 
+    /**星海专区*/
+    @KsYunField(name="SoZoneId")
+    private String SoZoneId;
+
 }

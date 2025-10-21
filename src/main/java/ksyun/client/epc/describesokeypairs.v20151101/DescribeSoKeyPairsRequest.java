@@ -45,4 +45,8 @@ public class DescribeSoKeyPairsRequest{
     @KsYunField(name="NextToken")
     private String NextToken;
 
+    /**星海专区*/
+    @KsYunField(name="SoZoneId")
+    private String SoZoneId;
+
 }

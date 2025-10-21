@@ -40,4 +40,8 @@ public class CreateSoVpcRequest{
     @KsYunField(name="AttachVpcId")
     private String AttachVpcId;
 
+    /**星海专区*/
+    @KsYunField(name="SoZoneId")
+    private String SoZoneId;
+
 }

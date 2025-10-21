@@ -20,4 +20,8 @@ public class DeleteSoImagesRequest{
     @KsYunField(name="ImageIds")
     private List<String> ImageIdsList;
 
+    /**星海专区*/
+    @KsYunField(name="SoZoneId")
+    private String SoZoneId;
+
 }

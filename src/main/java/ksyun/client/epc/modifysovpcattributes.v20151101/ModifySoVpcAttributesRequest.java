@@ -33,4 +33,8 @@ public class ModifySoVpcAttributesRequest{
     @KsYunField(name="VpcName")
     private String VpcName;
 
+    /**星海专区*/
+    @KsYunField(name="SoZoneId")
+    private String SoZoneId;
+
 }

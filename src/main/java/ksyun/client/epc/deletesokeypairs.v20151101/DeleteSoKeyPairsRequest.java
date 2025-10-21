@@ -20,4 +20,8 @@ public class DeleteSoKeyPairsRequest{
     @KsYunField(name="KeyPairNames")
     private List<String> KeyPairNamesList;
 
+    /**星海专区*/
+    @KsYunField(name="SoZoneId")
+    private String SoZoneId;
+
 }

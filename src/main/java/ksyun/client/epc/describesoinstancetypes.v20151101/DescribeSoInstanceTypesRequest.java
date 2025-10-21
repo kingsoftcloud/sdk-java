@@ -25,4 +25,8 @@ public class DescribeSoInstanceTypesRequest{
     @KsYunField(name="InstanceTypeId")
     private List<String> InstanceTypeIdList;
 
+    /**星海专区*/
+    @KsYunField(name="SoZoneId")
+    private String SoZoneId;
+
 }

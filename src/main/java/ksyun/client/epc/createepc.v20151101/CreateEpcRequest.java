@@ -75,12 +75,14 @@ public class CreateEpcRequest{
     private String AvailabilityZone;
 
     /**数据盘Raid级别,和数据盘的数量直接相关 
-有效值：  Raid1：数据盘数量必须是2的倍数
-Raid5：数据盘的数量必须大于等于3
-Raid10：数据盘数量必须是4的倍数
-Raid50：数据盘的数量必须大于6且是2的倍数
-SRaid0：单盘SRaid0无限制，仅针对大数据业务自身有冗余的场景
-与RaidId必填其一，RaidId优先级高*/
+有效值：
+- Jbod：直连模式
+- Raid1：数据盘数量必须是2的倍数
+- Raid5：数据盘的数量必须大于等于3
+- Raid10：数据盘数量必须是4的倍数
+- Raid50：数据盘的数量必须大于6且是2的倍数
+- SRaid0：单盘SRaid0无限制，仅针对大数据业务自身有冗余的场景
+说明：Raid与RaidId必填其一，RaidId优先级高*/
     @KsYunField(name="Raid")
     private String Raid;
 

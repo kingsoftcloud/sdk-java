@@ -18,4 +18,8 @@ public class DeleteSoVpcRequest{
     @KsYunField(name="VpcId")
     private String VpcId;
 
+    /**星海专区*/
+    @KsYunField(name="SoZoneId")
+    private String SoZoneId;
+
 }

@@ -40,4 +40,8 @@ public class CreateSoSubnetRequest{
     @KsYunField(name="CidrBlock")
     private String CidrBlock;
 
+    /**星海专区*/
+    @KsYunField(name="SoZoneId")
+    private String SoZoneId;
+
 }

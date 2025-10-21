@@ -70,4 +70,8 @@ public class DescribeSoImagesRequest{
     @KsYunField(name="Visibility")
     private String Visibility;
 
+    /**星海专区*/
+    @KsYunField(name="SoZoneId")
+    private String SoZoneId;
+
 }

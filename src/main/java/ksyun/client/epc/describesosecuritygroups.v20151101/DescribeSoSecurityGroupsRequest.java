@@ -34,4 +34,8 @@ public class DescribeSoSecurityGroupsRequest{
     @KsYunField(name="MaxResults")
     private Integer MaxResults;
 
+    /**星海专区*/
+    @KsYunField(name="SoZoneId")
+    private String SoZoneId;
+
 }
