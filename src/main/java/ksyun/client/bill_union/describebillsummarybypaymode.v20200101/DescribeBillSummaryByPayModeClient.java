@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
 * @Classname DescribeBillSummaryByPayModeClient
-* @Description 获取计费类别汇总账单
+* @Description 获取计费类别汇总账单（费用账单接口，推荐使用，包含预付费、实时付费、后付费）
 */
 @Slf4j
 public class DescribeBillSummaryByPayModeClient extends BaseClient {
@@ -43,7 +43,7 @@ public class DescribeBillSummaryByPayModeClient extends BaseClient {
      */
     public DescribeBillSummaryByPayModeResponse doPost(String path, DescribeBillSummaryByPayModeRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
     }
 
@@ -58,7 +58,7 @@ public class DescribeBillSummaryByPayModeClient extends BaseClient {
      */
     public DescribeBillSummaryByPayModeResponse doPost(String path, DescribeBillSummaryByPayModeRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
         return JSON.parseObject(response, DescribeBillSummaryByPayModeResponse.class);
     }
@@ -72,7 +72,7 @@ public class DescribeBillSummaryByPayModeClient extends BaseClient {
     */
     public DescribeBillSummaryByPayModeResponse doPostRaw(String path, DescribeBillSummaryByPayModeRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPostRaw(path, requestObj, head);
     }
 
@@ -86,7 +86,7 @@ public class DescribeBillSummaryByPayModeClient extends BaseClient {
     */
     public DescribeBillSummaryByPayModeResponse doPostRaw(String path, DescribeBillSummaryByPayModeRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
         return JSON.parseObject(response, DescribeBillSummaryByPayModeResponse.class);
     }
@@ -100,7 +100,7 @@ public class DescribeBillSummaryByPayModeClient extends BaseClient {
      */
     public DescribeBillSummaryByPayModeResponse doGet(String path, DescribeBillSummaryByPayModeRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.putIfAbsent("Content-Type", "application/json");
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doGet(path, requestObj, head);
     }
 
@@ -115,7 +115,7 @@ public class DescribeBillSummaryByPayModeClient extends BaseClient {
          */
         public DescribeBillSummaryByPayModeResponse doGet(String path, DescribeBillSummaryByPayModeRequest requestObj, Map<String, String> head) throws Exception {
             final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-            requestHeaders.putIfAbsent("Content-Type", "application/json");
+            requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
             String response = doRpc(path, requestObj, requestHeaders, "get");
             return JSON.parseObject(response, DescribeBillSummaryByPayModeResponse.class);
         }
@@ -130,7 +130,7 @@ public class DescribeBillSummaryByPayModeClient extends BaseClient {
      */
     public DescribeBillSummaryByPayModeResponse doDelete(String path, DescribeBillSummaryByPayModeRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDelete(path, requestObj, head);
     }
 
@@ -145,7 +145,7 @@ public class DescribeBillSummaryByPayModeClient extends BaseClient {
      */
     public DescribeBillSummaryByPayModeResponse doDelete(String path, DescribeBillSummaryByPayModeRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "delete");
         return JSON.parseObject(response, DescribeBillSummaryByPayModeResponse.class);
     }
@@ -161,7 +161,7 @@ public class DescribeBillSummaryByPayModeClient extends BaseClient {
      */
     public DescribeBillSummaryByPayModeResponse doPut(String path, DescribeBillSummaryByPayModeRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.putIfAbsent("Content-Type", "application/json");
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doPut(path, requestObj, head);
     }
 
@@ -176,7 +176,7 @@ public class DescribeBillSummaryByPayModeClient extends BaseClient {
      */
     public DescribeBillSummaryByPayModeResponse doPut(String path, DescribeBillSummaryByPayModeRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-       requestHeaders.putIfAbsent("Content-Type", "application/json");
+       requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "put");
         return JSON.parseObject(response, DescribeBillSummaryByPayModeResponse.class);
     }

@@ -26,4 +26,11 @@ public class DescribeBillSummaryByProjectRequest{
     @KsYunField(name="SubAccount")
     private Integer SubAccount;
 
+    /**非必传，默认值为 False。
+是否吐出全部财务关系数据。
+值为true时，同时吐出财务管理和财务托管账号数据。
+值为false时或不传该参数，仅吐出财务托管账号数据。*/
+    @KsYunField(name="FetchAllFinanceRelationData")
+    private Boolean FetchAllFinanceRelationData;
+
 }

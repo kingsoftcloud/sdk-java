@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
 * @Classname DescribeBillSummaryByProjectClient
-* @Description 按项目制获取账单汇总金额
+* @Description 按项目制获取账单汇总金额（费用账单接口，推荐使用，包含预付费、实时付费、后付费）
 */
 @Slf4j
 public class DescribeBillSummaryByProjectClient extends BaseClient {
@@ -43,7 +43,7 @@ public class DescribeBillSummaryByProjectClient extends BaseClient {
      */
     public DescribeBillSummaryByProjectResponse doPost(String path, DescribeBillSummaryByProjectRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
     }
 
@@ -58,7 +58,7 @@ public class DescribeBillSummaryByProjectClient extends BaseClient {
      */
     public DescribeBillSummaryByProjectResponse doPost(String path, DescribeBillSummaryByProjectRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
         return JSON.parseObject(response, DescribeBillSummaryByProjectResponse.class);
     }
@@ -72,7 +72,7 @@ public class DescribeBillSummaryByProjectClient extends BaseClient {
     */
     public DescribeBillSummaryByProjectResponse doPostRaw(String path, DescribeBillSummaryByProjectRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPostRaw(path, requestObj, head);
     }
 
@@ -86,7 +86,7 @@ public class DescribeBillSummaryByProjectClient extends BaseClient {
     */
     public DescribeBillSummaryByProjectResponse doPostRaw(String path, DescribeBillSummaryByProjectRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
         return JSON.parseObject(response, DescribeBillSummaryByProjectResponse.class);
     }
@@ -100,7 +100,7 @@ public class DescribeBillSummaryByProjectClient extends BaseClient {
      */
     public DescribeBillSummaryByProjectResponse doGet(String path, DescribeBillSummaryByProjectRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.putIfAbsent("Content-Type", "application/json");
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doGet(path, requestObj, head);
     }
 
@@ -115,7 +115,7 @@ public class DescribeBillSummaryByProjectClient extends BaseClient {
          */
         public DescribeBillSummaryByProjectResponse doGet(String path, DescribeBillSummaryByProjectRequest requestObj, Map<String, String> head) throws Exception {
             final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-            requestHeaders.putIfAbsent("Content-Type", "application/json");
+            requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
             String response = doRpc(path, requestObj, requestHeaders, "get");
             return JSON.parseObject(response, DescribeBillSummaryByProjectResponse.class);
         }
@@ -130,7 +130,7 @@ public class DescribeBillSummaryByProjectClient extends BaseClient {
      */
     public DescribeBillSummaryByProjectResponse doDelete(String path, DescribeBillSummaryByProjectRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDelete(path, requestObj, head);
     }
 
@@ -145,7 +145,7 @@ public class DescribeBillSummaryByProjectClient extends BaseClient {
      */
     public DescribeBillSummaryByProjectResponse doDelete(String path, DescribeBillSummaryByProjectRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "delete");
         return JSON.parseObject(response, DescribeBillSummaryByProjectResponse.class);
     }
@@ -161,7 +161,7 @@ public class DescribeBillSummaryByProjectClient extends BaseClient {
      */
     public DescribeBillSummaryByProjectResponse doPut(String path, DescribeBillSummaryByProjectRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.putIfAbsent("Content-Type", "application/json");
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doPut(path, requestObj, head);
     }
 
@@ -176,7 +176,7 @@ public class DescribeBillSummaryByProjectClient extends BaseClient {
      */
     public DescribeBillSummaryByProjectResponse doPut(String path, DescribeBillSummaryByProjectRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-       requestHeaders.putIfAbsent("Content-Type", "application/json");
+       requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "put");
         return JSON.parseObject(response, DescribeBillSummaryByProjectResponse.class);
     }
