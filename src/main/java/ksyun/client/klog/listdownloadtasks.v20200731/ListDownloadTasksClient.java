@@ -1,4 +1,4 @@
-package ksyun.client.klog.createdownloadtask.v20200731;
+package ksyun.client.klog.listdownloadtasks.v20200731;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,14 +12,14 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.*;
 
 /**
-* @Classname CreateDownloadTaskClient
-* @Description 创建日志下载任务
+* @Classname ListDownloadTasksClient
+* @Description 查看日志下载任务
 */
 @Slf4j
-public class CreateDownloadTaskClient extends BaseClient {
+public class ListDownloadTasksClient extends BaseClient {
     private final static String service = "klog";
     private final static String version = "2020-07-31";
-    private final static String action = "CreateDownloadTask";
+    private final static String action = "ListDownloadTasks";
 
 
     /**
@@ -28,7 +28,7 @@ public class CreateDownloadTaskClient extends BaseClient {
     private Credential credential;
 
 
-    public CreateDownloadTaskClient(Credential credential) {
+    public ListDownloadTasksClient(Credential credential) {
         this.credential = credential;
     }
 
@@ -41,7 +41,7 @@ public class CreateDownloadTaskClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CreateDownloadTaskResponse doPost(String path, CreateDownloadTaskRequest requestObj) throws Exception {
+    public ListDownloadTasksResponse doPost(String path, ListDownloadTasksRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doPost(path, requestObj, head);
@@ -56,11 +56,11 @@ public class CreateDownloadTaskClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CreateDownloadTaskResponse doPost(String path, CreateDownloadTaskRequest requestObj, Map<String, String> head) throws Exception {
+    public ListDownloadTasksResponse doPost(String path, ListDownloadTasksRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/json");
         String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, CreateDownloadTaskResponse.class);
+        return JSON.parseObject(response, ListDownloadTasksResponse.class);
     }
 
     /**
@@ -70,7 +70,7 @@ public class CreateDownloadTaskClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public CreateDownloadTaskResponse doPostRaw(String path, CreateDownloadTaskRequest requestObj) throws Exception {
+    public ListDownloadTasksResponse doPostRaw(String path, ListDownloadTasksRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doPostRaw(path, requestObj, head);
@@ -84,11 +84,11 @@ public class CreateDownloadTaskClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public CreateDownloadTaskResponse doPostRaw(String path, CreateDownloadTaskRequest requestObj, Map<String, String> head) throws Exception {
+    public ListDownloadTasksResponse doPostRaw(String path, ListDownloadTasksRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/json");
         String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, CreateDownloadTaskResponse.class);
+        return JSON.parseObject(response, ListDownloadTasksResponse.class);
     }
     /**
      * get 请求
@@ -98,7 +98,7 @@ public class CreateDownloadTaskClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CreateDownloadTaskResponse doGet(String path, CreateDownloadTaskRequest requestObj) throws Exception {
+    public ListDownloadTasksResponse doGet(String path, ListDownloadTasksRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.putIfAbsent("Content-Type", "application/json");
         return doGet(path, requestObj, head);
@@ -113,11 +113,11 @@ public class CreateDownloadTaskClient extends BaseClient {
          * @return
          * @throws Exception
          */
-        public CreateDownloadTaskResponse doGet(String path, CreateDownloadTaskRequest requestObj, Map<String, String> head) throws Exception {
+        public ListDownloadTasksResponse doGet(String path, ListDownloadTasksRequest requestObj, Map<String, String> head) throws Exception {
             final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
             requestHeaders.putIfAbsent("Content-Type", "application/json");
             String response = doRpc(path, requestObj, requestHeaders, "get");
-            return JSON.parseObject(response, CreateDownloadTaskResponse.class);
+            return JSON.parseObject(response, ListDownloadTasksResponse.class);
         }
 
     /**
@@ -128,7 +128,7 @@ public class CreateDownloadTaskClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CreateDownloadTaskResponse doDelete(String path, CreateDownloadTaskRequest requestObj) throws Exception {
+    public ListDownloadTasksResponse doDelete(String path, ListDownloadTasksRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doDelete(path, requestObj, head);
@@ -143,11 +143,11 @@ public class CreateDownloadTaskClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CreateDownloadTaskResponse doDelete(String path, CreateDownloadTaskRequest requestObj, Map<String, String> head) throws Exception {
+    public ListDownloadTasksResponse doDelete(String path, ListDownloadTasksRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/json");
         String response = doRpc(path, requestObj, requestHeaders, "delete");
-        return JSON.parseObject(response, CreateDownloadTaskResponse.class);
+        return JSON.parseObject(response, ListDownloadTasksResponse.class);
     }
 
 
@@ -159,7 +159,7 @@ public class CreateDownloadTaskClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CreateDownloadTaskResponse doPut(String path, CreateDownloadTaskRequest requestObj) throws Exception {
+    public ListDownloadTasksResponse doPut(String path, ListDownloadTasksRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.putIfAbsent("Content-Type", "application/json");
         return doPut(path, requestObj, head);
@@ -174,11 +174,11 @@ public class CreateDownloadTaskClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CreateDownloadTaskResponse doPut(String path, CreateDownloadTaskRequest requestObj, Map<String, String> head) throws Exception {
+    public ListDownloadTasksResponse doPut(String path, ListDownloadTasksRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
        requestHeaders.putIfAbsent("Content-Type", "application/json");
         String response = doRpc(path, requestObj, requestHeaders, "put");
-        return JSON.parseObject(response, CreateDownloadTaskResponse.class);
+        return JSON.parseObject(response, ListDownloadTasksResponse.class);
     }
 
     /**
@@ -190,7 +190,7 @@ public class CreateDownloadTaskClient extends BaseClient {
          * @return
          * @throws Exception
          */
-        private String doRpc(String path, CreateDownloadTaskRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
+        private String doRpc(String path, ListDownloadTasksRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
             //断言
             Objects.requireNonNull(path, "path cannot be null");
             Objects.requireNonNull(requestObj, "requestObj cannot be null");
@@ -222,7 +222,7 @@ public class CreateDownloadTaskClient extends BaseClient {
         }
 
 
-        private JSONObject getRequestParam(CreateDownloadTaskRequest requestObj, String contentType) throws Exception {
+        private JSONObject getRequestParam(ListDownloadTasksRequest requestObj, String contentType) throws Exception {
             //请求参数
             if (contentType.equalsIgnoreCase("application/json")) {
                 return getPostRawRequestParams(requestObj);
@@ -231,7 +231,7 @@ public class CreateDownloadTaskClient extends BaseClient {
         }
 
 
-        private JSONObject getSimpleRequestParams(CreateDownloadTaskRequest requestObj) throws Exception {
+        private JSONObject getSimpleRequestParams(ListDownloadTasksRequest requestObj) throws Exception {
             JSONObject requestParams = new JSONObject();
 
             //设置请求体请求参数
@@ -239,7 +239,7 @@ public class CreateDownloadTaskClient extends BaseClient {
             return requestParams;
         }
 
-        private JSONObject getPostRawRequestParams(CreateDownloadTaskRequest requestObj) throws Exception {
+        private JSONObject getPostRawRequestParams(ListDownloadTasksRequest requestObj) throws Exception {
             JSONObject requestParams = new JSONObject();
 
             //设置请求体请求参数

@@ -1,4 +1,4 @@
-package ksyun.client.klog.getlogs.v20200731;
+package ksyun.client.klog.describeproject.v20200731;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;
@@ -8,12 +8,12 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname GetLogsResponse
-* @Description GetLogs 返回体
+* @Classname DescribeProjectResponse
+* @Description DescribeProject 返回体
 */
 @Data
 @ToString
-public class GetLogsResponse extends BaseResponseModel {
+public class DescribeProjectResponse extends BaseResponseModel {
 
     /**
      * 请求id
