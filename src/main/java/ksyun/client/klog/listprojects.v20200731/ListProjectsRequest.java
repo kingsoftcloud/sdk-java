@@ -14,6 +14,14 @@ import java.util.Arrays;
 */
 @Data
 public class ListProjectsRequest{
+    /**工程名称*/
+    @KsYunField(name="ProjectName")
+    private String ProjectName;
+
+    /**工程描述*/
+    @KsYunField(name="Description")
+    private String Description;
+
     /**返回记录的页码，从0开始*/
     @KsYunField(name="Page")
     private Integer Page;
