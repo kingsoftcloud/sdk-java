@@ -68,9 +68,6 @@ public class CreateTrainJobRequest{
     @Data
     @ToString
     public static class FrameworkReplicasDto {
-        /**范围0-1000*/
-        @KsYunField(name="Master")
-        private Integer Master;
         /**当框架为pytorch时候必填，范围0-1000*/
         @KsYunField(name="Worker")
         private Integer Worker;
@@ -83,7 +80,17 @@ public class CreateTrainJobRequest{
         /**当框架Framework=tensorflow时候必填，范围0-1000*/
         @KsYunField(name="PS")
         private Integer PS;
+        /**0-1000*/
+        @KsYunField(name="Master")
+        private Integer Master;
     }
+    /**重启策略，可选值：
+· Always
+· OnFailure
+· Never*/
+    @KsYunField(name="RestartPolicy")
+    private String RestartPolicy;
+
     /**环境变量*/
     @KsYunField(name="Envs",type=2)
     private List<EnvsDto> EnvsList;
@@ -125,8 +132,8 @@ public class CreateTrainJobRequest{
     private Integer GPUNumber;
 
     /**范围0-10000*/
-    @KsYunField(name="CpuNum")
-    private Integer CpuNum;
+    @KsYunField(name="CPUNum")
+    private Integer CPUNum;
 
     /**0-10000*/
     @KsYunField(name="Memory")
@@ -165,7 +172,7 @@ public class CreateTrainJobRequest{
     private Boolean SelfHealing;
 
     /**任务是否仅运行在cpu节点上，默认false*/
-    @KsYunField(name="RunOnCpu")
-    private Boolean RunOnCpu;
+    @KsYunField(name="RunOnCPU")
+    private Boolean RunOnCPU;
 
 }
