@@ -1,4 +1,4 @@
-package ksyun.client.aicp.startnotebook.v20240612;
+package ksyun.client.aicp.describetrainjob.v20240612;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,14 +12,14 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.*;
 
 /**
-* @Classname StartNotebookClient
-* @Description 启动开发任务
+* @Classname DescribeTrainJobClient
+* @Description 查询训练任务
 */
 @Slf4j
-public class StartNotebookClient extends BaseClient {
+public class DescribeTrainJobClient extends BaseClient {
     private final static String service = "aicp";
     private final static String version = "2024-06-12";
-    private final static String action = "StartNotebook";
+    private final static String action = "DescribeTrainJob";
 
 
     /**
@@ -28,7 +28,7 @@ public class StartNotebookClient extends BaseClient {
     private Credential credential;
 
 
-    public StartNotebookClient(Credential credential) {
+    public DescribeTrainJobClient(Credential credential) {
         this.credential = credential;
     }
 
@@ -41,7 +41,7 @@ public class StartNotebookClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public StartNotebookResponse doPost(String path, StartNotebookRequest requestObj) throws Exception {
+    public DescribeTrainJobResponse doPost(String path, DescribeTrainJobRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
@@ -56,11 +56,11 @@ public class StartNotebookClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public StartNotebookResponse doPost(String path, StartNotebookRequest requestObj, Map<String, String> head) throws Exception {
+    public DescribeTrainJobResponse doPost(String path, DescribeTrainJobRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, StartNotebookResponse.class);
+        return JSON.parseObject(response, DescribeTrainJobResponse.class);
     }
 
     /**
@@ -70,7 +70,7 @@ public class StartNotebookClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public StartNotebookResponse doPostRaw(String path, StartNotebookRequest requestObj) throws Exception {
+    public DescribeTrainJobResponse doPostRaw(String path, DescribeTrainJobRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPostRaw(path, requestObj, head);
@@ -84,11 +84,11 @@ public class StartNotebookClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public StartNotebookResponse doPostRaw(String path, StartNotebookRequest requestObj, Map<String, String> head) throws Exception {
+    public DescribeTrainJobResponse doPostRaw(String path, DescribeTrainJobRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, StartNotebookResponse.class);
+        return JSON.parseObject(response, DescribeTrainJobResponse.class);
     }
     /**
      * get 请求
@@ -98,7 +98,7 @@ public class StartNotebookClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public StartNotebookResponse doGet(String path, StartNotebookRequest requestObj) throws Exception {
+    public DescribeTrainJobResponse doGet(String path, DescribeTrainJobRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doGet(path, requestObj, head);
@@ -113,11 +113,11 @@ public class StartNotebookClient extends BaseClient {
          * @return
          * @throws Exception
          */
-        public StartNotebookResponse doGet(String path, StartNotebookRequest requestObj, Map<String, String> head) throws Exception {
+        public DescribeTrainJobResponse doGet(String path, DescribeTrainJobRequest requestObj, Map<String, String> head) throws Exception {
             final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
             requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
             String response = doRpc(path, requestObj, requestHeaders, "get");
-            return JSON.parseObject(response, StartNotebookResponse.class);
+            return JSON.parseObject(response, DescribeTrainJobResponse.class);
         }
 
     /**
@@ -128,7 +128,7 @@ public class StartNotebookClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public StartNotebookResponse doDelete(String path, StartNotebookRequest requestObj) throws Exception {
+    public DescribeTrainJobResponse doDelete(String path, DescribeTrainJobRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDelete(path, requestObj, head);
@@ -143,11 +143,11 @@ public class StartNotebookClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public StartNotebookResponse doDelete(String path, StartNotebookRequest requestObj, Map<String, String> head) throws Exception {
+    public DescribeTrainJobResponse doDelete(String path, DescribeTrainJobRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "delete");
-        return JSON.parseObject(response, StartNotebookResponse.class);
+        return JSON.parseObject(response, DescribeTrainJobResponse.class);
     }
 
 
@@ -159,7 +159,7 @@ public class StartNotebookClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public StartNotebookResponse doPut(String path, StartNotebookRequest requestObj) throws Exception {
+    public DescribeTrainJobResponse doPut(String path, DescribeTrainJobRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doPut(path, requestObj, head);
@@ -174,11 +174,11 @@ public class StartNotebookClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public StartNotebookResponse doPut(String path, StartNotebookRequest requestObj, Map<String, String> head) throws Exception {
+    public DescribeTrainJobResponse doPut(String path, DescribeTrainJobRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "put");
-        return JSON.parseObject(response, StartNotebookResponse.class);
+        return JSON.parseObject(response, DescribeTrainJobResponse.class);
     }
 
     /**
@@ -190,7 +190,7 @@ public class StartNotebookClient extends BaseClient {
          * @return
          * @throws Exception
          */
-        private String doRpc(String path, StartNotebookRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
+        private String doRpc(String path, DescribeTrainJobRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
             //断言
             Objects.requireNonNull(path, "path cannot be null");
             Objects.requireNonNull(requestObj, "requestObj cannot be null");
@@ -222,7 +222,7 @@ public class StartNotebookClient extends BaseClient {
         }
 
 
-        private JSONObject getRequestParam(StartNotebookRequest requestObj, String contentType) throws Exception {
+        private JSONObject getRequestParam(DescribeTrainJobRequest requestObj, String contentType) throws Exception {
             //请求参数
             if (contentType.equalsIgnoreCase("application/json")) {
                 return getPostRawRequestParams(requestObj);
@@ -231,7 +231,7 @@ public class StartNotebookClient extends BaseClient {
         }
 
 
-        private JSONObject getSimpleRequestParams(StartNotebookRequest requestObj) throws Exception {
+        private JSONObject getSimpleRequestParams(DescribeTrainJobRequest requestObj) throws Exception {
             JSONObject requestParams = new JSONObject();
 
             //设置请求体请求参数
@@ -239,7 +239,7 @@ public class StartNotebookClient extends BaseClient {
             return requestParams;
         }
 
-        private JSONObject getPostRawRequestParams(StartNotebookRequest requestObj) throws Exception {
+        private JSONObject getPostRawRequestParams(DescribeTrainJobRequest requestObj) throws Exception {
             JSONObject requestParams = new JSONObject();
 
             //设置请求体请求参数

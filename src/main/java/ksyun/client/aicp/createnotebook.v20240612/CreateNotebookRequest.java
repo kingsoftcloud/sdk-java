@@ -15,17 +15,16 @@ import java.util.Arrays;
 @Data
 public class CreateNotebookRequest{
     /**任务名称*/
-    @KsYunField(name="DisplayName")
-    private String DisplayName;
+    @KsYunField(name="NotebookName")
+    private String NotebookName;
 
     /**描述信息*/
     @KsYunField(name="Description")
     private String Description;
 
-    /**镜像ID
-当镜像来源为第三方来源时，此参数不传递，其他镜像来源，此参数为必填项*/
-    @KsYunField(name="ImageId")
-    private String ImageId;
+    /**资源池ID*/
+    @KsYunField(name="ResourcePoolId")
+    private String ResourcePoolId;
 
     /**队列名称*/
     @KsYunField(name="QueueName")
@@ -39,37 +38,17 @@ public class CreateNotebookRequest{
     @KsYunField(name="GPUNumber")
     private Integer GPUNumber;
 
-    /**可见范围，Creator(创建者可见)，QueueMember（队列成员可见）*/
-    @KsYunField(name="AccessType")
-    private String AccessType;
-
-    /**是否开启公网SSH访问模式，当EnableSsh=true时可设置该参数*/
-    @KsYunField(name="EnablePublicNetworkSsh")
-    private Boolean EnablePublicNetworkSsh;
-
-    /**弹性IP ID，当EnablePublicNetworkSsh=true时，此参数必传*/
-    @KsYunField(name="AllocationId")
-    private String AllocationId;
-
     /**Cpu数量，允许范围为0~10000*/
-    @KsYunField(name="CpuNum")
-    private Integer CpuNum;
+    @KsYunField(name="CPUNum")
+    private Integer CPUNum;
 
     /**内存G，允许范围为0~10000*/
     @KsYunField(name="Memory")
     private Integer Memory;
 
-    /**是否开启SSH*/
-    @KsYunField(name="EnableSsh")
-    private Boolean EnableSsh;
-
-    /**SSH公钥，当EnableSsh=true时必传该参数*/
-    @KsYunField(name="SshAuthorizedKeys")
-    private String SshAuthorizedKeys;
-
-    /**SSH端口，默认为22，范围为1~65535*/
-    @KsYunField(name="SshPort")
-    private Integer SshPort;
+    /**可见范围，Creator(创建者可见)，QueueMember（队列成员可见）*/
+    @KsYunField(name="AccessType")
+    private String AccessType;
 
     /**存储配置列表*/
     @KsYunField(name="StorageConfigs",type=2)
@@ -86,10 +65,6 @@ public class CreateNotebookRequest{
 • Output（输出）*/
         private String StorageConfigType;
     }
-
-    /**资源池ID*/
-    @KsYunField(name="ResourcePoolId")
-    private String ResourcePoolId;
 
     /**是否自动保存镜像*/
     @KsYunField(name="AutoSave")
@@ -109,14 +84,6 @@ public class CreateNotebookRequest{
         private Boolean EnablePublicNetwork;
     }
 
-    /**仓库连接 Id*/
-    @KsYunField(name="ImageRegistryId")
-    private String ImageRegistryId;
-
-    /**仓库 Id*/
-    @KsYunField(name="ImageRepoId")
-    private String ImageRepoId;
-
     /**镜像来源
 - 官方镜像 Official
 - 个人镜像 Personal
@@ -126,29 +93,30 @@ public class CreateNotebookRequest{
     @KsYunField(name="ImageSource")
     private String ImageSource;
 
+    /**镜像ID
+当镜像来源为第三方来源时，此参数不传递，其他镜像来源，此参数为必填项*/
+    @KsYunField(name="ImageId")
+    private String ImageId;
+
+    /**仓库连接 Id*/
+    @KsYunField(name="ImageRegistryId")
+    private String ImageRegistryId;
+
+    /**仓库 Id*/
+    @KsYunField(name="ImageRepoId")
+    private String ImageRepoId;
+
     /**tagId*/
     @KsYunField(name="ImageTagId")
     private String ImageTagId;
-
-    /**Cpu数量，允许范围为0~10000*/
-    @KsYunField(name="CPUNum")
-    private Integer CPUNum;
 
     /**是否开启SSH*/
     @KsYunField(name="EnableSSH")
     private Boolean EnableSSH;
 
-    /**任务名称*/
-    @KsYunField(name="NotebookName")
-    private String NotebookName;
-
     /**SSH公钥，当EnableSsh=true时必传该参数*/
     @KsYunField(name="SSHAuthorizedKeys")
     private String SSHAuthorizedKeys;
-
-    /**开启后，仅调度CPU*/
-    @KsYunField(name="RunOnCPU")
-    private String RunOnCPU;
 
     /**SSH端口，默认为22，范围为1~65535*/
     @KsYunField(name="SSHPort")
@@ -157,5 +125,13 @@ public class CreateNotebookRequest{
     /**是否开启公网SSH访问模式，当EnableSsh=true时可设置该参数*/
     @KsYunField(name="EnablePublicNetworkSSH")
     private Boolean EnablePublicNetworkSSH;
+
+    /**弹性IP ID，当EnablePublicNetworkSsh=true时，此参数必传*/
+    @KsYunField(name="AllocationId")
+    private String AllocationId;
+
+    /**开启后，仅调度CPU*/
+    @KsYunField(name="RunOnCPU")
+    private String RunOnCPU;
 
 }

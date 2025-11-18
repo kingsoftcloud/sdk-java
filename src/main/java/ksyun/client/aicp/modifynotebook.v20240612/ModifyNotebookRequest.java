@@ -19,8 +19,8 @@ public class ModifyNotebookRequest{
     private String NotebookId;
 
     /**名称*/
-    @KsYunField(name="DisplayName")
-    private String DisplayName;
+    @KsYunField(name="NotebookName")
+    private String NotebookName;
 
     /**描述*/
     @KsYunField(name="Description")
@@ -42,24 +42,20 @@ public class ModifyNotebookRequest{
     @KsYunField(name="GPUNumber")
     private Integer GPUNumber;
 
+    /**Cpu数量，允许范围为0~10000*/
+    @KsYunField(name="CPUNum")
+    private Integer CPUNum;
+
+    /**内存G，允许范围为0~10000	*/
+    @KsYunField(name="Memory")
+    private Integer Memory;
+
     /**可见范围:
 • Creator ：仅实例创建者可见
 • QueueMember ：队列内成员可见
 */
     @KsYunField(name="AccessType")
     private String AccessType;
-
-    /**弹性IP ID，当EnablePublicNetworkSsh=true时，此参数必传*/
-    @KsYunField(name="AllocationId")
-    private String AllocationId;
-
-    /**是否开启SSH访问*/
-    @KsYunField(name="EnableSsh")
-    private String EnableSsh;
-
-    /**SSH端口，范围为1~65535*/
-    @KsYunField(name="SshPort")
-    private Integer SshPort;
 
     /**是否开启公网SSH访问模式，当EnableSsh=true时可设置该参数*/
     @KsYunField(name="EnablePublicNetworkSsh")
@@ -68,14 +64,6 @@ public class ModifyNotebookRequest{
     /**SSH公钥，当EnableSsh=true时必传该参数*/
     @KsYunField(name="SshAuthorizedKeys")
     private String SshAuthorizedKeys;
-
-    /**Cpu数量，允许范围为0~10000*/
-    @KsYunField(name="CpuNum")
-    private Integer CpuNum;
-
-    /**内存G，允许范围为0~10000	*/
-    @KsYunField(name="Memory")
-    private Integer Memory;
 
     /**存储配置列表
 （覆盖修改，需要传入全量的配置列表）*/
@@ -114,9 +102,9 @@ public class ModifyNotebookRequest{
     @KsYunField(name="RunOnCPU")
     private String RunOnCPU;
 
-    /**名称*/
-    @KsYunField(name="NotebookName")
-    private String NotebookName;
+    /**是否开启SSH访问*/
+    @KsYunField(name="EnableSSH")
+    private String EnableSSH;
 
     /**SSH端口，范围为1~65535*/
     @KsYunField(name="SSHPort")
@@ -126,9 +114,13 @@ public class ModifyNotebookRequest{
     @KsYunField(name="SSHAuthorizedKeys")
     private String SSHAuthorizedKeys;
 
-    /**Cpu数量，允许范围为0~10000*/
-    @KsYunField(name="CPUNum")
-    private Integer CPUNum;
+    /**是否开启公网SSH访问模式，当EnableSsh=true时可设置该参数*/
+    @KsYunField(name="EnablePublicNetworkSSH")
+    private Boolean EnablePublicNetworkSSH;
+
+    /**弹性IP ID，当EnablePublicNetworkSsh=true时，此参数必传*/
+    @KsYunField(name="AllocationId")
+    private String AllocationId;
 
     /**第三方镜像tagId*/
     @KsYunField(name="ImageTagId")
@@ -151,13 +143,5 @@ public class ModifyNotebookRequest{
     /**第三方镜像ID*/
     @KsYunField(name="ImageRegistryId")
     private String ImageRegistryId;
-
-    /**是否开启SSH访问*/
-    @KsYunField(name="EnableSSH")
-    private String EnableSSH;
-
-    /**是否开启公网SSH访问模式，当EnableSsh=true时可设置该参数*/
-    @KsYunField(name="EnablePublicNetworkSSH")
-    private Boolean EnablePublicNetworkSSH;
 
 }

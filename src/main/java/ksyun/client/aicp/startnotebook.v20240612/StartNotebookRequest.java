@@ -14,4 +14,8 @@ import java.util.Arrays;
 */
 @Data
 public class StartNotebookRequest{
+    /**开发任务ID*/
+    @KsYunField(name="NotebookId")
+    private String NotebookId;
+
 }
