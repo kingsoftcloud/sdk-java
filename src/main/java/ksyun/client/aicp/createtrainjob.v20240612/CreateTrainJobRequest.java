@@ -68,9 +68,6 @@ public class CreateTrainJobRequest{
     @Data
     @ToString
     public static class FrameworkReplicasDto {
-        /**当框架为pytorch时候必填，范围0-1000*/
-        @KsYunField(name="Worker")
-        private Integer Worker;
         /**当Framework=tensorflow必填，范围范围0-1000*/
         @KsYunField(name="Chief")
         private Integer Chief;
@@ -148,15 +145,15 @@ public class CreateTrainJobRequest{
     public static class StorageConfigsDto {
         /**存储配置id*/
         private String StorageConfigId;
-        /**可选值 ： 
-• Code 代码挂载
-•  Dataset：数据集挂载
-•  Output：输出挂载
-•  Tensorboard Tensorboard挂载
-如果SupportTensorboard = true,必须有一个Tensorboard类型的存储配置*/
-        private String StorageConfigType;
         /**挂载路径*/
         private String MountPath;
+        /**可选值 ：
+• Code 代码挂载
+• DataSet：数据集挂载
+• Output：输出挂载
+• Tensorboard Tensorboard挂载
+如果SupportTensorboard = true,必须有一个Tensorboard类型的存储配置*/
+        private String StorageConfigType;
     }
 
     /**任务可见性，可选：Creator|QueueMember 默认：Creator*/

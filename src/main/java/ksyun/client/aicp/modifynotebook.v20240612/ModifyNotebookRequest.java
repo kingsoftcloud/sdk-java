@@ -9,9 +9,9 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname ModifyNotebookRequest
- * @Description 请求参数
- */
+* @Classname ModifyNotebookRequest
+* @Description 请求参数
+*/
 @Data
 public class ModifyNotebookRequest{
     /**开发任务ID*/
@@ -51,9 +51,9 @@ public class ModifyNotebookRequest{
     private Integer Memory;
 
     /**可见范围:
-     • Creator ：仅实例创建者可见
-     • QueueMember ：队列内成员可见
-     */
+• Creator ：仅实例创建者可见
+• QueueMember ：队列内成员可见
+*/
     @KsYunField(name="AccessType")
     private String AccessType;
 
@@ -66,7 +66,7 @@ public class ModifyNotebookRequest{
     private String SshAuthorizedKeys;
 
     /**存储配置列表
-     （覆盖修改，需要传入全量的配置列表）*/
+（覆盖修改，需要传入全量的配置列表）*/
     @KsYunField(name="StorageConfigs",type=2)
     private List<StorageConfigsDto> StorageConfigsList;
     @Data
@@ -127,12 +127,12 @@ public class ModifyNotebookRequest{
     private String ImageTagId;
 
     /**镜像来源，当改变镜像来源时，需传入该值。
-     - Official 官方镜像
-     - Personal 个人镜像
-     - ThirdParty 第三方镜像
+- Official 官方镜像
+- Personal 个人镜像
+- ThirdParty 第三方镜像
 
-     当修改镜像类型为第三方镜像时，需同时传入"ImageRegistryId", "ImageRepoId", "ImageTagId"三个入参
-     */
+当修改镜像类型为第三方镜像时，需同时传入"ImageRegistryId", "ImageRepoId", "ImageTagId"三个入参
+*/
     @KsYunField(name="ImageSource")
     private String ImageSource;
 
