@@ -34,10 +34,6 @@ public class AttachNetworkInterfaceRequest{
     @KsYunField(name="PrivateIpAddress")
     private String PrivateIpAddress;
 
-    /**指定子网下的ipv6地址*/
-    @KsYunField(name="VpcIpv6")
-    private String VpcIpv6;
-
     /***/
     @KsYunField(name="MacAddress")
     private String MacAddress;
