@@ -30,23 +30,23 @@ public class DescribeParamGroupInfoResponse extends BaseResponseModel {
         public static class ParamsDto {
             /***/
             @JsonProperty("setParameter.failIndexKeyTooInt")
-            private String SetParameterfailIndexKeyTooInt;
+            private String SetParameterFailIndexKeyTooInt;
 
             /***/
             @JsonProperty("operationProfiling.slowOpThresholdMs")
-            private Integer OperationProfilingslowOpThresholdMs;
+            private Integer OperationProfilingSlowOpThresholdMs;
 
             /***/
             @JsonProperty("replication.oplogSizeMB")
-            private String ReplicationoplogSizeMB;
+            private String ReplicationOplogSizeMB;
 
             /***/
             @JsonProperty("operationProfiling.mode")
-            private String OperationProfilingmode;
+            private String OperationProfilingMode;
 
             /***/
             @JsonProperty("setParameter.cursorTimeoutMillis")
-            private Integer SetParametercursorTimeoutMillis;
+            private Integer SetParameterCursorTimeoutMillis;
 
         }
 

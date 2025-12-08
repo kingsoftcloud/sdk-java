@@ -165,11 +165,11 @@ public class DescribeTrainJobResponse extends BaseResponseModel {
             @JsonProperty("State")
             private String State;
 
-            /**0*/
+            /***/
             @JsonProperty("PodSucceedNum")
             private Integer PodSucceedNum;
 
-            /**0*/
+            /***/
             @JsonProperty("PodFailedNum")
             private Integer PodFailedNum;
 
@@ -181,7 +181,7 @@ public class DescribeTrainJobResponse extends BaseResponseModel {
             @JsonProperty("StartTime")
             private String StartTime;
 
-            /**0*/
+            /***/
             @JsonProperty("QueueTime")
             private Integer QueueTime;
 
@@ -214,7 +214,6 @@ public class DescribeTrainJobResponse extends BaseResponseModel {
             @JsonProperty("Name")
             private String Name;
 
-            /**/mnt/hjl*/
             @JsonProperty("Value")
             private String Value;
 

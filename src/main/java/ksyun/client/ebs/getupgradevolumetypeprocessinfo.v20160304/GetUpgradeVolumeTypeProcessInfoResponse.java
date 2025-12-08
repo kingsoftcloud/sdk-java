@@ -36,11 +36,11 @@ public class GetUpgradeVolumeTypeProcessInfoResponse extends BaseResponseModel {
         @Data
         @ToString
         public static class ProcessDto {
-            /**0*/
+            /***/
             @JsonProperty("PrepareProcess")
             private Integer PrepareProcess;
 
-            /**0*/
+            /***/
             @JsonProperty("LatestDataProcess")
             private Integer LatestDataProcess;
 
@@ -52,7 +52,7 @@ public class GetUpgradeVolumeTypeProcessInfoResponse extends BaseResponseModel {
             @JsonProperty("LatestDataDone")
             private Boolean LatestDataDone;
 
-            /**0*/
+            /***/
             @JsonProperty("EstimatedDuring")
             private Integer EstimatedDuring;
 

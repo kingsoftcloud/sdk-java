@@ -75,7 +75,7 @@ public class DescribeSoInstanceTypesResponse extends BaseResponseModel {
             @JsonProperty("Size")
             private Integer Size;
 
-            /**0*/
+            /***/
             @JsonProperty("EncryptedSize")
             private Integer EncryptedSize;
 

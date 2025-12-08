@@ -156,23 +156,23 @@ public class AnalyzeBigKeysResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("<1k")
-        private String <1k;
+        private String Field1k;
 
         /***/
         @JsonProperty("1k~10k")
-        private String Field1k~10k;
+        private String Field1k10k;
 
         /***/
         @JsonProperty("10k~1000k")
-        private String Field10k~1000k;
+        private String Field10k1000k;
 
         /***/
         @JsonProperty("1Mb~10Mb")
-        private String Field1Mb~10Mb;
+        private String Field1Mb10Mb;
 
         /***/
         @JsonProperty(">10Mb")
-        private String >10Mb;
+        private String Field10Mb;
 
     }
 

@@ -18,7 +18,7 @@ public class DescribeInstanceShardInfoResponse extends BaseResponseModel {
     @JsonProperty("RequestId")
     private String RequestId;
 
-    /**0*/
+    /***/
     @JsonProperty("Code")
     private String Code;
 

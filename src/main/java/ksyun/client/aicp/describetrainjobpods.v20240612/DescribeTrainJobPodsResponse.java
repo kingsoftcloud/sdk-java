@@ -33,7 +33,7 @@ public class DescribeTrainJobPodsResponse extends BaseResponseModel {
         @JsonProperty("Role")
         private String Role;
 
-        /**0*/
+        /***/
         @JsonProperty("StartTimes")
         private Integer StartTimes;
 
