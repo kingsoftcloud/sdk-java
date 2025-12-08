@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeSoAvailableResourceResponse
@@ -14,13 +14,55 @@ import java.util.Set;
 @Data
 @ToString
 public class DescribeSoAvailableResourceResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("AvailableZones")
+    private List<AvailableZonesDto> AvailableZones;
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    @Data
+    @ToString
+    public static class AvailableZonesDto {
+        /***/
+        @JsonProperty("AvailableResources")
+        private List<AvailableResourcesDto> AvailableResources;
 
-    //返回结果，需要按需扩展
+        @Data
+        @ToString
+        public static class AvailableResourcesDto {
+            /***/
+            @JsonProperty("SupportedResources")
+            private List<SupportedResourcesDto> SupportedResources;
+
+            @Data
+            @ToString
+            public static class SupportedResourcesDto {
+                /**Available*/
+                @JsonProperty("Status")
+                private String Status;
+
+                /**SO-GM404-I*/
+                @JsonProperty("Value")
+                private String Value;
+
+            }
+
+            /**InstanceType*/
+            @JsonProperty("Type")
+            private String Type;
+
+        }
+
+        /**cn-beijing-6*/
+        @JsonProperty("RegionId")
+        private String RegionId;
+
+        /**Available*/
+        @JsonProperty("Status")
+        private String Status;
+
+        /**cn-beijing-6a*/
+        @JsonProperty("ZoneId")
+        private String ZoneId;
+
+    }
 
 }

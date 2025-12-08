@@ -5,17 +5,67 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname DescribeRetentionPolicyListResponse @Description DescribeRetentionPolicyList 返回体
- */
+* @Classname DescribeRetentionPolicyListResponse
+* @Description DescribeRetentionPolicyList 返回体
+*/
 @Data
 @ToString
 public class DescribeRetentionPolicyListResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /***/
+    @JsonProperty("Error")
+    private String Error;
 
-  // 返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("Total")
+        private Integer Total;
+
+        /***/
+        @JsonProperty("Offset")
+        private Integer Offset;
+
+        /***/
+        @JsonProperty("Limit")
+        private Integer Limit;
+
+        /***/
+        @JsonProperty("Data")
+        private List<DataDto> Data;
+
+        @Data
+        @ToString
+        public static class DataDto {
+            /***/
+            @JsonProperty("PolicyName")
+            private String PolicyName;
+
+            /***/
+            @JsonProperty("Duration")
+            private String Duration;
+
+            /***/
+            @JsonProperty("DefaultPolicy")
+            private Integer DefaultPolicy;
+
+            /***/
+            @JsonProperty("ShardGroupDuration")
+            private String ShardGroupDuration;
+
+        }
+
+    }
 
 }

@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class RebootInstancesRequest{
     /**待重启实例ID列表，N的范围为1-100*/
-    @KsYunField(name="InstanceId")
+    @KsYunField(name="InstanceId",type=2)
     private List<String> InstanceIdList;
 
     /**强制重启*/

@@ -31,8 +31,6 @@ public class ListLogPoolsRequest{
     private Integer Size;
 
     /**需要筛选的标签*/
-    @KsYunField(name="Tags")
-
     private TagsDto TagsList;
 
     @Data
@@ -41,8 +39,11 @@ public class ListLogPoolsRequest{
         /**标签键*/
         @KsYunField(name="Key")
         private String Key;
+
         /**标签值*/
         @KsYunField(name="Value")
         private String Value;
+
     }
+
 }

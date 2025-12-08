@@ -5,17 +5,73 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname DescribeInstanceDatabasesResponse @Description DescribeInstanceDatabases 返回体
- */
+* @Classname DescribeInstanceDatabasesResponse
+* @Description DescribeInstanceDatabases 返回体
+*/
 @Data
 @ToString
 public class DescribeInstanceDatabasesResponse extends BaseResponseModel {
+    /**数据库列表	
+–*/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    @Data
+    @ToString
+    public static class DataDto {
+        /**数据库列表	
+–*/
+        @JsonProperty("InstanceDatabases")
+        private List<InstanceDatabasesDto> InstanceDatabases;
 
-  // 返回结果，需要按需扩展
+        @Data
+        @ToString
+        public static class InstanceDatabasesDto {
+            /**数据库名称	
+*/
+            @JsonProperty("InstanceDatabaseName")
+            private String InstanceDatabaseName;
+
+            /**数据库字符集	
+*/
+            @JsonProperty("InstanceDatabaseCollation")
+            private String InstanceDatabaseCollation;
+
+            /**数据库字符集	
+*/
+            @JsonProperty("InstanceDatabaseCollationSet")
+            private String InstanceDatabaseCollationSet;
+
+            /**数据库描述	
+创建时添加了描述才会返回*/
+            @JsonProperty("InstanceDatabaseDescription")
+            private String InstanceDatabaseDescription;
+
+            /**数据库状态：CREATING, ACTIVE, TASKS	
+*/
+            @JsonProperty("InstanceDatabaseStatus")
+            private String InstanceDatabaseStatus;
+
+            /**数据库权限(权限拥有者及对应权限)	
+*/
+            @JsonProperty("InstanceDatabasePrivileges")
+            private InstanceDatabasePrivilegesDto InstanceDatabasePrivileges;
+
+            @Data
+            @ToString
+            public static class InstanceDatabasePrivilegesDto {
+            }
+
+        }
+
+    }
+
+    /**请求ID	
+–*/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

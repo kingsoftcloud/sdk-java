@@ -5,17 +5,63 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname DescribeInstanceDatabasesResponse @Description DescribeInstanceDatabases 返回体
- */
+* @Classname DescribeInstanceDatabasesResponse
+* @Description DescribeInstanceDatabases 返回体
+*/
 @Data
 @ToString
 public class DescribeInstanceDatabasesResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("InstanceDatabases")
+        private List<InstanceDatabasesDto> InstanceDatabases;
 
-  // 返回结果，需要按需扩展
+        @Data
+        @ToString
+        public static class InstanceDatabasesDto {
+            /**数据库名称*/
+            @JsonProperty("InstanceDatabaseName")
+            private String InstanceDatabaseName;
+
+            /**排序规则*/
+            @JsonProperty("InstanceDatabaseCollation")
+            private String InstanceDatabaseCollation;
+
+            /**数据库'Owner'*/
+            @JsonProperty("InstanceDatabaseOwner")
+            private String InstanceDatabaseOwner;
+
+            /**字符集*/
+            @JsonProperty("InstanceDatabaseCharacterSet")
+            private String InstanceDatabaseCharacterSet;
+
+            /**实例数据库状态
+
+```json
+数据库状态：CREATING, ACTIVE, TASKS 
+```*/
+            @JsonProperty("InstanceDatabaseStatus")
+            private String InstanceDatabaseStatus;
+
+            /**描述*/
+            @JsonProperty("InstanceDatabaseDescription")
+            private String InstanceDatabaseDescription;
+
+        }
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

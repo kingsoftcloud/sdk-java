@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeNotebookEventsResponse
@@ -14,13 +14,71 @@ import java.util.Set;
 @Data
 @ToString
 public class DescribeNotebookEventsResponse extends BaseResponseModel {
-
-    /**
-     * 请求id
-     */
+    /**请求ID*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /**事件列表*/
+    @JsonProperty("DataSet")
+    private List<DataSetDto> DataSet;
+
+    @Data
+    @ToString
+    public static class DataSetDto {
+        /**首次出现时间*/
+        @JsonProperty("FirstSeen")
+        private String FirstSeen;
+
+        /**最后出现时间*/
+        @JsonProperty("LastSeen")
+        private String LastSeen;
+
+        /**事件类型*/
+        @JsonProperty("Type")
+        private String Type;
+
+        /**对象*/
+        @JsonProperty("Object")
+        private ObjectDto Object;
+
+        @Data
+        @ToString
+        public static class ObjectDto {
+            /**对象类型*/
+            @JsonProperty("Kind")
+            private String Kind;
+
+            /**对象名称*/
+            @JsonProperty("Name")
+            private String Name;
+
+        }
+
+        /**原因*/
+        @JsonProperty("Reason")
+        private String Reason;
+
+        /**消息*/
+        @JsonProperty("Message")
+        private String Message;
+
+        /**事件源*/
+        @JsonProperty("Source")
+        private SourceDto Source;
+
+        @Data
+        @ToString
+        public static class SourceDto {
+            /**组件*/
+            @JsonProperty("Component")
+            private String Component;
+
+        }
+
+        /**出现次数*/
+        @JsonProperty("Count")
+        private Integer Count;
+
+    }
 
 }

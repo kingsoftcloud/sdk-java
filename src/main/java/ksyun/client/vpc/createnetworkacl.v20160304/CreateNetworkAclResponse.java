@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname CreateNetworkAclResponse
@@ -14,13 +14,28 @@ import java.util.Set;
 @Data
 @ToString
 public class CreateNetworkAclResponse extends BaseResponseModel {
-
-    /**
-     * 请求id
-     */
+    /**请求ID*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /**创建时间*/
+    @JsonProperty("CreateTime")
+    private String CreateTime;
+
+    /**Vpc的ID*/
+    @JsonProperty("VpcId")
+    private String VpcId;
+
+    /**ACL的名称*/
+    @JsonProperty("NetworkAclName")
+    private String NetworkAclName;
+
+    /**ACL的ID*/
+    @JsonProperty("NetworkAclId")
+    private String NetworkAclId;
+
+    /**ACL的描述*/
+    @JsonProperty("Description")
+    private String Description;
 
 }

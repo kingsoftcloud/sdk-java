@@ -5,17 +5,50 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname ModifyCertificateResponse @Description ModifyCertificate 返回体
- */
+* @Classname ModifyCertificateResponse
+* @Description ModifyCertificate 返回体
+*/
 @Data
 @ToString
 public class ModifyCertificateResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /***/
+    @JsonProperty("Certificate")
+    private CertificateDto Certificate;
 
-  // 返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class CertificateDto {
+        /***/
+        @JsonProperty("CreateTime")
+        private String CreateTime;
+
+        /***/
+        @JsonProperty("CertificateName")
+        private String CertificateName;
+
+        /***/
+        @JsonProperty("CertificateId")
+        private String CertificateId;
+
+        /***/
+        @JsonProperty("ExpireTime")
+        private String ExpireTime;
+
+        /***/
+        @JsonProperty("CommonName")
+        private String CommonName;
+
+        /***/
+        @JsonProperty("CertAuthority")
+        private String CertAuthority;
+
+    }
 
 }

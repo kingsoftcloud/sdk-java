@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DescribeModelsRequest{
     /**预查看的实例启动模板ID*/
-    @KsYunField(name="ModelId")
+    @KsYunField(name="ModelId",type=2)
     private List<String> ModelIdList;
 
     /**单次调用所返回的最大实例数目，默认值为10。*/

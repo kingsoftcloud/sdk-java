@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname ExportImageResponse
@@ -14,13 +14,12 @@ import java.util.Set;
 @Data
 @ToString
 public class ExportImageResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("Return")
+    private Boolean ReturnField;
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
-
-    //返回结果，需要按需扩展
+    private String RequestId;
 
 }

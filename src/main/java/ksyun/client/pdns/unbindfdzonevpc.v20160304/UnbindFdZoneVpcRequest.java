@@ -1,20 +1,26 @@
 package ksyun.client.pdns.unbindfdzonevpc.v20160304;
 
 import common.annotation.KsYunField;
-import java.util.List;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
-/**
- * @Classname UnbindFdZoneVpcRequest @Description 请求参数
- */
-@Data
-public class UnbindFdZoneVpcRequest {
-  /** 要解绑的BindVpcId */
-  @KsYunField(name = "BindVpcId")
-  private List<BindVpcIdDto> BindVpcIdList;
+import java.util.List;
+import java.util.Arrays;
 
-  @Data
-  @ToString
-  public static class BindVpcIdDto {}
+/**
+* @Classname UnbindFdZoneVpcRequest
+* @Description 请求参数
+*/
+@Data
+public class UnbindFdZoneVpcRequest{
+    /**要解绑的BindVpcId*/
+    @KsYunField(name="BindVpcId",type=2)
+    private List<BindVpcIdDto> BindVpcIdList;
+
+    @Data
+    @ToString
+    public static class BindVpcIdDto {
+    }
+
 }

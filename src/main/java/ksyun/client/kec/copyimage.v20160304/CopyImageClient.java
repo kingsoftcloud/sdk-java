@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
 * @Classname CopyImageClient
-* @Description 镜像复制
+* @Description 镜像复制接口
 */
 @Slf4j
 public class CopyImageClient extends BaseClient {

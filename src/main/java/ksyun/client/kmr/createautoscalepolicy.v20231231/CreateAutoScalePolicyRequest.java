@@ -36,8 +36,6 @@ public class CreateAutoScalePolicyRequest{
     private String ExecuteCycle;
 
     /**参数根据 ExecuteCycle 的不同而有所不同。请根据实际的执行周期传入对应的规则。*/
-    @KsYunField(name="ExecuteRules")
-
     private ExecuteRulesDto ExecuteRulesList;
 
     @Data
@@ -47,5 +45,7 @@ public class CreateAutoScalePolicyRequest{
 默认为 Cn，目前仅支持 Cn*/
         @KsYunField(name="NodeType")
         private String NodeType;
+
     }
+
 }

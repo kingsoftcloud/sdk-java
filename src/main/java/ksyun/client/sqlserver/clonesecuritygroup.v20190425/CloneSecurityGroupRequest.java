@@ -1,22 +1,29 @@
 package ksyun.client.sqlserver.clonesecuritygroup.v20190425;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
- * @Classname CloneSecurityGroupRequest @Description 请求参数
- */
+* @Classname CloneSecurityGroupRequest
+* @Description 请求参数
+*/
 @Data
-public class CloneSecurityGroupRequest {
-  /** 安全组ID */
-  @KsYunField(name = "SecurityGroupId")
-  private String SecurityGroupId;
+public class CloneSecurityGroupRequest{
+    /**安全组ID*/
+    @KsYunField(name="SecurityGroupId")
+    private String SecurityGroupId;
 
-  /** 安全组名称 */
-  @KsYunField(name = "SecurityGroupName")
-  private String SecurityGroupName;
+    /**安全组名称*/
+    @KsYunField(name="SecurityGroupName")
+    private String SecurityGroupName;
 
-  /** 安全组描述 */
-  @KsYunField(name = "SecurityGroupDescription")
-  private String SecurityGroupDescription;
+    /**安全组描述*/
+    @KsYunField(name="SecurityGroupDescription")
+    private String SecurityGroupDescription;
+
 }

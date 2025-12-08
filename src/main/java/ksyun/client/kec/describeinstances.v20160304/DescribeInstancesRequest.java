@@ -26,12 +26,12 @@ public class DescribeInstancesRequest{
 
     /**待返回描述信息的实例ID列表，N的范围为1-100
 标准UUID格式，形如`^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$`*/
-    @KsYunField(name="InstanceId")
+    @KsYunField(name="InstanceId",type=2)
     private List<String> InstanceIdList;
 
     /**待返回实例信息的项目ID列表，N的范围为1-100，如果不传会查询默认值（0）下的实例
 */
-    @KsYunField(name="ProjectId")
+    @KsYunField(name="ProjectId",type=2)
     private List<String> ProjectIdList;
 
     /**待返回实例信息的项目ID列表，N的范围为1-100
@@ -39,18 +39,20 @@ public class DescribeInstancesRequest{
 
 84（PostPaidByHour)
 <br>ProjectId.N 所属项目<br>network-interface.subnet-id 网络接口关联的子网ID<br>network-interface.network-interface-id 网卡的ID<br>network-interface.group-id 网络接口关联的安全组ID<br>instance-state.name 实例状态<br>availability-zone-name [可用区(AvailabilityZone)](https://docs.ksyun.com/documents/67)*/
-    @KsYunField(name="Filter")
+    @KsYunField(name="Filter",type=2)
     private List<FilterDto> FilterList;
 
     @Data
     @ToString
     public static class FilterDto {
         /**Filter.1.Value.1=****/
-        @KsYunField(name="Value")
-                private List<String> ValueList;
+        @KsYunField(name="Value",type=2)
+        private List<String> ValueList;
+
         /**Filter.1.Name.1=instance-id*/
-        @KsYunField(name="Name")
-                private List<String> NameList;
+        @KsYunField(name="Name",type=2)
+        private List<String> NameList;
+
     }
 
     /**筛选器

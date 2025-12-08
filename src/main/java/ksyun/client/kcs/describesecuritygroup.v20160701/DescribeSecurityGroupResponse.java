@@ -5,17 +5,87 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname DescribeSecurityGroupResponse @Description DescribeSecurityGroup 返回体
- */
+* @Classname DescribeSecurityGroupResponse
+* @Description DescribeSecurityGroup 返回体
+*/
 @Data
 @ToString
 public class DescribeSecurityGroupResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-  // 返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("securityGroupId")
+        private String SecurityGroupId;
+
+        /***/
+        @JsonProperty("name")
+        private String Name;
+
+        /***/
+        @JsonProperty("description")
+        private String Description;
+
+        /***/
+        @JsonProperty("resourceNum")
+        private Integer ResourceNum;
+
+        /***/
+        @JsonProperty("rules")
+        private List<RulesDto> Rules;
+
+        @Data
+        @ToString
+        public static class RulesDto {
+            /***/
+            @JsonProperty("id")
+            private String Id;
+
+            /***/
+            @JsonProperty("cidr")
+            private String Cidr;
+
+            /***/
+            @JsonProperty("createAt")
+            private String CreateAt;
+
+            /***/
+            @JsonProperty("fromPort")
+            private Integer FromPort;
+
+            /***/
+            @JsonProperty("toPort")
+            private Integer ToPort;
+
+            /***/
+            @JsonProperty("protocol")
+            private String Protocol;
+
+        }
+
+        /***/
+        @JsonProperty("total")
+        private Integer Total;
+
+        /***/
+        @JsonProperty("created")
+        private String Created;
+
+        /***/
+        @JsonProperty("updated")
+        private String Updated;
+
+    }
 
 }

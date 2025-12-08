@@ -16,7 +16,7 @@ import java.util.Arrays;
 public class DescribeScalingGroupRequest{
     /**待查询的各伸缩组组成的数组数组下标从0开始 
  */
-    @KsYunField(name="ScalingGroupId")
+    @KsYunField(name="ScalingGroupId",type=2)
     private List<String> ScalingGroupIdList;
 
     /**待查询的伸缩组名称 模糊查询
@@ -45,7 +45,7 @@ public class DescribeScalingGroupRequest{
     private Integer MaxResults;
 
     /**弹性伸缩活动id列表*/
-    @KsYunField(name="ScalingActivityId")
+    @KsYunField(name="ScalingActivityId",type=2)
     private List<String> ScalingActivityIdList;
 
 }

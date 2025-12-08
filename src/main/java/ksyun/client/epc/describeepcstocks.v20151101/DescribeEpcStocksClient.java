@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
 * @Classname DescribeEpcStocksClient
-* @Description DescribeEpcStocks
+* @Description 查询云物理主机的库存
 */
 @Slf4j
 public class DescribeEpcStocksClient extends BaseClient {

@@ -5,17 +5,54 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname ListCollectionsResponse @Description ListCollections 返回体
- */
+* @Classname ListCollectionsResponse
+* @Description ListCollections 返回体
+*/
 @Data
 @ToString
 public class ListCollectionsResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /***/
+    @JsonProperty("Code")
+    private String Code;
 
-  // 返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Message")
+    private String Message;
+
+    /***/
+    @JsonProperty("Offset")
+    private Integer Offset;
+
+    /***/
+    @JsonProperty("Limit")
+    private Integer Limit;
+
+    /***/
+    @JsonProperty("Total")
+    private Integer Total;
+
+    /***/
+    @JsonProperty("Data")
+    private List<DataDto> Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("DbName")
+        private String DbName;
+
+        /***/
+        @JsonProperty("Collections")
+        private List<String> Collections;
+
+    }
 
 }

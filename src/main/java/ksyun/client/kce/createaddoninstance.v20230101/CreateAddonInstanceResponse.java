@@ -5,17 +5,34 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname CreateAddonInstanceResponse @Description CreateAddonInstance 返回体
- */
+* @Classname CreateAddonInstanceResponse
+* @Description CreateAddonInstance 返回体
+*/
 @Data
 @ToString
 public class CreateAddonInstanceResponse extends BaseResponseModel {
+    /**请求ID*/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /**返回数据*/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-  // 返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class DataDto {
+        /**集群ID*/
+        @JsonProperty("ClusterId")
+        private String ClusterId;
+
+        /**示例ID*/
+        @JsonProperty("InstanceIds")
+        private List<String> InstanceIds;
+
+    }
 
 }

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeDataGuardGroupResponse
@@ -14,13 +14,62 @@ import java.util.Set;
 @Data
 @ToString
 public class DescribeDataGuardGroupResponse extends BaseResponseModel {
-
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("DataGuardsSet")
+    private List<DataGuardsSetDto> DataGuardsSet;
+
+    @Data
+    @ToString
+    public static class DataGuardsSetDto {
+        /***/
+        @JsonProperty("DataGuardId")
+        private String DataGuardId;
+
+        /***/
+        @JsonProperty("DataGuardName")
+        private String DataGuardName;
+
+        /***/
+        @JsonProperty("DataGuardLevel")
+        private String DataGuardLevel;
+
+        /***/
+        @JsonProperty("DataGuardCapacity")
+        private Integer DataGuardCapacity;
+
+        /***/
+        @JsonProperty("DataGuardUsedSize")
+        private Integer DataGuardUsedSize;
+
+        /***/
+        @JsonProperty("DataGuardInstancesList")
+        private List<DataGuardInstancesListDto> DataGuardInstancesList;
+
+        @Data
+        @ToString
+        public static class DataGuardInstancesListDto {
+            /***/
+            @JsonProperty("InstanceId")
+            private String InstanceId;
+
+            /***/
+            @JsonProperty("InstanceName")
+            private String InstanceName;
+
+        }
+
+        /***/
+        @JsonProperty("DataGuardType")
+        private String DataGuardType;
+
+    }
+
+    /***/
+    @JsonProperty("isSupportDomain")
+    private Boolean IsSupportDomain;
 
 }

@@ -5,17 +5,68 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname DescribeInstanceDatabasesResponse @Description DescribeInstanceDatabases 返回体
- */
+* @Classname DescribeInstanceDatabasesResponse
+* @Description DescribeInstanceDatabases 返回体
+*/
 @Data
 @ToString
 public class DescribeInstanceDatabasesResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /***/
+    @JsonProperty("Code")
+    private String Code;
 
-  // 返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Message")
+    private String Message;
+
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /**数据库库列表*/
+        @JsonProperty("databases")
+        private List<DatabasesDto> Databases;
+
+        @Data
+        @ToString
+        public static class DatabasesDto {
+            /**数据库名称*/
+            @JsonProperty("name")
+            private String Name;
+
+            /**对此数据库有权限的账号列表+对应权限*/
+            @JsonProperty("accounts")
+            private List<AccountsDto> Accounts;
+
+            @Data
+            @ToString
+            public static class AccountsDto {
+                /**账号名称*/
+                @JsonProperty("name")
+                private String Name;
+
+                /**账号权限*/
+                @JsonProperty("privileges")
+                private String Privileges;
+
+            }
+
+            /**数据库状态*/
+            @JsonProperty("status")
+            private String Status;
+
+        }
+
+    }
 
 }

@@ -21,7 +21,7 @@ public class SetKvmProtectedDetachRequest{
 
     /**需设置移除保护的云服务器数组，下标从0开始 
  */
-    @KsYunField(name="ScalingInstanceId")
+    @KsYunField(name="ScalingInstanceId",type=2)
     private List<String> ScalingInstanceIdList;
 
     /**移除保护标志位 

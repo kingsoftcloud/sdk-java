@@ -5,17 +5,34 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname GetVirtualMFADeviceResponse @Description GetVirtualMFADevice 返回体
- */
+* @Classname GetVirtualMFADeviceResponse
+* @Description GetVirtualMFADevice 返回体
+*/
 @Data
 @ToString
 public class GetVirtualMFADeviceResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /**设备信息*/
+    @JsonProperty("VirtualMFADevice")
+    private VirtualMFADeviceDto VirtualMFADevice;
 
-  // 返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class VirtualMFADeviceDto {
+        /**krn*/
+        @JsonProperty("SerialNumber")
+        private String SerialNumber;
+
+        /**启用时间*/
+        @JsonProperty("EnableDate")
+        private String EnableDate;
+
+    }
 
 }

@@ -20,12 +20,12 @@ public class DetachKeyRequest{
 
     /**待解绑定密钥的实例。
 */
-    @KsYunField(name="InstanceId")
+    @KsYunField(name="InstanceId",type=2)
     private List<String> InstanceIdList;
 
     /**待解绑定的密钥。
 */
-    @KsYunField(name="KeyId")
+    @KsYunField(name="KeyId",type=2)
     private List<String> KeyIdList;
 
 }

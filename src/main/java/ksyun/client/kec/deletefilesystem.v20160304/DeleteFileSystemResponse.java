@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DeleteFileSystemResponse
@@ -14,13 +14,21 @@ import java.util.Set;
 @Data
 @ToString
 public class DeleteFileSystemResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("DeleteFileSystemResponse")
+    private DeleteFileSystemResponseDto DeleteFileSystemResponse;
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    @Data
+    @ToString
+    public static class DeleteFileSystemResponseDto {
+        /***/
+        @JsonProperty("RequestId")
+        private String RequestId;
 
-    //返回结果，需要按需扩展
+        /***/
+        @JsonProperty("Return")
+        private String ReturnField;
+
+    }
 
 }

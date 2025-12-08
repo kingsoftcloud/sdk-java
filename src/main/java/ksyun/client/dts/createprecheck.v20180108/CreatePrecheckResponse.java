@@ -5,17 +5,30 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname CreatePrecheckResponse @Description CreatePrecheck 返回体
- */
+* @Classname CreatePrecheckResponse
+* @Description CreatePrecheck 返回体
+*/
 @Data
 @ToString
 public class CreatePrecheckResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("PrecheckId")
+        private String PrecheckId;
 
-  // 返回结果，需要按需扩展
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

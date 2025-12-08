@@ -5,17 +5,55 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname DescribePluginsResponse @Description DescribePlugins 返回体
- */
+* @Classname DescribePluginsResponse
+* @Description DescribePlugins 返回体
+*/
 @Data
 @ToString
 public class DescribePluginsResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-  // 返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("Plugins")
+        private List<PluginsDto> Plugins;
+
+        @Data
+        @ToString
+        public static class PluginsDto {
+            /***/
+            @JsonProperty("PluginName")
+            private String PluginName;
+
+            /***/
+            @JsonProperty("EnableUninstall")
+            private Boolean EnableUninstall;
+
+            /***/
+            @JsonProperty("UpgradeVersions")
+            private List<String> UpgradeVersions;
+
+            /***/
+            @JsonProperty("Description")
+            private String Description;
+
+        }
+
+        /***/
+        @JsonProperty("Total")
+        private Integer Total;
+
+    }
 
 }

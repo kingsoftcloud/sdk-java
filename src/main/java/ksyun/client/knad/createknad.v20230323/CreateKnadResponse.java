@@ -5,17 +5,25 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname CreateKnadResponse @Description CreateKnad 返回体
- */
+* @Classname CreateKnadResponse
+* @Description CreateKnad 返回体
+*/
 @Data
 @ToString
 public class CreateKnadResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /***/
+    @JsonProperty("kid")
+    private String Kid;
 
-  // 返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Return")
+    private Boolean ReturnField;
 
 }

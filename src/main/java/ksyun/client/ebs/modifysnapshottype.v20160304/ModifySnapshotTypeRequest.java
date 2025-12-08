@@ -1,15 +1,25 @@
 package ksyun.client.ebs.modifysnapshottype.v20160304;
 
 import common.annotation.KsYunField;
-import java.util.List;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
- * @Classname ModifySnapshotTypeRequest @Description 请求参数
- */
+* @Classname ModifySnapshotTypeRequest
+* @Description 请求参数
+*/
 @Data
-public class ModifySnapshotTypeRequest {
-  /***/
-  @KsYunField(name = "SnapshotIds", type = 2)
-  private List<String> SnapshotIdsList;
+public class ModifySnapshotTypeRequest{
+    /***/
+    @KsYunField(name="SnapshotIds",type=2)
+    private List<String> SnapshotIdsList;
+
+    /**快照id*/
+    @KsYunField(name="SnapshotId")
+    private String SnapshotId;
+
 }

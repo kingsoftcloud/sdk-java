@@ -5,17 +5,42 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname UpdateMongoDBInstanceResponse @Description UpdateMongoDBInstance 返回体
- */
+* @Classname UpdateMongoDBInstanceResponse
+* @Description UpdateMongoDBInstance 返回体
+*/
 @Data
 @ToString
 public class UpdateMongoDBInstanceResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /***/
+    @JsonProperty("MongoDBInstanceResult")
+    private MongoDBInstanceResultDto MongoDBInstanceResult;
 
-  // 返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class MongoDBInstanceResultDto {
+        /***/
+        @JsonProperty("UserId")
+        private String UserId;
+
+        /***/
+        @JsonProperty("Region")
+        private String Region;
+
+        /***/
+        @JsonProperty("InstanceId")
+        private String InstanceId;
+
+        /***/
+        @JsonProperty("Name")
+        private String Name;
+
+    }
 
 }

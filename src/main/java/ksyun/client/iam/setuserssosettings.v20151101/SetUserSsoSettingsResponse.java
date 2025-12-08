@@ -5,17 +5,40 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname SetUserSsoSettingsResponse @Description SetUserSsoSettings 返回体
- */
+* @Classname SetUserSsoSettingsResponse
+* @Description SetUserSsoSettings 返回体
+*/
 @Data
 @ToString
 public class SetUserSsoSettingsResponse extends BaseResponseModel {
+    /**请求 ID*/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /**用户 SSO 配置信息*/
+    @JsonProperty("UserSsoSettings")
+    private UserSsoSettingsDto UserSsoSettings;
 
-  // 返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class UserSsoSettingsDto {
+        /**	
+是否开启用户 SSO*/
+        @JsonProperty("Status")
+        private Integer Status;
+
+        /**元数据文档。经过 Base64 编码。*/
+        @JsonProperty("Metadata")
+        private String Metadata;
+
+        /**	
+域名*/
+        @JsonProperty("Domain")
+        private String Domain;
+
+    }
 
 }

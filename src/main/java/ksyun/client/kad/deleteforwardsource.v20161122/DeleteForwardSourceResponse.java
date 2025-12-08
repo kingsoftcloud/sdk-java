@@ -5,17 +5,30 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname DeleteForwardSourceResponse @Description DeleteForwardSource 返回体
- */
+* @Classname DeleteForwardSourceResponse
+* @Description DeleteForwardSource 返回体
+*/
 @Data
 @ToString
 public class DeleteForwardSourceResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("DeleteForwardSourceResponse")
+    private DeleteForwardSourceResponseDto DeleteForwardSourceResponse;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    @Data
+    @ToString
+    public static class DeleteForwardSourceResponseDto {
+        /***/
+        @JsonProperty("RequestId")
+        private String RequestId;
 
-  // 返回结果，需要按需扩展
+        /***/
+        @JsonProperty("Return")
+        private String ReturnField;
+
+    }
 
 }

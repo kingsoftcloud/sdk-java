@@ -5,17 +5,25 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname CreateTagResponse @Description CreateTag 返回体
- */
+* @Classname CreateTagResponse
+* @Description CreateTag 返回体
+*/
 @Data
 @ToString
 public class CreateTagResponse extends BaseResponseModel {
+    /**Result*/
+    @JsonProperty("Result")
+    private Boolean Result;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /***/
+    @JsonProperty("TagId")
+    private Integer TagId;
 
-  // 返回结果，需要按需扩展
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

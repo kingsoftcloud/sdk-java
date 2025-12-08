@@ -5,17 +5,72 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname DescribeDBLogFilesResponse @Description DescribeDBLogFiles 返回体
- */
+* @Classname DescribeDBLogFilesResponse
+* @Description DescribeDBLogFiles 返回体
+*/
 @Data
 @ToString
 public class DescribeDBLogFilesResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    @Data
+    @ToString
+    public static class DataDto {
+        /**日志文件列表*/
+        @JsonProperty("DescribeDBLogFiles")
+        private List<DescribeDBLogFilesDto> DescribeDBLogFiles;
 
-  // 返回结果，需要按需扩展
+        @Data
+        @ToString
+        public static class DescribeDBLogFilesDto {
+            /**日志下载url
+###### 为NULL时，表示PostgreSQL没有提供下载链接URL*/
+            @JsonProperty("LogFileName")
+            private String LogFileName;
+
+            /**日志大小*/
+            @JsonProperty("Size")
+            private Integer Size;
+
+            /**行大小*/
+            @JsonProperty("RawSize")
+            private Integer RawSize;
+
+            /**日志生成时间*/
+            @JsonProperty("Date")
+            private String Date;
+
+            /**日志开始时间*/
+            @JsonProperty("StartTime")
+            private String StartTime;
+
+            /**日志开始时间*/
+            @JsonProperty("EndTime")
+            private String EndTime;
+
+        }
+
+        /**总计数*/
+        @JsonProperty("TotalCount")
+        private Integer TotalCount;
+
+        /***/
+        @JsonProperty("Marker")
+        private Integer Marker;
+
+        /***/
+        @JsonProperty("MaxRecords")
+        private Integer MaxRecords;
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

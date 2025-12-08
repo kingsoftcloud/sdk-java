@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeMountTargetsResponse
@@ -14,13 +14,63 @@ import java.util.Set;
 @Data
 @ToString
 public class DescribeMountTargetsResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("DescribeMountTargetsResponse")
+    private DescribeMountTargetsResponseDto DescribeMountTargetsResponse;
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    @Data
+    @ToString
+    public static class DescribeMountTargetsResponseDto {
+        /***/
+        @JsonProperty("RequestId")
+        private String RequestId;
 
-    //返回结果，需要按需扩展
+        /***/
+        @JsonProperty("Marker")
+        private String Marker;
+
+        /***/
+        @JsonProperty("FileSystemCount")
+        private String FileSystemCount;
+
+        /***/
+        @JsonProperty("MountTargets")
+        private MountTargetsDto MountTargets;
+
+        @Data
+        @ToString
+        public static class MountTargetsDto {
+            /***/
+            @JsonProperty("Item")
+            private ItemDto Item;
+
+            @Data
+            @ToString
+            public static class ItemDto {
+                /***/
+                @JsonProperty("MountTargetId")
+                private String MountTargetId;
+
+                /***/
+                @JsonProperty("SubnetId")
+                private String SubnetId;
+
+                /***/
+                @JsonProperty("IpAddress")
+                private String IpAddress;
+
+                /***/
+                @JsonProperty("MountTargetState")
+                private String MountTargetState;
+
+                /***/
+                @JsonProperty("CreationDate")
+                private String CreationDate;
+
+            }
+
+        }
+
+    }
 
 }

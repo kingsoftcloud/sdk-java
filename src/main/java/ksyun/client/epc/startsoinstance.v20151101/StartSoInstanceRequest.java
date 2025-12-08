@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class StartSoInstanceRequest{
     /**实例ID。*/
-    @KsYunField(name="InstanceIds")
+    @KsYunField(name="InstanceIds",type=2)
     private List<String> InstanceIdsList;
 
     /**星海专区*/

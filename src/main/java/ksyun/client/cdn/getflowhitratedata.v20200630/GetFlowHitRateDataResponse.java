@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname GetFlowHitRateDataResponse
@@ -14,13 +14,79 @@ import java.util.Set;
 @Data
 @ToString
 public class GetFlowHitRateDataResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("StartTime")
+    private String StartTime;
 
-    /**
-     * 请求id
-     */
+    /***/
+    @JsonProperty("EndTime")
+    private String EndTime;
+
+    /***/
+    @JsonProperty("Interval")
+    private Integer Interval;
+
+    /***/
+    @JsonProperty("CdnType")
+    private String CdnType;
+
+    /***/
+    @JsonProperty("Domains")
+    private String Domains;
+
+    /***/
+    @JsonProperty("ResultType")
+    private String ResultType;
+
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Datas")
+    private List<DatasDto> Datas;
+
+    @Data
+    @ToString
+    public static class DatasDto {
+        /***/
+        @JsonProperty("Condition")
+        private ConditionDto Condition;
+
+        @Data
+        @ToString
+        public static class ConditionDto {
+        }
+
+        /***/
+        @JsonProperty("DetailData")
+        private List<DetailDataDto> DetailData;
+
+        @Data
+        @ToString
+        public static class DetailDataDto {
+            /***/
+            @JsonProperty("Time")
+            private String Time;
+
+            /***/
+            @JsonProperty("HitFlow")
+            private Integer HitFlow;
+
+            /***/
+            @JsonProperty("MissFlow")
+            private Integer MissFlow;
+
+            /***/
+            @JsonProperty("MissFlowProportion")
+            private Double MissFlowProportion;
+
+            /***/
+            @JsonProperty("HitFlowProportion")
+            private Double HitFlowProportion;
+
+        }
+
+    }
 
 }

@@ -5,17 +5,96 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname ListRolesResponse @Description ListRoles 返回体
- */
+* @Classname ListRolesResponse
+* @Description ListRoles 返回体
+*/
 @Data
 @ToString
 public class ListRolesResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("ListRolesResult")
+    private ListRolesResultDto ListRolesResult;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    @Data
+    @ToString
+    public static class ListRolesResultDto {
+        /***/
+        @JsonProperty("Roles")
+        private RolesDto Roles;
 
-  // 返回结果，需要按需扩展
+        @Data
+        @ToString
+        public static class RolesDto {
+            /***/
+            @JsonProperty("member")
+            private List<MemberDto> Member;
+
+            @Data
+            @ToString
+            public static class MemberDto {
+                /***/
+                @JsonProperty("Path")
+                private String Path;
+
+                /***/
+                @JsonProperty("Krn")
+                private String Krn;
+
+                /***/
+                @JsonProperty("RoleName")
+                private String RoleName;
+
+                /***/
+                @JsonProperty("Description")
+                private String Description;
+
+                /***/
+                @JsonProperty("TrustType")
+                private Integer TrustType;
+
+                /***/
+                @JsonProperty("TrustAccounts")
+                private String TrustAccounts;
+
+                /***/
+                @JsonProperty("TrustServices")
+                private List<String> TrustServices;
+
+                /***/
+                @JsonProperty("TrustProvider")
+                private String TrustProvider;
+
+                /***/
+                @JsonProperty("CreateDate")
+                private String CreateDate;
+
+                /***/
+                @JsonProperty("RoleId")
+                private String RoleId;
+
+                /***/
+                @JsonProperty("ServiceRoleType")
+                private Integer ServiceRoleType;
+
+            }
+
+        }
+
+        /***/
+        @JsonProperty("IsTruncated")
+        private Boolean IsTruncated;
+
+        /***/
+        @JsonProperty("Marker")
+        private String Marker;
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

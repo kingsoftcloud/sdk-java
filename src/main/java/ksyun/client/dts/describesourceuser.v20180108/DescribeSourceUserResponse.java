@@ -5,17 +5,51 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname DescribeSourceUserResponse @Description DescribeSourceUser 返回体
- */
+* @Classname DescribeSourceUserResponse
+* @Description DescribeSourceUser 返回体
+*/
 @Data
 @ToString
 public class DescribeSourceUserResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("SourceUser")
+        private List<SourceUserDto> SourceUser;
 
-  // 返回结果，需要按需扩展
+        @Data
+        @ToString
+        public static class SourceUserDto {
+            /***/
+            @JsonProperty("Username")
+            private String Username;
+
+            /***/
+            @JsonProperty("Host")
+            private String Host;
+
+            /***/
+            @JsonProperty("Description")
+            private String Description;
+
+            /***/
+            @JsonProperty("Priv")
+            private List<String> Priv;
+
+            /***/
+            @JsonProperty("UserAvailable")
+            private String UserAvailable;
+
+        }
+
+    }
 
 }

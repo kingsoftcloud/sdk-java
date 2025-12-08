@@ -56,12 +56,12 @@ public class CreateScalingConfigurationRequest{
 
     /**密钥对 
  */
-    @KsYunField(name="KeyId")
+    @KsYunField(name="KeyId",type=2)
     private List<String> KeyIdList;
 
     /**云盘数据盘类型 
  */
-    @KsYunField(name="DataDisk")
+    @KsYunField(name="DataDisk",type=2)
     private List<DataDiskDto> DataDiskList;
 
     @Data
@@ -70,18 +70,22 @@ public class CreateScalingConfigurationRequest{
         /**云盘数据盘类型 
  */
         @KsYunField(name="Type")
-                private String Type;
+        private String Type;
+
         /**云盘数据盘大小 
  */
         @KsYunField(name="Size")
-                private Integer Size;
+        private Integer Size;
+
         /**云盘数据盘是否随实例删除 
  */
         @KsYunField(name="DeleteWithInstance")
-                private Boolean DeleteWithInstance;
+        private Boolean DeleteWithInstance;
+
         /**云盘数据盘 快照id*/
         @KsYunField(name="SnapshotId")
-                private String SnapshotId;
+        private String SnapshotId;
+
     }
 
     /**系统盘大小，最小值为0，最大值为500*/
@@ -130,7 +134,7 @@ public class CreateScalingConfigurationRequest{
 
     /** 启动配置创建的ECS实例的标签键 
  支持1-128个字符，仅支持中英文字符、数字及±=._/@:*/
-    @KsYunField(name="Tag")
+    @KsYunField(name="Tag",type=2)
     private List<TagDto> TagList;
 
     @Data
@@ -139,11 +143,13 @@ public class CreateScalingConfigurationRequest{
         /** 启动配置创建的ECS实例的标签键 
  支持1-128个字符，仅支持中英文字符、数字及±=._/@:*/
         @KsYunField(name="Key")
-                private String Key;
+        private String Key;
+
         /** 启动配置创建的ECS实例的标签值 
  256个字符内，仅支持中英文字符、数字及±=._/@()[]（）【】:*/
         @KsYunField(name="Value")
-                private String Value;
+        private String Value;
+
     }
 
     /**不能给默认值，不传默认按价格体系配置systemDisk属性中第一个创建*/

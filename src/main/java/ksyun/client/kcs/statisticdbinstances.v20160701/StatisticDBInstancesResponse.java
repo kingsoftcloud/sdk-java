@@ -5,17 +5,110 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname StatisticDBInstancesResponse @Description StatisticDBInstances 返回体
- */
+* @Classname StatisticDBInstancesResponse
+* @Description StatisticDBInstances 返回体
+*/
 @Data
 @ToString
 public class StatisticDBInstancesResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-  // 返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("partition")
+        private List<PartitionDto> Partition;
+
+        @Data
+        @ToString
+        public static class PartitionDto {
+            /***/
+            @JsonProperty("name")
+            private String Name;
+
+            /***/
+            @JsonProperty("code")
+            private String Code;
+
+            /***/
+            @JsonProperty("total")
+            private Integer Total;
+
+            /***/
+            @JsonProperty("statistics")
+            private List<StatisticsDto> Statistics;
+
+            @Data
+            @ToString
+            public static class StatisticsDto {
+                /***/
+                @JsonProperty("name")
+                private String Name;
+
+                /***/
+                @JsonProperty("code")
+                private String Code;
+
+                /***/
+                @JsonProperty("total")
+                private Integer Total;
+
+            }
+
+        }
+
+        /***/
+        @JsonProperty("count")
+        private CountDto Count;
+
+        @Data
+        @ToString
+        public static class CountDto {
+            /***/
+            @JsonProperty("name")
+            private String Name;
+
+            /***/
+            @JsonProperty("code")
+            private String Code;
+
+            /***/
+            @JsonProperty("total")
+            private Integer Total;
+
+            /***/
+            @JsonProperty("statistics")
+            private List<StatisticsDto> Statistics;
+
+            @Data
+            @ToString
+            public static class StatisticsDto {
+                /***/
+                @JsonProperty("name")
+                private String Name;
+
+                /***/
+                @JsonProperty("code")
+                private String Code;
+
+                /***/
+                @JsonProperty("total")
+                private Integer Total;
+
+            }
+
+        }
+
+    }
 
 }

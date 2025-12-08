@@ -1,22 +1,29 @@
 package ksyun.client.iam.listusersforgroup.v20151101;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
- * @Classname ListUsersForGroupRequest @Description 请求参数
- */
+* @Classname ListUsersForGroupRequest
+* @Description 请求参数
+*/
 @Data
-public class ListUsersForGroupRequest {
-  /** 组名 */
-  @KsYunField(name = "GroupName")
-  private String GroupName;
+public class ListUsersForGroupRequest{
+    /**组名*/
+    @KsYunField(name="GroupName")
+    private String GroupName;
 
-  /** 默认500条，最大1000条 */
-  @KsYunField(name = "MaxItems")
-  private Integer MaxItems;
+    /**默认500条，最大1000条*/
+    @KsYunField(name="MaxItems")
+    private Integer MaxItems;
 
-  /** 页码 */
-  @KsYunField(name = "Page")
-  private Integer Page;
+    /**页码*/
+    @KsYunField(name="Page")
+    private Integer Page;
+
 }

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname RestartFlinkJobRunResponse
@@ -14,13 +14,25 @@ import java.util.Set;
 @Data
 @ToString
 public class RestartFlinkJobRunResponse extends BaseResponseModel {
+    /**响应消息*/
+    @JsonProperty("Code")
+    private Integer Code;
 
-    /**
-     * 请求id
-     */
+    /**响应信息*/
+    @JsonProperty("Message")
+    private String Message;
+
+    /**请求ID*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /**空结构体*/
+    @JsonProperty("Data")
+    private DataDto Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+    }
 
 }

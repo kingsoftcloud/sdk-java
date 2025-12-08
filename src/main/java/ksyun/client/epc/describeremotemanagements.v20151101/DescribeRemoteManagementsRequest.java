@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DescribeRemoteManagementsRequest{
     /**远程管理的ID*/
-    @KsYunField(name="RemoteManagementId")
+    @KsYunField(name="RemoteManagementId",type=2)
     private List<String> RemoteManagementIdList;
 
 }

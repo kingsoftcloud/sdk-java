@@ -22,7 +22,7 @@ public class DescribeSoInstanceTypesRequest{
 • 参数 - N：表示实例规格的序号，取值范围：1～100。N大于100时，仅前100个生效。
 • 多个InstanceTypeId 之间用&分隔。
 说明：不传则默认查询所有实例规格的信息。*/
-    @KsYunField(name="InstanceTypeId")
+    @KsYunField(name="InstanceTypeId",type=2)
     private List<String> InstanceTypeIdList;
 
     /**星海专区*/

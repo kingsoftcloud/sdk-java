@@ -5,17 +5,42 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname DescribeCreateVolumePriceResponse @Description DescribeCreateVolumePrice 返回体
- */
+* @Classname DescribeCreateVolumePriceResponse
+* @Description DescribeCreateVolumePrice 返回体
+*/
 @Data
 @ToString
 public class DescribeCreateVolumePriceResponse extends BaseResponseModel {
+    /**唯一请求ID*/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /***/
+    @JsonProperty("VolumePrice")
+    private VolumePriceDto VolumePrice;
 
-  // 返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class VolumePriceDto {
+        /**计价单位*/
+        @JsonProperty("CurrencyUnit")
+        private String CurrencyUnit;
+
+        /**实付金额*/
+        @JsonProperty("TradePrice")
+        private Double TradePrice;
+
+        /**原价*/
+        @JsonProperty("OriginalPrice")
+        private Double OriginalPrice;
+
+        /**折扣金额*/
+        @JsonProperty("DiscountPrice")
+        private Double DiscountPrice;
+
+    }
 
 }

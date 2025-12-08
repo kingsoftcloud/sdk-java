@@ -1,0 +1,117 @@
+package ksyun.client.slb.createbackendservergroup.v20250430;
+
+import common.annotation.KsYunField;
+import lombok.Builder;
+import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
+
+/**
+* @Classname CreateBackendServerGroupRequest
+* @Description 请求参数
+*/
+@Data
+public class CreateBackendServerGroupRequest{
+    /**Vpc的ID*/
+    @KsYunField(name="VpcId")
+    private String VpcId;
+
+    /**负载均衡的名称*/
+    @KsYunField(name="Name")
+    private String Name;
+
+    /**服务器组的服务器类型*/
+    @KsYunField(name="BackendServerType")
+    private String BackendServerType;
+
+    /**调度算法（RoundRobin | LeastConnections | MasterSlave | QUIC_CID | IPHash）*/
+    @KsYunField(name="Method")
+    private String Method;
+
+    /**会话保持的状态(start|stop)*/
+    @KsYunField(name="SessionState")
+    private String SessionState;
+
+    /**会话保持超时时间*/
+    @KsYunField(name="SessionPersistencePeriod")
+    private Integer SessionPersistencePeriod;
+
+    /**会话类型*/
+    @KsYunField(name="CookieType")
+    private String CookieType;
+
+    /**Cookie的名称*/
+    @KsYunField(name="CookieName")
+    private String CookieName;
+
+    /**后端长连接类型*/
+    @KsYunField(name="UpstreamKeepalive")
+    private String UpstreamKeepalive;
+
+    /**后端协议 (TCP | UDP |HTTP | gRPC | HTTPS)*/
+    @KsYunField(name="Protocol")
+    private String Protocol;
+
+    /**健康检查保持的状态(start|stop)*/
+    @KsYunField(name="HealthCheckState")
+    private String HealthCheckState;
+
+    /**健康检查超时时间*/
+    @KsYunField(name="Timeout")
+    private Integer Timeout;
+
+    /**健康检查时间间隔*/
+    @KsYunField(name="Interval")
+    private Integer Interval;
+
+    /**健康阈值*/
+    @KsYunField(name="HealthyThreshold")
+    private Integer HealthyThreshold;
+
+    /**不健康阈值*/
+    @KsYunField(name="UnhealthyThreshold")
+    private Integer UnhealthyThreshold;
+
+    /**HTTP类型监听器健康检查的链接*/
+    @KsYunField(name="UrlPath")
+    private String UrlPath;
+
+    /**HTTP类型健康检查的域名*/
+    @KsYunField(name="HostName")
+    private String HostName;
+
+    /**健康检查端口*/
+    @KsYunField(name="HealthCheckConnectPort")
+    private Integer HealthCheckConnectPort;
+
+    /**健康检查协议(TCP | ICMP| UDP | HTTP)*/
+    @KsYunField(name="HealthProtocol")
+    private String HealthProtocol;
+
+    /**慢启动*/
+    @KsYunField(name="SlowStartEnabled")
+    private Boolean SlowStartEnabled;
+
+    /**慢启动时间*/
+    @KsYunField(name="SlowStartDuration")
+    private Integer SlowStartDuration;
+
+    /**HTTP请求方式 (GET|HEAD)*/
+    @KsYunField(name="HttpMethod")
+    private String HttpMethod;
+
+    /**UDP监听器健康检查的请求串*/
+    @KsYunField(name="HealthCheckReq")
+    private String HealthCheckReq;
+
+    /**UDP监听器健康检查的响应串*/
+    @KsYunField(name="HealthCheckExp")
+    private String HealthCheckExp;
+
+    /**健康状态返回码*/
+    @KsYunField(name="HealthCode")
+    private String HealthCode;
+
+}

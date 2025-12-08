@@ -5,17 +5,25 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname DownloadSnapshotResponse @Description DownloadSnapshot 返回体
- */
+* @Classname DownloadSnapshotResponse
+* @Description DownloadSnapshot 返回体
+*/
 @Data
 @ToString
 public class DownloadSnapshotResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /***/
+    @JsonProperty("SnapshotId")
+    private String SnapshotId;
 
-  // 返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Url")
+    private String Url;
 
 }

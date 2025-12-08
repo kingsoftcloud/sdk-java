@@ -5,17 +5,20 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname CreateKeyResponse @Description CreateKey 返回体
- */
+* @Classname CreateKeyResponse
+* @Description CreateKey 返回体
+*/
 @Data
 @ToString
 public class CreateKeyResponse extends BaseResponseModel {
-
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
-
-  // 返回结果，需要按需扩展
+    /**
+- 请求ID
+- 类型: String
+#### */
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

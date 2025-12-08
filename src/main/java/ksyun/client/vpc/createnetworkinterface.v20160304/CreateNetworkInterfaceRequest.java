@@ -27,7 +27,7 @@ public class CreateNetworkInterfaceRequest{
     private String PrivateIpAddress;
 
     /**一个或多个安全组的ID，不能为空*/
-    @KsYunField(name="SecurityGroupId")
+    @KsYunField(name="SecurityGroupId",type=2)
     private List<String> SecurityGroupIdList;
 
 }

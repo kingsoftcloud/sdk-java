@@ -21,15 +21,22 @@ public class BindTagsRequest{
     /**标签列表*/
     @KsYunField(name="Tags",type=2)
     private List<TagsDto> TagsList;
+
     @Data
     @ToString
     public static class TagsDto {
         /**标签键*/
+        @KsYunField(name="TagKey")
         private String TagKey;
+
         /**标签值*/
+        @KsYunField(name="TagValue")
         private String TagValue;
+
         /**标签键ID*/
+        @KsYunField(name="TagId")
         private Integer TagId;
+
     }
 
 }

@@ -23,7 +23,7 @@ public class AssociateNatRequest{
     private String SubnetId;
 
     /**要绑定的NatIp的ID值*/
-    @KsYunField(name="NatIpId")
+    @KsYunField(name="NatIpId",type=2)
     private List<String> NatIpIdList;
 
 }

@@ -68,17 +68,17 @@ public class CreateProcessRequest{
 
     /**需要客户提供的文件名，需要带文件格式，需要与LogFile.N共同使用
 例如：test.csv、test.log*/
-    @KsYunField(name="LogFileName")
+    @KsYunField(name="LogFileName",type=2)
     private List<String> LogFileNameList;
 
     /**工单日志文件，base64编码，需要与LogFileName.N共同使用
 E2LWQxOWU0ZWYwYjk2YSwwN2M4YThiZi0zMThmLTQxNjctYWVhNi1kMTllNGVmMGI5NmEsMjAyMC0wNS0xMiAyMTowNTo1NiwyMDIwLTA1LTEyIDIyOjU1OjQyLCJFUEPN0Lncv827p6Osv827p7j8u7u3/s7xxvfN+L+oo6zW2NDCyrax8E1BQ7Ki1tjG9Lf+zvHG96GjIiwsbnVsbCwsLCwKMjAwMDExNzcwMSwwMDkzNDU3UDIwMDdDMDAwNDIJLGNuLXNoYW5naGFpLTJhLM3QudxFUEO/zbuno6y4/Lu7zfi/qE1BQ7XY1re4/NDCsqLW2Mb0LLK7v8nS1NbYxvQszfi/qCwsLCwsLCw3OTg3YmVmOC0yNzY3LTRiZjktODdlMS01MjJkYjEwZTEyMGQs0tHN6rPJLDI1ZDk5ZDExLWQ0NTgtNDUyYy04ZWU5LTM1Yjk2MDIwNzcyNSwyNWQ5OWQxMS1kNDU4LTQ1MmMtOGVlOS0zNWI5NjAyMDc3MjUsMjAyMC0wNS0xMiAyMTowNTo1NiwyMDIwLTA1LTEyIDIyOjU1OjQyLCJFUEPN0Lncv827p6Osv827p7j8u7u3/s7xxvfN+L+oo6zW2NDCyrax8E1BQ7Ki1tjG9Lf+zvHG96GjIiwsbnVsbCwsLCwK
 大小：大小低于10MB*/
-    @KsYunField(name="LogFile")
+    @KsYunField(name="LogFile",type=2)
     private List<String> LogFileList;
 
     /**支持上传已授权给金山云的ks3的bucket的URL*/
-    @KsYunField(name="LogUrl")
+    @KsYunField(name="LogUrl",type=2)
     private List<String> LogUrlList;
 
     /**是否允许换线0否1是*/

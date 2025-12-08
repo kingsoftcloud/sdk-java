@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeAvailabilityZonesResponse
@@ -14,13 +14,21 @@ import java.util.Set;
 @Data
 @ToString
 public class DescribeAvailabilityZonesResponse extends BaseResponseModel {
-
-    /**
-     * 请求id
-     */
+    /**请求ID*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /**可用区的信息*/
+    @JsonProperty("AvailabilityZoneInfo")
+    private List<AvailabilityZoneInfoDto> AvailabilityZoneInfo;
+
+    @Data
+    @ToString
+    public static class AvailabilityZoneInfoDto {
+        /**可用区名称*/
+        @JsonProperty("AvailabilityZoneName")
+        private String AvailabilityZoneName;
+
+    }
 
 }

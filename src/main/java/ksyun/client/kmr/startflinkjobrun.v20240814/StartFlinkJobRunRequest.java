@@ -31,8 +31,6 @@ public class StartFlinkJobRunRequest{
     private String ReleaseVersion;
 
     /***/
-    @KsYunField(name="SubmitData")
-
     private SubmitDataDto SubmitDataList;
 
     @Data
@@ -41,45 +39,59 @@ public class StartFlinkJobRunRequest{
         /**作业名称*/
         @KsYunField(name="Name")
         private String Name;
+
         /**作业使用的镜像*/
         @KsYunField(name="Image")
         private String Image;
+
         /**Flink类型
 */
         @KsYunField(name="UpgradeMode")
         private String UpgradeMode;
+
         /**Flink作业的Job核数*/
         @KsYunField(name="JobCores")
         private Integer JobCores;
+
         /**Flink作业的Job内存
 */
         @KsYunField(name="JobMemory")
         private String JobMemory;
+
         /**Flink作业的Task核数
 */
         @KsYunField(name="TaskCores")
         private Integer TaskCores;
+
         /**Flink作业的Task内存*/
         @KsYunField(name="TaskMemory")
         private String TaskMemory;
+
         /**Flink作业的Task数量
 */
         @KsYunField(name="NumTasks")
         private Integer NumTasks;
+
         /**作业配置信息*/
-        @KsYunField(name="FlinkConf")
+        @KsYunField(name="FlinkConf",type=2)
         private List<String> FlinkConfList;
+
         /**作业依赖文件ks3路径*/
-        @KsYunField(name="Dependencies")
+        @KsYunField(name="Dependencies",type=2)
         private List<String> DependenciesList;
+
         /**运行时环境配置，如依赖、环境变量、工作目录等*/
         @KsYunField(name="JarUri")
         private String JarUri;
+
         /**启动类，需填写类的全称*/
         @KsYunField(name="EntryClass")
         private String EntryClass;
+
         /**启动类所需参数*/
-        @KsYunField(name="MainArgs")
+        @KsYunField(name="MainArgs",type=2)
         private List<String> MainArgsList;
+
     }
+
 }

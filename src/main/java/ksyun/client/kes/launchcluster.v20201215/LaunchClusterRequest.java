@@ -99,6 +99,7 @@ Daily：按量付费按日月结*/
     /**节点组信息*/
     @KsYunField(name="InstanceGroups",type=2)
     private List<InstanceGroupsDto> InstanceGroupsList;
+
     @Data
     @ToString
     public static class InstanceGroupsDto {
@@ -107,21 +108,31 @@ MASTER（专有主节点）
 DATA（数据节点）
 COORDINATOR（协调节点）
 WARM（冷数据节点）*/
+        @KsYunField(name="InstanceGroupType")
         private String InstanceGroupType;
+
         /**节点组ES套餐
 示例：
 ES.S6.2C4G
 EPC: CAL-ES.epc.32C256G
 D4: D4.3B-ES.D4.4C4G*/
+        @KsYunField(name="InstanceType")
         private String InstanceType;
+
         /**服务器类型：
 KEC：云服务器
 EPC：裸金属服务器*/
+        @KsYunField(name="ResourceType")
         private String ResourceType;
+
         /**节点数量，有效值：1-255*/
+        @KsYunField(name="InstanceCount")
         private Integer InstanceCount;
+
         /**单节点实例个数，EPC不填默认1，非EPC无效*/
+        @KsYunField(name="MultiInstanceCount")
         private Integer MultiInstanceCount;
+
         /**云物理机raid方式，若资源类型为EPC，需要选择物理机raid方式，KEC不需要
 有效值：
 
@@ -131,7 +142,9 @@ Raid5
 Raid50
 Raid10
 SRaid0*/
+        @KsYunField(name="RaidType")
         private String RaidType;
+
         /**数据盘类型：
 SSD3.0：云硬盘3.0(SSD)
 Local_SSD: 本地SSD
@@ -139,7 +152,9 @@ ESSD_PL0: 极速云盘ESSD0
 ESSD_PL1: 极速云盘ESSD1
 ESSD_PL2: 极速云盘ESSD2
 ESSD_PL3: 极速云盘ESSD4*/
+        @KsYunField(name="VolumeType")
         private String VolumeType;
+
         /**云盘大小：
 
 SSD3.0: 40-65536
@@ -148,9 +163,13 @@ ESSD_PL0: 50-65536
 ESSD_PL1: 50-65536
 ESSD_PL2: 461-65536
 ESSD_PL3: 1761-65536*/
+        @KsYunField(name="VolumeSize")
         private Integer VolumeSize;
+
         /**云盘数量: 1-8*/
+        @KsYunField(name="VolumeCount")
         private Integer VolumeCount;
+
         /**系统盘类型：
 Local_SSD: 本地盘
 SSD3.0: 云硬盘3.0（SSD）
@@ -158,7 +177,9 @@ EHDD: 高效云盘
 ESSD_SYSTEM_PL0: ESSD云硬盘PL0（单盘性能上限IOPS：1.1万 吞吐量：180MB/s）
 ESSD_SYSTEM_PL1: ESSD云硬盘PL1（单盘性能上限IOPS：5.5万 吞吐量：350MB/s）
 ESSD_SYSTEM_PL2: ESSD云硬盘PL2（单盘性能上限IOPS：12万 吞吐量：1000MB/s）*/
+        @KsYunField(name="SystemDiskType")
         private String SystemDiskType;
+
         /**系统盘大小:
 
 Local_SSD
@@ -167,7 +188,9 @@ EHDD: 40-500
 ESSD_SYSTEM_PL0: 50-500
 ESSD_SYSTEM_PL1: 50-500
 ESSD_SYSTEM_PL2: 461-500*/
+        @KsYunField(name="SystemDiskSize")
         private Integer SystemDiskSize;
+
     }
 
 }

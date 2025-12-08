@@ -27,7 +27,7 @@ public class RunSoInstancesRequest{
     private String InstanceTypeId;
 
     /**安全组*/
-    @KsYunField(name="SecurityGroupId")
+    @KsYunField(name="SecurityGroupId",type=2)
     private List<String> SecurityGroupIdList;
 
     /**子网ID*/
@@ -35,17 +35,17 @@ public class RunSoInstancesRequest{
     private String SubnetId;
 
     /***/
-    @KsYunField(name="Volumes")
-
     private VolumesDto VolumesList;
 
     @Data
     @ToString
     public static class VolumesDto {
         /**硬盘大小*/
-        @KsYunField(name="Size")
+        @KsYunField(name="Size",type=2)
         private List<Integer> SizeList;
+
     }
+
     /**可用区*/
     @KsYunField(name="ZoneId")
     private String ZoneId;
@@ -133,5 +133,11 @@ public class RunSoInstancesRequest{
     /**星海专区*/
     @KsYunField(name="SoZoneId")
     private String SoZoneId;
+
+    /**实例自定义数据。设置的自定义数据必须经过Base64编码，且Base64编码前的自定义数据大小不能超过16KB。
+不填则默认为空。
+示例值：ZWNobyBoZWxsbyBlY3Mh*/
+    @KsYunField(name="UserData")
+    private String UserData;
 
 }

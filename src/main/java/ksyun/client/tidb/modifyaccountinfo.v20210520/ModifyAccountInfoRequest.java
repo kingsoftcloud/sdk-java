@@ -1,26 +1,33 @@
 package ksyun.client.tidb.modifyaccountinfo.v20210520;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
- * @Classname ModifyAccountInfoRequest @Description 请求参数
- */
+* @Classname ModifyAccountInfoRequest
+* @Description 请求参数
+*/
 @Data
-public class ModifyAccountInfoRequest {
-  /** 实例id */
-  @KsYunField(name = "InstanceId")
-  private String InstanceId;
+public class ModifyAccountInfoRequest{
+    /**实例id*/
+    @KsYunField(name="InstanceId")
+    private String InstanceId;
 
-  /** 账户名 */
-  @KsYunField(name = "AccountName")
-  private String AccountName;
+    /**账户名*/
+    @KsYunField(name="AccountName")
+    private String AccountName;
 
-  /** 账户密码 */
-  @KsYunField(name = "AccountPassword")
-  private String AccountPassword;
+    /**账户密码*/
+    @KsYunField(name="AccountPassword")
+    private String AccountPassword;
 
-  /** 账户类型:非必传，修改管理员用户的时候需指定'admin' */
-  @KsYunField(name = "AccountType")
-  private String AccountType;
+    /**账户类型:非必传，修改管理员用户的时候需指定'admin' */
+    @KsYunField(name="AccountType")
+    private String AccountType;
+
 }

@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class DescribeFlowLogsRequest{
     /**流日志的ID*/
-    @KsYunField(name="FlowLogId")
+    @KsYunField(name="FlowLogId",type=2)
     private List<String> FlowLogIdList;
 
     /**筛选Filter*/
-    @KsYunField(name="Filter")
+    @KsYunField(name="Filter",type=2)
     private List<FilterDto> FilterList;
 
     @Data
@@ -31,10 +31,12 @@ public class DescribeFlowLogsRequest{
  ProjectName，工程的名称 
  LogPoolName，日志池的名称*/
         @KsYunField(name="Name")
-                private String Name;
+        private String Name;
+
         /***/
-        @KsYunField(name="Value")
-                private List<String> ValueList;
+        @KsYunField(name="Value",type=2)
+        private List<String> ValueList;
+
     }
 
     /**单次调用可返回的最大条目数量*/

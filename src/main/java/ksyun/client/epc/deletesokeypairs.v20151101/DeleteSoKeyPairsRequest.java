@@ -17,7 +17,7 @@ public class DeleteSoKeyPairsRequest{
     /**密钥对名称，最多支持100个。
 • 参数 - N：表示密钥对的序号。
 • 多个密钥对之间用&分隔。*/
-    @KsYunField(name="KeyPairNames")
+    @KsYunField(name="KeyPairNames",type=2)
     private List<String> KeyPairNamesList;
 
     /**星海专区*/

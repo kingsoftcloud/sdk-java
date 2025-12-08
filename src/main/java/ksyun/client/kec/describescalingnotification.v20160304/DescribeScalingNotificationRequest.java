@@ -19,7 +19,7 @@ public class DescribeScalingNotificationRequest{
     private String ScalingGroupId;
 
     /**告警通知id*/
-    @KsYunField(name="ScalingNotificationId")
+    @KsYunField(name="ScalingNotificationId",type=2)
     private List<String> ScalingNotificationIdList;
 
     /***/

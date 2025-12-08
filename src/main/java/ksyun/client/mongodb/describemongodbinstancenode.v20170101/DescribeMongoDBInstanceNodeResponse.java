@@ -5,17 +5,50 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname DescribeMongoDBInstanceNodeResponse @Description DescribeMongoDBInstanceNode 返回体
- */
+* @Classname DescribeMongoDBInstanceNodeResponse
+* @Description DescribeMongoDBInstanceNode 返回体
+*/
 @Data
 @ToString
 public class DescribeMongoDBInstanceNodeResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /***/
+    @JsonProperty("MongoDBInstanceNodeResult")
+    private List<MongoDBInstanceNodeResultDto> MongoDBInstanceNodeResult;
 
-  // 返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class MongoDBInstanceNodeResultDto {
+        /***/
+        @JsonProperty("NodeId")
+        private String NodeId;
+
+        /***/
+        @JsonProperty("Name")
+        private String Name;
+
+        /***/
+        @JsonProperty("Role")
+        private String Role;
+
+        /***/
+        @JsonProperty("IP")
+        private String IP;
+
+        /***/
+        @JsonProperty("Port")
+        private Integer Port;
+
+        /***/
+        @JsonProperty("Status")
+        private String Status;
+
+    }
 
 }

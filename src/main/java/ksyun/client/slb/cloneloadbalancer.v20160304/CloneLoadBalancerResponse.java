@@ -5,17 +5,49 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname CloneLoadBalancerResponse @Description CloneLoadBalancer 返回体
- */
+* @Classname CloneLoadBalancerResponse
+* @Description CloneLoadBalancer 返回体
+*/
 @Data
 @ToString
 public class CloneLoadBalancerResponse extends BaseResponseModel {
+    /**请求ID*/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /**负载均衡的ID*/
+    @JsonProperty("LoadBalancerId")
+    private String LoadBalancerId;
 
-  // 返回结果，需要按需扩展
+    /**负载均衡的名称*/
+    @JsonProperty("LoadBalancerName")
+    private String LoadBalancerName;
+
+    /**负载均衡的类型*/
+    @JsonProperty("Type")
+    private String Type;
+
+    /**创建时间*/
+    @JsonProperty("CreateTime")
+    private String CreateTime;
+
+    /**Vpc的ID*/
+    @JsonProperty("VpcId")
+    private String VpcId;
+
+    /**IP地址*/
+    @JsonProperty("PublicIp")
+    private String PublicIp;
+
+    /**负载均衡支持的IP版本*/
+    @JsonProperty("IpVersion")
+    private String IpVersion;
+
+    /**负载均衡类型*/
+    @JsonProperty("LbType")
+    private String LbType;
 
 }

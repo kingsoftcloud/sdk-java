@@ -5,17 +5,103 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname DescribeBlockIpResponse @Description DescribeBlockIp 返回体
- */
+* @Classname DescribeBlockIpResponse
+* @Description DescribeBlockIp 返回体
+*/
 @Data
 @ToString
 public class DescribeBlockIpResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /***/
+    @JsonProperty("BlockIpSet")
+    private List<BlockIpSetDto> BlockIpSet;
 
-  // 返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class BlockIpSetDto {
+        /***/
+        @JsonProperty("Ip")
+        private String Ip;
+
+        /***/
+        @JsonProperty("InBps")
+        private String InBps;
+
+        /***/
+        @JsonProperty("AttackType")
+        private String AttackType;
+
+        /***/
+        @JsonProperty("InstanceType")
+        private String InstanceType;
+
+        /***/
+        @JsonProperty("InstanceName")
+        private String InstanceName;
+
+        /***/
+        @JsonProperty("RegionCode")
+        private String RegionCode;
+
+        /***/
+        @JsonProperty("RegionName")
+        private String RegionName;
+
+        /***/
+        @JsonProperty("RegionEnName")
+        private String RegionEnName;
+
+        /***/
+        @JsonProperty("Status")
+        private String Status;
+
+        /***/
+        @JsonProperty("BlockTime")
+        private String BlockTime;
+
+        /***/
+        @JsonProperty("UnblockTime")
+        private String UnblockTime;
+
+        /***/
+        @JsonProperty("PlanUnblockTime")
+        private String PlanUnblockTime;
+
+    }
+
+    /***/
+    @JsonProperty("RegionSet")
+    private List<RegionSetDto> RegionSet;
+
+    @Data
+    @ToString
+    public static class RegionSetDto {
+        /***/
+        @JsonProperty("RegionCode")
+        private String RegionCode;
+
+        /***/
+        @JsonProperty("RegionName")
+        private String RegionName;
+
+        /***/
+        @JsonProperty("RegionEnName")
+        private String RegionEnName;
+
+    }
+
+    /***/
+    @JsonProperty("ResourceSet")
+    private List<String> ResourceSet;
+
+    /***/
+    @JsonProperty("BlockIpCount")
+    private String BlockIpCount;
 
 }

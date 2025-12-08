@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DescribeNotebooksRequest{
     /**开发任务ID*/
-    @KsYunField(name="NotebookId")
+    @KsYunField(name="NotebookId",type=2)
     private List<String> NotebookIdList;
 
     /**开发任务名称*/
@@ -35,7 +35,7 @@ public class DescribeNotebooksRequest{
     private String State;
 
     /**条件过滤*/
-    @KsYunField(name="Filter")
+    @KsYunField(name="Filter",type=2)
     private List<FilterDto> FilterList;
 
     @Data
@@ -43,10 +43,12 @@ public class DescribeNotebooksRequest{
     public static class FilterDto {
         /**过滤条件 notebook-status*/
         @KsYunField(name="Name")
-                private String Name;
+        private String Name;
+
         /**值*/
-        @KsYunField(name="Value")
-                private List<String> ValueList;
+        @KsYunField(name="Value",type=2)
+        private List<String> ValueList;
+
     }
 
     /**队列ID*/

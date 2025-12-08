@@ -1,47 +1,56 @@
 package ksyun.client.ked.strategyruleedit.v20250501;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+import java.util.Arrays;
+
 /**
- * @Classname StrategyruleeditRequest @Description 请求参数
- */
+* @Classname StrategyruleeditRequest
+* @Description 请求参数
+*/
 @Data
-public class StrategyruleeditRequest {
-  /** 安全组出站规则 */
-  @KsYunField(name = "policies")
-  private PoliciesDto PoliciesList;
+public class StrategyruleeditRequest{
+    /**策略组 id
+*/
+    @KsYunField(name="securityGroupId")
+    private String SecurityGroupId;
 
-  @Data
-  @ToString
-  public static class PoliciesDto {
-    /** 规则描述 */
-    @KsYunField(name = "description")
-    private String Description;
+    /***/
+    @KsYunField(name="policies",type=2)
+    private List<PoliciesDto> PoliciesList;
 
-    /** out：流出 暂不允许流入规则添加 */
-    @KsYunField(name = "direction")
-    private String Direction;
+    @Data
+    @ToString
+    public static class PoliciesDto {
+        /***/
+        @KsYunField(name="description")
+        private String Description;
 
-    /** ip 值 */
-    @KsYunField(name = "cidrBlock")
-    private String CidrBlock;
+        /**out：流出
+暂不允许流入规则添加*/
+        @KsYunField(name="direction")
+        private String Direction;
 
-    /** 最大端口号，0 表示所有端口 */
-    @KsYunField(name = "maxPortRange")
-    private Integer MaxPortRange;
+        /**ip值,支持ip段 0.0.0.0/0*/
+        @KsYunField(name="cidrBlock")
+        private String CidrBlock;
 
-    /** 最小端口号，0 标识所有端口 */
-    @KsYunField(name = "minPortRange")
-    private Integer MinPortRange;
+        /**最大端口号，1～65535*/
+        @KsYunField(name="maxPortRange")
+        private Integer MaxPortRange;
 
-    /** TCP UDP ICMP IP */
-    @KsYunField(name = "protocol")
-    private String Protocol;
-  }
+        /**最小端口号*/
+        @KsYunField(name="minPortRange")
+        private Integer MinPortRange;
 
-  /** 策略组 id */
-  @KsYunField(name = "securityGroupId")
-  private String SecurityGroupId;
+        /**ip|tcp|udp|icmp*/
+        @KsYunField(name="protocol")
+        private String Protocol;
+
+    }
+
 }

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname CreateScalingNotificationResponse
@@ -14,13 +14,12 @@ import java.util.Set;
 @Data
 @ToString
 public class CreateScalingNotificationResponse extends BaseResponseModel {
-
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /**弹性伸缩id*/
+    @JsonProperty("ScalingNotificationId")
+    private String ScalingNotificationId;
 
 }

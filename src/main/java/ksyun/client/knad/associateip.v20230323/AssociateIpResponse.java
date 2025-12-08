@@ -5,17 +5,25 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname AssociateIpResponse @Description AssociateIp 返回体
- */
+* @Classname AssociateIpResponse
+* @Description AssociateIp 返回体
+*/
 @Data
 @ToString
 public class AssociateIpResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /***/
+    @JsonProperty("Return")
+    private Boolean ReturnField;
 
-  // 返回结果，需要按需扩展
+    /***/
+    @JsonProperty("FailEips")
+    private List<String> FailEips;
 
 }

@@ -23,7 +23,7 @@ public class DescribeDedicatedHostsRequest{
     private String Search;
 
     /**项目制id列表*/
-    @KsYunField(name="ProjectId")
-    private List<Integer> ProjectId;
+    @KsYunField(name="ProjectId",type=2)
+    private List<Integer> ProjectIdList;
 
 }

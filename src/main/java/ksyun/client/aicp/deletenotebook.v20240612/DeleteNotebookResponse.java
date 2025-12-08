@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DeleteNotebookResponse
@@ -14,13 +14,12 @@ import java.util.Set;
 @Data
 @ToString
 public class DeleteNotebookResponse extends BaseResponseModel {
-
-    /**
-     * 请求id
-     */
+    /**请求ID*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /**开发任务ID*/
+    @JsonProperty("NotebookId")
+    private String NotebookId;
 
 }

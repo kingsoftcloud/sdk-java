@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
 * @Classname StopInstancesClient
-* @Description 关闭实例
+* @Description 关闭实例接口
 */
 @Slf4j
 public class StopInstancesClient extends BaseClient {

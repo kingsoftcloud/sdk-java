@@ -5,17 +5,21 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname DescribeGrafanaWhiteListResponse @Description DescribeGrafanaWhiteList 返回体
- */
+* @Classname DescribeGrafanaWhiteListResponse
+* @Description DescribeGrafanaWhiteList 返回体
+*/
 @Data
 @ToString
 public class DescribeGrafanaWhiteListResponse extends BaseResponseModel {
+    /**请求id*/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
-
-  // 返回结果，需要按需扩展
+    /**公网访问白名单数组*/
+    @JsonProperty("WhiteList")
+    private List<String> WhiteList;
 
 }

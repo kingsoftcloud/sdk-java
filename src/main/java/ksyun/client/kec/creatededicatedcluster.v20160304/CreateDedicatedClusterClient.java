@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
 * @Classname CreateDedicatedClusterClient
-* @Description 创建集群
+* @Description 创建集群接口
 */
 @Slf4j
 public class CreateDedicatedClusterClient extends BaseClient {

@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class DescribeHaVipRequest{
     /**多个高可用虚拟IP的ID*/
-    @KsYunField(name="HaVipId")
+    @KsYunField(name="HaVipId",type=2)
     private List<String> HaVipIdList;
 
     /**筛选Filter*/
-    @KsYunField(name="Filter")
+    @KsYunField(name="Filter",type=2)
     private List<FilterDto> FilterList;
 
     @Data
@@ -29,10 +29,12 @@ public class DescribeHaVipRequest{
 - vpc-id，Vpc的ID，
 - subnet-id，子网的ID*/
         @KsYunField(name="Name")
-                private String Name;
+        private String Name;
+
         /***/
-        @KsYunField(name="Value")
-                private List<String> ValueList;
+        @KsYunField(name="Value",type=2)
+        private List<String> ValueList;
+
     }
 
     /**单次调用可返回的最大条目数量*/

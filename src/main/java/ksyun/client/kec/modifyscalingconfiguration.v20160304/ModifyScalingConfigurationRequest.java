@@ -61,12 +61,12 @@ public class ModifyScalingConfigurationRequest{
 
     /**密钥对 
  */
-    @KsYunField(name="KeyId")
+    @KsYunField(name="KeyId",type=2)
     private List<String> KeyIdList;
 
     /**云盘数据盘类型 
  */
-    @KsYunField(name="DataDisk")
+    @KsYunField(name="DataDisk",type=2)
     private List<DataDiskDto> DataDiskList;
 
     @Data
@@ -75,15 +75,18 @@ public class ModifyScalingConfigurationRequest{
         /**云盘数据盘类型 
  */
         @KsYunField(name="Type")
-                private String Type;
+        private String Type;
+
         /**云盘数据盘大小 
  */
         @KsYunField(name="Size")
-                private Integer Size;
+        private Integer Size;
+
         /**盘数据盘是否随实例删除 
  */
         @KsYunField(name="DeleteWithInstance")
-                private Boolean DeleteWithInstance;
+        private Boolean DeleteWithInstance;
+
     }
 
     /**系统盘大小，最小值为0，最大值为500
@@ -133,7 +136,7 @@ public class ModifyScalingConfigurationRequest{
 
     /**启动配置创建的ECS实例的标签键 
  支持1-128个字符，仅支持中英文字符、数字及±=._/@:*/
-    @KsYunField(name="Tag")
+    @KsYunField(name="Tag",type=2)
     private List<TagDto> TagList;
 
     @Data
@@ -142,11 +145,13 @@ public class ModifyScalingConfigurationRequest{
         /**启动配置创建的ECS实例的标签键 
  支持1-128个字符，仅支持中英文字符、数字及±=._/@:*/
         @KsYunField(name="Key")
-                private String Key;
+        private String Key;
+
         /**启动配置创建的ECS实例的标签值 
  256个字符内，仅支持中英文字符、数字及±=._/@()[]（）【】:*/
         @KsYunField(name="Value")
-                private String Value;
+        private String Value;
+
     }
 
     /***/

@@ -21,13 +21,18 @@ public class CancelFlinkJobRunRequest{
     /***/
     @KsYunField(name="JobRunIds",type=2)
     private List<JobRunIdsDto> JobRunIdsList;
+
     @Data
     @ToString
     public static class JobRunIdsDto {
         /**作业ID*/
+        @KsYunField(name="JobRunId")
         private String JobRunId;
+
         /**作业类型：flink*/
+        @KsYunField(name="JobType")
         private String JobType;
+
     }
 
 }

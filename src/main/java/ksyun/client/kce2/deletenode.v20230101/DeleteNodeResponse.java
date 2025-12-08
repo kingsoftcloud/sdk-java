@@ -5,17 +5,43 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname DeleteNodeResponse @Description DeleteNode 返回体
- */
+* @Classname DeleteNodeResponse
+* @Description DeleteNode 返回体
+*/
 @Data
 @ToString
 public class DeleteNodeResponse extends BaseResponseModel {
+    /**请求ID*/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /**返回数据*/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-  // 返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("InstanceSet")
+        private List<InstanceSetDto> InstanceSet;
+
+        @Data
+        @ToString
+        public static class InstanceSetDto {
+            /***/
+            @JsonProperty("InstanceId")
+            private String InstanceId;
+
+            /***/
+            @JsonProperty("KceNodeId")
+            private String KceNodeId;
+
+        }
+
+    }
 
 }

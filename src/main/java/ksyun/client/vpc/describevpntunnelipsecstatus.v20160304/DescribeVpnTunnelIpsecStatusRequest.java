@@ -19,7 +19,7 @@ public class DescribeVpnTunnelIpsecStatusRequest{
     private Integer IsMaster;
 
     /**多个Vpn通道的ID*/
-    @KsYunField(name="VpnTunnelId")
+    @KsYunField(name="VpnTunnelId",type=2)
     private List<String> VpnTunnelIdList;
 
 }

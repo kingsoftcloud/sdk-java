@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class DescribeNetworkAclsRequest{
     /**多个ACL的ID*/
-    @KsYunField(name="NetworkAclId")
+    @KsYunField(name="NetworkAclId",type=2)
     private List<String> NetworkAclIdList;
 
     /**筛选Filter*/
-    @KsYunField(name="Filter")
+    @KsYunField(name="Filter",type=2)
     private List<FilterDto> FilterList;
 
     @Data
@@ -28,10 +28,12 @@ public class DescribeNetworkAclsRequest{
         /**有效值：
 - vpc-id，Vpc的ID*/
         @KsYunField(name="Name")
-                private String Name;
+        private String Name;
+
         /***/
-        @KsYunField(name="Value")
-                private List<String> ValueList;
+        @KsYunField(name="Value",type=2)
+        private List<String> ValueList;
+
     }
 
     /**单次调用可返回的最大条目数量*/

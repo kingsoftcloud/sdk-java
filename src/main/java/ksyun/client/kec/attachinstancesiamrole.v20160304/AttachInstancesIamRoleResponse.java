@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname AttachInstancesIamRoleResponse
@@ -14,13 +14,37 @@ import java.util.Set;
 @Data
 @ToString
 public class AttachInstancesIamRoleResponse extends BaseResponseModel {
-
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("FailCount")
+    private Integer FailCount;
+
+    /***/
+    @JsonProperty("TotalCount")
+    private Integer TotalCount;
+
+    /***/
+    @JsonProperty("IamRoleName")
+    private String IamRoleName;
+
+    /***/
+    @JsonProperty("Results")
+    private ResultsDto Results;
+
+    @Data
+    @ToString
+    public static class ResultsDto {
+        /***/
+        @JsonProperty("InstanceId")
+        private String InstanceId;
+
+        /***/
+        @JsonProperty("Result")
+        private String Result;
+
+    }
 
 }

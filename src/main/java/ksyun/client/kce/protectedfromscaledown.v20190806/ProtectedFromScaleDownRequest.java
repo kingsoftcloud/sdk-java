@@ -1,31 +1,33 @@
 package ksyun.client.kce.protectedfromscaledown.v20190806;
 
 import common.annotation.KsYunField;
-import java.util.List;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
- * @Classname ProtectedFromScaleDownRequest @Description 请求参数
- */
+* @Classname ProtectedFromScaleDownRequest
+* @Description 请求参数
+*/
 @Data
-public class ProtectedFromScaleDownRequest {
-  /** 集群id */
-  @KsYunField(name = "ClusterId")
-  private String ClusterId;
+public class ProtectedFromScaleDownRequest{
+    /**集群id*/
+    @KsYunField(name="ClusterId")
+    private String ClusterId;
 
-  /** 节点池id */
-  @KsYunField(name = "NodePoolId")
-  private String NodePoolId;
+    /**节点池id*/
+    @KsYunField(name="NodePoolId")
+    private String NodePoolId;
 
-  /** 节点id */
-  @KsYunField(name = "InstanceIds")
-  private List<String> InstanceIdsList;
+    /**节点id*/
+    @KsYunField(name="InstanceIds",type=2)
+    private List<String> InstanceIdsList;
 
-  /**
-   * 节点是否开启缩容保护，有效值：<br>
-   * - **True**：开启缩容保护<br>
-   * - **False**：关闭缩容保护<br>
-   */
-  @KsYunField(name = "ProtectedFromScaleDown")
-  private Boolean ProtectedFromScaleDown;
+    /**节点是否开启缩容保护，有效值：<br>- **True**：开启缩容保护<br>- **False**：关闭缩容保护<br>*/
+    @KsYunField(name="ProtectedFromScaleDown")
+    private Boolean ProtectedFromScaleDown;
+
 }

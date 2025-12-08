@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DeleteScalingConfigurationResponse
@@ -14,13 +14,25 @@ import java.util.Set;
 @Data
 @ToString
 public class DeleteScalingConfigurationResponse extends BaseResponseModel {
-
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("ReturnSet")
+    private List<ReturnSetDto> ReturnSet;
+
+    @Data
+    @ToString
+    public static class ReturnSetDto {
+        /***/
+        @JsonProperty("ScalingConfigurationId")
+        private String ScalingConfigurationId;
+
+        /***/
+        @JsonProperty("Message")
+        private String Message;
+
+    }
 
 }

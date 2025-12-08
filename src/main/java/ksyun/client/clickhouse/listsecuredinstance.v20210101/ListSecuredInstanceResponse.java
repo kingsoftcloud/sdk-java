@@ -5,17 +5,78 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname ListSecuredInstanceResponse @Description ListSecuredInstance 返回体
- */
+* @Classname ListSecuredInstanceResponse
+* @Description ListSecuredInstance 返回体
+*/
 @Data
 @ToString
 public class ListSecuredInstanceResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /***/
+    @JsonProperty("Code")
+    private String Code;
 
-  // 返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Message")
+    private String Message;
+
+    /***/
+    @JsonProperty("Offset")
+    private Integer Offset;
+
+    /***/
+    @JsonProperty("Limit")
+    private Integer Limit;
+
+    /***/
+    @JsonProperty("Total")
+    private Integer Total;
+
+    /***/
+    @JsonProperty("Data")
+    private List<DataDto> Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("InstanceId")
+        private String InstanceId;
+
+        /***/
+        @JsonProperty("InstanceName")
+        private String InstanceName;
+
+        /***/
+        @JsonProperty("ProductType")
+        private Integer ProductType;
+
+        /***/
+        @JsonProperty("ProductTypeName")
+        private String ProductTypeName;
+
+        /***/
+        @JsonProperty("Vip")
+        private String Vip;
+
+        /***/
+        @JsonProperty("CreateTime")
+        private String CreateTime;
+
+        /***/
+        @JsonProperty("Status")
+        private String Status;
+
+        /***/
+        @JsonProperty("UpdatetTime")
+        private String UpdatetTime;
+
+    }
 
 }

@@ -5,17 +5,50 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname DescribeDefaultParamsResponse @Description DescribeDefaultParams 返回体
- */
+* @Classname DescribeDefaultParamsResponse
+* @Description DescribeDefaultParams 返回体
+*/
 @Data
 @ToString
 public class DescribeDefaultParamsResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("DefaultParams")
+    private List<DefaultParamsDto> DefaultParams;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    @Data
+    @ToString
+    public static class DefaultParamsDto {
+        /***/
+        @JsonProperty("DefaultValue")
+        private String DefaultValue;
 
-  // 返回结果，需要按需扩展
+        /***/
+        @JsonProperty("Visible")
+        private Integer Visible;
+
+        /***/
+        @JsonProperty("RestartRequired")
+        private Boolean RestartRequired;
+
+        /***/
+        @JsonProperty("ParamName")
+        private String ParamName;
+
+        /***/
+        @JsonProperty("ParamType")
+        private String ParamType;
+
+        /***/
+        @JsonProperty("DataType")
+        private String DataType;
+
+        /***/
+        @JsonProperty("Enums")
+        private List<String> Enums;
+
+    }
 
 }

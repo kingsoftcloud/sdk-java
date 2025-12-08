@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class SwitchImageTypeRequest{
     /**镜像类型转换*/
-    @KsYunField(name="ImageId")
+    @KsYunField(name="ImageId",type=2)
     private List<String> ImageIdList;
 
 }

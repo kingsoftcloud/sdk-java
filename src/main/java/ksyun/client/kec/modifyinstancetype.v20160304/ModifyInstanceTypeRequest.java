@@ -50,7 +50,7 @@ true/false*/
 
     /**目标套餐数据盘类型（当本地盘机型变更为云盘机型时才需填写此参数，此参数仅对源本地数据盘生效）
 */
-    @KsYunField(name="DataDisk")
+    @KsYunField(name="DataDisk",type=2)
     private List<DataDiskDto> DataDiskList;
 
     @Data
@@ -58,10 +58,12 @@ true/false*/
     public static class DataDiskDto {
         /**是，本地盘变云盘时此参数不可缺省	*/
         @KsYunField(name="Type")
-                private String Type;
+        private String Type;
+
         /**是，本地盘变云盘时此参数不可缺省*/
         @KsYunField(name="Size")
-                private String Size;
+        private String Size;
+
     }
 
     /**是否对运行中的实例选择关机：是-true，否-false(默认)*/

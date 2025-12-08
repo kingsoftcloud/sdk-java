@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DeleteDedicatedHostRequest{
     /**专属宿主机id*/
-    @KsYunField(name="DedicatedHostId")
+    @KsYunField(name="DedicatedHostId",type=2)
     private List<String> DedicatedHostIdList;
 
     /**是否退订(默认true）*/

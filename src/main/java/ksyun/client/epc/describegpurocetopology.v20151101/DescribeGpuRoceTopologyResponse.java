@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeGpuRoceTopologyResponse
@@ -14,13 +14,67 @@ import java.util.Set;
 @Data
 @ToString
 public class DescribeGpuRoceTopologyResponse extends BaseResponseModel {
-
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("DescribePorts")
+    private DescribePortsDto DescribePorts;
+
+    @Data
+    @ToString
+    public static class DescribePortsDto {
+        /***/
+        @JsonProperty("LeafDatas")
+        private List<LeafDatasDto> LeafDatas;
+
+        @Data
+        @ToString
+        public static class LeafDatasDto {
+            /***/
+            @JsonProperty("SpineName")
+            private String SpineName;
+
+            /***/
+            @JsonProperty("LeafName")
+            private String LeafName;
+
+            /***/
+            @JsonProperty("SpinePort")
+            private String SpinePort;
+
+            /***/
+            @JsonProperty("LeafPort")
+            private String LeafPort;
+
+        }
+
+        /***/
+        @JsonProperty("CoreDatas")
+        private List<CoreDatasDto> CoreDatas;
+
+        @Data
+        @ToString
+        public static class CoreDatasDto {
+            /***/
+            @JsonProperty("CoreName")
+            private String CoreName;
+
+            /***/
+            @JsonProperty("SpineName")
+            private String SpineName;
+
+            /***/
+            @JsonProperty("CorePort")
+            private String CorePort;
+
+            /***/
+            @JsonProperty("SpinePort")
+            private String SpinePort;
+
+        }
+
+    }
 
 }

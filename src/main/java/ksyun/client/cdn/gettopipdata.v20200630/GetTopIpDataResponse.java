@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname GetTopIpDataResponse
@@ -14,13 +14,53 @@ import java.util.Set;
 @Data
 @ToString
 public class GetTopIpDataResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("StartTime")
+    private String StartTime;
 
-    /**
-     * 请求id
-     */
+    /***/
+    @JsonProperty("EndTime")
+    private String EndTime;
+
+    /***/
+    @JsonProperty("CdnType")
+    private String CdnType;
+
+    /***/
+    @JsonProperty("LimitN")
+    private Integer LimitN;
+
+    /***/
+    @JsonProperty("Datas")
+    private List<DatasDto> Datas;
+
+    @Data
+    @ToString
+    public static class DatasDto {
+        /***/
+        @JsonProperty("Ip")
+        private String Ip;
+
+        /***/
+        @JsonProperty("Pv")
+        private Integer Pv;
+
+        /***/
+        @JsonProperty("Flow")
+        private Integer Flow;
+
+    }
+
+    /***/
+    @JsonProperty("Domains")
+    private String Domains;
+
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("SortBy")
+    private String SortBy;
 
 }

@@ -39,11 +39,11 @@ public class DescribeResourcePoolsRequest{
     private String Component;
 
     /**资源组ID*/
-    @KsYunField(name="ResourcePoolId")
+    @KsYunField(name="ResourcePoolId",type=2)
     private List<String> ResourcePoolIdList;
 
     /**一个或者多个过滤器*/
-    @KsYunField(name="Filter")
+    @KsYunField(name="Filter",type=2)
     private List<FilterDto> FilterList;
 
     @Data
@@ -54,10 +54,12 @@ public class DescribeResourcePoolsRequest{
 - resource-pool-type 资源组类型
 - cluster-id KCE集群ID*/
         @KsYunField(name="Name")
-                private String Name;
+        private String Name;
+
         /**过滤值*/
-        @KsYunField(name="Value")
-                private List<String> ValueList;
+        @KsYunField(name="Value",type=2)
+        private List<String> ValueList;
+
     }
 
 }

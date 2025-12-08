@@ -29,7 +29,7 @@ public class DescribeSoSubnetRequest{
     /**子网的ID。
 • 参数 - N：表示子网ID的序号，单次调用数量上限为100个。
 • 多个ID之间用&分隔。*/
-    @KsYunField(name="SubnetIds")
+    @KsYunField(name="SubnetIds",type=2)
     private List<String> SubnetIdsList;
 
     /**分页查询凭证，用于标记分页的位置。

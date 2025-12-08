@@ -5,17 +5,112 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname ModifyCacheParameterGroupResponse @Description ModifyCacheParameterGroup 返回体
- */
+* @Classname ModifyCacheParameterGroupResponse
+* @Description ModifyCacheParameterGroup 返回体
+*/
 @Data
 @ToString
 public class ModifyCacheParameterGroupResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-  // 返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("id")
+        private String Id;
+
+        /***/
+        @JsonProperty("name")
+        private String Name;
+
+        /***/
+        @JsonProperty("description")
+        private String Description;
+
+        /***/
+        @JsonProperty("paramVersion")
+        private String ParamVersion;
+
+        /***/
+        @JsonProperty("engine")
+        private String Engine;
+
+        /***/
+        @JsonProperty("created")
+        private String Created;
+
+        /***/
+        @JsonProperty("updated")
+        private String Updated;
+
+        /***/
+        @JsonProperty("parameters")
+        private List<ParametersDto> Parameters;
+
+        @Data
+        @ToString
+        public static class ParametersDto {
+            /***/
+            @JsonProperty("name")
+            private String Name;
+
+            /***/
+            @JsonProperty("desc")
+            private String Desc;
+
+            /***/
+            @JsonProperty("defaultValue")
+            private String DefaultValue;
+
+            /***/
+            @JsonProperty("currentValue")
+            private String CurrentValue;
+
+            /***/
+            @JsonProperty("validity")
+            private ValidityDto Validity;
+
+            @Data
+            @ToString
+            public static class ValidityDto {
+                /***/
+                @JsonProperty("type")
+                private String Type;
+
+                /***/
+                @JsonProperty("dataType")
+                private String DataType;
+
+                /***/
+                @JsonProperty("value")
+                private String Value;
+
+                /***/
+                @JsonProperty("values")
+                private List<String> Values;
+
+                /***/
+                @JsonProperty("min")
+                private String Min;
+
+                /***/
+                @JsonProperty("max")
+                private String Max;
+
+            }
+
+        }
+
+    }
 
 }

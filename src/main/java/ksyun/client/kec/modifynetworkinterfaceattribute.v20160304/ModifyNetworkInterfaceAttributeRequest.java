@@ -31,7 +31,7 @@ public class ModifyNetworkInterfaceAttributeRequest{
 
     /**实例绑定的安全组，SecurityGroupId.N可以绑定多个安全组。已绑定的安全组，未重新指定时会被删除。
 标准UUID格式，形如`^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$`*/
-    @KsYunField(name="SecurityGroupId")
+    @KsYunField(name="SecurityGroupId",type=2)
     private List<String> SecurityGroupIdList;
 
     /**私有IP地址，子网IP地址范围内的任意有效值。

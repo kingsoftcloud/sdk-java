@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname GetDomainPidDimensionUsageDataResponse
@@ -14,13 +14,70 @@ import java.util.Set;
 @Data
 @ToString
 public class GetDomainPidDimensionUsageDataResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("StartTime")
+    private String StartTime;
 
-    /**
-     * 请求id
-     */
+    /***/
+    @JsonProperty("EndTime")
+    private String EndTime;
+
+    /***/
+    @JsonProperty("CdnType")
+    private String CdnType;
+
+    /***/
+    @JsonProperty("Domains")
+    private String Domains;
+
+    /***/
+    @JsonProperty("Areas")
+    private String Areas;
+
+    /***/
+    @JsonProperty("Interval")
+    private Integer Interval;
+
+    /***/
+    @JsonProperty("Metric")
+    private List<MetricDto> Metric;
+
+    @Data
+    @ToString
+    public static class MetricDto {
+        /***/
+        @JsonProperty("Time")
+        private String Time;
+
+        /***/
+        @JsonProperty("Value")
+        private Integer Value;
+
+        /***/
+        @JsonProperty("projects")
+        private List<ProjectsDto> Projects;
+
+        @Data
+        @ToString
+        public static class ProjectsDto {
+            /***/
+            @JsonProperty("project")
+            private String Project;
+
+            /***/
+            @JsonProperty("Value")
+            private Integer Value;
+
+        }
+
+    }
+
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("PeakTime")
+    private String PeakTime;
 
 }

@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
 * @Classname TerminateInstancesClient
-* @Description 销毁实例
+* @Description 销毁实例接口
 */
 @Slf4j
 public class TerminateInstancesClient extends BaseClient {

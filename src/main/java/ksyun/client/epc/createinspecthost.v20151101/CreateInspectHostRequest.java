@@ -26,7 +26,7 @@ public class CreateInspectHostRequest{
     private String InspectName;
 
     /**裸金属服务器资源ID，多个ID的实例信息，查看详细ID.N使用方式*/
-    @KsYunField(name="HostId")
+    @KsYunField(name="HostId",type=2)
     private List<String> HostIdList;
 
 }

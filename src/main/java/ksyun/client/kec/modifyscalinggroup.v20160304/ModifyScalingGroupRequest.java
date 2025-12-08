@@ -51,7 +51,7 @@ public class ModifyScalingGroupRequest{
 
     /**子网ID 
  */
-    @KsYunField(name="SubnetId")
+    @KsYunField(name="SubnetId",type=2)
     private List<String> SubnetIdList;
 
     /**多子网扩展策略当绑定多个子网时，此项必填，有效值：balanced-distribution(均衡分布），choice-first（选择优先）默认值：balanced-distribution 
@@ -61,7 +61,7 @@ public class ModifyScalingGroupRequest{
 
     /**与伸缩组绑定的各负载均衡的ID即将废弃 
  */
-    @KsYunField(name="Slb")
+    @KsYunField(name="Slb",type=2)
     private List<SlbDto> SlbList;
 
     @Data
@@ -70,24 +70,28 @@ public class ModifyScalingGroupRequest{
         /**与伸缩组绑定的各负载均衡的ID即将废弃 
  */
         @KsYunField(name="Id")
-                private String Id;
+        private String Id;
+
         /**Slb下的监听器ID即将废弃 
  */
         @KsYunField(name="ListenerId")
-                private String ListenerId;
+        private String ListenerId;
+
         /**后端服务地址用“，”隔开各个值，即将废弃 
  */
-        @KsYunField(name="ServerPort")
-                private List<String> ServerPortList;
+        @KsYunField(name="ServerPort",type=2)
+        private List<String> ServerPortList;
+
         /**端口权重即将废弃 
  */
         @KsYunField(name="Weight")
-                private Integer Weight;
+        private Integer Weight;
+
     }
 
     /**支持容器业务线指定子网扩容 
  */
-    @KsYunField(name="ContainerSubnetId")
+    @KsYunField(name="ContainerSubnetId",type=2)
     private List<String> ContainerSubnetIdList;
 
 }

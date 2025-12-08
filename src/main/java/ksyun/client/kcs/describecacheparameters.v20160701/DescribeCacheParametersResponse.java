@@ -5,17 +5,75 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname DescribeCacheParametersResponse @Description DescribeCacheParameters 返回体
- */
+* @Classname DescribeCacheParametersResponse
+* @Description DescribeCacheParameters 返回体
+*/
 @Data
 @ToString
 public class DescribeCacheParametersResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /***/
+    @JsonProperty("Data")
+    private List<DataDto> Data;
 
-  // 返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("name")
+        private String Name;
+
+        /***/
+        @JsonProperty("desc")
+        private String Desc;
+
+        /***/
+        @JsonProperty("defaultValue")
+        private String DefaultValue;
+
+        /***/
+        @JsonProperty("currentValue")
+        private String CurrentValue;
+
+        /***/
+        @JsonProperty("validity")
+        private ValidityDto Validity;
+
+        @Data
+        @ToString
+        public static class ValidityDto {
+            /***/
+            @JsonProperty("type")
+            private String Type;
+
+            /***/
+            @JsonProperty("dataType")
+            private String DataType;
+
+            /***/
+            @JsonProperty("value")
+            private String Value;
+
+            /***/
+            @JsonProperty("values")
+            private List<String> Values;
+
+            /***/
+            @JsonProperty("min")
+            private String Min;
+
+            /***/
+            @JsonProperty("max")
+            private String Max;
+
+        }
+
+    }
 
 }

@@ -5,17 +5,25 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname ProtectedFromScaleDownResponse @Description ProtectedFromScaleDown 返回体
- */
+* @Classname ProtectedFromScaleDownResponse
+* @Description ProtectedFromScaleDown 返回体
+*/
 @Data
 @ToString
 public class ProtectedFromScaleDownResponse extends BaseResponseModel {
+    /**设置缩容保护成功的节点id*/
+    @JsonProperty("SucceedInstanceIds")
+    private List<String> SucceedInstanceIds;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /**设置缩容保护失败的节点id*/
+    @JsonProperty("FailedInstanceIds")
+    private List<String> FailedInstanceIds;
 
-  // 返回结果，需要按需扩展
+    /**请求id*/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

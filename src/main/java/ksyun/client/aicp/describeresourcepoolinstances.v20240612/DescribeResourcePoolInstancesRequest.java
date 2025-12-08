@@ -35,15 +35,15 @@ public class DescribeResourcePoolInstancesRequest{
 
     /**	
 实例ID*/
-    @KsYunField(name="InstanceId")
+    @KsYunField(name="InstanceId",type=2)
     private List<String> InstanceIdList;
 
     /**项目制*/
-    @KsYunField(name="ProjectId")
+    @KsYunField(name="ProjectId",type=2)
     private List<String> ProjectIdList;
 
     /**一个或者多个过滤器*/
-    @KsYunField(name="Filter")
+    @KsYunField(name="Filter",type=2)
     private List<FilterDto> FilterList;
 
     @Data
@@ -55,10 +55,12 @@ public class DescribeResourcePoolInstancesRequest{
 - instance-status 节点状态
 - instance-ip 节点IP*/
         @KsYunField(name="Name")
-                private String Name;
+        private String Name;
+
         /**过滤值*/
-        @KsYunField(name="Value")
-                private List<String> ValueList;
+        @KsYunField(name="Value",type=2)
+        private List<String> ValueList;
+
     }
 
 }

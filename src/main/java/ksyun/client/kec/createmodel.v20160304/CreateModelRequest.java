@@ -35,7 +35,7 @@ public class CreateModelRequest{
 
     /**数据盘（云盘）的类型，数据盘n的类型，n 的取值范围为 [1, 8]。只支持I2、I2联网增强、N1、N2、N3、S3和I3。DataDisk.n.Type与DataDisk.n.Size必须都填写才有效。
 SSD3.0，EHDD*/
-    @KsYunField(name="DataDisk")
+    @KsYunField(name="DataDisk",type=2)
     private List<DataDiskDto> DataDiskList;
 
     @Data
@@ -44,21 +44,26 @@ SSD3.0，EHDD*/
         /**数据盘（云盘）的类型，数据盘n的类型，n 的取值范围为 [1, 8]。只支持I2、I2联网增强、N1、N2、N3、S3和I3。DataDisk.n.Type与DataDisk.n.Size必须都填写才有效。
 SSD3.0，EHDD*/
         @KsYunField(name="Type")
-                private String Type;
+        private String Type;
+
         /**第 n 个数据盘（云盘）的容量大小，n 的取值范围为 [1, 8]。只支持I2、I2联网增强、N1、N2、N3、S3和I3。DataDisk.n.Type与DataDisk.n.Size必须都填写才有效。
 [10，16000]*/
         @KsYunField(name="Size")
-                private Integer Size;
+        private Integer Size;
+
         /**数据盘是否随实例释放，默认值为false
 true：实例释放时，这块磁盘随实例一起释放。<br>false：实例释放时，这块磁盘保留不释放。*/
         @KsYunField(name="DeleteWithInstance")
-                private Boolean DeleteWithInstance;
+        private Boolean DeleteWithInstance;
+
         /**云盘快照id*/
         @KsYunField(name="SnapshotId")
-                private String SnapshotId;
+        private String SnapshotId;
+
         /***/
         @KsYunField(name="SnapshotName")
-                private String SnapshotName;
+        private String SnapshotName;
+
     }
 
     /**保留镜像设置登录。该参数只对使用自定义镜像有效。当该值填写为true，默认InstancePassword参数无效。该参数与InstancePassword必须填写一个。
@@ -82,7 +87,7 @@ Monthly(包年包月）、Daily（按量付费（按日月结）)、 HourlyInsta
 
     /**实例绑定的安全组，目前仅支持绑定一个安全组。
 标准UUID格式，形如`^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$`*/
-    @KsYunField(name="SecurityGroupId")
+    @KsYunField(name="SecurityGroupId",type=2)
     private List<String> SecurityGroupIdList;
 
     /**私有IP地址，指定子网IP地址范围内的任意有效值，代表实例的主IP地址，只能选择一个，绑定到主网卡；如果未指定该参数，系统自动从有效地址池中随机选取一个。
@@ -144,8 +149,6 @@ ModelTest001*/
     private Boolean FailureAutoDelete;
 
     /***/
-    @KsYunField(name="SystemDisk")
-
     private SystemDiskDto SystemDiskList;
 
     @Data
@@ -154,10 +157,13 @@ ModelTest001*/
         /**不能给默认值，不传默认按价格体系配置systemDisk属性中第一个创建*/
         @KsYunField(name="DiskType")
         private String DiskType;
+
         /**系统盘内存大小，最小值为0，最大值为500*/
         @KsYunField(name="DiskSize")
         private String DiskSize;
+
     }
+
     /**操作系统内部的计算机名*/
     @KsYunField(name="HostName")
     private String HostName;
@@ -171,7 +177,7 @@ ModelTest001*/
     private String UserData;
 
     /***/
-    @KsYunField(name="NetworkInterface")
+    @KsYunField(name="NetworkInterface",type=2)
     private List<NetworkInterfaceDto> NetworkInterfaceList;
 
     @Data
@@ -179,17 +185,20 @@ ModelTest001*/
     public static class NetworkInterfaceDto {
         /**辅网卡的子网id不创建辅网卡时非必填，创建辅网卡时必填*/
         @KsYunField(name="SubnetId")
-                private String SubnetId;
+        private String SubnetId;
+
         /**辅网卡的安全组id不创建辅网卡时非必填，创建辅网卡时必填*/
-        @KsYunField(name="SecurityGroupId")
-                private List<String> SecurityGroupIdList;
+        @KsYunField(name="SecurityGroupId",type=2)
+        private List<String> SecurityGroupIdList;
+
         /**辅网卡的内网ip,创建辅网卡传了按传的ip开机，不传自动分配*/
         @KsYunField(name="PrivateIpAddress")
-                private String PrivateIpAddress;
+        private String PrivateIpAddress;
+
     }
 
     /***/
-    @KsYunField(name="Tag")
+    @KsYunField(name="Tag",type=2)
     private List<TagDto> TagList;
 
     @Data
@@ -197,13 +206,16 @@ ModelTest001*/
     public static class TagDto {
         /***/
         @KsYunField(name="Key")
-                private String Key;
+        private String Key;
+
         /***/
         @KsYunField(name="Id")
-                private Integer Id;
+        private Integer Id;
+
         /***/
         @KsYunField(name="Value")
-                private String Value;
+        private String Value;
+
     }
 
     /**购买EIP，true or false；传true即为购买EIP，下面关于EIP的参数生效；传false为稍后购买，下面的EIP参数不生效*/

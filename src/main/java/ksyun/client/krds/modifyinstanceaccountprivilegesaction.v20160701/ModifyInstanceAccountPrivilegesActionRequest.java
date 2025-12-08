@@ -1,34 +1,48 @@
 package ksyun.client.krds.modifyinstanceaccountprivilegesaction.v20160701;
 
 import common.annotation.KsYunField;
-import java.util.List;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+import java.util.Arrays;
+
 /**
- * @Classname ModifyInstanceAccountPrivilegesActionRequest @Description 请求参数
- */
+* @Classname ModifyInstanceAccountPrivilegesActionRequest
+* @Description 请求参数
+*/
 @Data
-public class ModifyInstanceAccountPrivilegesActionRequest {
-  /** 实例ID */
-  @KsYunField(name = "DBInstanceIdentifier")
-  private String DBInstanceIdentifier;
+public class ModifyInstanceAccountPrivilegesActionRequest{
+    /**实例ID*/
+    @KsYunField(name="DBInstanceIdentifier")
+    private String DBInstanceIdentifier;
 
-  /** 数据库账户名称 */
-  @KsYunField(name = "InstanceAccountName")
-  private String InstanceAccountName;
+    /**数据库账户名称*/
+    @KsYunField(name="InstanceAccountName")
+    private String InstanceAccountName;
 
-  /** 数据库权限：不传则置空改账户数据库权限 */
-  @KsYunField(name = "InstanceAccountPrivileges", type = 2)
-  private List<InstanceAccountPrivilegesDto> InstanceAccountPrivilegesList;
+    /**数据库权限：不传则置空改账户数据库权限*/
+    @KsYunField(name="InstanceAccountPrivileges",type=2)
+    private List<InstanceAccountPrivilegesDto> InstanceAccountPrivilegesList;
 
-  @Data
-  @ToString
-  public static class InstanceAccountPrivilegesDto {
-    /** 数据库名称 数据库名称和权限必须同时填写 */
-    private String InstanceDatabaseName;
+    @Data
+    @ToString
+    public static class InstanceAccountPrivilegesDto {
+        /**数据库名称
+数据库名称和权限必须同时填写*/
+        @KsYunField(name="InstanceDatabaseName")
+        private String InstanceDatabaseName;
 
-    /** 数据库权限 数据库名称和权限必须同时填写 只读：ReadOnly, 读写：ReadWrite, 仅DDL：DDLOnly, 仅DML：DMLOnly, */
-    private String Privilege;
-  }
+        /**数据库权限
+数据库名称和权限必须同时填写
+只读：ReadOnly,
+读写：ReadWrite,
+仅DDL：DDLOnly,
+仅DML：DMLOnly,*/
+        @KsYunField(name="Privilege")
+        private String Privilege;
+
+    }
+
 }

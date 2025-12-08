@@ -22,13 +22,18 @@ public class CancelRayJobRunRequest{
 支持批量停止*/
     @KsYunField(name="JobRunIds",type=2)
     private List<JobRunIdsDto> JobRunIdsList;
+
     @Data
     @ToString
     public static class JobRunIdsDto {
         /**作业ID*/
+        @KsYunField(name="JobRunId")
         private String JobRunId;
+
         /**作业类型：spark、ray*/
+        @KsYunField(name="JobType")
         private String JobType;
+
     }
 
 }

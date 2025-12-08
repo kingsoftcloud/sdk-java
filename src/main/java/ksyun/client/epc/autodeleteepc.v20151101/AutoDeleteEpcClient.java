@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
 * @Classname AutoDeleteEpcClient
-* @Description AutoDeleteEpc
+* @Description 预约删除云物理主机
 */
 @Slf4j
 public class AutoDeleteEpcClient extends BaseClient {

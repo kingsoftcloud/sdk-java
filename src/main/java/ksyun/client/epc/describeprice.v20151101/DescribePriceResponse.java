@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribePriceResponse
@@ -14,13 +14,42 @@ import java.util.Set;
 @Data
 @ToString
 public class DescribePriceResponse extends BaseResponseModel {
-
-    /**
-     * 请求id
-     */
+    /**请求ID*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /**价格信息*/
+    @JsonProperty("PriceInfo")
+    private PriceInfoDto PriceInfo;
+
+    @Data
+    @ToString
+    public static class PriceInfoDto {
+        /**价格信息*/
+        @JsonProperty("PriceSet")
+        private List<PriceSetDto> PriceSet;
+
+        @Data
+        @ToString
+        public static class PriceSetDto {
+            /**货币类型*/
+            @JsonProperty("Currency")
+            private String Currency;
+
+            /**折扣金额*/
+            @JsonProperty("DiscountPrice")
+            private Integer DiscountPrice;
+
+            /**原价*/
+            @JsonProperty("OriginalPrice")
+            private Integer OriginalPrice;
+
+            /**成交价*/
+            @JsonProperty("TradePrice")
+            private Integer TradePrice;
+
+        }
+
+    }
 
 }

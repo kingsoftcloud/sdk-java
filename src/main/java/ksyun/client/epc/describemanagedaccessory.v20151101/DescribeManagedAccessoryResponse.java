@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeManagedAccessoryResponse
@@ -14,13 +14,65 @@ import java.util.Set;
 @Data
 @ToString
 public class DescribeManagedAccessoryResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("ManagedAccessorySet")
+    private List<ManagedAccessorySetDto> ManagedAccessorySet;
 
-    /**
-     * 请求id
-     */
+    @Data
+    @ToString
+    public static class ManagedAccessorySetDto {
+        /***/
+        @JsonProperty("SN")
+        private String SN;
+
+        /***/
+        @JsonProperty("IDC")
+        private String IDC;
+
+        /***/
+        @JsonProperty("Classification")
+        private String Classification;
+
+        /***/
+        @JsonProperty("Model")
+        private String Model;
+
+        /***/
+        @JsonProperty("Manufacturer")
+        private String Manufacturer;
+
+        /***/
+        @JsonProperty("State")
+        private String State;
+
+        /***/
+        @JsonProperty("Date")
+        private String Date;
+
+        /***/
+        @JsonProperty("Source")
+        private String Source;
+
+        /***/
+        @JsonProperty("Notes")
+        private String Notes;
+
+        /***/
+        @JsonProperty("Num")
+        private Integer Num;
+
+        /**告警阈值*/
+        @JsonProperty("AlarmNum")
+        private Integer AlarmNum;
+
+    }
+
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Return")
+    private Boolean ReturnField;
 
 }

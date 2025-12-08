@@ -5,17 +5,17 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname GetRetentionPolicyLogResponse @Description GetRetentionPolicyLog 返回体
- */
+* @Classname GetRetentionPolicyLogResponse
+* @Description GetRetentionPolicyLog 返回体
+*/
 @Data
 @ToString
 public class GetRetentionPolicyLogResponse extends BaseResponseModel {
-
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
-
-  // 返回结果，需要按需扩展
+    /**结果字符串*/
+    @JsonProperty("Data")
+    private String Data;
 
 }

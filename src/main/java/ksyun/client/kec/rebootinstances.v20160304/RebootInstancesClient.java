@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
 * @Classname RebootInstancesClient
-* @Description 重启实例
+* @Description 重启实例接口
 */
 @Slf4j
 public class RebootInstancesClient extends BaseClient {

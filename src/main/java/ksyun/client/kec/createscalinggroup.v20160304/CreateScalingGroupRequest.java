@@ -41,7 +41,7 @@ public class CreateScalingGroupRequest{
 
     /**子网ID 
  */
-    @KsYunField(name="SubnetId")
+    @KsYunField(name="SubnetId",type=2)
     private List<String> SubnetIdList;
 
     /**多子网扩展策略当绑定多个子网时，此项必填，有效值：balanced-distribution(均衡分布），choice-first（选择优先）默认值：balanced-distribution 
@@ -56,7 +56,7 @@ public class CreateScalingGroupRequest{
 
     /**与伸缩组绑定的各负载均衡的ID 
  */
-    @KsYunField(name="Slb")
+    @KsYunField(name="Slb",type=2)
     private List<SlbDto> SlbList;
 
     @Data
@@ -65,19 +65,23 @@ public class CreateScalingGroupRequest{
         /**与伸缩组绑定的各负载均衡的ID 
  */
         @KsYunField(name="Id")
-                private String Id;
+        private String Id;
+
         /**Slb下的监听器ID 
  */
         @KsYunField(name="ListenerId")
-                private String ListenerId;
+        private String ListenerId;
+
         /**后端服务地址 
  */
-        @KsYunField(name="ServerPort")
-                private List<Integer> ServerPortList;
+        @KsYunField(name="ServerPort",type=2)
+        private List<Integer> ServerPortList;
+
         /**端口权重 
  */
         @KsYunField(name="Weight")
-                private Integer Weight;
+        private Integer Weight;
+
     }
 
 }

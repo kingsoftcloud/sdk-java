@@ -5,17 +5,34 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname GetKnadPolicyResponse @Description GetKnadPolicy 返回体
- */
+* @Classname GetKnadPolicyResponse
+* @Description GetKnadPolicy 返回体
+*/
 @Data
 @ToString
 public class GetKnadPolicyResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /***/
+    @JsonProperty("TemplateId")
+    private Integer TemplateId;
 
-  // 返回结果，需要按需扩展
+    /**Udp封禁。
+1：封禁 0：不封禁*/
+    @JsonProperty("UdpBlock")
+    private Integer UdpBlock;
+
+    /***/
+    @JsonProperty("TcpBlock")
+    private Integer TcpBlock;
+
+    /***/
+    @JsonProperty("IcmpBlock")
+    private Integer IcmpBlock;
 
 }

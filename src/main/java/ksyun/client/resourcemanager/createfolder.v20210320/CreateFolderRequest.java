@@ -1,22 +1,29 @@
 package ksyun.client.resourcemanager.createfolder.v20210320;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
- * @Classname CreateFolderRequest @Description 请求参数
- */
+* @Classname CreateFolderRequest
+* @Description 请求参数
+*/
 @Data
-public class CreateFolderRequest {
-  /** 父级资源夹ID */
-  @KsYunField(name = "ParentId")
-  private String ParentId;
+public class CreateFolderRequest{
+    /**父级资源夹ID*/
+    @KsYunField(name="ParentId")
+    private String ParentId;
 
-  /** 资源夹名称 */
-  @KsYunField(name = "Name")
-  private String Name;
+    /**资源夹名称	*/
+    @KsYunField(name="Name")
+    private String Name;
 
-  /** 备注 */
-  @KsYunField(name = "Desc")
-  private String Desc;
+    /**备注*/
+    @KsYunField(name="Desc")
+    private String Desc;
+
 }

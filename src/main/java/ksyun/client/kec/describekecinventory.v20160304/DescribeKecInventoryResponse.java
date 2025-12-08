@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeKecInventoryResponse
@@ -14,13 +14,8 @@ import java.util.Set;
 @Data
 @ToString
 public class DescribeKecInventoryResponse extends BaseResponseModel {
-
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
-
-    //返回结果，需要按需扩展
+    /**1*/
+    @JsonProperty("1")
+    private String Field1;
 
 }

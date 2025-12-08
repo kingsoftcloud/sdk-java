@@ -16,7 +16,7 @@ import java.util.Arrays;
 public class StopInstancesRequest{
     /**待关闭实例ID列表，N的范围为1-100
 */
-    @KsYunField(name="InstanceId")
+    @KsYunField(name="InstanceId",type=2)
     private List<String> InstanceIdList;
 
     /**强制关闭*/

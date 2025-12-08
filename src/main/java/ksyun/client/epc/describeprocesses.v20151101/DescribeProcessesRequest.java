@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class DescribeProcessesRequest{
     /**流程的ID*/
-    @KsYunField(name="OperationProcessId")
+    @KsYunField(name="OperationProcessId",type=2)
     private List<String> OperationProcessIdList;
 
     /**筛选Filter*/
-    @KsYunField(name="Filter")
+    @KsYunField(name="Filter",type=2)
     private List<FilterDto> FilterList;
 
     @Data
@@ -30,10 +30,12 @@ public class DescribeProcessesRequest{
 - status，工单状态
 - process-id，工单ID*/
         @KsYunField(name="Name")
-                private String Name;
+        private String Name;
+
         /***/
-        @KsYunField(name="Value")
-                private List<String> ValueList;
+        @KsYunField(name="Value",type=2)
+        private List<String> ValueList;
+
     }
 
     /**单次调用可返回的最大条目数量*/

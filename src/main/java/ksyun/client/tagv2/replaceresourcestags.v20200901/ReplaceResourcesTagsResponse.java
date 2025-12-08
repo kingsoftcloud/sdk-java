@@ -5,17 +5,21 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname ReplaceResourcesTagsResponse @Description ReplaceResourcesTags 返回体
- */
+* @Classname ReplaceResourcesTagsResponse
+* @Description ReplaceResourcesTags 返回体
+*/
 @Data
 @ToString
 public class ReplaceResourcesTagsResponse extends BaseResponseModel {
+    /**请求结果，TRUE代表请求成功*/
+    @JsonProperty("Result")
+    private Boolean Result;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
-
-  // 返回结果，需要按需扩展
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

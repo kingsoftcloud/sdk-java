@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class DescribeNetworkInterfacesRequest{
     /**多个网卡的ID*/
-    @KsYunField(name="NetworkInterfaceId")
+    @KsYunField(name="NetworkInterfaceId",type=2)
     private List<String> NetworkInterfaceIdList;
 
     /**筛选Filter*/
-    @KsYunField(name="Filter")
+    @KsYunField(name="Filter",type=2)
     private List<FilterDto> FilterList;
 
     @Data
@@ -35,10 +35,12 @@ public class DescribeNetworkInterfacesRequest{
 - availability-zone-name，可用区名称
 - networkInterface-type，网卡类型(primary|extension)*/
         @KsYunField(name="Name")
-                private String Name;
+        private String Name;
+
         /***/
-        @KsYunField(name="Value")
-                private List<String> ValueList;
+        @KsYunField(name="Value",type=2)
+        private List<String> ValueList;
+
     }
 
     /**单次调用可返回的最大条目数量*/

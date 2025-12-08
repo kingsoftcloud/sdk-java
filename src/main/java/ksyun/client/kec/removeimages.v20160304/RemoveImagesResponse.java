@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname RemoveImagesResponse
@@ -14,13 +14,25 @@ import java.util.Set;
 @Data
 @ToString
 public class RemoveImagesResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("ReturnSet")
+    private List<ReturnSetDto> ReturnSet;
 
-    /**
-     * 请求id
-     */
+    @Data
+    @ToString
+    public static class ReturnSetDto {
+        /***/
+        @JsonProperty("ImageId")
+        private String ImageId;
+
+        /***/
+        @JsonProperty("Return")
+        private Boolean ReturnField;
+
+    }
+
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
-
-    //返回结果，需要按需扩展
+    private String RequestId;
 
 }

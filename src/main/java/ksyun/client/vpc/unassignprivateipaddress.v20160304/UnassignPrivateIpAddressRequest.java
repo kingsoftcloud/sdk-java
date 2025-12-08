@@ -19,7 +19,7 @@ public class UnassignPrivateIpAddressRequest{
     private String NetworkInterfaceId;
 
     /**辅助私有IP地址*/
-    @KsYunField(name="PrivateIpAddress")
+    @KsYunField(name="PrivateIpAddress",type=2)
     private List<String> PrivateIpAddressList;
 
 }

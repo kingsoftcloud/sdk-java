@@ -31,7 +31,7 @@ public class DescribeEpcManagementsRequest{
     private String Pin;
 
     /**远程管理的ID*/
-    @KsYunField(name="EpcManagementId")
+    @KsYunField(name="EpcManagementId",type=2)
     private List<String> EpcManagementIdList;
 
     /**带外管理的ID*/

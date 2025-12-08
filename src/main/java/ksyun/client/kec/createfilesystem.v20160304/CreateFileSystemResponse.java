@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname CreateFileSystemResponse
@@ -14,13 +14,21 @@ import java.util.Set;
 @Data
 @ToString
 public class CreateFileSystemResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("CreateFileSystemResponse")
+    private CreateFileSystemResponseDto CreateFileSystemResponse;
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    @Data
+    @ToString
+    public static class CreateFileSystemResponseDto {
+        /***/
+        @JsonProperty("RequestId")
+        private String RequestId;
 
-    //返回结果，需要按需扩展
+        /***/
+        @JsonProperty("FileSystemId")
+        private String FileSystemId;
+
+    }
 
 }

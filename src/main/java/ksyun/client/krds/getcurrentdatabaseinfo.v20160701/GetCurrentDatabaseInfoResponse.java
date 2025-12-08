@@ -5,17 +5,34 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname GetCurrentDatabaseInfoResponse @Description GetCurrentDatabaseInfo 返回体
- */
+* @Classname GetCurrentDatabaseInfoResponse
+* @Description GetCurrentDatabaseInfo 返回体
+*/
 @Data
 @ToString
 public class GetCurrentDatabaseInfoResponse extends BaseResponseModel {
+    /**实例数据库表信息返回数据域*/
+    @JsonProperty("Databases")
+    private List<DatabasesDto> Databases;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    @Data
+    @ToString
+    public static class DatabasesDto {
+        /**数据库名称*/
+        @JsonProperty("DatabaseName")
+        private String DatabaseName;
 
-  // 返回结果，需要按需扩展
+        /**数据表列表*/
+        @JsonProperty("TableNames")
+        private List<String> TableNames;
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

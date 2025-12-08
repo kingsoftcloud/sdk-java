@@ -5,17 +5,66 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname DescribeTemplatesResponse @Description DescribeTemplates 返回体
- */
+* @Classname DescribeTemplatesResponse
+* @Description DescribeTemplates 返回体
+*/
 @Data
 @ToString
 public class DescribeTemplatesResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("TemplateCount")
+    private Integer TemplateCount;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /***/
+    @JsonProperty("Templates")
+    private List<TemplatesDto> Templates;
 
-  // 返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class TemplatesDto {
+        /***/
+        @JsonProperty("TemplateId")
+        private String TemplateId;
+
+        /***/
+        @JsonProperty("TemplateType")
+        private String TemplateType;
+
+        /***/
+        @JsonProperty("TemplateName")
+        private String TemplateName;
+
+        /***/
+        @JsonProperty("TemplateDescription")
+        private String TemplateDescription;
+
+        /***/
+        @JsonProperty("LatestVersion")
+        private String LatestVersion;
+
+        /***/
+        @JsonProperty("VersionCount")
+        private Integer VersionCount;
+
+        /***/
+        @JsonProperty("UsingCount")
+        private Integer UsingCount;
+
+        /***/
+        @JsonProperty("CreatTime")
+        private String CreatTime;
+
+        /***/
+        @JsonProperty("UpdateTime")
+        private String UpdateTime;
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

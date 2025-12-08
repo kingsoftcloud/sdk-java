@@ -5,17 +5,52 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname DescribeCollationsResponse @Description DescribeCollations 返回体
- */
+* @Classname DescribeCollationsResponse
+* @Description DescribeCollations 返回体
+*/
 @Data
 @ToString
 public class DescribeCollationsResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    @Data
+    @ToString
+    public static class DataDto {
+        /**排序规则列表，每个子项为对应的排序规则，及其对应的ctype和name。*/
+        @JsonProperty("Collations")
+        private CollationsDto Collations;
 
-  // 返回结果，需要按需扩展
+        @Data
+        @ToString
+        public static class CollationsDto {
+            /***/
+            @JsonProperty("LATIN5")
+            private LATIN5Dto LATIN5;
+
+            @Data
+            @ToString
+            public static class LATIN5Dto {
+                /***/
+                @JsonProperty("ctype_name")
+                private List<String> Ctype_name;
+
+                /***/
+                @JsonProperty("collation_name")
+                private List<String> Collation_name;
+
+            }
+
+        }
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

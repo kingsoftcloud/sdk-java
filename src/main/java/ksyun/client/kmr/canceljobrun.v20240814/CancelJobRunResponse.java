@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname CancelJobRunResponse
@@ -14,13 +14,25 @@ import java.util.Set;
 @Data
 @ToString
 public class CancelJobRunResponse extends BaseResponseModel {
+    /**响应状态码*/
+    @JsonProperty("Code")
+    private Integer Code;
 
-    /**
-     * 请求id
-     */
+    /***/
+    @JsonProperty("Message")
+    private String Message;
+
+    /**请求ID*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+    }
 
 }

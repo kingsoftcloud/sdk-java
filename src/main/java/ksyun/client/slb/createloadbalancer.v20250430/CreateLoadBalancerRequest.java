@@ -1,0 +1,77 @@
+package ksyun.client.slb.createloadbalancer.v20250430;
+
+import common.annotation.KsYunField;
+import lombok.Builder;
+import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
+
+/**
+* @Classname CreateLoadBalancerRequest
+* @Description 请求参数
+*/
+@Data
+public class CreateLoadBalancerRequest{
+    /**负载均衡的名称*/
+    @KsYunField(name="LoadBalancerName")
+    private String LoadBalancerName;
+
+    /**负载均衡支持的版本*/
+    @KsYunField(name="LoadBalancerVersion")
+    private String LoadBalancerVersion;
+
+    /**负载均衡的类型，public 为公网负载均衡，internal 为内网负载均衡*/
+    @KsYunField(name="LoadBalancerType")
+    private String LoadBalancerType;
+
+    /**Vpc的ID*/
+    @KsYunField(name="VpcId")
+    private String VpcId;
+
+    /**负载均衡的IP版本*/
+    @KsYunField(name="IpVersion")
+    private String IpVersion;
+
+    /**项目的ID*/
+    @KsYunField(name="ProjectId")
+    private String ProjectId;
+
+    /**弹性IP的ID*/
+    @KsYunField(name="AllocationId")
+    private String AllocationId;
+
+    /**计费类型(PrePaidByHourUsage，按小时用量实时付费（小时结))*/
+    @KsYunField(name="ChargeType")
+    private String ChargeType;
+
+    /**子网id*/
+    @KsYunField(name="SubnetId")
+    private String SubnetId;
+
+    /**私网ip*/
+    @KsYunField(name="PrivateIpAddress")
+    private String PrivateIpAddress;
+
+    /**是否开启QUIC功能*/
+    @KsYunField(name="EnabledQuic")
+    private Boolean EnabledQuic;
+
+    /**是否开启弹性伸缩*/
+    @KsYunField(name="EnableHpa")
+    private Boolean EnableHpa;
+
+    /**实例规格,可选 L4 / L7 / L4-L7 ,分别代指4层、7层、4-7层网络协议负载均衡*/
+    @KsYunField(name="ProtocolLayers")
+    private String ProtocolLayers;
+
+    /**是否开启删除保护on/off*/
+    @KsYunField(name="DeleteProtection")
+    private String DeleteProtection;
+
+    /**是否开启修改保护on/off*/
+    @KsYunField(name="ModificationProtection")
+    private String ModificationProtection;
+
+}

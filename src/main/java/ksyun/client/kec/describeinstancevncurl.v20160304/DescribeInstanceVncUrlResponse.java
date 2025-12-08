@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeInstanceVncUrlResponse
@@ -14,13 +14,12 @@ import java.util.Set;
 @Data
 @ToString
 public class DescribeInstanceVncUrlResponse extends BaseResponseModel {
-
-    /**
-     * 请求id
-     */
+    /**请求ID*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /**Vnc地址*/
+    @JsonProperty("VncUrl")
+    private String VncUrl;
 
 }

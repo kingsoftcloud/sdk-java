@@ -5,17 +5,17 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname DeleteInternalEndpointResponse @Description DeleteInternalEndpoint 返回体
- */
+* @Classname DeleteInternalEndpointResponse
+* @Description DeleteInternalEndpoint 返回体
+*/
 @Data
 @ToString
 public class DeleteInternalEndpointResponse extends BaseResponseModel {
-
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
-
-  // 返回结果，需要按需扩展
+    /**请求ID*/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

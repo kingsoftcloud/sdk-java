@@ -5,17 +5,34 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname AddClusterInstancesResponse @Description AddClusterInstances 返回体
- */
+* @Classname AddClusterInstancesResponse
+* @Description AddClusterInstances 返回体
+*/
 @Data
 @ToString
 public class AddClusterInstancesResponse extends BaseResponseModel {
+    /**请求id*/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /**添加的节点信息*/
+    @JsonProperty("InstanceSet")
+    private List<InstanceSetDto> InstanceSet;
 
-  // 返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class InstanceSetDto {
+        /**实例id*/
+        @JsonProperty("InstanceId")
+        private String InstanceId;
+
+        /**实例名称*/
+        @JsonProperty("InstanceName")
+        private String InstanceName;
+
+    }
 
 }

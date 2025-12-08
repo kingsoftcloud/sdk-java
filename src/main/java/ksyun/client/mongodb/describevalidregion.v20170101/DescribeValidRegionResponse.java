@@ -5,17 +5,84 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname DescribeValidRegionResponse @Description DescribeValidRegion 返回体
- */
+* @Classname DescribeValidRegionResponse
+* @Description DescribeValidRegion 返回体
+*/
 @Data
 @ToString
 public class DescribeValidRegionResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-  // 返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("regionList")
+        private List<RegionListDto> RegionList;
+
+        @Data
+        @ToString
+        public static class RegionListDto {
+            /***/
+            @JsonProperty("areaEnName")
+            private String AreaEnName;
+
+            /***/
+            @JsonProperty("regionCode")
+            private String RegionCode;
+
+            /***/
+            @JsonProperty("areaCode")
+            private String AreaCode;
+
+            /***/
+            @JsonProperty("innerCode")
+            private String InnerCode;
+
+            /***/
+            @JsonProperty("regionType")
+            private Integer RegionType;
+
+            /***/
+            @JsonProperty("areaName")
+            private String AreaName;
+
+            /***/
+            @JsonProperty("azList")
+            private List<AzListDto> AzList;
+
+            @Data
+            @ToString
+            public static class AzListDto {
+                /***/
+                @JsonProperty("azName")
+                private String AzName;
+
+                /***/
+                @JsonProperty("azCode")
+                private String AzCode;
+
+            }
+
+            /***/
+            @JsonProperty("regionName")
+            private String RegionName;
+
+            /***/
+            @JsonProperty("regionEnName")
+            private String RegionEnName;
+
+        }
+
+    }
 
 }

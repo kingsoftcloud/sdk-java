@@ -1,31 +1,37 @@
 package ksyun.client.kce2.deletenode.v20230101;
 
 import common.annotation.KsYunField;
-import java.util.List;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
- * @Classname DeleteNodeRequest @Description 请求参数
- */
+* @Classname DeleteNodeRequest
+* @Description 请求参数
+*/
 @Data
-public class DeleteNodeRequest {
-  /** 集群ID */
-  @KsYunField(name = "ClusterId")
-  private String ClusterId;
+public class DeleteNodeRequest{
+    /**集群ID*/
+    @KsYunField(name="ClusterId")
+    private String ClusterId;
 
-  /***/
-  @KsYunField(name = "NodeIds", type = 2)
-  private List<String> NodeIdsList;
+    /***/
+    @KsYunField(name="NodeIds",type=2)
+    private List<String> NodeIdsList;
 
-  /** 是否删除主机实例 */
-  @KsYunField(name = "InstanceDelete")
-  private Boolean InstanceDelete;
+    /**是否删除主机实例*/
+    @KsYunField(name="InstanceDelete")
+    private Boolean InstanceDelete;
 
-  /** 节点id集合，同实例 id集合必须二选一 */
-  @KsYunField(name = "KceNodeIds")
-  private String KceNodeIds;
+    /**节点id集合，同实例 id集合必须二选一*/
+    @KsYunField(name="KceNodeIds")
+    private String KceNodeIds;
 
-  /** 实例id 集合，同节点 id集合必须二选一 */
-  @KsYunField(name = "InstanceIds", type = 2)
-  private List<String> InstanceIdsList;
+    /**实例id 集合，同节点 id集合必须二选一*/
+    @KsYunField(name="InstanceIds",type=2)
+    private List<String> InstanceIdsList;
+
 }

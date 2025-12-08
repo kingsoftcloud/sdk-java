@@ -5,17 +5,34 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname DescribeMonitorListResponse @Description DescribeMonitorList 返回体
- */
+* @Classname DescribeMonitorListResponse
+* @Description DescribeMonitorList 返回体
+*/
 @Data
 @ToString
 public class DescribeMonitorListResponse extends BaseResponseModel {
+    /**请求id*/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /**分页标识*/
+    @JsonProperty("Marker")
+    private Integer Marker;
 
-  // 返回结果，需要按需扩展
+    /**监控数量*/
+    @JsonProperty("TotalCount")
+    private Integer TotalCount;
+
+    /**监控列表*/
+    @JsonProperty("MonitorSet")
+    private List<MonitorSetDto> MonitorSet;
+
+    @Data
+    @ToString
+    public static class MonitorSetDto {
+    }
 
 }

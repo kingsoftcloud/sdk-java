@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DescribeDirectConnectsRequest{
     /**物理端口ID*/
-    @KsYunField(name="DirectConnectId")
+    @KsYunField(name="DirectConnectId",type=2)
     private List<String> DirectConnectIdList;
 
     /**单次调用可返回的最大条目数量*/

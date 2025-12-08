@@ -5,17 +5,77 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname DescribeInstanceParamsResponse @Description DescribeInstanceParams 返回体
- */
+* @Classname DescribeInstanceParamsResponse
+* @Description DescribeInstanceParams 返回体
+*/
 @Data
 @ToString
 public class DescribeInstanceParamsResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("RuntimeParams")
+    private RuntimeParamsDto RuntimeParams;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    @Data
+    @ToString
+    public static class RuntimeParamsDto {
+        /***/
+        @JsonProperty("SetParameter")
+        private SetParameterDto SetParameter;
 
-  // 返回结果，需要按需扩展
+        @Data
+        @ToString
+        public static class SetParameterDto {
+            /***/
+            @JsonProperty("maxTransactionLockRequestTimeoutMillis")
+            private Integer MaxTransactionLockRequestTimeoutMillis;
+
+            /***/
+            @JsonProperty("transactionLifetimeLimitSeconds")
+            private Integer TransactionLifetimeLimitSeconds;
+
+            /***/
+            @JsonProperty("cursorTimeoutMillis")
+            private Integer CursorTimeoutMillis;
+
+        }
+
+        /***/
+        @JsonProperty("OperationProfiling")
+        private OperationProfilingDto OperationProfiling;
+
+        @Data
+        @ToString
+        public static class OperationProfilingDto {
+            /***/
+            @JsonProperty("slowOpThresholdMs")
+            private Integer SlowOpThresholdMs;
+
+            /***/
+            @JsonProperty("mode")
+            private String Mode;
+
+        }
+
+        /***/
+        @JsonProperty("Replication")
+        private ReplicationDto Replication;
+
+        @Data
+        @ToString
+        public static class ReplicationDto {
+            /***/
+            @JsonProperty("oplogSizeMB")
+            private String OplogSizeMB;
+
+        }
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

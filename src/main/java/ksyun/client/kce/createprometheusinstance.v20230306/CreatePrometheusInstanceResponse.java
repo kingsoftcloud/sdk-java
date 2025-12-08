@@ -5,17 +5,21 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname CreatePrometheusInstanceResponse @Description CreatePrometheusInstance 返回体
- */
+* @Classname CreatePrometheusInstanceResponse
+* @Description CreatePrometheusInstance 返回体
+*/
 @Data
 @ToString
 public class CreatePrometheusInstanceResponse extends BaseResponseModel {
+    /**请求id*/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
-
-  // 返回结果，需要按需扩展
+    /**实例id*/
+    @JsonProperty("InstanceId")
+    private String InstanceId;
 
 }

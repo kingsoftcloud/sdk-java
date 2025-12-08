@@ -5,17 +5,71 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname DescribeSecurityGroupResponse @Description DescribeSecurityGroup 返回体
- */
+* @Classname DescribeSecurityGroupResponse
+* @Description DescribeSecurityGroup 返回体
+*/
 @Data
 @ToString
 public class DescribeSecurityGroupResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-  // 返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("Id")
+        private String Id;
+
+        /***/
+        @JsonProperty("Name")
+        private String Name;
+
+        /***/
+        @JsonProperty("SecurityRules")
+        private List<SecurityRulesDto> SecurityRules;
+
+        @Data
+        @ToString
+        public static class SecurityRulesDto {
+            /***/
+            @JsonProperty("Id")
+            private String Id;
+
+            /***/
+            @JsonProperty("Cidr")
+            private String Cidr;
+
+            /***/
+            @JsonProperty("Protocol")
+            private String Protocol;
+
+            /***/
+            @JsonProperty("FromPort")
+            private String FromPort;
+
+            /***/
+            @JsonProperty("ToPort")
+            private String ToPort;
+
+        }
+
+        /***/
+        @JsonProperty("CreateTime")
+        private String CreateTime;
+
+        /***/
+        @JsonProperty("UpdateTime")
+        private String UpdateTime;
+
+    }
 
 }

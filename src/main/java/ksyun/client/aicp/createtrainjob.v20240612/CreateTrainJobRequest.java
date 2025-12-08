@@ -61,8 +61,6 @@ public class CreateTrainJobRequest{
     private String ImageSource;
 
     /**框架副本配置*/
-    @KsYunField(name="FrameworkReplicas")
-
     private FrameworkReplicasDto FrameworkReplicasList;
 
     @Data
@@ -71,16 +69,21 @@ public class CreateTrainJobRequest{
         /**当Framework=tensorflow必填，范围范围0-1000*/
         @KsYunField(name="Chief")
         private Integer Chief;
+
         /**当Framework=tensorflow时候必填，范围0-1000*/
         @KsYunField(name="Evaluator")
         private Integer Evaluator;
+
         /**当框架Framework=tensorflow时候必填，范围0-1000*/
         @KsYunField(name="PS")
         private Integer PS;
+
         /**0-1000*/
         @KsYunField(name="Master")
         private Integer Master;
+
     }
+
     /**重启策略，可选值：
 · Always
 · OnFailure
@@ -91,13 +94,18 @@ public class CreateTrainJobRequest{
     /**环境变量*/
     @KsYunField(name="Envs",type=2)
     private List<EnvsDto> EnvsList;
+
     @Data
     @ToString
     public static class EnvsDto {
         /***/
+        @KsYunField(name="Name")
         private String Name;
+
         /***/
+        @KsYunField(name="Value")
         private String Value;
+
     }
 
     /**是否开启Tensorboard，默认不开启*/
@@ -140,20 +148,27 @@ public class CreateTrainJobRequest{
 */
     @KsYunField(name="StorageConfigs",type=2)
     private List<StorageConfigsDto> StorageConfigsList;
+
     @Data
     @ToString
     public static class StorageConfigsDto {
         /**存储配置id*/
+        @KsYunField(name="StorageConfigId")
         private String StorageConfigId;
+
         /**挂载路径*/
+        @KsYunField(name="MountPath")
         private String MountPath;
+
         /**可选值 ：
 • Code 代码挂载
 • DataSet：数据集挂载
 • Output：输出挂载
 • Tensorboard Tensorboard挂载
 如果SupportTensorboard = true,必须有一个Tensorboard类型的存储配置*/
+        @KsYunField(name="StorageConfigType")
         private String StorageConfigType;
+
     }
 
     /**任务可见性，可选：Creator|QueueMember 默认：Creator*/

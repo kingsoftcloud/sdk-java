@@ -5,17 +5,17 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname ModifyNodePoolScaleUpPolicyResponse @Description ModifyNodePoolScaleUpPolicy 返回体
- */
+* @Classname ModifyNodePoolScaleUpPolicyResponse
+* @Description ModifyNodePoolScaleUpPolicy 返回体
+*/
 @Data
 @ToString
 public class ModifyNodePoolScaleUpPolicyResponse extends BaseResponseModel {
-
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
-
-  // 返回结果，需要按需扩展
+    /**请求id*/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

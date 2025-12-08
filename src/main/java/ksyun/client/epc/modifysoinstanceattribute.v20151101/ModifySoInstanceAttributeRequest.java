@@ -69,4 +69,12 @@ public class ModifySoInstanceAttributeRequest{
     @KsYunField(name="SoZoneId")
     private String SoZoneId;
 
+    /**  实例自定义数据，提供一种自定义实例启动行为及传入数据的功能。
+• 传入数据时，设置的自定义数据必须经过Base64编码，且Base64编码前的自定义数据大小不能超过16KB。
+• 传入空字符串时，将清空自定义数据。
+示例值：IyEvYmluL2Jhc2gKdG91Y2ggL3RtcC91c2VyZG******
+*/
+    @KsYunField(name="UserData")
+    private String UserData;
+
 }

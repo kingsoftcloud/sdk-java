@@ -5,17 +5,64 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname ListAccessKeysResponse @Description ListAccessKeys 返回体
- */
+* @Classname ListAccessKeysResponse
+* @Description ListAccessKeys 返回体
+*/
 @Data
 @ToString
 public class ListAccessKeysResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("ListAccessKeyResult")
+    private ListAccessKeyResultDto ListAccessKeyResult;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    @Data
+    @ToString
+    public static class ListAccessKeyResultDto {
+        /***/
+        @JsonProperty("AccessKeyMetadata")
+        private AccessKeyMetadataDto AccessKeyMetadata;
 
-  // 返回结果，需要按需扩展
+        @Data
+        @ToString
+        public static class AccessKeyMetadataDto {
+            /***/
+            @JsonProperty("member")
+            private List<MemberDto> Member;
+
+            @Data
+            @ToString
+            public static class MemberDto {
+                /***/
+                @JsonProperty("UserName")
+                private String UserName;
+
+                /***/
+                @JsonProperty("AccessKeyId")
+                private String AccessKeyId;
+
+                /***/
+                @JsonProperty("Status")
+                private String Status;
+
+                /***/
+                @JsonProperty("CreateDate")
+                private String CreateDate;
+
+                /***/
+                @JsonProperty("AkLastUsedTime")
+                private String AkLastUsedTime;
+
+            }
+
+        }
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

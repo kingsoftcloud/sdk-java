@@ -5,17 +5,57 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname RegisterInstancesWithListenerResponse @Description RegisterInstancesWithListener 返回体
- */
+* @Classname RegisterInstancesWithListenerResponse
+* @Description RegisterInstancesWithListener 返回体
+*/
 @Data
 @ToString
 public class RegisterInstancesWithListenerResponse extends BaseResponseModel {
+    /**请求ID*/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /**后端服务器的ID*/
+    @JsonProperty("RegisterId")
+    private String RegisterId;
 
-  // 返回结果，需要按需扩展
+    /**真实服务器的状态，健康，不健康，检查未完成，检查未开启*/
+    @JsonProperty("RealServerState")
+    private String RealServerState;
+
+    /**后端服务器的类型*/
+    @JsonProperty("RealServerType")
+    private String RealServerType;
+
+    /**监听器的ID*/
+    @JsonProperty("ListenerId")
+    private String ListenerId;
+
+    /**实例的权重*/
+    @JsonProperty("Weight")
+    private Integer Weight;
+
+    /**真实服务的IP*/
+    @JsonProperty("RealServerIp")
+    private String RealServerIp;
+
+    /**后端服务的端口*/
+    @JsonProperty("RealServerPort")
+    private Integer RealServerPort;
+
+    /**标签*/
+    @JsonProperty("Tag")
+    private String Tag;
+
+    /**RealServer的主备类型，仅MasterSlave监听器有此参数*/
+    @JsonProperty("MasterSlaveType")
+    private String MasterSlaveType;
+
+    /**弹性网卡ID*/
+    @JsonProperty("NetworkInterfaceId")
+    private String NetworkInterfaceId;
 
 }

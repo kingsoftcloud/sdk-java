@@ -5,17 +5,42 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname InsertInstanceToESResponse @Description InsertInstanceToES 返回体
- */
+* @Classname InsertInstanceToESResponse
+* @Description InsertInstanceToES 返回体
+*/
 @Data
 @ToString
 public class InsertInstanceToESResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("Data")
+    private List<DataDto> Data;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("instanceId")
+        private String InstanceId;
 
-  // 返回结果，需要按需扩展
+        /***/
+        @JsonProperty("status")
+        private Integer Status;
+
+        /***/
+        @JsonProperty("result")
+        private String Result;
+
+        /***/
+        @JsonProperty("reason")
+        private String Reason;
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

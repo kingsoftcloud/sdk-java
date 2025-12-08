@@ -5,17 +5,42 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname DisassociateIpResponse @Description DisassociateIp 返回体
- */
+* @Classname DisassociateIpResponse
+* @Description DisassociateIp 返回体
+*/
 @Data
 @ToString
 public class DisassociateIpResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /***/
+    @JsonProperty("DeletedEipSet")
+    private List<DeletedEipSetDto> DeletedEipSet;
 
-  // 返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class DeletedEipSetDto {
+        /***/
+        @JsonProperty("KnadId")
+        private String KnadId;
+
+        /***/
+        @JsonProperty("OldIpCount")
+        private Integer OldIpCount;
+
+        /***/
+        @JsonProperty("IpCount")
+        private Integer IpCount;
+
+        /***/
+        @JsonProperty("Return")
+        private Boolean ReturnField;
+
+    }
 
 }

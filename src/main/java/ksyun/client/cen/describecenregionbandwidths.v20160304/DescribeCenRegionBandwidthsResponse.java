@@ -5,17 +5,54 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname DescribeCenRegionBandwidthsResponse @Description DescribeCenRegionBandwidths 返回体
- */
+* @Classname DescribeCenRegionBandwidthsResponse
+* @Description DescribeCenRegionBandwidths 返回体
+*/
 @Data
 @ToString
 public class DescribeCenRegionBandwidthsResponse extends BaseResponseModel {
+    /**请求ID*/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /**获取另一页返回结果的 token.*/
+    @JsonProperty("NextToken")
+    private String NextToken;
 
-  // 返回结果，需要按需扩展
+    /**跨地域带宽的信息*/
+    @JsonProperty("CenRegionBandwidthSet")
+    private List<CenRegionBandwidthSetDto> CenRegionBandwidthSet;
+
+    @Data
+    @ToString
+    public static class CenRegionBandwidthSetDto {
+        /**带宽包的ID*/
+        @JsonProperty("CenBandWidthPackageId")
+        private String CenBandWidthPackageId;
+
+        /**云企业网的ID*/
+        @JsonProperty("CenId")
+        private String CenId;
+
+        /**本端地域名称*/
+        @JsonProperty("LocalRegion")
+        private String LocalRegion;
+
+        /**对端地域名称*/
+        @JsonProperty("RemoteRegion")
+        private String RemoteRegion;
+
+        /**跨地域间分配的带宽*/
+        @JsonProperty("InterBandWidth")
+        private Integer InterBandWidth;
+
+        /**跨地域带宽的ID*/
+        @JsonProperty("CenRegionBandwidthId")
+        private String CenRegionBandwidthId;
+
+    }
 
 }

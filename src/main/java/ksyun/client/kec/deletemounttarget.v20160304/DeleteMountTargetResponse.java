@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DeleteMountTargetResponse
@@ -14,13 +14,21 @@ import java.util.Set;
 @Data
 @ToString
 public class DeleteMountTargetResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("DeleteMountTargetResponse")
+    private DeleteMountTargetResponseDto DeleteMountTargetResponse;
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    @Data
+    @ToString
+    public static class DeleteMountTargetResponseDto {
+        /***/
+        @JsonProperty("RequestId")
+        private String RequestId;
 
-    //返回结果，需要按需扩展
+        /***/
+        @JsonProperty("Return")
+        private String ReturnField;
+
+    }
 
 }

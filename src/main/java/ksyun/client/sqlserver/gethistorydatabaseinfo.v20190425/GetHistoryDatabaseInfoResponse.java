@@ -5,17 +5,37 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname GetHistoryDatabaseInfoResponse @Description GetHistoryDatabaseInfo 返回体
- */
+* @Classname GetHistoryDatabaseInfoResponse
+* @Description GetHistoryDatabaseInfo 返回体
+*/
 @Data
 @ToString
 public class GetHistoryDatabaseInfoResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("Databases")
+    private List<DatabasesDto> Databases;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    @Data
+    @ToString
+    public static class DatabasesDto {
+        /**数据库名称
 
-  // 返回结果，需要按需扩展
+*/
+        @JsonProperty("DatabaseName")
+        private String DatabaseName;
+
+        /**数据库表名list
+*/
+        @JsonProperty("TableNames")
+        private List<String> TableNames;
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

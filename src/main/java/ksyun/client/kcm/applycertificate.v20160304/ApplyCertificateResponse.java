@@ -5,17 +5,75 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname ApplyCertificateResponse @Description ApplyCertificate 返回体
- */
+* @Classname ApplyCertificateResponse
+* @Description ApplyCertificate 返回体
+*/
 @Data
 @ToString
 public class ApplyCertificateResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("ApplyCertificateResponse")
+    private ApplyCertificateResponseDto ApplyCertificateResponse;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    @Data
+    @ToString
+    public static class ApplyCertificateResponseDto {
+        /***/
+        @JsonProperty("RequestId")
+        private String RequestId;
 
-  // 返回结果，需要按需扩展
+        /***/
+        @JsonProperty("Certificate")
+        private CertificateDto Certificate;
+
+        @Data
+        @ToString
+        public static class CertificateDto {
+            /***/
+            @JsonProperty("CertificateId")
+            private String CertificateId;
+
+            /***/
+            @JsonProperty("MainDomain")
+            private String MainDomain;
+
+            /***/
+            @JsonProperty("CertificateBrand")
+            private String CertificateBrand;
+
+            /***/
+            @JsonProperty("CertificateLevel")
+            private String CertificateLevel;
+
+            /***/
+            @JsonProperty("CertificateName")
+            private String CertificateName;
+
+            /***/
+            @JsonProperty("CertificateCode")
+            private String CertificateCode;
+
+            /***/
+            @JsonProperty("CertificateStatus")
+            private String CertificateStatus;
+
+            /***/
+            @JsonProperty("YearLength")
+            private String YearLength;
+
+            /***/
+            @JsonProperty("DomainCount")
+            private String DomainCount;
+
+            /***/
+            @JsonProperty("WildcardCount")
+            private String WildcardCount;
+
+        }
+
+    }
 
 }

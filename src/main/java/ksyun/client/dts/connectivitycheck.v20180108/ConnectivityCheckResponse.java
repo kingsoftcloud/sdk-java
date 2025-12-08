@@ -5,17 +5,34 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname ConnectivityCheckResponse @Description ConnectivityCheck 返回体
- */
+* @Classname ConnectivityCheckResponse
+* @Description ConnectivityCheck 返回体
+*/
 @Data
 @ToString
 public class ConnectivityCheckResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("Status")
+        private String Status;
 
-  // 返回结果，需要按需扩展
+        /***/
+        @JsonProperty("Message")
+        private String Message;
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

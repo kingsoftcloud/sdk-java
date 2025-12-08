@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname RunSoInstancesResponse
@@ -14,13 +14,16 @@ import java.util.Set;
 @Data
 @ToString
 public class RunSoInstancesResponse extends BaseResponseModel {
+    /**实例ID*/
+    @JsonProperty("InstanceIds")
+    private List<String> InstanceIds;
 
-    /**
-     * 请求id
-     */
+    /**请求ID*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Return")
+    private Boolean ReturnField;
 
 }

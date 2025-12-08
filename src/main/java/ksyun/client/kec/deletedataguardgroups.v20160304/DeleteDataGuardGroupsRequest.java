@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DeleteDataGuardGroupsRequest{
     /**待删除的容灾分组ID*/
-    @KsYunField(name="DataGuardId")
+    @KsYunField(name="DataGuardId",type=2)
     private List<String> DataGuardIdList;
 
 }

@@ -15,15 +15,15 @@ import java.util.Arrays;
 @Data
 public class DescribeEpcsRequest{
     /**服务器所属项目的ID*/
-    @KsYunField(name="ProjectId")
+    @KsYunField(name="ProjectId",type=2)
     private List<String> ProjectIdList;
 
     /**裸金属服务器资源ID，可查询多个ID的实例信息*/
-    @KsYunField(name="HostId")
+    @KsYunField(name="HostId",type=2)
     private List<String> HostIdList;
 
     /**筛选Filter*/
-    @KsYunField(name="Filter")
+    @KsYunField(name="Filter",type=2)
     private List<FilterDto> FilterList;
 
     @Data
@@ -44,10 +44,12 @@ public class DescribeEpcsRequest{
 - private-ip-address，私网Ip地址 
 */
         @KsYunField(name="Name")
-                private String Name;
+        private String Name;
+
         /***/
-        @KsYunField(name="Value")
-                private List<String> ValueList;
+        @KsYunField(name="Value",type=2)
+        private List<String> ValueList;
+
     }
 
     /**单次调用可返回的最大条目数量*/

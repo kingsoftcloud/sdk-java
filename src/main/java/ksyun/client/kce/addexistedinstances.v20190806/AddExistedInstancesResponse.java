@@ -5,17 +5,38 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname AddExistedInstancesResponse @Description AddExistedInstances 返回体
- */
+* @Classname AddExistedInstancesResponse
+* @Description AddExistedInstances 返回体
+*/
 @Data
 @ToString
 public class AddExistedInstancesResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("InstanceSet")
+    private List<InstanceSetDto> InstanceSet;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    @Data
+    @ToString
+    public static class InstanceSetDto {
+        /**实例id*/
+        @JsonProperty("InstanceId")
+        private String InstanceId;
 
-  // 返回结果，需要按需扩展
+        /**添加结果*/
+        @JsonProperty("Return")
+        private Boolean ReturnField;
+
+        /**添加成功，该字段返回为空；添加失败，返回失败的原因。*/
+        @JsonProperty("Reason")
+        private String Reason;
+
+    }
+
+    /**请求id*/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

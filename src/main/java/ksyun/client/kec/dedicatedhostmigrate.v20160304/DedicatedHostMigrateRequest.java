@@ -19,7 +19,7 @@ public class DedicatedHostMigrateRequest{
     private String DedicatedClusterId;
 
     /**专属宿主机Id*/
-    @KsYunField(name="DedicatedHostId")
+    @KsYunField(name="DedicatedHostId",type=2)
     private List<String> DedicatedHostIdList;
 
 }

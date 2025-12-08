@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class StartInstancesRequest{
     /**待启动实例ID列表，N的范围为1-100*/
-    @KsYunField(name="InstanceId")
+    @KsYunField(name="InstanceId",type=2)
     private List<String> InstanceIdList;
 
 }

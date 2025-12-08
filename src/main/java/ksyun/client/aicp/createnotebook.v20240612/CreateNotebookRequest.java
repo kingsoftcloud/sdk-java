@@ -53,17 +53,24 @@ public class CreateNotebookRequest{
     /**存储配置列表*/
     @KsYunField(name="StorageConfigs",type=2)
     private List<StorageConfigsDto> StorageConfigsList;
+
     @Data
     @ToString
     public static class StorageConfigsDto {
         /**存储配置ID*/
+        @KsYunField(name="StorageConfigId")
         private String StorageConfigId;
+
         /**挂载路径，可不设置，默认用存储配置的挂载路径*/
+        @KsYunField(name="MountPath")
         private String MountPath;
+
         /**挂载类型：
 • DataSet（数据集）
 • Output（输出）*/
+        @KsYunField(name="StorageConfigType")
         private String StorageConfigType;
+
     }
 
     /**是否自动保存镜像*/
@@ -73,15 +80,22 @@ public class CreateNotebookRequest{
     /**开放服务端口列表*/
     @KsYunField(name="ServiceConfigs",type=2)
     private List<ServiceConfigsDto> ServiceConfigsList;
+
     @Data
     @ToString
     public static class ServiceConfigsDto {
         /**服务名称*/
+        @KsYunField(name="Service")
         private String Service;
+
         /**端口*/
+        @KsYunField(name="Port")
         private Integer Port;
+
         /**是否开放公网*/
+        @KsYunField(name="EnablePublicNetwork")
         private Boolean EnablePublicNetwork;
+
     }
 
     /**镜像来源

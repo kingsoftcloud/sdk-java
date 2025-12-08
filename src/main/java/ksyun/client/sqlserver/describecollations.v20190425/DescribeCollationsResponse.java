@@ -5,17 +5,34 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname DescribeCollationsResponse @Description DescribeCollations 返回体
- */
+* @Classname DescribeCollationsResponse
+* @Description DescribeCollations 返回体
+*/
 @Data
 @ToString
 public class DescribeCollationsResponse extends BaseResponseModel {
+    /**返回字符集列表
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+```json
+注意：返回较多，此处返回示例为部分
+```*/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-  // 返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("Collations")
+        private List<String> Collations;
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

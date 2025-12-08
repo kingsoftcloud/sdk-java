@@ -1,98 +1,116 @@
 package ksyun.client.clickhouse.createinstance.v20210101;
 
 import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
 
 /**
- * @Classname CreateInstanceRequest @Description 请求参数
- */
+* @Classname CreateInstanceRequest
+* @Description 请求参数
+*/
 @Data
-public class CreateInstanceRequest {
-  /** 商品类型。可选：ClickHouse_Single（单副本）；ClickHouse（高可用）。 */
-  @KsYunField(name = "ProductType")
-  private String ProductType;
+public class CreateInstanceRequest{
+    /**商品类型。可选：ClickHouse_Single（单副本）；ClickHouse（高可用）。*/
+    @KsYunField(name="ProductType")
+    private String ProductType;
 
-  /** 实例名称。 */
-  @KsYunField(name = "InstanceName")
-  private String InstanceName;
+    /**实例名称。*/
+    @KsYunField(name="InstanceName")
+    private String InstanceName;
 
-  /** 实例套餐code。如：bd_ck_0，single_ck_0等。 */
-  @KsYunField(name = "InstanceType")
-  private String InstanceType;
+    /**实例套餐code。如：bd_ck_0，single_ck_0等。
 
-  /** 管理员名称,默认admin。 */
-  @KsYunField(name = "AdminUser")
-  private String AdminUser;
+*/
+    @KsYunField(name="InstanceType")
+    private String InstanceType;
 
-  /** 管理员密码。 */
-  @KsYunField(name = "AdminPassword")
-  private String AdminPassword;
+    /**管理员名称,默认admin。*/
+    @KsYunField(name="AdminUser")
+    private String AdminUser;
 
-  /** VPC网络ID。 */
-  @KsYunField(name = "VpcId")
-  private String VpcId;
+    /**管理员密码。*/
+    @KsYunField(name="AdminPassword")
+    private String AdminPassword;
 
-  /** 终端子网ID。 */
-  @KsYunField(name = "SubnetId")
-  private String SubnetId;
+    /**VPC网络ID。*/
+    @KsYunField(name="VpcId")
+    private String VpcId;
 
-  /** 实例内核类型，默认：clickhouse。 */
-  @KsYunField(name = "Engine")
-  private String Engine;
+    /**终端子网ID。*/
+    @KsYunField(name="SubnetId")
+    private String SubnetId;
 
-  /** 实例内核版本号。 可选"21.8"，"22.8"。 */
-  @KsYunField(name = "EngineVersion")
-  private String EngineVersion;
+    /**实例内核类型，默认：clickhouse。*/
+    @KsYunField(name="Engine")
+    private String Engine;
 
-  /** 项目ID。 */
-  @KsYunField(name = "ProjectId")
-  private String ProjectId;
+    /**实例内核版本号。	可选"21.8"，"22.8"。*/
+    @KsYunField(name="EngineVersion")
+    private String EngineVersion;
 
-  /** 计费类型。87 按量计费 */
-  @KsYunField(name = "BillType")
-  private Integer BillType;
+    /**项目ID。*/
+    @KsYunField(name="ProjectId")
+    private String ProjectId;
 
-  /** 计费区间(供包年包月计费方式使用),默认1。 */
-  @KsYunField(name = "Duration")
-  private Integer Duration;
+    /**计费类型。87 按量计费*/
+    @KsYunField(name="BillType")
+    private Integer BillType;
 
-  /** 存储大小，单位：GB。 */
-  @KsYunField(name = "EbsSize")
-  private Integer EbsSize;
+    /**计费区间(供包年包月计费方式使用),默认1。*/
+    @KsYunField(name="Duration")
+    private Integer Duration;
 
-  /** 存储类型。可选：CloudDisk，LocalDisk默认：CloudDisk。 */
-  @KsYunField(name = "EbsType")
-  private String EbsType;
+    /**存储大小，单位：GB。*/
+    @KsYunField(name="EbsSize")
+    private Integer EbsSize;
 
-  /** 内存大小，单位：GB。需要同实例套餐中一致。 */
-  @KsYunField(name = "Mem")
-  private Integer Mem;
+    /**存储类型。可选：CloudDisk，LocalDisk默认：CloudDisk。*/
+    @KsYunField(name="EbsType")
+    private String EbsType;
 
-  /** cpu核数。需要同实例套餐中一致。 */
-  @KsYunField(name = "Cpu")
-  private Integer Cpu;
+    /**内存大小，单位：GB。需要同实例套餐中一致。*/
+    @KsYunField(name="Mem")
+    private Integer Mem;
 
-  /** 实例tcp端口，默认：9000。 */
-  @KsYunField(name = "TcpPort")
-  private Integer TcpPort;
+    /**cpu核数。需要同实例套餐中一致。*/
+    @KsYunField(name="Cpu")
+    private Integer Cpu;
 
-  /** 实例http端口，默认：8123。 */
-  @KsYunField(name = "HttpPort")
-  private Integer HttpPort;
+    /**实例tcp端口，默认：9000。*/
+    @KsYunField(name="TcpPort")
+    private Integer TcpPort;
 
-  /** 可用区。 */
-  @KsYunField(name = "Az")
-  private String Az;
+    /**实例http端口，默认：8123。*/
+    @KsYunField(name="HttpPort")
+    private Integer HttpPort;
 
-  /** 实例节点数量，默认3。 */
-  @KsYunField(name = "NodeNum")
-  private Integer NodeNum;
+    /**可用区。*/
+    @KsYunField(name="Az")
+    private String Az;
 
-  /** 备份时段选择。格式：HH:mm-HH:mm。 */
-  @KsYunField(name = "PreferredBackupTime")
-  private String PreferredBackupTime;
+    /**实例节点数量，默认3。*/
+    @KsYunField(name="NodeNum")
+    private Integer NodeNum;
 
-  /** 安全组ID，如果绑定安全组，需要添加。 */
-  @KsYunField(name = "SecurityGroupId")
-  private String SecurityGroupId;
+    /**备份时段选择。格式：HH:mm-HH:mm。*/
+    @KsYunField(name="PreferredBackupTime")
+    private String PreferredBackupTime;
+
+    /**安全组ID，如果绑定安全组，需要添加。*/
+    @KsYunField(name="SecurityGroupId")
+    private String SecurityGroupId;
+
+    /**产品类型(是否试用)
+
+```json
+1:正式产品
+2:试用产品
+```*/
+    @KsYunField(name="ProductWhat")
+    private Integer ProductWhat;
+
 }

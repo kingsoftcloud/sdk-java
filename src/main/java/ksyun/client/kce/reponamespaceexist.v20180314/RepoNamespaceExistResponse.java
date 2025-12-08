@@ -5,17 +5,21 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname RepoNamespaceExistResponse @Description RepoNamespaceExist 返回体
- */
+* @Classname RepoNamespaceExistResponse
+* @Description RepoNamespaceExist 返回体
+*/
 @Data
 @ToString
 public class RepoNamespaceExistResponse extends BaseResponseModel {
+    /**请求id*/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
-
-  // 返回结果，需要按需扩展
+    /**命名空间是否存在*/
+    @JsonProperty("Exist")
+    private Boolean Exist;
 
 }

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname CreateUsageDetailDataExportTaskResponse
@@ -14,13 +14,20 @@ import java.util.Set;
 @Data
 @ToString
 public class CreateUsageDetailDataExportTaskResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("StartTime")
+    private String StartTime;
 
-    /**
-     * 请求id
-     */
+    /***/
+    @JsonProperty("EndTime")
+    private String EndTime;
+
+    /***/
+    @JsonProperty("TaskId")
+    private Integer TaskId;
+
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
-
-    //返回结果，需要按需扩展
+    private String RequestId;
 
 }

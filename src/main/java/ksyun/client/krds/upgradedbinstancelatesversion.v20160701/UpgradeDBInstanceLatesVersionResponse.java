@@ -5,17 +5,120 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname UpgradeDBInstanceLatesVersionResponse @Description UpgradeDBInstanceLatesVersion 返回体
- */
+* @Classname UpgradeDBInstanceLatesVersionResponse
+* @Description UpgradeDBInstanceLatesVersion 返回体
+*/
 @Data
 @ToString
 public class UpgradeDBInstanceLatesVersionResponse extends BaseResponseModel {
+    /**返回操作实例详情*/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("Instances")
+        private List<InstancesDto> Instances;
 
-  // 返回结果，需要按需扩展
+        @Data
+        @ToString
+        public static class InstancesDto {
+            /***/
+            @JsonProperty("DBInstanceClass")
+            private DBInstanceClassDto DBInstanceClass;
+
+            @Data
+            @ToString
+            public static class DBInstanceClassDto {
+                /***/
+                @JsonProperty("Id")
+                private String Id;
+
+                /***/
+                @JsonProperty("Iops")
+                private Integer Iops;
+
+                /***/
+                @JsonProperty("Vcpus")
+                private Integer Vcpus;
+
+                /***/
+                @JsonProperty("Disk")
+                private Integer Disk;
+
+                /***/
+                @JsonProperty("Ram")
+                private Integer Ram;
+
+                /***/
+                @JsonProperty("Mem")
+                private Integer Mem;
+
+                /***/
+                @JsonProperty("MaxConn")
+                private Integer MaxConn;
+
+            }
+
+            /***/
+            @JsonProperty("MiniVersion")
+            private String MiniVersion;
+
+            /***/
+            @JsonProperty("DBInstanceIdentifier")
+            private String DBInstanceIdentifier;
+
+            /***/
+            @JsonProperty("DBInstanceName")
+            private String DBInstanceName;
+
+            /***/
+            @JsonProperty("DBInstanceStatus")
+            private String DBInstanceStatus;
+
+            /***/
+            @JsonProperty("DBInstanceType")
+            private String DBInstanceType;
+
+            /***/
+            @JsonProperty("DBParameterGroupId")
+            private String DBParameterGroupId;
+
+            /***/
+            @JsonProperty("PreferredBackupTime")
+            private String PreferredBackupTime;
+
+            /***/
+            @JsonProperty("GroupId")
+            private String GroupId;
+
+            /***/
+            @JsonProperty("SecurityGroupId")
+            private String SecurityGroupId;
+
+            /***/
+            @JsonProperty("Vip")
+            private String Vip;
+
+            /***/
+            @JsonProperty("Port")
+            private Integer Port;
+
+            /***/
+            @JsonProperty("Engine")
+            private String Engine;
+
+        }
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

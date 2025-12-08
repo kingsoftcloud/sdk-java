@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeProductCodeResponse
@@ -14,13 +14,25 @@ import java.util.Set;
 @Data
 @ToString
 public class DescribeProductCodeResponse extends BaseResponseModel {
-
-    /**
-     * 请求id
-     */
+    /**当前请求的RequestId*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /**产品线集合*/
+    @JsonProperty("ProductGroupSet")
+    private List<ProductGroupSetDto> ProductGroupSet;
+
+    @Data
+    @ToString
+    public static class ProductGroupSetDto {
+        /**产品线code*/
+        @JsonProperty("Key")
+        private String Key;
+
+        /**产品线name*/
+        @JsonProperty("Value")
+        private String Value;
+
+    }
 
 }

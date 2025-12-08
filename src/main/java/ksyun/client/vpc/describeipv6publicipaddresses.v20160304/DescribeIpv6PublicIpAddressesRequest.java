@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class DescribeIpv6PublicIpAddressesRequest{
     /**多个IPV6公网的ID*/
-    @KsYunField(name="Ipv6PublicIpAddressId")
+    @KsYunField(name="Ipv6PublicIpAddressId",type=2)
     private List<String> Ipv6PublicIpAddressIdList;
 
     /**筛选Filter*/
-    @KsYunField(name="Filter")
+    @KsYunField(name="Filter",type=2)
     private List<FilterDto> FilterList;
 
     @Data
@@ -28,10 +28,12 @@ public class DescribeIpv6PublicIpAddressesRequest{
         /**有效值：
 network-interface-id，网卡的ID*/
         @KsYunField(name="Name")
-                private String Name;
+        private String Name;
+
         /***/
-        @KsYunField(name="Value")
-                private List<String> ValueList;
+        @KsYunField(name="Value",type=2)
+        private List<String> ValueList;
+
     }
 
     /**单次调用可返回的最大条目数量*/

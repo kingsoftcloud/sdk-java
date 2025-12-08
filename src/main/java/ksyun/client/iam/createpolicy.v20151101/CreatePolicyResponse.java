@@ -5,17 +5,71 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname CreatePolicyResponse @Description CreatePolicy 返回体
- */
+* @Classname CreatePolicyResponse
+* @Description CreatePolicy 返回体
+*/
 @Data
 @ToString
 public class CreatePolicyResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("CreatePolicyResult")
+    private CreatePolicyResultDto CreatePolicyResult;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    @Data
+    @ToString
+    public static class CreatePolicyResultDto {
+        /***/
+        @JsonProperty("Policy")
+        private PolicyDto Policy;
 
-  // 返回结果，需要按需扩展
+        @Data
+        @ToString
+        public static class PolicyDto {
+            /***/
+            @JsonProperty("AttachmentCount")
+            private String AttachmentCount;
+
+            /***/
+            @JsonProperty("CreateDate")
+            private String CreateDate;
+
+            /***/
+            @JsonProperty("DefaultVersionId")
+            private String DefaultVersionId;
+
+            /***/
+            @JsonProperty("Description")
+            private String Description;
+
+            /***/
+            @JsonProperty("Krn")
+            private String Krn;
+
+            /***/
+            @JsonProperty("Path")
+            private String Path;
+
+            /***/
+            @JsonProperty("PolicyId")
+            private String PolicyId;
+
+            /***/
+            @JsonProperty("PolicyName")
+            private String PolicyName;
+
+            /***/
+            @JsonProperty("UpdateDate")
+            private String UpdateDate;
+
+        }
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

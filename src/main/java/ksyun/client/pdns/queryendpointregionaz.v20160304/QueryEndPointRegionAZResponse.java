@@ -5,17 +5,21 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname QueryEndPointRegionAZResponse @Description QueryEndPointRegionAZ 返回体
- */
+* @Classname QueryEndPointRegionAZResponse
+* @Description QueryEndPointRegionAZ 返回体
+*/
 @Data
 @ToString
 public class QueryEndPointRegionAZResponse extends BaseResponseModel {
+    /**请求ID*/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
-
-  // 返回结果，需要按需扩展
+    /**查询转发Zone的可用机房列表*/
+    @JsonProperty("availableAz")
+    private List<String> AvailableAz;
 
 }

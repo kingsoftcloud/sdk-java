@@ -55,7 +55,7 @@ public class RunInstancesRequest{
     private Integer PurchaseTime;
 
     /**实例绑定的安全组，目前仅支持绑定一个安全组*/
-    @KsYunField(name="SecurityGroupId")
+    @KsYunField(name="SecurityGroupId",type=2)
     private List<String> SecurityGroupIdList;
 
     /**私有IP地址，指定子网IP地址范围内的任意有效值，代表实例的主IP地址，只能选择一个，绑定到主网卡；如果未指定该参数，系统自动从有效地址池中随机选取一个*/
@@ -75,7 +75,7 @@ public class RunInstancesRequest{
     private Integer ProjectId;
 
     /**数据盘是否随实例释放*/
-    @KsYunField(name="DataDisk")
+    @KsYunField(name="DataDisk",type=2)
     private List<DataDiskDto> DataDiskList;
 
     @Data
@@ -83,20 +83,24 @@ public class RunInstancesRequest{
     public static class DataDiskDto {
         /**数据盘是否随实例释放*/
         @KsYunField(name="DeleteWithInstance")
-                private Boolean DeleteWithInstance;
+        private Boolean DeleteWithInstance;
+
         /**数据盘类型*/
         @KsYunField(name="Type")
-                private String Type;
+        private String Type;
+
         /**数据盘大小*/
         @KsYunField(name="Size")
-                private Integer Size;
+        private Integer Size;
+
         /**创建云盘所用的快照*/
         @KsYunField(name="SnapshotId")
-                private String SnapshotId;
+        private String SnapshotId;
+
     }
 
     /**辅网卡*/
-    @KsYunField(name="NetworkInterface")
+    @KsYunField(name="NetworkInterface",type=2)
     private List<NetworkInterfaceDto> NetworkInterfaceList;
 
     @Data
@@ -104,13 +108,16 @@ public class RunInstancesRequest{
     public static class NetworkInterfaceDto {
         /**辅网卡的子网id不创建辅网卡时非必填，创建辅网卡时必填*/
         @KsYunField(name="SubnetId")
-                private String SubnetId;
+        private String SubnetId;
+
         /**辅网卡的安全组id不创建辅网卡时非必填，创建辅网卡时必填*/
-        @KsYunField(name="SecurityGroupId")
-                private List<String> SecurityGroupIdList;
+        @KsYunField(name="SecurityGroupId",type=2)
+        private List<String> SecurityGroupIdList;
+
         /**辅网卡的内网ip,创建辅网卡传了按传的ip开机，不传自动分配*/
         @KsYunField(name="PrivateIpAddress")
-                private String PrivateIpAddress;
+        private String PrivateIpAddress;
+
     }
 
     /**用户自定义数据*/
@@ -118,8 +125,6 @@ public class RunInstancesRequest{
     private String UserData;
 
     /**系统盘*/
-    @KsYunField(name="SystemDisk")
-
     private SystemDiskDto SystemDiskList;
 
     @Data
@@ -128,10 +133,13 @@ public class RunInstancesRequest{
         /**系统盘类型*/
         @KsYunField(name="DiskType")
         private String DiskType;
+
         /**系统盘大小*/
         @KsYunField(name="DiskSize")
         private Integer DiskSize;
+
     }
+
     /**实例启动模版ID，如填写了此项，则启动模板中已包含的RunInstances其他参数不生效，启动模板未指定的参数若调用RunInstances时额外传入则可生效，如果批量创建，实例名称后缀依然存在。【传modelId，使用默认版本。传modelId和modelVersion，使用传递的版本】
 示例值：3f0d6229-ed2d-4c9c-8554-b9433517cf8b*/
     @KsYunField(name="ModelId")
@@ -174,7 +182,7 @@ public class RunInstancesRequest{
     private Integer AddressPurchaseTime;
 
     /**秘钥ID*/
-    @KsYunField(name="KeyId")
+    @KsYunField(name="KeyId",type=2)
     private List<String> KeyIdList;
 
     /**是否保留镜像设置*/
@@ -194,7 +202,7 @@ public class RunInstancesRequest{
     private Boolean FailureAutoDelete;
 
     /**标签信息*/
-    @KsYunField(name="Tag")
+    @KsYunField(name="Tag",type=2)
     private List<TagDto> TagList;
 
     @Data
@@ -202,13 +210,16 @@ public class RunInstancesRequest{
     public static class TagDto {
         /**标签键值*/
         @KsYunField(name="Key")
-                private String Key;
+        private String Key;
+
         /**标签Id*/
         @KsYunField(name="Id")
-                private Integer Id;
+        private Integer Id;
+
         /**标签值*/
         @KsYunField(name="Value")
-                private String Value;
+        private String Value;
+
     }
 
     /**容灾组id*/
@@ -216,8 +227,6 @@ public class RunInstancesRequest{
     private String DataGuardId;
 
     /***/
-    @KsYunField(name="InstanceConfigure")
-
     private InstanceConfigureDto InstanceConfigureList;
 
     @Data
@@ -226,13 +235,17 @@ public class RunInstancesRequest{
         /**cpu*/
         @KsYunField(name="VCPU")
         private String VCPU;
+
         /**内存*/
         @KsYunField(name="MemoryGb")
         private String MemoryGb;
+
         /**数据卷容量，单位GB*/
         @KsYunField(name="DataDiskGb")
         private String DataDiskGb;
+
     }
+
     /**是否支持联网增强*/
     @KsYunField(name="SriovNetSupport")
     private Boolean SriovNetSupport;

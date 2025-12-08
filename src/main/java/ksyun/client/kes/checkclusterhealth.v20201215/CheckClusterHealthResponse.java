@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname CheckClusterHealthResponse
@@ -14,13 +14,16 @@ import java.util.Set;
 @Data
 @ToString
 public class CheckClusterHealthResponse extends BaseResponseModel {
+    /**返回集群ID*/
+    @JsonProperty("Return")
+    private String ReturnField;
 
-    /**
-     * 请求id
-     */
+    /**请求ID*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /**状态码*/
+    @JsonProperty("StatusCode")
+    private Integer StatusCode;
 
 }

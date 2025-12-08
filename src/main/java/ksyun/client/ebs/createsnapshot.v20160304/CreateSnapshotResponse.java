@@ -5,17 +5,21 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname CreateSnapshotResponse @Description CreateSnapshot 返回体
- */
+* @Classname CreateSnapshotResponse
+* @Description CreateSnapshot 返回体
+*/
 @Data
 @ToString
 public class CreateSnapshotResponse extends BaseResponseModel {
+    /**唯一请求ID，每次请求都会返回*/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
-
-  // 返回结果，需要按需扩展
+    /**快照ID*/
+    @JsonProperty("SnapshotId")
+    private String SnapshotId;
 
 }

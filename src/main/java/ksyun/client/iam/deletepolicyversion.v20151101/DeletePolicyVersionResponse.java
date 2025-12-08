@@ -5,17 +5,21 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname DeletePolicyVersionResponse @Description DeletePolicyVersion 返回体
- */
+* @Classname DeletePolicyVersionResponse
+* @Description DeletePolicyVersion 返回体
+*/
 @Data
 @ToString
 public class DeletePolicyVersionResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("result")
+    private Boolean Result;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
-
-  // 返回结果，需要按需扩展
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

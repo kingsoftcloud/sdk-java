@@ -19,7 +19,7 @@ public class DescribeNatRateLimitRequest{
     private String NatId;
 
     /**筛选Filter*/
-    @KsYunField(name="Filter")
+    @KsYunField(name="Filter",type=2)
     private List<FilterDto> FilterList;
 
     @Data
@@ -30,10 +30,12 @@ public class DescribeNatRateLimitRequest{
 - network-interface-id，网卡ID
 */
         @KsYunField(name="Name")
-                private String Name;
+        private String Name;
+
         /***/
-        @KsYunField(name="Value")
-                private List<String> ValueList;
+        @KsYunField(name="Value",type=2)
+        private List<String> ValueList;
+
     }
 
 }

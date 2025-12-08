@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeScalingNotificationResponse
@@ -14,13 +14,41 @@ import java.util.Set;
 @Data
 @ToString
 public class DescribeScalingNotificationResponse extends BaseResponseModel {
-
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("ScalingNotificationCount")
+    private Integer ScalingNotificationCount;
+
+    /***/
+    @JsonProperty("ScalingNotificationSet")
+    private List<ScalingNotificationSetDto> ScalingNotificationSet;
+
+    @Data
+    @ToString
+    public static class ScalingNotificationSetDto {
+        /***/
+        @JsonProperty("ScalingNotificationId")
+        private String ScalingNotificationId;
+
+        /***/
+        @JsonProperty("ScalingGroupId")
+        private String ScalingGroupId;
+
+        /***/
+        @JsonProperty("ScalingNotificationTypes")
+        private List<String> ScalingNotificationTypes;
+
+        /***/
+        @JsonProperty("Description")
+        private String Description;
+
+        /***/
+        @JsonProperty("AvailabilityZone")
+        private String AvailabilityZone;
+
+    }
 
 }

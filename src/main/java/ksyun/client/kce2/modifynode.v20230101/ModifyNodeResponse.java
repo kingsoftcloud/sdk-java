@@ -5,17 +5,34 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname ModifyNodeResponse @Description ModifyNode 返回体
- */
+* @Classname ModifyNodeResponse
+* @Description ModifyNode 返回体
+*/
 @Data
 @ToString
 public class ModifyNodeResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("ClusterId")
+    private String ClusterId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /***/
+    @JsonProperty("InstanceId")
+    private String InstanceId;
 
-  // 返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Components")
+    private List<ComponentsDto> Components;
+
+    @Data
+    @ToString
+    public static class ComponentsDto {
+        /***/
+        @JsonProperty("Type")
+        private String Type;
+
+    }
 
 }

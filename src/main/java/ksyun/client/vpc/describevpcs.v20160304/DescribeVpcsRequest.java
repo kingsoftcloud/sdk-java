@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DescribeVpcsRequest{
     /**多个Vpc的ID*/
-    @KsYunField(name="VpcId")
+    @KsYunField(name="VpcId",type=2)
     private List<String> VpcIdList;
 
     /**单次调用可返回的最大条目数量*/

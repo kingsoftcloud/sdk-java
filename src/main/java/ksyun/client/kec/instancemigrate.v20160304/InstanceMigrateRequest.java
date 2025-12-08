@@ -27,7 +27,7 @@ public class InstanceMigrateRequest{
     private String InstanceType;
 
     /**数据盘id*/
-    @KsYunField(name="DataDisk")
+    @KsYunField(name="DataDisk",type=2)
     private List<String> DataDiskList;
 
 }

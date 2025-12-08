@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeInstanceFamilysResponse
@@ -14,13 +14,38 @@ import java.util.Set;
 @Data
 @ToString
 public class DescribeInstanceFamilysResponse extends BaseResponseModel {
-
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("InstanceFamilySet")
+    private List<InstanceFamilySetDto> InstanceFamilySet;
+
+    @Data
+    @ToString
+    public static class InstanceFamilySetDto {
+        /***/
+        @JsonProperty("AvailabilityZoneSet")
+        private List<AvailabilityZoneSetDto> AvailabilityZoneSet;
+
+        @Data
+        @ToString
+        public static class AvailabilityZoneSetDto {
+            /***/
+            @JsonProperty("AzCode")
+            private String AzCode;
+
+        }
+
+        /***/
+        @JsonProperty("InstanceFamilyName")
+        private String InstanceFamilyName;
+
+        /***/
+        @JsonProperty("InstanceFamily")
+        private String InstanceFamily;
+
+    }
 
 }

@@ -15,15 +15,15 @@ import java.util.Arrays;
 @Data
 public class DescribeNatsRequest{
     /**项目的ID*/
-    @KsYunField(name="ProjectId")
+    @KsYunField(name="ProjectId",type=2)
     private List<String> ProjectIdList;
 
     /**多个Nat的ID*/
-    @KsYunField(name="NatId")
+    @KsYunField(name="NatId",type=2)
     private List<String> NatIdList;
 
     /**筛选Filter*/
-    @KsYunField(name="Filter")
+    @KsYunField(name="Filter",type=2)
     private List<FilterDto> FilterList;
 
     @Data
@@ -34,10 +34,12 @@ public class DescribeNatsRequest{
 - vpn-tunnel-id，Vpn通道ID
 - direct-connect-gateway-id，专线ID*/
         @KsYunField(name="Name")
-                private String Name;
+        private String Name;
+
         /***/
-        @KsYunField(name="Value")
-                private List<String> ValueList;
+        @KsYunField(name="Value",type=2)
+        private List<String> ValueList;
+
     }
 
     /**是否在返回值中包含资源标签信息*/
@@ -45,11 +47,11 @@ public class DescribeNatsRequest{
     private Boolean IsContainTag;
 
     /**多个标签的键*/
-    @KsYunField(name="TagKey")
+    @KsYunField(name="TagKey",type=2)
     private List<String> TagKeyList;
 
     /**多个标签的键*/
-    @KsYunField(name="TagKV")
+    @KsYunField(name="TagKV",type=2)
     private List<TagKVDto> TagKVList;
 
     @Data
@@ -57,10 +59,12 @@ public class DescribeNatsRequest{
     public static class TagKVDto {
         /**标签键*/
         @KsYunField(name="Name")
-                private String Name;
+        private String Name;
+
         /**标签值*/
         @KsYunField(name="Value")
-                private String Value;
+        private String Value;
+
     }
 
     /**单次调用可返回的最大条目数量*/

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname AttachInstanceResponse
@@ -14,13 +14,12 @@ import java.util.Set;
 @Data
 @ToString
 public class AttachInstanceResponse extends BaseResponseModel {
-
-    /**
-     * 请求id
-     */
+    /**请求ID*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /**添加云服务器是否成功*/
+    @JsonProperty("Return")
+    private Boolean ReturnField;
 
 }

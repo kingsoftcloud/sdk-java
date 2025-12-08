@@ -17,7 +17,7 @@ public class DeleteSoImagesRequest{
     /**自定义镜像ID，最多支持100个ID。
 • 参数 -N：表示镜像的序号。
 • 多个Image ID之间用&分隔。*/
-    @KsYunField(name="ImageIds")
+    @KsYunField(name="ImageIds",type=2)
     private List<String> ImageIdsList;
 
     /**星海专区*/

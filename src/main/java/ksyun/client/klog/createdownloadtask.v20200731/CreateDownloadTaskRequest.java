@@ -23,8 +23,6 @@ public class CreateDownloadTaskRequest{
     private String LogPoolNames;
 
     /**下载参数*/
-    @KsYunField(name="Config")
-
     private ConfigDto ConfigList;
 
     @Data
@@ -33,20 +31,27 @@ public class CreateDownloadTaskRequest{
         /**日志开始时间*/
         @KsYunField(name="From")
         private Integer From;
+
         /**日志结束时间*/
         @KsYunField(name="To")
         private Integer To;
+
         /**日志下载语句*/
         @KsYunField(name="Query")
         private String Query;
+
         /**下载格式*/
         @KsYunField(name="Format")
         private String Format;
+
         /**日志排序*/
         @KsYunField(name="Order")
         private String Order;
+
         /**下载日志条数*/
         @KsYunField(name="Count")
         private Integer Count;
+
     }
+
 }

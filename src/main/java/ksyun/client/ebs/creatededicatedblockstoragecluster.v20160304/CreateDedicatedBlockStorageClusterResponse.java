@@ -5,18 +5,21 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname CreateDedicatedBlockStorageClusterResponse @Description
- * CreateDedicatedBlockStorageCluster 返回体
- */
+* @Classname CreateDedicatedBlockStorageClusterResponse
+* @Description CreateDedicatedBlockStorageCluster 返回体
+*/
 @Data
 @ToString
 public class CreateDedicatedBlockStorageClusterResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
-
-  // 返回结果，需要按需扩展
+    /***/
+    @JsonProperty("DbscId")
+    private String DbscId;
 
 }

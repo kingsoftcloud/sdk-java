@@ -5,17 +5,21 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname CreateVolumeResponse @Description CreateVolume 返回体
- */
+* @Classname CreateVolumeResponse
+* @Description CreateVolume 返回体
+*/
 @Data
 @ToString
 public class CreateVolumeResponse extends BaseResponseModel {
+    /**请求流水号*/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
-
-  // 返回结果，需要按需扩展
+    /**硬盘ID*/
+    @JsonProperty("VolumeId")
+    private String VolumeId;
 
 }

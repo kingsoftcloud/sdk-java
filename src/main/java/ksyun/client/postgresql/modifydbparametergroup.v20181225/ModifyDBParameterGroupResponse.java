@@ -5,17 +5,68 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname ModifyDBParameterGroupResponse @Description ModifyDBParameterGroup 返回体
- */
+* @Classname ModifyDBParameterGroupResponse
+* @Description ModifyDBParameterGroup 返回体
+*/
 @Data
 @ToString
 public class ModifyDBParameterGroupResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("DBParameterGroup")
+        private DBParameterGroupDto DBParameterGroup;
 
-  // 返回结果，需要按需扩展
+        @Data
+        @ToString
+        public static class DBParameterGroupDto {
+            /***/
+            @JsonProperty("DBParameterGroupId")
+            private String DBParameterGroupId;
+
+            /***/
+            @JsonProperty("DBParameterGroupName")
+            private String DBParameterGroupName;
+
+            /***/
+            @JsonProperty("EngineVersion")
+            private String EngineVersion;
+
+            /***/
+            @JsonProperty("Description")
+            private String Description;
+
+            /***/
+            @JsonProperty("Parameters")
+            private ParametersDto Parameters;
+
+            @Data
+            @ToString
+            public static class ParametersDto {
+                /***/
+                @JsonProperty("autovacuum_analyze_scale_factor")
+                private Integer Autovacuum_analyze_scale_factor;
+
+            }
+
+            /***/
+            @JsonProperty("Engine")
+            private String Engine;
+
+        }
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

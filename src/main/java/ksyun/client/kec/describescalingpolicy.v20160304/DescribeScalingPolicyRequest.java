@@ -19,7 +19,7 @@ public class DescribeScalingPolicyRequest{
     private String ScalingGroupId;
 
     /**待查询的告警触发策略ID数组，数组下标从0开始*/
-    @KsYunField(name="ScalingPolicyId")
+    @KsYunField(name="ScalingPolicyId",type=2)
     private List<String> ScalingPolicyIdList;
 
     /**待查询的告警触发策略名称*/

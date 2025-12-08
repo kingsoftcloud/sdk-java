@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
 * @Classname DeleteDedicatedClusterClient
-* @Description 删除集群
+* @Description 删除集群接口
 */
 @Slf4j
 public class DeleteDedicatedClusterClient extends BaseClient {

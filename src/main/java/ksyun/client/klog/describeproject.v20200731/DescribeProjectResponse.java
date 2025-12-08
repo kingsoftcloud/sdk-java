@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeProjectResponse
@@ -14,13 +14,53 @@ import java.util.Set;
 @Data
 @ToString
 public class DescribeProjectResponse extends BaseResponseModel {
+    /**工程名称*/
+    @JsonProperty("ProjectName")
+    private String ProjectName;
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /**项目制名称*/
+    @JsonProperty("IamProjectName")
+    private String IamProjectName;
 
-    //返回结果，需要按需扩展
+    /**项目制ID*/
+    @JsonProperty("IamProjectId")
+    private Integer IamProjectId;
+
+    /**工程创建时间*/
+    @JsonProperty("CreateTime")
+    private String CreateTime;
+
+    /**工程更新时间*/
+    @JsonProperty("UpdateTime")
+    private String UpdateTime;
+
+    /**区域编码*/
+    @JsonProperty("Region")
+    private String Region;
+
+    /**工程状态*/
+    @JsonProperty("Status")
+    private String Status;
+
+    /**标签列表*/
+    @JsonProperty("Tags")
+    private List<TagsDto> Tags;
+
+    @Data
+    @ToString
+    public static class TagsDto {
+        /**标签ID*/
+        @JsonProperty("Id")
+        private Integer Id;
+
+        /**标签键*/
+        @JsonProperty("Key")
+        private String Key;
+
+        /**标签值*/
+        @JsonProperty("Value")
+        private String Value;
+
+    }
 
 }

@@ -26,4 +26,21 @@ public class DescribeImagesRequest{
     @KsYunField(name="ImageId.N")
     private String ImageIdN;
 
+    /***/
+    @KsYunField(name="Filter",type=2)
+    private List<FilterDto> FilterList;
+
+    @Data
+    @ToString
+    public static class FilterDto {
+        /***/
+        @KsYunField(name="Name")
+        private String Name;
+
+        /***/
+        @KsYunField(name="Value",type=2)
+        private List<String> ValueList;
+
+    }
+
 }

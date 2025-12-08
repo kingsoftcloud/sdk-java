@@ -23,7 +23,7 @@ public class ModifyScalingNotificationRequest{
     private Integer ScalingNotificationId;
 
     /**通知类型数组，即为需要订阅的伸缩活动通知集合，范围从1到6。具体映射关系如下：<br/>1：扩容成功<br/>2：扩容失败<br/>3：缩容成功<br/>4：缩容失败<br/>5：替换不健康子机成功<br/>6：替换不健康子机失败*/
-    @KsYunField(name="NotificationType")
+    @KsYunField(name="NotificationType",type=2)
     private List<String> NotificationTypeList;
 
 }

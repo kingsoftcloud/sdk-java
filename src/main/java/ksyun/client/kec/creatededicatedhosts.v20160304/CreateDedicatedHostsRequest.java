@@ -43,7 +43,7 @@ public class CreateDedicatedHostsRequest{
     private String DedicatedClusterId;
 
     /**创建的专属宿主机的标签键，N取值范围1~10。若填写了Tag.N.Value，Tag.N.Key为必填，且两个参数的N值需保持一致*/
-    @KsYunField(name="Tag")
+    @KsYunField(name="Tag",type=2)
     private List<TagDto> TagList;
 
     @Data
@@ -51,10 +51,12 @@ public class CreateDedicatedHostsRequest{
     public static class TagDto {
         /**创建的专属宿主机的标签键，N取值范围1~10。若填写了Tag.N.Value，Tag.N.Key为必填，且两个参数的N值需保持一致*/
         @KsYunField(name="Key")
-                private String Key;
+        private String Key;
+
         /**创建的专属宿主机的标签值，N取值范围1~10*/
         @KsYunField(name="Value")
-                private String Value;
+        private String Value;
+
     }
 
     /**可用区*/

@@ -5,17 +5,37 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname SqlAuditLineChartResponse @Description SqlAuditLineChart 返回体
- */
+* @Classname SqlAuditLineChartResponse
+* @Description SqlAuditLineChart 返回体
+*/
 @Data
 @ToString
 public class SqlAuditLineChartResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("data")
+    private List<DataDto> Data;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    @Data
+    @ToString
+    public static class DataDto {
+        /**实例ID	
+UUID*/
+        @JsonProperty("productId")
+        private String ProductId;
 
-  // 返回结果，需要按需扩展
+        /**时间点	
+毫秒级时间戳*/
+        @JsonProperty("execTime")
+        private Integer ExecTime;
+
+        /**查询次数	
+*/
+        @JsonProperty("count")
+        private Integer Count;
+
+    }
 
 }

@@ -5,17 +5,46 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 /**
- * @Classname AddSecurityGroupRuleResponse @Description AddSecurityGroupRule 返回体
- */
+* @Classname AddSecurityGroupRuleResponse
+* @Description AddSecurityGroupRule 返回体
+*/
 @Data
 @ToString
 public class AddSecurityGroupRuleResponse extends BaseResponseModel {
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
-  /** 请求id */
-  @JsonProperty("RequestId")
-  private String requestId;
+    /***/
+    @JsonProperty("MongoDBSecurityGroupRule")
+    private List<MongoDBSecurityGroupRuleDto> MongoDBSecurityGroupRule;
 
-  // 返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class MongoDBSecurityGroupRuleDto {
+        /***/
+        @JsonProperty("to_port")
+        private String To_port;
+
+        /***/
+        @JsonProperty("cidr")
+        private String Cidr;
+
+        /***/
+        @JsonProperty("from_port")
+        private String From_port;
+
+        /***/
+        @JsonProperty("protocol")
+        private String Protocol;
+
+        /***/
+        @JsonProperty("id")
+        private String Id;
+
+    }
 
 }

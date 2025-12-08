@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
 * @Classname CreateImageClient
-* @Description 创建镜像
+* @Description 创建镜像接口
 */
 @Slf4j
 public class CreateImageClient extends BaseClient {

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeSpotPriceHistoryResponse
@@ -14,13 +14,37 @@ import java.util.Set;
 @Data
 @ToString
 public class DescribeSpotPriceHistoryResponse extends BaseResponseModel {
-
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("InstanceType")
+    private String InstanceType;
+
+    /***/
+    @JsonProperty("AvailabilityZone")
+    private String AvailabilityZone;
+
+    /***/
+    @JsonProperty("SpotPrices")
+    private List<SpotPricesDto> SpotPrices;
+
+    @Data
+    @ToString
+    public static class SpotPricesDto {
+        /***/
+        @JsonProperty("SpotPrice")
+        private Double SpotPrice;
+
+        /***/
+        @JsonProperty("OriginPrice")
+        private Double OriginPrice;
+
+        /***/
+        @JsonProperty("Timestamp")
+        private String Timestamp;
+
+    }
 
 }

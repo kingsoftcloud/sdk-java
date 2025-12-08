@@ -27,7 +27,7 @@ public class DescribeTrainJobPodsRequest{
     private String TrainJobId;
 
     /***/
-    @KsYunField(name="Filter")
+    @KsYunField(name="Filter",type=2)
     private List<FilterDto> FilterList;
 
     @Data
@@ -35,10 +35,12 @@ public class DescribeTrainJobPodsRequest{
     public static class FilterDto {
         /**可选值：role state*/
         @KsYunField(name="Name")
-                private String Name;
+        private String Name;
+
         /***/
-        @KsYunField(name="Value")
-                private List<String> ValueList;
+        @KsYunField(name="Value",type=2)
+        private List<String> ValueList;
+
     }
 
 }
