@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname ListTagKeysResponse
@@ -14,28 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class ListTagKeysResponse extends BaseResponseModel {
-    /**标签键*/
-    @JsonProperty("TagKeys")
-    private List<String> TagKeys;
 
-    /**页码*/
-    @JsonProperty("Page")
-    private Integer Page;
-
-    /**分页数*/
-    @JsonProperty("PageSize")
-    private Integer PageSize;
-
-    /**总数*/
-    @JsonProperty("Total")
-    private Integer Total;
-
-    /**请求ID*/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**状态码*/
-    @JsonProperty("StatusCode")
-    private Integer StatusCode;
+    //返回结果，需要按需扩展
 
 }

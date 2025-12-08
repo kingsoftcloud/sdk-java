@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DeleteForwardConfResponse
@@ -14,47 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DeleteForwardConfResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("Response")
-    private ResponseDto Response;
 
-    @Data
-    @ToString
-    public static class ResponseDto {
-        /***/
-        @JsonProperty("RequestId")
-        private String RequestId;
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
 
-        /***/
-        @JsonProperty("ForwardConfSet")
-        private ResponseDtoForwardConfSetDto ForwardConfSet;
-
-        @Data
-        @ToString
-        public static class ResponseDtoForwardConfSetDto {
-            /***/
-            @JsonProperty("item")
-            private List<ResponseDtoForwardConfSetDtoItemDto> Item;
-
-            @Data
-            @ToString
-            public static class ResponseDtoForwardConfSetDtoItemDto {
-                /***/
-                @JsonProperty("ForwardConfId")
-                private String ForwardConfId;
-
-                /***/
-                @JsonProperty("Return")
-                private String ReturnField;
-
-                /***/
-                @JsonProperty("message")
-                private String Message;
-
-            }
-
-        }
-
-    }
+    //返回结果，需要按需扩展
 
 }

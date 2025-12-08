@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname ValidateAttachInstanceResponse
@@ -14,12 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class ValidateAttachInstanceResponse extends BaseResponseModel {
-    /**请求流水号*/
-    @JsonProperty("RequestId")
-    private String RequestId;
 
-    /**true表示可用，False表示挂盘超出限制或其他条件导致不可用*/
-    @JsonProperty("InstanceEnable")
-    private String InstanceEnable;
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

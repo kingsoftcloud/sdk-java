@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname ListAttachedRolePoliciesResponse
@@ -14,67 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class ListAttachedRolePoliciesResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("ListAttachedRolePoliciesResult")
-    private ListAttachedRolePoliciesResultDto ListAttachedRolePoliciesResult;
 
-    @Data
-    @ToString
-    public static class ListAttachedRolePoliciesResultDto {
-        /***/
-        @JsonProperty("AttachedPolicies")
-        private ListAttachedRolePoliciesResultDtoAttachedPoliciesDto AttachedPolicies;
-
-        @Data
-        @ToString
-        public static class ListAttachedRolePoliciesResultDtoAttachedPoliciesDto {
-            /***/
-            @JsonProperty("member")
-            private List<ListAttachedRolePoliciesResultDtoAttachedPoliciesDtoMemberDto> Member;
-
-            @Data
-            @ToString
-            public static class ListAttachedRolePoliciesResultDtoAttachedPoliciesDtoMemberDto {
-                /***/
-                @JsonProperty("PolicyKrn")
-                private String PolicyKrn;
-
-                /***/
-                @JsonProperty("PolicyName")
-                private String PolicyName;
-
-                /***/
-                @JsonProperty("CreateTime")
-                private String CreateTime;
-
-                /***/
-                @JsonProperty("Description")
-                private String Description;
-
-                /***/
-                @JsonProperty("Description_en")
-                private String Description_en;
-
-                /***/
-                @JsonProperty("Type")
-                private Integer Type;
-
-            }
-
-        }
-
-        /***/
-        @JsonProperty("IsTruncated")
-        private Boolean IsTruncated;
-
-        /***/
-        @JsonProperty("Marker")
-        private String Marker;
-
-    }
-
-    /***/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

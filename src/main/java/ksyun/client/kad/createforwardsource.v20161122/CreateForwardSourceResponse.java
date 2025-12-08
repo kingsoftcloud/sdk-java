@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname CreateForwardSourceResponse
@@ -14,42 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class CreateForwardSourceResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("Response")
-    private ResponseDto Response;
 
-    @Data
-    @ToString
-    public static class ResponseDto {
-        /***/
-        @JsonProperty("RequestId")
-        private String RequestId;
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
 
-        /***/
-        @JsonProperty("ForwardSource")
-        private ResponseDtoForwardSourceDto ForwardSource;
-
-        @Data
-        @ToString
-        public static class ResponseDtoForwardSourceDto {
-            /***/
-            @JsonProperty("ForwardConfId")
-            private String ForwardConfId;
-
-            /***/
-            @JsonProperty("ForwardSourceId")
-            private String ForwardSourceId;
-
-            /***/
-            @JsonProperty("SourceIp")
-            private String SourceIp;
-
-            /***/
-            @JsonProperty("SourcePort")
-            private String SourcePort;
-
-        }
-
-    }
+    //返回结果，需要按需扩展
 
 }

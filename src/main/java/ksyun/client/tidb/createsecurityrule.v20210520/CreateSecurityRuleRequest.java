@@ -20,11 +20,12 @@ public class CreateSecurityRuleRequest{
 
     /**安全组规则。格式：{Rules: [{"Cidr": "***", "Desc": "***", "AclAction": "***"}]}。
 请注意：1. Cidr为必填参数；2. AclAction（控制策略）可选：accept（放行），reject（拒绝）；默认为accept。*/
-    private RulesDto RulesList;
+    @KsYunField(name="Rules")
+    private RulesDto1 Rules;
 
     @Data
     @ToString
-    public static class RulesDto {
+    public static class RulesDto1 {
         /**规则地址*/
         @KsYunField(name="Cidr",type=2)
         private List<String> CidrList;

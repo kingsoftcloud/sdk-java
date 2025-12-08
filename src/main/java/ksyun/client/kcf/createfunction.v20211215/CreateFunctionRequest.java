@@ -59,11 +59,12 @@ public class CreateFunctionRequest{
     private Boolean InternetAccess;
 
     /***/
-    private CodeDto CodeList;
+    @KsYunField(name="Code")
+    private CodeDto1 Code;
 
     @Data
     @ToString
-    public static class CodeDto {
+    public static class CodeDto1 {
         /**代码包的KS3地址*/
         @KsYunField(name="SourceUrl")
         private String SourceUrl;
@@ -79,18 +80,19 @@ public class CreateFunctionRequest{
     }
 
     /**环境变量配置*/
-    private EnvironmentDto EnvironmentList;
+    @KsYunField(name="Environment")
+    private EnvironmentDto2 Environment;
 
     @Data
     @ToString
-    public static class EnvironmentDto {
+    public static class EnvironmentDto2 {
         /**环境变量键值对*/
         @KsYunField(name="Variables",type=2)
-        private List<EnvironmentDtoVariablesDto> VariablesList;
+        private List<VariablesDto3> VariablesList;
 
         @Data
         @ToString
-        public static class EnvironmentDtoVariablesDto {
+        public static class VariablesDto3 {
             /***/
             @KsYunField(name="Key")
             private String Key;
@@ -104,11 +106,12 @@ public class CreateFunctionRequest{
     }
 
     /**VPC配置信息*/
-    private VpcConfigDto VpcConfigList;
+    @KsYunField(name="VpcConfig")
+    private VpcConfigDto4 VpcConfig;
 
     @Data
     @ToString
-    public static class VpcConfigDto {
+    public static class VpcConfigDto4 {
         /**是否启用VPC*/
         @KsYunField(name="EnableVpc")
         private Boolean EnableVpc;
@@ -136,11 +139,12 @@ public class CreateFunctionRequest{
     }
 
     /**日志配置信息*/
-    private LogConfigDto LogConfigList;
+    @KsYunField(name="LogConfig")
+    private LogConfigDto5 LogConfig;
 
     @Data
     @ToString
-    public static class LogConfigDto {
+    public static class LogConfigDto5 {
         /**是否启用日志服务*/
         @KsYunField(name="EnableKlog")
         private Boolean EnableKlog;
@@ -156,17 +160,19 @@ public class CreateFunctionRequest{
     }
 
     /**存活探针配置*/
-    private LivenessProbeConfigDto LivenessProbeConfigList;
+    @KsYunField(name="LivenessProbeConfig")
+    private LivenessProbeConfigDto6 LivenessProbeConfig;
 
     @Data
     @ToString
-    public static class LivenessProbeConfigDto {
+    public static class LivenessProbeConfigDto6 {
         /**HTTP探针配置*/
-        private LivenessProbeConfigDtoHTTPGetDto HTTPGetList;
+        @KsYunField(name="HTTPGet")
+        private HTTPGetDto7 HTTPGet;
 
         @Data
         @ToString
-        public static class LivenessProbeConfigDtoHTTPGetDto {
+        public static class HTTPGetDto7 {
             /**协议，http*/
             @KsYunField(name="Protocol")
             private String Protocol;
@@ -188,17 +194,19 @@ public class CreateFunctionRequest{
     }
 
     /**就绪探针配置*/
-    private ReadinessProbeConfigDto ReadinessProbeConfigList;
+    @KsYunField(name="ReadinessProbeConfig")
+    private ReadinessProbeConfigDto8 ReadinessProbeConfig;
 
     @Data
     @ToString
-    public static class ReadinessProbeConfigDto {
+    public static class ReadinessProbeConfigDto8 {
         /**HTTP探针配置*/
-        private ReadinessProbeConfigDtoHTTPGetDto HTTPGetList;
+        @KsYunField(name="HTTPGet")
+        private HTTPGetDto9 HTTPGet;
 
         @Data
         @ToString
-        public static class ReadinessProbeConfigDtoHTTPGetDto {
+        public static class HTTPGetDto9 {
             /**协议，http*/
             @KsYunField(name="Protocol")
             private String Protocol;

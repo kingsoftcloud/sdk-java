@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeMongoDBSnapshotResponse
@@ -14,53 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeMongoDBSnapshotResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("MongoDBSnapshotResult")
-    private List<MongoDBSnapshotResultDto> MongoDBSnapshotResult;
-
-    @Data
-    @ToString
-    public static class MongoDBSnapshotResultDto {
-        /***/
-        @JsonProperty("SnapshotId")
-        private String SnapshotId;
-
-        /***/
-        @JsonProperty("Name")
-        private String Name;
-
-        /***/
-        @JsonProperty("InstanceId")
-        private String InstanceId;
-
-        /***/
-        @JsonProperty("Type")
-        private String Type;
-
-        /***/
-        @JsonProperty("Size")
-        private Integer Size;
-
-        /***/
-        @JsonProperty("Status")
-        private String Status;
-
-        /***/
-        @JsonProperty("BackupMode")
-        private String BackupMode;
-
-        /***/
-        @JsonProperty("CreateTime")
-        private String CreateTime;
-
-        /***/
-        @JsonProperty("UpdateTime")
-        private String UpdateTime;
-
-    }
+    //返回结果，需要按需扩展
 
 }

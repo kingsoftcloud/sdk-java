@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname CreateClusterResponse
@@ -14,21 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class CreateClusterResponse extends BaseResponseModel {
-    /**请求ID*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**返回数据*/
-    @JsonProperty("Data")
-    private DataDto Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-    }
-
-    /**集群ID*/
-    @JsonProperty("ClusterId")
-    private String ClusterId;
+    //返回结果，需要按需扩展
 
 }

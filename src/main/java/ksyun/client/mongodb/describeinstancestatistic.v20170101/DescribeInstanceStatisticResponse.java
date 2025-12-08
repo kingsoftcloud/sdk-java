@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeInstanceStatisticResponse
@@ -14,101 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeInstanceStatisticResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Data")
-    private DataDto Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-        /***/
-        @JsonProperty("total")
-        private DataDtoTotalDto Total;
-
-        @Data
-        @ToString
-        public static class DataDtoTotalDto {
-            /***/
-            @JsonProperty("code")
-            private String Code;
-
-            /***/
-            @JsonProperty("name")
-            private String Name;
-
-            /***/
-            @JsonProperty("count")
-            private Integer Count;
-
-            /***/
-            @JsonProperty("items")
-            private List<DataDtoTotalDtoItemsDto> Items;
-
-            @Data
-            @ToString
-            public static class DataDtoTotalDtoItemsDto {
-                /***/
-                @JsonProperty("code")
-                private String Code;
-
-                /***/
-                @JsonProperty("name")
-                private String Name;
-
-                /***/
-                @JsonProperty("count")
-                private Integer Count;
-
-            }
-
-        }
-
-        /***/
-        @JsonProperty("details")
-        private List<DataDtoDetailsDto> Details;
-
-        @Data
-        @ToString
-        public static class DataDtoDetailsDto {
-            /***/
-            @JsonProperty("code")
-            private String Code;
-
-            /***/
-            @JsonProperty("name")
-            private String Name;
-
-            /***/
-            @JsonProperty("count")
-            private Integer Count;
-
-            /***/
-            @JsonProperty("items")
-            private List<DataDtoDetailsDtoItemsDto> Items;
-
-            @Data
-            @ToString
-            public static class DataDtoDetailsDtoItemsDto {
-                /***/
-                @JsonProperty("code")
-                private String Code;
-
-                /***/
-                @JsonProperty("name")
-                private String Name;
-
-                /***/
-                @JsonProperty("count")
-                private Integer Count;
-
-            }
-
-        }
-
-    }
+    //返回结果，需要按需扩展
 
 }

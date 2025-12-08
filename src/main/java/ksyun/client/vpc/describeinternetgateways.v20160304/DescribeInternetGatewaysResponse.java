@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeInternetGatewaysResponse
@@ -14,37 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeInternetGatewaysResponse extends BaseResponseModel {
-    /**请求ID*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**获取另一页返回结果的 token.*/
-    @JsonProperty("NextToken")
-    private String NextToken;
-
-    /**InternetGateway的信息列表*/
-    @JsonProperty("InternetGatewaySet")
-    private List<InternetGatewaySetDto> InternetGatewaySet;
-
-    @Data
-    @ToString
-    public static class InternetGatewaySetDto {
-        /**创建时间*/
-        @JsonProperty("CreateTime")
-        private String CreateTime;
-
-        /**Vpc的ID*/
-        @JsonProperty("VpcId")
-        private String VpcId;
-
-        /**InternetGateway的名称*/
-        @JsonProperty("InternetGatewayName")
-        private String InternetGatewayName;
-
-        /**InternetGateway的ID*/
-        @JsonProperty("InternetGatewayId")
-        private String InternetGatewayId;
-
-    }
+    //返回结果，需要按需扩展
 
 }

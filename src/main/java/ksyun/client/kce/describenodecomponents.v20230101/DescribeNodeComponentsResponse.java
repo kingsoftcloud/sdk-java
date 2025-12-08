@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeNodeComponentsResponse
@@ -14,55 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeNodeComponentsResponse extends BaseResponseModel {
-    /**请求ID*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**返回数据*/
-    @JsonProperty("Data")
-    private DataDto Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-        /**集群ID*/
-        @JsonProperty("ClusterId")
-        private String ClusterId;
-
-        /**节点组件列表*/
-        @JsonProperty("NodeComponents")
-        private List<DataDtoNodeComponentsDto> NodeComponents;
-
-        @Data
-        @ToString
-        public static class DataDtoNodeComponentsDto {
-            /**节点ID*/
-            @JsonProperty("NodeId")
-            private String NodeId;
-
-            /***/
-            @JsonProperty("ComponentStatus")
-            private List<DataDtoNodeComponentsDtoComponentStatusDto> ComponentStatus;
-
-            @Data
-            @ToString
-            public static class DataDtoNodeComponentsDtoComponentStatusDto {
-                /**组件类型*/
-                @JsonProperty("Type")
-                private String Type;
-
-                /**组件当前参数版本*/
-                @JsonProperty("CurVersion")
-                private String CurVersion;
-
-                /**组件期望参数版本*/
-                @JsonProperty("SpecVersion")
-                private String SpecVersion;
-
-            }
-
-        }
-
-    }
+    //返回结果，需要按需扩展
 
 }

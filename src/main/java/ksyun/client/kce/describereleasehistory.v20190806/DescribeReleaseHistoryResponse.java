@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeReleaseHistoryResponse
@@ -14,45 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeReleaseHistoryResponse extends BaseResponseModel {
-    /**请求 Id*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("ReleaseVersions")
-    private List<ReleaseVersionsDto> ReleaseVersions;
-
-    @Data
-    @ToString
-    public static class ReleaseVersionsDto {
-        /**Helm 应用名称*/
-        @JsonProperty("ReleaseName")
-        private String ReleaseName;
-
-        /**helm应用状态*/
-        @JsonProperty("StatusCode")
-        private String StatusCode;
-
-        /**版本号*/
-        @JsonProperty("ReleaseVersion")
-        private Integer ReleaseVersion;
-
-        /**部署时间*/
-        @JsonProperty("DeployTime")
-        private String DeployTime;
-
-        /**描述*/
-        @JsonProperty("Description")
-        private String Description;
-
-        /**Chart 名称*/
-        @JsonProperty("ChartName")
-        private String ChartName;
-
-        /**Chart版本*/
-        @JsonProperty("ChartVersion")
-        private String ChartVersion;
-
-    }
+    //返回结果，需要按需扩展
 
 }

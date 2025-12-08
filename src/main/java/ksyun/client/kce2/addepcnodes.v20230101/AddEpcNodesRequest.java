@@ -20,11 +20,11 @@ public class AddEpcNodesRequest{
 
     /**节点信息*/
     @KsYunField(name="NodeInstanceSet",type=2)
-    private List<NodeInstanceSetDto> NodeInstanceSetList;
+    private List<NodeInstanceSetDto1> NodeInstanceSetList;
 
     @Data
     @ToString
-    public static class NodeInstanceSetDto {
+    public static class NodeInstanceSetDto1 {
         /**实例类型
 • EPC   裸金属服务器*/
         @KsYunField(name="Provider")
@@ -32,11 +32,11 @@ public class AddEpcNodesRequest{
 
         /**组件配置*/
         @KsYunField(name="Components",type=2)
-        private List<NodeInstanceSetDtoComponentsDto> ComponentsList;
+        private List<ComponentsDto2> ComponentsList;
 
         @Data
         @ToString
-        public static class NodeInstanceSetDtoComponentsDto {
+        public static class ComponentsDto2 {
             /**核心组件的类型
 • APISERVER
 • ETCD
@@ -49,11 +49,12 @@ public class AddEpcNodesRequest{
         }
 
         /**节点通用配置*/
-        private NodeInstanceSetDtoBasicSettingDto BasicSettingList;
+        @KsYunField(name="BasicSetting")
+        private BasicSettingDto3 BasicSetting;
 
         @Data
         @ToString
-        public static class NodeInstanceSetDtoBasicSettingDto {
+        public static class BasicSettingDto3 {
             /**是否为新建节点
 true为新建节点
 false为已有节点
@@ -87,11 +88,12 @@ epc已有实例要求：
             private String ImageID;
 
             /**系统盘信息（新建节点必填）*/
-            private NodeInstanceSetDtoBasicSettingDtoSystemDiskDto SystemDiskList;
+            @KsYunField(name="SystemDisk")
+            private SystemDiskDto4 SystemDisk;
 
             @Data
             @ToString
-            public static class NodeInstanceSetDtoBasicSettingDtoSystemDiskDto {
+            public static class SystemDiskDto4 {
                 /**系统盘类型
 具体值参考云主机文档：https://docs.ksyun.com/documents/1528?type=6*/
                 @KsYunField(name="Type")
@@ -121,11 +123,11 @@ epc已有实例要求：
 
             /**数据盘信息*/
             @KsYunField(name="DataDisk",type=2)
-            private List<NodeInstanceSetDtoBasicSettingDtoDataDiskDto> DataDiskList;
+            private List<DataDiskDto5> DataDiskList;
 
             @Data
             @ToString
-            public static class NodeInstanceSetDtoBasicSettingDtoDataDiskDto {
+            public static class DataDiskDto5 {
                 /**epc数据盘类型
 • EXT4
 • XFS*/
@@ -150,11 +152,12 @@ epc已有实例要求：
 
             /**节点登录信息（云主机节点为必填字段）
 （查询时，该字段为敏感信息，不返回）*/
-            private NodeInstanceSetDtoBasicSettingDtoLoginSettingDto LoginSettingList;
+            @KsYunField(name="LoginSetting")
+            private LoginSettingDto6 LoginSetting;
 
             @Data
             @ToString
-            public static class NodeInstanceSetDtoBasicSettingDtoLoginSettingDto {
+            public static class LoginSettingDto6 {
                 /**登录密码（明文）跟秘钥二选一
 有效值：8-32个字符，必须包含大小写字母和数字*/
                 @KsYunField(name="Password")
@@ -229,11 +232,12 @@ dual：双网卡模式
         }
 
         /**k8s节点配置*/
-        private NodeInstanceSetDtoAdvancedSettingDto AdvancedSettingList;
+        @KsYunField(name="AdvancedSetting")
+        private AdvancedSettingDto7 AdvancedSetting;
 
         @Data
         @ToString
-        public static class NodeInstanceSetDtoAdvancedSettingDto {
+        public static class AdvancedSettingDto7 {
             /**部署前执行脚本（base64编码）*/
             @KsYunField(name="PostUserScript")
             private String PostUserScript;
@@ -243,11 +247,12 @@ dual：双网卡模式
             private String PreUserScript;
 
             /**容器相关信息*/
-            private NodeInstanceSetDtoAdvancedSettingDtoContainerDto ContainerList;
+            @KsYunField(name="Container")
+            private ContainerDto8 Container;
 
             @Data
             @ToString
-            public static class NodeInstanceSetDtoAdvancedSettingDtoContainerDto {
+            public static class ContainerDto8 {
                 /**容器运行时名称:
 • Containerd（默认）*/
                 @KsYunField(name="Runtime")
@@ -269,11 +274,11 @@ dual：双网卡模式
 
             /**标签信息*/
             @KsYunField(name="Labels",type=2)
-            private List<NodeInstanceSetDtoAdvancedSettingDtoLabelsDto> LabelsList;
+            private List<LabelsDto9> LabelsList;
 
             @Data
             @ToString
-            public static class NodeInstanceSetDtoAdvancedSettingDtoLabelsDto {
+            public static class LabelsDto9 {
                 /**key信息
 */
                 @KsYunField(name="Key")
@@ -286,11 +291,12 @@ dual：双网卡模式
             }
 
             /**污点信息*/
-            private NodeInstanceSetDtoAdvancedSettingDtoTaintDto TaintList;
+            @KsYunField(name="Taint")
+            private TaintDto10 Taint;
 
             @Data
             @ToString
-            public static class NodeInstanceSetDtoAdvancedSettingDtoTaintDto {
+            public static class TaintDto10 {
                 /**key信息*/
                 @KsYunField(name="Key")
                 private String Key;

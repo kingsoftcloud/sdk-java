@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname CreateTrialToBuyNowResponse
@@ -14,29 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class CreateTrialToBuyNowResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("Error")
-    private ErrorDto Error;
 
-    @Data
-    @ToString
-    public static class ErrorDto {
-        /**错误码*/
-        @JsonProperty("Code")
-        private String Code;
-
-        /**错误详情*/
-        @JsonProperty("Message")
-        private String Message;
-
-    }
-
-    /**本次请求唯一标识*/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**是否转正成功。true-成功，false-失败*/
-    @JsonProperty("success")
-    private Boolean Success;
+    //返回结果，需要按需扩展
 
 }

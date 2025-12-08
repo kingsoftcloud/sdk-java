@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname CreateRouteTableResponse
@@ -14,41 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class CreateRouteTableResponse extends BaseResponseModel {
-    /**请求ID*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**路由表的信息*/
-    @JsonProperty("RouteTable")
-    private RouteTableDto RouteTable;
-
-    @Data
-    @ToString
-    public static class RouteTableDto {
-        /**创建时间*/
-        @JsonProperty("CreateTime")
-        private String CreateTime;
-
-        /**Vpc的ID*/
-        @JsonProperty("VpcId")
-        private String VpcId;
-
-        /**路由表的ID*/
-        @JsonProperty("RouteTableId")
-        private String RouteTableId;
-
-        /**路由表的名称*/
-        @JsonProperty("RouteTableName")
-        private String RouteTableName;
-
-        /**路由表的描述信息*/
-        @JsonProperty("Description")
-        private String Description;
-
-        /**路由表的类型*/
-        @JsonProperty("RouteTableType")
-        private String RouteTableType;
-
-    }
+    //返回结果，需要按需扩展
 
 }

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname GetPolicyVersionResponse
@@ -14,46 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class GetPolicyVersionResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("GetPolicyVersionResult")
-    private GetPolicyVersionResultDto GetPolicyVersionResult;
 
-    @Data
-    @ToString
-    public static class GetPolicyVersionResultDto {
-        /***/
-        @JsonProperty("PolicyVersion")
-        private GetPolicyVersionResultDtoPolicyVersionDto PolicyVersion;
-
-        @Data
-        @ToString
-        public static class GetPolicyVersionResultDtoPolicyVersionDto {
-            /***/
-            @JsonProperty("IsDefaultVersion")
-            private String IsDefaultVersion;
-
-            /***/
-            @JsonProperty("VersionId")
-            private String VersionId;
-
-            /***/
-            @JsonProperty("Document")
-            private String Document;
-
-            /***/
-            @JsonProperty("PolicyStruct")
-            private List<String> PolicyStruct;
-
-            /***/
-            @JsonProperty("CreateDate")
-            private String CreateDate;
-
-        }
-
-    }
-
-    /***/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

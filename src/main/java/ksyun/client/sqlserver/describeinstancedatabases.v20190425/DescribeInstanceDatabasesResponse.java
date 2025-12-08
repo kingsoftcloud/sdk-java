@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeInstanceDatabasesResponse
@@ -14,63 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeInstanceDatabasesResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("Data")
-    private DataDto Data;
 
-    @Data
-    @ToString
-    public static class DataDto {
-        /**数据库列表*/
-        @JsonProperty("InstanceDatabases")
-        private List<DataDtoInstanceDatabasesDto> InstanceDatabases;
-
-        @Data
-        @ToString
-        public static class DataDtoInstanceDatabasesDto {
-            /**数据库名称*/
-            @JsonProperty("InstanceDatabaseName")
-            private String InstanceDatabaseName;
-
-            /**数据库排序规则*/
-            @JsonProperty("InstanceDatabaseCollation")
-            private String InstanceDatabaseCollation;
-
-            /**数据库描述*/
-            @JsonProperty("InstanceDatabaseDescription")
-            private String InstanceDatabaseDescription;
-
-            /**数据库状态*/
-            @JsonProperty("InstanceDatabaseStatus")
-            private String InstanceDatabaseStatus;
-
-            /**创建时间*/
-            @JsonProperty("Created")
-            private String Created;
-
-            /**账号权限列表*/
-            @JsonProperty("InstanceDatabasePrivileges")
-            private List<DataDtoInstanceDatabasesDtoInstanceDatabasePrivilegesDto> InstanceDatabasePrivileges;
-
-            @Data
-            @ToString
-            public static class DataDtoInstanceDatabasesDtoInstanceDatabasePrivilegesDto {
-                /***/
-                @JsonProperty("InstanceAccountName")
-                private String InstanceAccountName;
-
-                /**账号名称*/
-                @JsonProperty("Privilege")
-                private String Privilege;
-
-            }
-
-        }
-
-    }
-
-    /**账号权限*/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

@@ -20,11 +20,11 @@ public class DescribeProcessesRequest{
 
     /**筛选Filter*/
     @KsYunField(name="Filter",type=2)
-    private List<FilterDto> FilterList;
+    private List<FilterDto1> FilterList;
 
     @Data
     @ToString
-    public static class FilterDto {
+    public static class FilterDto1 {
         /**有效值：
 - sn，裸金属服务器资源序列号
 - status，工单状态

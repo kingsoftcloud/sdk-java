@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname GetRoleResponse
@@ -14,74 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class GetRoleResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("GetRoleResult")
-    private GetRoleResultDto GetRoleResult;
 
-    @Data
-    @ToString
-    public static class GetRoleResultDto {
-        /***/
-        @JsonProperty("Role")
-        private GetRoleResultDtoRoleDto Role;
-
-        @Data
-        @ToString
-        public static class GetRoleResultDtoRoleDto {
-            /**角色id*/
-            @JsonProperty("Id")
-            private Integer Id;
-
-            /***/
-            @JsonProperty("Path")
-            private String Path;
-
-            /**角色krn*/
-            @JsonProperty("Krn")
-            private String Krn;
-
-            /**角色名称*/
-            @JsonProperty("RoleName")
-            private String RoleName;
-
-            /**角色描述*/
-            @JsonProperty("Description")
-            private String Description;
-
-            /**角色授信账号*/
-            @JsonProperty("TrustAccounts")
-            private String TrustAccounts;
-
-            /**角色的授信服务*/
-            @JsonProperty("TrustServices")
-            private String TrustServices;
-
-            /***/
-            @JsonProperty("TrustProvider")
-            private String TrustProvider;
-
-            /***/
-            @JsonProperty("ProviderList")
-            private List<String> ProviderList;
-
-            /**授信实体类型：1金山云账号，2金山云服务，3身份提供商*/
-            @JsonProperty("TrustType")
-            private Integer TrustType;
-
-            /***/
-            @JsonProperty("CreateDate")
-            private String CreateDate;
-
-            /**角色uuid*/
-            @JsonProperty("RoleId")
-            private String RoleId;
-
-        }
-
-    }
-
-    /***/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

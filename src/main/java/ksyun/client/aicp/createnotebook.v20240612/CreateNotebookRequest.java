@@ -52,11 +52,11 @@ public class CreateNotebookRequest{
 
     /**存储配置列表*/
     @KsYunField(name="StorageConfigs",type=2)
-    private List<StorageConfigsDto> StorageConfigsList;
+    private List<StorageConfigsDto1> StorageConfigsList;
 
     @Data
     @ToString
-    public static class StorageConfigsDto {
+    public static class StorageConfigsDto1 {
         /**存储配置ID*/
         @KsYunField(name="StorageConfigId")
         private String StorageConfigId;
@@ -79,11 +79,11 @@ public class CreateNotebookRequest{
 
     /**开放服务端口列表*/
     @KsYunField(name="ServiceConfigs",type=2)
-    private List<ServiceConfigsDto> ServiceConfigsList;
+    private List<ServiceConfigsDto2> ServiceConfigsList;
 
     @Data
     @ToString
-    public static class ServiceConfigsDto {
+    public static class ServiceConfigsDto2 {
         /**服务名称*/
         @KsYunField(name="Service")
         private String Service;

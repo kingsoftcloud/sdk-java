@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname TestInstanceConnectionResponse
@@ -14,25 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class TestInstanceConnectionResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Data")
-    private DataDto Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-        /***/
-        @JsonProperty("FailedReason")
-        private String FailedReason;
-
-        /***/
-        @JsonProperty("ConnectionSuccess")
-        private Boolean ConnectionSuccess;
-
-    }
+    //返回结果，需要按需扩展
 
 }

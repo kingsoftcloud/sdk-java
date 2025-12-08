@@ -67,11 +67,11 @@ public class ModifyScalingConfigurationRequest{
     /**云盘数据盘类型 
  */
     @KsYunField(name="DataDisk",type=2)
-    private List<DataDiskDto> DataDiskList;
+    private List<DataDiskDto1> DataDiskList;
 
     @Data
     @ToString
-    public static class DataDiskDto {
+    public static class DataDiskDto1 {
         /**云盘数据盘类型 
  */
         @KsYunField(name="Type")
@@ -137,11 +137,11 @@ public class ModifyScalingConfigurationRequest{
     /**启动配置创建的ECS实例的标签键 
  支持1-128个字符，仅支持中英文字符、数字及±=._/@:*/
     @KsYunField(name="Tag",type=2)
-    private List<TagDto> TagList;
+    private List<TagDto2> TagList;
 
     @Data
     @ToString
-    public static class TagDto {
+    public static class TagDto2 {
         /**启动配置创建的ECS实例的标签键 
  支持1-128个字符，仅支持中英文字符、数字及±=._/@:*/
         @KsYunField(name="Key")

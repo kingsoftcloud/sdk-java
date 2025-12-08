@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeLocalVolumesResponse
@@ -14,69 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeLocalVolumesResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Marker")
-    private Integer Marker;
-
-    /***/
-    @JsonProperty("LocalVolumeCount")
-    private Integer LocalVolumeCount;
-
-    /***/
-    @JsonProperty("LocalVolumeSet")
-    private List<LocalVolumeSetDto> LocalVolumeSet;
-
-    @Data
-    @ToString
-    public static class LocalVolumeSetDto {
-        /***/
-        @JsonProperty("LocalVolumeId")
-        private String LocalVolumeId;
-
-        /***/
-        @JsonProperty("LocalVolumeName")
-        private String LocalVolumeName;
-
-        /***/
-        @JsonProperty("LocalVolumeState")
-        private String LocalVolumeState;
-
-        /***/
-        @JsonProperty("InstanceId")
-        private String InstanceId;
-
-        /***/
-        @JsonProperty("InstanceName")
-        private String InstanceName;
-
-        /***/
-        @JsonProperty("InstanceState")
-        private String InstanceState;
-
-        /***/
-        @JsonProperty("LocalVolumeType")
-        private String LocalVolumeType;
-
-        /***/
-        @JsonProperty("LocalVolumeCategory")
-        private String LocalVolumeCategory;
-
-        /***/
-        @JsonProperty("LocalVolumeSize")
-        private Integer LocalVolumeSize;
-
-        /***/
-        @JsonProperty("CreationDate")
-        private String CreationDate;
-
-        /***/
-        @JsonProperty("AutoSnapshotPolicyId")
-        private String AutoSnapshotPolicyId;
-
-    }
+    //返回结果，需要按需扩展
 
 }

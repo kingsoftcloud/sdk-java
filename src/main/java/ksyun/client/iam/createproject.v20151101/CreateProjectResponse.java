@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname CreateProjectResponse
@@ -14,12 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class CreateProjectResponse extends BaseResponseModel {
-    /**成功创建的项目ID*/
-    @JsonProperty("Result")
-    private Integer Result;
 
-    /***/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

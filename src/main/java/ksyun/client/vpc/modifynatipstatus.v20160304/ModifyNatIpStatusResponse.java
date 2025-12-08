@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname ModifyNatIpStatusResponse
@@ -14,29 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class ModifyNatIpStatusResponse extends BaseResponseModel {
-    /**请求ID*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**Nat Ip的信息*/
-    @JsonProperty("NatIp")
-    private NatIpDto NatIp;
-
-    @Data
-    @ToString
-    public static class NatIpDto {
-        /**Nat的Ip地址*/
-        @JsonProperty("NatIp")
-        private String NatIp;
-
-        /**Nat Ip的ID*/
-        @JsonProperty("NatIpId")
-        private String NatIpId;
-
-        /**Nat Ip的启用状态*/
-        @JsonProperty("Enabled")
-        private Boolean Enabled;
-
-    }
+    //返回结果，需要按需扩展
 
 }

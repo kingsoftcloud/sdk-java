@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeCacheByRoleResponse
@@ -14,49 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeCacheByRoleResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Data")
-    private List<DataDto> Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-        /***/
-        @JsonProperty("instanceId")
-        private String InstanceId;
-
-        /***/
-        @JsonProperty("name")
-        private String Name;
-
-        /***/
-        @JsonProperty("port")
-        private Integer Port;
-
-        /***/
-        @JsonProperty("ip")
-        private String Ip;
-
-        /***/
-        @JsonProperty("status")
-        private String Status;
-
-        /***/
-        @JsonProperty("createTime")
-        private String CreateTime;
-
-        /***/
-        @JsonProperty("proxy")
-        private String Proxy;
-
-        /***/
-        @JsonProperty("area")
-        private String Area;
-
-    }
+    //返回结果，需要按需扩展
 
 }

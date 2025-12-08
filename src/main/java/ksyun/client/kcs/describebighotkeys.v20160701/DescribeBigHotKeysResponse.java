@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeBigHotKeysResponse
@@ -14,66 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeBigHotKeysResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Data")
-    private DataDto Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-        /***/
-        @JsonProperty("KeyInfos")
-        private List<DataDtoKeyInfosDto> KeyInfos;
-
-        @Data
-        @ToString
-        public static class DataDtoKeyInfosDto {
-            /***/
-            @JsonProperty("KeyName")
-            private String KeyName;
-
-            /***/
-            @JsonProperty("DB")
-            private Integer DB;
-
-            /***/
-            @JsonProperty("DataType")
-            private String DataType;
-
-            /***/
-            @JsonProperty("NodeId")
-            private String NodeId;
-
-            /***/
-            @JsonProperty("StatisticValue")
-            private Integer StatisticValue;
-
-            /***/
-            @JsonProperty("CreateTime")
-            private String CreateTime;
-
-        }
-
-        /***/
-        @JsonProperty("TotalCount")
-        private Integer TotalCount;
-
-        /***/
-        @JsonProperty("TotalPage")
-        private Integer TotalPage;
-
-        /***/
-        @JsonProperty("CurrentPage")
-        private Integer CurrentPage;
-
-        /***/
-        @JsonProperty("PageSize")
-        private Integer PageSize;
-
-    }
+    //返回结果，需要按需扩展
 
 }

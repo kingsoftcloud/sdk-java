@@ -23,11 +23,12 @@ public class CreateWebhookTriggerRequest{
     private String Namespace;
 
     /**触发器参数*/
-    private TriggerDto TriggerList;
+    @KsYunField(name="Trigger")
+    private TriggerDto1 Trigger;
 
     @Data
     @ToString
-    public static class TriggerDto {
+    public static class TriggerDto1 {
         /**触发器名称*/
         @KsYunField(name="TriggerName")
         private String TriggerName;
@@ -50,11 +51,11 @@ DeleteImage*/
 
         /**自定义Header*/
         @KsYunField(name="Header",type=2)
-        private List<TriggerDtoHeaderDto> HeaderList;
+        private List<HeaderDto2> HeaderList;
 
         @Data
         @ToString
-        public static class TriggerDtoHeaderDto {
+        public static class HeaderDto2 {
             /***/
             @KsYunField(name="Key")
             private String Key;

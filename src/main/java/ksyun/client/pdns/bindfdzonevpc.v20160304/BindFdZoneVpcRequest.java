@@ -24,11 +24,11 @@ public class BindFdZoneVpcRequest{
 
     /**要绑定的VpcId*/
     @KsYunField(name="VpcId",type=2)
-    private List<VpcIdDto> VpcIdList;
+    private List<VpcIdDto1> VpcIdList;
 
     @Data
     @ToString
-    public static class VpcIdDto {
+    public static class VpcIdDto1 {
     }
 
 }

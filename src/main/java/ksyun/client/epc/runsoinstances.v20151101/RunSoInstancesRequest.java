@@ -35,11 +35,12 @@ public class RunSoInstancesRequest{
     private String SubnetId;
 
     /***/
-    private VolumesDto VolumesList;
+    @KsYunField(name="Volumes")
+    private VolumesDto1 Volumes;
 
     @Data
     @ToString
-    public static class VolumesDto {
+    public static class VolumesDto1 {
         /**硬盘大小*/
         @KsYunField(name="Size",type=2)
         private List<Integer> SizeList;

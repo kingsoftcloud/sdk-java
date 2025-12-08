@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeEpcImageResponse
@@ -14,33 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeEpcImageResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("ImageSet")
-    private List<ImageSetDto> ImageSet;
 
-    @Data
-    @ToString
-    public static class ImageSetDto {
-        /**镜像id*/
-        @JsonProperty("ImageId")
-        private String ImageId;
-
-        /**镜像名称*/
-        @JsonProperty("ImageName")
-        private String ImageName;
-
-        /**镜像类型，枚举为base：标准镜像，private：自定义镜像*/
-        @JsonProperty("ImageType")
-        private String ImageType;
-
-    }
-
-    /**返回的镜像总数*/
-    @JsonProperty("TotalCount")
-    private Integer TotalCount;
-
-    /**请求id*/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

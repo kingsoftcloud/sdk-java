@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname ApplyAutoSnapshotPolicyResponse
@@ -14,25 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class ApplyAutoSnapshotPolicyResponse extends BaseResponseModel {
-    /**请求ID*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("ReturnSet")
-    private ReturnSetDto ReturnSet;
-
-    @Data
-    @ToString
-    public static class ReturnSetDto {
-        /**自动快照策略ID*/
-        @JsonProperty("AutoSnapshotPolicyId")
-        private String AutoSnapshotPolicyId;
-
-        /**绑定成功的硬盘ID*/
-        @JsonProperty("AttachVolumeIdSuccess")
-        private List<String> AttachVolumeIdSuccess;
-
-    }
+    //返回结果，需要按需扩展
 
 }

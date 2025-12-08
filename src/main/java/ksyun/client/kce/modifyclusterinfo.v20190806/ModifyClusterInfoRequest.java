@@ -35,11 +35,12 @@ false：不支持*/
     private Boolean EnableKMSE;
 
     /**支持对托管集群控制面日志采集配置进行全量更新*/
-    private ControlPlaneLogDto ControlPlaneLogList;
+    @KsYunField(name="ControlPlaneLog")
+    private ControlPlaneLogDto1 ControlPlaneLog;
 
     @Data
     @ToString
-    public static class ControlPlaneLogDto {
+    public static class ControlPlaneLogDto1 {
         /**集群ID*/
         @KsYunField(name="ClusterId")
         private String ClusterId;

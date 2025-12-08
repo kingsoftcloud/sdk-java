@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname ModifyNodeResponse
@@ -14,25 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class ModifyNodeResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("ClusterId")
-    private String ClusterId;
 
-    /***/
-    @JsonProperty("InstanceId")
-    private String InstanceId;
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
 
-    /***/
-    @JsonProperty("Components")
-    private List<ComponentsDto> Components;
-
-    @Data
-    @ToString
-    public static class ComponentsDto {
-        /***/
-        @JsonProperty("Type")
-        private String Type;
-
-    }
+    //返回结果，需要按需扩展
 
 }

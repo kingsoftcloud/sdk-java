@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DeleteAddonInstanceResponse
@@ -14,25 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DeleteAddonInstanceResponse extends BaseResponseModel {
-    /**请求ID*/
-    @JsonProperty("RequesetId")
-    private String RequesetId;
 
-    /**返回数据*/
-    @JsonProperty("Data")
-    private DataDto Data;
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
 
-    @Data
-    @ToString
-    public static class DataDto {
-    }
-
-    /**集群ID*/
-    @JsonProperty("ClusterId")
-    private String ClusterId;
-
-    /**插件ID*/
-    @JsonProperty("AddonId")
-    private String AddonId;
+    //返回结果，需要按需扩展
 
 }

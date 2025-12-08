@@ -23,11 +23,12 @@ public class DeleteRetentionRuleRequest{
     private String Namespace;
 
     /**参数实体类*/
-    private RuleDto RuleList;
+    @KsYunField(name="Rule")
+    private RuleDto1 Rule;
 
     @Data
     @ToString
-    public static class RuleDto {
+    public static class RuleDto1 {
         /**规则Id*/
         @KsYunField(name="RuleId")
         private String RuleId;

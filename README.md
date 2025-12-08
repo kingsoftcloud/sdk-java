@@ -39,8 +39,8 @@ public static void main(String[] args) {
    Credential credential = new Credential("secretKey", "signStr", "region");
    ListUsersClient client = new ListUsersClient(credential);
    ListUsersRequest request = new ListUsersRequest();
-   request.setMarker("1");
-   request.setMaxItems("2");
+   request.setMaxItems(20);
+   
    try {
       ListUsersResponse ListUsersResponse = client.doGet("iam.api.ksyun.com", request);
       log.info("ListUsers result:{}", JSON.toJSON(ListUsersResponse));

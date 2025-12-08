@@ -20,11 +20,11 @@ public class CreateSecurityGroupRequest{
 
     /**安全组规则，支持以英文逗号隔开的传值形式，或者List<String>传值形式*/
     @KsYunField(name="SecurityGroupRule",type=2)
-    private List<SecurityGroupRuleDto> SecurityGroupRuleList;
+    private List<SecurityGroupRuleDto1> SecurityGroupRuleList;
 
     @Data
     @ToString
-    public static class SecurityGroupRuleDto {
+    public static class SecurityGroupRuleDto1 {
         /**cidr规则*/
         @KsYunField(name="SecurityGroupRuleProtocol")
         private String SecurityGroupRuleProtocol;

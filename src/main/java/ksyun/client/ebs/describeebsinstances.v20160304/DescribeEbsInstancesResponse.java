@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeEbsInstancesResponse
@@ -14,33 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeEbsInstancesResponse extends BaseResponseModel {
-    /**唯一请求ID，每次请求都会返回*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**可挂载主机的相关信息*/
-    @JsonProperty("Instances")
-    private List<InstancesDto> Instances;
-
-    @Data
-    @ToString
-    public static class InstancesDto {
-        /**主机实例ID*/
-        @JsonProperty("InstanceId")
-        private String InstanceId;
-
-        /**主机名称*/
-        @JsonProperty("InstanceName")
-        private String InstanceName;
-
-        /**主机内网IP*/
-        @JsonProperty("InstanceIp")
-        private String InstanceIp;
-
-        /**主机是否可用，true表示可用（可用：挂载未超过3块EBS数据盘）*/
-        @JsonProperty("InstanceEnable")
-        private String InstanceEnable;
-
-    }
+    //返回结果，需要按需扩展
 
 }

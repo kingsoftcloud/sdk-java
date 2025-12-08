@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname CreateMountTargetResponse
@@ -14,25 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class CreateMountTargetResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("CreateMountTargetResponse")
-    private CreateMountTargetResponseDto CreateMountTargetResponse;
 
-    @Data
-    @ToString
-    public static class CreateMountTargetResponseDto {
-        /***/
-        @JsonProperty("RequestId")
-        private String RequestId;
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
 
-        /***/
-        @JsonProperty("MountTargetId")
-        private String MountTargetId;
-
-        /***/
-        @JsonProperty("IpAddress")
-        private String IpAddress;
-
-    }
+    //返回结果，需要按需扩展
 
 }

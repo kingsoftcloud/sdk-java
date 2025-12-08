@@ -28,11 +28,11 @@ public class RestoreToCurInstanceRequest{
 
     /**源		[{<br>  "DatabaseName": "wang",<br>"WholeDatabase":"True",<br>"TableNames": [<br>"li"]<br>}]*/
     @KsYunField(name="SrcDatabases",type=2)
-    private List<SrcDatabasesDto> SrcDatabasesList;
+    private List<SrcDatabasesDto1> SrcDatabasesList;
 
     @Data
     @ToString
-    public static class SrcDatabasesDto {
+    public static class SrcDatabasesDto1 {
         /**数据库名称*/
         @KsYunField(name="DatabaseName")
         private String DatabaseName;
@@ -49,11 +49,11 @@ public class RestoreToCurInstanceRequest{
 
     /**目标		[{<br>"DatabaseName": "wang",<br>"WholeDatabase":"True",<br>"TableNames": [<br> "li"]<br> }]*/
     @KsYunField(name="DstDatabases",type=2)
-    private List<DstDatabasesDto> DstDatabasesList;
+    private List<DstDatabasesDto2> DstDatabasesList;
 
     @Data
     @ToString
-    public static class DstDatabasesDto {
+    public static class DstDatabasesDto2 {
         /**数据表列表*/
         @KsYunField(name="TableNames",type=2)
         private List<String> TableNamesList;

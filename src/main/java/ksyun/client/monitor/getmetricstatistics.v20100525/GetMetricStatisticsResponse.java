@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname GetMetricStatisticsResponse
@@ -14,48 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class GetMetricStatisticsResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("getMetricStatisticsResult")
-    private GetMetricStatisticsResultDto GetMetricStatisticsResult;
 
-    @Data
-    @ToString
-    public static class GetMetricStatisticsResultDto {
-        /**按照指定的统计方法获取的监控数据*/
-        @JsonProperty("datapoints")
-        private GetMetricStatisticsResultDtoDatapointsDto Datapoints;
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
 
-        @Data
-        @ToString
-        public static class GetMetricStatisticsResultDtoDatapointsDto {
-            /***/
-            @JsonProperty("member")
-            private List<GetMetricStatisticsResultDtoDatapointsDtoMemberDto> Member;
-
-            @Data
-            @ToString
-            public static class GetMetricStatisticsResultDtoDatapointsDtoMemberDto {
-            }
-
-        }
-
-        /**监控指标*/
-        @JsonProperty("label")
-        private String Label;
-
-    }
-
-    /***/
-    @JsonProperty("responseMetadata")
-    private ResponseMetadataDto ResponseMetadata;
-
-    @Data
-    @ToString
-    public static class ResponseMetadataDto {
-        /**请求ID*/
-        @JsonProperty("requestId")
-        private String RequestId;
-
-    }
+    //返回结果，需要按需扩展
 
 }

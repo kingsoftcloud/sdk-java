@@ -36,11 +36,11 @@ public class DescribeFileSystemsRequest{
 
     /**可查询file-system-name和ip-address*/
     @KsYunField(name="Filter",type=2)
-    private List<FilterDto> FilterList;
+    private List<FilterDto1> FilterList;
 
     @Data
     @ToString
-    public static class FilterDto {
+    public static class FilterDto1 {
         /***/
         @KsYunField(name="Name.N")
         private String NameN;

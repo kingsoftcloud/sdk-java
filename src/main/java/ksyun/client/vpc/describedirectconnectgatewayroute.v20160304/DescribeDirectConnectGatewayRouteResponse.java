@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeDirectConnectGatewayRouteResponse
@@ -14,65 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeDirectConnectGatewayRouteResponse extends BaseResponseModel {
-    /**请求ID*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**获取另一页返回结果的 token.*/
-    @JsonProperty("NextToken")
-    private String NextToken;
-
-    /**边界网关路由的信息*/
-    @JsonProperty("DirectConnectGatewayRouteSet")
-    private List<DirectConnectGatewayRouteSetDto> DirectConnectGatewayRouteSet;
-
-    @Data
-    @ToString
-    public static class DirectConnectGatewayRouteSetDto {
-        /**边界网关路由ID*/
-        @JsonProperty("DirectConnectGatewayRouteId")
-        private String DirectConnectGatewayRouteId;
-
-        /**目标网段*/
-        @JsonProperty("DestinationCidrBlock")
-        private String DestinationCidrBlock;
-
-        /**路由下一跳*/
-        @JsonProperty("NextHopInstance")
-        private String NextHopInstance;
-
-        /**路由下一跳名称*/
-        @JsonProperty("NextHopInstanceName")
-        private String NextHopInstanceName;
-
-        /**路由下一跳类型*/
-        @JsonProperty("NextHopType")
-        private String NextHopType;
-
-        /**优先级*/
-        @JsonProperty("Priority")
-        private Integer Priority;
-
-        /**As-path*/
-        @JsonProperty("AsPath")
-        private Integer AsPath;
-
-        /**创建时间*/
-        @JsonProperty("CreateTime")
-        private String CreateTime;
-
-        /**物理端口ID*/
-        @JsonProperty("DirectConnectId")
-        private String DirectConnectId;
-
-        /**BGP的状态*/
-        @JsonProperty("BgpStatus")
-        private String BgpStatus;
-
-        /**路由类型*/
-        @JsonProperty("RouteType")
-        private String RouteType;
-
-    }
+    //返回结果，需要按需扩展
 
 }

@@ -28,11 +28,11 @@ public class DescribeClusterInstanceRequest{
 
     /***/
     @KsYunField(name="Filter",type=2)
-    private List<FilterDto> FilterList;
+    private List<FilterDto1> FilterList;
 
     @Data
     @ToString
-    public static class FilterDto {
+    public static class FilterDto1 {
         /**支持的过滤器参数
 
 - instance-name 实例名称

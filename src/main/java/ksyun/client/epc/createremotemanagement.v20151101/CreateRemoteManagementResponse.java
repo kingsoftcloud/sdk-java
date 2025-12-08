@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname CreateRemoteManagementResponse
@@ -14,29 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class CreateRemoteManagementResponse extends BaseResponseModel {
-    /**请求ID*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**物理机带外的信息*/
-    @JsonProperty("RemoteManagement")
-    private RemoteManagementDto RemoteManagement;
-
-    @Data
-    @ToString
-    public static class RemoteManagementDto {
-        /**带外管理的ID*/
-        @JsonProperty("RemoteManagementId")
-        private String RemoteManagementId;
-
-        /**手机号码*/
-        @JsonProperty("PhoneNumber")
-        private String PhoneNumber;
-
-        /**姓名*/
-        @JsonProperty("Name")
-        private String Name;
-
-    }
+    //返回结果，需要按需扩展
 
 }

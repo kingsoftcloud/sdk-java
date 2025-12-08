@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeParentBackUpsSnapshotsResponse
@@ -14,53 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeParentBackUpsSnapshotsResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Data")
-    private List<DataDto> Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-        /***/
-        @JsonProperty("snapshotId")
-        private String SnapshotId;
-
-        /***/
-        @JsonProperty("resourceId")
-        private String ResourceId;
-
-        /***/
-        @JsonProperty("backupType")
-        private String BackupType;
-
-        /***/
-        @JsonProperty("backupName")
-        private String BackupName;
-
-        /***/
-        @JsonProperty("createTime")
-        private String CreateTime;
-
-        /***/
-        @JsonProperty("backUpTime")
-        private String BackUpTime;
-
-        /***/
-        @JsonProperty("updateTime")
-        private String UpdateTime;
-
-        /***/
-        @JsonProperty("taskStatus")
-        private String TaskStatus;
-
-        /***/
-        @JsonProperty("resourceSize")
-        private Integer ResourceSize;
-
-    }
+    //返回结果，需要按需扩展
 
 }

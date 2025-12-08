@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname GetBlockLocationsResponse
@@ -14,30 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class GetBlockLocationsResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**是否封禁。
-1封禁 0 不封禁*/
-    @JsonProperty("LocationBlock")
-    private Integer LocationBlock;
-
-    /***/
-    @JsonProperty("BlockLocationSet")
-    private List<BlockLocationSetDto> BlockLocationSet;
-
-    @Data
-    @ToString
-    public static class BlockLocationSetDto {
-        /***/
-        @JsonProperty("ZoneKey")
-        private String ZoneKey;
-
-        /***/
-        @JsonProperty("ZoneName")
-        private String ZoneName;
-
-    }
+    //返回结果，需要按需扩展
 
 }

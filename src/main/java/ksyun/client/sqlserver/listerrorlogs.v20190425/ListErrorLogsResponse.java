@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname ListErrorLogsResponse
@@ -14,46 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class ListErrorLogsResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("Data")
-    private DataDto Data;
 
-    @Data
-    @ToString
-    public static class DataDto {
-        /**错误日志列表*/
-        @JsonProperty("ErrorLogs")
-        private List<DataDtoErrorLogsDto> ErrorLogs;
-
-        @Data
-        @ToString
-        public static class DataDtoErrorLogsDto {
-            /**日志信息*/
-            @JsonProperty("SqlText")
-            private String SqlText;
-
-            /**日志收集时间*/
-            @JsonProperty("CollectTime")
-            private String CollectTime;
-
-        }
-
-        /**总条数*/
-        @JsonProperty("TotalCount")
-        private Integer TotalCount;
-
-        /**展示条数*/
-        @JsonProperty("MaxRecords")
-        private Integer MaxRecords;
-
-        /**开始条数*/
-        @JsonProperty("Marker")
-        private Integer Marker;
-
-    }
-
-    /***/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

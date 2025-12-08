@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname UpdatePasswordResponse
@@ -14,21 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class UpdatePasswordResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("reqId")
-    private String ReqId;
 
-    /***/
-    @JsonProperty("code")
-    private Integer Code;
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
 
-    /***/
-    @JsonProperty("data")
-    private DataDto Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-    }
+    //返回结果，需要按需扩展
 
 }

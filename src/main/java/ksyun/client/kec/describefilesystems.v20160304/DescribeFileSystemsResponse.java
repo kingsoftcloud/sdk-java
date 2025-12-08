@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeFileSystemsResponse
@@ -14,98 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeFileSystemsResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Marker")
-    private Integer Marker;
-
-    /***/
-    @JsonProperty("FileSystemCount")
-    private Integer FileSystemCount;
-
-    /***/
-    @JsonProperty("FileSystems")
-    private List<FileSystemsDto> FileSystems;
-
-    @Data
-    @ToString
-    public static class FileSystemsDto {
-        /***/
-        @JsonProperty("FileSystemId")
-        private String FileSystemId;
-
-        /***/
-        @JsonProperty("FileSystemName")
-        private String FileSystemName;
-
-        /***/
-        @JsonProperty("AvailabilityZone")
-        private String AvailabilityZone;
-
-        /***/
-        @JsonProperty("AvailabilityZoneName")
-        private String AvailabilityZoneName;
-
-        /***/
-        @JsonProperty("StorageType")
-        private String StorageType;
-
-        /***/
-        @JsonProperty("ProtocolType")
-        private String ProtocolType;
-
-        /***/
-        @JsonProperty("VpcId")
-        private String VpcId;
-
-        /***/
-        @JsonProperty("FileSystemState")
-        private String FileSystemState;
-
-        /***/
-        @JsonProperty("CreationDate")
-        private String CreationDate;
-
-        /***/
-        @JsonProperty("MountTargets")
-        private List<FileSystemsDtoMountTargetsDto> MountTargets;
-
-        @Data
-        @ToString
-        public static class FileSystemsDtoMountTargetsDto {
-            /***/
-            @JsonProperty("MountTargetId")
-            private String MountTargetId;
-
-            /***/
-            @JsonProperty("SubnetId")
-            private String SubnetId;
-
-            /***/
-            @JsonProperty("IpAddress")
-            private String IpAddress;
-
-            /***/
-            @JsonProperty("MountTargetState")
-            private String MountTargetState;
-
-            /***/
-            @JsonProperty("CreationDate")
-            private String CreationDate;
-
-        }
-
-        /***/
-        @JsonProperty("Size")
-        private Integer Size;
-
-        /***/
-        @JsonProperty("UsedSize")
-        private Integer UsedSize;
-
-    }
+    //返回结果，需要按需扩展
 
 }

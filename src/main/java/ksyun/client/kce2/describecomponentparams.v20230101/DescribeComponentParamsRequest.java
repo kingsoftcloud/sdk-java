@@ -20,11 +20,11 @@ public class DescribeComponentParamsRequest{
 
     /**组件查询条件*/
     @KsYunField(name="Components",type=2)
-    private List<ComponentsDto> ComponentsList;
+    private List<ComponentsDto1> ComponentsList;
 
     @Data
     @ToString
-    public static class ComponentsDto {
+    public static class ComponentsDto1 {
         /**组件类型*/
         @KsYunField(name="Type")
         private String Type;

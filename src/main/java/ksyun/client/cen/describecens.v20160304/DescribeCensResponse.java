@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeCensResponse
@@ -14,37 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeCensResponse extends BaseResponseModel {
-    /**请求ID*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**获取另一页返回结果的 token.*/
-    @JsonProperty("NextToken")
-    private String NextToken;
-
-    /**云企业网的信息*/
-    @JsonProperty("CenSet")
-    private List<CenSetDto> CenSet;
-
-    @Data
-    @ToString
-    public static class CenSetDto {
-        /**创建时间*/
-        @JsonProperty("CreateTime")
-        private String CreateTime;
-
-        /**云企业网的ID*/
-        @JsonProperty("CenId")
-        private String CenId;
-
-        /**云企业网的名称*/
-        @JsonProperty("CenName")
-        private String CenName;
-
-        /**云企业网的描述信息*/
-        @JsonProperty("Description")
-        private String Description;
-
-    }
+    //返回结果，需要按需扩展
 
 }

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname AddVmIntoDataGuardResponse
@@ -14,33 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class AddVmIntoDataGuardResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("DataGuardResult")
-    private DataGuardResultDto DataGuardResult;
 
-    @Data
-    @ToString
-    public static class DataGuardResultDto {
-        /***/
-        @JsonProperty("Flag")
-        private Boolean Flag;
-
-        /***/
-        @JsonProperty("InstanceId")
-        private String InstanceId;
-
-        /***/
-        @JsonProperty("Message")
-        private String Message;
-
-    }
-
-    /***/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Return")
-    private Boolean ReturnField;
+    //返回结果，需要按需扩展
 
 }

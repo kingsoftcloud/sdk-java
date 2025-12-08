@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname CreateGroupResponse
@@ -14,54 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class CreateGroupResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("CreateGroupResult")
-    private CreateGroupResultDto CreateGroupResult;
 
-    @Data
-    @ToString
-    public static class CreateGroupResultDto {
-        /***/
-        @JsonProperty("Group")
-        private CreateGroupResultDtoGroupDto Group;
-
-        @Data
-        @ToString
-        public static class CreateGroupResultDtoGroupDto {
-            /***/
-            @JsonProperty("GroupId")
-            private String GroupId;
-
-            /***/
-            @JsonProperty("Path")
-            private String Path;
-
-            /***/
-            @JsonProperty("GroupName")
-            private String GroupName;
-
-            /***/
-            @JsonProperty("GroupRealName")
-            private String GroupRealName;
-
-            /***/
-            @JsonProperty("Description")
-            private String Description;
-
-            /***/
-            @JsonProperty("CreateDate")
-            private String CreateDate;
-
-            /***/
-            @JsonProperty("Krn")
-            private String Krn;
-
-        }
-
-    }
-
-    /***/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

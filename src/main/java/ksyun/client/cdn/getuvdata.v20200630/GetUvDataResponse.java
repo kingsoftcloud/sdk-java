@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname GetUvDataResponse
@@ -14,66 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class GetUvDataResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("StartTime")
-    private String StartTime;
 
-    /***/
-    @JsonProperty("EndTime")
-    private String EndTime;
-
-    /***/
-    @JsonProperty("CdnType")
-    private String CdnType;
-
-    /***/
-    @JsonProperty("Domains")
-    private String Domains;
-
-    /***/
-    @JsonProperty("Interval")
-    private Integer Interval;
-
-    /***/
-    @JsonProperty("ResultType")
-    private String ResultType;
-
-    /***/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Datas")
-    private List<DatasDto> Datas;
-
-    @Data
-    @ToString
-    public static class DatasDto {
-        /***/
-        @JsonProperty("Time")
-        private String Time;
-
-        /***/
-        @JsonProperty("Uv")
-        private Integer Uv;
-
-        /***/
-        @JsonProperty("Domains")
-        private List<DatasDtoDomainsDto> Domains;
-
-        @Data
-        @ToString
-        public static class DatasDtoDomainsDto {
-            /***/
-            @JsonProperty("Domain")
-            private String Domain;
-
-            /***/
-            @JsonProperty("Uv")
-            private Integer Uv;
-
-        }
-
-    }
+    //返回结果，需要按需扩展
 
 }

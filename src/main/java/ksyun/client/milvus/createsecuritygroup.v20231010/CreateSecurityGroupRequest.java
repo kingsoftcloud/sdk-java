@@ -28,11 +28,11 @@ public class CreateSecurityGroupRequest{
 
     /**安全组规则列表*/
     @KsYunField(name="Rules",type=2)
-    private List<RulesDto> RulesList;
+    private List<RulesDto1> RulesList;
 
     @Data
     @ToString
-    public static class RulesDto {
+    public static class RulesDto1 {
         /**若要绑定规则，此字段为必填*/
         @KsYunField(name="Cidr")
         private String Cidr;

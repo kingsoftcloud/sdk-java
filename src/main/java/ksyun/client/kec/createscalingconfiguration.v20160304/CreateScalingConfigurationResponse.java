@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname CreateScalingConfigurationResponse
@@ -14,12 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class CreateScalingConfigurationResponse extends BaseResponseModel {
-    /**请求ID*/
-    @JsonProperty("RequestId")
-    private String RequestId;
 
-    /**启动配置ID*/
-    @JsonProperty("ScalingConfigurationId")
-    private String ScalingConfigurationId;
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

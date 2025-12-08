@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname AddKecNodesResponse
@@ -14,34 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class AddKecNodesResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("Data")
-    private DataDto Data;
 
-    @Data
-    @ToString
-    public static class DataDto {
-        /***/
-        @JsonProperty("RequestId")
-        private String RequestId;
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
 
-        /***/
-        @JsonProperty("InstanceSet")
-        private List<DataDtoInstanceSetDto> InstanceSet;
-
-        @Data
-        @ToString
-        public static class DataDtoInstanceSetDto {
-            /***/
-            @JsonProperty("KceNodeId")
-            private String KceNodeId;
-
-            /***/
-            @JsonProperty("Code")
-            private Integer Code;
-
-        }
-
-    }
+    //返回结果，需要按需扩展
 
 }

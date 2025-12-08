@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeForwardConfResponse
@@ -14,84 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeForwardConfResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("response")
-    private ResponseDto Response;
 
-    @Data
-    @ToString
-    public static class ResponseDto {
-        /***/
-        @JsonProperty("RequestId")
-        private String RequestId;
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
 
-        /***/
-        @JsonProperty("ForwardConfSet")
-        private ResponseDtoForwardConfSetDto ForwardConfSet;
-
-        @Data
-        @ToString
-        public static class ResponseDtoForwardConfSetDto {
-            /***/
-            @JsonProperty("item")
-            private ResponseDtoForwardConfSetDtoItemDto Item;
-
-            @Data
-            @ToString
-            public static class ResponseDtoForwardConfSetDtoItemDto {
-                /***/
-                @JsonProperty("KadId")
-                private String KadId;
-
-                /***/
-                @JsonProperty("ForwardConfId")
-                private String ForwardConfId;
-
-                /***/
-                @JsonProperty("ServicePort")
-                private String ServicePort;
-
-                /***/
-                @JsonProperty("Cname")
-                private String Cname;
-
-                /***/
-                @JsonProperty("Protocol")
-                private String Protocol;
-
-                /***/
-                @JsonProperty("SourceCount")
-                private String SourceCount;
-
-                /***/
-                @JsonProperty("HealthMonitor")
-                private ResponseDtoForwardConfSetDtoItemDtoHealthMonitorDto HealthMonitor;
-
-                @Data
-                @ToString
-                public static class ResponseDtoForwardConfSetDtoItemDtoHealthMonitorDto {
-                    /***/
-                    @JsonProperty("Switch")
-                    private String SwitchField;
-
-                    /***/
-                    @JsonProperty("Rise")
-                    private String Rise;
-
-                    /***/
-                    @JsonProperty("Fall")
-                    private String Fall;
-
-                    /***/
-                    @JsonProperty("Delay")
-                    private String Delay;
-
-                }
-
-            }
-
-        }
-
-    }
+    //返回结果，需要按需扩展
 
 }

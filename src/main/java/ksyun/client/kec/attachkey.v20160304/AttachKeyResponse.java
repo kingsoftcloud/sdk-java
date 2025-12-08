@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname AttachKeyResponse
@@ -14,29 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class AttachKeyResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("InstancesSet")
-    private List<InstancesSetDto> InstancesSet;
-
-    @Data
-    @ToString
-    public static class InstancesSetDto {
-        /***/
-        @JsonProperty("InstanceId")
-        private String InstanceId;
-
-        /***/
-        @JsonProperty("Message")
-        private String Message;
-
-        /***/
-        @JsonProperty("Return")
-        private Boolean ReturnField;
-
-    }
+    //返回结果，需要按需扩展
 
 }

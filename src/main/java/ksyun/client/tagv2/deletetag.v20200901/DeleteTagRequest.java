@@ -16,11 +16,11 @@ import java.util.Arrays;
 public class DeleteTagRequest{
     /**Tags*/
     @KsYunField(name="Tags",type=2)
-    private List<TagsDto> TagsList;
+    private List<TagsDto1> TagsList;
 
     @Data
     @ToString
-    public static class TagsDto {
+    public static class TagsDto1 {
         /**标签key*/
         @KsYunField(name="Key")
         private String Key;

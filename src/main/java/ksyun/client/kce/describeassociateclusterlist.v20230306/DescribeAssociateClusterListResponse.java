@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeAssociateClusterListResponse
@@ -14,25 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeAssociateClusterListResponse extends BaseResponseModel {
-    /**请求id*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**分页标识*/
-    @JsonProperty("Marker")
-    private Integer Marker;
-
-    /**关联的集群数量*/
-    @JsonProperty("TotalCount")
-    private Integer TotalCount;
-
-    /***/
-    @JsonProperty("ClusterSet")
-    private List<ClusterSetDto> ClusterSet;
-
-    @Data
-    @ToString
-    public static class ClusterSetDto {
-    }
+    //返回结果，需要按需扩展
 
 }

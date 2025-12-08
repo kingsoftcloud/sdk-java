@@ -67,11 +67,12 @@ public class CreateAlbListenerRequest{
     private String BackendServerGroupId;
 
     /**返回固定响应信息*/
-    private FixedResponseConfigDto FixedResponseConfigList;
+    @KsYunField(name="FixedResponseConfig")
+    private FixedResponseConfigDto1 FixedResponseConfig;
 
     @Data
     @ToString
-    public static class FixedResponseConfigDto {
+    public static class FixedResponseConfigDto1 {
         /**响应正文长度不能超过1000个字符，不支持中文字符*/
         @KsYunField(name="Content")
         private String Content;
@@ -87,11 +88,12 @@ public class CreateAlbListenerRequest{
     }
 
     /**返回固定响应信息*/
-    private RewriteConfigDto RewriteConfigList;
+    @KsYunField(name="RewriteConfig")
+    private RewriteConfigDto2 RewriteConfig;
 
     @Data
     @ToString
-    public static class RewriteConfigDto {
+    public static class RewriteConfigDto2 {
         /**重写的域名*/
         @KsYunField(name="HttpHost")
         private String HttpHost;

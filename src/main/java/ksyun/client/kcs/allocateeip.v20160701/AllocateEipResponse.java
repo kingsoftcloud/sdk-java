@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname AllocateEipResponse
@@ -14,29 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class AllocateEipResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Data")
-    private DataDto Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-        /***/
-        @JsonProperty("master")
-        private String Master;
-
-        /***/
-        @JsonProperty("readonly")
-        private String Readonly;
-
-        /***/
-        @JsonProperty("proxy")
-        private String Proxy;
-
-    }
+    //返回结果，需要按需扩展
 
 }

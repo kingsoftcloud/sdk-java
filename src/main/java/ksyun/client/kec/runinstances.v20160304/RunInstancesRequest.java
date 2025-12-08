@@ -76,11 +76,11 @@ public class RunInstancesRequest{
 
     /**数据盘是否随实例释放*/
     @KsYunField(name="DataDisk",type=2)
-    private List<DataDiskDto> DataDiskList;
+    private List<DataDiskDto1> DataDiskList;
 
     @Data
     @ToString
-    public static class DataDiskDto {
+    public static class DataDiskDto1 {
         /**数据盘是否随实例释放*/
         @KsYunField(name="DeleteWithInstance")
         private Boolean DeleteWithInstance;
@@ -101,11 +101,11 @@ public class RunInstancesRequest{
 
     /**辅网卡*/
     @KsYunField(name="NetworkInterface",type=2)
-    private List<NetworkInterfaceDto> NetworkInterfaceList;
+    private List<NetworkInterfaceDto2> NetworkInterfaceList;
 
     @Data
     @ToString
-    public static class NetworkInterfaceDto {
+    public static class NetworkInterfaceDto2 {
         /**辅网卡的子网id不创建辅网卡时非必填，创建辅网卡时必填*/
         @KsYunField(name="SubnetId")
         private String SubnetId;
@@ -125,11 +125,12 @@ public class RunInstancesRequest{
     private String UserData;
 
     /**系统盘*/
-    private SystemDiskDto SystemDiskList;
+    @KsYunField(name="SystemDisk")
+    private SystemDiskDto3 SystemDisk;
 
     @Data
     @ToString
-    public static class SystemDiskDto {
+    public static class SystemDiskDto3 {
         /**系统盘类型*/
         @KsYunField(name="DiskType")
         private String DiskType;
@@ -203,11 +204,11 @@ public class RunInstancesRequest{
 
     /**标签信息*/
     @KsYunField(name="Tag",type=2)
-    private List<TagDto> TagList;
+    private List<TagDto4> TagList;
 
     @Data
     @ToString
-    public static class TagDto {
+    public static class TagDto4 {
         /**标签键值*/
         @KsYunField(name="Key")
         private String Key;
@@ -227,11 +228,12 @@ public class RunInstancesRequest{
     private String DataGuardId;
 
     /***/
-    private InstanceConfigureDto InstanceConfigureList;
+    @KsYunField(name="InstanceConfigure")
+    private InstanceConfigureDto5 InstanceConfigure;
 
     @Data
     @ToString
-    public static class InstanceConfigureDto {
+    public static class InstanceConfigureDto5 {
         /**cpu*/
         @KsYunField(name="VCPU")
         private String VCPU;

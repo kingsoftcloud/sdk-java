@@ -32,11 +32,11 @@ public class ModifyAlbRuleGroupRequest{
 
     /**规则的信息*/
     @KsYunField(name="AlbRuleSet",type=2)
-    private List<AlbRuleSetDto> AlbRuleSetList;
+    private List<AlbRuleSetDto1> AlbRuleSetList;
 
     @Data
     @ToString
-    public static class AlbRuleSetDto {
+    public static class AlbRuleSetDto1 {
         /**匹配规则类型(domain|url|method|sourceIp|header|query|cookie)*/
         @KsYunField(name="AlbRuleType")
         private String AlbRuleType;
@@ -55,11 +55,11 @@ public class ModifyAlbRuleGroupRequest{
 
         /**HTTP标头*/
         @KsYunField(name="HeaderValue",type=2)
-        private List<AlbRuleSetDtoHeaderValueDto> HeaderValueList;
+        private List<HeaderValueDto2> HeaderValueList;
 
         @Data
         @ToString
-        public static class AlbRuleSetDtoHeaderValueDto {
+        public static class HeaderValueDto2 {
             /**HTTP标头,查询字符串的键值*/
             @KsYunField(name="Key")
             private String Key;
@@ -72,11 +72,11 @@ public class ModifyAlbRuleGroupRequest{
 
         /**查询字符串*/
         @KsYunField(name="QueryValue",type=2)
-        private List<AlbRuleSetDtoQueryValueDto> QueryValueList;
+        private List<QueryValueDto3> QueryValueList;
 
         @Data
         @ToString
-        public static class AlbRuleSetDtoQueryValueDto {
+        public static class QueryValueDto3 {
             /**HTTP标头,查询字符串的键值*/
             @KsYunField(name="Key")
             private String Key;
@@ -89,11 +89,11 @@ public class ModifyAlbRuleGroupRequest{
 
         /**Cookie转发条件*/
         @KsYunField(name="CookieValue",type=2)
-        private List<AlbRuleSetDtoCookieValueDto> CookieValueList;
+        private List<CookieValueDto4> CookieValueList;
 
         @Data
         @ToString
-        public static class AlbRuleSetDtoCookieValueDto {
+        public static class CookieValueDto4 {
             /**HTTP标头,查询字符串的键值*/
             @KsYunField(name="Key")
             private String Key;
@@ -115,11 +115,12 @@ public class ModifyAlbRuleGroupRequest{
     private String RedirectHttpCode;
 
     /**返回固定响应信息*/
-    private FixedResponseConfigDto FixedResponseConfigList;
+    @KsYunField(name="FixedResponseConfig")
+    private FixedResponseConfigDto5 FixedResponseConfig;
 
     @Data
     @ToString
-    public static class FixedResponseConfigDto {
+    public static class FixedResponseConfigDto5 {
         /**响应正文长度不能超过1000个字符，不支持中文字符*/
         @KsYunField(name="Content")
         private String Content;

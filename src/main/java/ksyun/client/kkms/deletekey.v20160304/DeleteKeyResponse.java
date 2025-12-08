@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DeleteKeyResponse
@@ -14,20 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DeleteKeyResponse extends BaseResponseModel {
-    /**
-- 请求ID
-- 类型: String
 
-#### */
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**
-- 操作是否成功
-- 类型: Boolean
-
-### */
-    @JsonProperty("Return")
-    private Boolean ReturnField;
+    //返回结果，需要按需扩展
 
 }

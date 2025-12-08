@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DeleteBatchCfwAddrbookResponse
@@ -14,12 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DeleteBatchCfwAddrbookResponse extends BaseResponseModel {
-    /**请求ID，用于标识本次请求*/
-    @JsonProperty("RequestId")
-    private String RequestId;
 
-    /**操作结果，true表示成功，false表示失败*/
-    @JsonProperty("Result")
-    private Boolean Result;
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

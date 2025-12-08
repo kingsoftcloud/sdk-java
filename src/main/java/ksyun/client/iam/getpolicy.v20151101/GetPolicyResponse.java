@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname GetPolicyResponse
@@ -14,67 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class GetPolicyResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("GetPolicyResult")
-    private GetPolicyResultDto GetPolicyResult;
 
-    @Data
-    @ToString
-    public static class GetPolicyResultDto {
-        /***/
-        @JsonProperty("Policy")
-        private GetPolicyResultDtoPolicyDto Policy;
-
-        @Data
-        @ToString
-        public static class GetPolicyResultDtoPolicyDto {
-            /***/
-            @JsonProperty("CreateDate")
-            private String CreateDate;
-
-            /**策略默认版本*/
-            @JsonProperty("DefaultVersionId")
-            private String DefaultVersionId;
-
-            /***/
-            @JsonProperty("Description")
-            private String Description;
-
-            /**策略krn*/
-            @JsonProperty("Krn")
-            private String Krn;
-
-            /***/
-            @JsonProperty("Path")
-            private String Path;
-
-            /***/
-            @JsonProperty("PolicyId")
-            private String PolicyId;
-
-            /***/
-            @JsonProperty("PolicyName")
-            private String PolicyName;
-
-            /**策略类型：1系统策略，2自定义策略
-*/
-            @JsonProperty("PolicyType")
-            private Integer PolicyType;
-
-            /***/
-            @JsonProperty("CreateMode")
-            private Integer CreateMode;
-
-            /***/
-            @JsonProperty("UpdateDate")
-            private String UpdateDate;
-
-        }
-
-    }
-
-    /***/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

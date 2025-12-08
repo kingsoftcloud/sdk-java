@@ -32,11 +32,11 @@ public class CreateEndPointRequest{
 
     /**筛选Filter*/
     @KsYunField(name="IpConfig",type=2)
-    private List<IpConfigDto> IpConfigList;
+    private List<IpConfigDto1> IpConfigList;
 
     @Data
     @ToString
-    public static class IpConfigDto {
+    public static class IpConfigDto1 {
         /**可用区Code,例如cn-beijing-6a*/
         @KsYunField(name="AvailabilityZone")
         private String AvailabilityZone;

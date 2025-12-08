@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname ListTagsByResourceIdsResponse
@@ -14,33 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class ListTagsByResourceIdsResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("Tags")
-    private List<TagsDto> Tags;
 
-    @Data
-    @ToString
-    public static class TagsDto {
-        /**资源id*/
-        @JsonProperty("ResourceUuid")
-        private String ResourceUuid;
-
-        /**标签值ID*/
-        @JsonProperty("TagId")
-        private Integer TagId;
-
-        /**标签键*/
-        @JsonProperty("TagKey")
-        private String TagKey;
-
-        /**标签值*/
-        @JsonProperty("TagValue")
-        private String TagValue;
-
-    }
-
-    /**请求id*/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

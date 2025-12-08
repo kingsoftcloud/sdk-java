@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeInstanceTokenResponse
@@ -14,55 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeInstanceTokenResponse extends BaseResponseModel {
-    /**请求Id*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**访问凭证数量
-*/
-    @JsonProperty("TotalCount")
-    private Integer TotalCount;
-
-    /**分页标识，如果调用未返回全部实例，标记下次调用的返回值的起点，如果已返回全部实例，则其值为0
-*/
-    @JsonProperty("Marker")
-    private Integer Marker;
-
-    /**单次调用返回的最大数*/
-    @JsonProperty("MaxResults")
-    private Integer MaxResults;
-
-    /**响应实体类*/
-    @JsonProperty("TokenSet")
-    private List<TokenSetDto> TokenSet;
-
-    @Data
-    @ToString
-    public static class TokenSetDto {
-        /**实例访问凭证的id
-*/
-        @JsonProperty("TokenId")
-        private String TokenId;
-
-        /**实例访问凭证启用状态，有效值：
-True：已启用
-False：已禁用*/
-        @JsonProperty("Enable")
-        private Boolean Enable;
-
-        /**访问凭证描述信息
-*/
-        @JsonProperty("Desc")
-        private String Desc;
-
-        /**访问凭证创建时间*/
-        @JsonProperty("CreateTime")
-        private String CreateTime;
-
-        /**访问凭证过期时间*/
-        @JsonProperty("ExpireTime")
-        private String ExpireTime;
-
-    }
+    //返回结果，需要按需扩展
 
 }

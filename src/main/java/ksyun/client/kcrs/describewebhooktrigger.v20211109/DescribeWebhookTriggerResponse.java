@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeWebhookTriggerResponse
@@ -14,57 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeWebhookTriggerResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("TotalCount")
-    private Integer TotalCount;
-
-    /***/
-    @JsonProperty("Marker")
-    private Integer Marker;
-
-    /***/
-    @JsonProperty("MaxResults")
-    private Integer MaxResults;
-
-    /***/
-    @JsonProperty("TriggerSet")
-    private List<TriggerSetDto> TriggerSet;
-
-    @Data
-    @ToString
-    public static class TriggerSetDto {
-        /***/
-        @JsonProperty("TriggerId")
-        private Integer TriggerId;
-
-        /***/
-        @JsonProperty("TriggerName")
-        private String TriggerName;
-
-        /***/
-        @JsonProperty("EventType")
-        private List<String> EventType;
-
-        /***/
-        @JsonProperty("TriggerUrl")
-        private String TriggerUrl;
-
-        /***/
-        @JsonProperty("Enabled")
-        private Boolean Enabled;
-
-        /***/
-        @JsonProperty("CreateTime")
-        private String CreateTime;
-
-        /***/
-        @JsonProperty("UpdateTime")
-        private String UpdateTime;
-
-    }
+    //返回结果，需要按需扩展
 
 }

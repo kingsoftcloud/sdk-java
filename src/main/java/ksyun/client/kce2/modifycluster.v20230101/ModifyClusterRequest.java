@@ -27,11 +27,12 @@ public class ModifyClusterRequest{
     private List<String> SANsList;
 
     /**是否开启apiserver，开启则需要填enable 字段为true，如果关闭，则enable字段为false，不修改，这不填该字段*/
-    private PublicApiServerDto PublicApiServerList;
+    @KsYunField(name="PublicApiServer")
+    private PublicApiServerDto1 PublicApiServer;
 
     @Data
     @ToString
-    public static class PublicApiServerDto {
+    public static class PublicApiServerDto1 {
         /**EIP ID*/
         @KsYunField(name="EipId")
         private String EipId;
@@ -44,11 +45,12 @@ public class ModifyClusterRequest{
 
     /**是否开启VpcCNI，开启enable字段为ture，关闭则enable字段为false，不修改则不填
 */
-    private VpcCNIDto VpcCNIList;
+    @KsYunField(name="VpcCNI")
+    private VpcCNIDto2 VpcCNI;
 
     @Data
     @ToString
-    public static class VpcCNIDto {
+    public static class VpcCNIDto2 {
         /**是否开启或关闭VpcCNi
 */
         @KsYunField(name="Enable")

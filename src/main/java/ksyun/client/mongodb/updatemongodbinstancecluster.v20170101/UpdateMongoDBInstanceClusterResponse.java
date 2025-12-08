@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname UpdateMongoDBInstanceClusterResponse
@@ -14,33 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class UpdateMongoDBInstanceClusterResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("MongoDBInstanceResult")
-    private MongoDBInstanceResultDto MongoDBInstanceResult;
-
-    @Data
-    @ToString
-    public static class MongoDBInstanceResultDto {
-        /***/
-        @JsonProperty("UserId")
-        private String UserId;
-
-        /***/
-        @JsonProperty("Region")
-        private String Region;
-
-        /***/
-        @JsonProperty("InstanceId")
-        private String InstanceId;
-
-        /***/
-        @JsonProperty("Name")
-        private String Name;
-
-    }
+    //返回结果，需要按需扩展
 
 }

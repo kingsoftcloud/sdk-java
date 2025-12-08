@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeBackendServersResponse
@@ -14,21 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeBackendServersResponse extends BaseResponseModel {
-    /**请求ID*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**获取另一页返回结果的 token.*/
-    @JsonProperty("NextToken")
-    private String NextToken;
-
-    /**后端服务的信息*/
-    @JsonProperty("BackendServerSet")
-    private List<BackendServerSetDto> BackendServerSet;
-
-    @Data
-    @ToString
-    public static class BackendServerSetDto {
-    }
+    //返回结果，需要按需扩展
 
 }

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeDBInstanceRestorableTimeResponse
@@ -14,39 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeDBInstanceRestorableTimeResponse extends BaseResponseModel {
-    /**-
-*/
-    @JsonProperty("Data")
-    private DataDto Data;
 
-    @Data
-    @ToString
-    public static class DataDto {
-        /**-
-*/
-        @JsonProperty("RestorableTime")
-        private DataDtoRestorableTimeDto RestorableTime;
-
-        @Data
-        @ToString
-        public static class DataDtoRestorableTimeDto {
-            /**可以备份的时间区间下限
-*/
-            @JsonProperty("Begin")
-            private String Begin;
-
-            /**可以备份的时间区间上限	
-*/
-            @JsonProperty("End")
-            private String End;
-
-        }
-
-    }
-
-    /**请求id
-*/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

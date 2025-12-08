@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname ListSecurityGroupResponse
@@ -14,119 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class ListSecurityGroupResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Code")
-    private String Code;
-
-    /***/
-    @JsonProperty("Message")
-    private String Message;
-
-    /***/
-    @JsonProperty("Data")
-    private List<DataDto> Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-        /***/
-        @JsonProperty("SecurityGroupId")
-        private String SecurityGroupId;
-
-        /***/
-        @JsonProperty("SecurityGroupName")
-        private String SecurityGroupName;
-
-        /***/
-        @JsonProperty("IpVersion")
-        private String IpVersion;
-
-        /***/
-        @JsonProperty("Description")
-        private String Description;
-
-        /***/
-        @JsonProperty("InstanceCount")
-        private Integer InstanceCount;
-
-        /***/
-        @JsonProperty("CreateTime")
-        private String CreateTime;
-
-        /***/
-        @JsonProperty("UpdateTime")
-        private String UpdateTime;
-
-        /***/
-        @JsonProperty("Rules")
-        private List<DataDtoRulesDto> Rules;
-
-        @Data
-        @ToString
-        public static class DataDtoRulesDto {
-            /***/
-            @JsonProperty("RuleId")
-            private String RuleId;
-
-            /***/
-            @JsonProperty("Cidr")
-            private String Cidr;
-
-            /***/
-            @JsonProperty("CreateTime")
-            private String CreateTime;
-
-            /***/
-            @JsonProperty("Description")
-            private String Description;
-
-        }
-
-        /***/
-        @JsonProperty("Instances")
-        private List<DataDtoInstancesDto> Instances;
-
-        @Data
-        @ToString
-        public static class DataDtoInstancesDto {
-            /***/
-            @JsonProperty("InstanceId")
-            private String InstanceId;
-
-            /***/
-            @JsonProperty("InstanceName")
-            private String InstanceName;
-
-            /***/
-            @JsonProperty("ProductType")
-            private Integer ProductType;
-
-            /***/
-            @JsonProperty("ProductTypeName")
-            private String ProductTypeName;
-
-            /***/
-            @JsonProperty("Vip")
-            private String Vip;
-
-            /***/
-            @JsonProperty("CreateTime")
-            private String CreateTime;
-
-            /***/
-            @JsonProperty("Status")
-            private String Status;
-
-            /***/
-            @JsonProperty("UpdatetTime")
-            private String UpdatetTime;
-
-        }
-
-    }
+    //返回结果，需要按需扩展
 
 }

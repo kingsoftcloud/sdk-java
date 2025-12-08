@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname UpdateUserResponse
@@ -14,94 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class UpdateUserResponse extends BaseResponseModel {
-    /**UpdateUserResult*/
-    @JsonProperty("UpdateUserResult")
-    private UpdateUserResultDto UpdateUserResult;
 
-    @Data
-    @ToString
-    public static class UpdateUserResultDto {
-        /***/
-        @JsonProperty("User")
-        private UpdateUserResultDtoUserDto User;
-
-        @Data
-        @ToString
-        public static class UpdateUserResultDtoUserDto {
-            /***/
-            @JsonProperty("UserId")
-            private String UserId;
-
-            /***/
-            @JsonProperty("Path")
-            private String Path;
-
-            /***/
-            @JsonProperty("UserName")
-            private String UserName;
-
-            /***/
-            @JsonProperty("RealName")
-            private String RealName;
-
-            /***/
-            @JsonProperty("CreateDate")
-            private String CreateDate;
-
-            /***/
-            @JsonProperty("Phone")
-            private String Phone;
-
-            /***/
-            @JsonProperty("CountryMobileCode")
-            private String CountryMobileCode;
-
-            /***/
-            @JsonProperty("isInternational")
-            private Integer IsInternational;
-
-            /***/
-            @JsonProperty("Email")
-            private String Email;
-
-            /***/
-            @JsonProperty("PhoneVerified")
-            private String PhoneVerified;
-
-            /***/
-            @JsonProperty("EmailVerified")
-            private String EmailVerified;
-
-            /***/
-            @JsonProperty("Remark")
-            private String Remark;
-
-            /***/
-            @JsonProperty("Krn")
-            private String Krn;
-
-            /***/
-            @JsonProperty("PasswordResetRequired")
-            private String PasswordResetRequired;
-
-            /***/
-            @JsonProperty("EnableMFA")
-            private Integer EnableMFA;
-
-            /***/
-            @JsonProperty("NeedBindMfa")
-            private String NeedBindMfa;
-
-            /***/
-            @JsonProperty("UpdateDate")
-            private String UpdateDate;
-
-        }
-
-    }
-
-    /***/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

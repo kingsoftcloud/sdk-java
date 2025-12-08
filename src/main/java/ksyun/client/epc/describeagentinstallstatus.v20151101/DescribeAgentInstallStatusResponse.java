@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeAgentInstallStatusResponse
@@ -14,52 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeAgentInstallStatusResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("AgentSet")
-    private List<AgentSetDto> AgentSet;
 
-    @Data
-    @ToString
-    public static class AgentSetDto {
-        /**实例ID*/
-        @JsonProperty("HostId")
-        private String HostId;
-
-        /**实例名称*/
-        @JsonProperty("HostName")
-        private String HostName;
-
-        /**agent ID*/
-        @JsonProperty("AgentId")
-        private String AgentId;
-
-        /**Agent状态。取值：
-• Installing：安装中
-• InstallFinished：安装完成
-• InstallFailed：安装失败*/
-        @JsonProperty("Status")
-        private String Status;
-
-        /**创建时间*/
-        @JsonProperty("CreateTime")
-        private String CreateTime;
-
-        /**更新时间*/
-        @JsonProperty("UpdateTime")
-        private String UpdateTime;
-
-    }
-
-    /***/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("TotalCount")
-    private Integer TotalCount;
-
-    /***/
-    @JsonProperty("NextToken")
-    private String NextToken;
+    //返回结果，需要按需扩展
 
 }

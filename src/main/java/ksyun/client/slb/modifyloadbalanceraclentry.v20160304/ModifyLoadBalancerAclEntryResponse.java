@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname ModifyLoadBalancerAclEntryResponse
@@ -14,45 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class ModifyLoadBalancerAclEntryResponse extends BaseResponseModel {
-    /**请求ID*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**LoadBalancerAcl规则信息*/
-    @JsonProperty("LoadBalancerAclEntry")
-    private LoadBalancerAclEntryDto LoadBalancerAclEntry;
-
-    @Data
-    @ToString
-    public static class LoadBalancerAclEntryDto {
-        /**ACL的ID*/
-        @JsonProperty("LoadBalancerAclId")
-        private String LoadBalancerAclId;
-
-        /**ACL规则ID*/
-        @JsonProperty("LoadBalancerAclEntryId")
-        private String LoadBalancerAclEntryId;
-
-        /**LoadBalancerAcl规则的网段*/
-        @JsonProperty("CidrBlock")
-        private String CidrBlock;
-
-        /**LoadBalancerAcl规则优先级，1-32766，数字越小优先级越高*/
-        @JsonProperty("RuleNumber")
-        private Integer RuleNumber;
-
-        /**LoadBalancerAcl规则行为，接受(allow)，拒绝(deny)*/
-        @JsonProperty("RuleAction")
-        private String RuleAction;
-
-        /**协议，IP代表所有协议*/
-        @JsonProperty("Protocol")
-        private String Protocol;
-
-        /**描述*/
-        @JsonProperty("Description")
-        private String Description;
-
-    }
+    //返回结果，需要按需扩展
 
 }

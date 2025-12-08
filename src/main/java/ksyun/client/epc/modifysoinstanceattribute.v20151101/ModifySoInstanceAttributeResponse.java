@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname ModifySoInstanceAttributeResponse
@@ -14,12 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class ModifySoInstanceAttributeResponse extends BaseResponseModel {
-    /**4f35e8f7-f549-5c55-9531-5f43ca78*****/
-    @JsonProperty("RequestId")
-    private String RequestId;
 
-    /**true*/
-    @JsonProperty("Return")
-    private Boolean ReturnField;
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

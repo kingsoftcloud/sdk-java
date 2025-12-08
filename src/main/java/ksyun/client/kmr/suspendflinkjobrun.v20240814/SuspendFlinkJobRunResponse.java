@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname SuspendFlinkJobRunResponse
@@ -14,25 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class SuspendFlinkJobRunResponse extends BaseResponseModel {
-    /**响应状态码*/
-    @JsonProperty("Code")
-    private Integer Code;
 
-    /**响应信息*/
-    @JsonProperty("Message")
-    private String Message;
-
-    /**请求ID*/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**空结构体*/
-    @JsonProperty("Data")
-    private DataDto Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-    }
+    //返回结果，需要按需扩展
 
 }

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname ModifyProcessResponse
@@ -14,25 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class ModifyProcessResponse extends BaseResponseModel {
-    /**请求ID*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**确认允许重启的时间
-*/
-    @JsonProperty("ConfirmTime")
-    private String ConfirmTime;
-
-    /**修改后的工单状态
-有效值：
-• InProgress
-• Completed
-• UserClose*/
-    @JsonProperty("Status")
-    private String Status;
-
-    /**操作是否成功*/
-    @JsonProperty("Return")
-    private Boolean ReturnField;
+    //返回结果，需要按需扩展
 
 }

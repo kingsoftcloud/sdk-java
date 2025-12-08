@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname ListRegionResponse
@@ -14,86 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class ListRegionResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Code")
-    private String Code;
-
-    /***/
-    @JsonProperty("Message")
-    private String Message;
-
-    /***/
-    @JsonProperty("Data")
-    private List<DataDto> Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-        /***/
-        @JsonProperty("RegionId")
-        private String RegionId;
-
-        /***/
-        @JsonProperty("InnerCode")
-        private String InnerCode;
-
-        /***/
-        @JsonProperty("RegionCode")
-        private String RegionCode;
-
-        /***/
-        @JsonProperty("RegionName")
-        private String RegionName;
-
-        /***/
-        @JsonProperty("RegionEnName")
-        private String RegionEnName;
-
-        /***/
-        @JsonProperty("Active")
-        private Boolean Active;
-
-        /***/
-        @JsonProperty("RegionType")
-        private Integer RegionType;
-
-        /***/
-        @JsonProperty("Overseas")
-        private Boolean Overseas;
-
-        /***/
-        @JsonProperty("AzList")
-        private List<DataDtoAzListDto> AzList;
-
-        @Data
-        @ToString
-        public static class DataDtoAzListDto {
-            /***/
-            @JsonProperty("AzCode")
-            private String AzCode;
-
-            /***/
-            @JsonProperty("AzName")
-            private String AzName;
-
-        }
-
-        /***/
-        @JsonProperty("AreaCode")
-        private String AreaCode;
-
-        /***/
-        @JsonProperty("AreaName")
-        private String AreaName;
-
-        /***/
-        @JsonProperty("AreaEnName")
-        private String AreaEnName;
-
-    }
+    //返回结果，需要按需扩展
 
 }

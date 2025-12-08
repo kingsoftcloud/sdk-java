@@ -20,22 +20,22 @@ public class ScaleInInstanceGroupsRequest{
 
     /**要缩容的节点组，需要注意的是，一次只能对一个节点组进行操作*/
     @KsYunField(name="InstanceGroups",type=2)
-    private List<InstanceGroupsDto> InstanceGroupsList;
+    private List<InstanceGroupsDto1> InstanceGroupsList;
 
     @Data
     @ToString
-    public static class InstanceGroupsDto {
+    public static class InstanceGroupsDto1 {
         /**节点组 id，需要注意的是，仅可对 Task 节点或 Gateway 节点进行缩容操作。节点组 id 可通过 DescribeCluster 接口获得*/
         @KsYunField(name="Id")
         private String Id;
 
         /**要缩容的实例列表，不支持缩容中间实例，如果要缩容中间实例需提工单处理*/
         @KsYunField(name="instances",type=2)
-        private List<InstanceGroupsDtoInstancesDto> InstancesList;
+        private List<InstancesDto2> InstancesList;
 
         @Data
         @ToString
-        public static class InstanceGroupsDtoInstancesDto {
+        public static class InstancesDto2 {
             /**要缩容的实例 id，实例 id 可通过DescribeCluster 接口获得*/
             @KsYunField(name="InstanceId")
             private String InstanceId;

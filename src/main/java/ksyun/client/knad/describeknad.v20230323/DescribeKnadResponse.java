@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeKnadResponse
@@ -14,69 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeKnadResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("KnadSet")
-    private List<KnadSetDto> KnadSet;
-
-    @Data
-    @ToString
-    public static class KnadSetDto {
-        /***/
-        @JsonProperty("KnadId")
-        private String KnadId;
-
-        /***/
-        @JsonProperty("KnadName")
-        private String KnadName;
-
-        /***/
-        @JsonProperty("Band")
-        private Integer Band;
-
-        /***/
-        @JsonProperty("MaxBand")
-        private Integer MaxBand;
-
-        /***/
-        @JsonProperty("ProjectId")
-        private String ProjectId;
-
-        /***/
-        @JsonProperty("UsedIpCount")
-        private Integer UsedIpCount;
-
-        /***/
-        @JsonProperty("IpCount")
-        private Integer IpCount;
-
-        /***/
-        @JsonProperty("TemplateId")
-        private Integer TemplateId;
-
-        /***/
-        @JsonProperty("ExprieTime")
-        private String ExprieTime;
-
-        /***/
-        @JsonProperty("UdpBlock")
-        private Integer UdpBlock;
-
-        /***/
-        @JsonProperty("OnlyChinaIp")
-        private Integer OnlyChinaIp;
-
-        /***/
-        @JsonProperty("IdcBand")
-        private Integer IdcBand;
-
-        /***/
-        @JsonProperty("ServiceId")
-        private String ServiceId;
-
-    }
+    //返回结果，需要按需扩展
 
 }

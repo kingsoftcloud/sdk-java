@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname ModifyInstanceImageResponse
@@ -14,12 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class ModifyInstanceImageResponse extends BaseResponseModel {
-    /**请求ID*/
-    @JsonProperty("RequestId")
-    private String RequestId;
 
-    /**更换或者重装实例操作系统成功与否*/
-    @JsonProperty("Return")
-    private Boolean ReturnField;
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

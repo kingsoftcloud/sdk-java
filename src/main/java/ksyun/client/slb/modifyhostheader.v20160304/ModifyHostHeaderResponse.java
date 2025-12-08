@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname ModifyHostHeaderResponse
@@ -14,37 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class ModifyHostHeaderResponse extends BaseResponseModel {
-    /**请求ID*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**域名的信息*/
-    @JsonProperty("HostHeader")
-    private HostHeaderDto HostHeader;
-
-    @Data
-    @ToString
-    public static class HostHeaderDto {
-        /**创建时间*/
-        @JsonProperty("CreateTime")
-        private String CreateTime;
-
-        /**域名的ID*/
-        @JsonProperty("HostHeaderId")
-        private String HostHeaderId;
-
-        /**监听器的ID*/
-        @JsonProperty("ListenerId")
-        private String ListenerId;
-
-        /**证书的ID*/
-        @JsonProperty("CertificateId")
-        private String CertificateId;
-
-        /**域名*/
-        @JsonProperty("HostHeader")
-        private String HostHeader;
-
-    }
+    //返回结果，需要按需扩展
 
 }

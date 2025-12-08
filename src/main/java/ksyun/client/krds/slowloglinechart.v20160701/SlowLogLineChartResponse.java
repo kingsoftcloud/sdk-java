@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname SlowLogLineChartResponse
@@ -14,33 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class SlowLogLineChartResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("data")
-    private List<DataDto> Data;
 
-    @Data
-    @ToString
-    public static class DataDto {
-        /***/
-        @JsonProperty("reportTime")
-        private Integer ReportTime;
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
 
-        /***/
-        @JsonProperty("reportCount")
-        private Integer ReportCount;
-
-        /***/
-        @JsonProperty("percentage")
-        private String Percentage;
-
-    }
-
-    /***/
-    @JsonProperty("TotalCount")
-    private Integer TotalCount;
-
-    /***/
-    @JsonProperty("QuerySum")
-    private Integer QuerySum;
+    //返回结果，需要按需扩展
 
 }

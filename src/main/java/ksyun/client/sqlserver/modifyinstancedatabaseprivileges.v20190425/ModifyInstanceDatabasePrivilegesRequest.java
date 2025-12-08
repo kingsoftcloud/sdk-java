@@ -24,11 +24,11 @@ public class ModifyInstanceDatabasePrivilegesRequest{
 
     /***/
     @KsYunField(name="InstanceDatabasePrivileges",type=2)
-    private List<InstanceDatabasePrivilegesDto> InstanceDatabasePrivilegesList;
+    private List<InstanceDatabasePrivilegesDto1> InstanceDatabasePrivilegesList;
 
     @Data
     @ToString
-    public static class InstanceDatabasePrivilegesDto {
+    public static class InstanceDatabasePrivilegesDto1 {
         /**账号名称*/
         @KsYunField(name="InstanceAccountName")
         private String InstanceAccountName;

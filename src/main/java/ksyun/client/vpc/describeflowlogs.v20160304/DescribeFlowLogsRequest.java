@@ -20,11 +20,11 @@ public class DescribeFlowLogsRequest{
 
     /**筛选Filter*/
     @KsYunField(name="Filter",type=2)
-    private List<FilterDto> FilterList;
+    private List<FilterDto1> FilterList;
 
     @Data
     @ToString
-    public static class FilterDto {
+    public static class FilterDto1 {
         /**有效值：
  FlowLogName，流日志名称 
  ResourceId，捕获的流量的资源 ID 

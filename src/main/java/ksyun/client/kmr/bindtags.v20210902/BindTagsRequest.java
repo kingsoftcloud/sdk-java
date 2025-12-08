@@ -20,11 +20,11 @@ public class BindTagsRequest{
 
     /**标签列表*/
     @KsYunField(name="Tags",type=2)
-    private List<TagsDto> TagsList;
+    private List<TagsDto1> TagsList;
 
     @Data
     @ToString
-    public static class TagsDto {
+    public static class TagsDto1 {
         /**标签键*/
         @KsYunField(name="TagKey")
         private String TagKey;

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DelInstanceFromESResponse
@@ -14,33 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DelInstanceFromESResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("Data")
-    private List<DataDto> Data;
 
-    @Data
-    @ToString
-    public static class DataDto {
-        /***/
-        @JsonProperty("instanceId")
-        private String InstanceId;
-
-        /***/
-        @JsonProperty("status")
-        private Integer Status;
-
-        /***/
-        @JsonProperty("result")
-        private String Result;
-
-        /***/
-        @JsonProperty("reason")
-        private String Reason;
-
-    }
-
-    /***/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

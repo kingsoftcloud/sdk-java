@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname StopLoopResponse
@@ -14,12 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class StopLoopResponse extends BaseResponseModel {
-    /**错误码，0：成功；非0：失败*/
-    @JsonProperty("ErrNum")
-    private Integer ErrNum;
 
-    /**描述本次请求错误的原因*/
-    @JsonProperty("ErrMsg")
-    private String ErrMsg;
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

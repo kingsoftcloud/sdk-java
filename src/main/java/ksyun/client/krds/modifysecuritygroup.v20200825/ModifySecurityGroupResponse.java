@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname ModifySecurityGroupResponse
@@ -14,104 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class ModifySecurityGroupResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("Data")
-    private DataDto Data;
 
-    @Data
-    @ToString
-    public static class DataDto {
-        /**安全组信息*/
-        @JsonProperty("SecurityGroups")
-        private List<DataDtoSecurityGroupsDto> SecurityGroups;
-
-        @Data
-        @ToString
-        public static class DataDtoSecurityGroupsDto {
-            /**安全组id*/
-            @JsonProperty("SecurityGroupId")
-            private String SecurityGroupId;
-
-            /**安全组名称*/
-            @JsonProperty("SecurityGroupName")
-            private String SecurityGroupName;
-
-            /**安全组描述*/
-            @JsonProperty("SecurityGroupDescription")
-            private String SecurityGroupDescription;
-
-            /**安全组类型*/
-            @JsonProperty("SecurityGroupType")
-            private String SecurityGroupType;
-
-            /**创建时间*/
-            @JsonProperty("Created")
-            private String Created;
-
-            /**绑定该安全组的实例信息，实例支持多安全组*/
-            @JsonProperty("Instances")
-            private List<DataDtoSecurityGroupsDtoInstancesDto> Instances;
-
-            @Data
-            @ToString
-            public static class DataDtoSecurityGroupsDtoInstancesDto {
-                /***/
-                @JsonProperty("DBInstanceIdentifier")
-                private String DBInstanceIdentifier;
-
-                /***/
-                @JsonProperty("DBInstanceName")
-                private String DBInstanceName;
-
-                /***/
-                @JsonProperty("Vip")
-                private String Vip;
-
-                /***/
-                @JsonProperty("Created")
-                private String Created;
-
-                /***/
-                @JsonProperty("DBInstanceType")
-                private String DBInstanceType;
-
-            }
-
-            /**安全组规则列表*/
-            @JsonProperty("SecurityGroupRules")
-            private List<DataDtoSecurityGroupsDtoSecurityGroupRulesDto> SecurityGroupRules;
-
-            @Data
-            @ToString
-            public static class DataDtoSecurityGroupsDtoSecurityGroupRulesDto {
-                /***/
-                @JsonProperty("SecurityGroupRuleId")
-                private String SecurityGroupRuleId;
-
-                /***/
-                @JsonProperty("SecurityGroupRuleName")
-                private String SecurityGroupRuleName;
-
-                /***/
-                @JsonProperty("SecurityGroupRuleProtocol")
-                private String SecurityGroupRuleProtocol;
-
-                /***/
-                @JsonProperty("SecurityGroupRuleCidr")
-                private String SecurityGroupRuleCidr;
-
-                /***/
-                @JsonProperty("Created")
-                private String Created;
-
-            }
-
-        }
-
-    }
-
-    /***/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeVpnGatewayRoutesResponse
@@ -14,53 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeVpnGatewayRoutesResponse extends BaseResponseModel {
-    /**请求ID*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**获取另一页返回结果的 token.*/
-    @JsonProperty("NextToken")
-    private String NextToken;
-
-    /**Vpn网关路由信息*/
-    @JsonProperty("VpnGatewayRouteSet")
-    private List<VpnGatewayRouteSetDto> VpnGatewayRouteSet;
-
-    @Data
-    @ToString
-    public static class VpnGatewayRouteSetDto {
-        /**创建时间*/
-        @JsonProperty("CreateTime")
-        private String CreateTime;
-
-        /**Vpn网关路由id*/
-        @JsonProperty("VpnGatewayRouteId")
-        private String VpnGatewayRouteId;
-
-        /**目标网段*/
-        @JsonProperty("DestinationCidrBlock")
-        private String DestinationCidrBlock;
-
-        /**路由类型*/
-        @JsonProperty("RouteType")
-        private String RouteType;
-
-        /**下一跳类型*/
-        @JsonProperty("NextHopType")
-        private String NextHopType;
-
-        /**下一跳实例名称*/
-        @JsonProperty("NextHopInstanceName")
-        private String NextHopInstanceName;
-
-        /**VPN网关id*/
-        @JsonProperty("VpnGatewayId")
-        private String VpnGatewayId;
-
-        /**描述*/
-        @JsonProperty("Description")
-        private String Description;
-
-    }
+    //返回结果，需要按需扩展
 
 }

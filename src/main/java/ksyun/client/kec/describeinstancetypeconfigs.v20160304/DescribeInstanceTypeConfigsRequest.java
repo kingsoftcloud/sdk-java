@@ -20,11 +20,11 @@ instance-family 实例族
 instance-type 实例类型
 availability-zone 可用区*/
     @KsYunField(name="Filter",type=2)
-    private List<FilterDto> FilterList;
+    private List<FilterDto1> FilterList;
 
     @Data
     @ToString
-    public static class FilterDto {
+    public static class FilterDto1 {
         /**	
 Filter.1.Name.1=instance-type*/
         @KsYunField(name="Name",type=2)

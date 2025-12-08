@@ -20,11 +20,11 @@ public class DescribeNatRateLimitRequest{
 
     /**筛选Filter*/
     @KsYunField(name="Filter",type=2)
-    private List<FilterDto> FilterList;
+    private List<FilterDto1> FilterList;
 
     @Data
     @ToString
-    public static class FilterDto {
+    public static class FilterDto1 {
         /**有效值：
 - private-ip-address，私网IP地址
 - network-interface-id，网卡ID

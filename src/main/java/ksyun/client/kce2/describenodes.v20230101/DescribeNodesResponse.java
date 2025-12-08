@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeNodesResponse
@@ -14,38 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeNodesResponse extends BaseResponseModel {
-    /**请求ID*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**返回数据*/
-    @JsonProperty("Data")
-    private DataDto Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-        /**每页最大数*/
-        @JsonProperty("MaxResults")
-        private Integer MaxResults;
-
-        /**游标值*/
-        @JsonProperty("Marker")
-        private Integer Marker;
-
-        /**总数*/
-        @JsonProperty("TotalCount")
-        private Integer TotalCount;
-
-    }
-
-    /**节点列表*/
-    @JsonProperty("InstanceSet")
-    private InstanceSetDto InstanceSet;
-
-    @Data
-    @ToString
-    public static class InstanceSetDto {
-    }
+    //返回结果，需要按需扩展
 
 }

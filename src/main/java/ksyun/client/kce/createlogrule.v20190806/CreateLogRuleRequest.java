@@ -24,11 +24,12 @@ public class CreateLogRuleRequest{
     private String RuleName;
 
     /**日志源*/
-    private InputConfigDto InputConfigList;
+    @KsYunField(name="InputConfig")
+    private InputConfigDto1 InputConfig;
 
     @Data
     @ToString
-    public static class InputConfigDto {
+    public static class InputConfigDto1 {
         /**日志类型
 - 1：容器标准输出
 - 2：容器文件路径
@@ -37,11 +38,12 @@ public class CreateLogRuleRequest{
         private Integer InputType;
 
         /**如果InputType=1，则该项必填*/
-        private InputConfigDtoContainerStandoutDto ContainerStandoutList;
+        @KsYunField(name="ContainerStandout")
+        private ContainerStandoutDto2 ContainerStandout;
 
         @Data
         @ToString
-        public static class InputConfigDtoContainerStandoutDto {
+        public static class ContainerStandoutDto2 {
             /**日志源
 - 是否采集所有容器*/
             @KsYunField(name="AllContainer")
@@ -49,18 +51,19 @@ public class CreateLogRuleRequest{
 
             /**指定负载采集
 - 如果 AllContainer 为false，SpecifiedWorkload 或 SpecifiedPodLabel 必须指定一项*/
-            private InputConfigDtoContainerStandoutDtoSpecifiedWorkloadDto SpecifiedWorkloadList;
+            @KsYunField(name="SpecifiedWorkload")
+            private SpecifiedWorkloadDto3 SpecifiedWorkload;
 
             @Data
             @ToString
-            public static class InputConfigDtoContainerStandoutDtoSpecifiedWorkloadDto {
+            public static class SpecifiedWorkloadDto3 {
                 /***/
                 @KsYunField(name="NamespaceList",type=2)
-                private List<InputConfigDtoContainerStandoutDtoSpecifiedWorkloadDtoNamespaceListDto> NamespaceListList;
+                private List<NamespaceListDto4> NamespaceListList;
 
                 @Data
                 @ToString
-                public static class InputConfigDtoContainerStandoutDtoSpecifiedWorkloadDtoNamespaceListDto {
+                public static class NamespaceListDto4 {
                     /**命名空间名称*/
                     @KsYunField(name="NamespaceName")
                     private String NamespaceName;
@@ -72,11 +75,11 @@ public class CreateLogRuleRequest{
                     /**采集负载集合
 - 如果 AllContainer=false，则此项为必填*/
                     @KsYunField(name="Workload",type=2)
-                    private List<InputConfigDtoContainerStandoutDtoSpecifiedWorkloadDtoNamespaceListDtoWorkloadDto> WorkloadList;
+                    private List<WorkloadDto5> WorkloadList;
 
                     @Data
                     @ToString
-                    public static class InputConfigDtoContainerStandoutDtoSpecifiedWorkloadDtoNamespaceListDtoWorkloadDto {
+                    public static class WorkloadDto5 {
                         /**负载类型
 - Deployment
 - DaemonSet
@@ -97,11 +100,12 @@ public class CreateLogRuleRequest{
 
             /**指定PodLable采集
 - 如果 AllContainer 为false，SpecifiedWorkload 或 SpecifiedPodLabel 必须指定一项*/
-            private InputConfigDtoContainerStandoutDtoSpecifiedPodLabelDto SpecifiedPodLabelList;
+            @KsYunField(name="SpecifiedPodLabel")
+            private SpecifiedPodLabelDto6 SpecifiedPodLabel;
 
             @Data
             @ToString
-            public static class InputConfigDtoContainerStandoutDtoSpecifiedPodLabelDto {
+            public static class SpecifiedPodLabelDto6 {
                 /**选择命名空间方式，有效值：1、2
 - 1：指定命名空间
 - 2：排除命名空间*/
@@ -124,11 +128,11 @@ public class CreateLogRuleRequest{
 
                 /***/
                 @KsYunField(name="ContainerLabel",type=2)
-                private List<InputConfigDtoContainerStandoutDtoSpecifiedPodLabelDtoContainerLabelDto> ContainerLabelList;
+                private List<ContainerLabelDto7> ContainerLabelList;
 
                 @Data
                 @ToString
-                public static class InputConfigDtoContainerStandoutDtoSpecifiedPodLabelDtoContainerLabelDto {
+                public static class ContainerLabelDto7 {
                     /**标签键，如果ContainerLabel不为空，则该值必填
 
 */
@@ -154,17 +158,19 @@ public class CreateLogRuleRequest{
         }
 
         /**容器文件路径，如果 InputType=2，则该项必填*/
-        private InputConfigDtoContainerFileDto ContainerFileList;
+        @KsYunField(name="ContainerFile")
+        private ContainerFileDto8 ContainerFile;
 
         @Data
         @ToString
-        public static class InputConfigDtoContainerFileDto {
+        public static class ContainerFileDto8 {
             /**指定容器*/
-            private InputConfigDtoContainerFileDtoSpecifiedContainerDto SpecifiedContainerList;
+            @KsYunField(name="SpecifiedContainer")
+            private SpecifiedContainerDto9 SpecifiedContainer;
 
             @Data
             @ToString
-            public static class InputConfigDtoContainerFileDtoSpecifiedContainerDto {
+            public static class SpecifiedContainerDto9 {
                 /**所属命名空间，如果 SpecifiedPodLabel 不为空，则该项必填*/
                 @KsYunField(name="Namespace")
                 private String Namespace;
@@ -193,11 +199,12 @@ public class CreateLogRuleRequest{
             }
 
             /**指定 PodLabel*/
-            private InputConfigDtoContainerFileDtoSpecifiedPodLabelDto SpecifiedPodLabelList;
+            @KsYunField(name="SpecifiedPodLabel")
+            private SpecifiedPodLabelDto10 SpecifiedPodLabel;
 
             @Data
             @ToString
-            public static class InputConfigDtoContainerFileDtoSpecifiedPodLabelDto {
+            public static class SpecifiedPodLabelDto10 {
                 /**选择命名空间方式，有效值：1、2
 - 1：指定命名空间
 - 2：排除命名空间*/
@@ -226,11 +233,11 @@ public class CreateLogRuleRequest{
 
                 /***/
                 @KsYunField(name="ContainerLabel",type=2)
-                private List<InputConfigDtoContainerFileDtoSpecifiedPodLabelDtoContainerLabelDto> ContainerLabelList;
+                private List<ContainerLabelDto11> ContainerLabelList;
 
                 @Data
                 @ToString
-                public static class InputConfigDtoContainerFileDtoSpecifiedPodLabelDtoContainerLabelDto {
+                public static class ContainerLabelDto11 {
                     /**标签键*/
                     @KsYunField(name="Key")
                     private String Key;
@@ -252,11 +259,12 @@ public class CreateLogRuleRequest{
         }
 
         /**主机文件路径，如果 InputType=3，则该项必填*/
-        private InputConfigDtoHostFileDto HostFileList;
+        @KsYunField(name="HostFile")
+        private HostFileDto12 HostFile;
 
         @Data
         @ToString
-        public static class InputConfigDtoHostFileDto {
+        public static class HostFileDto12 {
             /**设置要采集的日志文件的绝对路径，不支持通配符“*”
 */
             @KsYunField(name="Path")
@@ -264,11 +272,11 @@ public class CreateLogRuleRequest{
 
             /***/
             @KsYunField(name="Label",type=2)
-            private List<InputConfigDtoHostFileDtoLabelDto> LabelList;
+            private List<LabelDto13> LabelList;
 
             @Data
             @ToString
-            public static class InputConfigDtoHostFileDtoLabelDto {
+            public static class LabelDto13 {
                 /**标签值*/
                 @KsYunField(name="Value")
                 private String Value;
@@ -284,17 +292,19 @@ public class CreateLogRuleRequest{
     }
 
     /**消费端*/
-    private OutputConfigDto OutputConfigList;
+    @KsYunField(name="OutputConfig")
+    private OutputConfigDto14 OutputConfig;
 
     @Data
     @ToString
-    public static class OutputConfigDto {
+    public static class OutputConfigDto14 {
         /***/
-        private OutputConfigDtoKlogDto KlogList;
+        @KsYunField(name="Klog")
+        private KlogDto15 Klog;
 
         @Data
         @ToString
-        public static class OutputConfigDtoKlogDto {
+        public static class KlogDto15 {
             /**Klog项目制名称*/
             @KsYunField(name="ProjectName")
             private String ProjectName;

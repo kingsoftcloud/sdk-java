@@ -31,11 +31,11 @@ public class CreateInstanceRequest{
             "tidisk": 0
         }*/
     @KsYunField(name="ModuleConfigs",type=2)
-    private List<ModuleConfigsDto> ModuleConfigsList;
+    private List<ModuleConfigsDto1> ModuleConfigsList;
 
     @Data
     @ToString
-    public static class ModuleConfigsDto {
+    public static class ModuleConfigsDto1 {
         /**模块类型*/
         @KsYunField(name="ModuleType")
         private String ModuleType;
@@ -119,11 +119,12 @@ public class CreateInstanceRequest{
     private String SecurityGroupId;
 
     /**备份配置*/
-    private BackupConfigDto BackupConfigList;
+    @KsYunField(name="BackupConfig")
+    private BackupConfigDto2 BackupConfig;
 
     @Data
     @ToString
-    public static class BackupConfigDto {
+    public static class BackupConfigDto2 {
         /**最大备份记录数。暂不可改*/
         @KsYunField(name="MaxBackups")
         private String MaxBackups;

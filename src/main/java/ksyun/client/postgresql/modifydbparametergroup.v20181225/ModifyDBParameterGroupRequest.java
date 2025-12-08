@@ -34,11 +34,11 @@ public class ModifyDBParameterGroupRequest{
 
 	参数名与参数值同时填写；参数组名-参数值/参数组名称/参数组描述，至少填写一项*/
     @KsYunField(name="Parameters",type=2)
-    private List<ParametersDto> ParametersList;
+    private List<ParametersDto1> ParametersList;
 
     @Data
     @ToString
-    public static class ParametersDto {
+    public static class ParametersDto1 {
         /**参数名*/
         @KsYunField(name="Name")
         private String Name;

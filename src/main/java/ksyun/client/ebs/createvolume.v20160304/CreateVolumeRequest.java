@@ -76,11 +76,11 @@ ESSD_PL3取值范围：【1761，32768】，步长：1GB
 
     /**标签属性*/
     @KsYunField(name="Tag",type=2)
-    private List<TagDto> TagList;
+    private List<TagDto1> TagList;
 
     @Data
     @ToString
-    public static class TagDto {
+    public static class TagDto1 {
         /***/
         @KsYunField(name="Key")
         private String Key;

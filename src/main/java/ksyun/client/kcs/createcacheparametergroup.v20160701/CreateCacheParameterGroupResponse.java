@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname CreateCacheParameterGroupResponse
@@ -14,87 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class CreateCacheParameterGroupResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Data")
-    private DataDto Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-        /***/
-        @JsonProperty("id")
-        private String Id;
-
-        /***/
-        @JsonProperty("name")
-        private String Name;
-
-        /***/
-        @JsonProperty("description")
-        private String Description;
-
-        /***/
-        @JsonProperty("engine")
-        private String Engine;
-
-        /***/
-        @JsonProperty("created")
-        private String Created;
-
-        /***/
-        @JsonProperty("updated")
-        private String Updated;
-
-        /***/
-        @JsonProperty("parameters")
-        private List<DataDtoParametersDto> Parameters;
-
-        @Data
-        @ToString
-        public static class DataDtoParametersDto {
-            /***/
-            @JsonProperty("name")
-            private String Name;
-
-            /***/
-            @JsonProperty("desc")
-            private String Desc;
-
-            /***/
-            @JsonProperty("defaultValue")
-            private String DefaultValue;
-
-            /***/
-            @JsonProperty("currentValue")
-            private String CurrentValue;
-
-            /***/
-            @JsonProperty("validity")
-            private DataDtoParametersDtoValidityDto Validity;
-
-            @Data
-            @ToString
-            public static class DataDtoParametersDtoValidityDto {
-                /***/
-                @JsonProperty("type")
-                private String Type;
-
-                /***/
-                @JsonProperty("dataType")
-                private String DataType;
-
-                /***/
-                @JsonProperty("value")
-                private List<String> Value;
-
-            }
-
-        }
-
-    }
+    //返回结果，需要按需扩展
 
 }

@@ -20,11 +20,11 @@ public class CreateSecurityRulesRequest{
 
     /**安全组规则列表(支持多个)*/
     @KsYunField(name="Rules",type=2)
-    private List<RulesDto> RulesList;
+    private List<RulesDto1> RulesList;
 
     @Data
     @ToString
-    public static class RulesDto {
+    public static class RulesDto1 {
         /**cidr规则(支持0-32)*/
         @KsYunField(name="Cidr")
         private String Cidr;

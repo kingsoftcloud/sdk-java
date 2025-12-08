@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeDedicatedClustersResponse
@@ -14,87 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeDedicatedClustersResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Data")
-    private DataDto Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-        /***/
-        @JsonProperty("TotalCount")
-        private Integer TotalCount;
-
-        /***/
-        @JsonProperty("DedicatedClusters")
-        private List<DataDtoDedicatedClustersDto> DedicatedClusters;
-
-        @Data
-        @ToString
-        public static class DataDtoDedicatedClustersDto {
-            /***/
-            @JsonProperty("DedicatedClusterId")
-            private String DedicatedClusterId;
-
-            /***/
-            @JsonProperty("DedicatedClusterName")
-            private String DedicatedClusterName;
-
-            /***/
-            @JsonProperty("Region")
-            private String Region;
-
-            /***/
-            @JsonProperty("Status")
-            private String Status;
-
-            /***/
-            @JsonProperty("DatabaseType")
-            private String DatabaseType;
-
-            /***/
-            @JsonProperty("HostNum")
-            private Integer HostNum;
-
-            /***/
-            @JsonProperty("InstanceNum")
-            private Integer InstanceNum;
-
-            /***/
-            @JsonProperty("KceClusterId")
-            private String KceClusterId;
-
-            /***/
-            @JsonProperty("Ratio")
-            private DataDtoDedicatedClustersDtoRatioDto Ratio;
-
-            @Data
-            @ToString
-            public static class DataDtoDedicatedClustersDtoRatioDto {
-                /***/
-                @JsonProperty("MemRatio")
-                private Integer MemRatio;
-
-                /***/
-                @JsonProperty("DiskRatio")
-                private Integer DiskRatio;
-
-                /***/
-                @JsonProperty("CpuRatio")
-                private Integer CpuRatio;
-
-            }
-
-            /***/
-            @JsonProperty("CreatedTime")
-            private String CreatedTime;
-
-        }
-
-    }
+    //返回结果，需要按需扩展
 
 }

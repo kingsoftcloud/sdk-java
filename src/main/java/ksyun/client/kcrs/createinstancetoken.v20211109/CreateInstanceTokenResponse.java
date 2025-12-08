@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname CreateInstanceTokenResponse
@@ -14,26 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class CreateInstanceTokenResponse extends BaseResponseModel {
-    /**登录用户名称*/
-    @JsonProperty("Username")
-    private String Username;
 
-    /**实例访问凭证*/
-    @JsonProperty("tokenId")
-    private String TokenId;
-
-    /**实例访问凭证的id
-
-*/
-    @JsonProperty("Token")
-    private String Token;
-
-    /**实例访问凭证过期时间*/
-    @JsonProperty("ExpireTime")
-    private String ExpireTime;
-
-    /**请求Id*/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

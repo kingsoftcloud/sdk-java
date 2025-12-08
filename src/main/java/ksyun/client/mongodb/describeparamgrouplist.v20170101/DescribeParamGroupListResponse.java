@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeParamGroupListResponse
@@ -14,45 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeParamGroupListResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("TotalCount")
-    private Integer TotalCount;
 
-    /***/
-    @JsonProperty("ParamGroupList")
-    private List<ParamGroupListDto> ParamGroupList;
-
-    @Data
-    @ToString
-    public static class ParamGroupListDto {
-        /***/
-        @JsonProperty("DbVersion")
-        private String DbVersion;
-
-        /***/
-        @JsonProperty("ParamGroupName")
-        private String ParamGroupName;
-
-        /***/
-        @JsonProperty("Description")
-        private String Description;
-
-        /***/
-        @JsonProperty("ParamGroupId")
-        private String ParamGroupId;
-
-    }
-
-    /***/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Offset")
-    private Integer Offset;
-
-    /***/
-    @JsonProperty("Limit")
-    private Integer Limit;
+    //返回结果，需要按需扩展
 
 }

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname ListInstancePluginsResponse
@@ -14,50 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class ListInstancePluginsResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Code")
-    private String Code;
-
-    /***/
-    @JsonProperty("Message")
-    private String Message;
-
-    /***/
-    @JsonProperty("Data")
-    private DataDto Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-        /***/
-        @JsonProperty("InstanceId")
-        private String InstanceId;
-
-        /***/
-        @JsonProperty("InstanceStatus")
-        private String InstanceStatus;
-
-        /***/
-        @JsonProperty("Plugins")
-        private List<DataDtoPluginsDto> Plugins;
-
-        @Data
-        @ToString
-        public static class DataDtoPluginsDto {
-            /***/
-            @JsonProperty("PluginName")
-            private String PluginName;
-
-            /***/
-            @JsonProperty("PluginStatus")
-            private Integer PluginStatus;
-
-        }
-
-    }
+    //返回结果，需要按需扩展
 
 }

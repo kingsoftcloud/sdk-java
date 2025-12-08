@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeDBLogFilesResponse
@@ -14,74 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeDBLogFilesResponse extends BaseResponseModel {
-    /**下次开始获取记录的开始偏移量
-*/
-    @JsonProperty("Data")
-    private DataDto Data;
 
-    @Data
-    @ToString
-    public static class DataDto {
-        /**日志文件列表
-*/
-        @JsonProperty("DescribeDBLogFiles")
-        private List<DataDtoDescribeDBLogFilesDto> DescribeDBLogFiles;
-
-        @Data
-        @ToString
-        public static class DataDtoDescribeDBLogFilesDto {
-            /**日志下载url，为NULL时，表示RDS没有提供下载链接URL	
-*/
-            @JsonProperty("LogFileName")
-            private String LogFileName;
-
-            /**日志大小,单位KB
-*/
-            @JsonProperty("Size")
-            private Double Size;
-
-            /**行大小	
-*/
-            @JsonProperty("RawSize")
-            private Double RawSize;
-
-            /**日志生成时间	
-*/
-            @JsonProperty("Date")
-            private String Date;
-
-            /**日志开始时间
-*/
-            @JsonProperty("StartTime")
-            private String StartTime;
-
-            /**日志结束时间	
-*/
-            @JsonProperty("EndTime")
-            private String EndTime;
-
-        }
-
-        /**	当前类型日志总条数	
-*/
-        @JsonProperty("TotalCount")
-        private Integer TotalCount;
-
-        /**下次开始获取记录的开始偏移量
-*/
-        @JsonProperty("Marker")
-        private Integer Marker;
-
-        /**每页结果中包含的最大条数	
-*/
-        @JsonProperty("MaxRecords")
-        private Integer MaxRecords;
-
-    }
-
-    /**请求id	
-*/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

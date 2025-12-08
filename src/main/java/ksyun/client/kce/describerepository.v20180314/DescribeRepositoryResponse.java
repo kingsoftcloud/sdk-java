@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeRepositoryResponse
@@ -14,53 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeRepositoryResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**分页标识，单次调用未返回全部实例时，标记下次调用的返回值的起点，默认值是0。*/
-    @JsonProperty("Marker")
-    private Integer Marker;
-
-    /**单次调用所返回的最大实例数目，默认20，最大99。*/
-    @JsonProperty("MaxResults")
-    private Integer MaxResults;
-
-    /**总数量*/
-    @JsonProperty("TotalCount")
-    private Integer TotalCount;
-
-    /***/
-    @JsonProperty("RepoSet")
-    private List<RepoSetDto> RepoSet;
-
-    @Data
-    @ToString
-    public static class RepoSetDto {
-        /**镜像仓库名称*/
-        @JsonProperty("RepoName")
-        private String RepoName;
-
-        /**镜像仓库属性*/
-        @JsonProperty("Public")
-        private Boolean PublicField;
-
-        /**收藏次数*/
-        @JsonProperty("FavorCount")
-        private Integer FavorCount;
-
-        /**下载次数*/
-        @JsonProperty("PullCount")
-        private Integer PullCount;
-
-        /**仓库描述信息*/
-        @JsonProperty("Description")
-        private String Description;
-
-        /**仓库创建时间*/
-        @JsonProperty("CreateTime")
-        private String CreateTime;
-
-    }
+    //返回结果，需要按需扩展
 
 }

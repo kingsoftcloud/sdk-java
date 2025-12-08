@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeCenBandWidthPackageUsageResponse
@@ -14,25 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeCenBandWidthPackageUsageResponse extends BaseResponseModel {
-    /**请求ID*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**云企业网带宽包的已分配信息*/
-    @JsonProperty("CenBandWidthPackageUsage")
-    private CenBandWidthPackageUsageDto CenBandWidthPackageUsage;
-
-    @Data
-    @ToString
-    public static class CenBandWidthPackageUsageDto {
-        /**带宽包已使用带宽值*/
-        @JsonProperty("PackageUsage")
-        private Integer PackageUsage;
-
-        /**带宽包的ID*/
-        @JsonProperty("CenBandWidthPackageId")
-        private String CenBandWidthPackageId;
-
-    }
+    //返回结果，需要按需扩展
 
 }

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DeleteSoImagesResponse
@@ -14,42 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DeleteSoImagesResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("OperationDetails")
-    private List<OperationDetailsDto> OperationDetails;
 
-    @Data
-    @ToString
-    public static class OperationDetailsDto {
-        /**prtb54be2bc-e96a-41d1-8156-3990d1f9ba41*/
-        @JsonProperty("ImageId")
-        private String ImageId;
-
-        /***/
-        @JsonProperty("Error")
-        private OperationDetailsDtoErrorDto Error;
-
-        @Data
-        @ToString
-        public static class OperationDetailsDtoErrorDto {
-            /***/
-            @JsonProperty("Code")
-            private String Code;
-
-            /***/
-            @JsonProperty("Message")
-            private String Message;
-
-        }
-
-    }
-
-    /**1ded7233-54f8-44d1-a2ea-b6fcc0ca7390*/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**true*/
-    @JsonProperty("Return")
-    private Boolean ReturnField;
+    //返回结果，需要按需扩展
 
 }

@@ -34,11 +34,12 @@ public class StartJobRunRequest{
     private String ReleaseVersion;
 
     /***/
-    private SparkSubmitDataDto SparkSubmitDataList;
+    @KsYunField(name="SparkSubmitData")
+    private SparkSubmitDataDto1 SparkSubmitData;
 
     @Data
     @ToString
-    public static class SparkSubmitDataDto {
+    public static class SparkSubmitDataDto1 {
         /**作业名称*/
         @KsYunField(name="Name")
         private String Name;

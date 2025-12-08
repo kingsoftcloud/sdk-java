@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname ScaleInInstanceGroupsResponse
@@ -14,16 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class ScaleInInstanceGroupsResponse extends BaseResponseModel {
-    /**集群ID*/
-    @JsonProperty("ClusterId")
-    private String ClusterId;
 
-    /**请求ID*/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**状态码*/
-    @JsonProperty("StatusCode")
-    private Integer StatusCode;
+    //返回结果，需要按需扩展
 
 }

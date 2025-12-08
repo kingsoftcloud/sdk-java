@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname ModifyAddressResponse
@@ -14,48 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class ModifyAddressResponse extends BaseResponseModel {
-    /**线路ID*/
-    @JsonProperty("LineId")
-    private String LineId;
 
-    /**弹性IP的带宽*/
-    @JsonProperty("BandWidth")
-    private Integer BandWidth;
-
-    /**创建时间*/
-    @JsonProperty("CreateTime")
-    private String CreateTime;
-
-    /**弹性IP的状态，已绑定(associate)，未绑定(disassociate)*/
-    @JsonProperty("State")
-    private String State;
-
-    /**弹性IP的ID*/
-    @JsonProperty("AllocationId")
-    private String AllocationId;
-
-    /**IP地址*/
-    @JsonProperty("PublicIp")
-    private String PublicIp;
-
-    /**请求ID*/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**绑定类型*/
-    @JsonProperty("InstanceType")
-    private String InstanceType;
-
-    /**绑定实例ID*/
-    @JsonProperty("InstanceId")
-    private String InstanceId;
-
-    /**IP版本*/
-    @JsonProperty("IpVersion")
-    private String IpVersion;
-
-    /**网卡ID*/
-    @JsonProperty("NetworkInterfaceId")
-    private String NetworkInterfaceId;
+    //返回结果，需要按需扩展
 
 }

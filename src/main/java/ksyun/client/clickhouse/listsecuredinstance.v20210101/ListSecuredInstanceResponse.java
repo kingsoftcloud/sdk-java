@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname ListSecuredInstanceResponse
@@ -14,69 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class ListSecuredInstanceResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Code")
-    private String Code;
-
-    /***/
-    @JsonProperty("Message")
-    private String Message;
-
-    /***/
-    @JsonProperty("Offset")
-    private Integer Offset;
-
-    /***/
-    @JsonProperty("Limit")
-    private Integer Limit;
-
-    /***/
-    @JsonProperty("Total")
-    private Integer Total;
-
-    /***/
-    @JsonProperty("Data")
-    private List<DataDto> Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-        /***/
-        @JsonProperty("InstanceId")
-        private String InstanceId;
-
-        /***/
-        @JsonProperty("InstanceName")
-        private String InstanceName;
-
-        /***/
-        @JsonProperty("ProductType")
-        private Integer ProductType;
-
-        /***/
-        @JsonProperty("ProductTypeName")
-        private String ProductTypeName;
-
-        /***/
-        @JsonProperty("Vip")
-        private String Vip;
-
-        /***/
-        @JsonProperty("CreateTime")
-        private String CreateTime;
-
-        /***/
-        @JsonProperty("Status")
-        private String Status;
-
-        /***/
-        @JsonProperty("UpdatetTime")
-        private String UpdatetTime;
-
-    }
+    //返回结果，需要按需扩展
 
 }

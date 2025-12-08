@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeInstanceUsageResponse
@@ -14,24 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeInstanceUsageResponse extends BaseResponseModel {
-    /**请求Id*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**命名空间配额数量*/
-    @JsonProperty("NamespaceQuota")
-    private Integer NamespaceQuota;
-
-    /**已创建的命名空间数量	*/
-    @JsonProperty("NamespaceUsage")
-    private Integer NamespaceUsage;
-
-    /**镜像仓库配额数量	*/
-    @JsonProperty("RepoQuota")
-    private Integer RepoQuota;
-
-    /**已创建的镜像仓库数量	*/
-    @JsonProperty("RepoUsage")
-    private Integer RepoUsage;
+    //返回结果，需要按需扩展
 
 }

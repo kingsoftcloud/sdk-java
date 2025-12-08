@@ -47,11 +47,11 @@ status常用值范围
 - Failed
 - Succeeded*/
     @KsYunField(name="Filter",type=2)
-    private List<FilterDto> FilterList;
+    private List<FilterDto1> FilterList;
 
     @Data
     @ToString
-    public static class FilterDto {
+    public static class FilterDto1 {
         /**过滤参数类型名，如subnet-id*/
         @KsYunField(name="Name")
         private String Name;

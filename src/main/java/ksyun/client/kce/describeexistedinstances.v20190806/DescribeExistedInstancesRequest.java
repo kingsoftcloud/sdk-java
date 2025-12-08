@@ -32,11 +32,11 @@ public class DescribeExistedInstancesRequest{
 
     /***/
     @KsYunField(name="Filter",type=2)
-    private List<FilterDto> FilterList;
+    private List<FilterDto1> FilterList;
 
     @Data
     @ToString
-    public static class FilterDto {
+    public static class FilterDto1 {
         /**一个或者多个过滤器，有效值：
 vpc id：vpc-id
 子网id：subnet-id

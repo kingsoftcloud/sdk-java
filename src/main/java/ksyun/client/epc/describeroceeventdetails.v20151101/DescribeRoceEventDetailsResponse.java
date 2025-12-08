@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeRoceEventDetailsResponse
@@ -14,57 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeRoceEventDetailsResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("RoceEventDetailResponseSet")
-    private List<RoceEventDetailResponseSetDto> RoceEventDetailResponseSet;
 
-    @Data
-    @ToString
-    public static class RoceEventDetailResponseSetDto {
-        /**实例名称*/
-        @JsonProperty("InstanceName")
-        private String InstanceName;
-
-        /**实例ID*/
-        @JsonProperty("InstanceId")
-        private String InstanceId;
-
-        /**服务器SN*/
-        @JsonProperty("Sn")
-        private String Sn;
-
-        /**事件状态：告警发生、告警恢复*/
-        @JsonProperty("EventStatus")
-        private String EventStatus;
-
-        /**事件发生时间*/
-        @JsonProperty("EventTime")
-        private String EventTime;
-
-        /**事件名称*/
-        @JsonProperty("EventName")
-        private String EventName;
-
-        /**交换机名称*/
-        @JsonProperty("HostName")
-        private String HostName;
-
-        /**交换机端口*/
-        @JsonProperty("PortName")
-        private String PortName;
-
-    }
-
-    /**请求ID*/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**总条数*/
-    @JsonProperty("TotalCount")
-    private Integer TotalCount;
-
-    /**下一条*/
-    @JsonProperty("NextToken")
-    private String NextToken;
+    //返回结果，需要按需扩展
 
 }

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeDedicatedHostsResponse
@@ -14,117 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeDedicatedHostsResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Data")
-    private DataDto Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-        /***/
-        @JsonProperty("Hosts")
-        private List<DataDtoHostsDto> Hosts;
-
-        @Data
-        @ToString
-        public static class DataDtoHostsDto {
-            /***/
-            @JsonProperty("HostId")
-            private String HostId;
-
-            /***/
-            @JsonProperty("HostName")
-            private String HostName;
-
-            /***/
-            @JsonProperty("Status")
-            private String Status;
-
-            /***/
-            @JsonProperty("DedicatedClusterId")
-            private String DedicatedClusterId;
-
-            /***/
-            @JsonProperty("DedicatedClusterName")
-            private String DedicatedClusterName;
-
-            /***/
-            @JsonProperty("RealResource")
-            private DataDtoHostsDtoRealResourceDto RealResource;
-
-            @Data
-            @ToString
-            public static class DataDtoHostsDtoRealResourceDto {
-                /***/
-                @JsonProperty("Cpu")
-                private Integer Cpu;
-
-                /***/
-                @JsonProperty("Memory")
-                private Integer Memory;
-
-                /***/
-                @JsonProperty("DiskSize")
-                private Integer DiskSize;
-
-            }
-
-            /***/
-            @JsonProperty("AllocatedResource")
-            private DataDtoHostsDtoAllocatedResourceDto AllocatedResource;
-
-            @Data
-            @ToString
-            public static class DataDtoHostsDtoAllocatedResourceDto {
-                /***/
-                @JsonProperty("Cpu")
-                private Integer Cpu;
-
-                /***/
-                @JsonProperty("Memory")
-                private Integer Memory;
-
-                /***/
-                @JsonProperty("DiskSize")
-                private Integer DiskSize;
-
-            }
-
-            /***/
-            @JsonProperty("OversoldResource")
-            private DataDtoHostsDtoOversoldResourceDto OversoldResource;
-
-            @Data
-            @ToString
-            public static class DataDtoHostsDtoOversoldResourceDto {
-                /***/
-                @JsonProperty("Cpu")
-                private Integer Cpu;
-
-                /***/
-                @JsonProperty("Memory")
-                private Integer Memory;
-
-                /***/
-                @JsonProperty("DiskSize")
-                private Integer DiskSize;
-
-            }
-
-            /***/
-            @JsonProperty("CreatedTime")
-            private String CreatedTime;
-
-        }
-
-        /***/
-        @JsonProperty("TotalCount")
-        private Integer TotalCount;
-
-    }
+    //返回结果，需要按需扩展
 
 }

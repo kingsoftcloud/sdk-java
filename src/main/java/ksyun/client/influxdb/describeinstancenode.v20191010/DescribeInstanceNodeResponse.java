@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeInstanceNodeResponse
@@ -14,57 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeInstanceNodeResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Error")
-    private String Error;
-
-    /***/
-    @JsonProperty("Data")
-    private List<DataDto> Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-        /***/
-        @JsonProperty("Id")
-        private String Id;
-
-        /***/
-        @JsonProperty("Name")
-        private String Name;
-
-        /***/
-        @JsonProperty("Status")
-        private String Status;
-
-        /***/
-        @JsonProperty("Ip")
-        private String Ip;
-
-        /***/
-        @JsonProperty("Vip")
-        private String Vip;
-
-        /***/
-        @JsonProperty("Port")
-        private Integer Port;
-
-        /***/
-        @JsonProperty("UsedMemory")
-        private String UsedMemory;
-
-        /***/
-        @JsonProperty("MaxMemory")
-        private String MaxMemory;
-
-        /***/
-        @JsonProperty("Role")
-        private String Role;
-
-    }
+    //返回结果，需要按需扩展
 
 }

@@ -31,11 +31,11 @@ Cover：用传入的规则列表（SecurityGroupRuleName，SecurityGroupRuleProt
 
     /***/
     @KsYunField(name="SecurityGroupRule",type=2)
-    private List<SecurityGroupRuleDto> SecurityGroupRuleList;
+    private List<SecurityGroupRuleDto1> SecurityGroupRuleList;
 
     @Data
     @ToString
-    public static class SecurityGroupRuleDto {
+    public static class SecurityGroupRuleDto1 {
         /**规则ID
 
 ```json

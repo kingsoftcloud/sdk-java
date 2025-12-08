@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeInstanceResponse
@@ -14,141 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeInstanceResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Code")
-    private String Code;
-
-    /***/
-    @JsonProperty("Message")
-    private String Message;
-
-    /***/
-    @JsonProperty("Data")
-    private DataDto Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-        /***/
-        @JsonProperty("UserId")
-        private String UserId;
-
-        /***/
-        @JsonProperty("Region")
-        private String Region;
-
-        /***/
-        @JsonProperty("InstanceName")
-        private String InstanceName;
-
-        /***/
-        @JsonProperty("InstanceId")
-        private String InstanceId;
-
-        /***/
-        @JsonProperty("StatusName")
-        private String StatusName;
-
-        /***/
-        @JsonProperty("Status")
-        private String Status;
-
-        /***/
-        @JsonProperty("Vip")
-        private String Vip;
-
-        /***/
-        @JsonProperty("WebVip")
-        private String WebVip;
-
-        /***/
-        @JsonProperty("InstanceType")
-        private String InstanceType;
-
-        /***/
-        @JsonProperty("SsdDisk")
-        private Integer SsdDisk;
-
-        /***/
-        @JsonProperty("Protocol")
-        private String Protocol;
-
-        /***/
-        @JsonProperty("SecurityGroupId")
-        private Integer SecurityGroupId;
-
-        /***/
-        @JsonProperty("Port")
-        private String Port;
-
-        /***/
-        @JsonProperty("NetworkType")
-        private String NetworkType;
-
-        /***/
-        @JsonProperty("VpcId")
-        private String VpcId;
-
-        /***/
-        @JsonProperty("SubnetId")
-        private String SubnetId;
-
-        /***/
-        @JsonProperty("ProductId")
-        private String ProductId;
-
-        /***/
-        @JsonProperty("BillType")
-        private String BillType;
-
-        /***/
-        @JsonProperty("CreateDate")
-        private Integer CreateDate;
-
-        /***/
-        @JsonProperty("ProjectId")
-        private String ProjectId;
-
-        /***/
-        @JsonProperty("ProjectName")
-        private String ProjectName;
-
-        /***/
-        @JsonProperty("NodeNum")
-        private String NodeNum;
-
-        /***/
-        @JsonProperty("AvailabilityZone")
-        private String AvailabilityZone;
-
-        /***/
-        @JsonProperty("ProductWhat")
-        private String ProductWhat;
-
-        /***/
-        @JsonProperty("Mode")
-        private String Mode;
-
-        /***/
-        @JsonProperty("ModeName")
-        private String ModeName;
-
-        /***/
-        @JsonProperty("Eip")
-        private String Eip;
-
-        /***/
-        @JsonProperty("WebEip")
-        private String WebEip;
-
-        /***/
-        @JsonProperty("EipEgress")
-        private String EipEgress;
-
-    }
+    //返回结果，需要按需扩展
 
 }

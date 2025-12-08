@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname GetRetentionTriggerResponse
@@ -14,29 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class GetRetentionTriggerResponse extends BaseResponseModel {
-    /**请求Id*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**返回响应体*/
-    @JsonProperty("Data")
-    private DataDto Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-        /**触发频率*/
-        @JsonProperty("DisplayText")
-        private String DisplayText;
-
-        /**Cron表达式*/
-        @JsonProperty("Cron")
-        private String Cron;
-
-        /**可选参数*/
-        @JsonProperty("Optional")
-        private List<String> Optional;
-
-    }
+    //返回结果，需要按需扩展
 
 }

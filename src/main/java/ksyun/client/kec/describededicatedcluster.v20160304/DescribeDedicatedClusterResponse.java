@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeDedicatedClusterResponse
@@ -14,58 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeDedicatedClusterResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("DedicatedClustersSet")
-    private DedicatedClustersSetDto DedicatedClustersSet;
-
-    @Data
-    @ToString
-    public static class DedicatedClustersSetDto {
-        /***/
-        @JsonProperty("DedicatedClusterId")
-        private String DedicatedClusterId;
-
-        /***/
-        @JsonProperty("DedicatedClusterName")
-        private String DedicatedClusterName;
-
-        /***/
-        @JsonProperty("CreationDate")
-        private String CreationDate;
-
-        /***/
-        @JsonProperty("AvailabilityZone")
-        private String AvailabilityZone;
-
-        /***/
-        @JsonProperty("AvailabilityZoneName")
-        private String AvailabilityZoneName;
-
-        /***/
-        @JsonProperty("Model")
-        private String Model;
-
-        /***/
-        @JsonProperty("DedicatedHostsSet")
-        private List<DedicatedClustersSetDtoDedicatedHostsSetDto> DedicatedHostsSet;
-
-        @Data
-        @ToString
-        public static class DedicatedClustersSetDtoDedicatedHostsSetDto {
-            /***/
-            @JsonProperty("DedicatedHostId")
-            private String DedicatedHostId;
-
-            /***/
-            @JsonProperty("DedicatedHostName")
-            private String DedicatedHostName;
-
-        }
-
-    }
+    //返回结果，需要按需扩展
 
 }

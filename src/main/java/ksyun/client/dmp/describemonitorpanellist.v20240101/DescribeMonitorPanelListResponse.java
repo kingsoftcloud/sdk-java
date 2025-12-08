@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeMonitorPanelListResponse
@@ -14,58 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeMonitorPanelListResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Data")
-    private DataDto Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-        /***/
-        @JsonProperty("MonitorPanels")
-        private List<DataDtoMonitorPanelsDto> MonitorPanels;
-
-        @Data
-        @ToString
-        public static class DataDtoMonitorPanelsDto {
-            /***/
-            @JsonProperty("PanelId")
-            private String PanelId;
-
-            /***/
-            @JsonProperty("PanelName")
-            private String PanelName;
-
-            /***/
-            @JsonProperty("PanelType")
-            private String PanelType;
-
-            /***/
-            @JsonProperty("Description")
-            private String Description;
-
-            /***/
-            @JsonProperty("CreateTime")
-            private String CreateTime;
-
-        }
-
-        /***/
-        @JsonProperty("Page")
-        private Integer Page;
-
-        /***/
-        @JsonProperty("PageSize")
-        private Integer PageSize;
-
-        /***/
-        @JsonProperty("TotalCount")
-        private Integer TotalCount;
-
-    }
+    //返回结果，需要按需扩展
 
 }

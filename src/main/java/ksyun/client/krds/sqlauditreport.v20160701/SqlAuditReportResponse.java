@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname SqlAuditReportResponse
@@ -14,63 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class SqlAuditReportResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("data")
-    private List<DataDto> Data;
 
-    @Data
-    @ToString
-    public static class DataDto {
-        /**数据库名称	
-*/
-        @JsonProperty("dbName")
-        private String DbName;
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
 
-        /**
-*/
-        @JsonProperty("duration")
-        private Integer Duration;
-
-        /**执行次数	
-*/
-        @JsonProperty("count")
-        private Integer Count;
-
-        /**SQL模板	
-*/
-        @JsonProperty("sqlTemplate")
-        private String SqlTemplate;
-
-        /**执行次数比例	
-*/
-        @JsonProperty("countRatio")
-        private Double CountRatio;
-
-        /**执行耗时占比	
-*/
-        @JsonProperty("durationRatio")
-        private Double DurationRatio;
-
-        /**平均执行耗时	
-*/
-        @JsonProperty("durationAvg")
-        private Double DurationAvg;
-
-    }
-
-    /**每页条数	
-*/
-    @JsonProperty("size")
-    private Integer Size;
-
-    /**总条数	
-*/
-    @JsonProperty("totalSize")
-    private Integer TotalSize;
-
-    /**页码	
-*/
-    @JsonProperty("page")
-    private Integer Page;
+    //返回结果，需要按需扩展
 
 }

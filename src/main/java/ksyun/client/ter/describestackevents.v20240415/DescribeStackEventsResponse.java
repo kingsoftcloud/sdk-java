@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeStackEventsResponse
@@ -14,41 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeStackEventsResponse extends BaseResponseModel {
-    /**接口请求ID*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**事件列表*/
-    @JsonProperty("Events")
-    private List<EventsDto> Events;
-
-    @Data
-    @ToString
-    public static class EventsDto {
-        /**事件类型*/
-        @JsonProperty("EventType")
-        private String EventType;
-
-        /**关联资源ID*/
-        @JsonProperty("ResourceId")
-        private String ResourceId;
-
-        /**资源逻辑名称*/
-        @JsonProperty("ResourceLogicName")
-        private String ResourceLogicName;
-
-        /**资源类型*/
-        @JsonProperty("ResourceType")
-        private String ResourceType;
-
-        /**事件时间*/
-        @JsonProperty("EventTime")
-        private String EventTime;
-
-        /**事件描述*/
-        @JsonProperty("EventDescription")
-        private String EventDescription;
-
-    }
+    //返回结果，需要按需扩展
 
 }

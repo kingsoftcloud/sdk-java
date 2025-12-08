@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname AddAlbRuleResponse
@@ -14,25 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class AddAlbRuleResponse extends BaseResponseModel {
-    /**请求ID*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**规则的信息*/
-    @JsonProperty("AlbRule")
-    private AlbRuleDto AlbRule;
-
-    @Data
-    @ToString
-    public static class AlbRuleDto {
-        /**匹配规则类型(domain|url)*/
-        @JsonProperty("AlbRuleType")
-        private String AlbRuleType;
-
-        /**匹配规则的值*/
-        @JsonProperty("AlbRuleValue")
-        private String AlbRuleValue;
-
-    }
+    //返回结果，需要按需扩展
 
 }

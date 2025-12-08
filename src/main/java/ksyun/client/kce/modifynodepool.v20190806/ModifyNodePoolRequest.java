@@ -44,11 +44,11 @@ public class ModifyNodePoolRequest{
 
     /**节点标签*/
     @KsYunField(name="Label",type=2)
-    private List<LabelDto> LabelList;
+    private List<LabelDto1> LabelList;
 
     @Data
     @ToString
-    public static class LabelDto {
+    public static class LabelDto1 {
         /**标签名*/
         @KsYunField(name="Key")
         private String Key;
@@ -61,11 +61,11 @@ public class ModifyNodePoolRequest{
 
     /**节点污点*/
     @KsYunField(name="Taint",type=2)
-    private List<TaintDto> TaintList;
+    private List<TaintDto2> TaintList;
 
     @Data
     @ToString
-    public static class TaintDto {
+    public static class TaintDto2 {
         /**污点名*/
         @KsYunField(name="Key")
         private String Key;

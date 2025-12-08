@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname GetGroupResponse
@@ -14,63 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class GetGroupResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("GetGroupResult")
-    private GetGroupResultDto GetGroupResult;
 
-    @Data
-    @ToString
-    public static class GetGroupResultDto {
-        /***/
-        @JsonProperty("Group")
-        private GetGroupResultDtoGroupDto Group;
-
-        @Data
-        @ToString
-        public static class GetGroupResultDtoGroupDto {
-            /**用户组ID*/
-            @JsonProperty("Group")
-            private GetGroupResultDtoGroupDtoGroupDto Group;
-
-            @Data
-            @ToString
-            public static class GetGroupResultDtoGroupDtoGroupDto {
-                /***/
-                @JsonProperty("GroupId")
-                private String GroupId;
-
-                /***/
-                @JsonProperty("Path")
-                private String Path;
-
-                /**用户组名称*/
-                @JsonProperty("GroupName")
-                private String GroupName;
-
-                /**用户组描述*/
-                @JsonProperty("Description")
-                private String Description;
-
-                /**创建时间*/
-                @JsonProperty("CreateDate")
-                private String CreateDate;
-
-                /**用户组krn标识*/
-                @JsonProperty("Krn")
-                private String Krn;
-
-                /***/
-                @JsonProperty("GroupRealName")
-                private String GroupRealName;
-
-            }
-
-        }
-
-    }
-
-    /***/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

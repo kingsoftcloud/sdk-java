@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname BatchCreateEpcResponse
@@ -14,25 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class BatchCreateEpcResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Host")
-    private List<HostDto> Host;
-
-    @Data
-    @ToString
-    public static class HostDto {
-        /***/
-        @JsonProperty("HostId")
-        private String HostId;
-
-        /***/
-        @JsonProperty("HostName")
-        private String HostName;
-
-    }
+    //返回结果，需要按需扩展
 
 }

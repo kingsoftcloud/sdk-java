@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname CreateDedicatedHostsResponse
@@ -14,25 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class CreateDedicatedHostsResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("DedicatedHostSet")
-    private List<DedicatedHostSetDto> DedicatedHostSet;
-
-    @Data
-    @ToString
-    public static class DedicatedHostSetDto {
-        /**专属宿主机ID*/
-        @JsonProperty("DedicatedHostId")
-        private String DedicatedHostId;
-
-        /**专属宿主机名称*/
-        @JsonProperty("DedicatedHostName")
-        private String DedicatedHostName;
-
-    }
+    //返回结果，需要按需扩展
 
 }

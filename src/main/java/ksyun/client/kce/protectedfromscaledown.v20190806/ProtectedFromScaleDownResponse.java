@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname ProtectedFromScaleDownResponse
@@ -14,16 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class ProtectedFromScaleDownResponse extends BaseResponseModel {
-    /**设置缩容保护成功的节点id*/
-    @JsonProperty("SucceedInstanceIds")
-    private List<String> SucceedInstanceIds;
 
-    /**设置缩容保护失败的节点id*/
-    @JsonProperty("FailedInstanceIds")
-    private List<String> FailedInstanceIds;
-
-    /**请求id*/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

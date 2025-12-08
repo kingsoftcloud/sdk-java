@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeMiItemBillsResponse
@@ -14,29 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeMiItemBillsResponse extends BaseResponseModel {
-    /**请求RequestId*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**ks3地址*/
-    @JsonProperty("url")
-    private String Url;
-
-    /**错误节点。响应错误时，该节点才有值。*/
-    @JsonProperty("Error")
-    private ErrorDto Error;
-
-    @Data
-    @ToString
-    public static class ErrorDto {
-        /**错误码*/
-        @JsonProperty("Code")
-        private String Code;
-
-        /**错误描述*/
-        @JsonProperty("Message")
-        private String Message;
-
-    }
+    //返回结果，需要按需扩展
 
 }

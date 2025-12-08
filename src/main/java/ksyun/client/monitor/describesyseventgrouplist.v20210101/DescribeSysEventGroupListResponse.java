@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeSysEventGroupListResponse
@@ -14,69 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeSysEventGroupListResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("requestId")
-    private String RequestId;
 
-    /***/
-    @JsonProperty("code")
-    private String Code;
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
 
-    /***/
-    @JsonProperty("message")
-    private String Message;
-
-    /***/
-    @JsonProperty("sysEventGroupList")
-    private List<SysEventGroupListDto> SysEventGroupList;
-
-    @Data
-    @ToString
-    public static class SysEventGroupListDto {
-        /***/
-        @JsonProperty("instanceId")
-        private String InstanceId;
-
-        /***/
-        @JsonProperty("groupId")
-        private String GroupId;
-
-        /***/
-        @JsonProperty("producttype")
-        private Integer Producttype;
-
-        /***/
-        @JsonProperty("eventName")
-        private String EventName;
-
-        /***/
-        @JsonProperty("status")
-        private String Status;
-
-        /***/
-        @JsonProperty("createdAt")
-        private Integer CreatedAt;
-
-        /***/
-        @JsonProperty("updateAt")
-        private Integer UpdateAt;
-
-        /***/
-        @JsonProperty("planAt")
-        private Integer PlanAt;
-
-        /***/
-        @JsonProperty("finishAt")
-        private Integer FinishAt;
-
-        /***/
-        @JsonProperty("deadline")
-        private Integer Deadline;
-
-    }
-
-    /***/
-    @JsonProperty("totalCount")
-    private Integer TotalCount;
+    //返回结果，需要按需扩展
 
 }

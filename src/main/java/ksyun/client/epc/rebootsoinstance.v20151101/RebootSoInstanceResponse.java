@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname RebootSoInstanceResponse
@@ -14,16 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class RebootSoInstanceResponse extends BaseResponseModel {
-    /**imageId_1e0a602e3e41*/
-    @JsonProperty("ImageId")
-    private String ImageId;
 
-    /**requestId_c8e82c4dc8f7*/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**false*/
-    @JsonProperty("Result")
-    private Boolean Result;
+    //返回结果，需要按需扩展
 
 }

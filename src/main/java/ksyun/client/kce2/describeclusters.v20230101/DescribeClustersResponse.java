@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeClustersResponse
@@ -14,162 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeClustersResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Data")
-    private DataDto Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-        /***/
-        @JsonProperty("MaxResults")
-        private Integer MaxResults;
-
-        /***/
-        @JsonProperty("TotalCount")
-        private Integer TotalCount;
-
-        /***/
-        @JsonProperty("ClusterSet")
-        private List<DataDtoClusterSetDto> ClusterSet;
-
-        @Data
-        @ToString
-        public static class DataDtoClusterSetDto {
-            /***/
-            @JsonProperty("ClusterId")
-            private String ClusterId;
-
-            /***/
-            @JsonProperty("ClusterName")
-            private String ClusterName;
-
-            /***/
-            @JsonProperty("ClusterManageMode")
-            private String ClusterManageMode;
-
-            /***/
-            @JsonProperty("ProjectId")
-            private String ProjectId;
-
-            /***/
-            @JsonProperty("KubernetesVersion")
-            private String KubernetesVersion;
-
-            /***/
-            @JsonProperty("Network")
-            private DataDtoClusterSetDtoNetworkDto Network;
-
-            @Data
-            @ToString
-            public static class DataDtoClusterSetDtoNetworkDto {
-                /***/
-                @JsonProperty("NetworkPluginType")
-                private String NetworkPluginType;
-
-                /***/
-                @JsonProperty("ApiServer")
-                private DataDtoClusterSetDtoNetworkDtoApiServerDto ApiServer;
-
-                @Data
-                @ToString
-                public static class DataDtoClusterSetDtoNetworkDtoApiServerDto {
-                    /***/
-                    @JsonProperty("PublicApiServerEnable")
-                    private Boolean PublicApiServerEnable;
-
-                    /**开启公网访问下必填，公网需要绑定的弹性IP id*/
-                    @JsonProperty("EipId")
-                    private String EipId;
-
-                    /**所选vpc的所在的终端子网Id*/
-                    @JsonProperty("ReserveSubnetId")
-                    private String ReserveSubnetId;
-
-                }
-
-                /***/
-                @JsonProperty("VpcCNI")
-                private DataDtoClusterSetDtoNetworkDtoVpcCNIDto VpcCNI;
-
-                @Data
-                @ToString
-                public static class DataDtoClusterSetDtoNetworkDtoVpcCNIDto {
-                    /***/
-                    @JsonProperty("Enable")
-                    private Boolean Enable;
-
-                    /**网络模式：
-• eniOnly  独占网卡
-• eniMultiIP  共享网卡*/
-                    @JsonProperty("DaemonMode")
-                    private String DaemonMode;
-
-                    /**vpc的子网id，必须选跟集群同vpc下的子网Id,可以填多个*/
-                    @JsonProperty("SubnetIds")
-                    private List<String> SubnetIds;
-
-                    /**弹性网卡安全组id，需要跟集群同vpc下的安全组id*/
-                    @JsonProperty("SecurityGroup")
-                    private String SecurityGroup;
-
-                }
-
-                /***/
-                @JsonProperty("PodCidr")
-                private String PodCidr;
-
-                /***/
-                @JsonProperty("ServiceCidr")
-                private String ServiceCidr;
-
-                /***/
-                @JsonProperty("MaxPodPerNode")
-                private Integer MaxPodPerNode;
-
-            }
-
-            /***/
-            @JsonProperty("Addons")
-            private List<DataDtoClusterSetDtoAddonsDto> Addons;
-
-            @Data
-            @ToString
-            public static class DataDtoClusterSetDtoAddonsDto {
-                /***/
-                @JsonProperty("Name")
-                private String Name;
-
-            }
-
-            /***/
-            @JsonProperty("ManagedClusterSpec")
-            private DataDtoClusterSetDtoManagedClusterSpecDto ManagedClusterSpec;
-
-            @Data
-            @ToString
-            public static class DataDtoClusterSetDtoManagedClusterSpecDto {
-            }
-
-            /***/
-            @JsonProperty("Status")
-            private DataDtoClusterSetDtoStatusDto Status;
-
-            @Data
-            @ToString
-            public static class DataDtoClusterSetDtoStatusDto {
-                /***/
-                @JsonProperty("Phase")
-                private String Phase;
-
-            }
-
-        }
-
-    }
+    //返回结果，需要按需扩展
 
 }

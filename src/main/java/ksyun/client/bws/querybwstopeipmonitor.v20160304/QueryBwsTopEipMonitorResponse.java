@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname QueryBwsTopEipMonitorResponse
@@ -14,37 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class QueryBwsTopEipMonitorResponse extends BaseResponseModel {
-    /**请求ID*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**BWS相关流量数据*/
-    @JsonProperty("BwsMonitorDataList")
-    private List<BwsMonitorDataListDto> BwsMonitorDataList;
-
-    @Data
-    @ToString
-    public static class BwsMonitorDataListDto {
-        /**弹性IP实例ID*/
-        @JsonProperty("AllocationId")
-        private String AllocationId;
-
-        /**弹性IP*/
-        @JsonProperty("PublicIp")
-        private String PublicIp;
-
-        /**入向流量*/
-        @JsonProperty("InBound")
-        private String InBound;
-
-        /**出向流量*/
-        @JsonProperty("OutBound")
-        private String OutBound;
-
-        /**实例排名*/
-        @JsonProperty("Num")
-        private String Num;
-
-    }
+    //返回结果，需要按需扩展
 
 }

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeInstancesResponse
@@ -14,41 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeInstancesResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("data")
-    private List<DataDto> Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-        /**计费方式*/
-        @JsonProperty("billType")
-        private Integer BillType;
-
-        /**实例的创建时间*/
-        @JsonProperty("createTime")
-        private String CreateTime;
-
-        /**实例ID*/
-        @JsonProperty("instanceId")
-        private String InstanceId;
-
-        /**实例类型*/
-        @JsonProperty("instanceType")
-        private Integer InstanceType;
-
-        /**实例的服务开通时间*/
-        @JsonProperty("serviceBeginTime")
-        private String ServiceBeginTime;
-
-        /**实例的状态*/
-        @JsonProperty("status")
-        private Integer Status;
-
-    }
+    //返回结果，需要按需扩展
 
 }

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname GetUpgradeVolumeTypeProcessInfoResponse
@@ -14,50 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class GetUpgradeVolumeTypeProcessInfoResponse extends BaseResponseModel {
-    /**267168cc-28c6-4991-85d0-e851c5d6c49b*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Result")
-    private List<ResultDto> Result;
-
-    @Data
-    @ToString
-    public static class ResultDto {
-        /**9d62d051-a5e7-49d4-920c-b0ffb4d9d2c3*/
-        @JsonProperty("VolumeId")
-        private String VolumeId;
-
-        /***/
-        @JsonProperty("Process")
-        private ResultDtoProcessDto Process;
-
-        @Data
-        @ToString
-        public static class ResultDtoProcessDto {
-            /***/
-            @JsonProperty("PrepareProcess")
-            private Integer PrepareProcess;
-
-            /***/
-            @JsonProperty("LatestDataProcess")
-            private Integer LatestDataProcess;
-
-            /**false*/
-            @JsonProperty("PrepareDone")
-            private Boolean PrepareDone;
-
-            /**false*/
-            @JsonProperty("LatestDataDone")
-            private Boolean LatestDataDone;
-
-            /***/
-            @JsonProperty("EstimatedDuring")
-            private Integer EstimatedDuring;
-
-        }
-
-    }
+    //返回结果，需要按需扩展
 
 }

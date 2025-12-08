@@ -33,11 +33,12 @@ public class StartRayJobRunRequest{
     private String ReleaseVersion;
 
     /***/
-    private RaySubmitDataDto RaySubmitDataList;
+    @KsYunField(name="RaySubmitData")
+    private RaySubmitDataDto1 RaySubmitData;
 
     @Data
     @ToString
-    public static class RaySubmitDataDto {
+    public static class RaySubmitDataDto1 {
         /**作业名称*/
         @KsYunField(name="Name")
         private String Name;

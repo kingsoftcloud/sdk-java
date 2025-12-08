@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname QueryPeerTopVifMonitorResponse
@@ -14,41 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class QueryPeerTopVifMonitorResponse extends BaseResponseModel {
-    /**请求ID*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**BWS相关流量数据*/
-    @JsonProperty("NatPeerMonitorData")
-    private List<NatPeerMonitorDataDto> NatPeerMonitorData;
-
-    @Data
-    @ToString
-    public static class NatPeerMonitorDataDto {
-        /**主机ID*/
-        @JsonProperty("InstanceId")
-        private String InstanceId;
-
-        /**实例名称*/
-        @JsonProperty("InstanceName")
-        private String InstanceName;
-
-        /**实例类型*/
-        @JsonProperty("InstanceType")
-        private String InstanceType;
-
-        /**入向流量*/
-        @JsonProperty("InBound")
-        private String InBound;
-
-        /**出向流量*/
-        @JsonProperty("OutBound")
-        private String OutBound;
-
-        /**实例的网卡在VPC中的IP*/
-        @JsonProperty("ip")
-        private String Ip;
-
-    }
+    //返回结果，需要按需扩展
 
 }

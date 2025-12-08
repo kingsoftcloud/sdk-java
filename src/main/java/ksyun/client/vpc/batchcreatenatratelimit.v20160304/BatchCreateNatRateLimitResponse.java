@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname BatchCreateNatRateLimitResponse
@@ -14,33 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class BatchCreateNatRateLimitResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("NatRateLimit")
-    private NatRateLimitDto NatRateLimit;
-
-    @Data
-    @ToString
-    public static class NatRateLimitDto {
-        /***/
-        @JsonProperty("NetworkInterfaceId")
-        private String NetworkInterfaceId;
-
-        /***/
-        @JsonProperty("BandwidthLimit")
-        private Integer BandwidthLimit;
-
-        /***/
-        @JsonProperty("NatRateLimitId")
-        private String NatRateLimitId;
-
-        /***/
-        @JsonProperty("InBandwidthLimit")
-        private Integer InBandwidthLimit;
-
-    }
+    //返回结果，需要按需扩展
 
 }

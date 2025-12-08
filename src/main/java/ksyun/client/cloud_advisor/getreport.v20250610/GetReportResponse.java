@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname GetReportResponse
@@ -14,49 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class GetReportResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("code")
-    private Integer Code;
 
-    /***/
-    @JsonProperty("msg")
-    private String Msg;
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
 
-    /***/
-    @JsonProperty("requestId")
-    private String RequestId;
-
-    /***/
-    @JsonProperty("data")
-    private List<DataDto> Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-        /***/
-        @JsonProperty("taskId")
-        private String TaskId;
-
-        /***/
-        @JsonProperty("filePdfUrl")
-        private String FilePdfUrl;
-
-        /***/
-        @JsonProperty("fileExcelUrl")
-        private String FileExcelUrl;
-
-        /***/
-        @JsonProperty("createTime")
-        private String CreateTime;
-
-        /***/
-        @JsonProperty("status")
-        private Integer Status;
-
-        /***/
-        @JsonProperty("statusName")
-        private String StatusName;
-
-    }
+    //返回结果，需要按需扩展
 
 }

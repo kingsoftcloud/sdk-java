@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DeleteLocalVolumeSnapshotResponse
@@ -14,33 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DeleteLocalVolumeSnapshotResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("ReturnSet")
-    private List<ReturnSetDto> ReturnSet;
-
-    @Data
-    @ToString
-    public static class ReturnSetDto {
-        /***/
-        @JsonProperty("LocalVolumeSnapshotId")
-        private String LocalVolumeSnapshotId;
-
-        /***/
-        @JsonProperty("Return")
-        private Boolean ReturnField;
-
-        /***/
-        @JsonProperty("Reason")
-        private String Reason;
-
-        /***/
-        @JsonProperty("ErrorCode")
-        private String ErrorCode;
-
-    }
+    //返回结果，需要按需扩展
 
 }

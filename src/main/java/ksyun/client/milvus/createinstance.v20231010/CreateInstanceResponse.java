@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname CreateInstanceResponse
@@ -14,53 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class CreateInstanceResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Code")
-    private String Code;
-
-    /***/
-    @JsonProperty("Message")
-    private String Message;
-
-    /***/
-    @JsonProperty("Data")
-    private DataDto Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-        /**实例ID(此处不返回)*/
-        @JsonProperty("InstanceId")
-        private String InstanceId;
-
-        /**实例名称*/
-        @JsonProperty("InstanceName")
-        private String InstanceName;
-
-        /**实例套餐(此处不返回)*/
-        @JsonProperty("InstanceType")
-        private String InstanceType;
-
-        /**实例订单ID*/
-        @JsonProperty("OrderId")
-        private String OrderId;
-
-        /**用户ID(此处不返回)*/
-        @JsonProperty("AccountId")
-        private String AccountId;
-
-        /**地域(此处不返回)*/
-        @JsonProperty("Region")
-        private String Region;
-
-        /**可用区(此处不返回)*/
-        @JsonProperty("Az")
-        private String Az;
-
-    }
+    //返回结果，需要按需扩展
 
 }

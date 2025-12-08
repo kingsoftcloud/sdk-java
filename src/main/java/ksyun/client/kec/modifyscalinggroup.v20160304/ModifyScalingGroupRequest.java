@@ -62,11 +62,11 @@ public class ModifyScalingGroupRequest{
     /**与伸缩组绑定的各负载均衡的ID即将废弃 
  */
     @KsYunField(name="Slb",type=2)
-    private List<SlbDto> SlbList;
+    private List<SlbDto1> SlbList;
 
     @Data
     @ToString
-    public static class SlbDto {
+    public static class SlbDto1 {
         /**与伸缩组绑定的各负载均衡的ID即将废弃 
  */
         @KsYunField(name="Id")

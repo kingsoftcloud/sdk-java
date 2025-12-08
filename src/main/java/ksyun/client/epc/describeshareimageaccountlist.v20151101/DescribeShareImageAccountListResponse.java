@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeShareImageAccountListResponse
@@ -14,37 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeShareImageAccountListResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("SharePermissionSet")
-    private List<SharePermissionSetDto> SharePermissionSet;
 
-    @Data
-    @ToString
-    public static class SharePermissionSetDto {
-        /***/
-        @JsonProperty("AccountId")
-        private Integer AccountId;
-
-        /***/
-        @JsonProperty("ShareTime")
-        private String ShareTime;
-
-        /***/
-        @JsonProperty("Status")
-        private String Status;
-
-        /**镜像ID*/
-        @JsonProperty("ImageId")
-        private String ImageId;
-
-    }
-
-    /***/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**返回状态*/
-    @JsonProperty("Return")
-    private Boolean ReturnField;
+    //返回结果，需要按需扩展
 
 }

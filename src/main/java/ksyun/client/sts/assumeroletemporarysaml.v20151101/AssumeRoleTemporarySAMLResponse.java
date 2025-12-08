@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname AssumeRoleTemporarySAMLResponse
@@ -14,59 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class AssumeRoleTemporarySAMLResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("AssumeRoleResult")
-    private AssumeRoleResultDto AssumeRoleResult;
 
-    @Data
-    @ToString
-    public static class AssumeRoleResultDto {
-        /**访问凭证*/
-        @JsonProperty("Credentials")
-        private AssumeRoleResultDtoCredentialsDto Credentials;
-
-        @Data
-        @ToString
-        public static class AssumeRoleResultDtoCredentialsDto {
-            /**失效时间，UTC时间，即协调世界时。*/
-            @JsonProperty("Expiration")
-            private String Expiration;
-
-            /**访问密钥*/
-            @JsonProperty("SecretAccessKey")
-            private String SecretAccessKey;
-
-            /**访问密钥ID*/
-            @JsonProperty("AccessKeyId")
-            private String AccessKeyId;
-
-            /**安全令牌*/
-            @JsonProperty("SecurityToken")
-            private String SecurityToken;
-
-        }
-
-        /**角色扮演时的临时身份。*/
-        @JsonProperty("AssumedRoleUser")
-        private AssumeRoleResultDtoAssumedRoleUserDto AssumedRoleUser;
-
-        @Data
-        @ToString
-        public static class AssumeRoleResultDtoAssumedRoleUserDto {
-            /**临时身份的KRN信息*/
-            @JsonProperty("Krn")
-            private String Krn;
-
-            /**临时身份的ID*/
-            @JsonProperty("AssumedRoleId")
-            private String AssumedRoleId;
-
-        }
-
-    }
-
-    /**请求ID*/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

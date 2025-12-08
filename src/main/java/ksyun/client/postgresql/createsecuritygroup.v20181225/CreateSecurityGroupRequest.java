@@ -38,11 +38,11 @@ UUID格式，可填写未绑定过安全组的实例ID
 
     /**安全组规则*/
     @KsYunField(name="SecurityGroupRule",type=2)
-    private List<SecurityGroupRuleDto> SecurityGroupRuleList;
+    private List<SecurityGroupRuleDto1> SecurityGroupRuleList;
 
     @Data
     @ToString
-    public static class SecurityGroupRuleDto {
+    public static class SecurityGroupRuleDto1 {
         /**安全组规则名称
 
 ```json

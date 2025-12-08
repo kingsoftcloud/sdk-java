@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeInstanceAccountsResponse
@@ -14,62 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeInstanceAccountsResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("Data")
-    private DataDto Data;
 
-    @Data
-    @ToString
-    public static class DataDto {
-        /***/
-        @JsonProperty("Accounts")
-        private List<DataDtoAccountsDto> Accounts;
-
-        @Data
-        @ToString
-        public static class DataDtoAccountsDto {
-            /**账户名称*/
-            @JsonProperty("InstanceAccountName")
-            private String InstanceAccountName;
-
-            /**账号描述*/
-            @JsonProperty("InstanceAccountDescription")
-            private String InstanceAccountDescription;
-
-            /**创建时间*/
-            @JsonProperty("Created")
-            private String Created;
-
-            /**账号类型
-Super：管理员
-Normal：普通用户*/
-            @JsonProperty("InstanceAccountType")
-            private String InstanceAccountType;
-
-            /**账号享有权限的列表，账号出发对如下数据库有权限(具体权限)*/
-            @JsonProperty("InstanceAccountPrivileges")
-            private List<DataDtoAccountsDtoInstanceAccountPrivilegesDto> InstanceAccountPrivileges;
-
-            @Data
-            @ToString
-            public static class DataDtoAccountsDtoInstanceAccountPrivilegesDto {
-                /**库名*/
-                @JsonProperty("InstanceDatabaseName")
-                private String InstanceDatabaseName;
-
-                /**权限：只读，读写，仅DDL，仅DML
-*/
-                @JsonProperty("Privilege")
-                private String Privilege;
-
-            }
-
-        }
-
-    }
-
-    /***/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

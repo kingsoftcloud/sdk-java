@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeKnadIpResponse
@@ -14,74 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeKnadIpResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("KnadIpSet")
-    private List<KnadIpSetDto> KnadIpSet;
-
-    @Data
-    @ToString
-    public static class KnadIpSetDto {
-        /***/
-        @JsonProperty("KnadId")
-        private String KnadId;
-
-        /***/
-        @JsonProperty("KnadName")
-        private String KnadName;
-
-        /***/
-        @JsonProperty("EipId")
-        private String EipId;
-
-        /***/
-        @JsonProperty("KnadIp")
-        private String KnadIp;
-
-        /***/
-        @JsonProperty("StatusDesc")
-        private String StatusDesc;
-
-        /***/
-        @JsonProperty("ProjectId")
-        private Integer ProjectId;
-
-        /***/
-        @JsonProperty("Band")
-        private Integer Band;
-
-        /***/
-        @JsonProperty("MaxBand")
-        private Integer MaxBand;
-
-        /***/
-        @JsonProperty("TemplateId")
-        private Integer TemplateId;
-
-        /***/
-        @JsonProperty("TemplateName")
-        private String TemplateName;
-
-        /***/
-        @JsonProperty("EipInfo")
-        private KnadIpSetDtoEipInfoDto EipInfo;
-
-        @Data
-        @ToString
-        public static class KnadIpSetDtoEipInfoDto {
-            /***/
-            @JsonProperty("InstanceType")
-            private String InstanceType;
-
-        }
-
-    }
-
-    /***/
-    @JsonProperty("KnadIpCount")
-    private Integer KnadIpCount;
+    //返回结果，需要按需扩展
 
 }

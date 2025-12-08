@@ -36,11 +36,11 @@ public class ListResourcesRequest{
 
     /***/
     @KsYunField(name="TagFilters",type=2)
-    private List<TagFiltersDto> TagFiltersList;
+    private List<TagFiltersDto1> TagFiltersList;
 
     @Data
     @ToString
-    public static class TagFiltersDto {
+    public static class TagFiltersDto1 {
         /**标签键*/
         @KsYunField(name="Key")
         private String Key;

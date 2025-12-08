@@ -24,11 +24,11 @@ public class ModifyInstanceAccountPrivilegesActionRequest{
 
     /**数据库权限：不传则置空改账户数据库权限*/
     @KsYunField(name="InstanceAccountPrivileges",type=2)
-    private List<InstanceAccountPrivilegesDto> InstanceAccountPrivilegesList;
+    private List<InstanceAccountPrivilegesDto1> InstanceAccountPrivilegesList;
 
     @Data
     @ToString
-    public static class InstanceAccountPrivilegesDto {
+    public static class InstanceAccountPrivilegesDto1 {
         /**数据库名称
 数据库名称和权限必须同时填写*/
         @KsYunField(name="InstanceDatabaseName")

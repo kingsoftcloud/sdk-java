@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeEpcStocksResponse
@@ -14,37 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeEpcStocksResponse extends BaseResponseModel {
-    /**请求ID*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**库存的信息*/
-    @JsonProperty("EpcStockSet")
-    private List<EpcStockSetDto> EpcStockSet;
-
-    @Data
-    @ToString
-    public static class EpcStockSetDto {
-        /**库存数量*/
-        @JsonProperty("InstanceCount")
-        private Integer InstanceCount;
-
-        /**云物理主机机型*/
-        @JsonProperty("HostType")
-        private String HostType;
-
-        /**可用区的名称*/
-        @JsonProperty("AvailabilityZone")
-        private String AvailabilityZone;
-
-        /**磁盘信息*/
-        @JsonProperty("AvailableRaidLevelSet")
-        private List<String> AvailableRaidLevelSet;
-
-        /**库存属性*/
-        @JsonProperty("Attribute")
-        private String Attribute;
-
-    }
+    //返回结果，需要按需扩展
 
 }

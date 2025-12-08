@@ -20,11 +20,11 @@ public class DescribeListenersRequest{
 
     /**筛选Filter*/
     @KsYunField(name="Filter",type=2)
-    private List<FilterDto> FilterList;
+    private List<FilterDto1> FilterList;
 
     @Data
     @ToString
-    public static class FilterDto {
+    public static class FilterDto1 {
         /**有效值： 
 - load-balancer-id，负载均衡的ID
 - load-balancer-acl-id，负载均衡ACL的ID

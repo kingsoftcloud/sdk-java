@@ -20,11 +20,11 @@ public class DescribeInstancesWithListenerRequest{
 
     /**筛选Filter*/
     @KsYunField(name="Filter",type=2)
-    private List<FilterDto> FilterList;
+    private List<FilterDto1> FilterList;
 
     @Data
     @ToString
-    public static class FilterDto {
+    public static class FilterDto1 {
         /**有效值： 
 - listener-id，监听器的ID
 - real-server-ip，服务器的IP

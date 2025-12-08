@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname TaskBirdViewResponse
@@ -14,92 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class TaskBirdViewResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("Data")
-    private DataDto Data;
 
-    @Data
-    @ToString
-    public static class DataDto {
-        /***/
-        @JsonProperty("global")
-        private DataDtoGlobalDto Global;
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
 
-        @Data
-        @ToString
-        public static class DataDtoGlobalDto {
-            /***/
-            @JsonProperty("total")
-            private Integer Total;
-
-            /***/
-            @JsonProperty("running")
-            private Integer Running;
-
-            /***/
-            @JsonProperty("finished")
-            private Integer Finished;
-
-            /***/
-            @JsonProperty("erroneous")
-            private Integer Erroneous;
-
-            /***/
-            @JsonProperty("others")
-            private Integer Others;
-
-        }
-
-        /***/
-        @JsonProperty("regions")
-        private List<DataDtoRegionsDto> Regions;
-
-        @Data
-        @ToString
-        public static class DataDtoRegionsDto {
-            /***/
-            @JsonProperty("regionId")
-            private Integer RegionId;
-
-            /***/
-            @JsonProperty("regionCode")
-            private String RegionCode;
-
-            /***/
-            @JsonProperty("regionName")
-            private String RegionName;
-
-            /***/
-            @JsonProperty("total")
-            private Integer Total;
-
-            /***/
-            @JsonProperty("Statistic")
-            private DataDtoRegionsDtoStatisticDto Statistic;
-
-            @Data
-            @ToString
-            public static class DataDtoRegionsDtoStatisticDto {
-                /***/
-                @JsonProperty("running")
-                private Integer Running;
-
-                /***/
-                @JsonProperty("finished")
-                private Integer Finished;
-
-                /***/
-                @JsonProperty("erroneous")
-                private Integer Erroneous;
-
-                /***/
-                @JsonProperty("others")
-                private Integer Others;
-
-            }
-
-        }
-
-    }
+    //返回结果，需要按需扩展
 
 }

@@ -44,11 +44,12 @@ public class LaunchClusterRequest{
     private String ChargeType;
 
     /**元数组高可用信息：*/
-    private DatabaseInfoDto DatabaseInfoList;
+    @KsYunField(name="DatabaseInfo")
+    private DatabaseInfoDto1 DatabaseInfo;
 
     @Data
     @ToString
-    public static class DatabaseInfoDto {
+    public static class DatabaseInfoDto1 {
         /**数据库类型：
 - 本地Mysql：mysql
 - rds：rds
@@ -101,11 +102,11 @@ public class LaunchClusterRequest{
 
     /**节点组信息*/
     @KsYunField(name="InstanceGroups",type=2)
-    private List<InstanceGroupsDto> InstanceGroupsList;
+    private List<InstanceGroupsDto2> InstanceGroupsList;
 
     @Data
     @ToString
-    public static class InstanceGroupsDto {
+    public static class InstanceGroupsDto2 {
         /**节点组类型:
 - Hadoop: MASTER、CORE 、TASK、GATEWAY、COMMON
 - Kafka: BROKER

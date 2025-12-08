@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeBillSummaryByPayModeResponse
@@ -14,37 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeBillSummaryByPayModeResponse extends BaseResponseModel {
-    /**当前请求的RequestId*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**币种*/
-    @JsonProperty("Currency")
-    private String Currency;
-
-    /**总金额，即折后价*/
-    @JsonProperty("RealTotalCost")
-    private String RealTotalCost;
-
-    /**各计费类别分布详情，包括 预付费（即 购买时付款）、按量付费（按 小时或天 扣款）、后付费（按月扣款）*/
-    @JsonProperty("SummaryOverview")
-    private List<SummaryOverviewDto> SummaryOverview;
-
-    @Data
-    @ToString
-    public static class SummaryOverviewDto {
-        /**计费类别，包括 预付费、按量付费、后付费*/
-        @JsonProperty("PayMode")
-        private String PayMode;
-
-        /**总金额，即 折后价*/
-        @JsonProperty("RealTotalCost")
-        private String RealTotalCost;
-
-        /**账单月份*/
-        @JsonProperty("BillMonth")
-        private String BillMonth;
-
-    }
+    //返回结果，需要按需扩展
 
 }

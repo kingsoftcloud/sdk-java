@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DetachInstancesIamRoleResponse
@@ -14,33 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DetachInstancesIamRoleResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("FailCount")
-    private Integer FailCount;
-
-    /***/
-    @JsonProperty("TotalCount")
-    private Integer TotalCount;
-
-    /***/
-    @JsonProperty("Results")
-    private ResultsDto Results;
-
-    @Data
-    @ToString
-    public static class ResultsDto {
-        /***/
-        @JsonProperty("InstanceId")
-        private String InstanceId;
-
-        /***/
-        @JsonProperty("Result")
-        private Boolean Result;
-
-    }
+    //返回结果，需要按需扩展
 
 }

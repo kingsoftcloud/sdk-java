@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeDefaultParamsResponse
@@ -14,41 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeDefaultParamsResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("DefaultParams")
-    private List<DefaultParamsDto> DefaultParams;
 
-    @Data
-    @ToString
-    public static class DefaultParamsDto {
-        /***/
-        @JsonProperty("DefaultValue")
-        private String DefaultValue;
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
 
-        /***/
-        @JsonProperty("Visible")
-        private Integer Visible;
-
-        /***/
-        @JsonProperty("RestartRequired")
-        private Boolean RestartRequired;
-
-        /***/
-        @JsonProperty("ParamName")
-        private String ParamName;
-
-        /***/
-        @JsonProperty("ParamType")
-        private String ParamType;
-
-        /***/
-        @JsonProperty("DataType")
-        private String DataType;
-
-        /***/
-        @JsonProperty("Enums")
-        private List<String> Enums;
-
-    }
+    //返回结果，需要按需扩展
 
 }

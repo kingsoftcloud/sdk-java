@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DecryptResponse
@@ -14,21 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DecryptResponse extends BaseResponseModel {
-    /**
-- 请求ID
-- 类型: String
 
-#### */
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**
-- 客户主KEY的ID
-- 类型:String
-- 是否可缺省: 否
-
-#### */
-    @JsonProperty("KeyId")
-    private String KeyId;
+    //返回结果，需要按需扩展
 
 }

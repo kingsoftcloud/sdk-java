@@ -20,11 +20,11 @@ public class BindZoneVpcRequest{
 
     /**筛选Filter*/
     @KsYunField(name="Vpcs",type=2)
-    private List<VpcsDto> VpcsList;
+    private List<VpcsDto1> VpcsList;
 
     @Data
     @ToString
-    public static class VpcsDto {
+    public static class VpcsDto1 {
         /**Region Code,例如cn-beijing-6*/
         @KsYunField(name="RegionName")
         private String RegionName;

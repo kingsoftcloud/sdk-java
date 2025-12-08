@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname ListAllUserAccessKeysResponse
@@ -14,33 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class ListAllUserAccessKeysResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("AccessKeyList")
-    private List<AccessKeyListDto> AccessKeyList;
 
-    @Data
-    @ToString
-    public static class AccessKeyListDto {
-        /***/
-        @JsonProperty("UserName")
-        private String UserName;
-
-        /***/
-        @JsonProperty("AccessKey")
-        private String AccessKey;
-
-        /**'-'表示最近三个月未使用*/
-        @JsonProperty("LastLoginTime")
-        private String LastLoginTime;
-
-        /***/
-        @JsonProperty("AkLastUsedTime")
-        private String AkLastUsedTime;
-
-    }
-
-    /***/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

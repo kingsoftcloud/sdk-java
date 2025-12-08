@@ -23,11 +23,12 @@ public class CreateDownloadTaskRequest{
     private String LogPoolNames;
 
     /**下载参数*/
-    private ConfigDto ConfigList;
+    @KsYunField(name="Config")
+    private ConfigDto1 Config;
 
     @Data
     @ToString
-    public static class ConfigDto {
+    public static class ConfigDto1 {
         /**日志开始时间*/
         @KsYunField(name="From")
         private Integer From;

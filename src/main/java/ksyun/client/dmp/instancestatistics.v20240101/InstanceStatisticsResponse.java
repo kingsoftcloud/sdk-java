@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname InstanceStatisticsResponse
@@ -14,127 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class InstanceStatisticsResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Data")
-    private DataDto Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-        /***/
-        @JsonProperty("TypeStatistic")
-        private List<DataDtoTypeStatisticDto> TypeStatistic;
-
-        @Data
-        @ToString
-        public static class DataDtoTypeStatisticDto {
-            /***/
-            @JsonProperty("Count")
-            private Integer Count;
-
-            /***/
-            @JsonProperty("Percent")
-            private String Percent;
-
-            /***/
-            @JsonProperty("DatabaseType")
-            private String DatabaseType;
-
-        }
-
-        /***/
-        @JsonProperty("RegionStatistic")
-        private List<DataDtoRegionStatisticDto> RegionStatistic;
-
-        @Data
-        @ToString
-        public static class DataDtoRegionStatisticDto {
-            /***/
-            @JsonProperty("Count")
-            private Integer Count;
-
-            /***/
-            @JsonProperty("Percent")
-            private String Percent;
-
-            /***/
-            @JsonProperty("InstanceRegion")
-            private String InstanceRegion;
-
-        }
-
-        /***/
-        @JsonProperty("SourceStatistic")
-        private List<DataDtoSourceStatisticDto> SourceStatistic;
-
-        @Data
-        @ToString
-        public static class DataDtoSourceStatisticDto {
-            /***/
-            @JsonProperty("Count")
-            private Integer Count;
-
-            /***/
-            @JsonProperty("Percent")
-            private String Percent;
-
-            /***/
-            @JsonProperty("InstanceSource")
-            private String InstanceSource;
-
-        }
-
-        /***/
-        @JsonProperty("StatusStatistic")
-        private DataDtoStatusStatisticDto StatusStatistic;
-
-        @Data
-        @ToString
-        public static class DataDtoStatusStatisticDto {
-            /***/
-            @JsonProperty("MySQL")
-            private DataDtoStatusStatisticDtoMySQLDto MySQL;
-
-            @Data
-            @ToString
-            public static class DataDtoStatusStatisticDtoMySQLDto {
-                /***/
-                @JsonProperty("Normal")
-                private Integer Normal;
-
-                /***/
-                @JsonProperty("Error")
-                private Integer Error;
-
-            }
-
-            /***/
-            @JsonProperty("Redis")
-            private DataDtoStatusStatisticDtoRedisDto Redis;
-
-            @Data
-            @ToString
-            public static class DataDtoStatusStatisticDtoRedisDto {
-                /***/
-                @JsonProperty("Normal")
-                private Integer Normal;
-
-                /***/
-                @JsonProperty("Error")
-                private Integer Error;
-
-            }
-
-        }
-
-        /***/
-        @JsonProperty("TotalCount")
-        private Integer TotalCount;
-
-    }
+    //返回结果，需要按需扩展
 
 }

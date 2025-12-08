@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname GetDomainHttpCodeDataResponse
@@ -14,91 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class GetDomainHttpCodeDataResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("StartTime")
-    private String StartTime;
 
-    /***/
-    @JsonProperty("EndTime")
-    private String EndTime;
-
-    /***/
-    @JsonProperty("CdnType")
-    private String CdnType;
-
-    /***/
-    @JsonProperty("Domains")
-    private String Domains;
-
-    /***/
-    @JsonProperty("Areas")
-    private String Areas;
-
-    /***/
-    @JsonProperty("Provinces")
-    private String Provinces;
-
-    /***/
-    @JsonProperty("Isps")
-    private String Isps;
-
-    /***/
-    @JsonProperty("IpType")
-    private String IpType;
-
-    /***/
-    @JsonProperty("Schema")
-    private String Schema;
-
-    /***/
-    @JsonProperty("ResultType")
-    private String ResultType;
-
-    /***/
-    @JsonProperty("Datas")
-    private List<DatasDto> Datas;
-
-    @Data
-    @ToString
-    public static class DatasDto {
-        /***/
-        @JsonProperty("Condition")
-        private DatasDtoConditionDto Condition;
-
-        @Data
-        @ToString
-        public static class DatasDtoConditionDto {
-            /***/
-            @JsonProperty("Domains")
-            private String Domains;
-
-        }
-
-        /***/
-        @JsonProperty("httpcodeData")
-        private List<DatasDtoHttpcodeDataDto> HttpcodeData;
-
-        @Data
-        @ToString
-        public static class DatasDtoHttpcodeDataDto {
-            /***/
-            @JsonProperty("CodeType")
-            private String CodeType;
-
-            /***/
-            @JsonProperty("PV")
-            private Integer PV;
-
-            /***/
-            @JsonProperty("Proportion")
-            private Double Proportion;
-
-        }
-
-    }
-
-    /***/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

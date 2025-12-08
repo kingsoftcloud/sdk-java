@@ -20,11 +20,11 @@ public class InstallPluginsRequest{
 
     /**需安装的插件列表。*/
     @KsYunField(name="Plugins",type=2)
-    private List<PluginsDto> PluginsList;
+    private List<PluginsDto1> PluginsList;
 
     @Data
     @ToString
-    public static class PluginsDto {
+    public static class PluginsDto1 {
         /**插件名称*/
         @KsYunField(name="PluginName")
         private String PluginName;

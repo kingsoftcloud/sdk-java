@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeHotKeysResponse
@@ -14,82 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeHotKeysResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Data")
-    private DataDto Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-        /***/
-        @JsonProperty("count")
-        private Integer Count;
-
-        /***/
-        @JsonProperty("total")
-        private Integer Total;
-
-        /***/
-        @JsonProperty("updated")
-        private String Updated;
-
-        /***/
-        @JsonProperty("task_status")
-        private String Task_status;
-
-        /***/
-        @JsonProperty("hotkeys")
-        private List<DataDtoHotkeysDto> Hotkeys;
-
-        @Data
-        @ToString
-        public static class DataDtoHotkeysDto {
-            /***/
-            @JsonProperty("count")
-            private Integer Count;
-
-            /***/
-            @JsonProperty("elements")
-            private String Elements;
-
-            /***/
-            @JsonProperty("key")
-            private String Key;
-
-            /***/
-            @JsonProperty("encoding")
-            private String Encoding;
-
-            /***/
-            @JsonProperty("type")
-            private String Type;
-
-            /***/
-            @JsonProperty("expiry")
-            private Integer Expiry;
-
-            /***/
-            @JsonProperty("db")
-            private Integer Db;
-
-            /***/
-            @JsonProperty("len_largest_element")
-            private String Len_largest_element;
-
-            /***/
-            @JsonProperty("size")
-            private Integer Size;
-
-        }
-
-        /***/
-        @JsonProperty("created")
-        private String Created;
-
-    }
+    //返回结果，需要按需扩展
 
 }

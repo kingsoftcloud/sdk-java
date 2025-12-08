@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname GetUserGroupResponse
@@ -14,42 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class GetUserGroupResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("data")
-    private DataDto Data;
 
-    @Data
-    @ToString
-    public static class DataDto {
-        /**联系组列表*/
-        @JsonProperty("userGrpList")
-        private List<DataDtoUserGrpListDto> UserGrpList;
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
 
-        @Data
-        @ToString
-        public static class DataDtoUserGrpListDto {
-            /**联系组ID*/
-            @JsonProperty("userGrpId")
-            private Integer UserGrpId;
-
-            /**联系组名称*/
-            @JsonProperty("name")
-            private String Name;
-
-            /**组内联系人数量。*/
-            @JsonProperty("userCount")
-            private Integer UserCount;
-
-        }
-
-    }
-
-    /**总记录数*/
-    @JsonProperty("totalCount")
-    private Integer TotalCount;
-
-    /**请求ID。*/
-    @JsonProperty("requestId")
-    private String RequestId;
+    //返回结果，需要按需扩展
 
 }

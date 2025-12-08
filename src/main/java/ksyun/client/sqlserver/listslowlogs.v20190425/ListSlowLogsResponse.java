@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname ListSlowLogsResponse
@@ -14,58 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class ListSlowLogsResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("Data")
-    private DataDto Data;
 
-    @Data
-    @ToString
-    public static class DataDto {
-        /***/
-        @JsonProperty("SlowLogs")
-        private List<DataDtoSlowLogsDto> SlowLogs;
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
 
-        @Data
-        @ToString
-        public static class DataDtoSlowLogsDto {
-            /**总运行时间*/
-            @JsonProperty("TotalElapsedTime")
-            private Integer TotalElapsedTime;
-
-            /**总执行次数*/
-            @JsonProperty("TotalExecutionCount")
-            private Integer TotalExecutionCount;
-
-            /**总逻辑读数*/
-            @JsonProperty("TotalLogicalReads")
-            private Integer TotalLogicalReads;
-
-            /**物理总读数*/
-            @JsonProperty("TotalPhysicalReads")
-            private Integer TotalPhysicalReads;
-
-            /**SQL语句*/
-            @JsonProperty("SqlText")
-            private String SqlText;
-
-            /**收集时间*/
-            @JsonProperty("CollectTime")
-            private String CollectTime;
-
-        }
-
-        /***/
-        @JsonProperty("TotalCount")
-        private Integer TotalCount;
-
-        /***/
-        @JsonProperty("MaxRecords")
-        private Integer MaxRecords;
-
-        /***/
-        @JsonProperty("Marker")
-        private Integer Marker;
-
-    }
+    //返回结果，需要按需扩展
 
 }

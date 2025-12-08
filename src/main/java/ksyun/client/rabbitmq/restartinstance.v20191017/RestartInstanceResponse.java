@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname RestartInstanceResponse
@@ -14,46 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class RestartInstanceResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Code")
-    private String Code;
-
-    /***/
-    @JsonProperty("Message")
-    private String Message;
-
-    /***/
-    @JsonProperty("Data")
-    private DataDto Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-        /***/
-        @JsonProperty("Instances")
-        private List<DataDtoInstancesDto> Instances;
-
-        @Data
-        @ToString
-        public static class DataDtoInstancesDto {
-            /***/
-            @JsonProperty("InstanceId")
-            private String InstanceId;
-
-            /***/
-            @JsonProperty("OperStatus")
-            private String OperStatus;
-
-            /***/
-            @JsonProperty("Msg")
-            private String Msg;
-
-        }
-
-    }
+    //返回结果，需要按需扩展
 
 }

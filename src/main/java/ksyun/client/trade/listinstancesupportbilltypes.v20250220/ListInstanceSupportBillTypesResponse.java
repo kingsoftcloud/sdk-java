@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname ListInstanceSupportBillTypesResponse
@@ -14,46 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class ListInstanceSupportBillTypesResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("Error")
-    private ErrorDto Error;
 
-    @Data
-    @ToString
-    public static class ErrorDto {
-        /**错误码*/
-        @JsonProperty("Code")
-        private String Code;
-
-        /**错误详情*/
-        @JsonProperty("Message")
-        private String Message;
-
-    }
-
-    /**本次请求唯一标识*/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("data")
-    private List<DataDto> Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-        /**计费方式英文名称*/
-        @JsonProperty("billTypeEnName")
-        private String BillTypeEnName;
-
-        /**计费方式ID*/
-        @JsonProperty("billTypeId")
-        private Integer BillTypeId;
-
-        /**计费方式中文名称*/
-        @JsonProperty("billTypeName")
-        private String BillTypeName;
-
-    }
+    //返回结果，需要按需扩展
 
 }

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeInterRegionsResponse
@@ -14,33 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeInterRegionsResponse extends BaseResponseModel {
-    /**请求ID*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**获取另一页返回结果的 token.*/
-    @JsonProperty("NextToken")
-    private String NextToken;
-
-    /**云企业网地域的信息*/
-    @JsonProperty("InterRegionSet")
-    private List<InterRegionSetDto> InterRegionSet;
-
-    @Data
-    @ToString
-    public static class InterRegionSetDto {
-        /**互通大区ID*/
-        @JsonProperty("InterAreaId")
-        private String InterAreaId;
-
-        /**云企业网地域ID*/
-        @JsonProperty("InterRegionId")
-        private String InterRegionId;
-
-        /**云企业网地域名称*/
-        @JsonProperty("InterRegionName")
-        private String InterRegionName;
-
-    }
+    //返回结果，需要按需扩展
 
 }

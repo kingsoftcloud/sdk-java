@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DeleteSoSubnetResponse
@@ -14,8 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DeleteSoSubnetResponse extends BaseResponseModel {
-    /**1ded7233-54f8-44d1-a2ea-b6fcc0ca7390*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

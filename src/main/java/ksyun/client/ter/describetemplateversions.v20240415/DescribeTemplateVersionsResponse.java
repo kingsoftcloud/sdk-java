@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeTemplateVersionsResponse
@@ -14,42 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeTemplateVersionsResponse extends BaseResponseModel {
-    /**模板*/
-    @JsonProperty("Versions")
-    private List<VersionsDto> Versions;
 
-    @Data
-    @ToString
-    public static class VersionsDto {
-        /**版本号*/
-        @JsonProperty("VersionNumber")
-        private String VersionNumber;
-
-        /**版本描述*/
-        @JsonProperty("VersionDescription")
-        private String VersionDescription;
-
-        /**版本状态*/
-        @JsonProperty("VersionState")
-        private String VersionState;
-
-        /**新建时间*/
-        @JsonProperty("CreateTime")
-        private String CreateTime;
-
-    }
-
-    /**接口请求ID
-示例值：a831f245-2694-47de-a417-a5e7d8b250f1012*/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**模板ID*/
-    @JsonProperty("TemplateId")
-    private String TemplateId;
-
-    /**返回的版本数量*/
-    @JsonProperty("VersionCount")
-    private Integer VersionCount;
+    //返回结果，需要按需扩展
 
 }

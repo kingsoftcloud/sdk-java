@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname CloudDeskmanageResponse
@@ -14,24 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class CloudDeskmanageResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("requestId")
-    private String RequestId;
 
-    /***/
-    @JsonProperty("code")
-    private Integer Code;
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
 
-    /***/
-    @JsonProperty("message")
-    private String Message;
-
-    /***/
-    @JsonProperty("detail")
-    private String Detail;
-
-    /***/
-    @JsonProperty("data")
-    private Boolean Data;
+    //返回结果，需要按需扩展
 
 }

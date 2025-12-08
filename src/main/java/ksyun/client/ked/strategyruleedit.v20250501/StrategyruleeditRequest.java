@@ -21,11 +21,11 @@ public class StrategyruleeditRequest{
 
     /***/
     @KsYunField(name="policies",type=2)
-    private List<PoliciesDto> PoliciesList;
+    private List<PoliciesDto1> PoliciesList;
 
     @Data
     @ToString
-    public static class PoliciesDto {
+    public static class PoliciesDto1 {
         /***/
         @KsYunField(name="description")
         private String Description;

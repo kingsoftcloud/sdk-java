@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname GetEntryRateDataResponse
@@ -14,13 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class GetEntryRateDataResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("EcnEntryRateDataResponse")
-    private EcnEntryRateDataResponseDto EcnEntryRateDataResponse;
 
-    @Data
-    @ToString
-    public static class EcnEntryRateDataResponseDto {
-    }
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

@@ -52,11 +52,12 @@ ebs_mysql 5.6、5.7
     "Description": "db-drds-openapi-2"
 }
 ```*/
-    private ParametersDto ParametersList;
+    @KsYunField(name="Parameters")
+    private ParametersDto1 Parameters;
 
     @Data
     @ToString
-    public static class ParametersDto {
+    public static class ParametersDto1 {
         /**参数名*/
         @KsYunField(name="Name")
         private String Name;

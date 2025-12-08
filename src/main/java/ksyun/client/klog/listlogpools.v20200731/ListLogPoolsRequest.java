@@ -31,11 +31,12 @@ public class ListLogPoolsRequest{
     private Integer Size;
 
     /**需要筛选的标签*/
-    private TagsDto TagsList;
+    @KsYunField(name="Tags")
+    private TagsDto1 Tags;
 
     @Data
     @ToString
-    public static class TagsDto {
+    public static class TagsDto1 {
         /**标签键*/
         @KsYunField(name="Key")
         private String Key;

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DeleteSecurityGroupResponse
@@ -14,37 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DeleteSecurityGroupResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Code")
-    private String Code;
-
-    /**请求状态*/
-    @JsonProperty("Message")
-    private String Message;
-
-    /***/
-    @JsonProperty("Data")
-    private List<DataDto> Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-        /**当前操作的安全组ID*/
-        @JsonProperty("SecurityGroupId")
-        private String SecurityGroupId;
-
-        /**当前安全组删除操作状态*/
-        @JsonProperty("OperStatus")
-        private String OperStatus;
-
-        /**当前操作返回信息*/
-        @JsonProperty("Msg")
-        private String Msg;
-
-    }
+    //返回结果，需要按需扩展
 
 }

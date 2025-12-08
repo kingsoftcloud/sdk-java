@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname GetAccountAllProjectsByParamsResponse
@@ -14,54 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class GetAccountAllProjectsByParamsResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("ListProjectResult")
-    private ListProjectResultDto ListProjectResult;
 
-    @Data
-    @ToString
-    public static class ListProjectResultDto {
-        /***/
-        @JsonProperty("Total")
-        private Integer Total;
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
 
-        /***/
-        @JsonProperty("ProjectList")
-        private List<ListProjectResultDtoProjectListDto> ProjectList;
-
-        @Data
-        @ToString
-        public static class ListProjectResultDtoProjectListDto {
-            /**项目ID*/
-            @JsonProperty("ProjectId")
-            private Integer ProjectId;
-
-            /**主账号ID*/
-            @JsonProperty("AccountId")
-            private String AccountId;
-
-            /**项目名称*/
-            @JsonProperty("ProjectName")
-            private String ProjectName;
-
-            /**项目描述*/
-            @JsonProperty("ProjectDesc")
-            private String ProjectDesc;
-
-            /**项目状态*/
-            @JsonProperty("Status")
-            private Integer Status;
-
-            /**项目krn*/
-            @JsonProperty("Krn")
-            private String Krn;
-
-            /**项目创建时间*/
-            @JsonProperty("CreateTime")
-            private String CreateTime;
-
-        }
-
-    }
+    //返回结果，需要按需扩展
 
 }

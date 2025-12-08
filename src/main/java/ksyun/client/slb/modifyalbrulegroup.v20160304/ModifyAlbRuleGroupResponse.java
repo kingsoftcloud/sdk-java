@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname ModifyAlbRuleGroupResponse
@@ -14,151 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class ModifyAlbRuleGroupResponse extends BaseResponseModel {
-    /**请求ID*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**转发策略的信息*/
-    @JsonProperty("AlbRuleGroup")
-    private AlbRuleGroupDto AlbRuleGroup;
-
-    @Data
-    @ToString
-    public static class AlbRuleGroupDto {
-        /**转发策略的ID*/
-        @JsonProperty("AlbRuleGroupId")
-        private String AlbRuleGroupId;
-
-        /**应用型负载均衡监听器的ID*/
-        @JsonProperty("AlbListenerId")
-        private String AlbListenerId;
-
-        /**转发策略的名称*/
-        @JsonProperty("AlbRuleGroupName")
-        private String AlbRuleGroupName;
-
-        /**后端服务器组的ID*/
-        @JsonProperty("BackendServerGroupId")
-        private String BackendServerGroupId;
-
-        /**规则的信息*/
-        @JsonProperty("AlbRuleSet")
-        private List<AlbRuleGroupDtoAlbRuleSetDto> AlbRuleSet;
-
-        @Data
-        @ToString
-        public static class AlbRuleGroupDtoAlbRuleSetDto {
-            /**匹配规则类型(domain|url|method|sourceIp|header|query|cookie)*/
-            @JsonProperty("AlbRuleType")
-            private String AlbRuleType;
-
-            /**匹配规则的值*/
-            @JsonProperty("AlbRuleValue")
-            private String AlbRuleValue;
-
-            /**HTTP请求方法*/
-            @JsonProperty("MethodValue")
-            private List<String> MethodValue;
-
-            /**SourceIp*/
-            @JsonProperty("SourceIpValue")
-            private List<String> SourceIpValue;
-
-            /**HTTP标头*/
-            @JsonProperty("HeaderValue")
-            private List<AlbRuleGroupDtoAlbRuleSetDtoHeaderValueDto> HeaderValue;
-
-            @Data
-            @ToString
-            public static class AlbRuleGroupDtoAlbRuleSetDtoHeaderValueDto {
-                /**HTTP标头,查询字符串的键值*/
-                @JsonProperty("Key")
-                private String Key;
-
-                /**HTTP标头,查询字符串,Cookie转发条件的value值*/
-                @JsonProperty("Value")
-                private List<String> Value;
-
-            }
-
-            /**查询字符串*/
-            @JsonProperty("QueryValue")
-            private List<AlbRuleGroupDtoAlbRuleSetDtoQueryValueDto> QueryValue;
-
-            @Data
-            @ToString
-            public static class AlbRuleGroupDtoAlbRuleSetDtoQueryValueDto {
-                /**HTTP标头,查询字符串的键值*/
-                @JsonProperty("Key")
-                private String Key;
-
-                /**HTTP标头,查询字符串,Cookie转发条件的value值*/
-                @JsonProperty("Value")
-                private List<String> Value;
-
-            }
-
-            /**Cookie转发条件*/
-            @JsonProperty("CookieValue")
-            private List<AlbRuleGroupDtoAlbRuleSetDtoCookieValueDto> CookieValue;
-
-            @Data
-            @ToString
-            public static class AlbRuleGroupDtoAlbRuleSetDtoCookieValueDto {
-                /**HTTP标头,查询字符串的键值*/
-                @JsonProperty("Key")
-                private String Key;
-
-                /**HTTP标头,查询字符串,Cookie转发条件的value值*/
-                @JsonProperty("Value")
-                private List<String> Value;
-
-            }
-
-        }
-
-        /**重写*/
-        @JsonProperty("RewriteConfig")
-        private AlbRuleGroupDtoRewriteConfigDto RewriteConfig;
-
-        @Data
-        @ToString
-        public static class AlbRuleGroupDtoRewriteConfigDto {
-            /**重写的域名*/
-            @JsonProperty("HttpHost")
-            private String HttpHost;
-
-            /**重写的路经*/
-            @JsonProperty("Url")
-            private String Url;
-
-            /**重写的查询字符串*/
-            @JsonProperty("QueryString")
-            private String QueryString;
-
-        }
-
-        /**返回固定响应信息*/
-        @JsonProperty("FixedResponseConfig")
-        private AlbRuleGroupDtoFixedResponseConfigDto FixedResponseConfig;
-
-        @Data
-        @ToString
-        public static class AlbRuleGroupDtoFixedResponseConfigDto {
-            /**响应正文长度不能超过1000个字符，不支持中文字符*/
-            @JsonProperty("Content")
-            private String Content;
-
-            /**响应正文类型,text/plain|text/css|text/html|application/javascript|application/json*/
-            @JsonProperty("ContentType")
-            private String ContentType;
-
-            /**响应状态码,仅支持2xx、4xx、5xx数字型字符串，x为任意数字*/
-            @JsonProperty("HttpCode")
-            private String HttpCode;
-
-        }
-
-    }
+    //返回结果，需要按需扩展
 
 }

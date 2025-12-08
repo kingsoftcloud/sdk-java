@@ -56,11 +56,11 @@ public class UpdateImageCacheRequest{
 
     /**镜像拉取凭证*/
     @KsYunField(name="ImageRegistryCredential",type=2)
-    private List<ImageRegistryCredentialDto> ImageRegistryCredentialList;
+    private List<ImageRegistryCredentialDto1> ImageRegistryCredentialList;
 
     @Data
     @ToString
-    public static class ImageRegistryCredentialDto {
+    public static class ImageRegistryCredentialDto1 {
         /**仓库Server*/
         @KsYunField(name="Server")
         private String Server;

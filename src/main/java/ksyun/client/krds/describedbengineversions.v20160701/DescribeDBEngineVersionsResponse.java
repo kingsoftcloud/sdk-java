@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeDBEngineVersionsResponse
@@ -14,98 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeDBEngineVersionsResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("Data")
-    private DataDto Data;
 
-    @Data
-    @ToString
-    public static class DataDto {
-        /***/
-        @JsonProperty("Engines")
-        private DataDtoEnginesDto Engines;
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
 
-        @Data
-        @ToString
-        public static class DataDtoEnginesDto {
-            /***/
-            @JsonProperty("MySQL")
-            private List<DataDtoEnginesDtoMySQLDto> MySQL;
-
-            @Data
-            @ToString
-            public static class DataDtoEnginesDtoMySQLDto {
-                /**DBEngineVersions
-*/
-                @JsonProperty("Engine")
-                private String Engine;
-
-                /**DBEngineVersions
-*/
-                @JsonProperty("EngineVersion")
-                private String EngineVersion;
-
-            }
-
-            /***/
-            @JsonProperty("consistent_mysql")
-            private List<DataDtoEnginesDtoConsistent_mysqlDto> Consistent_mysql;
-
-            @Data
-            @ToString
-            public static class DataDtoEnginesDtoConsistent_mysqlDto {
-                /**DBEngineVersions
-*/
-                @JsonProperty("Engine")
-                private String Engine;
-
-                /**DBEngineVersions
-*/
-                @JsonProperty("EngineVersion")
-                private String EngineVersion;
-
-            }
-
-            /***/
-            @JsonProperty("Percona")
-            private List<DataDtoEnginesDtoPerconaDto> Percona;
-
-            @Data
-            @ToString
-            public static class DataDtoEnginesDtoPerconaDto {
-                /**DBEngineVersions
-*/
-                @JsonProperty("Engine")
-                private String Engine;
-
-                /**DBEngineVersions
-*/
-                @JsonProperty("EngineVersion")
-                private String EngineVersion;
-
-            }
-
-            /***/
-            @JsonProperty("ebs_mysql")
-            private List<DataDtoEnginesDtoEbs_mysqlDto> Ebs_mysql;
-
-            @Data
-            @ToString
-            public static class DataDtoEnginesDtoEbs_mysqlDto {
-                /**DBEngineVersions
-*/
-                @JsonProperty("Engine")
-                private String Engine;
-
-                /**DBEngineVersions
-*/
-                @JsonProperty("EngineVersion")
-                private String EngineVersion;
-
-            }
-
-        }
-
-    }
+    //返回结果，需要按需扩展
 
 }

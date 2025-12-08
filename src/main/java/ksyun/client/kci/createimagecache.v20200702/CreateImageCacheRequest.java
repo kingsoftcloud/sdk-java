@@ -41,11 +41,11 @@ public class CreateImageCacheRequest{
 
     /**拉取镜像仓库中私有镜像的凭据，公开镜像无须填写凭据*/
     @KsYunField(name="ImageRegistryCredential",type=2)
-    private List<ImageRegistryCredentialDto> ImageRegistryCredentialList;
+    private List<ImageRegistryCredentialDto1> ImageRegistryCredentialList;
 
     @Data
     @ToString
-    public static class ImageRegistryCredentialDto {
+    public static class ImageRegistryCredentialDto1 {
         /**镜像仓库Server*/
         @KsYunField(name="Server")
         private String Server;

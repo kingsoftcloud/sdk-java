@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname GetAreaIspDataResponse
@@ -14,82 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class GetAreaIspDataResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("StartTime")
-    private String StartTime;
 
-    /***/
-    @JsonProperty("EndTime")
-    private String EndTime;
-
-    /***/
-    @JsonProperty("CdnType")
-    private String CdnType;
-
-    /***/
-    @JsonProperty("Domains")
-    private String Domains;
-
-    /***/
-    @JsonProperty("Datas")
-    private List<DatasDto> Datas;
-
-    @Data
-    @ToString
-    public static class DatasDto {
-        /***/
-        @JsonProperty("Area")
-        private String Area;
-
-        /***/
-        @JsonProperty("Flow")
-        private Integer Flow;
-
-        /***/
-        @JsonProperty("Pv")
-        private Integer Pv;
-
-        /***/
-        @JsonProperty("FlowProportion")
-        private Double FlowProportion;
-
-        /***/
-        @JsonProperty("PvProportion")
-        private Double PvProportion;
-
-        /***/
-        @JsonProperty("Isps")
-        private List<DatasDtoIspsDto> Isps;
-
-        @Data
-        @ToString
-        public static class DatasDtoIspsDto {
-            /***/
-            @JsonProperty("Isp")
-            private String Isp;
-
-            /***/
-            @JsonProperty("Flow")
-            private Integer Flow;
-
-            /***/
-            @JsonProperty("Pv")
-            private Integer Pv;
-
-            /***/
-            @JsonProperty("FlowProportion")
-            private Double FlowProportion;
-
-            /***/
-            @JsonProperty("PvProportion")
-            private Double PvProportion;
-
-        }
-
-    }
-
-    /***/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

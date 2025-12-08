@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname ListRecycledInstanceResponse
@@ -14,32 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class ListRecycledInstanceResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("Code")
-    private String Code;
-
-    /***/
-    @JsonProperty("Message")
-    private String Message;
-
-    /***/
-    @JsonProperty("Offset")
-    private Integer Offset;
-
-    /***/
-    @JsonProperty("Limit")
-    private Integer Limit;
-
-    /***/
-    @JsonProperty("Total")
-    private Integer Total;
-
-    /***/
-    @JsonProperty("Data")
-    private List<String> Data;
+    //返回结果，需要按需扩展
 
 }

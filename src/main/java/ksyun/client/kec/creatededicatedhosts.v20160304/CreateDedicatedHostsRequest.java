@@ -44,11 +44,11 @@ public class CreateDedicatedHostsRequest{
 
     /**创建的专属宿主机的标签键，N取值范围1~10。若填写了Tag.N.Value，Tag.N.Key为必填，且两个参数的N值需保持一致*/
     @KsYunField(name="Tag",type=2)
-    private List<TagDto> TagList;
+    private List<TagDto1> TagList;
 
     @Data
     @ToString
-    public static class TagDto {
+    public static class TagDto1 {
         /**创建的专属宿主机的标签键，N取值范围1~10。若填写了Tag.N.Value，Tag.N.Key为必填，且两个参数的N值需保持一致*/
         @KsYunField(name="Key")
         private String Key;

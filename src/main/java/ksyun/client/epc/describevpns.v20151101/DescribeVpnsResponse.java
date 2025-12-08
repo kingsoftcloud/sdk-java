@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeVpnsResponse
@@ -14,16 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeVpnsResponse extends BaseResponseModel {
-    /**请求ID*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**连接带外的用户名称*/
-    @JsonProperty("UserName")
-    private String UserName;
-
-    /**链接带外的密码，10分钟有效*/
-    @JsonProperty("Password")
-    private String Password;
+    //返回结果，需要按需扩展
 
 }

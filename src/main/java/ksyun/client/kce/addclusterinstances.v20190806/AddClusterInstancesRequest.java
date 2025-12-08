@@ -20,11 +20,11 @@ public class AddClusterInstancesRequest{
 
     /**建议仅填写一条InstanceSet数据，不要填写多条。*/
     @KsYunField(name="InstanceSet",type=2)
-    private List<InstanceSetDto> InstanceSetList;
+    private List<InstanceSetDto1> InstanceSetList;
 
     @Data
     @ToString
-    public static class InstanceSetDto {
+    public static class InstanceSetDto1 {
         /**节点角色,有效值：Worker*/
         @KsYunField(name="NodeRole")
         private String NodeRole;
@@ -35,17 +35,19 @@ public class AddClusterInstancesRequest{
         private List<String> NodeParaList;
 
         /**节点高级设置*/
-        private InstanceSetDtoAdvancedSettingDto AdvancedSettingList;
+        @KsYunField(name="AdvancedSetting")
+        private AdvancedSettingDto2 AdvancedSetting;
 
         @Data
         @ToString
-        public static class InstanceSetDtoAdvancedSettingDto {
+        public static class AdvancedSettingDto2 {
             /**数据盘挂载设置，仅针对于第一块数据盘生效*/
-            private InstanceSetDtoAdvancedSettingDtoDataDiskDto DataDiskList;
+            @KsYunField(name="DataDisk")
+            private DataDiskDto3 DataDisk;
 
             @Data
             @ToString
-            public static class InstanceSetDtoAdvancedSettingDtoDataDiskDto {
+            public static class DataDiskDto3 {
                 /**是否对数据盘格式化并挂载，默认值；true。若此字段填写false，则 FileSystem 和 MountTarget字段不生效*/
                 @KsYunField(name="AutoFormatAndMount")
                 private Boolean AutoFormatAndMount;
@@ -88,11 +90,11 @@ Kubernetes版本≥1.24时，有效值：
 
             /**节点加入集群时预置的标签*/
             @KsYunField(name="Label",type=2)
-            private List<InstanceSetDtoAdvancedSettingDtoLabelDto> LabelList;
+            private List<LabelDto4> LabelList;
 
             @Data
             @ToString
-            public static class InstanceSetDtoAdvancedSettingDtoLabelDto {
+            public static class LabelDto4 {
                 /**标签键，校验规则：不超过63个字符，只能包含字母、数字及分隔符("-"、"_"、"."、"/")，且必须以字母、数字开头和结尾*/
                 @KsYunField(name="Key")
                 private String Key;
@@ -104,18 +106,19 @@ Kubernetes版本≥1.24时，有效值：
             }
 
             /**自定义节点上k8s组件的参数*/
-            private InstanceSetDtoAdvancedSettingDtoExtraArgDto ExtraArgList;
+            @KsYunField(name="ExtraArg")
+            private ExtraArgDto5 ExtraArg;
 
             @Data
             @ToString
-            public static class InstanceSetDtoAdvancedSettingDtoExtraArgDto {
+            public static class ExtraArgDto5 {
                 /**用户自定义kubelet的参数*/
                 @KsYunField(name="Kubelet",type=2)
-                private List<InstanceSetDtoAdvancedSettingDtoExtraArgDtoKubeletDto> KubeletList;
+                private List<KubeletDto6> KubeletList;
 
                 @Data
                 @ToString
-                public static class InstanceSetDtoAdvancedSettingDtoExtraArgDtoKubeletDto {
+                public static class KubeletDto6 {
                     /**用户自定义kubelet的参数，格式k1=v1，如： --feature-gates=EphemeralContainers=true*/
                     @KsYunField(name="CustomArg")
                     private String CustomArg;
@@ -134,11 +137,11 @@ Kubernetes版本≥1.24时，有效值：
 
             /**节点加入集群时预置污点，匹配污点容忍进行调度*/
             @KsYunField(name="Taints",type=2)
-            private List<InstanceSetDtoAdvancedSettingDtoTaintsDto> TaintsList;
+            private List<TaintsDto7> TaintsList;
 
             @Data
             @ToString
-            public static class InstanceSetDtoAdvancedSettingDtoTaintsDto {
+            public static class TaintsDto7 {
                 /**污点名称，校验规则：不超过253个字符，只能包含字母、数字及分隔符("-"、"_"、"."、"/")，且必须以字母、数字开头和结尾*/
                 @KsYunField(name="Key")
                 private String Key;

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeImportFileResponse
@@ -14,46 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeImportFileResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("Data")
-    private DataDto Data;
 
-    @Data
-    @ToString
-    public static class DataDto {
-        /**导入文件详情*/
-        @JsonProperty("ImportFile")
-        private List<DataDtoImportFileDto> ImportFile;
-
-        @Data
-        @ToString
-        public static class DataDtoImportFileDto {
-            /**导入文件名称*/
-            @JsonProperty("ImportFileName")
-            private String ImportFileName;
-
-            /**导入文件大小。默认单位：B*/
-            @JsonProperty("ImportFileSize")
-            private Integer ImportFileSize;
-
-            /**开始时间*/
-            @JsonProperty("StartTime")
-            private String StartTime;
-
-            /**结束时间*/
-            @JsonProperty("EndTime")
-            private String EndTime;
-
-            /**备份类型  FULL 全量*/
-            @JsonProperty("ImportFileType")
-            private String ImportFileType;
-
-        }
-
-    }
-
-    /***/
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
+
+    //返回结果，需要按需扩展
 
 }

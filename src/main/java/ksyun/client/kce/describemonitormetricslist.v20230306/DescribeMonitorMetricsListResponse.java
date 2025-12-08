@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeMonitorMetricsListResponse
@@ -14,25 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeMonitorMetricsListResponse extends BaseResponseModel {
-    /**请求id*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**分页标识*/
-    @JsonProperty("Marker")
-    private Integer Marker;
-
-    /**指标数量*/
-    @JsonProperty("TotalCount")
-    private Integer TotalCount;
-
-    /**指标列表*/
-    @JsonProperty("MetricsSet")
-    private List<MetricsSetDto> MetricsSet;
-
-    @Data
-    @ToString
-    public static class MetricsSetDto {
-    }
+    //返回结果，需要按需扩展
 
 }

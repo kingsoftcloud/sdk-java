@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeAgentStatusResponse
@@ -14,23 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeAgentStatusResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**agent状态-有效值：
-Pending-关联中
-Healthy-正常
-Unhealthy-异常
-Failed-关联失败
-Terminating-解除关联中
-Deleted-已解除关联
-Unknown-未知*/
-    @JsonProperty("AgentsStatus")
-    private String AgentsStatus;
-
-    /***/
-    @JsonProperty("Message")
-    private String Message;
+    //返回结果，需要按需扩展
 
 }

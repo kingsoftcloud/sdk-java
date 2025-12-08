@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname CreateAccessControlRuleResponse
@@ -14,65 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class CreateAccessControlRuleResponse extends BaseResponseModel {
-    /***/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /***/
-    @JsonProperty("AccessControlRule")
-    private AccessControlRuleDto AccessControlRule;
-
-    @Data
-    @ToString
-    public static class AccessControlRuleDto {
-        /***/
-        @JsonProperty("RuleType")
-        private String RuleType;
-
-        /***/
-        @JsonProperty("MatchRule")
-        private Integer MatchRule;
-
-        /***/
-        @JsonProperty("ArgName")
-        private String ArgName;
-
-        /***/
-        @JsonProperty("RuleData")
-        private String RuleData;
-
-        /***/
-        @JsonProperty("Status")
-        private Boolean Status;
-
-        /***/
-        @JsonProperty("Priority")
-        private Integer Priority;
-
-        /***/
-        @JsonProperty("RuleAction")
-        private Integer RuleAction;
-
-        /***/
-        @JsonProperty("MatchRuleInfo")
-        private String MatchRuleInfo;
-
-        /***/
-        @JsonProperty("Level")
-        private Integer Level;
-
-        /***/
-        @JsonProperty("ResourceRecordId")
-        private String ResourceRecordId;
-
-        /***/
-        @JsonProperty("RuleName")
-        private String RuleName;
-
-        /***/
-        @JsonProperty("RuleId")
-        private String RuleId;
-
-    }
+    //返回结果，需要按需扩展
 
 }

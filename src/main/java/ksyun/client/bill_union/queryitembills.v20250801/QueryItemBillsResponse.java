@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname QueryItemBillsResponse
@@ -14,17 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class QueryItemBillsResponse extends BaseResponseModel {
-    /**requestId*/
+
+    /**
+     * 请求id
+     */
     @JsonProperty("RequestId")
-    private String RequestId;
+    private String requestId;
 
-    /**响应数据结构体*/
-    @JsonProperty("Data")
-    private DataDto Data;
-
-    @Data
-    @ToString
-    public static class DataDto {
-    }
+    //返回结果，需要按需扩展
 
 }

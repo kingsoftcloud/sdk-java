@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Set;
 
 /**
 * @Classname DescribeMountTargetsResponse
@@ -14,63 +14,13 @@ import java.util.List;
 @Data
 @ToString
 public class DescribeMountTargetsResponse extends BaseResponseModel {
-    /***/
-    @JsonProperty("DescribeMountTargetsResponse")
-    private DescribeMountTargetsResponseDto DescribeMountTargetsResponse;
 
-    @Data
-    @ToString
-    public static class DescribeMountTargetsResponseDto {
-        /***/
-        @JsonProperty("RequestId")
-        private String RequestId;
+    /**
+     * 请求id
+     */
+    @JsonProperty("RequestId")
+    private String requestId;
 
-        /***/
-        @JsonProperty("Marker")
-        private String Marker;
-
-        /***/
-        @JsonProperty("FileSystemCount")
-        private String FileSystemCount;
-
-        /***/
-        @JsonProperty("MountTargets")
-        private DescribeMountTargetsResponseDtoMountTargetsDto MountTargets;
-
-        @Data
-        @ToString
-        public static class DescribeMountTargetsResponseDtoMountTargetsDto {
-            /***/
-            @JsonProperty("Item")
-            private DescribeMountTargetsResponseDtoMountTargetsDtoItemDto Item;
-
-            @Data
-            @ToString
-            public static class DescribeMountTargetsResponseDtoMountTargetsDtoItemDto {
-                /***/
-                @JsonProperty("MountTargetId")
-                private String MountTargetId;
-
-                /***/
-                @JsonProperty("SubnetId")
-                private String SubnetId;
-
-                /***/
-                @JsonProperty("IpAddress")
-                private String IpAddress;
-
-                /***/
-                @JsonProperty("MountTargetState")
-                private String MountTargetState;
-
-                /***/
-                @JsonProperty("CreationDate")
-                private String CreationDate;
-
-            }
-
-        }
-
-    }
+    //返回结果，需要按需扩展
 
 }

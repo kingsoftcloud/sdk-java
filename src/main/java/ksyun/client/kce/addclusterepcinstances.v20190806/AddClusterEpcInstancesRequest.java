@@ -29,11 +29,12 @@ public class AddClusterEpcInstancesRequest{
     private List<String> EpcParaList;
 
     /**节点高级设置*/
-    private AdvancedSettingDto AdvancedSettingList;
+    @KsYunField(name="AdvancedSetting")
+    private AdvancedSettingDto1 AdvancedSetting;
 
     @Data
     @ToString
-    public static class AdvancedSettingDto {
+    public static class AdvancedSettingDto1 {
         /**容器运行时，根据集群版本和需求选择
 Kubernetes版本＜1.24时，有效值：
 - docker
@@ -64,11 +65,11 @@ Kubernetes版本≥1.24时，有效值：
 
         /**节点加入集群时预置的标签*/
         @KsYunField(name="Label",type=2)
-        private List<AdvancedSettingDtoLabelDto> LabelList;
+        private List<LabelDto2> LabelList;
 
         @Data
         @ToString
-        public static class AdvancedSettingDtoLabelDto {
+        public static class LabelDto2 {
             /**标签键，校验规则：不超过63个字符，只能包含字母、数字及分隔符("-"、"_"、"."、"/")，且必须以字母、数字开头和结尾*/
             @KsYunField(name="Key")
             private String Key;
@@ -80,18 +81,19 @@ Kubernetes版本≥1.24时，有效值：
         }
 
         /**自定义节点上k8s组件的参数*/
-        private AdvancedSettingDtoExtraArgDto ExtraArgList;
+        @KsYunField(name="ExtraArg")
+        private ExtraArgDto3 ExtraArg;
 
         @Data
         @ToString
-        public static class AdvancedSettingDtoExtraArgDto {
+        public static class ExtraArgDto3 {
             /**用户自定义kubelet的参数*/
             @KsYunField(name="Kubelet",type=2)
-            private List<AdvancedSettingDtoExtraArgDtoKubeletDto> KubeletList;
+            private List<KubeletDto4> KubeletList;
 
             @Data
             @ToString
-            public static class AdvancedSettingDtoExtraArgDtoKubeletDto {
+            public static class KubeletDto4 {
                 /**用户自定义kubelet的参数，格式k1=v1，如： --feature-gates=EphemeralContainers=true*/
                 @KsYunField(name="CustomArg")
                 private String CustomArg;
@@ -110,11 +112,11 @@ Kubernetes版本≥1.24时，有效值：
 
         /**节点加入集群时预置污点，匹配污点容忍进行调度*/
         @KsYunField(name="Taints",type=2)
-        private List<AdvancedSettingDtoTaintsDto> TaintsList;
+        private List<TaintsDto5> TaintsList;
 
         @Data
         @ToString
-        public static class AdvancedSettingDtoTaintsDto {
+        public static class TaintsDto5 {
             /**污点名称，校验规则：不超过253个字符，只能包含字母、数字及分隔符("-"、"_"、"."、"/")，且必须以字母、数字开头和结尾*/
             @KsYunField(name="Key")
             private String Key;
