@@ -63,11 +63,11 @@ public class GetServerDataResponse extends BaseResponseModel {
     public static class DatasDto {
         /***/
         @JsonProperty("Condition")
-        private ConditionDto Condition;
+        private DatasDtoConditionDto Condition;
 
         @Data
         @ToString
-        public static class ConditionDto {
+        public static class DatasDtoConditionDto {
             /***/
             @JsonProperty("DataType")
             private String DataType;
@@ -76,11 +76,11 @@ public class GetServerDataResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Data")
-        private List<DataDto> Data;
+        private List<DatasDtoDataDto> Data;
 
         @Data
         @ToString
-        public static class DataDto {
+        public static class DatasDtoDataDto {
             /***/
             @JsonProperty("Time")
             private String Time;

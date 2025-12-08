@@ -51,11 +51,11 @@ public class DescribeInstanceTypeConfigsResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("NetworkInterfaceQuota")
-        private NetworkInterfaceQuotaDto NetworkInterfaceQuota;
+        private InstanceTypeConfigSetDtoNetworkInterfaceQuotaDto NetworkInterfaceQuota;
 
         @Data
         @ToString
-        public static class NetworkInterfaceQuotaDto {
+        public static class InstanceTypeConfigSetDtoNetworkInterfaceQuotaDto {
             /***/
             @JsonProperty("NetworkInterfaceCount")
             private Integer NetworkInterfaceCount;
@@ -64,11 +64,11 @@ public class DescribeInstanceTypeConfigsResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("PrivateIpQuota")
-        private PrivateIpQuotaDto PrivateIpQuota;
+        private InstanceTypeConfigSetDtoPrivateIpQuotaDto PrivateIpQuota;
 
         @Data
         @ToString
-        public static class PrivateIpQuotaDto {
+        public static class InstanceTypeConfigSetDtoPrivateIpQuotaDto {
             /***/
             @JsonProperty("PrivateIpCount")
             private Integer PrivateIpCount;
@@ -77,11 +77,11 @@ public class DescribeInstanceTypeConfigsResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("AvailabilityZoneSet")
-        private List<AvailabilityZoneSetDto> AvailabilityZoneSet;
+        private List<InstanceTypeConfigSetDtoAvailabilityZoneSetDto> AvailabilityZoneSet;
 
         @Data
         @ToString
-        public static class AvailabilityZoneSetDto {
+        public static class InstanceTypeConfigSetDtoAvailabilityZoneSetDto {
             /***/
             @JsonProperty("AzCode")
             private String AzCode;
@@ -90,11 +90,11 @@ public class DescribeInstanceTypeConfigsResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("SystemDiskQuotaSet")
-        private List<SystemDiskQuotaSetDto> SystemDiskQuotaSet;
+        private List<InstanceTypeConfigSetDtoSystemDiskQuotaSetDto> SystemDiskQuotaSet;
 
         @Data
         @ToString
-        public static class SystemDiskQuotaSetDto {
+        public static class InstanceTypeConfigSetDtoSystemDiskQuotaSetDto {
             /***/
             @JsonProperty("SystemDiskType")
             private String SystemDiskType;
@@ -103,11 +103,11 @@ public class DescribeInstanceTypeConfigsResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("DataDiskQuotaSet")
-        private List<DataDiskQuotaSetDto> DataDiskQuotaSet;
+        private List<InstanceTypeConfigSetDtoDataDiskQuotaSetDto> DataDiskQuotaSet;
 
         @Data
         @ToString
-        public static class DataDiskQuotaSetDto {
+        public static class InstanceTypeConfigSetDtoDataDiskQuotaSetDto {
             /***/
             @JsonProperty("DataDiskType")
             private String DataDiskType;
@@ -126,11 +126,11 @@ public class DescribeInstanceTypeConfigsResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("AvailabilityZoneSet")
-            private List<AvailabilityZoneSetDto> AvailabilityZoneSet;
+            private List<InstanceTypeConfigSetDtoDataDiskQuotaSetDtoAvailabilityZoneSetDto> AvailabilityZoneSet;
 
             @Data
             @ToString
-            public static class AvailabilityZoneSetDto {
+            public static class InstanceTypeConfigSetDtoDataDiskQuotaSetDtoAvailabilityZoneSetDto {
                 /***/
                 @JsonProperty("AzCode")
                 private String AzCode;

@@ -23,18 +23,18 @@ public class DescribeDBInstancesResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("Instances")
-        private List<InstancesDto> Instances;
+        private List<DataDtoInstancesDto> Instances;
 
         @Data
         @ToString
-        public static class InstancesDto {
+        public static class DataDtoInstancesDto {
             /**实例配置详情*/
             @JsonProperty("DBInstanceClass")
-            private DBInstanceClassDto DBInstanceClass;
+            private DataDtoInstancesDtoDBInstanceClassDto DBInstanceClass;
 
             @Data
             @ToString
-            public static class DBInstanceClassDto {
+            public static class DataDtoInstancesDtoDBInstanceClassDto {
                 /**配置加密字符串-FlavorId*/
                 @JsonProperty("Id")
                 private String Id;

@@ -23,11 +23,11 @@ public class GetPolicyResponse extends BaseResponseModel {
     public static class GetPolicyResultDto {
         /***/
         @JsonProperty("Policy")
-        private PolicyDto Policy;
+        private GetPolicyResultDtoPolicyDto Policy;
 
         @Data
         @ToString
-        public static class PolicyDto {
+        public static class GetPolicyResultDtoPolicyDto {
             /***/
             @JsonProperty("CreateDate")
             private String CreateDate;

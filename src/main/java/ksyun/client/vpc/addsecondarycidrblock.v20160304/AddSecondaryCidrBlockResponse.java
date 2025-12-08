@@ -55,11 +55,11 @@ public class AddSecondaryCidrBlockResponse extends BaseResponseModel {
 
         /**Vpc Ipv6的网络范围列表*/
         @JsonProperty("Ipv6CidrBlockAssociationSet")
-        private List<Ipv6CidrBlockAssociationSetDto> Ipv6CidrBlockAssociationSet;
+        private List<VpcDtoIpv6CidrBlockAssociationSetDto> Ipv6CidrBlockAssociationSet;
 
         @Data
         @ToString
-        public static class Ipv6CidrBlockAssociationSetDto {
+        public static class VpcDtoIpv6CidrBlockAssociationSetDto {
             /**Vpc Ipv6的网络范围*/
             @JsonProperty("Ipv6CidrBlock")
             private String Ipv6CidrBlock;
@@ -68,11 +68,11 @@ public class AddSecondaryCidrBlockResponse extends BaseResponseModel {
 
         /**附加网段列表*/
         @JsonProperty("SecondaryCidrSet")
-        private List<SecondaryCidrSetDto> SecondaryCidrSet;
+        private List<VpcDtoSecondaryCidrSetDto> SecondaryCidrSet;
 
         @Data
         @ToString
-        public static class SecondaryCidrSetDto {
+        public static class VpcDtoSecondaryCidrSetDto {
             /**附加网段ID*/
             @JsonProperty("SecondaryCidrId")
             private String SecondaryCidrId;

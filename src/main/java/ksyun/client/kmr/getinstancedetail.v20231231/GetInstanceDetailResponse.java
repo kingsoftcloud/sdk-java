@@ -111,11 +111,11 @@ public class GetInstanceDetailResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("InstanceInfo")
-        private InstanceInfoDto InstanceInfo;
+        private DataDtoInstanceInfoDto InstanceInfo;
 
         @Data
         @ToString
-        public static class InstanceInfoDto {
+        public static class DataDtoInstanceInfoDto {
             /**运行模式*/
             @JsonProperty("RunMode")
             private String RunMode;
@@ -134,11 +134,11 @@ public class GetInstanceDetailResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("FeEndpoints")
-            private FeEndpointsDto FeEndpoints;
+            private DataDtoInstanceInfoDtoFeEndpointsDto FeEndpoints;
 
             @Data
             @ToString
-            public static class FeEndpointsDto {
+            public static class DataDtoInstanceInfoDtoFeEndpointsDto {
                 /**前端查询端口*/
                 @JsonProperty("FeQueryPort")
                 private Integer FeQueryPort;
@@ -163,11 +163,11 @@ public class GetInstanceDetailResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("CnEndpoints")
-            private CnEndpointsDto CnEndpoints;
+            private DataDtoInstanceInfoDtoCnEndpointsDto CnEndpoints;
 
             @Data
             @ToString
-            public static class CnEndpointsDto {
+            public static class DataDtoInstanceInfoDtoCnEndpointsDto {
                 /**计算节点HTTP端口*/
                 @JsonProperty("CnHttpPort")
                 private Integer CnHttpPort;
@@ -184,11 +184,11 @@ public class GetInstanceDetailResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("FeResourceSpec")
-            private FeResourceSpecDto FeResourceSpec;
+            private DataDtoInstanceInfoDtoFeResourceSpecDto FeResourceSpec;
 
             @Data
             @ToString
-            public static class FeResourceSpecDto {
+            public static class DataDtoInstanceInfoDtoFeResourceSpecDto {
                 /**前端初始卷大小 单位GB*/
                 @JsonProperty("InitVolumeSize")
                 private Integer InitVolumeSize;
@@ -217,11 +217,11 @@ public class GetInstanceDetailResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("CnResourceSpec")
-            private CnResourceSpecDto CnResourceSpec;
+            private DataDtoInstanceInfoDtoCnResourceSpecDto CnResourceSpec;
 
             @Data
             @ToString
-            public static class CnResourceSpecDto {
+            public static class DataDtoInstanceInfoDtoCnResourceSpecDto {
                 /**计算节点初始卷大小 单位GB*/
                 @JsonProperty("InitVolumeSize")
                 private Integer InitVolumeSize;
@@ -250,11 +250,11 @@ public class GetInstanceDetailResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("KS3Spec")
-            private KS3SpecDto KS3Spec;
+            private DataDtoInstanceInfoDtoKS3SpecDto KS3Spec;
 
             @Data
             @ToString
-            public static class KS3SpecDto {
+            public static class DataDtoInstanceInfoDtoKS3SpecDto {
                 /**KS3桶名称*/
                 @JsonProperty("Bucket")
                 private String Bucket;
@@ -267,11 +267,11 @@ public class GetInstanceDetailResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("ManagerAccessSpec")
-            private ManagerAccessSpecDto ManagerAccessSpec;
+            private DataDtoInstanceInfoDtoManagerAccessSpecDto ManagerAccessSpec;
 
             @Data
             @ToString
-            public static class ManagerAccessSpecDto {
+            public static class DataDtoInstanceInfoDtoManagerAccessSpecDto {
                 /**管理员Web地址*/
                 @JsonProperty("ManagerWebAddr")
                 private String ManagerWebAddr;

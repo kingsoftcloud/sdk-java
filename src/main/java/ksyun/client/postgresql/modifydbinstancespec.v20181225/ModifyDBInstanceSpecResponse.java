@@ -23,18 +23,18 @@ public class ModifyDBInstanceSpecResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("Instances")
-        private List<InstancesDto> Instances;
+        private List<DataDtoInstancesDto> Instances;
 
         @Data
         @ToString
-        public static class InstancesDto {
+        public static class DataDtoInstancesDto {
             /***/
             @JsonProperty("DBInstanceClass")
-            private DBInstanceClassDto DBInstanceClass;
+            private DataDtoInstancesDtoDBInstanceClassDto DBInstanceClass;
 
             @Data
             @ToString
-            public static class DBInstanceClassDto {
+            public static class DataDtoInstancesDtoDBInstanceClassDto {
                 /***/
                 @JsonProperty("Id")
                 private String Id;
@@ -159,11 +159,11 @@ public class ModifyDBInstanceSpecResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("AvailabilityZoneList")
-            private List<AvailabilityZoneListDto> AvailabilityZoneList;
+            private List<DataDtoInstancesDtoAvailabilityZoneListDto> AvailabilityZoneList;
 
             @Data
             @ToString
-            public static class AvailabilityZoneListDto {
+            public static class DataDtoInstancesDtoAvailabilityZoneListDto {
                 /***/
                 @JsonProperty("MemberType")
                 private String MemberType;
@@ -220,11 +220,11 @@ public class ModifyDBInstanceSpecResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("SecurityGroups")
-            private List<SecurityGroupsDto> SecurityGroups;
+            private List<DataDtoInstancesDtoSecurityGroupsDto> SecurityGroups;
 
             @Data
             @ToString
-            public static class SecurityGroupsDto {
+            public static class DataDtoInstancesDtoSecurityGroupsDto {
                 /***/
                 @JsonProperty("SecurityGroupId")
                 private String SecurityGroupId;

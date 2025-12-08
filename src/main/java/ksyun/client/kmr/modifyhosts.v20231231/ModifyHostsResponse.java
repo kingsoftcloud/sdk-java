@@ -39,11 +39,11 @@ public class ModifyHostsResponse extends BaseResponseModel {
 
         /**Data*/
         @JsonProperty("Data")
-        private DataDto Data;
+        private DataDtoDataDto Data;
 
         @Data
         @ToString
-        public static class DataDto {
+        public static class DataDtoDataDto {
         }
 
     }

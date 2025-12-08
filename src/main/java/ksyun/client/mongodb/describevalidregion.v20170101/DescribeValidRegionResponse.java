@@ -27,11 +27,11 @@ public class DescribeValidRegionResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("regionList")
-        private List<RegionListDto> RegionList;
+        private List<DataDtoRegionListDto> RegionList;
 
         @Data
         @ToString
-        public static class RegionListDto {
+        public static class DataDtoRegionListDto {
             /***/
             @JsonProperty("areaEnName")
             private String AreaEnName;
@@ -58,11 +58,11 @@ public class DescribeValidRegionResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("azList")
-            private List<AzListDto> AzList;
+            private List<DataDtoRegionListDtoAzListDto> AzList;
 
             @Data
             @ToString
-            public static class AzListDto {
+            public static class DataDtoRegionListDtoAzListDto {
                 /***/
                 @JsonProperty("azName")
                 private String AzName;

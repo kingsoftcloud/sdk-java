@@ -23,11 +23,11 @@ public class GetProjectInstanceListNewResponse extends BaseResponseModel {
     public static class ListInstanceResultDto {
         /***/
         @JsonProperty("Items")
-        private List<ItemsDto> Items;
+        private List<ListInstanceResultDtoItemsDto> Items;
 
         @Data
         @ToString
-        public static class ItemsDto {
+        public static class ListInstanceResultDtoItemsDto {
             /**项目ID
 
 示例值：0*/

@@ -23,18 +23,18 @@ public class ListAttachedUserPoliciesResponse extends BaseResponseModel {
     public static class ListAttachedUserPoliciesResultDto {
         /***/
         @JsonProperty("AttachedPolicies")
-        private AttachedPoliciesDto AttachedPolicies;
+        private ListAttachedUserPoliciesResultDtoAttachedPoliciesDto AttachedPolicies;
 
         @Data
         @ToString
-        public static class AttachedPoliciesDto {
+        public static class ListAttachedUserPoliciesResultDtoAttachedPoliciesDto {
             /***/
             @JsonProperty("member")
-            private List<MemberDto> Member;
+            private List<ListAttachedUserPoliciesResultDtoAttachedPoliciesDtoMemberDto> Member;
 
             @Data
             @ToString
-            public static class MemberDto {
+            public static class ListAttachedUserPoliciesResultDtoAttachedPoliciesDtoMemberDto {
                 /***/
                 @JsonProperty("PolicyKrn")
                 private String PolicyKrn;

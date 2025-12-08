@@ -64,11 +64,11 @@ public class ListLogPoolsResponse extends BaseResponseModel {
 
         /**需要过滤的标签列表*/
         @JsonProperty("Tags")
-        private List<TagsDto> Tags;
+        private List<LogPoolsDtoTagsDto> Tags;
 
         @Data
         @ToString
-        public static class TagsDto {
+        public static class LogPoolsDtoTagsDto {
             /**标签ID*/
             @JsonProperty("Id")
             private Integer Id;

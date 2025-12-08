@@ -24,18 +24,18 @@ public class RebootDBInstanceResponse extends BaseResponseModel {
         /**RDS实例信息
 */
         @JsonProperty("DBInstance")
-        private DBInstanceDto DBInstance;
+        private DataDtoDBInstanceDto DBInstance;
 
         @Data
         @ToString
-        public static class DBInstanceDto {
+        public static class DataDtoDBInstanceDto {
             /***/
             @JsonProperty("DBInstanceClass")
-            private DBInstanceClassDto DBInstanceClass;
+            private DataDtoDBInstanceDtoDBInstanceClassDto DBInstanceClass;
 
             @Data
             @ToString
-            public static class DBInstanceClassDto {
+            public static class DataDtoDBInstanceDtoDBInstanceClassDto {
                 /**请求ID
  */
                 @JsonProperty("Id")
@@ -163,11 +163,11 @@ public class RebootDBInstanceResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("AvailabilityZoneList")
-            private List<AvailabilityZoneListDto> AvailabilityZoneList;
+            private List<DataDtoDBInstanceDtoAvailabilityZoneListDto> AvailabilityZoneList;
 
             @Data
             @ToString
-            public static class AvailabilityZoneListDto {
+            public static class DataDtoDBInstanceDtoAvailabilityZoneListDto {
                 /***/
                 @JsonProperty("MemberType")
                 private String MemberType;
@@ -200,11 +200,11 @@ public class RebootDBInstanceResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("ReadReplicaDBInstanceIdentifiers")
-            private ReadReplicaDBInstanceIdentifiersDto ReadReplicaDBInstanceIdentifiers;
+            private DataDtoDBInstanceDtoReadReplicaDBInstanceIdentifiersDto ReadReplicaDBInstanceIdentifiers;
 
             @Data
             @ToString
-            public static class ReadReplicaDBInstanceIdentifiersDto {
+            public static class DataDtoDBInstanceDtoReadReplicaDBInstanceIdentifiersDto {
             }
 
             /***/
@@ -237,11 +237,11 @@ public class RebootDBInstanceResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("SecurityGroups")
-            private SecurityGroupsDto SecurityGroups;
+            private DataDtoDBInstanceDtoSecurityGroupsDto SecurityGroups;
 
             @Data
             @ToString
-            public static class SecurityGroupsDto {
+            public static class DataDtoDBInstanceDtoSecurityGroupsDto {
             }
 
             /***/

@@ -23,11 +23,11 @@ public class GetRoleResponse extends BaseResponseModel {
     public static class GetRoleResultDto {
         /***/
         @JsonProperty("Role")
-        private RoleDto Role;
+        private GetRoleResultDtoRoleDto Role;
 
         @Data
         @ToString
-        public static class RoleDto {
+        public static class GetRoleResultDtoRoleDto {
             /**角色id*/
             @JsonProperty("Id")
             private Integer Id;

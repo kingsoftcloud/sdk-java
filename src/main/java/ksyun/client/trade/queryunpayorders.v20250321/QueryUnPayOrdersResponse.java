@@ -49,11 +49,11 @@ public class QueryUnPayOrdersResponse extends BaseResponseModel {
 
         /**订单详情列表*/
         @JsonProperty("orderList")
-        private List<OrderListDto> OrderList;
+        private List<DataDtoOrderListDto> OrderList;
 
         @Data
         @ToString
-        public static class OrderListDto {
+        public static class DataDtoOrderListDto {
             /**计费方式ID*/
             @JsonProperty("billType")
             private Integer BillType;
@@ -92,11 +92,11 @@ public class QueryUnPayOrdersResponse extends BaseResponseModel {
 
             /**配置详情*/
             @JsonProperty("productItems")
-            private List<ProductItemsDto> ProductItems;
+            private List<DataDtoOrderListDtoProductItemsDto> ProductItems;
 
             @Data
             @ToString
-            public static class ProductItemsDto {
+            public static class DataDtoOrderListDtoProductItemsDto {
                 /***/
                 @JsonProperty("key")
                 private String Key;
@@ -117,11 +117,11 @@ public class QueryUnPayOrdersResponse extends BaseResponseModel {
 
             /**促销详情*/
             @JsonProperty("promotionItem")
-            private PromotionItemDto PromotionItem;
+            private DataDtoOrderListDtoPromotionItemDto PromotionItem;
 
             @Data
             @ToString
-            public static class PromotionItemDto {
+            public static class DataDtoOrderListDtoPromotionItemDto {
                 /**活动名称*/
                 @JsonProperty("name")
                 private String Name;

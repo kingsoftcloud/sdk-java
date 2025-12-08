@@ -27,11 +27,11 @@ public class InstanceStatisticsResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("TypeStatistic")
-        private List<TypeStatisticDto> TypeStatistic;
+        private List<DataDtoTypeStatisticDto> TypeStatistic;
 
         @Data
         @ToString
-        public static class TypeStatisticDto {
+        public static class DataDtoTypeStatisticDto {
             /***/
             @JsonProperty("Count")
             private Integer Count;
@@ -48,11 +48,11 @@ public class InstanceStatisticsResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("RegionStatistic")
-        private List<RegionStatisticDto> RegionStatistic;
+        private List<DataDtoRegionStatisticDto> RegionStatistic;
 
         @Data
         @ToString
-        public static class RegionStatisticDto {
+        public static class DataDtoRegionStatisticDto {
             /***/
             @JsonProperty("Count")
             private Integer Count;
@@ -69,11 +69,11 @@ public class InstanceStatisticsResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("SourceStatistic")
-        private List<SourceStatisticDto> SourceStatistic;
+        private List<DataDtoSourceStatisticDto> SourceStatistic;
 
         @Data
         @ToString
-        public static class SourceStatisticDto {
+        public static class DataDtoSourceStatisticDto {
             /***/
             @JsonProperty("Count")
             private Integer Count;
@@ -90,18 +90,18 @@ public class InstanceStatisticsResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("StatusStatistic")
-        private StatusStatisticDto StatusStatistic;
+        private DataDtoStatusStatisticDto StatusStatistic;
 
         @Data
         @ToString
-        public static class StatusStatisticDto {
+        public static class DataDtoStatusStatisticDto {
             /***/
             @JsonProperty("MySQL")
-            private MySQLDto MySQL;
+            private DataDtoStatusStatisticDtoMySQLDto MySQL;
 
             @Data
             @ToString
-            public static class MySQLDto {
+            public static class DataDtoStatusStatisticDtoMySQLDto {
                 /***/
                 @JsonProperty("Normal")
                 private Integer Normal;
@@ -114,11 +114,11 @@ public class InstanceStatisticsResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("Redis")
-            private RedisDto Redis;
+            private DataDtoStatusStatisticDtoRedisDto Redis;
 
             @Data
             @ToString
-            public static class RedisDto {
+            public static class DataDtoStatusStatisticDtoRedisDto {
                 /***/
                 @JsonProperty("Normal")
                 private Integer Normal;

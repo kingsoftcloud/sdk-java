@@ -31,11 +31,11 @@ public class DescribePolicyObjectResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("instanceInfoList")
-        private List<InstanceInfoListDto> InstanceInfoList;
+        private List<DataDtoInstanceInfoListDto> InstanceInfoList;
 
         @Data
         @ToString
-        public static class InstanceInfoListDto {
+        public static class DataDtoInstanceInfoListDto {
             /**资源ID*/
             @JsonProperty("instanceId")
             private String InstanceId;

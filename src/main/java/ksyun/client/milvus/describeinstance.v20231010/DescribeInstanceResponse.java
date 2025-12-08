@@ -73,11 +73,11 @@ UNKNOWN  未知	*/
 
         /**实例节点地址信息列表*/
         @JsonProperty("Addresses")
-        private List<AddressesDto> Addresses;
+        private List<DataDtoAddressesDto> Addresses;
 
         @Data
         @ToString
-        public static class AddressesDto {
+        public static class DataDtoAddressesDto {
             /**节点IP*/
             @JsonProperty("Host")
             private String Host;
@@ -96,18 +96,18 @@ eip*/
 
         /**资源配置*/
         @JsonProperty("Resources")
-        private ResourcesDto Resources;
+        private DataDtoResourcesDto Resources;
 
         @Data
         @ToString
-        public static class ResourcesDto {
+        public static class DataDtoResourcesDto {
             /***/
             @JsonProperty("CU")
-            private CUDto CU;
+            private DataDtoResourcesDtoCUDto CU;
 
             @Data
             @ToString
-            public static class CUDto {
+            public static class DataDtoResourcesDtoCUDto {
                 /**个数(单位为cu)*/
                 @JsonProperty("CU")
                 private Integer CU;
@@ -139,11 +139,11 @@ capacity 容量型*/
 
         /**实例用户信息列表*/
         @JsonProperty("Users")
-        private List<UsersDto> Users;
+        private List<DataDtoUsersDto> Users;
 
         @Data
         @ToString
-        public static class UsersDto {
+        public static class DataDtoUsersDto {
             /**用户ID*/
             @JsonProperty("Id")
             private String Id;

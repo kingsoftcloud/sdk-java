@@ -59,11 +59,11 @@ public class DescribeBandWidthSharesResponse extends BaseResponseModel {
 
         /**关联EIP列表*/
         @JsonProperty("AssociateBandWidthShareInfoSet")
-        private List<AssociateBandWidthShareInfoSetDto> AssociateBandWidthShareInfoSet;
+        private List<BandWidthShareSetDtoAssociateBandWidthShareInfoSetDto> AssociateBandWidthShareInfoSet;
 
         @Data
         @ToString
-        public static class AssociateBandWidthShareInfoSetDto {
+        public static class BandWidthShareSetDtoAssociateBandWidthShareInfoSetDto {
             /**弹性IP的ID*/
             @JsonProperty("AllocationId")
             private String AllocationId;
@@ -80,11 +80,11 @@ public class DescribeBandWidthSharesResponse extends BaseResponseModel {
 
         /**资源所绑定的标签信息,仅查询接口且存在标签筛选条件或者IsContainTag为True时才会返回此值(会影响接口速度)*/
         @JsonProperty("TagSet")
-        private List<TagSetDto> TagSet;
+        private List<BandWidthShareSetDtoTagSetDto> TagSet;
 
         @Data
         @ToString
-        public static class TagSetDto {
+        public static class BandWidthShareSetDtoTagSetDto {
             /**资源ID*/
             @JsonProperty("ResourceUuid")
             private String ResourceUuid;

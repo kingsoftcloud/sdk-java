@@ -34,11 +34,11 @@ public class DescribeDBInstanceParametersResponse extends BaseResponseModel {
         /**实例参数列表
 */
         @JsonProperty("Parameters")
-        private ParametersDto Parameters;
+        private DataDtoParametersDto Parameters;
 
         @Data
         @ToString
-        public static class ParametersDto {
+        public static class DataDtoParametersDto {
             /***/
             @JsonProperty("delay_key_write")
             private String Delay_key_write;

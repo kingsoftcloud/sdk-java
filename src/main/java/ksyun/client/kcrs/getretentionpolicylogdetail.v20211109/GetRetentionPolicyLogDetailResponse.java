@@ -27,11 +27,11 @@ public class GetRetentionPolicyLogDetailResponse extends BaseResponseModel {
     public static class DataDto {
         /**响应实体类*/
         @JsonProperty("LogDetail")
-        private LogDetailDto LogDetail;
+        private DataDtoLogDetailDto LogDetail;
 
         @Data
         @ToString
-        public static class LogDetailDto {
+        public static class DataDtoLogDetailDto {
             /***/
             @JsonProperty("ExecutionId")
             private String ExecutionId;

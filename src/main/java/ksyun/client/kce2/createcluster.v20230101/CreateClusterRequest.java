@@ -49,11 +49,11 @@ INDEPENDENT_CLUSTER:独立部署集群MANAGED_CLUSTER: 托管集群*/
         private String VpcId;
 
         /**apiserver 信息*/
-        private ApiServerDto ApiServerList;
+        private NetworkDtoApiServerDto ApiServerList;
 
         @Data
         @ToString
-        public static class ApiServerDto {
+        public static class NetworkDtoApiServerDto {
             /**	
 EIP ID*/
             @KsYunField(name="EipId")
@@ -75,11 +75,11 @@ EIP ID*/
         private String NetworkPluginType;
 
         /**VPC-CNI 信息*/
-        private VpcCNIDto VpcCNIList;
+        private NetworkDtoVpcCNIDto VpcCNIList;
 
         @Data
         @ToString
-        public static class VpcCNIDto {
+        public static class NetworkDtoVpcCNIDto {
             /**是否开启vpc-cni，默认值：false*/
             @KsYunField(name="Enable")
             private Boolean Enable;
@@ -136,11 +136,11 @@ vpc的子网id，必须选跟集群同vpc下的子网Id,可以填多个*/
     @ToString
     public static class NodeInstanceSetDto {
         /**节点基础配置*/
-        private BasicSettingDto BasicSettingList;
+        private NodeInstanceSetDtoBasicSettingDto BasicSettingList;
 
         @Data
         @ToString
-        public static class BasicSettingDto {
+        public static class NodeInstanceSetDtoBasicSettingDto {
             /**节点数量*/
             @KsYunField(name="Num")
             private Integer Num;
@@ -168,11 +168,11 @@ HOST_NAME：主机hostname*/
             private String InstanceType;
 
             /**系统盘配置*/
-            private SystemDiskDto SystemDiskList;
+            private NodeInstanceSetDtoBasicSettingDtoSystemDiskDto SystemDiskList;
 
             @Data
             @ToString
-            public static class SystemDiskDto {
+            public static class NodeInstanceSetDtoBasicSettingDtoSystemDiskDto {
                 /**系统磁盘类型*/
                 @KsYunField(name="Type")
                 private String Type;
@@ -190,11 +190,11 @@ HOST_NAME：主机hostname*/
             }
 
             /**Container 配置*/
-            private ContainerDto ContainerList;
+            private NodeInstanceSetDtoBasicSettingDtoContainerDto ContainerList;
 
             @Data
             @ToString
-            public static class ContainerDto {
+            public static class NodeInstanceSetDtoBasicSettingDtoContainerDto {
                 /**容器运行时*/
                 @KsYunField(name="Runtime")
                 private String Runtime;
@@ -227,11 +227,11 @@ HOST_NAME：主机hostname*/
             private String AvailabilityZone;
 
             /**数据盘配置*/
-            private DataDiskDto DataDiskList;
+            private NodeInstanceSetDtoBasicSettingDtoDataDiskDto DataDiskList;
 
             @Data
             @ToString
-            public static class DataDiskDto {
+            public static class NodeInstanceSetDtoBasicSettingDtoDataDiskDto {
                 /**数据盘类型*/
                 @KsYunField(name="Type")
                 private String Type;
@@ -273,11 +273,11 @@ HOST_NAME：主机hostname*/
             }
 
             /**登录方式配置*/
-            private LoginSettingDto LoginSettingList;
+            private NodeInstanceSetDtoBasicSettingDtoLoginSettingDto LoginSettingList;
 
             @Data
             @ToString
-            public static class LoginSettingDto {
+            public static class NodeInstanceSetDtoBasicSettingDtoLoginSettingDto {
                 /**密码*/
                 @KsYunField(name="Password")
                 private String Password;
@@ -352,11 +352,11 @@ gpu的驱动id （为gpu类型才生效）
         }
 
         /**节点高级配置*/
-        private AdvancedSettingDto AdvancedSettingList;
+        private NodeInstanceSetDtoAdvancedSettingDto AdvancedSettingList;
 
         @Data
         @ToString
-        public static class AdvancedSettingDto {
+        public static class NodeInstanceSetDtoAdvancedSettingDto {
             /**部署前执行脚本（base64 加密后的密文）*/
             @KsYunField(name="PostUserScript")
             private String PostUserScript;
@@ -367,11 +367,11 @@ gpu的驱动id （为gpu类型才生效）
 
             /**Label 列表*/
             @KsYunField(name="Labels",type=2)
-            private List<LabelsDto> LabelsList;
+            private List<NodeInstanceSetDtoAdvancedSettingDtoLabelsDto> LabelsList;
 
             @Data
             @ToString
-            public static class LabelsDto {
+            public static class NodeInstanceSetDtoAdvancedSettingDtoLabelsDto {
                 /**	
 Label Key*/
                 @KsYunField(name="Key")
@@ -385,11 +385,11 @@ Label Key*/
 
             /***/
             @KsYunField(name="Taints",type=2)
-            private List<TaintsDto> TaintsList;
+            private List<NodeInstanceSetDtoAdvancedSettingDtoTaintsDto> TaintsList;
 
             @Data
             @ToString
-            public static class TaintsDto {
+            public static class NodeInstanceSetDtoAdvancedSettingDtoTaintsDto {
                 /**	
 Taints key*/
                 @KsYunField(name="Key")
@@ -407,11 +407,11 @@ Taints key*/
             }
 
             /**容器相关信息*/
-            private ContainerDto ContainerList;
+            private NodeInstanceSetDtoAdvancedSettingDtoContainerDto ContainerList;
 
             @Data
             @ToString
-            public static class ContainerDto {
+            public static class NodeInstanceSetDtoAdvancedSettingDtoContainerDto {
                 /**容器运行时名称:
 • Containerd（默认）*/
                 @KsYunField(name="Runtime")
@@ -427,11 +427,11 @@ Taints key*/
 
         /**组件配置*/
         @KsYunField(name="Components",type=2)
-        private List<ComponentsDto> ComponentsList;
+        private List<NodeInstanceSetDtoComponentsDto> ComponentsList;
 
         @Data
         @ToString
-        public static class ComponentsDto {
+        public static class NodeInstanceSetDtoComponentsDto {
             /**组件类型*/
             @KsYunField(name="Type")
             private String Type;

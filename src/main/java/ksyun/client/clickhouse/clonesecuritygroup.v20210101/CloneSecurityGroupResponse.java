@@ -63,11 +63,11 @@ public class CloneSecurityGroupResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Rules")
-        private List<RulesDto> Rules;
+        private List<DataDtoRulesDto> Rules;
 
         @Data
         @ToString
-        public static class RulesDto {
+        public static class DataDtoRulesDto {
             /***/
             @JsonProperty("RuleId")
             private String RuleId;

@@ -95,11 +95,11 @@ public class AssignPrivateIpAddressResponse extends BaseResponseModel {
 
         /**私网IP列表*/
         @JsonProperty("AssignedPrivateIpAddressSet")
-        private List<AssignedPrivateIpAddressSetDto> AssignedPrivateIpAddressSet;
+        private List<NetworkInterfaceDtoAssignedPrivateIpAddressSetDto> AssignedPrivateIpAddressSet;
 
         @Data
         @ToString
-        public static class AssignedPrivateIpAddressSetDto {
+        public static class NetworkInterfaceDtoAssignedPrivateIpAddressSetDto {
             /**私网IP地址*/
             @JsonProperty("PrivateIpAddress")
             private String PrivateIpAddress;
@@ -108,11 +108,11 @@ public class AssignPrivateIpAddressResponse extends BaseResponseModel {
 
         /**安全组列表*/
         @JsonProperty("SecurityGroupSet")
-        private List<SecurityGroupSetDto> SecurityGroupSet;
+        private List<NetworkInterfaceDtoSecurityGroupSetDto> SecurityGroupSet;
 
         @Data
         @ToString
-        public static class SecurityGroupSetDto {
+        public static class NetworkInterfaceDtoSecurityGroupSetDto {
             /**安全组ID*/
             @JsonProperty("SecurityGroupId")
             private String SecurityGroupId;
@@ -125,11 +125,11 @@ public class AssignPrivateIpAddressResponse extends BaseResponseModel {
 
         /**Ipv6地址列表*/
         @JsonProperty("Ipv6PublicIpAddressSet")
-        private List<Ipv6PublicIpAddressSetDto> Ipv6PublicIpAddressSet;
+        private List<NetworkInterfaceDtoIpv6PublicIpAddressSetDto> Ipv6PublicIpAddressSet;
 
         @Data
         @ToString
-        public static class Ipv6PublicIpAddressSetDto {
+        public static class NetworkInterfaceDtoIpv6PublicIpAddressSetDto {
             /**Ipv6地址*/
             @JsonProperty("Ipv6PublicIpAddress")
             private String Ipv6PublicIpAddress;

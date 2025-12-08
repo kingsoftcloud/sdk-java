@@ -155,11 +155,11 @@ public class ListInstanceResponse extends BaseResponseModel {
 
         /**模块配置信息列表*/
         @JsonProperty("ModuleConfigs")
-        private List<ModuleConfigsDto> ModuleConfigs;
+        private List<DataDtoModuleConfigsDto> ModuleConfigs;
 
         @Data
         @ToString
-        public static class ModuleConfigsDto {
+        public static class DataDtoModuleConfigsDto {
             /**模块名称*/
             @JsonProperty("moduleType")
             private String ModuleType;

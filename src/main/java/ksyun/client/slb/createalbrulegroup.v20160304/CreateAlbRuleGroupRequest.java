@@ -55,11 +55,11 @@ public class CreateAlbRuleGroupRequest{
 
         /**HTTP标头*/
         @KsYunField(name="HeaderValue",type=2)
-        private List<HeaderValueDto> HeaderValueList;
+        private List<AlbRuleSetDtoHeaderValueDto> HeaderValueList;
 
         @Data
         @ToString
-        public static class HeaderValueDto {
+        public static class AlbRuleSetDtoHeaderValueDto {
             /**HTTP标头,查询字符串的键值*/
             @KsYunField(name="Key")
             private String Key;
@@ -72,11 +72,11 @@ public class CreateAlbRuleGroupRequest{
 
         /**查询字符串*/
         @KsYunField(name="QueryValue",type=2)
-        private List<QueryValueDto> QueryValueList;
+        private List<AlbRuleSetDtoQueryValueDto> QueryValueList;
 
         @Data
         @ToString
-        public static class QueryValueDto {
+        public static class AlbRuleSetDtoQueryValueDto {
             /**HTTP标头,查询字符串的键值*/
             @KsYunField(name="Key")
             private String Key;
@@ -89,11 +89,11 @@ public class CreateAlbRuleGroupRequest{
 
         /**Cookie转发条件*/
         @KsYunField(name="CookieValue",type=2)
-        private List<CookieValueDto> CookieValueList;
+        private List<AlbRuleSetDtoCookieValueDto> CookieValueList;
 
         @Data
         @ToString
-        public static class CookieValueDto {
+        public static class AlbRuleSetDtoCookieValueDto {
             /**HTTP标头,查询字符串的键值*/
             @KsYunField(name="Key")
             private String Key;

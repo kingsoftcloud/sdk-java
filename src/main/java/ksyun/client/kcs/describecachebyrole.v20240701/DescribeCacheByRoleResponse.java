@@ -27,11 +27,11 @@ public class DescribeCacheByRoleResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("MasterNodes")
-        private List<MasterNodesDto> MasterNodes;
+        private List<DataDtoMasterNodesDto> MasterNodes;
 
         @Data
         @ToString
-        public static class MasterNodesDto {
+        public static class DataDtoMasterNodesDto {
             /***/
             @JsonProperty("InstanceId")
             private String InstanceId;
@@ -72,11 +72,11 @@ public class DescribeCacheByRoleResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("SlavesNodes")
-        private List<SlavesNodesDto> SlavesNodes;
+        private List<DataDtoSlavesNodesDto> SlavesNodes;
 
         @Data
         @ToString
-        public static class SlavesNodesDto {
+        public static class DataDtoSlavesNodesDto {
             /***/
             @JsonProperty("InstanceId")
             private String InstanceId;
@@ -117,11 +117,11 @@ public class DescribeCacheByRoleResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("ProxyNodes")
-        private List<ProxyNodesDto> ProxyNodes;
+        private List<DataDtoProxyNodesDto> ProxyNodes;
 
         @Data
         @ToString
-        public static class ProxyNodesDto {
+        public static class DataDtoProxyNodesDto {
             /***/
             @JsonProperty("InstanceId")
             private String InstanceId;

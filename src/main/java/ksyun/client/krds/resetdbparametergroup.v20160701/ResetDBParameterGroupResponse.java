@@ -25,11 +25,11 @@ public class ResetDBParameterGroupResponse extends BaseResponseModel {
         /**参数组列表
 */
         @JsonProperty("DBParameterGroup")
-        private DBParameterGroupDto DBParameterGroup;
+        private DataDtoDBParameterGroupDto DBParameterGroup;
 
         @Data
         @ToString
-        public static class DBParameterGroupDto {
+        public static class DataDtoDBParameterGroupDto {
             /**参数组ID
 */
             @JsonProperty("DBParameterGroupId")
@@ -53,11 +53,11 @@ public class ResetDBParameterGroupResponse extends BaseResponseModel {
             /**参数组参数值
 */
             @JsonProperty("Parameters")
-            private ParametersDto Parameters;
+            private DataDtoDBParameterGroupDtoParametersDto Parameters;
 
             @Data
             @ToString
-            public static class ParametersDto {
+            public static class DataDtoDBParameterGroupDtoParametersDto {
                 /***/
                 @JsonProperty("delay_key_write")
                 private String Delay_key_write;

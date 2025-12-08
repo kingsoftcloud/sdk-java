@@ -39,11 +39,11 @@ public class ListAutoScalePolicyResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Data")
-        private List<DataDto> Data;
+        private List<DataDtoDataDto> Data;
 
         @Data
         @ToString
-        public static class DataDto {
+        public static class DataDtoDataDto {
             /**策略ID*/
             @JsonProperty("Id")
             private Integer Id;
@@ -78,11 +78,11 @@ public class ListAutoScalePolicyResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("ExecuteRules")
-            private ExecuteRulesDto ExecuteRules;
+            private DataDtoDataDtoExecuteRulesDto ExecuteRules;
 
             @Data
             @ToString
-            public static class ExecuteRulesDto {
+            public static class DataDtoDataDtoExecuteRulesDto {
                 /**开始时间*/
                 @JsonProperty("StartTime")
                 private String StartTime;

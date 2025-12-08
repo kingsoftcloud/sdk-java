@@ -23,18 +23,18 @@ public class SchemaStructResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("Schemas")
-        private SchemasDto Schemas;
+        private DataDtoSchemasDto Schemas;
 
         @Data
         @ToString
-        public static class SchemasDto {
+        public static class DataDtoSchemasDto {
             /***/
             @JsonProperty("schema")
-            private List<SchemaDto> Schema;
+            private List<DataDtoSchemasDtoSchemaDto> Schema;
 
             @Data
             @ToString
-            public static class SchemaDto {
+            public static class DataDtoSchemasDtoSchemaDto {
                 /***/
                 @JsonProperty("source")
                 private String Source;
@@ -53,11 +53,11 @@ public class SchemaStructResponse extends BaseResponseModel {
 
                 /***/
                 @JsonProperty("children")
-                private List<ChildrenDto> Children;
+                private List<DataDtoSchemasDtoSchemaDtoChildrenDto> Children;
 
                 @Data
                 @ToString
-                public static class ChildrenDto {
+                public static class DataDtoSchemasDtoSchemaDtoChildrenDto {
                     /***/
                     @JsonProperty("source")
                     private String Source;
@@ -76,11 +76,11 @@ public class SchemaStructResponse extends BaseResponseModel {
 
                     /***/
                     @JsonProperty("children")
-                    private List<ChildrenDto> Children;
+                    private List<DataDtoSchemasDtoSchemaDtoChildrenDtoChildrenDto> Children;
 
                     @Data
                     @ToString
-                    public static class ChildrenDto {
+                    public static class DataDtoSchemasDtoSchemaDtoChildrenDtoChildrenDto {
                         /***/
                         @JsonProperty("source")
                         private String Source;

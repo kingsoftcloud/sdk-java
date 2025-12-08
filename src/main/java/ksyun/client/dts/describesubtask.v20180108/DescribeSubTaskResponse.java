@@ -187,11 +187,11 @@ http://dts.{{region}}.api.ksyun.com/api?Action=DescribeSubTask&Version=2018-01-0
 
         /***/
         @JsonProperty("Object")
-        private List<ObjectDto> Object;
+        private List<DataDtoObjectDto> Object;
 
         @Data
         @ToString
-        public static class ObjectDto {
+        public static class DataDtoObjectDto {
             /***/
             @JsonProperty("ObjectName")
             private String ObjectName;

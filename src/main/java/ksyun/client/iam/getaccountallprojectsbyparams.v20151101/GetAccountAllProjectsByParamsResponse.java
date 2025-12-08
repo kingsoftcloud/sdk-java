@@ -27,11 +27,11 @@ public class GetAccountAllProjectsByParamsResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("ProjectList")
-        private List<ProjectListDto> ProjectList;
+        private List<ListProjectResultDtoProjectListDto> ProjectList;
 
         @Data
         @ToString
-        public static class ProjectListDto {
+        public static class ListProjectResultDtoProjectListDto {
             /**项目ID*/
             @JsonProperty("ProjectId")
             private Integer ProjectId;

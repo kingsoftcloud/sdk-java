@@ -24,18 +24,18 @@ public class CreateDBInstanceReadReplicaResponse extends BaseResponseModel {
         /**RDS实例信息
 */
         @JsonProperty("DBInstance")
-        private DBInstanceDto DBInstance;
+        private DataDtoDBInstanceDto DBInstance;
 
         @Data
         @ToString
-        public static class DBInstanceDto {
+        public static class DataDtoDBInstanceDto {
             /***/
             @JsonProperty("DBInstanceClass")
-            private DBInstanceClassDto DBInstanceClass;
+            private DataDtoDBInstanceDtoDBInstanceClassDto DBInstanceClass;
 
             @Data
             @ToString
-            public static class DBInstanceClassDto {
+            public static class DataDtoDBInstanceDtoDBInstanceClassDto {
                 /**请求ID
 */
                 @JsonProperty("Id")
@@ -151,11 +151,11 @@ public class CreateDBInstanceReadReplicaResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("AvailabilityZoneList")
-            private AvailabilityZoneListDto AvailabilityZoneList;
+            private DataDtoDBInstanceDtoAvailabilityZoneListDto AvailabilityZoneList;
 
             @Data
             @ToString
-            public static class AvailabilityZoneListDto {
+            public static class DataDtoDBInstanceDtoAvailabilityZoneListDto {
             }
 
             /***/
@@ -168,20 +168,20 @@ public class CreateDBInstanceReadReplicaResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("ReadReplicaDBInstanceIdentifiers")
-            private ReadReplicaDBInstanceIdentifiersDto ReadReplicaDBInstanceIdentifiers;
+            private DataDtoDBInstanceDtoReadReplicaDBInstanceIdentifiersDto ReadReplicaDBInstanceIdentifiers;
 
             @Data
             @ToString
-            public static class ReadReplicaDBInstanceIdentifiersDto {
+            public static class DataDtoDBInstanceDtoReadReplicaDBInstanceIdentifiersDto {
             }
 
             /***/
             @JsonProperty("DBSource")
-            private DBSourceDto DBSource;
+            private DataDtoDBInstanceDtoDBSourceDto DBSource;
 
             @Data
             @ToString
-            public static class DBSourceDto {
+            public static class DataDtoDBInstanceDtoDBSourceDto {
                 /***/
                 @JsonProperty("DBInstanceIdentifier")
                 private String DBInstanceIdentifier;
@@ -214,11 +214,11 @@ public class CreateDBInstanceReadReplicaResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("SecurityGroups")
-            private SecurityGroupsDto SecurityGroups;
+            private DataDtoDBInstanceDtoSecurityGroupsDto SecurityGroups;
 
             @Data
             @ToString
-            public static class SecurityGroupsDto {
+            public static class DataDtoDBInstanceDtoSecurityGroupsDto {
             }
 
             /***/

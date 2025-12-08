@@ -47,11 +47,11 @@ public class QueryRuledetailResponse extends BaseResponseModel {
 
         /**安全组策略列表*/
         @JsonProperty("securityGroupPolicies")
-        private List<SecurityGroupPoliciesDto> SecurityGroupPolicies;
+        private List<DataDtoSecurityGroupPoliciesDto> SecurityGroupPolicies;
 
         @Data
         @ToString
-        public static class SecurityGroupPoliciesDto {
+        public static class DataDtoSecurityGroupPoliciesDto {
             /**协议*/
             @JsonProperty("protocol")
             private String Protocol;

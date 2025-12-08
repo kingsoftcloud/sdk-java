@@ -51,11 +51,11 @@ public class CreateCacheParameterGroupResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("parameters")
-        private List<ParametersDto> Parameters;
+        private List<DataDtoParametersDto> Parameters;
 
         @Data
         @ToString
-        public static class ParametersDto {
+        public static class DataDtoParametersDto {
             /***/
             @JsonProperty("name")
             private String Name;
@@ -74,11 +74,11 @@ public class CreateCacheParameterGroupResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("validity")
-            private ValidityDto Validity;
+            private DataDtoParametersDtoValidityDto Validity;
 
             @Data
             @ToString
-            public static class ValidityDto {
+            public static class DataDtoParametersDtoValidityDto {
                 /***/
                 @JsonProperty("type")
                 private String Type;

@@ -23,18 +23,18 @@ public class OverrideDBInstanceResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("Instances")
-        private List<InstancesDto> Instances;
+        private List<DataDtoInstancesDto> Instances;
 
         @Data
         @ToString
-        public static class InstancesDto {
+        public static class DataDtoInstancesDto {
             /***/
             @JsonProperty("DBInstanceClass")
-            private DBInstanceClassDto DBInstanceClass;
+            private DataDtoInstancesDtoDBInstanceClassDto DBInstanceClass;
 
             @Data
             @ToString
-            public static class DBInstanceClassDto {
+            public static class DataDtoInstancesDtoDBInstanceClassDto {
                 /***/
                 @JsonProperty("Id")
                 private String Id;

@@ -35,11 +35,11 @@ public class ListInspectionItemResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("items")
-        private List<ItemsDto> Items;
+        private List<DataDtoItemsDto> Items;
 
         @Data
         @ToString
-        public static class ItemsDto {
+        public static class DataDtoItemsDto {
             /***/
             @JsonProperty("customerId")
             private Integer CustomerId;

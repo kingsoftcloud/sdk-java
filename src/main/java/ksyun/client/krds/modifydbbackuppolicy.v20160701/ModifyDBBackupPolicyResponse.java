@@ -23,18 +23,18 @@ public class ModifyDBBackupPolicyResponse extends BaseResponseModel {
     public static class DataDto {
         /**返回实例详情数据*/
         @JsonProperty("Instances")
-        private List<InstancesDto> Instances;
+        private List<DataDtoInstancesDto> Instances;
 
         @Data
         @ToString
-        public static class InstancesDto {
+        public static class DataDtoInstancesDto {
             /***/
             @JsonProperty("DBInstanceClass")
-            private DBInstanceClassDto DBInstanceClass;
+            private DataDtoInstancesDtoDBInstanceClassDto DBInstanceClass;
 
             @Data
             @ToString
-            public static class DBInstanceClassDto {
+            public static class DataDtoInstancesDtoDBInstanceClassDto {
                 /***/
                 @JsonProperty("Id")
                 private String Id;
@@ -155,11 +155,11 @@ public class ModifyDBBackupPolicyResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("AvailabilityZoneList")
-            private List<AvailabilityZoneListDto> AvailabilityZoneList;
+            private List<DataDtoInstancesDtoAvailabilityZoneListDto> AvailabilityZoneList;
 
             @Data
             @ToString
-            public static class AvailabilityZoneListDto {
+            public static class DataDtoInstancesDtoAvailabilityZoneListDto {
                 /***/
                 @JsonProperty("MemberType")
                 private String MemberType;

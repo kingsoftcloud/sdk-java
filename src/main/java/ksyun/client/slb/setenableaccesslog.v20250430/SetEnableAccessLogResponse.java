@@ -111,11 +111,11 @@ public class SetEnableAccessLogResponse extends BaseResponseModel {
 
         /**绑定WAF状态*/
         @JsonProperty("WafInfo")
-        private WafInfoDto WafInfo;
+        private LoadBalancerDtoWafInfoDto WafInfo;
 
         @Data
         @ToString
-        public static class WafInfoDto {
+        public static class LoadBalancerDtoWafInfoDto {
             /**Waf产品的ID*/
             @JsonProperty("WafId")
             private String WafId;
@@ -136,11 +136,11 @@ public class SetEnableAccessLogResponse extends BaseResponseModel {
 
         /**资源所绑定的标签信息,仅查询接口且存在标签筛选条件或者IsContainTag为True时才会返回此值*/
         @JsonProperty("TagSet")
-        private List<TagSetDto> TagSet;
+        private List<LoadBalancerDtoTagSetDto> TagSet;
 
         @Data
         @ToString
-        public static class TagSetDto {
+        public static class LoadBalancerDtoTagSetDto {
             /**资源ID*/
             @JsonProperty("ResourceUuid")
             private String ResourceUuid;

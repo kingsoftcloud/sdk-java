@@ -23,11 +23,11 @@ public class ListUsersForGroupResponse extends BaseResponseModel {
     public static class ListUsersForGroupResultDto {
         /***/
         @JsonProperty("Users")
-        private List<UsersDto> Users;
+        private List<ListUsersForGroupResultDtoUsersDto> Users;
 
         @Data
         @ToString
-        public static class UsersDto {
+        public static class ListUsersForGroupResultDtoUsersDto {
             /***/
             @JsonProperty("UserId")
             private String UserId;

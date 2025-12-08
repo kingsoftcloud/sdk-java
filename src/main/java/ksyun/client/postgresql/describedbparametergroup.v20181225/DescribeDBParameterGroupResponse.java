@@ -64,11 +64,11 @@ public class DescribeDBParameterGroupResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("DBParameterGroups")
-        private List<DBParameterGroupsDto> DBParameterGroups;
+        private List<DataDtoDBParameterGroupsDto> DBParameterGroups;
 
         @Data
         @ToString
-        public static class DBParameterGroupsDto {
+        public static class DataDtoDBParameterGroupsDto {
             /**参数组ID*/
             @JsonProperty("DBParameterGroupId")
             private String DBParameterGroupId;
@@ -91,11 +91,11 @@ public class DescribeDBParameterGroupResponse extends BaseResponseModel {
 
             /**参数模版中参数详情，仅指定参数组查询才会返回此字段*/
             @JsonProperty("Parameters")
-            private ParametersDto Parameters;
+            private DataDtoDBParameterGroupsDtoParametersDto Parameters;
 
             @Data
             @ToString
-            public static class ParametersDto {
+            public static class DataDtoDBParameterGroupsDtoParametersDto {
                 /***/
                 @JsonProperty("autovacuum_analyze_scale_factor")
                 private Integer Autovacuum_analyze_scale_factor;

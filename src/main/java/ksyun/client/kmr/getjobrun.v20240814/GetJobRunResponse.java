@@ -84,11 +84,11 @@ public class GetJobRunResponse extends BaseResponseModel {
 
         /**作业信息详情*/
         @JsonProperty("SparkSubmitData")
-        private SparkSubmitDataDto SparkSubmitData;
+        private DataDtoSparkSubmitDataDto SparkSubmitData;
 
         @Data
         @ToString
-        public static class SparkSubmitDataDto {
+        public static class DataDtoSparkSubmitDataDto {
             /**作业名称*/
             @JsonProperty("Name")
             private String Name;

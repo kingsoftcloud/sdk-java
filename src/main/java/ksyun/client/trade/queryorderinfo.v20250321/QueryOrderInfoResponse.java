@@ -85,11 +85,11 @@ public class QueryOrderInfoResponse extends BaseResponseModel {
 
         /**配置详情*/
         @JsonProperty("productItems")
-        private List<ProductItemsDto> ProductItems;
+        private List<OrderListDtoProductItemsDto> ProductItems;
 
         @Data
         @ToString
-        public static class ProductItemsDto {
+        public static class OrderListDtoProductItemsDto {
             /***/
             @JsonProperty("key")
             private String Key;
@@ -110,11 +110,11 @@ public class QueryOrderInfoResponse extends BaseResponseModel {
 
         /**促销详情*/
         @JsonProperty("promotionItem")
-        private PromotionItemDto PromotionItem;
+        private OrderListDtoPromotionItemDto PromotionItem;
 
         @Data
         @ToString
-        public static class PromotionItemDto {
+        public static class OrderListDtoPromotionItemDto {
             /**活动名称*/
             @JsonProperty("name")
             private String Name;

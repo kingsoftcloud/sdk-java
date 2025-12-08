@@ -75,11 +75,11 @@ public class ListCertificatesResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("AuthContent")
-        private AuthContentDto AuthContent;
+        private CertificateSetDtoAuthContentDto AuthContent;
 
         @Data
         @ToString
-        public static class AuthContentDto {
+        public static class CertificateSetDtoAuthContentDto {
             /**核对名称*/
             @JsonProperty("CheckName")
             private String CheckName;

@@ -86,11 +86,11 @@ public class CreateFunctionRequest{
     public static class EnvironmentDto {
         /**环境变量键值对*/
         @KsYunField(name="Variables",type=2)
-        private List<VariablesDto> VariablesList;
+        private List<EnvironmentDtoVariablesDto> VariablesList;
 
         @Data
         @ToString
-        public static class VariablesDto {
+        public static class EnvironmentDtoVariablesDto {
             /***/
             @KsYunField(name="Key")
             private String Key;
@@ -162,11 +162,11 @@ public class CreateFunctionRequest{
     @ToString
     public static class LivenessProbeConfigDto {
         /**HTTP探针配置*/
-        private HTTPGetDto HTTPGetList;
+        private LivenessProbeConfigDtoHTTPGetDto HTTPGetList;
 
         @Data
         @ToString
-        public static class HTTPGetDto {
+        public static class LivenessProbeConfigDtoHTTPGetDto {
             /**协议，http*/
             @KsYunField(name="Protocol")
             private String Protocol;
@@ -194,11 +194,11 @@ public class CreateFunctionRequest{
     @ToString
     public static class ReadinessProbeConfigDto {
         /**HTTP探针配置*/
-        private HTTPGetDto HTTPGetList;
+        private ReadinessProbeConfigDtoHTTPGetDto HTTPGetList;
 
         @Data
         @ToString
-        public static class HTTPGetDto {
+        public static class ReadinessProbeConfigDtoHTTPGetDto {
             /**协议，http*/
             @KsYunField(name="Protocol")
             private String Protocol;

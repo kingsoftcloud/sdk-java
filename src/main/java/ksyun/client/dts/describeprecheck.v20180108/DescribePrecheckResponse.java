@@ -27,11 +27,11 @@ public class DescribePrecheckResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("SubPrecheck")
-        private List<SubPrecheckDto> SubPrecheck;
+        private List<DataDtoSubPrecheckDto> SubPrecheck;
 
         @Data
         @ToString
-        public static class SubPrecheckDto {
+        public static class DataDtoSubPrecheckDto {
             /***/
             @JsonProperty("Id")
             private String Id;

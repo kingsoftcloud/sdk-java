@@ -23,18 +23,18 @@ public class DescribeCollationsResponse extends BaseResponseModel {
     public static class DataDto {
         /**排序规则列表，每个子项为对应的排序规则，及其对应的ctype和name。*/
         @JsonProperty("Collations")
-        private CollationsDto Collations;
+        private DataDtoCollationsDto Collations;
 
         @Data
         @ToString
-        public static class CollationsDto {
+        public static class DataDtoCollationsDto {
             /***/
             @JsonProperty("LATIN5")
-            private LATIN5Dto LATIN5;
+            private DataDtoCollationsDtoLATIN5Dto LATIN5;
 
             @Data
             @ToString
-            public static class LATIN5Dto {
+            public static class DataDtoCollationsDtoLATIN5Dto {
                 /***/
                 @JsonProperty("ctype_name")
                 private List<String> Ctype_name;

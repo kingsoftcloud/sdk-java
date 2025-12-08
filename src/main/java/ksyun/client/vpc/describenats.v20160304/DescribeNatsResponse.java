@@ -75,11 +75,11 @@ public class DescribeNatsResponse extends BaseResponseModel {
 
         /**Nat Ip的信息*/
         @JsonProperty("NatIpSet")
-        private List<NatIpSetDto> NatIpSet;
+        private List<NatSetDtoNatIpSetDto> NatIpSet;
 
         @Data
         @ToString
-        public static class NatIpSetDto {
+        public static class NatSetDtoNatIpSetDto {
             /**Nat的Ip地址*/
             @JsonProperty("NatIp")
             private String NatIp;
@@ -96,11 +96,11 @@ public class DescribeNatsResponse extends BaseResponseModel {
 
         /**关联的专线网关信息*/
         @JsonProperty("AssociateDirectConnectGatewaySet")
-        private List<AssociateDirectConnectGatewaySetDto> AssociateDirectConnectGatewaySet;
+        private List<NatSetDtoAssociateDirectConnectGatewaySetDto> AssociateDirectConnectGatewaySet;
 
         @Data
         @ToString
-        public static class AssociateDirectConnectGatewaySetDto {
+        public static class NatSetDtoAssociateDirectConnectGatewaySetDto {
             /**专线网关的ID*/
             @JsonProperty("DirectConnectGatewayId")
             private String DirectConnectGatewayId;
@@ -109,11 +109,11 @@ public class DescribeNatsResponse extends BaseResponseModel {
 
         /**关联的Vpn信息*/
         @JsonProperty("AssociateVpnGatewaySet")
-        private List<AssociateVpnGatewaySetDto> AssociateVpnGatewaySet;
+        private List<NatSetDtoAssociateVpnGatewaySetDto> AssociateVpnGatewaySet;
 
         @Data
         @ToString
-        public static class AssociateVpnGatewaySetDto {
+        public static class NatSetDtoAssociateVpnGatewaySetDto {
             /**Vpn的ID*/
             @JsonProperty("VpnGatewayId")
             private String VpnGatewayId;
@@ -122,11 +122,11 @@ public class DescribeNatsResponse extends BaseResponseModel {
 
         /**关联的实例信息*/
         @JsonProperty("AssociateInstanceSet")
-        private List<AssociateInstanceSetDto> AssociateInstanceSet;
+        private List<NatSetDtoAssociateInstanceSetDto> AssociateInstanceSet;
 
         @Data
         @ToString
-        public static class AssociateInstanceSetDto {
+        public static class NatSetDtoAssociateInstanceSetDto {
             /**私网Ip地址*/
             @JsonProperty("PrivateIpAddress")
             private String PrivateIpAddress;
@@ -143,11 +143,11 @@ public class DescribeNatsResponse extends BaseResponseModel {
 
         /**关联的子网信息*/
         @JsonProperty("AssociateNatSet")
-        private List<AssociateNatSetDto> AssociateNatSet;
+        private List<NatSetDtoAssociateNatSetDto> AssociateNatSet;
 
         @Data
         @ToString
-        public static class AssociateNatSetDto {
+        public static class NatSetDtoAssociateNatSetDto {
             /**子网的ID*/
             @JsonProperty("SubnetId")
             private String SubnetId;
@@ -160,11 +160,11 @@ public class DescribeNatsResponse extends BaseResponseModel {
 
         /**Dnat的信息*/
         @JsonProperty("DnatSet")
-        private List<DnatSetDto> DnatSet;
+        private List<NatSetDtoDnatSetDto> DnatSet;
 
         @Data
         @ToString
-        public static class DnatSetDto {
+        public static class NatSetDtoDnatSetDto {
             /**创建时间*/
             @JsonProperty("CreateTime")
             private String CreateTime;
@@ -213,11 +213,11 @@ public class DescribeNatsResponse extends BaseResponseModel {
 
         /**资源所绑定的标签信息,仅查询接口且存在标签筛选条件或者IsContainTag为True时才会返回此值(会影响接口速度)*/
         @JsonProperty("TagSet")
-        private List<TagSetDto> TagSet;
+        private List<NatSetDtoTagSetDto> TagSet;
 
         @Data
         @ToString
-        public static class TagSetDto {
+        public static class NatSetDtoTagSetDto {
             /**资源ID*/
             @JsonProperty("ResourceUuid")
             private String ResourceUuid;

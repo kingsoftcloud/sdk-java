@@ -39,11 +39,11 @@ public class ListRayJobRunsResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Data")
-        private DataDto Data;
+        private DataDtoDataDto Data;
 
         @Data
         @ToString
-        public static class DataDto {
+        public static class DataDtoDataDto {
             /**每页展示作业数量
 */
             @JsonProperty("MaxResults")
@@ -55,11 +55,11 @@ public class ListRayJobRunsResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("JobRuns")
-            private List<JobRunsDto> JobRuns;
+            private List<DataDtoDataDtoJobRunsDto> JobRuns;
 
             @Data
             @ToString
-            public static class JobRunsDto {
+            public static class DataDtoDataDtoJobRunsDto {
                 /**作业ID*/
                 @JsonProperty("JobRunId")
                 private String JobRunId;
@@ -112,11 +112,11 @@ public class ListRayJobRunsResponse extends BaseResponseModel {
 
                 /***/
                 @JsonProperty("RaySubmitData")
-                private RaySubmitDataDto RaySubmitData;
+                private DataDtoDataDtoJobRunsDtoRaySubmitDataDto RaySubmitData;
 
                 @Data
                 @ToString
-                public static class RaySubmitDataDto {
+                public static class DataDtoDataDtoJobRunsDtoRaySubmitDataDto {
                     /**作业名称*/
                     @JsonProperty("Name")
                     private String Name;

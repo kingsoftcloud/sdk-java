@@ -23,11 +23,11 @@ public class CreatePolicyVersionResponse extends BaseResponseModel {
     public static class CreatePolicyVersionResultDto {
         /***/
         @JsonProperty("PolicyVersion")
-        private PolicyVersionDto PolicyVersion;
+        private CreatePolicyVersionResultDtoPolicyVersionDto PolicyVersion;
 
         @Data
         @ToString
-        public static class PolicyVersionDto {
+        public static class CreatePolicyVersionResultDtoPolicyVersionDto {
             /**是否默认策略版本*/
             @JsonProperty("IsDefaultVersion")
             private String IsDefaultVersion;

@@ -75,11 +75,11 @@ public class DescribeVolumesResponse extends BaseResponseModel {
 
         /**硬盘的当前挂载信息*/
         @JsonProperty("Attachment")
-        private List<AttachmentDto> Attachment;
+        private List<VolumesDtoAttachmentDto> Attachment;
 
         @Data
         @ToString
-        public static class AttachmentDto {
+        public static class VolumesDtoAttachmentDto {
             /**硬盘当前挂载的实例ID（主机ID）*/
             @JsonProperty("InstanceId")
             private String InstanceId;

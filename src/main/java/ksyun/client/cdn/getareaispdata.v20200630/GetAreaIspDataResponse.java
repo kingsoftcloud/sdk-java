@@ -59,11 +59,11 @@ public class GetAreaIspDataResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Isps")
-        private List<IspsDto> Isps;
+        private List<DatasDtoIspsDto> Isps;
 
         @Data
         @ToString
-        public static class IspsDto {
+        public static class DatasDtoIspsDto {
             /***/
             @JsonProperty("Isp")
             private String Isp;

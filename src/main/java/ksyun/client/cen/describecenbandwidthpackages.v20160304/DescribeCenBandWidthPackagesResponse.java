@@ -75,11 +75,11 @@ public class DescribeCenBandWidthPackagesResponse extends BaseResponseModel {
 
         /**标签列表*/
         @JsonProperty("TagSet")
-        private List<TagSetDto> TagSet;
+        private List<CenBandWidthPackageSetDtoTagSetDto> TagSet;
 
         @Data
         @ToString
-        public static class TagSetDto {
+        public static class CenBandWidthPackageSetDtoTagSetDto {
             /**标签ID*/
             @JsonProperty("TagId")
             private Integer TagId;

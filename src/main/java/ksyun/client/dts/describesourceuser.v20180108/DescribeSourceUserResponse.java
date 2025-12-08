@@ -23,11 +23,11 @@ public class DescribeSourceUserResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("SourceUser")
-        private List<SourceUserDto> SourceUser;
+        private List<DataDtoSourceUserDto> SourceUser;
 
         @Data
         @ToString
-        public static class SourceUserDto {
+        public static class DataDtoSourceUserDto {
             /***/
             @JsonProperty("Username")
             private String Username;

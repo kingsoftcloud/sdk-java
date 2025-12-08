@@ -179,11 +179,11 @@ public class DescribeInstanceResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("ShardList")
-        private List<ShardListDto> ShardList;
+        private List<DataDtoShardListDto> ShardList;
 
         @Data
         @ToString
-        public static class ShardListDto {
+        public static class DataDtoShardListDto {
             /***/
             @JsonProperty("id")
             private String Id;
@@ -208,11 +208,11 @@ public class DescribeInstanceResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Area")
-        private AreaDto Area;
+        private DataDtoAreaDto Area;
 
         @Data
         @ToString
-        public static class AreaDto {
+        public static class DataDtoAreaDto {
             /***/
             @JsonProperty("Master")
             private String Master;

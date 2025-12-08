@@ -27,11 +27,11 @@ public class DescribePriceResponse extends BaseResponseModel {
     public static class PriceInfoDto {
         /***/
         @JsonProperty("InstancePrice")
-        private InstancePriceDto InstancePrice;
+        private PriceInfoDtoInstancePriceDto InstancePrice;
 
         @Data
         @ToString
-        public static class InstancePriceDto {
+        public static class PriceInfoDtoInstancePriceDto {
             /**优惠金额；例如原价100元，成交价80元，该参数即为20。示例值：20*/
             @JsonProperty("DiscountPrice")
             private Double DiscountPrice;
@@ -56,11 +56,11 @@ public class DescribePriceResponse extends BaseResponseModel {
 
         /**ebs盘价格*/
         @JsonProperty("EBSPrice")
-        private EBSPriceDto EBSPrice;
+        private PriceInfoDtoEBSPriceDto EBSPrice;
 
         @Data
         @ToString
-        public static class EBSPriceDto {
+        public static class PriceInfoDtoEBSPriceDto {
             /***/
             @JsonProperty("DiscountPrice")
             private Double DiscountPrice;

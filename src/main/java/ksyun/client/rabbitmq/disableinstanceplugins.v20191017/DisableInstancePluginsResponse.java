@@ -39,11 +39,11 @@ public class DisableInstancePluginsResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Plugins")
-        private List<PluginsDto> Plugins;
+        private List<DataDtoPluginsDto> Plugins;
 
         @Data
         @ToString
-        public static class PluginsDto {
+        public static class DataDtoPluginsDto {
             /***/
             @JsonProperty("PluginName")
             private String PluginName;

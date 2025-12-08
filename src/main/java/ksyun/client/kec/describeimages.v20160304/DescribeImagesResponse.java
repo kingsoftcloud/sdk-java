@@ -39,11 +39,11 @@ public class DescribeImagesResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("SnapshotSet")
-        private List<SnapshotSetDto> SnapshotSet;
+        private List<ImagesSetDtoSnapshotSetDto> SnapshotSet;
 
         @Data
         @ToString
-        public static class SnapshotSetDto {
+        public static class ImagesSetDtoSnapshotSetDto {
             /***/
             @JsonProperty("SnapshotId")
             private String SnapshotId;

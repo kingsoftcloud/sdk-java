@@ -59,11 +59,11 @@ public class DescribeSecurityGroupResponse extends BaseResponseModel {
 
         /**当前安全组规则列表*/
         @JsonProperty("Rules")
-        private List<RulesDto> Rules;
+        private List<DataDtoRulesDto> Rules;
 
         @Data
         @ToString
-        public static class RulesDto {
+        public static class DataDtoRulesDto {
             /**cidr规则*/
             @JsonProperty("Cidr")
             private String Cidr;
@@ -88,11 +88,11 @@ public class DescribeSecurityGroupResponse extends BaseResponseModel {
 
         /**当前安全组绑定实例列表*/
         @JsonProperty("Instances")
-        private List<InstancesDto> Instances;
+        private List<DataDtoInstancesDto> Instances;
 
         @Data
         @ToString
-        public static class InstancesDto {
+        public static class DataDtoInstancesDto {
             /**实例ID*/
             @JsonProperty("Id")
             private String Id;
@@ -107,11 +107,11 @@ public class DescribeSecurityGroupResponse extends BaseResponseModel {
 
             /**节点ip信息*/
             @JsonProperty("Addresses")
-            private List<AddressesDto> Addresses;
+            private List<DataDtoInstancesDtoAddressesDto> Addresses;
 
             @Data
             @ToString
-            public static class AddressesDto {
+            public static class DataDtoInstancesDtoAddressesDto {
                 /**ip地址*/
                 @JsonProperty("Host")
                 private String Host;

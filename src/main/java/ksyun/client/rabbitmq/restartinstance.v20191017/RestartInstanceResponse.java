@@ -35,11 +35,11 @@ public class RestartInstanceResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("Instances")
-        private List<InstancesDto> Instances;
+        private List<DataDtoInstancesDto> Instances;
 
         @Data
         @ToString
-        public static class InstancesDto {
+        public static class DataDtoInstancesDto {
             /***/
             @JsonProperty("InstanceId")
             private String InstanceId;

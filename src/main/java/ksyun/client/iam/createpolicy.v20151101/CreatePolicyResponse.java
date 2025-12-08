@@ -23,11 +23,11 @@ public class CreatePolicyResponse extends BaseResponseModel {
     public static class CreatePolicyResultDto {
         /***/
         @JsonProperty("Policy")
-        private PolicyDto Policy;
+        private CreatePolicyResultDtoPolicyDto Policy;
 
         @Data
         @ToString
-        public static class PolicyDto {
+        public static class CreatePolicyResultDtoPolicyDto {
             /***/
             @JsonProperty("AttachmentCount")
             private String AttachmentCount;

@@ -47,11 +47,11 @@ public class DescribeEpcForClusterResponse extends BaseResponseModel {
 
         /**EPC实例信息*/
         @JsonProperty("EpcInstancePara")
-        private EpcInstanceParaDto EpcInstancePara;
+        private InstanceSetDtoEpcInstanceParaDto EpcInstancePara;
 
         @Data
         @ToString
-        public static class EpcInstanceParaDto {
+        public static class InstanceSetDtoEpcInstanceParaDto {
             /**实例所属项目ID*/
             @JsonProperty("ProjectId")
             private Integer ProjectId;
@@ -62,11 +62,11 @@ public class DescribeEpcForClusterResponse extends BaseResponseModel {
 
             /**CPU信息*/
             @JsonProperty("Cpu")
-            private CpuDto Cpu;
+            private InstanceSetDtoEpcInstanceParaDtoCpuDto Cpu;
 
             @Data
             @ToString
-            public static class CpuDto {
+            public static class InstanceSetDtoEpcInstanceParaDtoCpuDto {
                 /**CPU型号*/
                 @JsonProperty("Model")
                 private String Model;
@@ -91,11 +91,11 @@ public class DescribeEpcForClusterResponse extends BaseResponseModel {
 
             /**GPU信息*/
             @JsonProperty("Gpu")
-            private GpuDto Gpu;
+            private InstanceSetDtoEpcInstanceParaDtoGpuDto Gpu;
 
             @Data
             @ToString
-            public static class GpuDto {
+            public static class InstanceSetDtoEpcInstanceParaDtoGpuDto {
                 /**GPU型号*/
                 @JsonProperty("Model")
                 private String Model;
@@ -116,11 +116,11 @@ public class DescribeEpcForClusterResponse extends BaseResponseModel {
 
             /**磁盘信息*/
             @JsonProperty("DiskSet")
-            private List<DiskSetDto> DiskSet;
+            private List<InstanceSetDtoEpcInstanceParaDtoDiskSetDto> DiskSet;
 
             @Data
             @ToString
-            public static class DiskSetDto {
+            public static class InstanceSetDtoEpcInstanceParaDtoDiskSetDto {
                 /**磁盘类型，枚举值：System（系统盘） 、Data（数据盘）*/
                 @JsonProperty("DiskType")
                 private String DiskType;
@@ -150,11 +150,11 @@ public class DescribeEpcForClusterResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("NetworkInterfaceSet")
-            private List<NetworkInterfaceSetDto> NetworkInterfaceSet;
+            private List<InstanceSetDtoEpcInstanceParaDtoNetworkInterfaceSetDto> NetworkInterfaceSet;
 
             @Data
             @ToString
-            public static class NetworkInterfaceSetDto {
+            public static class InstanceSetDtoEpcInstanceParaDtoNetworkInterfaceSetDto {
                 /**网卡id*/
                 @JsonProperty("NetworkInterfaceId")
                 private String NetworkInterfaceId;
@@ -177,11 +177,11 @@ public class DescribeEpcForClusterResponse extends BaseResponseModel {
 
                 /**安全组信息*/
                 @JsonProperty("SecurityGroupSet")
-                private List<SecurityGroupSetDto> SecurityGroupSet;
+                private List<InstanceSetDtoEpcInstanceParaDtoNetworkInterfaceSetDtoSecurityGroupSetDto> SecurityGroupSet;
 
                 @Data
                 @ToString
-                public static class SecurityGroupSetDto {
+                public static class InstanceSetDtoEpcInstanceParaDtoNetworkInterfaceSetDtoSecurityGroupSetDto {
                     /**安全组的ID*/
                     @JsonProperty("SecurityGroupId")
                     private String SecurityGroupId;

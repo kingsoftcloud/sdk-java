@@ -51,11 +51,11 @@ public class DescribeEpcRaidAttributesResponse extends BaseResponseModel {
 
         /**磁盘信息*/
         @JsonProperty("DiskSet")
-        private List<DiskSetDto> DiskSet;
+        private List<EpcRaidAttributeSetDtoDiskSetDto> DiskSet;
 
         @Data
         @ToString
-        public static class DiskSetDto {
+        public static class EpcRaidAttributeSetDtoDiskSetDto {
             /**磁盘*/
             @JsonProperty("DiskAttribute")
             private String DiskAttribute;

@@ -23,18 +23,18 @@ public class GetMetricStatisticsResponse extends BaseResponseModel {
     public static class GetMetricStatisticsResultDto {
         /**按照指定的统计方法获取的监控数据*/
         @JsonProperty("datapoints")
-        private DatapointsDto Datapoints;
+        private GetMetricStatisticsResultDtoDatapointsDto Datapoints;
 
         @Data
         @ToString
-        public static class DatapointsDto {
+        public static class GetMetricStatisticsResultDtoDatapointsDto {
             /***/
             @JsonProperty("member")
-            private List<MemberDto> Member;
+            private List<GetMetricStatisticsResultDtoDatapointsDtoMemberDto> Member;
 
             @Data
             @ToString
-            public static class MemberDto {
+            public static class GetMetricStatisticsResultDtoDatapointsDtoMemberDto {
             }
 
         }

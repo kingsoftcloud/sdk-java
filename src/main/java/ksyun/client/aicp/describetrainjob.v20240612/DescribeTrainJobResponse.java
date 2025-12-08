@@ -107,11 +107,11 @@ public class DescribeTrainJobResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("FrameworkReplicas")
-        private FrameworkReplicasDto FrameworkReplicas;
+        private TrainJobSetDtoFrameworkReplicasDto FrameworkReplicas;
 
         @Data
         @ToString
-        public static class FrameworkReplicasDto {
+        public static class TrainJobSetDtoFrameworkReplicasDto {
             /**1*/
             @JsonProperty("Master")
             private Integer Master;
@@ -156,11 +156,11 @@ public class DescribeTrainJobResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Status")
-        private StatusDto Status;
+        private TrainJobSetDtoStatusDto Status;
 
         @Data
         @ToString
-        public static class StatusDto {
+        public static class TrainJobSetDtoStatusDto {
             /**pending*/
             @JsonProperty("State")
             private String State;
@@ -205,15 +205,16 @@ public class DescribeTrainJobResponse extends BaseResponseModel {
 
         /**环境变量*/
         @JsonProperty("Envs")
-        private List<EnvsDto> Envs;
+        private List<TrainJobSetDtoEnvsDto> Envs;
 
         @Data
         @ToString
-        public static class EnvsDto {
+        public static class TrainJobSetDtoEnvsDto {
             /**ENV_TENSORBOARD_DIR*/
             @JsonProperty("Name")
             private String Name;
 
+            /**mnthjl*/
             @JsonProperty("Value")
             private String Value;
 
@@ -241,11 +242,11 @@ public class DescribeTrainJobResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("StorageConfigs")
-        private List<StorageConfigsDto> StorageConfigs;
+        private List<TrainJobSetDtoStorageConfigsDto> StorageConfigs;
 
         @Data
         @ToString
-        public static class StorageConfigsDto {
+        public static class TrainJobSetDtoStorageConfigsDto {
             /***/
             @JsonProperty("StorageConfigId")
             private String StorageConfigId;

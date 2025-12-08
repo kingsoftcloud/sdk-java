@@ -43,11 +43,11 @@ public class ModifyRuleGroupResponse extends BaseResponseModel {
 
         /**规则的信息*/
         @JsonProperty("RuleSet")
-        private List<RuleSetDto> RuleSet;
+        private List<RuleGroupDtoRuleSetDto> RuleSet;
 
         @Data
         @ToString
-        public static class RuleSetDto {
+        public static class RuleGroupDtoRuleSetDto {
             /**匹配规则类型(domain|url|method|sourceIp|header|query|cookie)*/
             @JsonProperty("RuleType")
             private String RuleType;
@@ -66,11 +66,11 @@ public class ModifyRuleGroupResponse extends BaseResponseModel {
 
             /**HTTP标头*/
             @JsonProperty("HeaderValue")
-            private List<HeaderValueDto> HeaderValue;
+            private List<RuleGroupDtoRuleSetDtoHeaderValueDto> HeaderValue;
 
             @Data
             @ToString
-            public static class HeaderValueDto {
+            public static class RuleGroupDtoRuleSetDtoHeaderValueDto {
                 /**HTTP标头,查询字符串的键值*/
                 @JsonProperty("Key")
                 private String Key;
@@ -83,11 +83,11 @@ public class ModifyRuleGroupResponse extends BaseResponseModel {
 
             /**查询字符串*/
             @JsonProperty("QueryValue")
-            private List<QueryValueDto> QueryValue;
+            private List<RuleGroupDtoRuleSetDtoQueryValueDto> QueryValue;
 
             @Data
             @ToString
-            public static class QueryValueDto {
+            public static class RuleGroupDtoRuleSetDtoQueryValueDto {
                 /**HTTP标头,查询字符串的键值*/
                 @JsonProperty("Key")
                 private String Key;
@@ -100,11 +100,11 @@ public class ModifyRuleGroupResponse extends BaseResponseModel {
 
             /**Cookie转发条件*/
             @JsonProperty("CookieValue")
-            private List<CookieValueDto> CookieValue;
+            private List<RuleGroupDtoRuleSetDtoCookieValueDto> CookieValue;
 
             @Data
             @ToString
-            public static class CookieValueDto {
+            public static class RuleGroupDtoRuleSetDtoCookieValueDto {
                 /**HTTP标头,查询字符串的键值*/
                 @JsonProperty("Key")
                 private String Key;
@@ -127,11 +127,11 @@ public class ModifyRuleGroupResponse extends BaseResponseModel {
 
         /**重写*/
         @JsonProperty("RewriteConfig")
-        private RewriteConfigDto RewriteConfig;
+        private RuleGroupDtoRewriteConfigDto RewriteConfig;
 
         @Data
         @ToString
-        public static class RewriteConfigDto {
+        public static class RuleGroupDtoRewriteConfigDto {
             /**重写的域名*/
             @JsonProperty("HttpHost")
             private String HttpHost;
@@ -148,11 +148,11 @@ public class ModifyRuleGroupResponse extends BaseResponseModel {
 
         /**返回固定响应信息*/
         @JsonProperty("FixedResponseConfig")
-        private FixedResponseConfigDto FixedResponseConfig;
+        private RuleGroupDtoFixedResponseConfigDto FixedResponseConfig;
 
         @Data
         @ToString
-        public static class FixedResponseConfigDto {
+        public static class RuleGroupDtoFixedResponseConfigDto {
             /**响应正文长度不能超过1000个字符，不支持中文字符*/
             @JsonProperty("Content")
             private String Content;

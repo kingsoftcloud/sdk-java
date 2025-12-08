@@ -23,11 +23,11 @@ public class DescribeInstanceDatabasesResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("InstanceDatabases")
-        private List<InstanceDatabasesDto> InstanceDatabases;
+        private List<DataDtoInstanceDatabasesDto> InstanceDatabases;
 
         @Data
         @ToString
-        public static class InstanceDatabasesDto {
+        public static class DataDtoInstanceDatabasesDto {
             /**数据库名称*/
             @JsonProperty("InstanceDatabaseName")
             private String InstanceDatabaseName;

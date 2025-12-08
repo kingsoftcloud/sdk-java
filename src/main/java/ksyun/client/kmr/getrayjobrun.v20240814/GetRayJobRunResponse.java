@@ -84,11 +84,11 @@ public class GetRayJobRunResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("RaySubmitData")
-        private RaySubmitDataDto RaySubmitData;
+        private DataDtoRaySubmitDataDto RaySubmitData;
 
         @Data
         @ToString
-        public static class RaySubmitDataDto {
+        public static class DataDtoRaySubmitDataDto {
             /**作业名称*/
             @JsonProperty("Name")
             private String Name;

@@ -27,11 +27,11 @@ public class DeleteSoImagesResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Error")
-        private ErrorDto Error;
+        private OperationDetailsDtoErrorDto Error;
 
         @Data
         @ToString
-        public static class ErrorDto {
+        public static class OperationDetailsDtoErrorDto {
             /***/
             @JsonProperty("Code")
             private String Code;

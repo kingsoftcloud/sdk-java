@@ -96,11 +96,11 @@ public class CreateEpcResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("DataVolumeSet")
-        private List<DataVolumeSetDto> DataVolumeSet;
+        private List<HostDtoDataVolumeSetDto> DataVolumeSet;
 
         @Data
         @ToString
-        public static class DataVolumeSetDto {
+        public static class HostDtoDataVolumeSetDto {
             /***/
             @JsonProperty("VolumeId")
             private String VolumeId;
@@ -157,11 +157,11 @@ public class CreateEpcResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("NetworkInterfaceAttributeSet")
-        private List<NetworkInterfaceAttributeSetDto> NetworkInterfaceAttributeSet;
+        private List<HostDtoNetworkInterfaceAttributeSetDto> NetworkInterfaceAttributeSet;
 
         @Data
         @ToString
-        public static class NetworkInterfaceAttributeSetDto {
+        public static class HostDtoNetworkInterfaceAttributeSetDto {
             /***/
             @JsonProperty("PrivateIpAddress")
             private String PrivateIpAddress;
@@ -172,11 +172,11 @@ public class CreateEpcResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("SecurityGroupSet")
-            private List<SecurityGroupSetDto> SecurityGroupSet;
+            private List<HostDtoNetworkInterfaceAttributeSetDtoSecurityGroupSetDto> SecurityGroupSet;
 
             @Data
             @ToString
-            public static class SecurityGroupSetDto {
+            public static class HostDtoNetworkInterfaceAttributeSetDtoSecurityGroupSetDto {
                 /***/
                 @JsonProperty("SecurityGroupId")
                 private String SecurityGroupId;
@@ -219,11 +219,11 @@ public class CreateEpcResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("DiskSet")
-        private List<DiskSetDto> DiskSet;
+        private List<HostDtoDiskSetDto> DiskSet;
 
         @Data
         @ToString
-        public static class DiskSetDto {
+        public static class HostDtoDiskSetDto {
             /***/
             @JsonProperty("DiskType")
             private String DiskType;
@@ -356,11 +356,11 @@ public class CreateEpcResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Cpu")
-        private CpuDto Cpu;
+        private HostDtoCpuDto Cpu;
 
         @Data
         @ToString
-        public static class CpuDto {
+        public static class HostDtoCpuDto {
             /***/
             @JsonProperty("Model")
             private String Model;
@@ -381,11 +381,11 @@ public class CreateEpcResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Gpu")
-        private GpuDto Gpu;
+        private HostDtoGpuDto Gpu;
 
         @Data
         @ToString
-        public static class GpuDto {
+        public static class HostDtoGpuDto {
             /***/
             @JsonProperty("Model")
             private String Model;
@@ -410,11 +410,11 @@ public class CreateEpcResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Roces")
-        private List<RocesDto> Roces;
+        private List<HostDtoRocesDto> Roces;
 
         @Data
         @ToString
-        public static class RocesDto {
+        public static class HostDtoRocesDto {
             /***/
             @JsonProperty("Ip")
             private String Ip;

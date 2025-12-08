@@ -23,18 +23,18 @@ public class DescribeRegionConfigResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("RegionConfig")
-        private RegionConfigDto RegionConfig;
+        private DataDtoRegionConfigDto RegionConfig;
 
         @Data
         @ToString
-        public static class RegionConfigDto {
+        public static class DataDtoRegionConfigDto {
             /***/
             @JsonProperty("SubscriptionKrds")
-            private List<SubscriptionKrdsDto> SubscriptionKrds;
+            private List<DataDtoRegionConfigDtoSubscriptionKrdsDto> SubscriptionKrds;
 
             @Data
             @ToString
-            public static class SubscriptionKrdsDto {
+            public static class DataDtoRegionConfigDtoSubscriptionKrdsDto {
                 /***/
                 @JsonProperty("RegionCode")
                 private String RegionCode;
@@ -63,11 +63,11 @@ public class DescribeRegionConfigResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("ClusterKcs")
-            private List<ClusterKcsDto> ClusterKcs;
+            private List<DataDtoRegionConfigDtoClusterKcsDto> ClusterKcs;
 
             @Data
             @ToString
-            public static class ClusterKcsDto {
+            public static class DataDtoRegionConfigDtoClusterKcsDto {
                 /***/
                 @JsonProperty("RegionCode")
                 private String RegionCode;
@@ -96,11 +96,11 @@ public class DescribeRegionConfigResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("Kpg")
-            private List<KpgDto> Kpg;
+            private List<DataDtoRegionConfigDtoKpgDto> Kpg;
 
             @Data
             @ToString
-            public static class KpgDto {
+            public static class DataDtoRegionConfigDtoKpgDto {
                 /***/
                 @JsonProperty("RegionCode")
                 private String RegionCode;
@@ -129,11 +129,11 @@ public class DescribeRegionConfigResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("PublicPg")
-            private List<PublicPgDto> PublicPg;
+            private List<DataDtoRegionConfigDtoPublicPgDto> PublicPg;
 
             @Data
             @ToString
-            public static class PublicPgDto {
+            public static class DataDtoRegionConfigDtoPublicPgDto {
                 /***/
                 @JsonProperty("RegionCode")
                 private String RegionCode;
@@ -162,11 +162,11 @@ public class DescribeRegionConfigResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("Krds")
-            private List<KrdsDto> Krds;
+            private List<DataDtoRegionConfigDtoKrdsDto> Krds;
 
             @Data
             @ToString
-            public static class KrdsDto {
+            public static class DataDtoRegionConfigDtoKrdsDto {
                 /***/
                 @JsonProperty("RegionCode")
                 private String RegionCode;
@@ -195,11 +195,11 @@ public class DescribeRegionConfigResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("Kmgo")
-            private List<KmgoDto> Kmgo;
+            private List<DataDtoRegionConfigDtoKmgoDto> Kmgo;
 
             @Data
             @ToString
-            public static class KmgoDto {
+            public static class DataDtoRegionConfigDtoKmgoDto {
                 /***/
                 @JsonProperty("RegionCode")
                 private String RegionCode;
@@ -228,11 +228,11 @@ public class DescribeRegionConfigResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("PublicRedis")
-            private List<PublicRedisDto> PublicRedis;
+            private List<DataDtoRegionConfigDtoPublicRedisDto> PublicRedis;
 
             @Data
             @ToString
-            public static class PublicRedisDto {
+            public static class DataDtoRegionConfigDtoPublicRedisDto {
                 /***/
                 @JsonProperty("RegionCode")
                 private String RegionCode;
@@ -261,11 +261,11 @@ public class DescribeRegionConfigResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("Kcs")
-            private List<KcsDto> Kcs;
+            private List<DataDtoRegionConfigDtoKcsDto> Kcs;
 
             @Data
             @ToString
-            public static class KcsDto {
+            public static class DataDtoRegionConfigDtoKcsDto {
                 /***/
                 @JsonProperty("RegionCode")
                 private String RegionCode;
@@ -294,11 +294,11 @@ public class DescribeRegionConfigResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("Public")
-            private List<PublicFieldDto> PublicField;
+            private List<DataDtoRegionConfigDtoPublicFieldDto> PublicField;
 
             @Data
             @ToString
-            public static class PublicFieldDto {
+            public static class DataDtoRegionConfigDtoPublicFieldDto {
                 /***/
                 @JsonProperty("RegionCode")
                 private String RegionCode;
@@ -327,11 +327,11 @@ public class DescribeRegionConfigResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("PublicMgo")
-            private List<PublicMgoDto> PublicMgo;
+            private List<DataDtoRegionConfigDtoPublicMgoDto> PublicMgo;
 
             @Data
             @ToString
-            public static class PublicMgoDto {
+            public static class DataDtoRegionConfigDtoPublicMgoDto {
                 /***/
                 @JsonProperty("RegionCode")
                 private String RegionCode;
@@ -360,11 +360,11 @@ public class DescribeRegionConfigResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("PublicClusterRedis")
-            private List<PublicClusterRedisDto> PublicClusterRedis;
+            private List<DataDtoRegionConfigDtoPublicClusterRedisDto> PublicClusterRedis;
 
             @Data
             @ToString
-            public static class PublicClusterRedisDto {
+            public static class DataDtoRegionConfigDtoPublicClusterRedisDto {
                 /***/
                 @JsonProperty("RegionCode")
                 private String RegionCode;

@@ -23,11 +23,11 @@ public class DescribeBackupOverviewResponse extends BaseResponseModel {
     public static class BackupOverviewDto {
         /**总备份*/
         @JsonProperty("Total")
-        private TotalDto Total;
+        private BackupOverviewDtoTotalDto Total;
 
         @Data
         @ToString
-        public static class TotalDto {
+        public static class BackupOverviewDtoTotalDto {
             /**日志备份+数据备份的总占用空间*/
             @JsonProperty("Size")
             private String Size;
@@ -52,11 +52,11 @@ public class DescribeBackupOverviewResponse extends BaseResponseModel {
 
         /**数据备份*/
         @JsonProperty("Backup")
-        private BackupDto Backup;
+        private BackupOverviewDtoBackupDto Backup;
 
         @Data
         @ToString
-        public static class BackupDto {
+        public static class BackupOverviewDtoBackupDto {
             /**数据备份的总空间*/
             @JsonProperty("Size")
             private String Size;
@@ -85,11 +85,11 @@ public class DescribeBackupOverviewResponse extends BaseResponseModel {
 
         /**日志备份*/
         @JsonProperty("Binlog")
-        private BinlogDto Binlog;
+        private BackupOverviewDtoBinlogDto Binlog;
 
         @Data
         @ToString
-        public static class BinlogDto {
+        public static class BackupOverviewDtoBinlogDto {
             /**日志备份总占用空间*/
             @JsonProperty("Size")
             private String Size;
@@ -102,11 +102,11 @@ public class DescribeBackupOverviewResponse extends BaseResponseModel {
 
         /**已删除实例备份*/
         @JsonProperty("Deleted")
-        private DeletedDto Deleted;
+        private BackupOverviewDtoDeletedDto Deleted;
 
         @Data
         @ToString
-        public static class DeletedDto {
+        public static class BackupOverviewDtoDeletedDto {
             /**已删除删除手动备份的总占用空间*/
             @JsonProperty("Size")
             private String Size;

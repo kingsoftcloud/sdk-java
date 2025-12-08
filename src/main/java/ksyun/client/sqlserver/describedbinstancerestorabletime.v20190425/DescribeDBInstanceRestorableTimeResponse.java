@@ -23,11 +23,11 @@ public class DescribeDBInstanceRestorableTimeResponse extends BaseResponseModel 
     public static class DataDto {
         /***/
         @JsonProperty("RestorableTime")
-        private RestorableTimeDto RestorableTime;
+        private DataDtoRestorableTimeDto RestorableTime;
 
         @Data
         @ToString
-        public static class RestorableTimeDto {
+        public static class DataDtoRestorableTimeDto {
             /**可以备份的时间区间下限
 
 */

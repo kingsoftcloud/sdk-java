@@ -39,11 +39,11 @@ public class ListWorkspacesResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Workspaces")
-        private List<WorkspacesDto> Workspaces;
+        private List<DataDtoWorkspacesDto> Workspaces;
 
         @Data
         @ToString
-        public static class WorkspacesDto {
+        public static class DataDtoWorkspacesDto {
             /**工作空间ID*/
             @JsonProperty("WorkspaceId")
             private String WorkspaceId;

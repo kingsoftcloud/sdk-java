@@ -23,11 +23,11 @@ public class DescribeDBInstanceExtensionsResponse extends BaseResponseModel {
     public static class DataDto {
         /**已安装插件列表 */
         @JsonProperty("Installed")
-        private List<InstalledDto> Installed;
+        private List<DataDtoInstalledDto> Installed;
 
         @Data
         @ToString
-        public static class InstalledDto {
+        public static class DataDtoInstalledDto {
             /**插件描述*/
             @JsonProperty("Comment")
             private String Comment;
@@ -48,11 +48,11 @@ public class DescribeDBInstanceExtensionsResponse extends BaseResponseModel {
 
         /**未安装插件列表*/
         @JsonProperty("Uninstalled")
-        private List<UninstalledDto> Uninstalled;
+        private List<DataDtoUninstalledDto> Uninstalled;
 
         @Data
         @ToString
-        public static class UninstalledDto {
+        public static class DataDtoUninstalledDto {
             /**插件描述*/
             @JsonProperty("Comment")
             private String Comment;

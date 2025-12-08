@@ -111,11 +111,11 @@ public class DescribeAddressesResponse extends BaseResponseModel {
 
         /**资源所绑定的标签信息,仅查询接口且存在标签筛选条件或者IsContainTag为True时才会返回此值(会影响接口速度)*/
         @JsonProperty("TagSet")
-        private List<TagSetDto> TagSet;
+        private List<AddressesSetDtoTagSetDto> TagSet;
 
         @Data
         @ToString
-        public static class TagSetDto {
+        public static class AddressesSetDtoTagSetDto {
             /**资源ID*/
             @JsonProperty("ResourceUuid")
             private String ResourceUuid;

@@ -59,11 +59,11 @@ public class DescribeRulesResponse extends BaseResponseModel {
 
         /**健康检查的信息*/
         @JsonProperty("HealthCheck")
-        private HealthCheckDto HealthCheck;
+        private RuleSetDtoHealthCheckDto HealthCheck;
 
         @Data
         @ToString
-        public static class HealthCheckDto {
+        public static class RuleSetDtoHealthCheckDto {
             /**HTTP类型健康检查的域名*/
             @JsonProperty("HostName")
             private String HostName;
@@ -96,11 +96,11 @@ public class DescribeRulesResponse extends BaseResponseModel {
 
         /**会话保持的信息*/
         @JsonProperty("Session")
-        private SessionDto Session;
+        private RuleSetDtoSessionDto Session;
 
         @Data
         @ToString
-        public static class SessionDto {
+        public static class RuleSetDtoSessionDto {
             /**会话保持的状态*/
             @JsonProperty("SessionState")
             private String SessionState;
@@ -121,11 +121,11 @@ public class DescribeRulesResponse extends BaseResponseModel {
 
         /**后端服务的信息*/
         @JsonProperty("BackendServerSet")
-        private List<BackendServerSetDto> BackendServerSet;
+        private List<RuleSetDtoBackendServerSetDto> BackendServerSet;
 
         @Data
         @ToString
-        public static class BackendServerSetDto {
+        public static class RuleSetDtoBackendServerSetDto {
             /**后端服务的IP*/
             @JsonProperty("BackendServerIp")
             private String BackendServerIp;

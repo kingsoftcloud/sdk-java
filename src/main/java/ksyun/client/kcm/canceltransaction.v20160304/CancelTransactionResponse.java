@@ -27,11 +27,11 @@ public class CancelTransactionResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Certificate")
-        private CertificateDto Certificate;
+        private CancleTransactionResponseDtoCertificateDto Certificate;
 
         @Data
         @ToString
-        public static class CertificateDto {
+        public static class CancleTransactionResponseDtoCertificateDto {
             /**证书ID*/
             @JsonProperty("CertificateId")
             private String CertificateId;

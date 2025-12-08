@@ -23,11 +23,11 @@ public class UpdateLoginProfileResponse extends BaseResponseModel {
     public static class CreateLoginProfileResultDto {
         /***/
         @JsonProperty("LoginProfile")
-        private LoginProfileDto LoginProfile;
+        private CreateLoginProfileResultDtoLoginProfileDto LoginProfile;
 
         @Data
         @ToString
-        public static class LoginProfileDto {
+        public static class CreateLoginProfileResultDtoLoginProfileDto {
             /***/
             @JsonProperty("UserName")
             private String UserName;

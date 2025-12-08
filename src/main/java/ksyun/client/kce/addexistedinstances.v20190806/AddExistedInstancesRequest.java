@@ -35,17 +35,17 @@ public class AddExistedInstancesRequest{
         private List<String> KecParaList;
 
         /**节点高级设置*/
-        private AdvancedSettingDto AdvancedSettingList;
+        private ExistedInstanceKecSetDtoAdvancedSettingDto AdvancedSettingList;
 
         @Data
         @ToString
-        public static class AdvancedSettingDto {
+        public static class ExistedInstanceKecSetDtoAdvancedSettingDto {
             /**数据盘挂载设置，仅针对于第一块数据盘生效*/
-            private DataDiskDto DataDiskList;
+            private ExistedInstanceKecSetDtoAdvancedSettingDtoDataDiskDto DataDiskList;
 
             @Data
             @ToString
-            public static class DataDiskDto {
+            public static class ExistedInstanceKecSetDtoAdvancedSettingDtoDataDiskDto {
                 /**是否对数据盘格式化并挂载，默认值；true。若此字段填写false，则 FileSystem 和 MountTarget字段不生效*/
                 @KsYunField(name="AutoFormatAndMount")
                 private Boolean AutoFormatAndMount;
@@ -89,11 +89,11 @@ Kubernetes版本≥1.24时，有效值：
 
             /**节点加入集群时预置的标签*/
             @KsYunField(name="Label",type=2)
-            private List<LabelDto> LabelList;
+            private List<ExistedInstanceKecSetDtoAdvancedSettingDtoLabelDto> LabelList;
 
             @Data
             @ToString
-            public static class LabelDto {
+            public static class ExistedInstanceKecSetDtoAdvancedSettingDtoLabelDto {
                 /**标签键，校验规则：不超过63个字符，只能包含字母、数字及分隔符("-"、"_"、"."、"/")，且必须以字母、数字开头和结尾*/
                 @KsYunField(name="Key")
                 private String Key;
@@ -105,18 +105,18 @@ Kubernetes版本≥1.24时，有效值：
             }
 
             /**自定义节点上k8s组件的参数*/
-            private ExtraArgDto ExtraArgList;
+            private ExistedInstanceKecSetDtoAdvancedSettingDtoExtraArgDto ExtraArgList;
 
             @Data
             @ToString
-            public static class ExtraArgDto {
+            public static class ExistedInstanceKecSetDtoAdvancedSettingDtoExtraArgDto {
                 /**用户自定义kubelet的参数*/
                 @KsYunField(name="Kubelet",type=2)
-                private List<KubeletDto> KubeletList;
+                private List<ExistedInstanceKecSetDtoAdvancedSettingDtoExtraArgDtoKubeletDto> KubeletList;
 
                 @Data
                 @ToString
-                public static class KubeletDto {
+                public static class ExistedInstanceKecSetDtoAdvancedSettingDtoExtraArgDtoKubeletDto {
                     /**用户自定义kubelet的参数，格式k1=v1，如： --feature-gates=EphemeralContainers=true*/
                     @KsYunField(name="CustomArg")
                     private String CustomArg;
@@ -135,11 +135,11 @@ Kubernetes版本≥1.24时，有效值：
 
             /**节点加入集群时预置污点，匹配污点容忍进行调度*/
             @KsYunField(name="Taints",type=2)
-            private List<TaintsDto> TaintsList;
+            private List<ExistedInstanceKecSetDtoAdvancedSettingDtoTaintsDto> TaintsList;
 
             @Data
             @ToString
-            public static class TaintsDto {
+            public static class ExistedInstanceKecSetDtoAdvancedSettingDtoTaintsDto {
                 /**污点名称，校验规则：不超过253个字符，只能包含字母、数字及分隔符("-"、"_"、"."、"/")，且必须以字母、数字开头和结尾*/
                 @KsYunField(name="Key")
                 private String Key;

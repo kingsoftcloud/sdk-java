@@ -59,11 +59,11 @@ public class DescribeScalingGroupResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("SlbConfigSet")
-        private List<SlbConfigSetDto> SlbConfigSet;
+        private List<ScalingGroupSetDtoSlbConfigSetDto> SlbConfigSet;
 
         @Data
         @ToString
-        public static class SlbConfigSetDto {
+        public static class ScalingGroupSetDtoSlbConfigSetDto {
             /***/
             @JsonProperty("SlbId")
             private String SlbId;

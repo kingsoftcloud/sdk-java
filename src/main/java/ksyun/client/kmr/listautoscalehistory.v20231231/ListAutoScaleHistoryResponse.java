@@ -39,11 +39,11 @@ public class ListAutoScaleHistoryResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("List")
-        private List<ListDto> List;
+        private List<DataDtoListDto> List;
 
         @Data
         @ToString
-        public static class ListDto {
+        public static class DataDtoListDto {
             /**记录ID*/
             @JsonProperty("Id")
             private Integer Id;

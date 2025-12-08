@@ -75,11 +75,11 @@ public class DescribeRoutesResponse extends BaseResponseModel {
 
         /**路由的下一跳*/
         @JsonProperty("NextHopSet")
-        private List<NextHopSetDto> NextHopSet;
+        private List<RouteSetDtoNextHopSetDto> NextHopSet;
 
         @Data
         @ToString
-        public static class NextHopSetDto {
+        public static class RouteSetDtoNextHopSetDto {
             /**下一跳实例的ID*/
             @JsonProperty("GatewayId")
             private String GatewayId;

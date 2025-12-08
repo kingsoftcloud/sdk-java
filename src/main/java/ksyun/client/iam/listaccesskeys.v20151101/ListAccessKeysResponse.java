@@ -23,18 +23,18 @@ public class ListAccessKeysResponse extends BaseResponseModel {
     public static class ListAccessKeyResultDto {
         /***/
         @JsonProperty("AccessKeyMetadata")
-        private AccessKeyMetadataDto AccessKeyMetadata;
+        private ListAccessKeyResultDtoAccessKeyMetadataDto AccessKeyMetadata;
 
         @Data
         @ToString
-        public static class AccessKeyMetadataDto {
+        public static class ListAccessKeyResultDtoAccessKeyMetadataDto {
             /***/
             @JsonProperty("member")
-            private List<MemberDto> Member;
+            private List<ListAccessKeyResultDtoAccessKeyMetadataDtoMemberDto> Member;
 
             @Data
             @ToString
-            public static class MemberDto {
+            public static class ListAccessKeyResultDtoAccessKeyMetadataDtoMemberDto {
                 /***/
                 @JsonProperty("UserName")
                 private String UserName;

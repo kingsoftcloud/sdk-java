@@ -47,11 +47,11 @@ public class GetSrcDomainHttpCodeDataResponse extends BaseResponseModel {
     public static class DatasDto {
         /***/
         @JsonProperty("Condition")
-        private ConditionDto Condition;
+        private DatasDtoConditionDto Condition;
 
         @Data
         @ToString
-        public static class ConditionDto {
+        public static class DatasDtoConditionDto {
             /***/
             @JsonProperty("Domains")
             private String Domains;
@@ -60,11 +60,11 @@ public class GetSrcDomainHttpCodeDataResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("httpcodeData")
-        private List<HttpcodeDataDto> HttpcodeData;
+        private List<DatasDtoHttpcodeDataDto> HttpcodeData;
 
         @Data
         @ToString
-        public static class HttpcodeDataDto {
+        public static class DatasDtoHttpcodeDataDto {
             /***/
             @JsonProperty("CodeType")
             private String CodeType;

@@ -50,11 +50,11 @@ DeleteImage*/
 
         /**自定义Header*/
         @KsYunField(name="Header",type=2)
-        private List<HeaderDto> HeaderList;
+        private List<TriggerDtoHeaderDto> HeaderList;
 
         @Data
         @ToString
-        public static class HeaderDto {
+        public static class TriggerDtoHeaderDto {
             /***/
             @KsYunField(name="Key")
             private String Key;

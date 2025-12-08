@@ -23,11 +23,11 @@ public class CreateSecurityGroupResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("SecurityGroups")
-        private List<SecurityGroupsDto> SecurityGroups;
+        private List<DataDtoSecurityGroupsDto> SecurityGroups;
 
         @Data
         @ToString
-        public static class SecurityGroupsDto {
+        public static class DataDtoSecurityGroupsDto {
             /***/
             @JsonProperty("SecurityGroupId")
             private String SecurityGroupId;
@@ -54,11 +54,11 @@ public class CreateSecurityGroupResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("SecurityGroupRules")
-            private List<SecurityGroupRulesDto> SecurityGroupRules;
+            private List<DataDtoSecurityGroupsDtoSecurityGroupRulesDto> SecurityGroupRules;
 
             @Data
             @ToString
-            public static class SecurityGroupRulesDto {
+            public static class DataDtoSecurityGroupsDtoSecurityGroupRulesDto {
                 /***/
                 @JsonProperty("SecurityGroupRuleId")
                 private String SecurityGroupRuleId;

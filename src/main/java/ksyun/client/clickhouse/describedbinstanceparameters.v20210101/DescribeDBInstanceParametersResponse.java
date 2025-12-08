@@ -35,11 +35,11 @@ public class DescribeDBInstanceParametersResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("configuration")
-        private ConfigurationDto Configuration;
+        private DataDtoConfigurationDto Configuration;
 
         @Data
         @ToString
-        public static class ConfigurationDto {
+        public static class DataDtoConfigurationDto {
             /***/
             @JsonProperty("description")
             private String Description;
@@ -54,11 +54,11 @@ public class DescribeDBInstanceParametersResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("values")
-            private ValuesDto Values;
+            private DataDtoConfigurationDtoValuesDto Values;
 
             @Data
             @ToString
-            public static class ValuesDto {
+            public static class DataDtoConfigurationDtoValuesDto {
                 /***/
                 @JsonProperty("compile_aggregate_expressions")
                 private String Compile_aggregate_expressions;

@@ -91,11 +91,11 @@ public class DescribeModelsResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("SystemDisk")
-        private SystemDiskDto SystemDisk;
+        private ModelSetDtoSystemDiskDto SystemDisk;
 
         @Data
         @ToString
-        public static class SystemDiskDto {
+        public static class ModelSetDtoSystemDiskDto {
             /***/
             @JsonProperty("DiskType")
             private String DiskType;

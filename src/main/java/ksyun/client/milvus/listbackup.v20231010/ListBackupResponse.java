@@ -82,11 +82,11 @@ FAILED: '异常'
 
         /**备份维度详细信息*/
         @JsonProperty("Collections")
-        private List<CollectionsDto> Collections;
+        private List<DataDtoCollectionsDto> Collections;
 
         @Data
         @ToString
-        public static class CollectionsDto {
+        public static class DataDtoCollectionsDto {
             /**db名称*/
             @JsonProperty("DbName")
             private String DbName;

@@ -23,11 +23,11 @@ public class DescribeDTSParameterResponse extends BaseResponseModel {
     public static class DataDto {
         /**参数列表*/
         @JsonProperty("DTSParameter")
-        private List<DTSParameterDto> DTSParameter;
+        private List<DataDtoDTSParameterDto> DTSParameter;
 
         @Data
         @ToString
-        public static class DTSParameterDto {
+        public static class DataDtoDTSParameterDto {
             /**参数名*/
             @JsonProperty("DBParameter")
             private String DBParameter;

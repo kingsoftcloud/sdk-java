@@ -23,11 +23,11 @@ public class CreateUserResponse extends BaseResponseModel {
     public static class CreateUserResultDto {
         /***/
         @JsonProperty("User")
-        private UserDto User;
+        private CreateUserResultDtoUserDto User;
 
         @Data
         @ToString
-        public static class UserDto {
+        public static class CreateUserResultDtoUserDto {
             /***/
             @JsonProperty("UserId")
             private String UserId;

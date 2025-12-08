@@ -31,22 +31,22 @@ public class DescribeNodeComponentsResponse extends BaseResponseModel {
 
         /**节点组件列表*/
         @JsonProperty("NodeComponents")
-        private List<NodeComponentsDto> NodeComponents;
+        private List<DataDtoNodeComponentsDto> NodeComponents;
 
         @Data
         @ToString
-        public static class NodeComponentsDto {
+        public static class DataDtoNodeComponentsDto {
             /**节点ID*/
             @JsonProperty("NodeId")
             private String NodeId;
 
             /***/
             @JsonProperty("ComponentStatus")
-            private List<ComponentStatusDto> ComponentStatus;
+            private List<DataDtoNodeComponentsDtoComponentStatusDto> ComponentStatus;
 
             @Data
             @ToString
-            public static class ComponentStatusDto {
+            public static class DataDtoNodeComponentsDtoComponentStatusDto {
                 /**组件类型*/
                 @JsonProperty("Type")
                 private String Type;

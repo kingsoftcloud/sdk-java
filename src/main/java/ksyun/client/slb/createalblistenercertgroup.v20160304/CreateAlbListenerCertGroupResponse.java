@@ -35,11 +35,11 @@ public class CreateAlbListenerCertGroupResponse extends BaseResponseModel {
 
         /**证书的信息*/
         @JsonProperty("AlbListenerCertSet")
-        private List<AlbListenerCertSetDto> AlbListenerCertSet;
+        private List<AlbListenerCertGroupDtoAlbListenerCertSetDto> AlbListenerCertSet;
 
         @Data
         @ToString
-        public static class AlbListenerCertSetDto {
+        public static class AlbListenerCertGroupDtoAlbListenerCertSetDto {
             /**创建时间*/
             @JsonProperty("CreateTime")
             private String CreateTime;

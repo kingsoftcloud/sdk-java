@@ -39,11 +39,11 @@ public class DescribeTriggersResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("triggers")
-        private List<TriggersDto> Triggers;
+        private List<DataDtoTriggersDto> Triggers;
 
         @Data
         @ToString
-        public static class TriggersDto {
+        public static class DataDtoTriggersDto {
             /**触发器 ID*/
             @JsonProperty("Id")
             private String Id;
@@ -70,11 +70,11 @@ public class DescribeTriggersResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("TriggerDesc")
-            private TriggerDescDto TriggerDesc;
+            private DataDtoTriggersDtoTriggerDescDto TriggerDesc;
 
             @Data
             @ToString
-            public static class TriggerDescDto {
+            public static class DataDtoTriggersDtoTriggerDescDto {
                 /**是否开启验证*/
                 @JsonProperty("AuthRequired")
                 private Boolean AuthRequired;

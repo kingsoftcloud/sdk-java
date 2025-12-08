@@ -27,11 +27,11 @@ public class DescribeInstanceFamilysResponse extends BaseResponseModel {
     public static class InstanceFamilySetDto {
         /***/
         @JsonProperty("AvailabilityZoneSet")
-        private List<AvailabilityZoneSetDto> AvailabilityZoneSet;
+        private List<InstanceFamilySetDtoAvailabilityZoneSetDto> AvailabilityZoneSet;
 
         @Data
         @ToString
-        public static class AvailabilityZoneSetDto {
+        public static class InstanceFamilySetDtoAvailabilityZoneSetDto {
             /***/
             @JsonProperty("AzCode")
             private String AzCode;

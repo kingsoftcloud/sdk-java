@@ -52,11 +52,11 @@ public class DescribeClusterInstanceResponse extends BaseResponseModel {
 
         /**虚拟机节点配置信息*/
         @JsonProperty("KecInstancePara")
-        private KecInstanceParaDto KecInstancePara;
+        private InstanceSetDtoKecInstanceParaDto KecInstancePara;
 
         @Data
         @ToString
-        public static class KecInstanceParaDto {
+        public static class InstanceSetDtoKecInstanceParaDto {
             /**实例所属项目ID*/
             @JsonProperty("ProjectId")
             private Integer ProjectId;
@@ -67,11 +67,11 @@ public class DescribeClusterInstanceResponse extends BaseResponseModel {
 
             /**节点的配置信息*/
             @JsonProperty("InstanceConfigure")
-            private InstanceConfigureDto InstanceConfigure;
+            private InstanceSetDtoKecInstanceParaDtoInstanceConfigureDto InstanceConfigure;
 
             @Data
             @ToString
-            public static class InstanceConfigureDto {
+            public static class InstanceSetDtoKecInstanceParaDtoInstanceConfigureDto {
                 /**cpu核数*/
                 @JsonProperty("VCPU")
                 private Integer VCPU;
@@ -100,11 +100,11 @@ public class DescribeClusterInstanceResponse extends BaseResponseModel {
 
             /**系统盘信息*/
             @JsonProperty("SystemDisk")
-            private SystemDiskDto SystemDisk;
+            private InstanceSetDtoKecInstanceParaDtoSystemDiskDto SystemDisk;
 
             @Data
             @ToString
-            public static class SystemDiskDto {
+            public static class InstanceSetDtoKecInstanceParaDtoSystemDiskDto {
                 /**系统盘类型
 
 - Local_SSD
@@ -152,11 +152,11 @@ public class DescribeClusterInstanceResponse extends BaseResponseModel {
 
             /**网卡信息*/
             @JsonProperty("NetworkInterfaceSet")
-            private List<NetworkInterfaceSetDto> NetworkInterfaceSet;
+            private List<InstanceSetDtoKecInstanceParaDtoNetworkInterfaceSetDto> NetworkInterfaceSet;
 
             @Data
             @ToString
-            public static class NetworkInterfaceSetDto {
+            public static class InstanceSetDtoKecInstanceParaDtoNetworkInterfaceSetDto {
                 /**网卡id*/
                 @JsonProperty("NetworkInterfaceId")
                 private String NetworkInterfaceId;
@@ -179,11 +179,11 @@ public class DescribeClusterInstanceResponse extends BaseResponseModel {
 
                 /**安全组信息*/
                 @JsonProperty("SecurityGroupSet")
-                private List<SecurityGroupSetDto> SecurityGroupSet;
+                private List<InstanceSetDtoKecInstanceParaDtoNetworkInterfaceSetDtoSecurityGroupSetDto> SecurityGroupSet;
 
                 @Data
                 @ToString
-                public static class SecurityGroupSetDto {
+                public static class InstanceSetDtoKecInstanceParaDtoNetworkInterfaceSetDtoSecurityGroupSetDto {
                     /***/
                     @JsonProperty("SecurityGroupId")
                     private String SecurityGroupId;
@@ -216,18 +216,18 @@ public class DescribeClusterInstanceResponse extends BaseResponseModel {
 
         /**节点高级设置*/
         @JsonProperty("AdvancedSetting")
-        private AdvancedSettingDto AdvancedSetting;
+        private InstanceSetDtoAdvancedSettingDto AdvancedSetting;
 
         @Data
         @ToString
-        public static class AdvancedSettingDto {
+        public static class InstanceSetDtoAdvancedSettingDto {
             /**数据盘挂载设置*/
             @JsonProperty("DataDisk")
-            private DataDiskDto DataDisk;
+            private InstanceSetDtoAdvancedSettingDtoDataDiskDto DataDisk;
 
             @Data
             @ToString
-            public static class DataDiskDto {
+            public static class InstanceSetDtoAdvancedSettingDtoDataDiskDto {
                 /**是否对数据盘格式化并挂载*/
                 @JsonProperty("AutoFormatAndMount")
                 private Boolean AutoFormatAndMount;
@@ -268,11 +268,11 @@ public class DescribeClusterInstanceResponse extends BaseResponseModel {
 
             /**标签信息*/
             @JsonProperty("Label")
-            private List<LabelDto> Label;
+            private List<InstanceSetDtoAdvancedSettingDtoLabelDto> Label;
 
             @Data
             @ToString
-            public static class LabelDto {
+            public static class InstanceSetDtoAdvancedSettingDtoLabelDto {
                 /**标签键*/
                 @JsonProperty("Key")
                 private String Key;
@@ -285,11 +285,11 @@ public class DescribeClusterInstanceResponse extends BaseResponseModel {
 
             /**自定义节点上k8s组件的参数*/
             @JsonProperty("ExtraArg")
-            private ExtraArgDto ExtraArg;
+            private InstanceSetDtoAdvancedSettingDtoExtraArgDto ExtraArg;
 
             @Data
             @ToString
-            public static class ExtraArgDto {
+            public static class InstanceSetDtoAdvancedSettingDtoExtraArgDto {
                 /**自定义节点上k8s组件的参数*/
                 @JsonProperty("Kubelet")
                 private List<String> Kubelet;
@@ -308,11 +308,11 @@ public class DescribeClusterInstanceResponse extends BaseResponseModel {
 
         /**物理机节点配置信息*/
         @JsonProperty("EpcInstancePara")
-        private EpcInstanceParaDto EpcInstancePara;
+        private InstanceSetDtoEpcInstanceParaDto EpcInstancePara;
 
         @Data
         @ToString
-        public static class EpcInstanceParaDto {
+        public static class InstanceSetDtoEpcInstanceParaDto {
             /**实例所属项目ID*/
             @JsonProperty("ProjectId")
             private Integer ProjectId;
@@ -323,11 +323,11 @@ public class DescribeClusterInstanceResponse extends BaseResponseModel {
 
             /**cpu相关信息*/
             @JsonProperty("Cpu")
-            private CpuDto Cpu;
+            private InstanceSetDtoEpcInstanceParaDtoCpuDto Cpu;
 
             @Data
             @ToString
-            public static class CpuDto {
+            public static class InstanceSetDtoEpcInstanceParaDtoCpuDto {
                 /**CPU型号*/
                 @JsonProperty("Model")
                 private String Model;
@@ -352,11 +352,11 @@ public class DescribeClusterInstanceResponse extends BaseResponseModel {
 
             /**Gpu相关信息*/
             @JsonProperty("Gpu")
-            private GpuDto Gpu;
+            private InstanceSetDtoEpcInstanceParaDtoGpuDto Gpu;
 
             @Data
             @ToString
-            public static class GpuDto {
+            public static class InstanceSetDtoEpcInstanceParaDtoGpuDto {
                 /**GPU型号*/
                 @JsonProperty("Model")
                 private String Model;
@@ -377,11 +377,11 @@ public class DescribeClusterInstanceResponse extends BaseResponseModel {
 
             /**磁盘信息*/
             @JsonProperty("DiskSet")
-            private List<DiskSetDto> DiskSet;
+            private List<InstanceSetDtoEpcInstanceParaDtoDiskSetDto> DiskSet;
 
             @Data
             @ToString
-            public static class DiskSetDto {
+            public static class InstanceSetDtoEpcInstanceParaDtoDiskSetDto {
                 /**磁盘类型*/
                 @JsonProperty("DiskType")
                 private String DiskType;
@@ -414,11 +414,11 @@ public class DescribeClusterInstanceResponse extends BaseResponseModel {
 
             /**关联的网卡信息*/
             @JsonProperty("NetworkInterfaceSet")
-            private List<NetworkInterfaceSetDto> NetworkInterfaceSet;
+            private List<InstanceSetDtoEpcInstanceParaDtoNetworkInterfaceSetDto> NetworkInterfaceSet;
 
             @Data
             @ToString
-            public static class NetworkInterfaceSetDto {
+            public static class InstanceSetDtoEpcInstanceParaDtoNetworkInterfaceSetDto {
                 /**网卡id*/
                 @JsonProperty("NetworkInterfaceId")
                 private String NetworkInterfaceId;
@@ -441,11 +441,11 @@ public class DescribeClusterInstanceResponse extends BaseResponseModel {
 
                 /**安全组信息*/
                 @JsonProperty("SecurityGroupSet")
-                private List<SecurityGroupSetDto> SecurityGroupSet;
+                private List<InstanceSetDtoEpcInstanceParaDtoNetworkInterfaceSetDtoSecurityGroupSetDto> SecurityGroupSet;
 
                 @Data
                 @ToString
-                public static class SecurityGroupSetDto {
+                public static class InstanceSetDtoEpcInstanceParaDtoNetworkInterfaceSetDtoSecurityGroupSetDto {
                     /**安全组的ID*/
                     @JsonProperty("SecurityGroupId")
                     private String SecurityGroupId;

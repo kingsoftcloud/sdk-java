@@ -48,11 +48,11 @@ public class DescribeAlertingResourcesResponse extends BaseResponseModel {
 
         /**正在告警资源列表。*/
         @JsonProperty("ResourceSet")
-        private List<ResourceSetDto> ResourceSet;
+        private List<AlertingProductSetDtoResourceSetDto> ResourceSet;
 
         @Data
         @ToString
-        public static class ResourceSetDto {
+        public static class AlertingProductSetDtoResourceSetDto {
             /**实例ID。*/
             @JsonProperty("InstanceId")
             private String InstanceId;
@@ -67,11 +67,11 @@ public class DescribeAlertingResourcesResponse extends BaseResponseModel {
 
             /**实例标签。*/
             @JsonProperty("InstanceTags")
-            private List<InstanceTagsDto> InstanceTags;
+            private List<AlertingProductSetDtoResourceSetDtoInstanceTagsDto> InstanceTags;
 
             @Data
             @ToString
-            public static class InstanceTagsDto {
+            public static class AlertingProductSetDtoResourceSetDtoInstanceTagsDto {
                 /**资源类型。*/
                 @JsonProperty("ResourceType")
                 private String ResourceType;
@@ -100,11 +100,11 @@ public class DescribeAlertingResourcesResponse extends BaseResponseModel {
 
             /**正在告警策略列表。*/
             @JsonProperty("Policies")
-            private List<PoliciesDto> Policies;
+            private List<AlertingProductSetDtoResourceSetDtoPoliciesDto> Policies;
 
             @Data
             @ToString
-            public static class PoliciesDto {
+            public static class AlertingProductSetDtoResourceSetDtoPoliciesDto {
                 /**策略ID。*/
                 @JsonProperty("PolicyId")
                 private Integer PolicyId;
@@ -141,11 +141,11 @@ public class DescribeAlertingResourcesResponse extends BaseResponseModel {
 
             /**关联资源列表。*/
             @JsonProperty("RelatedResourceSet")
-            private List<RelatedResourceSetDto> RelatedResourceSet;
+            private List<AlertingProductSetDtoResourceSetDtoRelatedResourceSetDto> RelatedResourceSet;
 
             @Data
             @ToString
-            public static class RelatedResourceSetDto {
+            public static class AlertingProductSetDtoResourceSetDtoRelatedResourceSetDto {
                 /**关联资源命名空间。*/
                 @JsonProperty("Namespace")
                 private String Namespace;

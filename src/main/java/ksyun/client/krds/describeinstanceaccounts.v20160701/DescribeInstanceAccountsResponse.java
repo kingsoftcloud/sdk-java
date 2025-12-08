@@ -23,11 +23,11 @@ public class DescribeInstanceAccountsResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("Accounts")
-        private List<AccountsDto> Accounts;
+        private List<DataDtoAccountsDto> Accounts;
 
         @Data
         @ToString
-        public static class AccountsDto {
+        public static class DataDtoAccountsDto {
             /**账户名称*/
             @JsonProperty("InstanceAccountName")
             private String InstanceAccountName;
@@ -48,11 +48,11 @@ Normal：普通用户*/
 
             /**账号享有权限的列表，账号出发对如下数据库有权限(具体权限)*/
             @JsonProperty("InstanceAccountPrivileges")
-            private List<InstanceAccountPrivilegesDto> InstanceAccountPrivileges;
+            private List<DataDtoAccountsDtoInstanceAccountPrivilegesDto> InstanceAccountPrivileges;
 
             @Data
             @ToString
-            public static class InstanceAccountPrivilegesDto {
+            public static class DataDtoAccountsDtoInstanceAccountPrivilegesDto {
                 /**库名*/
                 @JsonProperty("InstanceDatabaseName")
                 private String InstanceDatabaseName;

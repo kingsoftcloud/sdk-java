@@ -47,11 +47,11 @@ public class RoleslistResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("records")
-        private List<RecordsDto> Records;
+        private List<DataDtoRecordsDto> Records;
 
         @Data
         @ToString
-        public static class RecordsDto {
+        public static class DataDtoRecordsDto {
             /***/
             @JsonProperty("id")
             private Integer Id;

@@ -110,11 +110,11 @@ public class DescribeContainerGroupResponse extends BaseResponseModel {
 
         /**实例网卡信息，可参考云主机*/
         @JsonProperty("NetworkInterfaceAttributes")
-        private List<NetworkInterfaceAttributesDto> NetworkInterfaceAttributes;
+        private List<ContainerGroupsDtoNetworkInterfaceAttributesDto> NetworkInterfaceAttributes;
 
         @Data
         @ToString
-        public static class NetworkInterfaceAttributesDto {
+        public static class ContainerGroupsDtoNetworkInterfaceAttributesDto {
             /**网卡ID*/
             @JsonProperty("NetworkInterfaceId")
             private String NetworkInterfaceId;
@@ -145,11 +145,11 @@ public class DescribeContainerGroupResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("SecurityGroups")
-            private List<SecurityGroupsDto> SecurityGroups;
+            private List<ContainerGroupsDtoNetworkInterfaceAttributesDtoSecurityGroupsDto> SecurityGroups;
 
             @Data
             @ToString
-            public static class SecurityGroupsDto {
+            public static class ContainerGroupsDtoNetworkInterfaceAttributesDtoSecurityGroupsDto {
                 /**安全组ID*/
                 @JsonProperty("SecurityGroupId")
                 private String SecurityGroupId;
@@ -177,11 +177,11 @@ public class DescribeContainerGroupResponse extends BaseResponseModel {
 - cluster-mode
 - pod-uuid*/
         @JsonProperty("Labels")
-        private List<LabelsDto> Labels;
+        private List<ContainerGroupsDtoLabelsDto> Labels;
 
         @Data
         @ToString
-        public static class LabelsDto {
+        public static class ContainerGroupsDtoLabelsDto {
             /***/
             @JsonProperty("Key")
             private String Key;
@@ -194,11 +194,11 @@ public class DescribeContainerGroupResponse extends BaseResponseModel {
 
         /**只有无集群模式容器实例才返回，Pod DnsConfig 配置，对应pod yaml中pod.spec.dnsConfig*/
         @JsonProperty("DnsConfig")
-        private DnsConfigDto DnsConfig;
+        private ContainerGroupsDtoDnsConfigDto DnsConfig;
 
         @Data
         @ToString
-        public static class DnsConfigDto {
+        public static class ContainerGroupsDtoDnsConfigDto {
             /***/
             @JsonProperty("NameServers")
             private List<String> NameServers;
@@ -209,11 +209,11 @@ public class DescribeContainerGroupResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("Options")
-            private List<OptionsDto> Options;
+            private List<ContainerGroupsDtoDnsConfigDtoOptionsDto> Options;
 
             @Data
             @ToString
-            public static class OptionsDto {
+            public static class ContainerGroupsDtoDnsConfigDtoOptionsDto {
                 /***/
                 @JsonProperty("Name")
                 private String Name;
@@ -228,11 +228,11 @@ public class DescribeContainerGroupResponse extends BaseResponseModel {
 
         /**只有无集群模式容器实例才返回，pod host配置，对应pod yaml中的pod.spec.hostAliases*/
         @JsonProperty("HostAliases")
-        private List<HostAliasesDto> HostAliases;
+        private List<ContainerGroupsDtoHostAliasesDto> HostAliases;
 
         @Data
         @ToString
-        public static class HostAliasesDto {
+        public static class ContainerGroupsDtoHostAliasesDto {
             /***/
             @JsonProperty("Hostnames")
             private List<String> Hostnames;
@@ -245,11 +245,11 @@ public class DescribeContainerGroupResponse extends BaseResponseModel {
 
         /**只有无集群模式容器实例才返回，pod实例创建的volume列表*/
         @JsonProperty("Volumes")
-        private List<VolumesDto> Volumes;
+        private List<ContainerGroupsDtoVolumesDto> Volumes;
 
         @Data
         @ToString
-        public static class VolumesDto {
+        public static class ContainerGroupsDtoVolumesDto {
             /**存储卷名称*/
             @JsonProperty("Name")
             private String Name;
@@ -265,11 +265,11 @@ public class DescribeContainerGroupResponse extends BaseResponseModel {
 
             /**NFSVolume存储卷配置，当Volume.Type=NFSVolume时返回*/
             @JsonProperty("NFSVolume")
-            private NFSVolumeDto NFSVolume;
+            private ContainerGroupsDtoVolumesDtoNFSVolumeDto NFSVolume;
 
             @Data
             @ToString
-            public static class NFSVolumeDto {
+            public static class ContainerGroupsDtoVolumesDtoNFSVolumeDto {
                 /***/
                 @JsonProperty("Path")
                 private String Path;
@@ -286,11 +286,11 @@ public class DescribeContainerGroupResponse extends BaseResponseModel {
 
             /**HostPath存储卷配置，当Volume.Type=HostPathVolume时返回*/
             @JsonProperty("HostPathVolume")
-            private HostPathVolumeDto HostPathVolume;
+            private ContainerGroupsDtoVolumesDtoHostPathVolumeDto HostPathVolume;
 
             @Data
             @ToString
-            public static class HostPathVolumeDto {
+            public static class ContainerGroupsDtoVolumesDtoHostPathVolumeDto {
                 /***/
                 @JsonProperty("Path")
                 private String Path;
@@ -299,11 +299,11 @@ public class DescribeContainerGroupResponse extends BaseResponseModel {
 
             /**EBSVolume存储卷配置，当Volume.Type=EBSVolume时返回*/
             @JsonProperty("EBSVolume")
-            private EBSVolumeDto EBSVolume;
+            private ContainerGroupsDtoVolumesDtoEBSVolumeDto EBSVolume;
 
             @Data
             @ToString
-            public static class EBSVolumeDto {
+            public static class ContainerGroupsDtoVolumesDtoEBSVolumeDto {
                 /**文件系统类型，支持ext3、ext4、xfs等*/
                 @JsonProperty("FsType")
                 private String FsType;
@@ -316,18 +316,18 @@ public class DescribeContainerGroupResponse extends BaseResponseModel {
 
             /**ConfigFileVolume存储卷配置，当Volume.Type=ConfigFileVolume时返回*/
             @JsonProperty("ConfigFileVolume")
-            private ConfigFileVolumeDto ConfigFileVolume;
+            private ContainerGroupsDtoVolumesDtoConfigFileVolumeDto ConfigFileVolume;
 
             @Data
             @ToString
-            public static class ConfigFileVolumeDto {
+            public static class ContainerGroupsDtoVolumesDtoConfigFileVolumeDto {
                 /***/
                 @JsonProperty("ConfigFileToPaths")
-                private List<ConfigFileToPathsDto> ConfigFileToPaths;
+                private List<ContainerGroupsDtoVolumesDtoConfigFileVolumeDtoConfigFileToPathsDto> ConfigFileToPaths;
 
                 @Data
                 @ToString
-                public static class ConfigFileToPathsDto {
+                public static class ContainerGroupsDtoVolumesDtoConfigFileVolumeDtoConfigFileToPathsDto {
                     /***/
                     @JsonProperty("Path")
                     private String Path;
@@ -340,11 +340,11 @@ public class DescribeContainerGroupResponse extends BaseResponseModel {
 
         /**只有无集群模式容器实例才返回*/
         @JsonProperty("Containers")
-        private List<ContainersDto> Containers;
+        private List<ContainerGroupsDtoContainersDto> Containers;
 
         @Data
         @ToString
-        public static class ContainersDto {
+        public static class ContainerGroupsDtoContainersDto {
             /**容器名称*/
             @JsonProperty("Name")
             private String Name;
@@ -359,11 +359,11 @@ public class DescribeContainerGroupResponse extends BaseResponseModel {
 
             /**容器环境变量*/
             @JsonProperty("EnvironmentVars")
-            private List<EnvironmentVarsDto> EnvironmentVars;
+            private List<ContainerGroupsDtoContainersDtoEnvironmentVarsDto> EnvironmentVars;
 
             @Data
             @ToString
-            public static class EnvironmentVarsDto {
+            public static class ContainerGroupsDtoContainersDtoEnvironmentVarsDto {
                 /**环境变量Key*/
                 @JsonProperty("Key")
                 private String Key;
@@ -374,18 +374,18 @@ public class DescribeContainerGroupResponse extends BaseResponseModel {
 
                 /**环境变量Value来源，该字段与Value不会同时存在*/
                 @JsonProperty("ValueFrom")
-                private ValueFromDto ValueFrom;
+                private ContainerGroupsDtoContainersDtoEnvironmentVarsDtoValueFromDto ValueFrom;
 
                 @Data
                 @ToString
-                public static class ValueFromDto {
+                public static class ContainerGroupsDtoContainersDtoEnvironmentVarsDtoValueFromDto {
                     /**字段引用*/
                     @JsonProperty("FieldRef")
-                    private FieldRefDto FieldRef;
+                    private ContainerGroupsDtoContainersDtoEnvironmentVarsDtoValueFromDtoFieldRefDto FieldRef;
 
                     @Data
                     @ToString
-                    public static class FieldRefDto {
+                    public static class ContainerGroupsDtoContainersDtoEnvironmentVarsDtoValueFromDtoFieldRefDto {
                         /**字段路径，如status.podIP*/
                         @JsonProperty("FieldPath")
                         private String FieldPath;
@@ -426,11 +426,11 @@ public class DescribeContainerGroupResponse extends BaseResponseModel {
 
             /**容器开放端口*/
             @JsonProperty("Ports")
-            private List<PortsDto> Ports;
+            private List<ContainerGroupsDtoContainersDtoPortsDto> Ports;
 
             @Data
             @ToString
-            public static class PortsDto {
+            public static class ContainerGroupsDtoContainersDtoPortsDto {
                 /**协议*/
                 @JsonProperty("Protocol")
                 private String Protocol;
@@ -443,11 +443,11 @@ public class DescribeContainerGroupResponse extends BaseResponseModel {
 
             /**容器存储卷挂载点*/
             @JsonProperty("VolumeMounts")
-            private List<VolumeMountsDto> VolumeMounts;
+            private List<ContainerGroupsDtoContainersDtoVolumeMountsDto> VolumeMounts;
 
             @Data
             @ToString
-            public static class VolumeMountsDto {
+            public static class ContainerGroupsDtoContainersDtoVolumeMountsDto {
                 /**存储卷名称*/
                 @JsonProperty("Name")
                 private String Name;
@@ -464,11 +464,11 @@ public class DescribeContainerGroupResponse extends BaseResponseModel {
 
             /**当前状态*/
             @JsonProperty("CurrentState")
-            private CurrentStateDto CurrentState;
+            private ContainerGroupsDtoContainersDtoCurrentStateDto CurrentState;
 
             @Data
             @ToString
-            public static class CurrentStateDto {
+            public static class ContainerGroupsDtoContainersDtoCurrentStateDto {
                 /**开始时间*/
                 @JsonProperty("StartTime")
                 private String StartTime;
@@ -493,11 +493,11 @@ public class DescribeContainerGroupResponse extends BaseResponseModel {
 
             /**上一次状态*/
             @JsonProperty("PreviousState")
-            private PreviousStateDto PreviousState;
+            private ContainerGroupsDtoContainersDtoPreviousStateDto PreviousState;
 
             @Data
             @ToString
-            public static class PreviousStateDto {
+            public static class ContainerGroupsDtoContainersDtoPreviousStateDto {
                 /**开始时间*/
                 @JsonProperty("StartTime")
                 private String StartTime;
@@ -522,11 +522,11 @@ public class DescribeContainerGroupResponse extends BaseResponseModel {
 
             /**存活健康检查配置*/
             @JsonProperty("LivenessProbe")
-            private LivenessProbeDto LivenessProbe;
+            private ContainerGroupsDtoContainersDtoLivenessProbeDto LivenessProbe;
 
             @Data
             @ToString
-            public static class LivenessProbeDto {
+            public static class ContainerGroupsDtoContainersDtoLivenessProbeDto {
                 /**初始延迟时间*/
                 @JsonProperty("InitialDelaySeconds")
                 private Integer InitialDelaySeconds;
@@ -549,11 +549,11 @@ public class DescribeContainerGroupResponse extends BaseResponseModel {
 
                 /**http get请求探测*/
                 @JsonProperty("HttpGet")
-                private HttpGetDto HttpGet;
+                private ContainerGroupsDtoContainersDtoLivenessProbeDtoHttpGetDto HttpGet;
 
                 @Data
                 @ToString
-                public static class HttpGetDto {
+                public static class ContainerGroupsDtoContainersDtoLivenessProbeDtoHttpGetDto {
                     /**端口*/
                     @JsonProperty("Port")
                     private Integer Port;
@@ -570,11 +570,11 @@ public class DescribeContainerGroupResponse extends BaseResponseModel {
 
                 /**执行命令探测*/
                 @JsonProperty("Exec")
-                private ExecDto Exec;
+                private ContainerGroupsDtoContainersDtoLivenessProbeDtoExecDto Exec;
 
                 @Data
                 @ToString
-                public static class ExecDto {
+                public static class ContainerGroupsDtoContainersDtoLivenessProbeDtoExecDto {
                     /**命令行*/
                     @JsonProperty("Commands")
                     private List<String> Commands;
@@ -583,11 +583,11 @@ public class DescribeContainerGroupResponse extends BaseResponseModel {
 
                 /**tcp探测*/
                 @JsonProperty("TcpSocket")
-                private TcpSocketDto TcpSocket;
+                private ContainerGroupsDtoContainersDtoLivenessProbeDtoTcpSocketDto TcpSocket;
 
                 @Data
                 @ToString
-                public static class TcpSocketDto {
+                public static class ContainerGroupsDtoContainersDtoLivenessProbeDtoTcpSocketDto {
                     /**端口*/
                     @JsonProperty("Port")
                     private Integer Port;
@@ -598,11 +598,11 @@ public class DescribeContainerGroupResponse extends BaseResponseModel {
 
             /**就绪健康检查配置*/
             @JsonProperty("ReadinessProbe")
-            private ReadinessProbeDto ReadinessProbe;
+            private ContainerGroupsDtoContainersDtoReadinessProbeDto ReadinessProbe;
 
             @Data
             @ToString
-            public static class ReadinessProbeDto {
+            public static class ContainerGroupsDtoContainersDtoReadinessProbeDto {
                 /**初始延迟时间*/
                 @JsonProperty("InitialDelaySeconds")
                 private Integer InitialDelaySeconds;
@@ -625,11 +625,11 @@ public class DescribeContainerGroupResponse extends BaseResponseModel {
 
                 /**http get 请求探测*/
                 @JsonProperty("HttpGet")
-                private HttpGetDto HttpGet;
+                private ContainerGroupsDtoContainersDtoReadinessProbeDtoHttpGetDto HttpGet;
 
                 @Data
                 @ToString
-                public static class HttpGetDto {
+                public static class ContainerGroupsDtoContainersDtoReadinessProbeDtoHttpGetDto {
                     /**端口*/
                     @JsonProperty("Port")
                     private Integer Port;
@@ -646,11 +646,11 @@ public class DescribeContainerGroupResponse extends BaseResponseModel {
 
                 /**命令行exec探测*/
                 @JsonProperty("Exec")
-                private ExecDto Exec;
+                private ContainerGroupsDtoContainersDtoReadinessProbeDtoExecDto Exec;
 
                 @Data
                 @ToString
-                public static class ExecDto {
+                public static class ContainerGroupsDtoContainersDtoReadinessProbeDtoExecDto {
                     /**命令行*/
                     @JsonProperty("Commands")
                     private List<String> Commands;
@@ -659,11 +659,11 @@ public class DescribeContainerGroupResponse extends BaseResponseModel {
 
                 /**tcp探测*/
                 @JsonProperty("TcpSocket")
-                private TcpSocketDto TcpSocket;
+                private ContainerGroupsDtoContainersDtoReadinessProbeDtoTcpSocketDto TcpSocket;
 
                 @Data
                 @ToString
-                public static class TcpSocketDto {
+                public static class ContainerGroupsDtoContainersDtoReadinessProbeDtoTcpSocketDto {
                     /**端口*/
                     @JsonProperty("Port")
                     private Integer Port;

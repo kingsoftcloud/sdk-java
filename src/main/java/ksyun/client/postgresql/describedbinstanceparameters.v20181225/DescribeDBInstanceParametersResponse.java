@@ -27,11 +27,11 @@ public class DescribeDBInstanceParametersResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Parameters")
-        private ParametersDto Parameters;
+        private DataDtoParametersDto Parameters;
 
         @Data
         @ToString
-        public static class ParametersDto {
+        public static class DataDtoParametersDto {
             /***/
             @JsonProperty("autovacuum_analyze_scale_factor")
             private Integer Autovacuum_analyze_scale_factor;

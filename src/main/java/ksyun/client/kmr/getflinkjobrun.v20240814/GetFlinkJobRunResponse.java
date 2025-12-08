@@ -84,11 +84,11 @@ public class GetFlinkJobRunResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("FlinkDeploymentData")
-        private FlinkDeploymentDataDto FlinkDeploymentData;
+        private DataDtoFlinkDeploymentDataDto FlinkDeploymentData;
 
         @Data
         @ToString
-        public static class FlinkDeploymentDataDto {
+        public static class DataDtoFlinkDeploymentDataDto {
             /**作业名称*/
             @JsonProperty("Name")
             private String Name;
@@ -138,11 +138,6 @@ public class GetFlinkJobRunResponse extends BaseResponseModel {
         /***/
         @JsonProperty("ResourceUsage")
         private Integer ResourceUsage;
-
-        /**作业使用的CU量*/
-        @JsonProperty("ResourceUsage")
-        private Integer ResourceUsage;
-
     }
 
 }

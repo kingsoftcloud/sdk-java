@@ -51,11 +51,11 @@ public class DescribeDedicatedClusterResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("DedicatedHostsSet")
-        private List<DedicatedHostsSetDto> DedicatedHostsSet;
+        private List<DedicatedClustersSetDtoDedicatedHostsSetDto> DedicatedHostsSet;
 
         @Data
         @ToString
-        public static class DedicatedHostsSetDto {
+        public static class DedicatedClustersSetDtoDedicatedHostsSetDto {
             /***/
             @JsonProperty("DedicatedHostId")
             private String DedicatedHostId;

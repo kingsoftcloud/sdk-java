@@ -63,11 +63,11 @@ public class ListProjectsResponse extends BaseResponseModel {
 
         /**标签列表*/
         @JsonProperty("Tags")
-        private List<TagsDto> Tags;
+        private List<ProjectsDtoTagsDto> Tags;
 
         @Data
         @ToString
-        public static class TagsDto {
+        public static class ProjectsDtoTagsDto {
             /**标签ID*/
             @JsonProperty("ID")
             private Integer ID;

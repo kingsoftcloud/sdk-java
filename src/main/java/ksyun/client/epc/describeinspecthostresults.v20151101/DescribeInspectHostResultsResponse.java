@@ -55,11 +55,11 @@ public class DescribeInspectHostResultsResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("InspectResultDetailSet")
-        private List<InspectResultDetailSetDto> InspectResultDetailSet;
+        private List<InspectResultSetDtoInspectResultDetailSetDto> InspectResultDetailSet;
 
         @Data
         @ToString
-        public static class InspectResultDetailSetDto {
+        public static class InspectResultSetDtoInspectResultDetailSetDto {
             /***/
             @JsonProperty("HostId")
             private String HostId;

@@ -31,11 +31,11 @@ public class DescribePerformanceOnePosixAclListResponse extends BaseResponseMode
 
         /***/
         @JsonProperty("FileSystemList")
-        private List<FileSystemListDto> FileSystemList;
+        private List<DataDtoFileSystemListDto> FileSystemList;
 
         @Data
         @ToString
-        public static class FileSystemListDto {
+        public static class DataDtoFileSystemListDto {
             /***/
             @JsonProperty("FileSystemId")
             private String FileSystemId;

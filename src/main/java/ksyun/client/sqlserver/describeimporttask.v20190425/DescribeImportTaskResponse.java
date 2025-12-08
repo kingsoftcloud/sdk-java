@@ -23,11 +23,11 @@ public class DescribeImportTaskResponse extends BaseResponseModel {
     public static class DataDto {
         /**导入任务列表*/
         @JsonProperty("ImportTasks")
-        private List<ImportTasksDto> ImportTasks;
+        private List<DataDtoImportTasksDto> ImportTasks;
 
         @Data
         @ToString
-        public static class ImportTasksDto {
+        public static class DataDtoImportTasksDto {
             /**任务ID*/
             @JsonProperty("ImportTaskId")
             private String ImportTaskId;

@@ -39,11 +39,11 @@ public class CloudDesklistResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("records")
-        private List<RecordsDto> Records;
+        private List<DataDtoRecordsDto> Records;
 
         @Data
         @ToString
-        public static class RecordsDto {
+        public static class DataDtoRecordsDto {
             /***/
             @JsonProperty("id")
             private Integer Id;
@@ -90,11 +90,11 @@ public class CloudDesklistResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("ipInfo")
-            private IpInfoDto IpInfo;
+            private DataDtoRecordsDtoIpInfoDto IpInfo;
 
             @Data
             @ToString
-            public static class IpInfoDto {
+            public static class DataDtoRecordsDtoIpInfoDto {
                 /***/
                 @JsonProperty("privateIpV6")
                 private String PrivateIpV6;

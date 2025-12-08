@@ -43,11 +43,11 @@ public class DescribeSplitItemBillDetailsResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("bills")
-        private List<BillsDto> Bills;
+        private List<DataDtoBillsDto> Bills;
 
         @Data
         @ToString
-        public static class BillsDto {
+        public static class DataDtoBillsDto {
             /***/
             @JsonProperty("InstanceId")
             private String InstanceId;

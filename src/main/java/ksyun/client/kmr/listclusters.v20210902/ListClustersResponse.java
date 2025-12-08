@@ -35,11 +35,11 @@ public class ListClustersResponse extends BaseResponseModel {
 
         /**该集群下的节点组列表*/
         @JsonProperty("InstanceGroups")
-        private List<InstanceGroupsDto> InstanceGroups;
+        private List<ClustersDtoInstanceGroupsDto> InstanceGroups;
 
         @Data
         @ToString
-        public static class InstanceGroupsDto {
+        public static class ClustersDtoInstanceGroupsDto {
             /**节点组ID*/
             @JsonProperty("Id")
             private String Id;

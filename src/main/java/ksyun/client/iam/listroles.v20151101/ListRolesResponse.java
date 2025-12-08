@@ -23,18 +23,18 @@ public class ListRolesResponse extends BaseResponseModel {
     public static class ListRolesResultDto {
         /***/
         @JsonProperty("Roles")
-        private RolesDto Roles;
+        private ListRolesResultDtoRolesDto Roles;
 
         @Data
         @ToString
-        public static class RolesDto {
+        public static class ListRolesResultDtoRolesDto {
             /***/
             @JsonProperty("member")
-            private List<MemberDto> Member;
+            private List<ListRolesResultDtoRolesDtoMemberDto> Member;
 
             @Data
             @ToString
-            public static class MemberDto {
+            public static class ListRolesResultDtoRolesDtoMemberDto {
                 /***/
                 @JsonProperty("Path")
                 private String Path;

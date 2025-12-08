@@ -67,11 +67,11 @@ public class ModifyEndPointResponse extends BaseResponseModel {
 
         /**所绑定的VPC的信息*/
         @JsonProperty("IpConfigSet")
-        private List<IpConfigSetDto> IpConfigSet;
+        private List<EndPointDtoIpConfigSetDto> IpConfigSet;
 
         @Data
         @ToString
-        public static class IpConfigSetDto {
+        public static class EndPointDtoIpConfigSetDto {
             /**可用区*/
             @JsonProperty("AvailabilityZone")
             private String AvailabilityZone;

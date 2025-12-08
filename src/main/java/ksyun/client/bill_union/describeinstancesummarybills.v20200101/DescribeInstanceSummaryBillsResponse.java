@@ -127,11 +127,11 @@ public class DescribeInstanceSummaryBillsResponse extends BaseResponseModel {
 
         /**配置用量信息*/
         @JsonProperty("ConfigSet")
-        private List<ConfigSetDto> ConfigSet;
+        private List<SummaryOverviewDtoConfigSetDto> ConfigSet;
 
         @Data
         @ToString
-        public static class ConfigSetDto {
+        public static class SummaryOverviewDtoConfigSetDto {
             /**表示数据的key*/
             @JsonProperty("Key")
             private String Key;
@@ -148,11 +148,11 @@ public class DescribeInstanceSummaryBillsResponse extends BaseResponseModel {
 
         /**价格影响因子。无值不返回*/
         @JsonProperty("ProviderSet")
-        private List<ProviderSetDto> ProviderSet;
+        private List<SummaryOverviewDtoProviderSetDto> ProviderSet;
 
         @Data
         @ToString
-        public static class ProviderSetDto {
+        public static class SummaryOverviewDtoProviderSetDto {
             /**表示数据的key*/
             @JsonProperty("Key")
             private String Key;
@@ -173,11 +173,11 @@ public class DescribeInstanceSummaryBillsResponse extends BaseResponseModel {
 
         /**附属信息。 无值不返回*/
         @JsonProperty("ExtraSet")
-        private List<ExtraSetDto> ExtraSet;
+        private List<SummaryOverviewDtoExtraSetDto> ExtraSet;
 
         @Data
         @ToString
-        public static class ExtraSetDto {
+        public static class SummaryOverviewDtoExtraSetDto {
             /**表示数据的key*/
             @JsonProperty("Key")
             private String Key;
@@ -194,11 +194,11 @@ public class DescribeInstanceSummaryBillsResponse extends BaseResponseModel {
 
         /**tag信息。 无值不返回*/
         @JsonProperty("TagSet")
-        private List<TagSetDto> TagSet;
+        private List<SummaryOverviewDtoTagSetDto> TagSet;
 
         @Data
         @ToString
-        public static class TagSetDto {
+        public static class SummaryOverviewDtoTagSetDto {
             /**表示数据的key*/
             @JsonProperty("Key")
             private String Key;

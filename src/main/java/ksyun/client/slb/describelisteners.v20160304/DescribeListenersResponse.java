@@ -115,11 +115,11 @@ public class DescribeListenersResponse extends BaseResponseModel {
 
         /**后端服务器组的信息*/
         @JsonProperty("BackendServerGroupIdSet")
-        private List<BackendServerGroupIdSetDto> BackendServerGroupIdSet;
+        private List<ListenerSetDtoBackendServerGroupIdSetDto> BackendServerGroupIdSet;
 
         @Data
         @ToString
-        public static class BackendServerGroupIdSetDto {
+        public static class ListenerSetDtoBackendServerGroupIdSetDto {
             /**后端服务器组的ID*/
             @JsonProperty("BackendServerGroupId")
             private String BackendServerGroupId;
@@ -128,11 +128,11 @@ public class DescribeListenersResponse extends BaseResponseModel {
 
         /**真实服务器的信息*/
         @JsonProperty("RealServer")
-        private List<RealServerDto> RealServer;
+        private List<ListenerSetDtoRealServerDto> RealServer;
 
         @Data
         @ToString
-        public static class RealServerDto {
+        public static class ListenerSetDtoRealServerDto {
             /**绑定服务器组的注册ID*/
             @JsonProperty("RegisterId")
             private String RegisterId;
@@ -182,11 +182,11 @@ public class DescribeListenersResponse extends BaseResponseModel {
 
         /**后端服务器的信息*/
         @JsonProperty("BackendServerSet")
-        private List<BackendServerSetDto> BackendServerSet;
+        private List<ListenerSetDtoBackendServerSetDto> BackendServerSet;
 
         @Data
         @ToString
-        public static class BackendServerSetDto {
+        public static class ListenerSetDtoBackendServerSetDto {
             /**所属后端服务组的ID*/
             @JsonProperty("BackendServerGroupId")
             private String BackendServerGroupId;

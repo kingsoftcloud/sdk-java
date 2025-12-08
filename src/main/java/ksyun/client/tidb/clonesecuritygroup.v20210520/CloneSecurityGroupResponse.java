@@ -67,11 +67,11 @@ public class CloneSecurityGroupResponse extends BaseResponseModel {
 
         /**cidr地址*/
         @JsonProperty("Rules")
-        private List<RulesDto> Rules;
+        private List<DataDtoRulesDto> Rules;
 
         @Data
         @ToString
-        public static class RulesDto {
+        public static class DataDtoRulesDto {
             /**规则版本*/
             @JsonProperty("ipVersion")
             private String IpVersion;

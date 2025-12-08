@@ -23,18 +23,18 @@ public class DescribeDBInstancesResponse extends BaseResponseModel {
     public static class DataDto {
         /**实例详情/列表*/
         @JsonProperty("Instances")
-        private List<InstancesDto> Instances;
+        private List<DataDtoInstancesDto> Instances;
 
         @Data
         @ToString
-        public static class InstancesDto {
+        public static class DataDtoInstancesDto {
             /**实例配置简版信息*/
             @JsonProperty("DBInstanceClass")
-            private DBInstanceClassDto DBInstanceClass;
+            private DataDtoInstancesDtoDBInstanceClassDto DBInstanceClass;
 
             @Data
             @ToString
-            public static class DBInstanceClassDto {
+            public static class DataDtoInstancesDtoDBInstanceClassDto {
                 /**实例配置ID*/
                 @JsonProperty("Id")
                 private String Id;
@@ -170,11 +170,11 @@ TRIAL 试用订单
 
             /**可用区列表*/
             @JsonProperty("AvailabilityZoneList")
-            private List<AvailabilityZoneListDto> AvailabilityZoneList;
+            private List<DataDtoInstancesDtoAvailabilityZoneListDto> AvailabilityZoneList;
 
             @Data
             @ToString
-            public static class AvailabilityZoneListDto {
+            public static class DataDtoInstancesDtoAvailabilityZoneListDto {
                 /**成员类型*/
                 @JsonProperty("MemberType")
                 private String MemberType;
@@ -243,11 +243,11 @@ TRIAL 试用订单
 
             /**安全组列表信息(暂不支持多安全组)*/
             @JsonProperty("SecurityGroups")
-            private List<SecurityGroupsDto> SecurityGroups;
+            private List<DataDtoInstancesDtoSecurityGroupsDto> SecurityGroups;
 
             @Data
             @ToString
-            public static class SecurityGroupsDto {
+            public static class DataDtoInstancesDtoSecurityGroupsDto {
                 /**安全组ID*/
                 @JsonProperty("SecurityGroupId")
                 private String SecurityGroupId;

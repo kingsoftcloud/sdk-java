@@ -23,18 +23,18 @@ public class ListEntitiesForPolicyResponse extends BaseResponseModel {
     public static class ListEntitiesForPolicyResultDto {
         /***/
         @JsonProperty("PolicyUsers")
-        private PolicyUsersDto PolicyUsers;
+        private ListEntitiesForPolicyResultDtoPolicyUsersDto PolicyUsers;
 
         @Data
         @ToString
-        public static class PolicyUsersDto {
+        public static class ListEntitiesForPolicyResultDtoPolicyUsersDto {
             /***/
             @JsonProperty("member")
-            private List<MemberDto> Member;
+            private List<ListEntitiesForPolicyResultDtoPolicyUsersDtoMemberDto> Member;
 
             @Data
             @ToString
-            public static class MemberDto {
+            public static class ListEntitiesForPolicyResultDtoPolicyUsersDtoMemberDto {
                 /***/
                 @JsonProperty("UserId")
                 private String UserId;
@@ -57,18 +57,18 @@ public class ListEntitiesForPolicyResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("PolicyRoles")
-        private PolicyRolesDto PolicyRoles;
+        private ListEntitiesForPolicyResultDtoPolicyRolesDto PolicyRoles;
 
         @Data
         @ToString
-        public static class PolicyRolesDto {
+        public static class ListEntitiesForPolicyResultDtoPolicyRolesDto {
             /***/
             @JsonProperty("member")
-            private List<MemberDto> Member;
+            private List<ListEntitiesForPolicyResultDtoPolicyRolesDtoMemberDto> Member;
 
             @Data
             @ToString
-            public static class MemberDto {
+            public static class ListEntitiesForPolicyResultDtoPolicyRolesDtoMemberDto {
                 /***/
                 @JsonProperty("RoleId")
                 private String RoleId;
@@ -91,18 +91,18 @@ public class ListEntitiesForPolicyResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("PolicyGroups")
-        private PolicyGroupsDto PolicyGroups;
+        private ListEntitiesForPolicyResultDtoPolicyGroupsDto PolicyGroups;
 
         @Data
         @ToString
-        public static class PolicyGroupsDto {
+        public static class ListEntitiesForPolicyResultDtoPolicyGroupsDto {
             /***/
             @JsonProperty("member")
-            private List<MemberDto> Member;
+            private List<ListEntitiesForPolicyResultDtoPolicyGroupsDtoMemberDto> Member;
 
             @Data
             @ToString
-            public static class MemberDto {
+            public static class ListEntitiesForPolicyResultDtoPolicyGroupsDtoMemberDto {
                 /***/
                 @JsonProperty("GroupId")
                 private String GroupId;
@@ -125,18 +125,18 @@ public class ListEntitiesForPolicyResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("PolicyAccounts")
-        private PolicyAccountsDto PolicyAccounts;
+        private ListEntitiesForPolicyResultDtoPolicyAccountsDto PolicyAccounts;
 
         @Data
         @ToString
-        public static class PolicyAccountsDto {
+        public static class ListEntitiesForPolicyResultDtoPolicyAccountsDto {
             /***/
             @JsonProperty("member")
-            private List<MemberDto> Member;
+            private List<ListEntitiesForPolicyResultDtoPolicyAccountsDtoMemberDto> Member;
 
             @Data
             @ToString
-            public static class MemberDto {
+            public static class ListEntitiesForPolicyResultDtoPolicyAccountsDtoMemberDto {
                 /***/
                 @JsonProperty("AccountId")
                 private Integer AccountId;
@@ -159,18 +159,18 @@ public class ListEntitiesForPolicyResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("PolicyResourceDirs")
-        private PolicyResourceDirsDto PolicyResourceDirs;
+        private ListEntitiesForPolicyResultDtoPolicyResourceDirsDto PolicyResourceDirs;
 
         @Data
         @ToString
-        public static class PolicyResourceDirsDto {
+        public static class ListEntitiesForPolicyResultDtoPolicyResourceDirsDto {
             /***/
             @JsonProperty("member")
-            private List<MemberDto> Member;
+            private List<ListEntitiesForPolicyResultDtoPolicyResourceDirsDtoMemberDto> Member;
 
             @Data
             @ToString
-            public static class MemberDto {
+            public static class ListEntitiesForPolicyResultDtoPolicyResourceDirsDtoMemberDto {
                 /***/
                 @JsonProperty("ResourceDirId")
                 private String ResourceDirId;

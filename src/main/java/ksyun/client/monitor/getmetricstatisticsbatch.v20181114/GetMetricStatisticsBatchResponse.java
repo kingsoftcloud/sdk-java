@@ -23,18 +23,18 @@ public class GetMetricStatisticsBatchResponse extends BaseResponseModel {
     public static class GetMetricStatisticsBatchResultsDto {
         /**监控数据列表*/
         @JsonProperty("datapoints")
-        private DatapointsDto Datapoints;
+        private GetMetricStatisticsBatchResultsDtoDatapointsDto Datapoints;
 
         @Data
         @ToString
-        public static class DatapointsDto {
+        public static class GetMetricStatisticsBatchResultsDtoDatapointsDto {
             /**监控数据。*/
             @JsonProperty("member")
-            private List<MemberDto> Member;
+            private List<GetMetricStatisticsBatchResultsDtoDatapointsDtoMemberDto> Member;
 
             @Data
             @ToString
-            public static class MemberDto {
+            public static class GetMetricStatisticsBatchResultsDtoDatapointsDtoMemberDto {
                 /**该监控数据点生成的时间点。*/
                 @JsonProperty("timestamp")
                 private String Timestamp;

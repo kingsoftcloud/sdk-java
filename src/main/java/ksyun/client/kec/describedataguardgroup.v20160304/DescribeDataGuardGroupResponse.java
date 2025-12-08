@@ -47,11 +47,11 @@ public class DescribeDataGuardGroupResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("DataGuardInstancesList")
-        private List<DataGuardInstancesListDto> DataGuardInstancesList;
+        private List<DataGuardsSetDtoDataGuardInstancesListDto> DataGuardInstancesList;
 
         @Data
         @ToString
-        public static class DataGuardInstancesListDto {
+        public static class DataGuardsSetDtoDataGuardInstancesListDto {
             /***/
             @JsonProperty("InstanceId")
             private String InstanceId;

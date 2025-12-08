@@ -43,22 +43,22 @@ public class ListConfigurationsResponse extends BaseResponseModel {
 
         /**配置信息*/
         @JsonProperty("ConfigTags")
-        private List<ConfigTagsDto> ConfigTags;
+        private List<ConfigGroupsDtoConfigTagsDto> ConfigTags;
 
         @Data
         @ToString
-        public static class ConfigTagsDto {
+        public static class ConfigGroupsDtoConfigTagsDto {
             /**配置文件名*/
             @JsonProperty("Tag")
             private String Tag;
 
             /**配置文件具体配置项*/
             @JsonProperty("Configurations")
-            private List<ConfigurationsDto> Configurations;
+            private List<ConfigGroupsDtoConfigTagsDtoConfigurationsDto> Configurations;
 
             @Data
             @ToString
-            public static class ConfigurationsDto {
+            public static class ConfigGroupsDtoConfigTagsDtoConfigurationsDto {
                 /**配置项名*/
                 @JsonProperty("Key")
                 private String Key;

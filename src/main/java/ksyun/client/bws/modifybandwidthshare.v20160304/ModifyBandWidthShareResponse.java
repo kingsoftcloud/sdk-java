@@ -55,11 +55,11 @@ public class ModifyBandWidthShareResponse extends BaseResponseModel {
 
         /**关联EIP列表*/
         @JsonProperty("AssociateBandWidthShareInfoSet")
-        private List<AssociateBandWidthShareInfoSetDto> AssociateBandWidthShareInfoSet;
+        private List<BandWidthShareDtoAssociateBandWidthShareInfoSetDto> AssociateBandWidthShareInfoSet;
 
         @Data
         @ToString
-        public static class AssociateBandWidthShareInfoSetDto {
+        public static class BandWidthShareDtoAssociateBandWidthShareInfoSetDto {
             /**弹性IP的ID*/
             @JsonProperty("AllocationId")
             private String AllocationId;

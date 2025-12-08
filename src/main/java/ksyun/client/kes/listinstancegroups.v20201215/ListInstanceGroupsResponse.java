@@ -71,11 +71,11 @@ public class ListInstanceGroupsResponse extends BaseResponseModel {
 
         /**节点组节点信息*/
         @JsonProperty("Instances")
-        private List<InstancesDto> Instances;
+        private List<InstanceGroupsDtoInstancesDto> Instances;
 
         @Data
         @ToString
-        public static class InstancesDto {
+        public static class InstanceGroupsDtoInstancesDto {
             /**节点逻辑ID*/
             @JsonProperty("Id")
             private String Id;

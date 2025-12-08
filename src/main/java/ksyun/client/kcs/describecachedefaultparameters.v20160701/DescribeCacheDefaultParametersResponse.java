@@ -43,11 +43,11 @@ public class DescribeCacheDefaultParametersResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("validity")
-        private ValidityDto Validity;
+        private DataDtoValidityDto Validity;
 
         @Data
         @ToString
-        public static class ValidityDto {
+        public static class DataDtoValidityDto {
             /***/
             @JsonProperty("type")
             private String Type;

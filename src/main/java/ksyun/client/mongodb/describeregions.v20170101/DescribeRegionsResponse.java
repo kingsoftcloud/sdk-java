@@ -23,11 +23,11 @@ public class DescribeRegionsResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("Regions")
-        private List<RegionsDto> Regions;
+        private List<DataDtoRegionsDto> Regions;
 
         @Data
         @ToString
-        public static class RegionsDto {
+        public static class DataDtoRegionsDto {
             /***/
             @JsonProperty("Code")
             private String Code;
@@ -38,11 +38,11 @@ public class DescribeRegionsResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("AvailabilityZones")
-            private List<AvailabilityZonesDto> AvailabilityZones;
+            private List<DataDtoRegionsDtoAvailabilityZonesDto> AvailabilityZones;
 
             @Data
             @ToString
-            public static class AvailabilityZonesDto {
+            public static class DataDtoRegionsDtoAvailabilityZonesDto {
                 /***/
                 @JsonProperty("Code")
                 private String Code;

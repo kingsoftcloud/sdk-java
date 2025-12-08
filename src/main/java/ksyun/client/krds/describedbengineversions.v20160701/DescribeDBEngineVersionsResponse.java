@@ -23,18 +23,18 @@ public class DescribeDBEngineVersionsResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("Engines")
-        private EnginesDto Engines;
+        private DataDtoEnginesDto Engines;
 
         @Data
         @ToString
-        public static class EnginesDto {
+        public static class DataDtoEnginesDto {
             /***/
             @JsonProperty("MySQL")
-            private List<MySQLDto> MySQL;
+            private List<DataDtoEnginesDtoMySQLDto> MySQL;
 
             @Data
             @ToString
-            public static class MySQLDto {
+            public static class DataDtoEnginesDtoMySQLDto {
                 /**DBEngineVersions
 */
                 @JsonProperty("Engine")
@@ -49,11 +49,11 @@ public class DescribeDBEngineVersionsResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("consistent_mysql")
-            private List<Consistent_mysqlDto> Consistent_mysql;
+            private List<DataDtoEnginesDtoConsistent_mysqlDto> Consistent_mysql;
 
             @Data
             @ToString
-            public static class Consistent_mysqlDto {
+            public static class DataDtoEnginesDtoConsistent_mysqlDto {
                 /**DBEngineVersions
 */
                 @JsonProperty("Engine")
@@ -68,11 +68,11 @@ public class DescribeDBEngineVersionsResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("Percona")
-            private List<PerconaDto> Percona;
+            private List<DataDtoEnginesDtoPerconaDto> Percona;
 
             @Data
             @ToString
-            public static class PerconaDto {
+            public static class DataDtoEnginesDtoPerconaDto {
                 /**DBEngineVersions
 */
                 @JsonProperty("Engine")
@@ -87,11 +87,11 @@ public class DescribeDBEngineVersionsResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("ebs_mysql")
-            private List<Ebs_mysqlDto> Ebs_mysql;
+            private List<DataDtoEnginesDtoEbs_mysqlDto> Ebs_mysql;
 
             @Data
             @ToString
-            public static class Ebs_mysqlDto {
+            public static class DataDtoEnginesDtoEbs_mysqlDto {
                 /**DBEngineVersions
 */
                 @JsonProperty("Engine")

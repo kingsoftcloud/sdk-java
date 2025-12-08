@@ -43,11 +43,11 @@ public class CreateZoneRecordResponse extends BaseResponseModel {
 
         /**所绑定的VPC的信息*/
         @JsonProperty("RecordDataSet")
-        private List<RecordDataSetDto> RecordDataSet;
+        private List<RecordDtoRecordDataSetDto> RecordDataSet;
 
         @Data
         @ToString
-        public static class RecordDataSetDto {
+        public static class RecordDtoRecordDataSetDto {
             /**记录值*/
             @JsonProperty("RecordValue")
             private String RecordValue;

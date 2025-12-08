@@ -25,11 +25,11 @@ public class DeleteSecurityGroupResponse extends BaseResponseModel {
         /**	安全组列表
 返回安全组详细信息*/
         @JsonProperty("SecurityGroups")
-        private List<SecurityGroupsDto> SecurityGroups;
+        private List<DataDtoSecurityGroupsDto> SecurityGroups;
 
         @Data
         @ToString
-        public static class SecurityGroupsDto {
+        public static class DataDtoSecurityGroupsDto {
             /***/
             @JsonProperty("SecurityGroupId")
             private String SecurityGroupId;
@@ -52,11 +52,11 @@ public class DeleteSecurityGroupResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("Instances")
-            private List<InstancesDto> Instances;
+            private List<DataDtoSecurityGroupsDtoInstancesDto> Instances;
 
             @Data
             @ToString
-            public static class InstancesDto {
+            public static class DataDtoSecurityGroupsDtoInstancesDto {
                 /***/
                 @JsonProperty("DBInstanceIdentifier")
                 private String DBInstanceIdentifier;
@@ -77,11 +77,11 @@ public class DeleteSecurityGroupResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("SecurityGroupRules")
-            private List<SecurityGroupRulesDto> SecurityGroupRules;
+            private List<DataDtoSecurityGroupsDtoSecurityGroupRulesDto> SecurityGroupRules;
 
             @Data
             @ToString
-            public static class SecurityGroupRulesDto {
+            public static class DataDtoSecurityGroupsDtoSecurityGroupRulesDto {
                 /***/
                 @JsonProperty("SecurityGroupRuleId")
                 private String SecurityGroupRuleId;

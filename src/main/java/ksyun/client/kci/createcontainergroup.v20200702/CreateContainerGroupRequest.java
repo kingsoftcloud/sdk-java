@@ -110,11 +110,11 @@ MultiEipAllocationId 和 EipAllocationId只能同时传一个*/
         private Integer DataDiskGb;
 
         /**系统盘配置，有特殊系统盘要求，可填写，系统盘配置会决定可采用的机型*/
-        private SystemDiskDto SystemDiskList;
+        private AdvanceSettingsDtoSystemDiskDto SystemDiskList;
 
         @Data
         @ToString
-        public static class SystemDiskDto {
+        public static class AdvanceSettingsDtoSystemDiskDto {
             /**支持以下几种类型- Local_SSD 本地SSD- SSD3.0 云盘SSD3.0- EHDD 高效云盘- ESSD_SYSTEM_PL0 极速盘- ESSD_SYSTEM_PL1 极速盘- ESSD_SYSTEM_PL2 极速盘请谨慎指定系统盘类型，系统盘类型需要机型的支持*/
             @KsYunField(name="Type")
             private String Type;
@@ -143,11 +143,11 @@ MultiEipAllocationId 和 EipAllocationId只能同时传一个*/
 
         /***/
         @KsYunField(name="Option",type=2)
-        private List<OptionDto> OptionList;
+        private List<MachineDnsConfigDtoOptionDto> OptionList;
 
         @Data
         @ToString
-        public static class OptionDto {
+        public static class MachineDnsConfigDtoOptionDto {
             /***/
             @KsYunField(name="Name")
             private String Name;
@@ -227,11 +227,11 @@ MultiEipAllocationId 和 EipAllocationId只能同时传一个*/
         private String Name;
 
         /**当Volume.Type=NFSVolume，该配置必须填写*/
-        private NFSVolumeDto NFSVolumeList;
+        private VolumeDtoNFSVolumeDto NFSVolumeList;
 
         @Data
         @ToString
-        public static class NFSVolumeDto {
+        public static class VolumeDtoNFSVolumeDto {
             /**当Volume.Type=NFSVolume，Server必填*/
             @KsYunField(name="Server")
             private String Server;
@@ -247,11 +247,11 @@ MultiEipAllocationId 和 EipAllocationId只能同时传一个*/
         }
 
         /**当Volume.Type=HostPathVolume时，该配置必填*/
-        private HostPathVolumeDto HostPathVolumeList;
+        private VolumeDtoHostPathVolumeDto HostPathVolumeList;
 
         @Data
         @ToString
-        public static class HostPathVolumeDto {
+        public static class VolumeDtoHostPathVolumeDto {
             /**当Volume.Type=HostPathVolume时，路径必填*/
             @KsYunField(name="Path")
             private String Path;
@@ -259,11 +259,11 @@ MultiEipAllocationId 和 EipAllocationId只能同时传一个*/
         }
 
         /**当Volume.Type=EBSVolume时，该配置必填*/
-        private EBSVolumeDto EBSVolumeList;
+        private VolumeDtoEBSVolumeDto EBSVolumeList;
 
         @Data
         @ToString
-        public static class EBSVolumeDto {
+        public static class VolumeDtoEBSVolumeDto {
             /**当Volume.Type=EBSVolume时，文件系统类型必填，取值如下- ext3- ext4- xfs*/
             @KsYunField(name="FsType")
             private String FsType;
@@ -291,11 +291,11 @@ MultiEipAllocationId 和 EipAllocationId只能同时传一个*/
         }
 
         /**当Volume.Type=ConfigFileVolume时，该配置必填*/
-        private ConfigFileVolumeDto ConfigFileVolumeList;
+        private VolumeDtoConfigFileVolumeDto ConfigFileVolumeList;
 
         @Data
         @ToString
-        public static class ConfigFileVolumeDto {
+        public static class VolumeDtoConfigFileVolumeDto {
             /**配置文件的默认权限，采用四位八进制数表示。
 
 例如0644表示权限为-rw-r--r--，0对应-，表示文件类型为普通文件，644对应后续9位字符，表示3组权限，即用户权限为rw-，用户所在组权限为r--，其他用户权限为r--。
@@ -322,11 +322,11 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
 
             /**当Volume.Type=ConfigFileVolume时，该配置必填*/
             @KsYunField(name="ConfigFileToPath",type=2)
-            private List<ConfigFileToPathDto> ConfigFileToPathList;
+            private List<VolumeDtoConfigFileVolumeDtoConfigFileToPathDto> ConfigFileToPathList;
 
             @Data
             @ToString
-            public static class ConfigFileToPathDto {
+            public static class VolumeDtoConfigFileVolumeDtoConfigFileToPathDto {
                 /**相对于挂载目录，配置文件所在的相对文件路径。*/
                 @KsYunField(name="Path")
                 private String Path;
@@ -409,11 +409,11 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
         private String ImagePullPolicy;
 
         /**存活探测配置*/
-        private LivenessProbeDto LivenessProbeList;
+        private ContainerDtoLivenessProbeDto LivenessProbeList;
 
         @Data
         @ToString
-        public static class LivenessProbeDto {
+        public static class ContainerDtoLivenessProbeDto {
             /**初始探测延迟时间*/
             @KsYunField(name="InitialDelaySeconds")
             private Integer InitialDelaySeconds;
@@ -435,11 +435,11 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
             private Integer FailureThreshold;
 
             /**探测方式HttpGet、TcpSocket、Exec三选一， 发送http get请求探测*/
-            private HttpGetDto HttpGetList;
+            private ContainerDtoLivenessProbeDtoHttpGetDto HttpGetList;
 
             @Data
             @ToString
-            public static class HttpGetDto {
+            public static class ContainerDtoLivenessProbeDtoHttpGetDto {
                 /**端口*/
                 @KsYunField(name="Port")
                 private Integer Port;
@@ -455,11 +455,11 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
             }
 
             /**探测方式HttpGet、TcpSocket、Exec三选一，发送tcp探测*/
-            private TcpSocketDto TcpSocketList;
+            private ContainerDtoLivenessProbeDtoTcpSocketDto TcpSocketList;
 
             @Data
             @ToString
-            public static class TcpSocketDto {
+            public static class ContainerDtoLivenessProbeDtoTcpSocketDto {
                 /**tcp端口*/
                 @KsYunField(name="Port")
                 private Integer Port;
@@ -467,11 +467,11 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
             }
 
             /**探测方式HttpGet、TcpSocket、Exec三选一， 执行命令探测*/
-            private ExecDto ExecList;
+            private ContainerDtoLivenessProbeDtoExecDto ExecList;
 
             @Data
             @ToString
-            public static class ExecDto {
+            public static class ContainerDtoLivenessProbeDtoExecDto {
                 /**命令行*/
                 @KsYunField(name="Command",type=2)
                 private List<String> CommandList;
@@ -481,11 +481,11 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
         }
 
         /**就绪探测配置，各参数说明请参考LivenessProbe*/
-        private ReadinessProbeDto ReadinessProbeList;
+        private ContainerDtoReadinessProbeDto ReadinessProbeList;
 
         @Data
         @ToString
-        public static class ReadinessProbeDto {
+        public static class ContainerDtoReadinessProbeDto {
             /**初始探测延时，默认0*/
             @KsYunField(name="InitialDelaySeconds")
             private Integer InitialDelaySeconds;
@@ -507,11 +507,11 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
             private Integer FailureThreshold;
 
             /***/
-            private HttpGetDto HttpGetList;
+            private ContainerDtoReadinessProbeDtoHttpGetDto HttpGetList;
 
             @Data
             @ToString
-            public static class HttpGetDto {
+            public static class ContainerDtoReadinessProbeDtoHttpGetDto {
                 /***/
                 @KsYunField(name="Port")
                 private Integer Port;
@@ -527,11 +527,11 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
             }
 
             /***/
-            private ExecDto ExecList;
+            private ContainerDtoReadinessProbeDtoExecDto ExecList;
 
             @Data
             @ToString
-            public static class ExecDto {
+            public static class ContainerDtoReadinessProbeDtoExecDto {
                 /***/
                 @KsYunField(name="Command",type=2)
                 private List<String> CommandList;
@@ -539,11 +539,11 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
             }
 
             /***/
-            private TcpSocketDto TcpSocketList;
+            private ContainerDtoReadinessProbeDtoTcpSocketDto TcpSocketList;
 
             @Data
             @ToString
-            public static class TcpSocketDto {
+            public static class ContainerDtoReadinessProbeDtoTcpSocketDto {
                 /***/
                 @KsYunField(name="Port")
                 private Integer Port;
@@ -554,11 +554,11 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
 
         /**环境变量*/
         @KsYunField(name="EnvironmentVar",type=2)
-        private List<EnvironmentVarDto> EnvironmentVarList;
+        private List<ContainerDtoEnvironmentVarDto> EnvironmentVarList;
 
         @Data
         @ToString
-        public static class EnvironmentVarDto {
+        public static class ContainerDtoEnvironmentVarDto {
             /**格式`^[-._a-zA-Z][-._a-zA-Z0-9]*$`*/
             @KsYunField(name="Key")
             private String Key;
@@ -568,17 +568,17 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
             private String Value;
 
             /**ValueFrom与Value不能同时存在*/
-            private ValueFromDto ValueFromList;
+            private ContainerDtoEnvironmentVarDtoValueFromDto ValueFromList;
 
             @Data
             @ToString
-            public static class ValueFromDto {
+            public static class ContainerDtoEnvironmentVarDtoValueFromDto {
                 /**其它方式暂不支持*/
-                private FieldRefDto FieldRefList;
+                private ContainerDtoEnvironmentVarDtoValueFromDtoFieldRefDto FieldRefList;
 
                 @Data
                 @ToString
-                public static class FieldRefDto {
+                public static class ContainerDtoEnvironmentVarDtoValueFromDtoFieldRefDto {
                     /**字段路径，如status.podIP*/
                     @KsYunField(name="FieldPath")
                     private String FieldPath;
@@ -591,11 +591,11 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
 
         /***/
         @KsYunField(name="Port",type=2)
-        private List<PortDto> PortList;
+        private List<ContainerDtoPortDto> PortList;
 
         @Data
         @ToString
-        public static class PortDto {
+        public static class ContainerDtoPortDto {
             /**容器服务端口*/
             @KsYunField(name="Port")
             private Integer Port;
@@ -608,11 +608,11 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
 
         /**挂载点信息*/
         @KsYunField(name="VolumeMount",type=2)
-        private List<VolumeMountDto> VolumeMountList;
+        private List<ContainerDtoVolumeMountDto> VolumeMountList;
 
         @Data
         @ToString
-        public static class VolumeMountDto {
+        public static class ContainerDtoVolumeMountDto {
             /**Volume名称，必填，它必须是Volume.N中已存在的名称*/
             @KsYunField(name="Name")
             private String Name;
@@ -645,11 +645,11 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
 
         /***/
         @KsYunField(name="Option",type=2)
-        private List<OptionDto> OptionList;
+        private List<DnsConfigDtoOptionDto> OptionList;
 
         @Data
         @ToString
-        public static class OptionDto {
+        public static class DnsConfigDtoOptionDto {
             /***/
             @KsYunField(name="Name")
             private String Name;

@@ -23,18 +23,18 @@ public class DescribeSoAvailableResourceResponse extends BaseResponseModel {
     public static class AvailableZonesDto {
         /***/
         @JsonProperty("AvailableResources")
-        private List<AvailableResourcesDto> AvailableResources;
+        private List<AvailableZonesDtoAvailableResourcesDto> AvailableResources;
 
         @Data
         @ToString
-        public static class AvailableResourcesDto {
+        public static class AvailableZonesDtoAvailableResourcesDto {
             /***/
             @JsonProperty("SupportedResources")
-            private List<SupportedResourcesDto> SupportedResources;
+            private List<AvailableZonesDtoAvailableResourcesDtoSupportedResourcesDto> SupportedResources;
 
             @Data
             @ToString
-            public static class SupportedResourcesDto {
+            public static class AvailableZonesDtoAvailableResourcesDtoSupportedResourcesDto {
                 /**Available*/
                 @JsonProperty("Status")
                 private String Status;

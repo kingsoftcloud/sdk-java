@@ -55,11 +55,11 @@ public class QueryNatTopVifMonitorResponse extends BaseResponseModel {
 
         /**明细数据*/
         @JsonProperty("MemberData")
-        private List<MemberDataDto> MemberData;
+        private List<NatMonitorDataListDtoMemberDataDto> MemberData;
 
         @Data
         @ToString
-        public static class MemberDataDto {
+        public static class NatMonitorDataListDtoMemberDataDto {
             /**时间带格式的，yyyy-MM-dd HH:mm:ss*/
             @JsonProperty("Timestamp")
             private String Timestamp;

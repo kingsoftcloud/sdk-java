@@ -50,11 +50,11 @@ normal：普通用户*/
 
         /**权限集合*/
         @JsonProperty("Privileges")
-        private PrivilegesDto Privileges;
+        private DataDtoPrivilegesDto Privileges;
 
         @Data
         @ToString
-        public static class PrivilegesDto {
+        public static class DataDtoPrivilegesDto {
             /**ALL表示所有数据库(仅管理员用户)，
 普通用户可到单个库的权限；
 

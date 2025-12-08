@@ -23,11 +23,11 @@ public class CreateDBParameterGroupResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("DBParameterGroup")
-        private DBParameterGroupDto DBParameterGroup;
+        private DataDtoDBParameterGroupDto DBParameterGroup;
 
         @Data
         @ToString
-        public static class DBParameterGroupDto {
+        public static class DataDtoDBParameterGroupDto {
             /***/
             @JsonProperty("DBParameterGroupId")
             private String DBParameterGroupId;
@@ -42,11 +42,11 @@ public class CreateDBParameterGroupResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("Parameters")
-            private ParametersDto Parameters;
+            private DataDtoDBParameterGroupDtoParametersDto Parameters;
 
             @Data
             @ToString
-            public static class ParametersDto {
+            public static class DataDtoDBParameterGroupDtoParametersDto {
             }
 
             /***/

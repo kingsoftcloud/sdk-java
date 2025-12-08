@@ -35,11 +35,11 @@ public class DescribeInstanceShardInfoResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("Zookeeper")
-        private List<ZookeeperDto> Zookeeper;
+        private List<DataDtoZookeeperDto> Zookeeper;
 
         @Data
         @ToString
-        public static class ZookeeperDto {
+        public static class DataDtoZookeeperDto {
             /**41a7fcd8-1cd0-4b93-ae3a-23fbbc712739*/
             @JsonProperty("Id")
             private String Id;
@@ -68,11 +68,11 @@ public class DescribeInstanceShardInfoResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Clickhouse")
-        private ClickhouseDto Clickhouse;
+        private DataDtoClickhouseDto Clickhouse;
 
         @Data
         @ToString
-        public static class ClickhouseDto {
+        public static class DataDtoClickhouseDto {
             /**default_cluster*/
             @JsonProperty("ClusterName")
             private String ClusterName;
@@ -88,9 +88,6 @@ public class DescribeInstanceShardInfoResponse extends BaseResponseModel {
             /**0.0*/
             @JsonProperty("ColdUsage")
             private String ColdUsage;
-
-            /***/
-            @JsonProperty("Shards")
         }
 
     }

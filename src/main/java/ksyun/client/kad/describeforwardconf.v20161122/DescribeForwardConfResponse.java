@@ -27,18 +27,18 @@ public class DescribeForwardConfResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("ForwardConfSet")
-        private ForwardConfSetDto ForwardConfSet;
+        private ResponseDtoForwardConfSetDto ForwardConfSet;
 
         @Data
         @ToString
-        public static class ForwardConfSetDto {
+        public static class ResponseDtoForwardConfSetDto {
             /***/
             @JsonProperty("item")
-            private ItemDto Item;
+            private ResponseDtoForwardConfSetDtoItemDto Item;
 
             @Data
             @ToString
-            public static class ItemDto {
+            public static class ResponseDtoForwardConfSetDtoItemDto {
                 /***/
                 @JsonProperty("KadId")
                 private String KadId;
@@ -65,11 +65,11 @@ public class DescribeForwardConfResponse extends BaseResponseModel {
 
                 /***/
                 @JsonProperty("HealthMonitor")
-                private HealthMonitorDto HealthMonitor;
+                private ResponseDtoForwardConfSetDtoItemDtoHealthMonitorDto HealthMonitor;
 
                 @Data
                 @ToString
-                public static class HealthMonitorDto {
+                public static class ResponseDtoForwardConfSetDtoItemDtoHealthMonitorDto {
                     /***/
                     @JsonProperty("Switch")
                     private String SwitchField;

@@ -23,11 +23,11 @@ public class GetAlertUserResponse extends BaseResponseModel {
     public static class DataDto {
         /**联系人列表*/
         @JsonProperty("userList")
-        private UserListDto UserList;
+        private DataDtoUserListDto UserList;
 
         @Data
         @ToString
-        public static class UserListDto {
+        public static class DataDtoUserListDto {
             /**联系人ID*/
             @JsonProperty("userId")
             private Integer UserId;
@@ -46,11 +46,11 @@ public class GetAlertUserResponse extends BaseResponseModel {
 
             /**归属的联系组列表*/
             @JsonProperty("userGroups")
-            private List<UserGroupsDto> UserGroups;
+            private List<DataDtoUserListDtoUserGroupsDto> UserGroups;
 
             @Data
             @ToString
-            public static class UserGroupsDto {
+            public static class DataDtoUserListDtoUserGroupsDto {
                 /**联系组ID*/
                 @JsonProperty("userGrpId")
                 private Integer UserGrpId;

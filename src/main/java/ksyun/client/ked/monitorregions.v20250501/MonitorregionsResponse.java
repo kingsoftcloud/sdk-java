@@ -39,11 +39,11 @@ public class MonitorregionsResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("regions")
-        private List<RegionsDto> Regions;
+        private List<DataDtoRegionsDto> Regions;
 
         @Data
         @ToString
-        public static class RegionsDto {
+        public static class DataDtoRegionsDto {
             /**显示名称*/
             @JsonProperty("name")
             private String Name;

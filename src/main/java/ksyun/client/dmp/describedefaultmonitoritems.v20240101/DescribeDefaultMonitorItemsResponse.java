@@ -27,11 +27,11 @@ public class DescribeDefaultMonitorItemsResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("MonitorItems")
-        private MonitorItemsDto MonitorItems;
+        private DataDtoMonitorItemsDto MonitorItems;
 
         @Data
         @ToString
-        public static class MonitorItemsDto {
+        public static class DataDtoMonitorItemsDto {
             /***/
             @JsonProperty("rds.innodb_rows_inserted")
             private String RdsInnodb_rows_inserted;

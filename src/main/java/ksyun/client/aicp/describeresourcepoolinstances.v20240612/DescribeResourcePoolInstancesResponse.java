@@ -137,11 +137,11 @@ public class DescribeResourcePoolInstancesResponse extends BaseResponseModel {
         /**	
 网卡列表*/
         @JsonProperty("NetworkInterfaceSet")
-        private List<NetworkInterfaceSetDto> NetworkInterfaceSet;
+        private List<ResourcePoolInstanceSetDtoNetworkInterfaceSetDto> NetworkInterfaceSet;
 
         @Data
         @ToString
-        public static class NetworkInterfaceSetDto {
+        public static class ResourcePoolInstanceSetDtoNetworkInterfaceSetDto {
             /**VPC ID*/
             @JsonProperty("VpcId")
             private String VpcId;
@@ -169,11 +169,11 @@ public class DescribeResourcePoolInstancesResponse extends BaseResponseModel {
         /**	
 节点CPU使用情况*/
         @JsonProperty("Cpu")
-        private CpuDto Cpu;
+        private ResourcePoolInstanceSetDtoCpuDto Cpu;
 
         @Data
         @ToString
-        public static class CpuDto {
+        public static class ResourcePoolInstanceSetDtoCpuDto {
             /**已分配值*/
             @JsonProperty("Allocated")
             private Integer Allocated;
@@ -187,11 +187,11 @@ public class DescribeResourcePoolInstancesResponse extends BaseResponseModel {
         /**	
 节点GPU使用情况*/
         @JsonProperty("Gpu")
-        private GpuDto Gpu;
+        private ResourcePoolInstanceSetDtoGpuDto Gpu;
 
         @Data
         @ToString
-        public static class GpuDto {
+        public static class ResourcePoolInstanceSetDtoGpuDto {
             /**已分配值*/
             @JsonProperty("Allocated")
             private Integer Allocated;
@@ -205,11 +205,11 @@ public class DescribeResourcePoolInstancesResponse extends BaseResponseModel {
         /**	
 节点内存使用情况*/
         @JsonProperty("Memory")
-        private MemoryDto Memory;
+        private ResourcePoolInstanceSetDtoMemoryDto Memory;
 
         @Data
         @ToString
-        public static class MemoryDto {
+        public static class ResourcePoolInstanceSetDtoMemoryDto {
             /**已分配值*/
             @JsonProperty("Allocated")
             private Integer Allocated;

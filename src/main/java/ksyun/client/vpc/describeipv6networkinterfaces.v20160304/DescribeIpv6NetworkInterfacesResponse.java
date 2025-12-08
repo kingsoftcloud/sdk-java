@@ -87,11 +87,11 @@ public class DescribeIpv6NetworkInterfacesResponse extends BaseResponseModel {
 
         /**Ipv6地址列表*/
         @JsonProperty("Ipv6PublicIpAddressSet")
-        private List<Ipv6PublicIpAddressSetDto> Ipv6PublicIpAddressSet;
+        private List<NetworkInterfaceSetDtoIpv6PublicIpAddressSetDto> Ipv6PublicIpAddressSet;
 
         @Data
         @ToString
-        public static class Ipv6PublicIpAddressSetDto {
+        public static class NetworkInterfaceSetDtoIpv6PublicIpAddressSetDto {
             /**Ipv6地址*/
             @JsonProperty("Ipv6PublicIpAddress")
             private String Ipv6PublicIpAddress;

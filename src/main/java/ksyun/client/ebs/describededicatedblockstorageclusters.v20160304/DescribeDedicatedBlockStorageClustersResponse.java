@@ -59,11 +59,11 @@ public class DescribeDedicatedBlockStorageClustersResponse extends BaseResponseM
 
         /***/
         @JsonProperty("DedicatedBlockStorageClusterSize")
-        private DedicatedBlockStorageClusterSizeDto DedicatedBlockStorageClusterSize;
+        private DbscsDtoDedicatedBlockStorageClusterSizeDto DedicatedBlockStorageClusterSize;
 
         @Data
         @ToString
-        public static class DedicatedBlockStorageClusterSizeDto {
+        public static class DbscsDtoDedicatedBlockStorageClusterSizeDto {
             /***/
             @JsonProperty("AvailableSize")
             private Integer AvailableSize;

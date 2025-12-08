@@ -55,11 +55,11 @@ public class GetDomainPidDimensionUsageDataResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("projects")
-        private List<ProjectsDto> Projects;
+        private List<MetricDtoProjectsDto> Projects;
 
         @Data
         @ToString
-        public static class ProjectsDto {
+        public static class MetricDtoProjectsDto {
             /***/
             @JsonProperty("project")
             private String Project;

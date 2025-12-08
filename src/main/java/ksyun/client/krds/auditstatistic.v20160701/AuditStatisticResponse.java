@@ -24,11 +24,11 @@ public class AuditStatisticResponse extends BaseResponseModel {
         /**SQL操作类型	
 返回类型具体由审计结果统计*/
         @JsonProperty("AccessSqlLanguage")
-        private AccessSqlLanguageDto AccessSqlLanguage;
+        private AuditStatisticDtoAccessSqlLanguageDto AccessSqlLanguage;
 
         @Data
         @ToString
-        public static class AccessSqlLanguageDto {
+        public static class AuditStatisticDtoAccessSqlLanguageDto {
             /***/
             @JsonProperty("OTHER")
             private Integer OTHER;
@@ -50,11 +50,11 @@ public class AuditStatisticResponse extends BaseResponseModel {
         /**SQL操作命令	
 返回类型具体由审计结果统计*/
         @JsonProperty("AccessSqlStatement")
-        private AccessSqlStatementDto AccessSqlStatement;
+        private AuditStatisticDtoAccessSqlStatementDto AccessSqlStatement;
 
         @Data
         @ToString
-        public static class AccessSqlStatementDto {
+        public static class AuditStatisticDtoAccessSqlStatementDto {
             /***/
             @JsonProperty("LOGOUT")
             private Integer LOGOUT;

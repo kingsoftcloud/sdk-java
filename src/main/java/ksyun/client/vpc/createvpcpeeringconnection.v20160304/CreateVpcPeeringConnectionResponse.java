@@ -55,11 +55,11 @@ public class CreateVpcPeeringConnectionResponse extends BaseResponseModel {
 
         /**Peering发起端Vpc的信息*/
         @JsonProperty("RequesterVpcInfo")
-        private RequesterVpcInfoDto RequesterVpcInfo;
+        private VpcPeeringConnectionDtoRequesterVpcInfoDto RequesterVpcInfo;
 
         @Data
         @ToString
-        public static class RequesterVpcInfoDto {
+        public static class VpcPeeringConnectionDtoRequesterVpcInfoDto {
             /**发起端账号ID*/
             @JsonProperty("AccountId")
             private String AccountId;
@@ -88,11 +88,11 @@ public class CreateVpcPeeringConnectionResponse extends BaseResponseModel {
 
         /**Peering接受端Vpc信息*/
         @JsonProperty("AccepterVpcInfo")
-        private AccepterVpcInfoDto AccepterVpcInfo;
+        private VpcPeeringConnectionDtoAccepterVpcInfoDto AccepterVpcInfo;
 
         @Data
         @ToString
-        public static class AccepterVpcInfoDto {
+        public static class VpcPeeringConnectionDtoAccepterVpcInfoDto {
             /**接受端账号ID*/
             @JsonProperty("AccountId")
             private String AccountId;

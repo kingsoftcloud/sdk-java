@@ -35,11 +35,11 @@ public class ListJobRunsResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("JobRuns")
-        private List<JobRunsDto> JobRuns;
+        private List<DataDtoJobRunsDto> JobRuns;
 
         @Data
         @ToString
-        public static class JobRunsDto {
+        public static class DataDtoJobRunsDto {
             /**SparkApp ID*/
             @JsonProperty("AppId")
             private String AppId;

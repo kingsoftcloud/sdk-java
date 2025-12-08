@@ -27,11 +27,11 @@ public class StatisticDBInstancesResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Statistic")
-        private StatisticDto Statistic;
+        private DataDtoStatisticDto Statistic;
 
         @Data
         @ToString
-        public static class StatisticDto {
+        public static class DataDtoStatisticDto {
             /**任务中*/
             @JsonProperty("RUNNING_TASK")
             private Integer RUNNING_TASK;

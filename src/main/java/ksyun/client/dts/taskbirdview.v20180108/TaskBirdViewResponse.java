@@ -23,11 +23,11 @@ public class TaskBirdViewResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("global")
-        private GlobalDto Global;
+        private DataDtoGlobalDto Global;
 
         @Data
         @ToString
-        public static class GlobalDto {
+        public static class DataDtoGlobalDto {
             /***/
             @JsonProperty("total")
             private Integer Total;
@@ -52,11 +52,11 @@ public class TaskBirdViewResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("regions")
-        private List<RegionsDto> Regions;
+        private List<DataDtoRegionsDto> Regions;
 
         @Data
         @ToString
-        public static class RegionsDto {
+        public static class DataDtoRegionsDto {
             /***/
             @JsonProperty("regionId")
             private Integer RegionId;
@@ -75,11 +75,11 @@ public class TaskBirdViewResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("Statistic")
-            private StatisticDto Statistic;
+            private DataDtoRegionsDtoStatisticDto Statistic;
 
             @Data
             @ToString
-            public static class StatisticDto {
+            public static class DataDtoRegionsDtoStatisticDto {
                 /***/
                 @JsonProperty("running")
                 private Integer Running;

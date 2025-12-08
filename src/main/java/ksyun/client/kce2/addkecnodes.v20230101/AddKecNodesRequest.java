@@ -32,11 +32,11 @@ public class AddKecNodesRequest{
 
         /**组件配置*/
         @KsYunField(name="Components",type=2)
-        private List<ComponentsDto> ComponentsList;
+        private List<NodeInstanceSetDtoComponentsDto> ComponentsList;
 
         @Data
         @ToString
-        public static class ComponentsDto {
+        public static class NodeInstanceSetDtoComponentsDto {
             /**核心组件的类型
 • APISERVER
 • ETCD
@@ -49,11 +49,11 @@ public class AddKecNodesRequest{
         }
 
         /**k8s节点配置*/
-        private AdvancedSettingDto AdvancedSettingList;
+        private NodeInstanceSetDtoAdvancedSettingDto AdvancedSettingList;
 
         @Data
         @ToString
-        public static class AdvancedSettingDto {
+        public static class NodeInstanceSetDtoAdvancedSettingDto {
             /**部署前执行脚本（base64编码）*/
             @KsYunField(name="PostUserScript")
             private String PostUserScript;
@@ -63,11 +63,11 @@ public class AddKecNodesRequest{
             private String PreUserScript;
 
             /**容器相关信息*/
-            private ContainerDto ContainerList;
+            private NodeInstanceSetDtoAdvancedSettingDtoContainerDto ContainerList;
 
             @Data
             @ToString
-            public static class ContainerDto {
+            public static class NodeInstanceSetDtoAdvancedSettingDtoContainerDto {
                 /**容器运行时名称:
 • Containerd（默认）*/
                 @KsYunField(name="Runtime")
@@ -90,11 +90,11 @@ public class AddKecNodesRequest{
         }
 
         /**节点信息*/
-        private NodeInstanceSetDto NodeInstanceSetList;
+        private NodeInstanceSetDtoNodeInstanceSetDto NodeInstanceSetList;
 
         @Data
         @ToString
-        public static class NodeInstanceSetDto {
+        public static class NodeInstanceSetDtoNodeInstanceSetDto {
             /**实例类型
 • KEC   云服务器*/
             @KsYunField(name="Provider")
@@ -102,11 +102,11 @@ public class AddKecNodesRequest{
 
             /**组件配置*/
             @KsYunField(name="Components",type=2)
-            private List<ComponentsDto> ComponentsList;
+            private List<NodeInstanceSetDtoNodeInstanceSetDtoComponentsDto> ComponentsList;
 
             @Data
             @ToString
-            public static class ComponentsDto {
+            public static class NodeInstanceSetDtoNodeInstanceSetDtoComponentsDto {
                 /**核心组件的类型
 • APISERVER
 • ETCD
@@ -119,11 +119,11 @@ public class AddKecNodesRequest{
             }
 
             /**k8s节点配置*/
-            private AdvancedSettingDto AdvancedSettingList;
+            private NodeInstanceSetDtoNodeInstanceSetDtoAdvancedSettingDto AdvancedSettingList;
 
             @Data
             @ToString
-            public static class AdvancedSettingDto {
+            public static class NodeInstanceSetDtoNodeInstanceSetDtoAdvancedSettingDto {
                 /**部署前执行脚本（base64编码）*/
                 @KsYunField(name="PostUserScript")
                 private String PostUserScript;
@@ -133,11 +133,11 @@ public class AddKecNodesRequest{
                 private String PreUserScript;
 
                 /**容器相关信息*/
-                private ContainerDto ContainerList;
+                private NodeInstanceSetDtoNodeInstanceSetDtoAdvancedSettingDtoContainerDto ContainerList;
 
                 @Data
                 @ToString
-                public static class ContainerDto {
+                public static class NodeInstanceSetDtoNodeInstanceSetDtoAdvancedSettingDtoContainerDto {
                     /**容器运行时名称:
 • Containerd（默认）*/
                     @KsYunField(name="Runtime")
@@ -159,11 +159,11 @@ public class AddKecNodesRequest{
 
                 /**标签信息*/
                 @KsYunField(name="Labels",type=2)
-                private List<LabelsDto> LabelsList;
+                private List<NodeInstanceSetDtoNodeInstanceSetDtoAdvancedSettingDtoLabelsDto> LabelsList;
 
                 @Data
                 @ToString
-                public static class LabelsDto {
+                public static class NodeInstanceSetDtoNodeInstanceSetDtoAdvancedSettingDtoLabelsDto {
                     /**key信息*/
                     @KsYunField(name="Key")
                     private String Key;
@@ -175,11 +175,11 @@ public class AddKecNodesRequest{
                 }
 
                 /**污点信息*/
-                private TaintsDto TaintsList;
+                private NodeInstanceSetDtoNodeInstanceSetDtoAdvancedSettingDtoTaintsDto TaintsList;
 
                 @Data
                 @ToString
-                public static class TaintsDto {
+                public static class NodeInstanceSetDtoNodeInstanceSetDtoAdvancedSettingDtoTaintsDto {
                     /**key信息*/
                     @KsYunField(name="Key")
                     private String Key;
@@ -193,11 +193,11 @@ public class AddKecNodesRequest{
             }
 
             /**节点通用配置*/
-            private BasicSettingDto BasicSettingList;
+            private NodeInstanceSetDtoNodeInstanceSetDtoBasicSettingDto BasicSettingList;
 
             @Data
             @ToString
-            public static class BasicSettingDto {
+            public static class NodeInstanceSetDtoNodeInstanceSetDtoBasicSettingDto {
                 /**是否为新建节点
 true为新建节点
 false为已有节点*/
@@ -230,11 +230,11 @@ false为已有节点*/
                 private String ImageID;
 
                 /**系统盘信息（新建节点必填）*/
-                private SystemDiskDto SystemDiskList;
+                private NodeInstanceSetDtoNodeInstanceSetDtoBasicSettingDtoSystemDiskDto SystemDiskList;
 
                 @Data
                 @ToString
-                public static class SystemDiskDto {
+                public static class NodeInstanceSetDtoNodeInstanceSetDtoBasicSettingDtoSystemDiskDto {
                     /**系统盘类型
 具体值参考云主机文档：https://docs.ksyun.com/documents/1528?type=6*/
                     @KsYunField(name="Type")
@@ -249,11 +249,11 @@ false为已有节点*/
 
                 /**数据盘信息*/
                 @KsYunField(name="DataDisk",type=2)
-                private List<DataDiskDto> DataDiskList;
+                private List<NodeInstanceSetDtoNodeInstanceSetDtoBasicSettingDtoDataDiskDto> DataDiskList;
 
                 @Data
                 @ToString
-                public static class DataDiskDto {
+                public static class NodeInstanceSetDtoNodeInstanceSetDtoBasicSettingDtoDataDiskDto {
                     /**数据盘配置
 具体值参考云主机文档https://docs.ksyun.com/documents/1528?type=6*/
                     @KsYunField(name="Type")
@@ -290,11 +290,11 @@ false为已有节点*/
 
                 /**节点登录信息（云主机节点为必填字段）
 （查询时，该字段为敏感信息，不返回）*/
-                private LoginSettingDto LoginSettingList;
+                private NodeInstanceSetDtoNodeInstanceSetDtoBasicSettingDtoLoginSettingDto LoginSettingList;
 
                 @Data
                 @ToString
-                public static class LoginSettingDto {
+                public static class NodeInstanceSetDtoNodeInstanceSetDtoBasicSettingDtoLoginSettingDto {
                     /**登录密码（明文）跟秘钥二选一
 有效值：8-32个字符，必须包含大小写字母和数字*/
                     @KsYunField(name="Password")

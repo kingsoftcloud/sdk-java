@@ -107,11 +107,11 @@ public class GetCertificateDetailResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Contact")
-        private ContactDto Contact;
+        private CertificateDtoContactDto Contact;
 
         @Data
         @ToString
-        public static class ContactDto {
+        public static class CertificateDtoContactDto {
             /***/
             @JsonProperty("FirstName")
             private String FirstName;
@@ -140,11 +140,11 @@ public class GetCertificateDetailResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("AuthContent")
-        private AuthContentDto AuthContent;
+        private CertificateDtoAuthContentDto AuthContent;
 
         @Data
         @ToString
-        public static class AuthContentDto {
+        public static class CertificateDtoAuthContentDto {
             /***/
             @JsonProperty("CheckName")
             private String CheckName;

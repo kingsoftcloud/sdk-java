@@ -39,11 +39,11 @@ public class GetUserUsageDataExportTaskResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("DataItem")
-        private List<DataItemDto> DataItem;
+        private List<UsageDataPerPageDtoDataItemDto> DataItem;
 
         @Data
         @ToString
-        public static class DataItemDto {
+        public static class UsageDataPerPageDtoDataItemDto {
             /***/
             @JsonProperty("TaskId")
             private String TaskId;
@@ -62,11 +62,11 @@ public class GetUserUsageDataExportTaskResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("TaskConfig")
-            private TaskConfigDto TaskConfig;
+            private UsageDataPerPageDtoDataItemDtoTaskConfigDto TaskConfig;
 
             @Data
             @ToString
-            public static class TaskConfigDto {
+            public static class UsageDataPerPageDtoDataItemDtoTaskConfigDto {
                 /***/
                 @JsonProperty("StartTime")
                 private String StartTime;

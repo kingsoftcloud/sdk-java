@@ -27,11 +27,11 @@ public class StatisticDBInstancesResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("partition")
-        private List<PartitionDto> Partition;
+        private List<DataDtoPartitionDto> Partition;
 
         @Data
         @ToString
-        public static class PartitionDto {
+        public static class DataDtoPartitionDto {
             /***/
             @JsonProperty("name")
             private String Name;
@@ -46,11 +46,11 @@ public class StatisticDBInstancesResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("statistics")
-            private List<StatisticsDto> Statistics;
+            private List<DataDtoPartitionDtoStatisticsDto> Statistics;
 
             @Data
             @ToString
-            public static class StatisticsDto {
+            public static class DataDtoPartitionDtoStatisticsDto {
                 /***/
                 @JsonProperty("name")
                 private String Name;
@@ -69,11 +69,11 @@ public class StatisticDBInstancesResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("count")
-        private CountDto Count;
+        private DataDtoCountDto Count;
 
         @Data
         @ToString
-        public static class CountDto {
+        public static class DataDtoCountDto {
             /***/
             @JsonProperty("name")
             private String Name;
@@ -88,11 +88,11 @@ public class StatisticDBInstancesResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("statistics")
-            private List<StatisticsDto> Statistics;
+            private List<DataDtoCountDtoStatisticsDto> Statistics;
 
             @Data
             @ToString
-            public static class StatisticsDto {
+            public static class DataDtoCountDtoStatisticsDto {
                 /***/
                 @JsonProperty("name")
                 private String Name;

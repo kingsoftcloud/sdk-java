@@ -23,11 +23,11 @@ public class UpdateAlertUserStatusResponse extends BaseResponseModel {
     public static class DataDto {
         /**告警联系人列表。*/
         @JsonProperty("userList")
-        private List<UserListDto> UserList;
+        private List<DataDtoUserListDto> UserList;
 
         @Data
         @ToString
-        public static class UserListDto {
+        public static class DataDtoUserListDto {
             /**告警联系人ID。*/
             @JsonProperty("userId")
             private Integer UserId;

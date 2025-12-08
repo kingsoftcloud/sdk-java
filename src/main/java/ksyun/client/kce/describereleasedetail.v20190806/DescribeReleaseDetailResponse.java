@@ -67,11 +67,11 @@ public class DescribeReleaseDetailResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("DeployResources")
-        private List<DeployResourcesDto> DeployResources;
+        private List<ReleaseDetailDtoDeployResourcesDto> DeployResources;
 
         @Data
         @ToString
-        public static class DeployResourcesDto {
+        public static class ReleaseDetailDtoDeployResourcesDto {
             /**资源类型*/
             @JsonProperty("Kind")
             private String Kind;

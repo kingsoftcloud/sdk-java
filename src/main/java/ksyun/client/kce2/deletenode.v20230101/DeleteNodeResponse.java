@@ -27,11 +27,11 @@ public class DeleteNodeResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("InstanceSet")
-        private List<InstanceSetDto> InstanceSet;
+        private List<DataDtoInstanceSetDto> InstanceSet;
 
         @Data
         @ToString
-        public static class InstanceSetDto {
+        public static class DataDtoInstanceSetDto {
             /***/
             @JsonProperty("InstanceId")
             private String InstanceId;

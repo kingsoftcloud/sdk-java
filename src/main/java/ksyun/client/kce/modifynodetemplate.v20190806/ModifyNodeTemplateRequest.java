@@ -50,11 +50,11 @@ public class ModifyNodeTemplateRequest{
 
         /**系统盘信息
 注：若不指定该参数，则按照系统默认值进行分配*/
-        private SystemDiskDto SystemDiskList;
+        private NodeTemplateDtoSystemDiskDto SystemDiskList;
 
         @Data
         @ToString
-        public static class SystemDiskDto {
+        public static class NodeTemplateDtoSystemDiskDto {
             /**系统盘类型*/
             @KsYunField(name="DiskType")
             private String DiskType;
@@ -71,11 +71,11 @@ public class ModifyNodeTemplateRequest{
 
         /***/
         @KsYunField(name="DataDisk",type=2)
-        private List<DataDiskDto> DataDiskList;
+        private List<NodeTemplateDtoDataDiskDto> DataDiskList;
 
         @Data
         @ToString
-        public static class DataDiskDto {
+        public static class NodeTemplateDtoDataDiskDto {
             /**第n个数据盘（云盘）的类型，仅支持一块数据盘*/
             @KsYunField(name="Type")
             private String Type;
@@ -133,17 +133,17 @@ public class ModifyNodeTemplateRequest{
         private List<String> KeyIdList;
 
         /**节点高级设置*/
-        private AdvancedSettingDto AdvancedSettingList;
+        private NodeTemplateDtoAdvancedSettingDto AdvancedSettingList;
 
         @Data
         @ToString
-        public static class AdvancedSettingDto {
+        public static class NodeTemplateDtoAdvancedSettingDto {
             /**数据盘挂载设置，仅针对于第一块数据盘生效*/
-            private DataDiskDto DataDiskList;
+            private NodeTemplateDtoAdvancedSettingDtoDataDiskDto DataDiskList;
 
             @Data
             @ToString
-            public static class DataDiskDto {
+            public static class NodeTemplateDtoAdvancedSettingDtoDataDiskDto {
                 /**是否对数据盘格式化并挂载，默认值；true。若此字段填写false，则 FileSystem 和 MountTarget字段不生效*/
                 @KsYunField(name="AutoFormatAndMount")
                 private Boolean AutoFormatAndMount;
@@ -186,11 +186,11 @@ Kubernetes版本≥1.24时，有效值：
 
             /**节点加入集群时预置的标签*/
             @KsYunField(name="Label",type=2)
-            private List<LabelDto> LabelList;
+            private List<NodeTemplateDtoAdvancedSettingDtoLabelDto> LabelList;
 
             @Data
             @ToString
-            public static class LabelDto {
+            public static class NodeTemplateDtoAdvancedSettingDtoLabelDto {
                 /**标签键，校验规则：不超过63个字符，只能包含字母、数字及分隔符("-"、"_"、"."、"/")，且必须以字母、数字开头和结尾*/
                 @KsYunField(name="Key")
                 private String Key;
@@ -202,18 +202,18 @@ Kubernetes版本≥1.24时，有效值：
             }
 
             /**自定义节点上k8s组件的参数*/
-            private ExtraArgDto ExtraArgList;
+            private NodeTemplateDtoAdvancedSettingDtoExtraArgDto ExtraArgList;
 
             @Data
             @ToString
-            public static class ExtraArgDto {
+            public static class NodeTemplateDtoAdvancedSettingDtoExtraArgDto {
                 /**用户自定义kubelet的参数*/
                 @KsYunField(name="Kubelet",type=2)
-                private List<KubeletDto> KubeletList;
+                private List<NodeTemplateDtoAdvancedSettingDtoExtraArgDtoKubeletDto> KubeletList;
 
                 @Data
                 @ToString
-                public static class KubeletDto {
+                public static class NodeTemplateDtoAdvancedSettingDtoExtraArgDtoKubeletDto {
                     /**用户自定义kubelet的参数，格式k1=v1，如： --feature-gates=EphemeralContainers=true*/
                     @KsYunField(name="CustomArg")
                     private String CustomArg;
@@ -232,11 +232,11 @@ Kubernetes版本≥1.24时，有效值：
 
             /**节点加入集群时预置污点，匹配污点容忍进行调度*/
             @KsYunField(name="Taints",type=2)
-            private List<TaintsDto> TaintsList;
+            private List<NodeTemplateDtoAdvancedSettingDtoTaintsDto> TaintsList;
 
             @Data
             @ToString
-            public static class TaintsDto {
+            public static class NodeTemplateDtoAdvancedSettingDtoTaintsDto {
                 /**污点名称，校验规则：不超过253个字符，只能包含字母、数字及分隔符("-"、"_"、"."、"/")，且必须以字母、数字开头和结尾*/
                 @KsYunField(name="Key")
                 private String Key;
@@ -254,11 +254,11 @@ Kubernetes版本≥1.24时，有效值：
             /**节点多块数据盘挂载格式化设置，DataDisk只能设置第一块盘，请优先使用MultiDataDisk。
 这个N与NodeConfig下的Para开机参数中DataDisk.N.Type等相关数据盘的定义对应，在Para中定义的数据盘可以不在MultiDataDisk中定义，即某块盘可以不进行格式化挂载设置*/
             @KsYunField(name="MultiDataDisk",type=2)
-            private List<MultiDataDiskDto> MultiDataDiskList;
+            private List<NodeTemplateDtoAdvancedSettingDtoMultiDataDiskDto> MultiDataDiskList;
 
             @Data
             @ToString
-            public static class MultiDataDiskDto {
+            public static class NodeTemplateDtoAdvancedSettingDtoMultiDataDiskDto {
                 /**是否自动格式化并挂载*/
                 @KsYunField(name="AutoFormatAndMount")
                 private Boolean AutoFormatAndMount;
@@ -285,11 +285,11 @@ Kubernetes版本≥1.24时，有效值：
 
         /**云盘标签，N取值范围[1-10]*/
         @KsYunField(name="EbsTag",type=2)
-        private List<EbsTagDto> EbsTagList;
+        private List<NodeTemplateDtoEbsTagDto> EbsTagList;
 
         @Data
         @ToString
-        public static class EbsTagDto {
+        public static class NodeTemplateDtoEbsTagDto {
             /**标签键，校验规则：支持1-128个字符，仅支持中英文字符、数字及±=._/@:*/
             @KsYunField(name="Key")
             private String Key;
@@ -302,11 +302,11 @@ Kubernetes版本≥1.24时，有效值：
 
         /**实例标签，N取值范围[1-10]*/
         @KsYunField(name="InstanceTag",type=2)
-        private List<InstanceTagDto> InstanceTagList;
+        private List<NodeTemplateDtoInstanceTagDto> InstanceTagList;
 
         @Data
         @ToString
-        public static class InstanceTagDto {
+        public static class NodeTemplateDtoInstanceTagDto {
             /**标签键，校验规则：支持1-128个字符，仅支持中英文字符、数字及±=._/@:*/
             @KsYunField(name="Key")
             private String Key;

@@ -195,11 +195,11 @@ public class DescribeEpcTrashesResponse extends BaseResponseModel {
 
         /**磁盘信息*/
         @JsonProperty("DiskSet")
-        private List<DiskSetDto> DiskSet;
+        private List<HostSetDtoDiskSetDto> DiskSet;
 
         @Data
         @ToString
-        public static class DiskSetDto {
+        public static class HostSetDtoDiskSetDto {
             /**磁盘类型*/
             @JsonProperty("DiskType")
             private String DiskType;
@@ -232,11 +232,11 @@ public class DescribeEpcTrashesResponse extends BaseResponseModel {
 
         /**关联的网卡信息*/
         @JsonProperty("NetworkInterfaceAttributeSet")
-        private List<NetworkInterfaceAttributeSetDto> NetworkInterfaceAttributeSet;
+        private List<HostSetDtoNetworkInterfaceAttributeSetDto> NetworkInterfaceAttributeSet;
 
         @Data
         @ToString
-        public static class NetworkInterfaceAttributeSetDto {
+        public static class HostSetDtoNetworkInterfaceAttributeSetDto {
             /**网卡的ID*/
             @JsonProperty("NetworkInterfaceId")
             private String NetworkInterfaceId;
@@ -267,11 +267,11 @@ public class DescribeEpcTrashesResponse extends BaseResponseModel {
 
             /**安全组的信息*/
             @JsonProperty("SecurityGroupSet")
-            private List<SecurityGroupSetDto> SecurityGroupSet;
+            private List<HostSetDtoNetworkInterfaceAttributeSetDtoSecurityGroupSetDto> SecurityGroupSet;
 
             @Data
             @ToString
-            public static class SecurityGroupSetDto {
+            public static class HostSetDtoNetworkInterfaceAttributeSetDtoSecurityGroupSetDto {
                 /**安全组的ID*/
                 @JsonProperty("SecurityGroupId")
                 private String SecurityGroupId;
@@ -294,11 +294,11 @@ public class DescribeEpcTrashesResponse extends BaseResponseModel {
 
         /**云硬盘数据盘的列表*/
         @JsonProperty("DataVolumeSet")
-        private List<DataVolumeSetDto> DataVolumeSet;
+        private List<HostSetDtoDataVolumeSetDto> DataVolumeSet;
 
         @Data
         @ToString
-        public static class DataVolumeSetDto {
+        public static class HostSetDtoDataVolumeSetDto {
             /**云硬盘的ID*/
             @JsonProperty("VolumeId")
             private String VolumeId;
@@ -347,11 +347,11 @@ public class DescribeEpcTrashesResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Cpu")
-        private CpuDto Cpu;
+        private HostSetDtoCpuDto Cpu;
 
         @Data
         @ToString
-        public static class CpuDto {
+        public static class HostSetDtoCpuDto {
             /***/
             @JsonProperty("Model")
             private String Model;
@@ -372,11 +372,11 @@ public class DescribeEpcTrashesResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Gpu")
-        private GpuDto Gpu;
+        private HostSetDtoGpuDto Gpu;
 
         @Data
         @ToString
-        public static class GpuDto {
+        public static class HostSetDtoGpuDto {
             /***/
             @JsonProperty("Model")
             private String Model;
@@ -401,11 +401,11 @@ public class DescribeEpcTrashesResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Roces")
-        private List<RocesDto> Roces;
+        private List<HostSetDtoRocesDto> Roces;
 
         @Data
         @ToString
-        public static class RocesDto {
+        public static class HostSetDtoRocesDto {
             /***/
             @JsonProperty("Ip")
             private String Ip;

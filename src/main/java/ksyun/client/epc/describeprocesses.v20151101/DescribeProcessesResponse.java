@@ -107,11 +107,11 @@ public class DescribeProcessesResponse extends BaseResponseModel {
 
         /**物理机工单评论回复信息*/
         @JsonProperty("CommunicationContentSet")
-        private List<CommunicationContentSetDto> CommunicationContentSet;
+        private List<ProcessSetDtoCommunicationContentSetDto> CommunicationContentSet;
 
         @Data
         @ToString
-        public static class CommunicationContentSetDto {
+        public static class ProcessSetDtoCommunicationContentSetDto {
             /**评论或回复*/
             @JsonProperty("Remarks")
             private String Remarks;

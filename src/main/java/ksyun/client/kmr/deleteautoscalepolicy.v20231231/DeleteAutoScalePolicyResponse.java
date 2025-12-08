@@ -39,11 +39,11 @@ public class DeleteAutoScalePolicyResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Data")
-        private DataDto Data;
+        private DataDtoDataDto Data;
 
         @Data
         @ToString
-        public static class DataDto {
+        public static class DataDtoDataDto {
             /**实例ID，用于唯一标识一个实例*/
             @JsonProperty("InstanceId")
             private String InstanceId;

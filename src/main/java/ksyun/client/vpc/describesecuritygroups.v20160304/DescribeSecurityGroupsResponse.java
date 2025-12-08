@@ -55,11 +55,11 @@ public class DescribeSecurityGroupsResponse extends BaseResponseModel {
 
         /**安全组规则的信息*/
         @JsonProperty("SecurityGroupEntrySet")
-        private List<SecurityGroupEntrySetDto> SecurityGroupEntrySet;
+        private List<SecurityGroupSetDtoSecurityGroupEntrySetDto> SecurityGroupEntrySet;
 
         @Data
         @ToString
-        public static class SecurityGroupEntrySetDto {
+        public static class SecurityGroupSetDtoSecurityGroupEntrySetDto {
             /**创建时间*/
             @JsonProperty("CreateTime")
             private String CreateTime;

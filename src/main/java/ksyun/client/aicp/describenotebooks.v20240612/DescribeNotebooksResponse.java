@@ -39,11 +39,11 @@ public class DescribeNotebooksResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Status")
-        private StatusDto Status;
+        private NotebooksDtoStatusDto Status;
 
         @Data
         @ToString
-        public static class StatusDto {
+        public static class NotebooksDtoStatusDto {
             /**状态*/
             @JsonProperty("State")
             private String State;
@@ -193,11 +193,11 @@ public class DescribeNotebooksResponse extends BaseResponseModel {
 
         /**存储配置信息*/
         @JsonProperty("StorageConfigs")
-        private List<StorageConfigsDto> StorageConfigs;
+        private List<NotebooksDtoStorageConfigsDto> StorageConfigs;
 
         @Data
         @ToString
-        public static class StorageConfigsDto {
+        public static class NotebooksDtoStorageConfigsDto {
             /**存储配置ID*/
             @JsonProperty("StorageConfigId")
             private String StorageConfigId;
@@ -214,11 +214,11 @@ public class DescribeNotebooksResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("ServiceConfigs")
-        private List<ServiceConfigsDto> ServiceConfigs;
+        private List<NotebooksDtoServiceConfigsDto> ServiceConfigs;
 
         @Data
         @ToString
-        public static class ServiceConfigsDto {
+        public static class NotebooksDtoServiceConfigsDto {
             /***/
             @JsonProperty("Service")
             private String Service;
@@ -235,11 +235,11 @@ public class DescribeNotebooksResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Label")
-        private LabelDto Label;
+        private NotebooksDtoLabelDto Label;
 
         @Data
         @ToString
-        public static class LabelDto {
+        public static class NotebooksDtoLabelDto {
             /***/
             @JsonProperty("TerminatePolicyId")
             private String TerminatePolicyId;

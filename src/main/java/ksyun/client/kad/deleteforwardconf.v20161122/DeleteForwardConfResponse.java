@@ -27,18 +27,18 @@ public class DeleteForwardConfResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("ForwardConfSet")
-        private ForwardConfSetDto ForwardConfSet;
+        private ResponseDtoForwardConfSetDto ForwardConfSet;
 
         @Data
         @ToString
-        public static class ForwardConfSetDto {
+        public static class ResponseDtoForwardConfSetDto {
             /***/
             @JsonProperty("item")
-            private List<ItemDto> Item;
+            private List<ResponseDtoForwardConfSetDtoItemDto> Item;
 
             @Data
             @ToString
-            public static class ItemDto {
+            public static class ResponseDtoForwardConfSetDtoItemDto {
                 /***/
                 @JsonProperty("ForwardConfId")
                 private String ForwardConfId;

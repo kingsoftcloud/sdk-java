@@ -23,11 +23,11 @@ public class DescribeDBLogFilesResponse extends BaseResponseModel {
     public static class DataDto {
         /**日志文件列表*/
         @JsonProperty("DescribeDBLogFiles")
-        private List<DescribeDBLogFilesDto> DescribeDBLogFiles;
+        private List<DataDtoDescribeDBLogFilesDto> DescribeDBLogFiles;
 
         @Data
         @ToString
-        public static class DescribeDBLogFilesDto {
+        public static class DataDtoDescribeDBLogFilesDto {
             /**日志下载url
 ###### 为NULL时，表示PostgreSQL没有提供下载链接URL*/
             @JsonProperty("LogFileName")

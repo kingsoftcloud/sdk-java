@@ -27,11 +27,11 @@ public class DescribeInstanceStatisticResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("total")
-        private TotalDto Total;
+        private DataDtoTotalDto Total;
 
         @Data
         @ToString
-        public static class TotalDto {
+        public static class DataDtoTotalDto {
             /***/
             @JsonProperty("code")
             private String Code;
@@ -46,11 +46,11 @@ public class DescribeInstanceStatisticResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("items")
-            private List<ItemsDto> Items;
+            private List<DataDtoTotalDtoItemsDto> Items;
 
             @Data
             @ToString
-            public static class ItemsDto {
+            public static class DataDtoTotalDtoItemsDto {
                 /***/
                 @JsonProperty("code")
                 private String Code;
@@ -69,11 +69,11 @@ public class DescribeInstanceStatisticResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("details")
-        private List<DetailsDto> Details;
+        private List<DataDtoDetailsDto> Details;
 
         @Data
         @ToString
-        public static class DetailsDto {
+        public static class DataDtoDetailsDto {
             /***/
             @JsonProperty("code")
             private String Code;
@@ -88,11 +88,11 @@ public class DescribeInstanceStatisticResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("items")
-            private List<ItemsDto> Items;
+            private List<DataDtoDetailsDtoItemsDto> Items;
 
             @Data
             @ToString
-            public static class ItemsDto {
+            public static class DataDtoDetailsDtoItemsDto {
                 /***/
                 @JsonProperty("code")
                 private String Code;

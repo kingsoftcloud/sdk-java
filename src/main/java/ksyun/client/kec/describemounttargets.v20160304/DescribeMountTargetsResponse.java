@@ -35,18 +35,18 @@ public class DescribeMountTargetsResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("MountTargets")
-        private MountTargetsDto MountTargets;
+        private DescribeMountTargetsResponseDtoMountTargetsDto MountTargets;
 
         @Data
         @ToString
-        public static class MountTargetsDto {
+        public static class DescribeMountTargetsResponseDtoMountTargetsDto {
             /***/
             @JsonProperty("Item")
-            private ItemDto Item;
+            private DescribeMountTargetsResponseDtoMountTargetsDtoItemDto Item;
 
             @Data
             @ToString
-            public static class ItemDto {
+            public static class DescribeMountTargetsResponseDtoMountTargetsDtoItemDto {
                 /***/
                 @JsonProperty("MountTargetId")
                 private String MountTargetId;

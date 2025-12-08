@@ -23,11 +23,11 @@ public class DescribeParamGroupInfoResponse extends BaseResponseModel {
     public static class ParamGroupInfoDto {
         /***/
         @JsonProperty("Params")
-        private ParamsDto Params;
+        private ParamGroupInfoDtoParamsDto Params;
 
         @Data
         @ToString
-        public static class ParamsDto {
+        public static class ParamGroupInfoDtoParamsDto {
             /***/
             @JsonProperty("setParameter.failIndexKeyTooInt")
             private String SetParameterFailIndexKeyTooInt;

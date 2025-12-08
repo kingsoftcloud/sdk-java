@@ -47,11 +47,11 @@ public class ListOperateLogsResponse extends BaseResponseModel {
 
         /**API请求的输入参数。*/
         @JsonProperty("RequestParameters")
-        private RequestParametersDto RequestParameters;
+        private EventsDtoRequestParametersDto RequestParameters;
 
         @Data
         @ToString
-        public static class RequestParametersDto {
+        public static class EventsDtoRequestParametersDto {
         }
 
         /**事件发起的源IP地址。*/
@@ -87,11 +87,11 @@ write：写类型*/
 
         /**请求者的身份信息。*/
         @JsonProperty("UserIdentity")
-        private UserIdentityDto UserIdentity;
+        private EventsDtoUserIdentityDto UserIdentity;
 
         @Data
         @ToString
-        public static class UserIdentityDto {
+        public static class EventsDtoUserIdentityDto {
             /**如果是角色访问，则记录为角色名称*/
             @JsonProperty("RoleName")
             private String RoleName;
@@ -114,11 +114,11 @@ write：写类型*/
 
         /**事件影响的资源列表。*/
         @JsonProperty("ReferencedResources")
-        private List<ReferencedResourcesDto> ReferencedResources;
+        private List<EventsDtoReferencedResourcesDto> ReferencedResources;
 
         @Data
         @ToString
-        public static class ReferencedResourcesDto {
+        public static class EventsDtoReferencedResourcesDto {
         }
 
         /**错误码*/

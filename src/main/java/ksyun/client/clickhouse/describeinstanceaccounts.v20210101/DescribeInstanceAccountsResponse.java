@@ -35,22 +35,22 @@ public class DescribeInstanceAccountsResponse extends BaseResponseModel {
     public static class DataDto {
         /**账号列表*/
         @JsonProperty("accounts")
-        private List<AccountsDto> Accounts;
+        private List<DataDtoAccountsDto> Accounts;
 
         @Data
         @ToString
-        public static class AccountsDto {
+        public static class DataDtoAccountsDto {
             /**账号状态*/
             @JsonProperty("status")
             private String Status;
 
             /**数据库列表 管理员的为空(管理员有所有权限)*/
             @JsonProperty("databases")
-            private List<DatabasesDto> Databases;
+            private List<DataDtoAccountsDtoDatabasesDto> Databases;
 
             @Data
             @ToString
-            public static class DatabasesDto {
+            public static class DataDtoAccountsDtoDatabasesDto {
                 /**数据库名称*/
                 @JsonProperty("name")
                 private String Name;

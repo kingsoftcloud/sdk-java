@@ -27,11 +27,11 @@ public class DescribeMonitorPanelListResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("MonitorPanels")
-        private List<MonitorPanelsDto> MonitorPanels;
+        private List<DataDtoMonitorPanelsDto> MonitorPanels;
 
         @Data
         @ToString
-        public static class MonitorPanelsDto {
+        public static class DataDtoMonitorPanelsDto {
             /***/
             @JsonProperty("PanelId")
             private String PanelId;

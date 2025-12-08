@@ -51,11 +51,11 @@ public class DescribeNetworkAclsResponse extends BaseResponseModel {
 
         /**ACL规则信息*/
         @JsonProperty("NetworkAclEntrySet")
-        private List<NetworkAclEntrySetDto> NetworkAclEntrySet;
+        private List<NetworkAclSetDtoNetworkAclEntrySetDto> NetworkAclEntrySet;
 
         @Data
         @ToString
-        public static class NetworkAclEntrySetDto {
+        public static class NetworkAclSetDtoNetworkAclEntrySetDto {
             /**ACL的描述*/
             @JsonProperty("Description")
             private String Description;

@@ -167,11 +167,11 @@ public class DescribeClusterForRestoreResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("shards")
-        private ShardsDto Shards;
+        private MongoDBInstanceResultDtoShardsDto Shards;
 
         @Data
         @ToString
-        public static class ShardsDto {
+        public static class MongoDBInstanceResultDtoShardsDto {
             /***/
             @JsonProperty("vcpu")
             private Integer Vcpu;
@@ -192,11 +192,11 @@ public class DescribeClusterForRestoreResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("mongos")
-        private MongosDto Mongos;
+        private MongoDBInstanceResultDtoMongosDto Mongos;
 
         @Data
         @ToString
-        public static class MongosDto {
+        public static class MongoDBInstanceResultDtoMongosDto {
             /***/
             @JsonProperty("vcpu")
             private Integer Vcpu;

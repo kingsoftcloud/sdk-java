@@ -27,11 +27,11 @@ public class UpdateCertificateResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Certificate")
-        private CertificateDto Certificate;
+        private UpdateCertificateResponseDtoCertificateDto Certificate;
 
         @Data
         @ToString
-        public static class CertificateDto {
+        public static class UpdateCertificateResponseDtoCertificateDto {
             /**
 
 证书ID
@@ -121,11 +121,11 @@ public class UpdateCertificateResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Contact")
-        private ContactDto Contact;
+        private UpdateCertificateResponseDtoContactDto Contact;
 
         @Data
         @ToString
-        public static class ContactDto {
+        public static class UpdateCertificateResponseDtoContactDto {
             /**名字*/
             @JsonProperty("FirstName")
             private String FirstName;

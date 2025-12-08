@@ -59,11 +59,11 @@ public class DescribeDirectConnectRoutesResponse extends BaseResponseModel {
 
         /**路由的下一跳*/
         @JsonProperty("NextHopSet")
-        private List<NextHopSetDto> NextHopSet;
+        private List<DirectConnectRouteSetDtoNextHopSetDto> NextHopSet;
 
         @Data
         @ToString
-        public static class NextHopSetDto {
+        public static class DirectConnectRouteSetDtoNextHopSetDto {
             /**下一跳实例的ID*/
             @JsonProperty("GatewayId")
             private String GatewayId;

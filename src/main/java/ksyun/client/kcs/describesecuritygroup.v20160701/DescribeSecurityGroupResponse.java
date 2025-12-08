@@ -43,11 +43,11 @@ public class DescribeSecurityGroupResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("rules")
-        private List<RulesDto> Rules;
+        private List<DataDtoRulesDto> Rules;
 
         @Data
         @ToString
-        public static class RulesDto {
+        public static class DataDtoRulesDto {
             /***/
             @JsonProperty("id")
             private String Id;

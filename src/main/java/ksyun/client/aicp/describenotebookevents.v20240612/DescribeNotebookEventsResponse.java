@@ -39,11 +39,11 @@ public class DescribeNotebookEventsResponse extends BaseResponseModel {
 
         /**对象*/
         @JsonProperty("Object")
-        private ObjectDto Object;
+        private DataSetDtoObjectDto Object;
 
         @Data
         @ToString
-        public static class ObjectDto {
+        public static class DataSetDtoObjectDto {
             /**对象类型*/
             @JsonProperty("Kind")
             private String Kind;
@@ -64,11 +64,11 @@ public class DescribeNotebookEventsResponse extends BaseResponseModel {
 
         /**事件源*/
         @JsonProperty("Source")
-        private SourceDto Source;
+        private DataSetDtoSourceDto Source;
 
         @Data
         @ToString
-        public static class SourceDto {
+        public static class DataSetDtoSourceDto {
             /**组件*/
             @JsonProperty("Component")
             private String Component;

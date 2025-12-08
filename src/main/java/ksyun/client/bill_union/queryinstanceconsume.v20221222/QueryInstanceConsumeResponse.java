@@ -43,11 +43,11 @@ public class QueryInstanceConsumeResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("bills")
-        private List<BillsDto> Bills;
+        private List<DataDtoBillsDto> Bills;
 
         @Data
         @ToString
-        public static class BillsDto {
+        public static class DataDtoBillsDto {
             /**备注名*/
             @JsonProperty("aliasName")
             private String AliasName;

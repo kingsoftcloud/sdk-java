@@ -27,11 +27,11 @@ public class DescribeAddonInstancesResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("Addons")
-        private List<AddonsDto> Addons;
+        private List<DataDtoAddonsDto> Addons;
 
         @Data
         @ToString
-        public static class AddonsDto {
+        public static class DataDtoAddonsDto {
             /**集群ID*/
             @JsonProperty("ClusterId")
             private String ClusterId;

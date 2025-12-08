@@ -71,11 +71,11 @@ public class ListSecurityGroupResponse extends BaseResponseModel {
 
         /**规则列表*/
         @JsonProperty("Rules")
-        private List<RulesDto> Rules;
+        private List<DataDtoRulesDto> Rules;
 
         @Data
         @ToString
-        public static class RulesDto {
+        public static class DataDtoRulesDto {
             /**规则ID*/
             @JsonProperty("Id")
             private String Id;
@@ -100,11 +100,11 @@ public class ListSecurityGroupResponse extends BaseResponseModel {
 
         /**绑定实例列表*/
         @JsonProperty("Instances")
-        private List<InstancesDto> Instances;
+        private List<DataDtoInstancesDto> Instances;
 
         @Data
         @ToString
-        public static class InstancesDto {
+        public static class DataDtoInstancesDto {
             /**实例ID*/
             @JsonProperty("Id")
             private String Id;

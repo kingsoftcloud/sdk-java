@@ -23,11 +23,11 @@ public class DescribeTaskResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("Tasks")
-        private List<TasksDto> Tasks;
+        private List<DataDtoTasksDto> Tasks;
 
         @Data
         @ToString
-        public static class TasksDto {
+        public static class DataDtoTasksDto {
             /**任务名称*/
             @JsonProperty("TaskName")
             private String TaskName;
@@ -70,11 +70,11 @@ public class DescribeTaskResponse extends BaseResponseModel {
 
             /**当前主任务下的子任务信息(详情查询返回)*/
             @JsonProperty("SubTasks")
-            private List<SubTasksDto> SubTasks;
+            private List<DataDtoTasksDtoSubTasksDto> SubTasks;
 
             @Data
             @ToString
-            public static class SubTasksDto {
+            public static class DataDtoTasksDtoSubTasksDto {
                 /**子任务ID*/
                 @JsonProperty("Id")
                 private String Id;

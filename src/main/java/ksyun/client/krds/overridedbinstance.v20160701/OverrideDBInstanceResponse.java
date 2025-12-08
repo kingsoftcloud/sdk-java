@@ -24,18 +24,18 @@ public class OverrideDBInstanceResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("Instances")
-        private List<InstancesDto> Instances;
+        private List<DataDtoInstancesDto> Instances;
 
         @Data
         @ToString
-        public static class InstancesDto {
+        public static class DataDtoInstancesDto {
             /***/
             @JsonProperty("DBInstanceClass")
-            private DBInstanceClassDto DBInstanceClass;
+            private DataDtoInstancesDtoDBInstanceClassDto DBInstanceClass;
 
             @Data
             @ToString
-            public static class DBInstanceClassDto {
+            public static class DataDtoInstancesDtoDBInstanceClassDto {
                 /**请求id	
 */
                 @JsonProperty("Id")
@@ -163,11 +163,11 @@ public class OverrideDBInstanceResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("AvailabilityZoneList")
-            private List<AvailabilityZoneListDto> AvailabilityZoneList;
+            private List<DataDtoInstancesDtoAvailabilityZoneListDto> AvailabilityZoneList;
 
             @Data
             @ToString
-            public static class AvailabilityZoneListDto {
+            public static class DataDtoInstancesDtoAvailabilityZoneListDto {
                 /***/
                 @JsonProperty("MemberType")
                 private String MemberType;
@@ -192,20 +192,20 @@ public class OverrideDBInstanceResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("ReadReplicaDBInstanceIdentifiers")
-            private ReadReplicaDBInstanceIdentifiersDto ReadReplicaDBInstanceIdentifiers;
+            private DataDtoInstancesDtoReadReplicaDBInstanceIdentifiersDto ReadReplicaDBInstanceIdentifiers;
 
             @Data
             @ToString
-            public static class ReadReplicaDBInstanceIdentifiersDto {
+            public static class DataDtoInstancesDtoReadReplicaDBInstanceIdentifiersDto {
             }
 
             /***/
             @JsonProperty("DBSource")
-            private DBSourceDto DBSource;
+            private DataDtoInstancesDtoDBSourceDto DBSource;
 
             @Data
             @ToString
-            public static class DBSourceDto {
+            public static class DataDtoInstancesDtoDBSourceDto {
                 /***/
                 @JsonProperty("DBInstanceIdentifier")
                 private String DBInstanceIdentifier;
@@ -258,11 +258,11 @@ public class OverrideDBInstanceResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("SecurityGroups")
-            private SecurityGroupsDto SecurityGroups;
+            private DataDtoInstancesDtoSecurityGroupsDto SecurityGroups;
 
             @Data
             @ToString
-            public static class SecurityGroupsDto {
+            public static class DataDtoInstancesDtoSecurityGroupsDto {
             }
 
             /***/

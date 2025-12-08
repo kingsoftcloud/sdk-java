@@ -27,11 +27,11 @@ public class AddKecNodesResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("InstanceSet")
-        private List<InstanceSetDto> InstanceSet;
+        private List<DataDtoInstanceSetDto> InstanceSet;
 
         @Data
         @ToString
-        public static class InstanceSetDto {
+        public static class DataDtoInstanceSetDto {
             /***/
             @JsonProperty("KceNodeId")
             private String KceNodeId;

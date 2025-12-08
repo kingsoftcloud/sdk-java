@@ -27,11 +27,11 @@ public class DescribePriceResponse extends BaseResponseModel {
     public static class PriceInfoDto {
         /**价格信息*/
         @JsonProperty("PriceSet")
-        private List<PriceSetDto> PriceSet;
+        private List<PriceInfoDtoPriceSetDto> PriceSet;
 
         @Data
         @ToString
-        public static class PriceSetDto {
+        public static class PriceInfoDtoPriceSetDto {
             /**货币类型*/
             @JsonProperty("Currency")
             private String Currency;

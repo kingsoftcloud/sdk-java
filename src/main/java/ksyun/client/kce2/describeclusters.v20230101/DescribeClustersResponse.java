@@ -35,11 +35,11 @@ public class DescribeClustersResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("ClusterSet")
-        private List<ClusterSetDto> ClusterSet;
+        private List<DataDtoClusterSetDto> ClusterSet;
 
         @Data
         @ToString
-        public static class ClusterSetDto {
+        public static class DataDtoClusterSetDto {
             /***/
             @JsonProperty("ClusterId")
             private String ClusterId;
@@ -62,22 +62,22 @@ public class DescribeClustersResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("Network")
-            private NetworkDto Network;
+            private DataDtoClusterSetDtoNetworkDto Network;
 
             @Data
             @ToString
-            public static class NetworkDto {
+            public static class DataDtoClusterSetDtoNetworkDto {
                 /***/
                 @JsonProperty("NetworkPluginType")
                 private String NetworkPluginType;
 
                 /***/
                 @JsonProperty("ApiServer")
-                private ApiServerDto ApiServer;
+                private DataDtoClusterSetDtoNetworkDtoApiServerDto ApiServer;
 
                 @Data
                 @ToString
-                public static class ApiServerDto {
+                public static class DataDtoClusterSetDtoNetworkDtoApiServerDto {
                     /***/
                     @JsonProperty("PublicApiServerEnable")
                     private Boolean PublicApiServerEnable;
@@ -94,11 +94,11 @@ public class DescribeClustersResponse extends BaseResponseModel {
 
                 /***/
                 @JsonProperty("VpcCNI")
-                private VpcCNIDto VpcCNI;
+                private DataDtoClusterSetDtoNetworkDtoVpcCNIDto VpcCNI;
 
                 @Data
                 @ToString
-                public static class VpcCNIDto {
+                public static class DataDtoClusterSetDtoNetworkDtoVpcCNIDto {
                     /***/
                     @JsonProperty("Enable")
                     private Boolean Enable;
@@ -135,11 +135,11 @@ public class DescribeClustersResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("Addons")
-            private List<AddonsDto> Addons;
+            private List<DataDtoClusterSetDtoAddonsDto> Addons;
 
             @Data
             @ToString
-            public static class AddonsDto {
+            public static class DataDtoClusterSetDtoAddonsDto {
                 /***/
                 @JsonProperty("Name")
                 private String Name;
@@ -148,20 +148,20 @@ public class DescribeClustersResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("ManagedClusterSpec")
-            private ManagedClusterSpecDto ManagedClusterSpec;
+            private DataDtoClusterSetDtoManagedClusterSpecDto ManagedClusterSpec;
 
             @Data
             @ToString
-            public static class ManagedClusterSpecDto {
+            public static class DataDtoClusterSetDtoManagedClusterSpecDto {
             }
 
             /***/
             @JsonProperty("Status")
-            private StatusDto Status;
+            private DataDtoClusterSetDtoStatusDto Status;
 
             @Data
             @ToString
-            public static class StatusDto {
+            public static class DataDtoClusterSetDtoStatusDto {
                 /***/
                 @JsonProperty("Phase")
                 private String Phase;

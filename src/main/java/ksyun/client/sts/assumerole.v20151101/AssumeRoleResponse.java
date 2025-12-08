@@ -23,11 +23,11 @@ public class AssumeRoleResponse extends BaseResponseModel {
     public static class AssumeRoleResultDto {
         /**访问凭证*/
         @JsonProperty("Credentials")
-        private CredentialsDto Credentials;
+        private AssumeRoleResultDtoCredentialsDto Credentials;
 
         @Data
         @ToString
-        public static class CredentialsDto {
+        public static class AssumeRoleResultDtoCredentialsDto {
             /**失效时间，UTC时间，即协调世界时。*/
             @JsonProperty("Expiration")
             private String Expiration;
@@ -48,11 +48,11 @@ public class AssumeRoleResponse extends BaseResponseModel {
 
         /**角色扮演时的临时身份。*/
         @JsonProperty("AssumedRoleUser")
-        private AssumedRoleUserDto AssumedRoleUser;
+        private AssumeRoleResultDtoAssumedRoleUserDto AssumedRoleUser;
 
         @Data
         @ToString
-        public static class AssumedRoleUserDto {
+        public static class AssumeRoleResultDtoAssumedRoleUserDto {
             /**临时身份的KRN信息*/
             @JsonProperty("Krn")
             private String Krn;

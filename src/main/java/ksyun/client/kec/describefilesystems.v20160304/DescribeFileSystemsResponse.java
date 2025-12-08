@@ -71,11 +71,11 @@ public class DescribeFileSystemsResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("MountTargets")
-        private List<MountTargetsDto> MountTargets;
+        private List<FileSystemsDtoMountTargetsDto> MountTargets;
 
         @Data
         @ToString
-        public static class MountTargetsDto {
+        public static class FileSystemsDtoMountTargetsDto {
             /***/
             @JsonProperty("MountTargetId")
             private String MountTargetId;

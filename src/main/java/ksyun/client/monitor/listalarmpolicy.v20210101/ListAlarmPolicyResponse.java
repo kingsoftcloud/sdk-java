@@ -23,11 +23,11 @@ public class ListAlarmPolicyResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("alarmPolicyList")
-        private List<AlarmPolicyListDto> AlarmPolicyList;
+        private List<DataDtoAlarmPolicyListDto> AlarmPolicyList;
 
         @Data
         @ToString
-        public static class AlarmPolicyListDto {
+        public static class DataDtoAlarmPolicyListDto {
             /**策略ID*/
             @JsonProperty("policyId")
             private Integer PolicyId;

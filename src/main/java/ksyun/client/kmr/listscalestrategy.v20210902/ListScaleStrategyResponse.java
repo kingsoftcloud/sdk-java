@@ -110,11 +110,11 @@ public class ListScaleStrategyResponse extends BaseResponseModel {
 
         /**Task节点组资源信息*/
         @JsonProperty("InstanceGroupTypes")
-        private InstanceGroupTypesDto InstanceGroupTypes;
+        private StrategiesDtoInstanceGroupTypesDto InstanceGroupTypes;
 
         @Data
         @ToString
-        public static class InstanceGroupTypesDto {
+        public static class StrategiesDtoInstanceGroupTypesDto {
             /**Task节点组的VPC 子网ID*/
             @JsonProperty("VpcSubnetId")
             private String VpcSubnetId;
@@ -155,11 +155,11 @@ public class ListScaleStrategyResponse extends BaseResponseModel {
 
 */
         @JsonProperty("InstanceGroupInfo")
-        private InstanceGroupInfoDto InstanceGroupInfo;
+        private StrategiesDtoInstanceGroupInfoDto InstanceGroupInfo;
 
         @Data
         @ToString
-        public static class InstanceGroupInfoDto {
+        public static class StrategiesDtoInstanceGroupInfoDto {
             /**系统盘类型
 
 */
@@ -273,11 +273,11 @@ public class ListScaleStrategyResponse extends BaseResponseModel {
 
 */
         @JsonProperty("InstanceGroupInfo")
-        private InstanceGroupInfoDto InstanceGroupInfo;
+        private LoadBasedStrategiesDtoInstanceGroupInfoDto InstanceGroupInfo;
 
         @Data
         @ToString
-        public static class InstanceGroupInfoDto {
+        public static class LoadBasedStrategiesDtoInstanceGroupInfoDto {
             /**系统盘类型*/
             @JsonProperty("SystemDiskType")
             private String SystemDiskType;
@@ -292,11 +292,11 @@ public class ListScaleStrategyResponse extends BaseResponseModel {
 
 */
         @JsonProperty("InstanceGroupTypes")
-        private InstanceGroupTypesDto InstanceGroupTypes;
+        private LoadBasedStrategiesDtoInstanceGroupTypesDto InstanceGroupTypes;
 
         @Data
         @ToString
-        public static class InstanceGroupTypesDto {
+        public static class LoadBasedStrategiesDtoInstanceGroupTypesDto {
             /**子网ID*/
             @JsonProperty("VpcSubnetId")
             private String VpcSubnetId;
@@ -307,11 +307,11 @@ public class ListScaleStrategyResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("ResourceTypes")
-            private List<ResourceTypesDto> ResourceTypes;
+            private List<LoadBasedStrategiesDtoInstanceGroupTypesDtoResourceTypesDto> ResourceTypes;
 
             @Data
             @ToString
-            public static class ResourceTypesDto {
+            public static class LoadBasedStrategiesDtoInstanceGroupTypesDtoResourceTypesDto {
                 /**节点组套餐代码
 
 */
@@ -386,11 +386,11 @@ public class ListScaleStrategyResponse extends BaseResponseModel {
 
 */
         @JsonProperty("StatisticsRule")
-        private StatisticsRuleDto StatisticsRule;
+        private LoadBasedStrategiesDtoStatisticsRuleDto StatisticsRule;
 
         @Data
         @ToString
-        public static class StatisticsRuleDto {
+        public static class LoadBasedStrategiesDtoStatisticsRuleDto {
             /**负载指标
 
 */

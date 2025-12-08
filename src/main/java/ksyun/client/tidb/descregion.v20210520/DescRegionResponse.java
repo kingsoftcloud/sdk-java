@@ -67,11 +67,11 @@ public class DescRegionResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("AzList")
-        private List<AzListDto> AzList;
+        private List<DataDtoAzListDto> AzList;
 
         @Data
         @ToString
-        public static class AzListDto {
+        public static class DataDtoAzListDto {
             /***/
             @JsonProperty("AzCode")
             private String AzCode;

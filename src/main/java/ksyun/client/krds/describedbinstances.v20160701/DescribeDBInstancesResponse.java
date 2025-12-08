@@ -26,18 +26,18 @@ public class DescribeDBInstancesResponse extends BaseResponseModel {
 #### 注意
 此处demo为指定实例详情返回数据，实例列表返回数据会少具体的绑定及节点详细信息*/
         @JsonProperty("Instances")
-        private List<InstancesDto> Instances;
+        private List<DataDtoInstancesDto> Instances;
 
         @Data
         @ToString
-        public static class InstancesDto {
+        public static class DataDtoInstancesDto {
             /**实例配置信息*/
             @JsonProperty("DBInstanceClass")
-            private DBInstanceClassDto DBInstanceClass;
+            private DataDtoInstancesDtoDBInstanceClassDto DBInstanceClass;
 
             @Data
             @ToString
-            public static class DBInstanceClassDto {
+            public static class DataDtoInstancesDtoDBInstanceClassDto {
                 /**配置FlavorID*/
                 @JsonProperty("Id")
                 private String Id;
@@ -162,11 +162,11 @@ public class DescribeDBInstancesResponse extends BaseResponseModel {
 
             /**可用区节点细节信息*/
             @JsonProperty("AvailabilityZoneList")
-            private List<AvailabilityZoneListDto> AvailabilityZoneList;
+            private List<DataDtoInstancesDtoAvailabilityZoneListDto> AvailabilityZoneList;
 
             @Data
             @ToString
-            public static class AvailabilityZoneListDto {
+            public static class DataDtoInstancesDtoAvailabilityZoneListDto {
                 /**节点名称*/
                 @JsonProperty("MemberType")
                 private String MemberType;
@@ -227,11 +227,11 @@ public class DescribeDBInstancesResponse extends BaseResponseModel {
 
             /**安全组信息列表(支持多安全组，返回多个安全组信息)*/
             @JsonProperty("SecurityGroups")
-            private List<SecurityGroupsDto> SecurityGroups;
+            private List<DataDtoInstancesDtoSecurityGroupsDto> SecurityGroups;
 
             @Data
             @ToString
-            public static class SecurityGroupsDto {
+            public static class DataDtoInstancesDtoSecurityGroupsDto {
                 /**安全组ID*/
                 @JsonProperty("SecurityGroupId")
                 private String SecurityGroupId;
@@ -258,11 +258,11 @@ public class DescribeDBInstancesResponse extends BaseResponseModel {
 
             /**关联实例详情，可分配实例节点权重信息*/
             @JsonProperty("BindInstances")
-            private List<BindInstancesDto> BindInstances;
+            private List<DataDtoInstancesDtoBindInstancesDto> BindInstances;
 
             @Data
             @ToString
-            public static class BindInstancesDto {
+            public static class DataDtoInstancesDtoBindInstancesDto {
                 /**状态*/
                 @JsonProperty("Status")
                 private String Status;
@@ -291,11 +291,11 @@ public class DescribeDBInstancesResponse extends BaseResponseModel {
 
             /**代理实例节点详情(需要开启代理实例，白名单功能)*/
             @JsonProperty("ProxyNodeInfo")
-            private List<ProxyNodeInfoDto> ProxyNodeInfo;
+            private List<DataDtoInstancesDtoProxyNodeInfoDto> ProxyNodeInfo;
 
             @Data
             @ToString
-            public static class ProxyNodeInfoDto {
+            public static class DataDtoInstancesDtoProxyNodeInfoDto {
                 /**名称*/
                 @JsonProperty("Name")
                 private String Name;
@@ -308,11 +308,11 @@ public class DescribeDBInstancesResponse extends BaseResponseModel {
 
             /**代理实例信息*/
             @JsonProperty("ProxyInfo")
-            private ProxyInfoDto ProxyInfo;
+            private DataDtoInstancesDtoProxyInfoDto ProxyInfo;
 
             @Data
             @ToString
-            public static class ProxyInfoDto {
+            public static class DataDtoInstancesDtoProxyInfoDto {
             }
 
             /**临时关闭主备切换开关*/

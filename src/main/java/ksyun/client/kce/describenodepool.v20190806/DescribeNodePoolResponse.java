@@ -60,11 +60,11 @@ public class DescribeNodePoolResponse extends BaseResponseModel {
 
         /**节点模板信息*/
         @JsonProperty("NodeTemplate")
-        private NodeTemplateDto NodeTemplate;
+        private NodePoolSetDtoNodeTemplateDto NodeTemplate;
 
         @Data
         @ToString
-        public static class NodeTemplateDto {
+        public static class NodePoolSetDtoNodeTemplateDto {
             /**计费方式*/
             @JsonProperty("ChargeType")
             private String ChargeType;
@@ -83,11 +83,11 @@ public class DescribeNodePoolResponse extends BaseResponseModel {
 
             /**系统盘信息*/
             @JsonProperty("SystemDisk")
-            private SystemDiskDto SystemDisk;
+            private NodePoolSetDtoNodeTemplateDtoSystemDiskDto SystemDisk;
 
             @Data
             @ToString
-            public static class SystemDiskDto {
+            public static class NodePoolSetDtoNodeTemplateDtoSystemDiskDto {
                 /**系统盘类型*/
                 @JsonProperty("DiskType")
                 private String DiskType;
@@ -104,11 +104,11 @@ public class DescribeNodePoolResponse extends BaseResponseModel {
 
             /**云盘数据盘详情*/
             @JsonProperty("DataDisk")
-            private DataDiskDto DataDisk;
+            private NodePoolSetDtoNodeTemplateDtoDataDiskDto DataDisk;
 
             @Data
             @ToString
-            public static class DataDiskDto {
+            public static class NodePoolSetDtoNodeTemplateDtoDataDiskDto {
                 /**数据盘类型*/
                 @JsonProperty("DiskType")
                 private String DiskType;
@@ -157,18 +157,18 @@ public class DescribeNodePoolResponse extends BaseResponseModel {
 
             /**节点高级设置*/
             @JsonProperty("AdvancedSetting")
-            private AdvancedSettingDto AdvancedSetting;
+            private NodePoolSetDtoNodeTemplateDtoAdvancedSettingDto AdvancedSetting;
 
             @Data
             @ToString
-            public static class AdvancedSettingDto {
+            public static class NodePoolSetDtoNodeTemplateDtoAdvancedSettingDto {
                 /**数据盘挂载设置，仅针对于第一块数据盘生效   */
                 @JsonProperty("DataDisk")
-                private DataDiskDto DataDisk;
+                private NodePoolSetDtoNodeTemplateDtoAdvancedSettingDtoDataDiskDto DataDisk;
 
                 @Data
                 @ToString
-                public static class DataDiskDto {
+                public static class NodePoolSetDtoNodeTemplateDtoAdvancedSettingDtoDataDiskDto {
                     /**是否对数据盘格式化并挂载，默认值；true。若此字段填写false，则 FileSystem 和 MountTarget字段不生效*/
                     @JsonProperty("AutoFormatAndMount")
                     private Boolean AutoFormatAndMount;
@@ -209,11 +209,11 @@ public class DescribeNodePoolResponse extends BaseResponseModel {
 
                 /**节点加入集群时预置的标签*/
                 @JsonProperty("Label")
-                private List<LabelDto> Label;
+                private List<NodePoolSetDtoNodeTemplateDtoAdvancedSettingDtoLabelDto> Label;
 
                 @Data
                 @ToString
-                public static class LabelDto {
+                public static class NodePoolSetDtoNodeTemplateDtoAdvancedSettingDtoLabelDto {
                     /**标签键，校验规则：不超过63个字符，只能包含字母、数字及分隔符("-"、"_"、"."、"/")，且必须以字母、数字开头和结尾*/
                     @JsonProperty("Key")
                     private String Key;
@@ -226,18 +226,18 @@ public class DescribeNodePoolResponse extends BaseResponseModel {
 
                 /**自定义节点上k8s组件的参数*/
                 @JsonProperty("ExtraArg")
-                private ExtraArgDto ExtraArg;
+                private NodePoolSetDtoNodeTemplateDtoAdvancedSettingDtoExtraArgDto ExtraArg;
 
                 @Data
                 @ToString
-                public static class ExtraArgDto {
+                public static class NodePoolSetDtoNodeTemplateDtoAdvancedSettingDtoExtraArgDto {
                     /**自定义节点上k8s组件的参数*/
                     @JsonProperty("Kubelet")
-                    private List<KubeletDto> Kubelet;
+                    private List<NodePoolSetDtoNodeTemplateDtoAdvancedSettingDtoExtraArgDtoKubeletDto> Kubelet;
 
                     @Data
                     @ToString
-                    public static class KubeletDto {
+                    public static class NodePoolSetDtoNodeTemplateDtoAdvancedSettingDtoExtraArgDtoKubeletDto {
                         /**自定义节点上k8s组件的参数*/
                         @JsonProperty("CustomArg")
                         private String CustomArg;
@@ -256,11 +256,11 @@ public class DescribeNodePoolResponse extends BaseResponseModel {
 
                 /**节点加入集群时预置污点 */
                 @JsonProperty("Taints")
-                private List<TaintsDto> Taints;
+                private List<NodePoolSetDtoNodeTemplateDtoAdvancedSettingDtoTaintsDto> Taints;
 
                 @Data
                 @ToString
-                public static class TaintsDto {
+                public static class NodePoolSetDtoNodeTemplateDtoAdvancedSettingDtoTaintsDto {
                     /**污点名称，校验规则：不超过253个字符，只能包含字母、数字及分隔符("-"、"_"、"."、"/")，且必须以字母、数字开头和结尾*/
                     @JsonProperty("Key")
                     private String Key;
@@ -279,11 +279,11 @@ public class DescribeNodePoolResponse extends BaseResponseModel {
 
             /**云盘标签*/
             @JsonProperty("EbsTags")
-            private List<EbsTagsDto> EbsTags;
+            private List<NodePoolSetDtoNodeTemplateDtoEbsTagsDto> EbsTags;
 
             @Data
             @ToString
-            public static class EbsTagsDto {
+            public static class NodePoolSetDtoNodeTemplateDtoEbsTagsDto {
                 /**标签键*/
                 @JsonProperty("Key")
                 private String Key;
@@ -312,11 +312,11 @@ public class DescribeNodePoolResponse extends BaseResponseModel {
 
             /**实例标签*/
             @JsonProperty("InstanceTags")
-            private List<InstanceTagsDto> InstanceTags;
+            private List<NodePoolSetDtoNodeTemplateDtoInstanceTagsDto> InstanceTags;
 
             @Data
             @ToString
-            public static class InstanceTagsDto {
+            public static class NodePoolSetDtoNodeTemplateDtoInstanceTagsDto {
                 /**标签键，校验规则：支持1-128个字符，仅支持中英文字符、数字及±=._/@:*/
                 @JsonProperty("Key")
                 private String Key;
@@ -347,11 +347,11 @@ public class DescribeNodePoolResponse extends BaseResponseModel {
 
         /**节点标签*/
         @JsonProperty("Labels")
-        private List<LabelsDto> Labels;
+        private List<NodePoolSetDtoLabelsDto> Labels;
 
         @Data
         @ToString
-        public static class LabelsDto {
+        public static class NodePoolSetDtoLabelsDto {
             /**标签键*/
             @JsonProperty("Key")
             private String Key;
@@ -364,11 +364,11 @@ public class DescribeNodePoolResponse extends BaseResponseModel {
 
         /**节点污点*/
         @JsonProperty("Taints")
-        private List<TaintsDto> Taints;
+        private List<NodePoolSetDtoTaintsDto> Taints;
 
         @Data
         @ToString
-        public static class TaintsDto {
+        public static class NodePoolSetDtoTaintsDto {
             /**污点名称*/
             @JsonProperty("Key")
             private String Key;

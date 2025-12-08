@@ -39,11 +39,11 @@ public class ListInstancesResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("List")
-        private List<ListDto> List;
+        private List<DataDtoListDto> List;
 
         @Data
         @ToString
-        public static class ListDto {
+        public static class DataDtoListDto {
             /**实例ID，用于唯一标识一个实例*/
             @JsonProperty("InstanceId")
             private String InstanceId;
@@ -106,11 +106,11 @@ public class ListInstancesResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("ResourceSpec")
-            private ResourceSpecDto ResourceSpec;
+            private DataDtoListDtoResourceSpecDto ResourceSpec;
 
             @Data
             @ToString
-            public static class ResourceSpecDto {
+            public static class DataDtoListDtoResourceSpecDto {
                 /**前端节点数量*/
                 @JsonProperty("Fe")
                 private Integer Fe;

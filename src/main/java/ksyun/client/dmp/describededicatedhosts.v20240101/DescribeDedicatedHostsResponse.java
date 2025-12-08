@@ -27,11 +27,11 @@ public class DescribeDedicatedHostsResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("Hosts")
-        private List<HostsDto> Hosts;
+        private List<DataDtoHostsDto> Hosts;
 
         @Data
         @ToString
-        public static class HostsDto {
+        public static class DataDtoHostsDto {
             /***/
             @JsonProperty("HostId")
             private String HostId;
@@ -54,11 +54,11 @@ public class DescribeDedicatedHostsResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("RealResource")
-            private RealResourceDto RealResource;
+            private DataDtoHostsDtoRealResourceDto RealResource;
 
             @Data
             @ToString
-            public static class RealResourceDto {
+            public static class DataDtoHostsDtoRealResourceDto {
                 /***/
                 @JsonProperty("Cpu")
                 private Integer Cpu;
@@ -75,11 +75,11 @@ public class DescribeDedicatedHostsResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("AllocatedResource")
-            private AllocatedResourceDto AllocatedResource;
+            private DataDtoHostsDtoAllocatedResourceDto AllocatedResource;
 
             @Data
             @ToString
-            public static class AllocatedResourceDto {
+            public static class DataDtoHostsDtoAllocatedResourceDto {
                 /***/
                 @JsonProperty("Cpu")
                 private Integer Cpu;
@@ -96,11 +96,11 @@ public class DescribeDedicatedHostsResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("OversoldResource")
-            private OversoldResourceDto OversoldResource;
+            private DataDtoHostsDtoOversoldResourceDto OversoldResource;
 
             @Data
             @ToString
-            public static class OversoldResourceDto {
+            public static class DataDtoHostsDtoOversoldResourceDto {
                 /***/
                 @JsonProperty("Cpu")
                 private Integer Cpu;

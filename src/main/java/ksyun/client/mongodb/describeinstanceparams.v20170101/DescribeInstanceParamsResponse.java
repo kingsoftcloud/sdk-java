@@ -23,11 +23,11 @@ public class DescribeInstanceParamsResponse extends BaseResponseModel {
     public static class RuntimeParamsDto {
         /***/
         @JsonProperty("SetParameter")
-        private SetParameterDto SetParameter;
+        private RuntimeParamsDtoSetParameterDto SetParameter;
 
         @Data
         @ToString
-        public static class SetParameterDto {
+        public static class RuntimeParamsDtoSetParameterDto {
             /***/
             @JsonProperty("maxTransactionLockRequestTimeoutMillis")
             private Integer MaxTransactionLockRequestTimeoutMillis;
@@ -44,11 +44,11 @@ public class DescribeInstanceParamsResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("OperationProfiling")
-        private OperationProfilingDto OperationProfiling;
+        private RuntimeParamsDtoOperationProfilingDto OperationProfiling;
 
         @Data
         @ToString
-        public static class OperationProfilingDto {
+        public static class RuntimeParamsDtoOperationProfilingDto {
             /***/
             @JsonProperty("slowOpThresholdMs")
             private Integer SlowOpThresholdMs;
@@ -61,11 +61,11 @@ public class DescribeInstanceParamsResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Replication")
-        private ReplicationDto Replication;
+        private RuntimeParamsDtoReplicationDto Replication;
 
         @Data
         @ToString
-        public static class ReplicationDto {
+        public static class RuntimeParamsDtoReplicationDto {
             /***/
             @JsonProperty("oplogSizeMB")
             private String OplogSizeMB;

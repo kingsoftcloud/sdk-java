@@ -27,11 +27,11 @@ public class DescribeGpuRoceTopologyResponse extends BaseResponseModel {
     public static class DescribePortsDto {
         /***/
         @JsonProperty("LeafDatas")
-        private List<LeafDatasDto> LeafDatas;
+        private List<DescribePortsDtoLeafDatasDto> LeafDatas;
 
         @Data
         @ToString
-        public static class LeafDatasDto {
+        public static class DescribePortsDtoLeafDatasDto {
             /***/
             @JsonProperty("SpineName")
             private String SpineName;
@@ -52,11 +52,11 @@ public class DescribeGpuRoceTopologyResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("CoreDatas")
-        private List<CoreDatasDto> CoreDatas;
+        private List<DescribePortsDtoCoreDatasDto> CoreDatas;
 
         @Data
         @ToString
-        public static class CoreDatasDto {
+        public static class DescribePortsDtoCoreDatasDto {
             /***/
             @JsonProperty("CoreName")
             private String CoreName;

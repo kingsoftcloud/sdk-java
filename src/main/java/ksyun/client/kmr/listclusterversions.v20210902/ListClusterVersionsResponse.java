@@ -35,11 +35,11 @@ public class ListClusterVersionsResponse extends BaseResponseModel {
 
         /**服务信息*/
         @JsonProperty("Services")
-        private List<ServicesDto> Services;
+        private List<VersionsDtoServicesDto> Services;
 
         @Data
         @ToString
-        public static class ServicesDto {
+        public static class VersionsDtoServicesDto {
             /**组件名称*/
             @JsonProperty("Name")
             private String Name;

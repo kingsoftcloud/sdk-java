@@ -23,11 +23,11 @@ public class GetEffectivePoliciesResponse extends BaseResponseModel {
     public static class ListPoliciesResultDto {
         /***/
         @JsonProperty("Policies")
-        private List<PoliciesDto> Policies;
+        private List<ListPoliciesResultDtoPoliciesDto> Policies;
 
         @Data
         @ToString
-        public static class PoliciesDto {
+        public static class ListPoliciesResultDtoPoliciesDto {
             /***/
             @JsonProperty("CreateDate")
             private String CreateDate;

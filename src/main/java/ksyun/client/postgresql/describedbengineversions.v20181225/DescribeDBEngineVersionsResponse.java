@@ -23,18 +23,18 @@ public class DescribeDBEngineVersionsResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("Engines")
-        private EnginesDto Engines;
+        private DataDtoEnginesDto Engines;
 
         @Data
         @ToString
-        public static class EnginesDto {
+        public static class DataDtoEnginesDto {
             /***/
             @JsonProperty("PostgerSQL")
-            private List<PostgerSQLDto> PostgerSQL;
+            private List<DataDtoEnginesDtoPostgerSQLDto> PostgerSQL;
 
             @Data
             @ToString
-            public static class PostgerSQLDto {
+            public static class DataDtoEnginesDtoPostgerSQLDto {
                 /**引擎类型*/
                 @JsonProperty("Engine")
                 private String Engine;

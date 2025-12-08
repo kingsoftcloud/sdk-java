@@ -23,18 +23,18 @@ public class CreateDBInstanceReadReplicaResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("DBInstance")
-        private DBInstanceDto DBInstance;
+        private DataDtoDBInstanceDto DBInstance;
 
         @Data
         @ToString
-        public static class DBInstanceDto {
+        public static class DataDtoDBInstanceDto {
             /***/
             @JsonProperty("DBInstanceClass")
-            private DBInstanceClassDto DBInstanceClass;
+            private DataDtoDBInstanceDtoDBInstanceClassDto DBInstanceClass;
 
             @Data
             @ToString
-            public static class DBInstanceClassDto {
+            public static class DataDtoDBInstanceDtoDBInstanceClassDto {
                 /***/
                 @JsonProperty("Id")
                 private String Id;
@@ -159,11 +159,11 @@ public class CreateDBInstanceReadReplicaResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("ReadReplicaDBInstanceIdentifiers")
-            private List<ReadReplicaDBInstanceIdentifiersDto> ReadReplicaDBInstanceIdentifiers;
+            private List<DataDtoDBInstanceDtoReadReplicaDBInstanceIdentifiersDto> ReadReplicaDBInstanceIdentifiers;
 
             @Data
             @ToString
-            public static class ReadReplicaDBInstanceIdentifiersDto {
+            public static class DataDtoDBInstanceDtoReadReplicaDBInstanceIdentifiersDto {
                 /***/
                 @JsonProperty("Vip")
                 private String Vip;
@@ -180,11 +180,11 @@ public class CreateDBInstanceReadReplicaResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("DBSource")
-            private DBSourceDto DBSource;
+            private DataDtoDBInstanceDtoDBSourceDto DBSource;
 
             @Data
             @ToString
-            public static class DBSourceDto {
+            public static class DataDtoDBInstanceDtoDBSourceDto {
                 /***/
                 @JsonProperty("DBInstanceIdentifier")
                 private String DBInstanceIdentifier;

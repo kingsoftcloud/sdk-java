@@ -43,11 +43,11 @@ public class CreateAlbRuleGroupResponse extends BaseResponseModel {
 
         /**规则的信息*/
         @JsonProperty("AlbRuleSet")
-        private List<AlbRuleSetDto> AlbRuleSet;
+        private List<AlbRuleGroupDtoAlbRuleSetDto> AlbRuleSet;
 
         @Data
         @ToString
-        public static class AlbRuleSetDto {
+        public static class AlbRuleGroupDtoAlbRuleSetDto {
             /**匹配规则类型(domain|url|method|sourceIp|header|query|cookie)*/
             @JsonProperty("AlbRuleType")
             private String AlbRuleType;
@@ -66,11 +66,11 @@ public class CreateAlbRuleGroupResponse extends BaseResponseModel {
 
             /**HTTP标头*/
             @JsonProperty("HeaderValue")
-            private List<HeaderValueDto> HeaderValue;
+            private List<AlbRuleGroupDtoAlbRuleSetDtoHeaderValueDto> HeaderValue;
 
             @Data
             @ToString
-            public static class HeaderValueDto {
+            public static class AlbRuleGroupDtoAlbRuleSetDtoHeaderValueDto {
                 /**HTTP标头,查询字符串的键值*/
                 @JsonProperty("Key")
                 private String Key;
@@ -83,11 +83,11 @@ public class CreateAlbRuleGroupResponse extends BaseResponseModel {
 
             /**查询字符串*/
             @JsonProperty("QueryValue")
-            private List<QueryValueDto> QueryValue;
+            private List<AlbRuleGroupDtoAlbRuleSetDtoQueryValueDto> QueryValue;
 
             @Data
             @ToString
-            public static class QueryValueDto {
+            public static class AlbRuleGroupDtoAlbRuleSetDtoQueryValueDto {
                 /**HTTP标头,查询字符串的键值*/
                 @JsonProperty("Key")
                 private String Key;
@@ -100,11 +100,11 @@ public class CreateAlbRuleGroupResponse extends BaseResponseModel {
 
             /**Cookie转发条件*/
             @JsonProperty("CookieValue")
-            private List<CookieValueDto> CookieValue;
+            private List<AlbRuleGroupDtoAlbRuleSetDtoCookieValueDto> CookieValue;
 
             @Data
             @ToString
-            public static class CookieValueDto {
+            public static class AlbRuleGroupDtoAlbRuleSetDtoCookieValueDto {
                 /**HTTP标头,查询字符串的键值*/
                 @JsonProperty("Key")
                 private String Key;
@@ -119,11 +119,11 @@ public class CreateAlbRuleGroupResponse extends BaseResponseModel {
 
         /**重写*/
         @JsonProperty("RewriteConfig")
-        private RewriteConfigDto RewriteConfig;
+        private AlbRuleGroupDtoRewriteConfigDto RewriteConfig;
 
         @Data
         @ToString
-        public static class RewriteConfigDto {
+        public static class AlbRuleGroupDtoRewriteConfigDto {
             /**重写的域名*/
             @JsonProperty("HttpHost")
             private String HttpHost;
@@ -140,11 +140,11 @@ public class CreateAlbRuleGroupResponse extends BaseResponseModel {
 
         /**返回固定响应信息*/
         @JsonProperty("FixedResponseConfig")
-        private FixedResponseConfigDto FixedResponseConfig;
+        private AlbRuleGroupDtoFixedResponseConfigDto FixedResponseConfig;
 
         @Data
         @ToString
-        public static class FixedResponseConfigDto {
+        public static class AlbRuleGroupDtoFixedResponseConfigDto {
             /**响应正文长度不能超过1000个字符，不支持中文字符*/
             @JsonProperty("Content")
             private String Content;

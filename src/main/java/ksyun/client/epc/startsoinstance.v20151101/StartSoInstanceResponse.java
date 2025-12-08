@@ -27,11 +27,11 @@ public class StartSoInstanceResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Error")
-        private ErrorDto Error;
+        private OperationDetailsDtoErrorDto Error;
 
         @Data
         @ToString
-        public static class ErrorDto {
+        public static class OperationDetailsDtoErrorDto {
             /**InvalidInstanceStatus*/
             @JsonProperty("Code")
             private String Code;

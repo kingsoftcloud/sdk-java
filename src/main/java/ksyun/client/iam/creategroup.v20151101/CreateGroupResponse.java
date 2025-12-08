@@ -23,11 +23,11 @@ public class CreateGroupResponse extends BaseResponseModel {
     public static class CreateGroupResultDto {
         /***/
         @JsonProperty("Group")
-        private GroupDto Group;
+        private CreateGroupResultDtoGroupDto Group;
 
         @Data
         @ToString
-        public static class GroupDto {
+        public static class CreateGroupResultDtoGroupDto {
             /***/
             @JsonProperty("GroupId")
             private String GroupId;

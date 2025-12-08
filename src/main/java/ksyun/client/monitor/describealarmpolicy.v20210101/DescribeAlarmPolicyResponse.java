@@ -23,11 +23,11 @@ public class DescribeAlarmPolicyResponse extends BaseResponseModel {
     public static class DataDto {
         /**告警策略列表*/
         @JsonProperty("alarmPolicyList")
-        private List<AlarmPolicyListDto> AlarmPolicyList;
+        private List<DataDtoAlarmPolicyListDto> AlarmPolicyList;
 
         @Data
         @ToString
-        public static class AlarmPolicyListDto {
+        public static class DataDtoAlarmPolicyListDto {
             /**策略ID*/
             @JsonProperty("policyId")
             private Integer PolicyId;
@@ -60,11 +60,11 @@ public class DescribeAlarmPolicyResponse extends BaseResponseModel {
 
             /**告警规则列表*/
             @JsonProperty("triggerRuleList")
-            private List<TriggerRuleListDto> TriggerRuleList;
+            private List<DataDtoAlarmPolicyListDtoTriggerRuleListDto> TriggerRuleList;
 
             @Data
             @ToString
-            public static class TriggerRuleListDto {
+            public static class DataDtoAlarmPolicyListDtoTriggerRuleListDto {
                 /**规则ID*/
                 @JsonProperty("triggerId")
                 private Integer TriggerId;
@@ -143,11 +143,11 @@ public class DescribeAlarmPolicyResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("contactInfoList")
-            private List<ContactInfoListDto> ContactInfoList;
+            private List<DataDtoAlarmPolicyListDtoContactInfoListDto> ContactInfoList;
 
             @Data
             @ToString
-            public static class ContactInfoListDto {
+            public static class DataDtoAlarmPolicyListDtoContactInfoListDto {
                 /**告警联系人ID或告警联系组ID*/
                 @JsonProperty("contactId")
                 private Integer ContactId;

@@ -23,11 +23,11 @@ public class GetUserGroupResponse extends BaseResponseModel {
     public static class DataDto {
         /**联系组列表*/
         @JsonProperty("userGrpList")
-        private List<UserGrpListDto> UserGrpList;
+        private List<DataDtoUserGrpListDto> UserGrpList;
 
         @Data
         @ToString
-        public static class UserGrpListDto {
+        public static class DataDtoUserGrpListDto {
             /**联系组ID*/
             @JsonProperty("userGrpId")
             private Integer UserGrpId;

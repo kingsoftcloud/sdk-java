@@ -31,11 +31,11 @@ public class GetUpgradeVolumeTypeProcessInfoResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Process")
-        private ProcessDto Process;
+        private ResultDtoProcessDto Process;
 
         @Data
         @ToString
-        public static class ProcessDto {
+        public static class ResultDtoProcessDto {
             /***/
             @JsonProperty("PrepareProcess")
             private Integer PrepareProcess;

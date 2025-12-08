@@ -27,11 +27,11 @@ public class DescribeBigHotKeysResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("KeyInfos")
-        private List<KeyInfosDto> KeyInfos;
+        private List<DataDtoKeyInfosDto> KeyInfos;
 
         @Data
         @ToString
-        public static class KeyInfosDto {
+        public static class DataDtoKeyInfosDto {
             /***/
             @JsonProperty("KeyName")
             private String KeyName;

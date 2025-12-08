@@ -43,11 +43,11 @@ public class DescribeRetentionPolicyListResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Data")
-        private List<DataDto> Data;
+        private List<DataDtoDataDto> Data;
 
         @Data
         @ToString
-        public static class DataDto {
+        public static class DataDtoDataDto {
             /***/
             @JsonProperty("PolicyName")
             private String PolicyName;

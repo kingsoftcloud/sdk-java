@@ -23,11 +23,11 @@ public class ListSlowLogsResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("SlowLogs")
-        private List<SlowLogsDto> SlowLogs;
+        private List<DataDtoSlowLogsDto> SlowLogs;
 
         @Data
         @ToString
-        public static class SlowLogsDto {
+        public static class DataDtoSlowLogsDto {
             /**总运行时间*/
             @JsonProperty("TotalElapsedTime")
             private Integer TotalElapsedTime;

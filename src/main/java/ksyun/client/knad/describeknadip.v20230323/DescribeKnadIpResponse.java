@@ -67,11 +67,11 @@ public class DescribeKnadIpResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("EipInfo")
-        private EipInfoDto EipInfo;
+        private KnadIpSetDtoEipInfoDto EipInfo;
 
         @Data
         @ToString
-        public static class EipInfoDto {
+        public static class KnadIpSetDtoEipInfoDto {
             /***/
             @JsonProperty("InstanceType")
             private String InstanceType;

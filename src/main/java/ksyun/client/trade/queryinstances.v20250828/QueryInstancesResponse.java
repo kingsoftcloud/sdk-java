@@ -27,11 +27,11 @@ public class QueryInstancesResponse extends BaseResponseModel {
     public static class DataDto {
         /**实例列表*/
         @JsonProperty("retResponse")
-        private List<RetResponseDto> RetResponse;
+        private List<DataDtoRetResponseDto> RetResponse;
 
         @Data
         @ToString
-        public static class RetResponseDto {
+        public static class DataDtoRetResponseDto {
             /**计费方式ID*/
             @JsonProperty("billType")
             private Integer BillType;

@@ -23,11 +23,11 @@ public class DescribeImportFileResponse extends BaseResponseModel {
     public static class DataDto {
         /**导入文件详情*/
         @JsonProperty("ImportFile")
-        private List<ImportFileDto> ImportFile;
+        private List<DataDtoImportFileDto> ImportFile;
 
         @Data
         @ToString
-        public static class ImportFileDto {
+        public static class DataDtoImportFileDto {
             /**导入文件名称*/
             @JsonProperty("ImportFileName")
             private String ImportFileName;

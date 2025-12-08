@@ -51,11 +51,11 @@ public class DescribeEpcDeviceAttributesResponse extends BaseResponseModel {
 
         /**CPU信息*/
         @JsonProperty("CpuDeviceSet")
-        private List<CpuDeviceSetDto> CpuDeviceSet;
+        private List<EpcDeviceAttributeSetDtoCpuDeviceSetDto> CpuDeviceSet;
 
         @Data
         @ToString
-        public static class CpuDeviceSetDto {
+        public static class EpcDeviceAttributeSetDtoCpuDeviceSetDto {
             /**CPU*/
             @JsonProperty("CpuSpec")
             private String CpuSpec;
@@ -64,11 +64,11 @@ public class DescribeEpcDeviceAttributesResponse extends BaseResponseModel {
 
         /**GPU信息*/
         @JsonProperty("GpuDeviceSet")
-        private List<GpuDeviceSetDto> GpuDeviceSet;
+        private List<EpcDeviceAttributeSetDtoGpuDeviceSetDto> GpuDeviceSet;
 
         @Data
         @ToString
-        public static class GpuDeviceSetDto {
+        public static class EpcDeviceAttributeSetDtoGpuDeviceSetDto {
             /**GPU*/
             @JsonProperty("GpuModel")
             private String GpuModel;
@@ -81,11 +81,11 @@ public class DescribeEpcDeviceAttributesResponse extends BaseResponseModel {
 
         /**物理磁盘信息*/
         @JsonProperty("PhysicalDiskDeviceSet")
-        private List<PhysicalDiskDeviceSetDto> PhysicalDiskDeviceSet;
+        private List<EpcDeviceAttributeSetDtoPhysicalDiskDeviceSetDto> PhysicalDiskDeviceSet;
 
         @Data
         @ToString
-        public static class PhysicalDiskDeviceSetDto {
+        public static class EpcDeviceAttributeSetDtoPhysicalDiskDeviceSetDto {
             /**磁盘*/
             @JsonProperty("DiskAttribute")
             private String DiskAttribute;
@@ -102,11 +102,11 @@ public class DescribeEpcDeviceAttributesResponse extends BaseResponseModel {
 
         /**价格信息*/
         @JsonProperty("PriceSet")
-        private List<PriceSetDto> PriceSet;
+        private List<EpcDeviceAttributeSetDtoPriceSetDto> PriceSet;
 
         @Data
         @ToString
-        public static class PriceSetDto {
+        public static class EpcDeviceAttributeSetDtoPriceSetDto {
             /**按月价格*/
             @JsonProperty("MonthlylistPrice")
             private String MonthlylistPrice;
@@ -119,11 +119,11 @@ public class DescribeEpcDeviceAttributesResponse extends BaseResponseModel {
 
         /**套餐组关联子机型信息*/
         @JsonProperty("SubEpcDeviceAttributeSet")
-        private List<SubEpcDeviceAttributeSetDto> SubEpcDeviceAttributeSet;
+        private List<EpcDeviceAttributeSetDtoSubEpcDeviceAttributeSetDto> SubEpcDeviceAttributeSet;
 
         @Data
         @ToString
-        public static class SubEpcDeviceAttributeSetDto {
+        public static class EpcDeviceAttributeSetDtoSubEpcDeviceAttributeSetDto {
             /**设备ID*/
             @JsonProperty("DeviceAttributeId")
             private String DeviceAttributeId;
@@ -142,11 +142,11 @@ public class DescribeEpcDeviceAttributesResponse extends BaseResponseModel {
 
             /**CPU信息*/
             @JsonProperty("CpuDeviceSet")
-            private List<CpuDeviceSetDto> CpuDeviceSet;
+            private List<EpcDeviceAttributeSetDtoSubEpcDeviceAttributeSetDtoCpuDeviceSetDto> CpuDeviceSet;
 
             @Data
             @ToString
-            public static class CpuDeviceSetDto {
+            public static class EpcDeviceAttributeSetDtoSubEpcDeviceAttributeSetDtoCpuDeviceSetDto {
                 /**CPU*/
                 @JsonProperty("CpuSpec")
                 private String CpuSpec;
@@ -155,11 +155,11 @@ public class DescribeEpcDeviceAttributesResponse extends BaseResponseModel {
 
             /**GPU信息*/
             @JsonProperty("GpuDeviceSet")
-            private List<GpuDeviceSetDto> GpuDeviceSet;
+            private List<EpcDeviceAttributeSetDtoSubEpcDeviceAttributeSetDtoGpuDeviceSetDto> GpuDeviceSet;
 
             @Data
             @ToString
-            public static class GpuDeviceSetDto {
+            public static class EpcDeviceAttributeSetDtoSubEpcDeviceAttributeSetDtoGpuDeviceSetDto {
                 /**GPU*/
                 @JsonProperty("GpuModel")
                 private String GpuModel;
@@ -172,11 +172,11 @@ public class DescribeEpcDeviceAttributesResponse extends BaseResponseModel {
 
             /**物理磁盘信息*/
             @JsonProperty("PhysicalDiskDeviceSet")
-            private List<PhysicalDiskDeviceSetDto> PhysicalDiskDeviceSet;
+            private List<EpcDeviceAttributeSetDtoSubEpcDeviceAttributeSetDtoPhysicalDiskDeviceSetDto> PhysicalDiskDeviceSet;
 
             @Data
             @ToString
-            public static class PhysicalDiskDeviceSetDto {
+            public static class EpcDeviceAttributeSetDtoSubEpcDeviceAttributeSetDtoPhysicalDiskDeviceSetDto {
                 /**磁盘*/
                 @JsonProperty("DiskAttribute")
                 private String DiskAttribute;
@@ -205,11 +205,11 @@ public class DescribeEpcDeviceAttributesResponse extends BaseResponseModel {
 
             /**vpc网卡*/
             @JsonProperty("VpcNetworkCard")
-            private List<VpcNetworkCardDto> VpcNetworkCard;
+            private List<EpcDeviceAttributeSetDtoSubEpcDeviceAttributeSetDtoVpcNetworkCardDto> VpcNetworkCard;
 
             @Data
             @ToString
-            public static class VpcNetworkCardDto {
+            public static class EpcDeviceAttributeSetDtoSubEpcDeviceAttributeSetDtoVpcNetworkCardDto {
                 /**网卡类型*/
                 @JsonProperty("Type")
                 private String Type;
@@ -222,11 +222,11 @@ public class DescribeEpcDeviceAttributesResponse extends BaseResponseModel {
 
             /**rdma网卡信息*/
             @JsonProperty("RdmaNetworkCard")
-            private List<RdmaNetworkCardDto> RdmaNetworkCard;
+            private List<EpcDeviceAttributeSetDtoSubEpcDeviceAttributeSetDtoRdmaNetworkCardDto> RdmaNetworkCard;
 
             @Data
             @ToString
-            public static class RdmaNetworkCardDto {
+            public static class EpcDeviceAttributeSetDtoSubEpcDeviceAttributeSetDtoRdmaNetworkCardDto {
                 /**网卡类型*/
                 @JsonProperty("Type")
                 private String Type;
@@ -249,11 +249,11 @@ public class DescribeEpcDeviceAttributesResponse extends BaseResponseModel {
 
         /**vpc网卡信息*/
         @JsonProperty("VpcNetworkCard")
-        private List<VpcNetworkCardDto> VpcNetworkCard;
+        private List<EpcDeviceAttributeSetDtoVpcNetworkCardDto> VpcNetworkCard;
 
         @Data
         @ToString
-        public static class VpcNetworkCardDto {
+        public static class EpcDeviceAttributeSetDtoVpcNetworkCardDto {
             /**网卡类型*/
             @JsonProperty("Type")
             private String Type;
@@ -266,11 +266,11 @@ public class DescribeEpcDeviceAttributesResponse extends BaseResponseModel {
 
         /**rdma网卡*/
         @JsonProperty("RdmaNetworkCard")
-        private List<RdmaNetworkCardDto> RdmaNetworkCard;
+        private List<EpcDeviceAttributeSetDtoRdmaNetworkCardDto> RdmaNetworkCard;
 
         @Data
         @ToString
-        public static class RdmaNetworkCardDto {
+        public static class EpcDeviceAttributeSetDtoRdmaNetworkCardDto {
             /**网卡类型*/
             @JsonProperty("Type")
             private String Type;

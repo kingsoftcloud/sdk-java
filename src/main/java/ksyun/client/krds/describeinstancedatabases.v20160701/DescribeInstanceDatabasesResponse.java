@@ -25,11 +25,11 @@ public class DescribeInstanceDatabasesResponse extends BaseResponseModel {
         /**数据库列表	
 –*/
         @JsonProperty("InstanceDatabases")
-        private List<InstanceDatabasesDto> InstanceDatabases;
+        private List<DataDtoInstanceDatabasesDto> InstanceDatabases;
 
         @Data
         @ToString
-        public static class InstanceDatabasesDto {
+        public static class DataDtoInstanceDatabasesDto {
             /**数据库名称	
 */
             @JsonProperty("InstanceDatabaseName")
@@ -58,11 +58,11 @@ public class DescribeInstanceDatabasesResponse extends BaseResponseModel {
             /**数据库权限(权限拥有者及对应权限)	
 */
             @JsonProperty("InstanceDatabasePrivileges")
-            private InstanceDatabasePrivilegesDto InstanceDatabasePrivileges;
+            private DataDtoInstanceDatabasesDtoInstanceDatabasePrivilegesDto InstanceDatabasePrivileges;
 
             @Data
             @ToString
-            public static class InstanceDatabasePrivilegesDto {
+            public static class DataDtoInstanceDatabasesDtoInstanceDatabasePrivilegesDto {
             }
 
         }

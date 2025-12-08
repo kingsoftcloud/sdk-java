@@ -27,11 +27,11 @@ public class DeleteSoKeyPairsResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Error")
-        private ErrorDto Error;
+        private OperationDetailsDtoErrorDto Error;
 
         @Data
         @ToString
-        public static class ErrorDto {
+        public static class OperationDetailsDtoErrorDto {
             /**123*/
             @JsonProperty("Code")
             private String Code;

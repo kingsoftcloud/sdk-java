@@ -23,18 +23,18 @@ public class ListVirtualMFADevicesResponse extends BaseResponseModel {
     public static class ListVirtualMFADevicesResultDto {
         /***/
         @JsonProperty("VirtualMFADevices")
-        private VirtualMFADevicesDto VirtualMFADevices;
+        private ListVirtualMFADevicesResultDtoVirtualMFADevicesDto VirtualMFADevices;
 
         @Data
         @ToString
-        public static class VirtualMFADevicesDto {
+        public static class ListVirtualMFADevicesResultDtoVirtualMFADevicesDto {
             /***/
             @JsonProperty("member")
-            private List<MemberDto> Member;
+            private List<ListVirtualMFADevicesResultDtoVirtualMFADevicesDtoMemberDto> Member;
 
             @Data
             @ToString
-            public static class MemberDto {
+            public static class ListVirtualMFADevicesResultDtoVirtualMFADevicesDtoMemberDto {
                 /***/
                 @JsonProperty("SerialNumber")
                 private String SerialNumber;
@@ -45,11 +45,11 @@ public class ListVirtualMFADevicesResponse extends BaseResponseModel {
 
                 /***/
                 @JsonProperty("User")
-                private UserDto User;
+                private ListVirtualMFADevicesResultDtoVirtualMFADevicesDtoMemberDtoUserDto User;
 
                 @Data
                 @ToString
-                public static class UserDto {
+                public static class ListVirtualMFADevicesResultDtoVirtualMFADevicesDtoMemberDtoUserDto {
                     /***/
                     @JsonProperty("Uuid")
                     private String Uuid;

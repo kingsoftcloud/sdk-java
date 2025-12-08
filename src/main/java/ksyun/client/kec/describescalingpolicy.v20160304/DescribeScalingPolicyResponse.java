@@ -55,11 +55,11 @@ public class DescribeScalingPolicyResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Metric")
-        private MetricDto Metric;
+        private ScalingPolicySetDtoMetricDto Metric;
 
         @Data
         @ToString
-        public static class MetricDto {
+        public static class ScalingPolicySetDtoMetricDto {
             /***/
             @JsonProperty("DimensionName")
             private String DimensionName;

@@ -47,11 +47,11 @@ public class CreatePdnsZoneResponse extends BaseResponseModel {
 
         /**所绑定的VPC的信息*/
         @JsonProperty("BindVpcSet")
-        private List<BindVpcSetDto> BindVpcSet;
+        private List<ZoneVpcDtoBindVpcSetDto> BindVpcSet;
 
         @Data
         @ToString
-        public static class BindVpcSetDto {
+        public static class ZoneVpcDtoBindVpcSetDto {
             /**绑定VPC所属的region*/
             @JsonProperty("RegionName")
             private String RegionName;

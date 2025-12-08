@@ -27,11 +27,11 @@ public class DescribeCreateSnapshotStatusResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("backup_resource")
-        private Backup_resourceDto Backup_resource;
+        private DataDtoBackup_resourceDto Backup_resource;
 
         @Data
         @ToString
-        public static class Backup_resourceDto {
+        public static class DataDtoBackup_resourceDto {
             /***/
             @JsonProperty("resourceId")
             private String ResourceId;
@@ -54,11 +54,11 @@ public class DescribeCreateSnapshotStatusResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("metadata")
-            private MetadataDto Metadata;
+            private DataDtoBackup_resourceDtoMetadataDto Metadata;
 
             @Data
             @ToString
-            public static class MetadataDto {
+            public static class DataDtoBackup_resourceDtoMetadataDto {
                 /***/
                 @JsonProperty("bigkey")
                 private Integer Bigkey;

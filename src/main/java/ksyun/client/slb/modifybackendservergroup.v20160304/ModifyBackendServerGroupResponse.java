@@ -51,11 +51,11 @@ public class ModifyBackendServerGroupResponse extends BaseResponseModel {
 
         /**健康检查信息，仅镜像服务器有此参数*/
         @JsonProperty("HealthCheck")
-        private HealthCheckDto HealthCheck;
+        private BackendServerGroupDtoHealthCheckDto HealthCheck;
 
         @Data
         @ToString
-        public static class HealthCheckDto {
+        public static class BackendServerGroupDtoHealthCheckDto {
             /**HTTP类型健康检查的域名*/
             @JsonProperty("HostName")
             private String HostName;

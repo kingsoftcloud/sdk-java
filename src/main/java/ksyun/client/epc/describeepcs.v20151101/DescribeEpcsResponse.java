@@ -193,11 +193,11 @@ data：在系统的根目录下，系统里展示内容从/data1开始，如/dat
 
         /**roce信息*/
         @JsonProperty("Roces")
-        private List<RocesDto> Roces;
+        private List<HostSetDtoRocesDto> Roces;
 
         @Data
         @ToString
-        public static class RocesDto {
+        public static class HostSetDtoRocesDto {
             /**IP信息*/
             @JsonProperty("Ip")
             private String Ip;
@@ -354,11 +354,11 @@ HotStandbyToBeActivated：热备机待激活*/
 
         /***/
         @JsonProperty("Cpu")
-        private CpuDto Cpu;
+        private HostSetDtoCpuDto Cpu;
 
         @Data
         @ToString
-        public static class CpuDto {
+        public static class HostSetDtoCpuDto {
             /**CPU型号*/
             @JsonProperty("Model")
             private String Model;
@@ -379,11 +379,11 @@ HotStandbyToBeActivated：热备机待激活*/
 
         /***/
         @JsonProperty("Gpu")
-        private GpuDto Gpu;
+        private HostSetDtoGpuDto Gpu;
 
         @Data
         @ToString
-        public static class GpuDto {
+        public static class HostSetDtoGpuDto {
             /**GPU型号*/
             @JsonProperty("Model")
             private String Model;
@@ -408,11 +408,11 @@ HotStandbyToBeActivated：热备机待激活*/
 
         /***/
         @JsonProperty("DiskSet")
-        private List<DiskSetDto> DiskSet;
+        private List<HostSetDtoDiskSetDto> DiskSet;
 
         @Data
         @ToString
-        public static class DiskSetDto {
+        public static class HostSetDtoDiskSetDto {
             /**磁盘类型
 
     System
@@ -459,11 +459,11 @@ SSD
 
         /**关联的网卡信息*/
         @JsonProperty("NetworkInterfaceAttributeSet")
-        private List<NetworkInterfaceAttributeSetDto> NetworkInterfaceAttributeSet;
+        private List<HostSetDtoNetworkInterfaceAttributeSetDto> NetworkInterfaceAttributeSet;
 
         @Data
         @ToString
-        public static class NetworkInterfaceAttributeSetDto {
+        public static class HostSetDtoNetworkInterfaceAttributeSetDto {
             /**VPCid*/
             @JsonProperty("VpcId")
             private String VpcId;
@@ -498,11 +498,11 @@ SSD
 
             /***/
             @JsonProperty("SecurityGroupSet")
-            private List<SecurityGroupSetDto> SecurityGroupSet;
+            private List<HostSetDtoNetworkInterfaceAttributeSetDtoSecurityGroupSetDto> SecurityGroupSet;
 
             @Data
             @ToString
-            public static class SecurityGroupSetDto {
+            public static class HostSetDtoNetworkInterfaceAttributeSetDtoSecurityGroupSetDto {
                 /**安全组的ID*/
                 @JsonProperty("SecurityGroupId")
                 private String SecurityGroupId;
@@ -511,11 +511,11 @@ SSD
 
             /**弹性公网 IP 绑定信息*/
             @JsonProperty("EipAddress")
-            private EipAddressDto EipAddress;
+            private HostSetDtoNetworkInterfaceAttributeSetDtoEipAddressDto EipAddress;
 
             @Data
             @ToString
-            public static class EipAddressDto {
+            public static class HostSetDtoNetworkInterfaceAttributeSetDtoEipAddressDto {
                 /**弹性IP的带宽*/
                 @JsonProperty("BandWidth")
                 private Integer BandWidth;
@@ -550,11 +550,11 @@ SSD
 
         /**EPC网卡*/
         @JsonProperty("NetworkCardSet")
-        private List<NetworkCardSetDto> NetworkCardSet;
+        private List<HostSetDtoNetworkCardSetDto> NetworkCardSet;
 
         @Data
         @ToString
-        public static class NetworkCardSetDto {
+        public static class HostSetDtoNetworkCardSetDto {
             /**网卡类型属性*/
             @JsonProperty("Type")
             private String Type;
@@ -611,11 +611,11 @@ SSD
 
         /***/
         @JsonProperty("DataVolumeSet")
-        private List<DataVolumeSetDto> DataVolumeSet;
+        private List<HostSetDtoDataVolumeSetDto> DataVolumeSet;
 
         @Data
         @ToString
-        public static class DataVolumeSetDto {
+        public static class HostSetDtoDataVolumeSetDto {
             /**云硬盘的ID*/
             @JsonProperty("VolumeId")
             private String VolumeId;

@@ -23,11 +23,11 @@ public class ListErrorLogsResponse extends BaseResponseModel {
     public static class DataDto {
         /**错误日志列表*/
         @JsonProperty("ErrorLogs")
-        private List<ErrorLogsDto> ErrorLogs;
+        private List<DataDtoErrorLogsDto> ErrorLogs;
 
         @Data
         @ToString
-        public static class ErrorLogsDto {
+        public static class DataDtoErrorLogsDto {
             /**日志信息*/
             @JsonProperty("SqlText")
             private String SqlText;

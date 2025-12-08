@@ -23,18 +23,18 @@ public class GetGroupResponse extends BaseResponseModel {
     public static class GetGroupResultDto {
         /***/
         @JsonProperty("Group")
-        private GroupDto Group;
+        private GetGroupResultDtoGroupDto Group;
 
         @Data
         @ToString
-        public static class GroupDto {
+        public static class GetGroupResultDtoGroupDto {
             /**用户组ID*/
             @JsonProperty("Group")
-            private GroupDto Group;
+            private GetGroupResultDtoGroupDtoGroupDto Group;
 
             @Data
             @ToString
-            public static class GroupDto {
+            public static class GetGroupResultDtoGroupDtoGroupDto {
                 /***/
                 @JsonProperty("GroupId")
                 private String GroupId;

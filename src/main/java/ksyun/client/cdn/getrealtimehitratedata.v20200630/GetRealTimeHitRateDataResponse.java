@@ -51,20 +51,20 @@ public class GetRealTimeHitRateDataResponse extends BaseResponseModel {
     public static class DatasDto {
         /***/
         @JsonProperty("Condition")
-        private ConditionDto Condition;
+        private DatasDtoConditionDto Condition;
 
         @Data
         @ToString
-        public static class ConditionDto {
+        public static class DatasDtoConditionDto {
         }
 
         /***/
         @JsonProperty("DetailData")
-        private DetailDataDto DetailData;
+        private DatasDtoDetailDataDto DetailData;
 
         @Data
         @ToString
-        public static class DetailDataDto {
+        public static class DatasDtoDetailDataDto {
             /***/
             @JsonProperty("HitFlow")
             private Integer HitFlow;

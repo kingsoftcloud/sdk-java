@@ -25,11 +25,11 @@ public class DescribeCollationsResponse extends BaseResponseModel {
         /**字符集列表	
 –*/
         @JsonProperty("Collations")
-        private CollationsDto Collations;
+        private DataDtoCollationsDto Collations;
 
         @Data
         @ToString
-        public static class CollationsDto {
+        public static class DataDtoCollationsDto {
             /***/
             @JsonProperty("utf8")
             private List<String> Utf8;

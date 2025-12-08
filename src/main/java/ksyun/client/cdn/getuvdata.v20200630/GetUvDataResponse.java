@@ -59,11 +59,11 @@ public class GetUvDataResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Domains")
-        private List<DomainsDto> Domains;
+        private List<DatasDtoDomainsDto> Domains;
 
         @Data
         @ToString
-        public static class DomainsDto {
+        public static class DatasDtoDomainsDto {
             /***/
             @JsonProperty("Domain")
             private String Domain;

@@ -31,18 +31,18 @@ public class DescribeEngineDefaultParametersResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Parameters")
-        private ParametersDto Parameters;
+        private DataDtoParametersDto Parameters;
 
         @Data
         @ToString
-        public static class ParametersDto {
+        public static class DataDtoParametersDto {
             /***/
             @JsonProperty("autovacuum_analyze_scale_factor")
-            private Autovacuum_analyze_scale_factorDto Autovacuum_analyze_scale_factor;
+            private DataDtoParametersDtoAutovacuum_analyze_scale_factorDto Autovacuum_analyze_scale_factor;
 
             @Data
             @ToString
-            public static class Autovacuum_analyze_scale_factorDto {
+            public static class DataDtoParametersDtoAutovacuum_analyze_scale_factorDto {
                 /***/
                 @JsonProperty("Min")
                 private Integer Min;
@@ -67,11 +67,11 @@ public class DescribeEngineDefaultParametersResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("autovacuum_vacuum_threshold")
-            private Autovacuum_vacuum_thresholdDto Autovacuum_vacuum_threshold;
+            private DataDtoParametersDtoAutovacuum_vacuum_thresholdDto Autovacuum_vacuum_threshold;
 
             @Data
             @ToString
-            public static class Autovacuum_vacuum_thresholdDto {
+            public static class DataDtoParametersDtoAutovacuum_vacuum_thresholdDto {
                 /***/
                 @JsonProperty("Min")
                 private Integer Min;
@@ -96,11 +96,11 @@ public class DescribeEngineDefaultParametersResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("log_temp_files")
-            private Log_temp_filesDto Log_temp_files;
+            private DataDtoParametersDtoLog_temp_filesDto Log_temp_files;
 
             @Data
             @ToString
-            public static class Log_temp_filesDto {
+            public static class DataDtoParametersDtoLog_temp_filesDto {
                 /***/
                 @JsonProperty("Min")
                 private Integer Min;
@@ -125,11 +125,11 @@ public class DescribeEngineDefaultParametersResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("autovacuum_freeze_max_age")
-            private Autovacuum_freeze_max_ageDto Autovacuum_freeze_max_age;
+            private DataDtoParametersDtoAutovacuum_freeze_max_ageDto Autovacuum_freeze_max_age;
 
             @Data
             @ToString
-            public static class Autovacuum_freeze_max_ageDto {
+            public static class DataDtoParametersDtoAutovacuum_freeze_max_ageDto {
                 /***/
                 @JsonProperty("Min")
                 private Integer Min;
@@ -154,11 +154,11 @@ public class DescribeEngineDefaultParametersResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("vacuum_freeze_table_age")
-            private Vacuum_freeze_table_ageDto Vacuum_freeze_table_age;
+            private DataDtoParametersDtoVacuum_freeze_table_ageDto Vacuum_freeze_table_age;
 
             @Data
             @ToString
-            public static class Vacuum_freeze_table_ageDto {
+            public static class DataDtoParametersDtoVacuum_freeze_table_ageDto {
                 /***/
                 @JsonProperty("Min")
                 private Integer Min;
@@ -183,11 +183,11 @@ public class DescribeEngineDefaultParametersResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("wal_level")
-            private Wal_levelDto Wal_level;
+            private DataDtoParametersDtoWal_levelDto Wal_level;
 
             @Data
             @ToString
-            public static class Wal_levelDto {
+            public static class DataDtoParametersDtoWal_levelDto {
                 /***/
                 @JsonProperty("Default")
                 private String DefaultField;
@@ -208,11 +208,11 @@ public class DescribeEngineDefaultParametersResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("autovacuum_vacuum_cost_limit")
-            private Autovacuum_vacuum_cost_limitDto Autovacuum_vacuum_cost_limit;
+            private DataDtoParametersDtoAutovacuum_vacuum_cost_limitDto Autovacuum_vacuum_cost_limit;
 
             @Data
             @ToString
-            public static class Autovacuum_vacuum_cost_limitDto {
+            public static class DataDtoParametersDtoAutovacuum_vacuum_cost_limitDto {
                 /***/
                 @JsonProperty("Min")
                 private Integer Min;
@@ -237,11 +237,11 @@ public class DescribeEngineDefaultParametersResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("autovacuum_vacuum_scale_factor")
-            private Autovacuum_vacuum_scale_factorDto Autovacuum_vacuum_scale_factor;
+            private DataDtoParametersDtoAutovacuum_vacuum_scale_factorDto Autovacuum_vacuum_scale_factor;
 
             @Data
             @ToString
-            public static class Autovacuum_vacuum_scale_factorDto {
+            public static class DataDtoParametersDtoAutovacuum_vacuum_scale_factorDto {
                 /***/
                 @JsonProperty("Min")
                 private Integer Min;
@@ -266,11 +266,11 @@ public class DescribeEngineDefaultParametersResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("track_activity_query_size")
-            private Track_activity_query_sizeDto Track_activity_query_size;
+            private DataDtoParametersDtoTrack_activity_query_sizeDto Track_activity_query_size;
 
             @Data
             @ToString
-            public static class Track_activity_query_sizeDto {
+            public static class DataDtoParametersDtoTrack_activity_query_sizeDto {
                 /***/
                 @JsonProperty("Min")
                 private Integer Min;
@@ -295,11 +295,11 @@ public class DescribeEngineDefaultParametersResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("autovacuum_max_workers")
-            private Autovacuum_max_workersDto Autovacuum_max_workers;
+            private DataDtoParametersDtoAutovacuum_max_workersDto Autovacuum_max_workers;
 
             @Data
             @ToString
-            public static class Autovacuum_max_workersDto {
+            public static class DataDtoParametersDtoAutovacuum_max_workersDto {
                 /***/
                 @JsonProperty("Min")
                 private Integer Min;
@@ -324,11 +324,11 @@ public class DescribeEngineDefaultParametersResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("checkpoint_timeout")
-            private Checkpoint_timeoutDto Checkpoint_timeout;
+            private DataDtoParametersDtoCheckpoint_timeoutDto Checkpoint_timeout;
 
             @Data
             @ToString
-            public static class Checkpoint_timeoutDto {
+            public static class DataDtoParametersDtoCheckpoint_timeoutDto {
                 /***/
                 @JsonProperty("Min")
                 private Integer Min;
@@ -353,11 +353,11 @@ public class DescribeEngineDefaultParametersResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("autovacuum_vacuum_cost_delay")
-            private Autovacuum_vacuum_cost_delayDto Autovacuum_vacuum_cost_delay;
+            private DataDtoParametersDtoAutovacuum_vacuum_cost_delayDto Autovacuum_vacuum_cost_delay;
 
             @Data
             @ToString
-            public static class Autovacuum_vacuum_cost_delayDto {
+            public static class DataDtoParametersDtoAutovacuum_vacuum_cost_delayDto {
                 /***/
                 @JsonProperty("Min")
                 private Integer Min;
@@ -382,11 +382,11 @@ public class DescribeEngineDefaultParametersResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("wal_keep_segments")
-            private Wal_keep_segmentsDto Wal_keep_segments;
+            private DataDtoParametersDtoWal_keep_segmentsDto Wal_keep_segments;
 
             @Data
             @ToString
-            public static class Wal_keep_segmentsDto {
+            public static class DataDtoParametersDtoWal_keep_segmentsDto {
                 /***/
                 @JsonProperty("Min")
                 private Integer Min;
@@ -411,11 +411,11 @@ public class DescribeEngineDefaultParametersResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("autovacuum_naptime")
-            private Autovacuum_naptimeDto Autovacuum_naptime;
+            private DataDtoParametersDtoAutovacuum_naptimeDto Autovacuum_naptime;
 
             @Data
             @ToString
-            public static class Autovacuum_naptimeDto {
+            public static class DataDtoParametersDtoAutovacuum_naptimeDto {
                 /***/
                 @JsonProperty("Min")
                 private Integer Min;
@@ -440,11 +440,11 @@ public class DescribeEngineDefaultParametersResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("autovacuum_analyze_threshold")
-            private Autovacuum_analyze_thresholdDto Autovacuum_analyze_threshold;
+            private DataDtoParametersDtoAutovacuum_analyze_thresholdDto Autovacuum_analyze_threshold;
 
             @Data
             @ToString
-            public static class Autovacuum_analyze_thresholdDto {
+            public static class DataDtoParametersDtoAutovacuum_analyze_thresholdDto {
                 /***/
                 @JsonProperty("Min")
                 private Integer Min;
@@ -469,11 +469,11 @@ public class DescribeEngineDefaultParametersResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("default_statistics_target")
-            private Default_statistics_targetDto Default_statistics_target;
+            private DataDtoParametersDtoDefault_statistics_targetDto Default_statistics_target;
 
             @Data
             @ToString
-            public static class Default_statistics_targetDto {
+            public static class DataDtoParametersDtoDefault_statistics_targetDto {
                 /***/
                 @JsonProperty("Min")
                 private Integer Min;
@@ -498,11 +498,11 @@ public class DescribeEngineDefaultParametersResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("log_autovacuum_min_duration")
-            private Log_autovacuum_min_durationDto Log_autovacuum_min_duration;
+            private DataDtoParametersDtoLog_autovacuum_min_durationDto Log_autovacuum_min_duration;
 
             @Data
             @ToString
-            public static class Log_autovacuum_min_durationDto {
+            public static class DataDtoParametersDtoLog_autovacuum_min_durationDto {
                 /***/
                 @JsonProperty("Min")
                 private Integer Min;

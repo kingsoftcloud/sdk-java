@@ -67,11 +67,11 @@ public class DescribeScalingConfigurationResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("ScalingGroupIdSet")
-        private List<ScalingGroupIdSetDto> ScalingGroupIdSet;
+        private List<ScalingConfigurationSetDtoScalingGroupIdSetDto> ScalingGroupIdSet;
 
         @Data
         @ToString
-        public static class ScalingGroupIdSetDto {
+        public static class ScalingConfigurationSetDtoScalingGroupIdSetDto {
             /***/
             @JsonProperty("ScalingGroupId")
             private String ScalingGroupId;
@@ -156,11 +156,11 @@ public class DescribeScalingConfigurationResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Project")
-        private ProjectDto Project;
+        private ScalingConfigurationSetDtoProjectDto Project;
 
         @Data
         @ToString
-        public static class ProjectDto {
+        public static class ScalingConfigurationSetDtoProjectDto {
             /***/
             @JsonProperty("ProjectId")
             private Integer ProjectId;
@@ -273,11 +273,11 @@ public class DescribeScalingConfigurationResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("TagSet")
-        private List<TagSetDto> TagSet;
+        private List<ScalingConfigurationSetDtoTagSetDto> TagSet;
 
         @Data
         @ToString
-        public static class TagSetDto {
+        public static class ScalingConfigurationSetDtoTagSetDto {
             /***/
             @JsonProperty("Key")
             private String Key;
@@ -290,11 +290,11 @@ public class DescribeScalingConfigurationResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("EbsTagSet")
-        private List<EbsTagSetDto> EbsTagSet;
+        private List<ScalingConfigurationSetDtoEbsTagSetDto> EbsTagSet;
 
         @Data
         @ToString
-        public static class EbsTagSetDto {
+        public static class ScalingConfigurationSetDtoEbsTagSetDto {
             /***/
             @JsonProperty("Key")
             private String Key;

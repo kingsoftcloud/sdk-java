@@ -27,18 +27,18 @@ public class DescribeAddonListResponse extends BaseResponseModel {
     public static class DataDto {
         /**插件列表*/
         @JsonProperty("AddonList")
-        private List<AddonListDto> AddonList;
+        private List<DataDtoAddonListDto> AddonList;
 
         @Data
         @ToString
-        public static class AddonListDto {
+        public static class DataDtoAddonListDto {
             /**可使用的k8s版本*/
             @JsonProperty("CompatibleK8SVersion")
-            private CompatibleK8SVersionDto CompatibleK8SVersion;
+            private DataDtoAddonListDtoCompatibleK8SVersionDto CompatibleK8SVersion;
 
             @Data
             @ToString
-            public static class CompatibleK8SVersionDto {
+            public static class DataDtoAddonListDtoCompatibleK8SVersionDto {
                 /**最大版本*/
                 @JsonProperty("Max")
                 private String Max;

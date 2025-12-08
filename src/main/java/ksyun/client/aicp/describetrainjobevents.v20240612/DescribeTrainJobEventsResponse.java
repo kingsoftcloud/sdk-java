@@ -39,11 +39,11 @@ public class DescribeTrainJobEventsResponse extends BaseResponseModel {
 
         /**trainjob/pytorch-job-example-worker-0*/
         @JsonProperty("Object")
-        private ObjectDto Object;
+        private DataSetDtoObjectDto Object;
 
         @Data
         @ToString
-        public static class ObjectDto {
+        public static class DataSetDtoObjectDto {
             /***/
             @JsonProperty("Kind")
             private String Kind;
@@ -84,11 +84,11 @@ public class DescribeTrainJobEventsResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Source")
-        private SourceDto Source;
+        private DataSetDtoSourceDto Source;
 
         @Data
         @ToString
-        public static class SourceDto {
+        public static class DataSetDtoSourceDto {
             /**kubelet*/
             @JsonProperty("component")
             private String Component;

@@ -24,11 +24,11 @@ public class DescribeLastLogResponse extends BaseResponseModel {
         /**日志文件列表	
 */
         @JsonProperty("LogFiles")
-        private List<LogFilesDto> LogFiles;
+        private List<DataDtoLogFilesDto> LogFiles;
 
         @Data
         @ToString
-        public static class LogFilesDto {
+        public static class DataDtoLogFilesDto {
             /**下载地址	
 */
             @JsonProperty("LogFileName")

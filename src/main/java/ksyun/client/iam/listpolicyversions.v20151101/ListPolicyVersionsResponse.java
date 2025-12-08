@@ -23,18 +23,18 @@ public class ListPolicyVersionsResponse extends BaseResponseModel {
     public static class ListPolicyVersionsResultDto {
         /***/
         @JsonProperty("Versions")
-        private VersionsDto Versions;
+        private ListPolicyVersionsResultDtoVersionsDto Versions;
 
         @Data
         @ToString
-        public static class VersionsDto {
+        public static class ListPolicyVersionsResultDtoVersionsDto {
             /***/
             @JsonProperty("member")
-            private List<MemberDto> Member;
+            private List<ListPolicyVersionsResultDtoVersionsDtoMemberDto> Member;
 
             @Data
             @ToString
-            public static class MemberDto {
+            public static class ListPolicyVersionsResultDtoVersionsDtoMemberDto {
                 /**是否默认版本*/
                 @JsonProperty("IsDefaultVersion")
                 private String IsDefaultVersion;

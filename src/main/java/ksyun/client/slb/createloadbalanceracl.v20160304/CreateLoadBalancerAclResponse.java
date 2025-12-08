@@ -43,11 +43,11 @@ public class CreateLoadBalancerAclResponse extends BaseResponseModel {
 
         /**ACL规则信息*/
         @JsonProperty("LoadBalancerAclEntrySet")
-        private List<LoadBalancerAclEntrySetDto> LoadBalancerAclEntrySet;
+        private List<LoadBalancerAclDtoLoadBalancerAclEntrySetDto> LoadBalancerAclEntrySet;
 
         @Data
         @ToString
-        public static class LoadBalancerAclEntrySetDto {
+        public static class LoadBalancerAclDtoLoadBalancerAclEntrySetDto {
             /**ACL的ID*/
             @JsonProperty("LoadBalancerAclId")
             private String LoadBalancerAclId;

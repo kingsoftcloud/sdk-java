@@ -39,11 +39,11 @@ public class DescribeInstanceListResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("InstanceList")
-        private List<InstanceListDto> InstanceList;
+        private List<DataDtoInstanceListDto> InstanceList;
 
         @Data
         @ToString
-        public static class InstanceListDto {
+        public static class DataDtoInstanceListDto {
             /***/
             @JsonProperty("InstanceId")
             private String InstanceId;

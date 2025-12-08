@@ -62,11 +62,11 @@ public class DescribeEngineDefaultParametersResponse extends BaseResponseModel {
 
 ```*/
         @JsonProperty("Parameters")
-        private List<ParametersDto> Parameters;
+        private List<DataDtoParametersDto> Parameters;
 
         @Data
         @ToString
-        public static class ParametersDto {
+        public static class DataDtoParametersDto {
             /***/
             @JsonProperty("name")
             private String Name;

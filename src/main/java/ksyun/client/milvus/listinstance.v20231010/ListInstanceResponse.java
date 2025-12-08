@@ -79,11 +79,11 @@ public class ListInstanceResponse extends BaseResponseModel {
 
         /**实例节点地址信息*/
         @JsonProperty("Addresses")
-        private List<AddressesDto> Addresses;
+        private List<DataDtoAddressesDto> Addresses;
 
         @Data
         @ToString
-        public static class AddressesDto {
+        public static class DataDtoAddressesDto {
             /**IP地址*/
             @JsonProperty("Host")
             private String Host;
@@ -102,18 +102,18 @@ eip*/
 
         /***/
         @JsonProperty("Resources")
-        private ResourcesDto Resources;
+        private DataDtoResourcesDto Resources;
 
         @Data
         @ToString
-        public static class ResourcesDto {
+        public static class DataDtoResourcesDto {
             /**资源信息*/
             @JsonProperty("CU")
-            private CUDto CU;
+            private DataDtoResourcesDtoCUDto CU;
 
             @Data
             @ToString
-            public static class CUDto {
+            public static class DataDtoResourcesDtoCUDto {
                 /**配置个数(单位：cu)*/
                 @JsonProperty("CU")
                 private Integer CU;

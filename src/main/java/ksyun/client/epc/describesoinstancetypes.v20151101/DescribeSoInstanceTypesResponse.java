@@ -23,29 +23,29 @@ public class DescribeSoInstanceTypesResponse extends BaseResponseModel {
     public static class InstanceTypesDto {
         /***/
         @JsonProperty("Gpu")
-        private GpuDto Gpu;
+        private InstanceTypesDtoGpuDto Gpu;
 
         @Data
         @ToString
-        public static class GpuDto {
+        public static class InstanceTypesDtoGpuDto {
         }
 
         /***/
         @JsonProperty("Rdma")
-        private RdmaDto Rdma;
+        private InstanceTypesDtoRdmaDto Rdma;
 
         @Data
         @ToString
-        public static class RdmaDto {
+        public static class InstanceTypesDtoRdmaDto {
         }
 
         /***/
         @JsonProperty("Processor")
-        private ProcessorDto Processor;
+        private InstanceTypesDtoProcessorDto Processor;
 
         @Data
         @ToString
-        public static class ProcessorDto {
+        public static class InstanceTypesDtoProcessorDto {
             /**2*/
             @JsonProperty("Cpus")
             private Integer Cpus;
@@ -66,11 +66,11 @@ public class DescribeSoInstanceTypesResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Memory")
-        private MemoryDto Memory;
+        private InstanceTypesDtoMemoryDto Memory;
 
         @Data
         @ToString
-        public static class MemoryDto {
+        public static class InstanceTypesDtoMemoryDto {
             /**8192*/
             @JsonProperty("Size")
             private Integer Size;
@@ -80,9 +80,6 @@ public class DescribeSoInstanceTypesResponse extends BaseResponseModel {
             private Integer EncryptedSize;
 
         }
-
-        /***/
-        @JsonProperty("LocalVolumes")
     }
 
     /**bHpwdXJja2RxemU1eG5sb3NzdGcW1-RCEq*******/

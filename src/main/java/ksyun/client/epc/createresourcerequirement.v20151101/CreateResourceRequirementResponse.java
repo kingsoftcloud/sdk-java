@@ -71,11 +71,11 @@ public class CreateResourceRequirementResponse extends BaseResponseModel {
 
         /**价格信息*/
         @JsonProperty("ResourceRequirementCommunicationContentSet")
-        private List<ResourceRequirementCommunicationContentSetDto> ResourceRequirementCommunicationContentSet;
+        private List<ResourceRequirementDtoResourceRequirementCommunicationContentSetDto> ResourceRequirementCommunicationContentSet;
 
         @Data
         @ToString
-        public static class ResourceRequirementCommunicationContentSetDto {
+        public static class ResourceRequirementDtoResourceRequirementCommunicationContentSetDto {
             /**评论或回复*/
             @JsonProperty("Remarks")
             private String Remarks;

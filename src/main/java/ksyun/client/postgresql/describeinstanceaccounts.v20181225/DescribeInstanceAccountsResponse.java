@@ -23,11 +23,11 @@ public class DescribeInstanceAccountsResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("Accounts")
-        private List<AccountsDto> Accounts;
+        private List<DataDtoAccountsDto> Accounts;
 
         @Data
         @ToString
-        public static class AccountsDto {
+        public static class DataDtoAccountsDto {
             /**账户名称*/
             @JsonProperty("AccountName")
             private String AccountName;

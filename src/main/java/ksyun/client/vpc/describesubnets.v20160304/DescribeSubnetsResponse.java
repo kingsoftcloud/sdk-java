@@ -103,11 +103,11 @@ public class DescribeSubnetsResponse extends BaseResponseModel {
 
         /**子网 Ipv6的网络范围列表*/
         @JsonProperty("Ipv6CidrBlockAssociationSet")
-        private List<Ipv6CidrBlockAssociationSetDto> Ipv6CidrBlockAssociationSet;
+        private List<SubnetSetDtoIpv6CidrBlockAssociationSetDto> Ipv6CidrBlockAssociationSet;
 
         @Data
         @ToString
-        public static class Ipv6CidrBlockAssociationSetDto {
+        public static class SubnetSetDtoIpv6CidrBlockAssociationSetDto {
             /**子网 Ipv6的网络范围*/
             @JsonProperty("Ipv6CidrBlock")
             private String Ipv6CidrBlock;

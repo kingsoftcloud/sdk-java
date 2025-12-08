@@ -64,11 +64,11 @@ Kubernetes版本≥1.24时，有效值：
 
         /**节点加入集群时预置的标签*/
         @KsYunField(name="Label",type=2)
-        private List<LabelDto> LabelList;
+        private List<AdvancedSettingDtoLabelDto> LabelList;
 
         @Data
         @ToString
-        public static class LabelDto {
+        public static class AdvancedSettingDtoLabelDto {
             /**标签键，校验规则：不超过63个字符，只能包含字母、数字及分隔符("-"、"_"、"."、"/")，且必须以字母、数字开头和结尾*/
             @KsYunField(name="Key")
             private String Key;
@@ -80,18 +80,18 @@ Kubernetes版本≥1.24时，有效值：
         }
 
         /**自定义节点上k8s组件的参数*/
-        private ExtraArgDto ExtraArgList;
+        private AdvancedSettingDtoExtraArgDto ExtraArgList;
 
         @Data
         @ToString
-        public static class ExtraArgDto {
+        public static class AdvancedSettingDtoExtraArgDto {
             /**用户自定义kubelet的参数*/
             @KsYunField(name="Kubelet",type=2)
-            private List<KubeletDto> KubeletList;
+            private List<AdvancedSettingDtoExtraArgDtoKubeletDto> KubeletList;
 
             @Data
             @ToString
-            public static class KubeletDto {
+            public static class AdvancedSettingDtoExtraArgDtoKubeletDto {
                 /**用户自定义kubelet的参数，格式k1=v1，如： --feature-gates=EphemeralContainers=true*/
                 @KsYunField(name="CustomArg")
                 private String CustomArg;
@@ -110,11 +110,11 @@ Kubernetes版本≥1.24时，有效值：
 
         /**节点加入集群时预置污点，匹配污点容忍进行调度*/
         @KsYunField(name="Taints",type=2)
-        private List<TaintsDto> TaintsList;
+        private List<AdvancedSettingDtoTaintsDto> TaintsList;
 
         @Data
         @ToString
-        public static class TaintsDto {
+        public static class AdvancedSettingDtoTaintsDto {
             /**污点名称，校验规则：不超过253个字符，只能包含字母、数字及分隔符("-"、"_"、"."、"/")，且必须以字母、数字开头和结尾*/
             @KsYunField(name="Key")
             private String Key;

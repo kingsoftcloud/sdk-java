@@ -83,11 +83,11 @@ public class ModifyDirectConnectGatewayResponse extends BaseResponseModel {
 
         /**连接通道列表*/
         @JsonProperty("DirectConnectInterfaceInfoSet")
-        private List<DirectConnectInterfaceInfoSetDto> DirectConnectInterfaceInfoSet;
+        private List<DirectConnectGatewayDtoDirectConnectInterfaceInfoSetDto> DirectConnectInterfaceInfoSet;
 
         @Data
         @ToString
-        public static class DirectConnectInterfaceInfoSetDto {
+        public static class DirectConnectGatewayDtoDirectConnectInterfaceInfoSetDto {
             /**连接通道的ID*/
             @JsonProperty("DirectConnectInterfaceId")
             private String DirectConnectInterfaceId;

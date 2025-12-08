@@ -43,11 +43,11 @@ public class ListFlinkJobRunsResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("JobRuns")
-        private List<JobRunsDto> JobRuns;
+        private List<DataDtoJobRunsDto> JobRuns;
 
         @Data
         @ToString
-        public static class JobRunsDto {
+        public static class DataDtoJobRunsDto {
             /**作业ID*/
             @JsonProperty("JobRunId")
             private String JobRunId;
@@ -99,11 +99,11 @@ public class ListFlinkJobRunsResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("FlinkDeploymentData")
-            private FlinkDeploymentDataDto FlinkDeploymentData;
+            private DataDtoJobRunsDtoFlinkDeploymentDataDto FlinkDeploymentData;
 
             @Data
             @ToString
-            public static class FlinkDeploymentDataDto {
+            public static class DataDtoJobRunsDtoFlinkDeploymentDataDto {
                 /**作业名称*/
                 @JsonProperty("Name")
                 private String Name;

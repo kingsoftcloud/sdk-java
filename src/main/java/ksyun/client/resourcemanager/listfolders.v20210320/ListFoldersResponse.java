@@ -79,11 +79,11 @@ public class ListFoldersResponse extends BaseResponseModel {
 
         /**子资源夹列表*/
         @JsonProperty("SonFolder")
-        private List<SonFolderDto> SonFolder;
+        private List<SonFolderDtoSonFolderDto> SonFolder;
 
         @Data
         @ToString
-        public static class SonFolderDto {
+        public static class SonFolderDtoSonFolderDto {
         }
 
     }

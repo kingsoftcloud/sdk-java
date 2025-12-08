@@ -27,11 +27,11 @@ public class CreateForwardSourceResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("ForwardSource")
-        private ForwardSourceDto ForwardSource;
+        private ResponseDtoForwardSourceDto ForwardSource;
 
         @Data
         @ToString
-        public static class ForwardSourceDto {
+        public static class ResponseDtoForwardSourceDto {
             /***/
             @JsonProperty("ForwardConfId")
             private String ForwardConfId;

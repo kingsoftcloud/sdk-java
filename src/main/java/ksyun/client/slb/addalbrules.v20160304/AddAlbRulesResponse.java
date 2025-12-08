@@ -43,11 +43,11 @@ public class AddAlbRulesResponse extends BaseResponseModel {
 
         /**HTTP标头*/
         @JsonProperty("HeaderValue")
-        private List<HeaderValueDto> HeaderValue;
+        private List<AlbRuleDtoHeaderValueDto> HeaderValue;
 
         @Data
         @ToString
-        public static class HeaderValueDto {
+        public static class AlbRuleDtoHeaderValueDto {
             /**HTTP标头,查询字符串的键值*/
             @JsonProperty("Key")
             private String Key;
@@ -60,11 +60,11 @@ public class AddAlbRulesResponse extends BaseResponseModel {
 
         /**查询字符串*/
         @JsonProperty("QueryValue")
-        private List<QueryValueDto> QueryValue;
+        private List<AlbRuleDtoQueryValueDto> QueryValue;
 
         @Data
         @ToString
-        public static class QueryValueDto {
+        public static class AlbRuleDtoQueryValueDto {
             /**HTTP标头,查询字符串的键值*/
             @JsonProperty("Key")
             private String Key;
@@ -77,11 +77,11 @@ public class AddAlbRulesResponse extends BaseResponseModel {
 
         /**Cookie转发条件*/
         @JsonProperty("CookieValue")
-        private List<CookieValueDto> CookieValue;
+        private List<AlbRuleDtoCookieValueDto> CookieValue;
 
         @Data
         @ToString
-        public static class CookieValueDto {
+        public static class AlbRuleDtoCookieValueDto {
             /**HTTP标头,查询字符串的键值*/
             @JsonProperty("Key")
             private String Key;

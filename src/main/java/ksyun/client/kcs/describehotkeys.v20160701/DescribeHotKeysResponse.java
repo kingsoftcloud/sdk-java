@@ -43,11 +43,11 @@ public class DescribeHotKeysResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("hotkeys")
-        private List<HotkeysDto> Hotkeys;
+        private List<DataDtoHotkeysDto> Hotkeys;
 
         @Data
         @ToString
-        public static class HotkeysDto {
+        public static class DataDtoHotkeysDto {
             /***/
             @JsonProperty("count")
             private Integer Count;

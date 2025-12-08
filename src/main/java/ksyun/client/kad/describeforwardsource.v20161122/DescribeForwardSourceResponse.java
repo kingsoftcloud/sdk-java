@@ -27,18 +27,18 @@ public class DescribeForwardSourceResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("ForwardSourceSet")
-        private ForwardSourceSetDto ForwardSourceSet;
+        private DescribeForwardSourceResponseDtoForwardSourceSetDto ForwardSourceSet;
 
         @Data
         @ToString
-        public static class ForwardSourceSetDto {
+        public static class DescribeForwardSourceResponseDtoForwardSourceSetDto {
             /***/
             @JsonProperty("item")
-            private ItemDto Item;
+            private DescribeForwardSourceResponseDtoForwardSourceSetDtoItemDto Item;
 
             @Data
             @ToString
-            public static class ItemDto {
+            public static class DescribeForwardSourceResponseDtoForwardSourceSetDtoItemDto {
                 /***/
                 @JsonProperty("ForwardConfId")
                 private String ForwardConfId;
@@ -65,18 +65,18 @@ public class DescribeForwardSourceResponse extends BaseResponseModel {
 
                 /***/
                 @JsonProperty("HealthMonitorStatusSet")
-                private HealthMonitorStatusSetDto HealthMonitorStatusSet;
+                private DescribeForwardSourceResponseDtoForwardSourceSetDtoItemDtoHealthMonitorStatusSetDto HealthMonitorStatusSet;
 
                 @Data
                 @ToString
-                public static class HealthMonitorStatusSetDto {
+                public static class DescribeForwardSourceResponseDtoForwardSourceSetDtoItemDtoHealthMonitorStatusSetDto {
                     /***/
                     @JsonProperty("item")
-                    private ItemDto Item;
+                    private DescribeForwardSourceResponseDtoForwardSourceSetDtoItemDtoHealthMonitorStatusSetDtoItemDto Item;
 
                     @Data
                     @ToString
-                    public static class ItemDto {
+                    public static class DescribeForwardSourceResponseDtoForwardSourceSetDtoItemDtoHealthMonitorStatusSetDtoItemDto {
                         /***/
                         @JsonProperty("Ip")
                         private String Ip;

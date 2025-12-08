@@ -23,11 +23,11 @@ public class DescribeDBBackupsResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("DBBackup")
-        private List<DBBackupDto> DBBackup;
+        private List<DataDtoDBBackupDto> DBBackup;
 
         @Data
         @ToString
-        public static class DBBackupDto {
+        public static class DataDtoDBBackupDto {
             /**所属实例id*/
             @JsonProperty("DBInstanceIdentifier")
             private String DBInstanceIdentifier;

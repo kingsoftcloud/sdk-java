@@ -59,11 +59,11 @@ public class DescribeInstancesResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("InstanceConfigure")
-        private InstanceConfigureDto InstanceConfigure;
+        private InstancesSetDtoInstanceConfigureDto InstanceConfigure;
 
         @Data
         @ToString
-        public static class InstanceConfigureDto {
+        public static class InstancesSetDtoInstanceConfigureDto {
             /**vCPU数量*/
             @JsonProperty("VCPU")
             private Integer VCPU;
@@ -113,11 +113,11 @@ public class DescribeInstancesResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("InstanceState")
-        private InstanceStateDto InstanceState;
+        private InstancesSetDtoInstanceStateDto InstanceState;
 
         @Data
         @ToString
-        public static class InstanceStateDto {
+        public static class InstancesSetDtoInstanceStateDto {
             /**实例状态*/
             @JsonProperty("Name")
             private String Name;
@@ -150,18 +150,18 @@ public class DescribeInstancesResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("PreMigrateConfig")
-        private PreMigrateConfigDto PreMigrateConfig;
+        private InstancesSetDtoPreMigrateConfigDto PreMigrateConfig;
 
         @Data
         @ToString
-        public static class PreMigrateConfigDto {
+        public static class InstancesSetDtoPreMigrateConfigDto {
             /***/
             @JsonProperty("VmConfig")
-            private VmConfigDto VmConfig;
+            private InstancesSetDtoPreMigrateConfigDtoVmConfigDto VmConfig;
 
             @Data
             @ToString
-            public static class VmConfigDto {
+            public static class InstancesSetDtoPreMigrateConfigDtoVmConfigDto {
                 /**预迁移目标实例类型*/
                 @JsonProperty("InstanceType")
                 private String InstanceType;
@@ -198,11 +198,11 @@ public class DescribeInstancesResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("VolumeConfig")
-            private VolumeConfigDto VolumeConfig;
+            private InstancesSetDtoPreMigrateConfigDtoVolumeConfigDto VolumeConfig;
 
             @Data
             @ToString
-            public static class VolumeConfigDto {
+            public static class InstancesSetDtoPreMigrateConfigDtoVolumeConfigDto {
                 /**盘类型*/
                 @JsonProperty("VolumeType")
                 private String VolumeType;
@@ -225,11 +225,11 @@ public class DescribeInstancesResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Monitoring")
-        private MonitoringDto Monitoring;
+        private InstancesSetDtoMonitoringDto Monitoring;
 
         @Data
         @ToString
-        public static class MonitoringDto {
+        public static class InstancesSetDtoMonitoringDto {
             /**云监控状态*/
             @JsonProperty("State")
             private String State;
@@ -238,11 +238,11 @@ public class DescribeInstancesResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("NetworkInterfaceSet")
-        private List<NetworkInterfaceSetDto> NetworkInterfaceSet;
+        private List<InstancesSetDtoNetworkInterfaceSetDto> NetworkInterfaceSet;
 
         @Data
         @ToString
-        public static class NetworkInterfaceSetDto {
+        public static class InstancesSetDtoNetworkInterfaceSetDto {
             /**网卡ID*/
             @JsonProperty("NetworkInterfaceId")
             private String NetworkInterfaceId;
@@ -269,11 +269,11 @@ public class DescribeInstancesResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("GroupSet")
-            private List<GroupSetDto> GroupSet;
+            private List<InstancesSetDtoNetworkInterfaceSetDtoGroupSetDto> GroupSet;
 
             @Data
             @ToString
-            public static class GroupSetDto {
+            public static class InstancesSetDtoNetworkInterfaceSetDtoGroupSetDto {
                 /**安全组ID用于多安全组*/
                 @JsonProperty("GroupId")
                 private String GroupId;
@@ -282,11 +282,11 @@ public class DescribeInstancesResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("SecurityGroupSet")
-            private List<SecurityGroupSetDto> SecurityGroupSet;
+            private List<InstancesSetDtoNetworkInterfaceSetDtoSecurityGroupSetDto> SecurityGroupSet;
 
             @Data
             @ToString
-            public static class SecurityGroupSetDto {
+            public static class InstancesSetDtoNetworkInterfaceSetDtoSecurityGroupSetDto {
                 /**安全组ID*/
                 @JsonProperty("SecurityGroupId")
                 private String SecurityGroupId;
@@ -321,11 +321,11 @@ public class DescribeInstancesResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("DataGuardSet")
-        private List<DataGuardSetDto> DataGuardSet;
+        private List<InstancesSetDtoDataGuardSetDto> DataGuardSet;
 
         @Data
         @ToString
-        public static class DataGuardSetDto {
+        public static class InstancesSetDtoDataGuardSetDto {
             /**容灾组ID*/
             @JsonProperty("DataGuardId")
             private String DataGuardId;
@@ -363,11 +363,11 @@ public class DescribeInstancesResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Metadata")
-        private List<MetadataDto> Metadata;
+        private List<InstancesSetDtoMetadataDto> Metadata;
 
         @Data
         @ToString
-        public static class MetadataDto {
+        public static class InstancesSetDtoMetadataDto {
             /***/
             @JsonProperty("Id")
             private String Id;
@@ -406,11 +406,11 @@ public class DescribeInstancesResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("SystemDisk")
-        private SystemDiskDto SystemDisk;
+        private InstancesSetDtoSystemDiskDto SystemDisk;
 
         @Data
         @ToString
-        public static class SystemDiskDto {
+        public static class InstancesSetDtoSystemDiskDto {
             /**系统盘类型*/
             @JsonProperty("DiskType")
             private String DiskType;
@@ -435,11 +435,11 @@ public class DescribeInstancesResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("DataDisks")
-        private List<DataDisksDto> DataDisks;
+        private List<InstancesSetDtoDataDisksDto> DataDisks;
 
         @Data
         @ToString
-        public static class DataDisksDto {
+        public static class InstancesSetDtoDataDisksDto {
             /**数据盘ID*/
             @JsonProperty("DiskId")
             private String DiskId;

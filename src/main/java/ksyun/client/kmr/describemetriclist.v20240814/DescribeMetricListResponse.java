@@ -27,11 +27,11 @@ public class DescribeMetricListResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("metrics")
-        private List<MetricsDto> Metrics;
+        private List<DataDtoMetricsDto> Metrics;
 
         @Data
         @ToString
-        public static class MetricsDto {
+        public static class DataDtoMetricsDto {
             /**指标名称*/
             @JsonProperty("MetricName")
             private String MetricName;

@@ -24,11 +24,11 @@ public class DescribeStatisticBackupDetailsResponse extends BaseResponseModel {
     public static class DataDto {
         /**备份列表数据域*/
         @JsonProperty("Backups")
-        private List<BackupsDto> Backups;
+        private List<DataDtoBackupsDto> Backups;
 
         @Data
         @ToString
-        public static class BackupsDto {
+        public static class DataDtoBackupsDto {
             /**备份名称*/
             @JsonProperty("Name")
             private String Name;
@@ -81,11 +81,11 @@ ks3下载路径，注意文件较大容易超时！*/
 
         /**Binlog数据域*/
         @JsonProperty("BinlogTasks")
-        private List<BinlogTasksDto> BinlogTasks;
+        private List<DataDtoBinlogTasksDto> BinlogTasks;
 
         @Data
         @ToString
-        public static class BinlogTasksDto {
+        public static class DataDtoBinlogTasksDto {
             /**名称*/
             @JsonProperty("BinlogName")
             private String BinlogName;

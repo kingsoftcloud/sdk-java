@@ -47,11 +47,11 @@ public class DescribeInstanceResponse extends BaseResponseModel {
 
         /**模块配置*/
         @JsonProperty("ModuleConfigs")
-        private List<ModuleConfigsDto> ModuleConfigs;
+        private List<DataDtoModuleConfigsDto> ModuleConfigs;
 
         @Data
         @ToString
-        public static class ModuleConfigsDto {
+        public static class DataDtoModuleConfigsDto {
             /**模块名称*/
             @JsonProperty("moduleType")
             private String ModuleType;
@@ -177,11 +177,11 @@ public class DescribeInstanceResponse extends BaseResponseModel {
 
         /**备份配置信息*/
         @JsonProperty("BackupConfig")
-        private BackupConfigDto BackupConfig;
+        private DataDtoBackupConfigDto BackupConfig;
 
         @Data
         @ToString
-        public static class BackupConfigDto {
+        public static class DataDtoBackupConfigDto {
             /**最大备份记录数*/
             @JsonProperty("maxBackups")
             private Integer MaxBackups;

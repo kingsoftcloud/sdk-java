@@ -31,11 +31,11 @@ public class AnalyzeBigKeysResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("STRING")
-        private STRINGDto STRING;
+        private DataDtoSTRINGDto STRING;
 
         @Data
         @ToString
-        public static class STRINGDto {
+        public static class DataDtoSTRINGDto {
             /***/
             @JsonProperty("keyType")
             private String KeyType;
@@ -56,11 +56,11 @@ public class AnalyzeBigKeysResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("LIST")
-        private LISTDto LIST;
+        private DataDtoLISTDto LIST;
 
         @Data
         @ToString
-        public static class LISTDto {
+        public static class DataDtoLISTDto {
             /***/
             @JsonProperty("keyType")
             private String KeyType;
@@ -81,11 +81,11 @@ public class AnalyzeBigKeysResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("SET")
-        private SETDto SET;
+        private DataDtoSETDto SET;
 
         @Data
         @ToString
-        public static class SETDto {
+        public static class DataDtoSETDto {
             /***/
             @JsonProperty("keyType")
             private String KeyType;
@@ -106,11 +106,11 @@ public class AnalyzeBigKeysResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("HASH")
-        private HASHDto HASH;
+        private DataDtoHASHDto HASH;
 
         @Data
         @ToString
-        public static class HASHDto {
+        public static class DataDtoHASHDto {
             /***/
             @JsonProperty("keyType")
             private String KeyType;
@@ -131,11 +131,11 @@ public class AnalyzeBigKeysResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("SORT")
-        private SORTDto SORT;
+        private DataDtoSORTDto SORT;
 
         @Data
         @ToString
-        public static class SORTDto {
+        public static class DataDtoSORTDto {
             /***/
             @JsonProperty("keyType")
             private String KeyType;

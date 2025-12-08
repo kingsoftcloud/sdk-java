@@ -55,11 +55,11 @@ public class ModifyRuleGroupRequest{
 
         /**HTTP标头*/
         @KsYunField(name="HeaderValue",type=2)
-        private List<HeaderValueDto> HeaderValueList;
+        private List<RuleSetDtoHeaderValueDto> HeaderValueList;
 
         @Data
         @ToString
-        public static class HeaderValueDto {
+        public static class RuleSetDtoHeaderValueDto {
             /**HTTP标头,查询字符串的键值*/
             @KsYunField(name="Key")
             private String Key;
@@ -72,11 +72,11 @@ public class ModifyRuleGroupRequest{
 
         /**查询字符串*/
         @KsYunField(name="QueryValue",type=2)
-        private List<QueryValueDto> QueryValueList;
+        private List<RuleSetDtoQueryValueDto> QueryValueList;
 
         @Data
         @ToString
-        public static class QueryValueDto {
+        public static class RuleSetDtoQueryValueDto {
             /**HTTP标头,查询字符串的键值*/
             @KsYunField(name="Key")
             private String Key;
@@ -89,11 +89,11 @@ public class ModifyRuleGroupRequest{
 
         /**Cookie转发条件*/
         @KsYunField(name="CookieValue",type=2)
-        private List<CookieValueDto> CookieValueList;
+        private List<RuleSetDtoCookieValueDto> CookieValueList;
 
         @Data
         @ToString
-        public static class CookieValueDto {
+        public static class RuleSetDtoCookieValueDto {
             /**HTTP标头,查询字符串的键值*/
             @KsYunField(name="Key")
             private String Key;

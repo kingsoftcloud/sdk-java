@@ -55,11 +55,11 @@ public class DescribeSoInstancesResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("NetworkInterfaces")
-        private List<NetworkInterfacesDto> NetworkInterfaces;
+        private List<InstancesDtoNetworkInterfacesDto> NetworkInterfaces;
 
         @Data
         @ToString
-        public static class NetworkInterfacesDto {
+        public static class InstancesDtoNetworkInterfacesDto {
             /**8981d45e-b3dc-44c6-b02f-2d1969551316*/
             @JsonProperty("VpcId")
             private String VpcId;
@@ -79,17 +79,11 @@ public class DescribeSoInstancesResponse extends BaseResponseModel {
             /**00:16:3e:42:**:***/
             @JsonProperty("MacAddress")
             private String MacAddress;
-
-            /***/
-            @JsonProperty("Ipv6Addresses")
             /**8981d45e-b3dc-44c6-b02f-2d1969551316*/
             @JsonProperty("SecurityGroupIds")
             private List<String> SecurityGroupIds;
 
         }
-
-        /***/
-        @JsonProperty("RdmaIpAddresses")
         /*****/
         @JsonProperty("KeyPairName")
         private String KeyPairName;
@@ -144,11 +138,11 @@ public class DescribeSoInstancesResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("LocalVolumes")
-        private List<LocalVolumesDto> LocalVolumes;
+        private List<InstancesDtoLocalVolumesDto> LocalVolumes;
 
         @Data
         @ToString
-        public static class LocalVolumesDto {
+        public static class InstancesDtoLocalVolumesDto {
             /**LOCAL_HDD*/
             @JsonProperty("VolumeType")
             private String VolumeType;
@@ -165,11 +159,11 @@ public class DescribeSoInstancesResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("CpuOptions")
-        private CpuOptionsDto CpuOptions;
+        private InstancesDtoCpuOptionsDto CpuOptions;
 
         @Data
         @ToString
-        public static class CpuOptionsDto {
+        public static class InstancesDtoCpuOptionsDto {
             /**2*/
             @JsonProperty("CoreCount")
             private Integer CoreCount;
@@ -186,11 +180,11 @@ public class DescribeSoInstancesResponse extends BaseResponseModel {
 
         /**系统盘信息*/
         @JsonProperty("SystemDisk")
-        private SystemDiskDto SystemDisk;
+        private InstancesDtoSystemDiskDto SystemDisk;
 
         @Data
         @ToString
-        public static class SystemDiskDto {
+        public static class InstancesDtoSystemDiskDto {
             /**系统盘类型*/
             @JsonProperty("Type")
             private String Type;
@@ -212,11 +206,11 @@ public class DescribeSoInstancesResponse extends BaseResponseModel {
 
         /**数据盘信息*/
         @JsonProperty("DataDisk")
-        private DataDiskDto DataDisk;
+        private InstancesDtoDataDiskDto DataDisk;
 
         @Data
         @ToString
-        public static class DataDiskDto {
+        public static class InstancesDtoDataDiskDto {
             /**数据盘类型*/
             @JsonProperty("Type")
             private String Type;

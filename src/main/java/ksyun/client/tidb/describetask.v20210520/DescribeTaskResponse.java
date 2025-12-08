@@ -35,11 +35,11 @@ public class DescribeTaskResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("tiCDCTaskBaseInfo")
-        private TiCDCTaskBaseInfoDto TiCDCTaskBaseInfo;
+        private DataDtoTiCDCTaskBaseInfoDto TiCDCTaskBaseInfo;
 
         @Data
         @ToString
-        public static class TiCDCTaskBaseInfoDto {
+        public static class DataDtoTiCDCTaskBaseInfoDto {
             /**实例ID*/
             @JsonProperty("InstanceId")
             private String InstanceId;
@@ -84,11 +84,11 @@ public class DescribeTaskResponse extends BaseResponseModel {
 
         /**任务具体细节*/
         @JsonProperty("tiCDCTaskTargetInfo")
-        private TiCDCTaskTargetInfoDto TiCDCTaskTargetInfo;
+        private DataDtoTiCDCTaskTargetInfoDto TiCDCTaskTargetInfo;
 
         @Data
         @ToString
-        public static class TiCDCTaskTargetInfoDto {
+        public static class DataDtoTiCDCTaskTargetInfoDto {
             /**目标实例ID*/
             @JsonProperty("TargetId")
             private String TargetId;

@@ -31,11 +31,11 @@ public class CreateFunctionResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Name")
-        private NameDto Name;
+        private DataDtoNameDto Name;
 
         @Data
         @ToString
-        public static class NameDto {
+        public static class DataDtoNameDto {
         }
 
     }

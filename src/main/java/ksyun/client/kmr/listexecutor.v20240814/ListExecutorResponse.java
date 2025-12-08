@@ -39,11 +39,11 @@ public class ListExecutorResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Data")
-        private DataDto Data;
+        private DataDtoDataDto Data;
 
         @Data
         @ToString
-        public static class DataDto {
+        public static class DataDtoDataDto {
             /**本次请求返回记录数*/
             @JsonProperty("Count")
             private Integer Count;
@@ -54,11 +54,11 @@ public class ListExecutorResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("List")
-            private List<ListDto> List;
+            private List<DataDtoDataDtoListDto> List;
 
             @Data
             @ToString
-            public static class ListDto {
+            public static class DataDtoDataDtoListDto {
                 /**Executor ID*/
                 @JsonProperty("Id")
                 private String Id;

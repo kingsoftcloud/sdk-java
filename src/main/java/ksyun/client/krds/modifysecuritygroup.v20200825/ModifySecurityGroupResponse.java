@@ -23,11 +23,11 @@ public class ModifySecurityGroupResponse extends BaseResponseModel {
     public static class DataDto {
         /**安全组信息*/
         @JsonProperty("SecurityGroups")
-        private List<SecurityGroupsDto> SecurityGroups;
+        private List<DataDtoSecurityGroupsDto> SecurityGroups;
 
         @Data
         @ToString
-        public static class SecurityGroupsDto {
+        public static class DataDtoSecurityGroupsDto {
             /**安全组id*/
             @JsonProperty("SecurityGroupId")
             private String SecurityGroupId;
@@ -50,11 +50,11 @@ public class ModifySecurityGroupResponse extends BaseResponseModel {
 
             /**绑定该安全组的实例信息，实例支持多安全组*/
             @JsonProperty("Instances")
-            private List<InstancesDto> Instances;
+            private List<DataDtoSecurityGroupsDtoInstancesDto> Instances;
 
             @Data
             @ToString
-            public static class InstancesDto {
+            public static class DataDtoSecurityGroupsDtoInstancesDto {
                 /***/
                 @JsonProperty("DBInstanceIdentifier")
                 private String DBInstanceIdentifier;
@@ -79,11 +79,11 @@ public class ModifySecurityGroupResponse extends BaseResponseModel {
 
             /**安全组规则列表*/
             @JsonProperty("SecurityGroupRules")
-            private List<SecurityGroupRulesDto> SecurityGroupRules;
+            private List<DataDtoSecurityGroupsDtoSecurityGroupRulesDto> SecurityGroupRules;
 
             @Data
             @ToString
-            public static class SecurityGroupRulesDto {
+            public static class DataDtoSecurityGroupsDtoSecurityGroupRulesDto {
                 /***/
                 @JsonProperty("SecurityGroupRuleId")
                 private String SecurityGroupRuleId;

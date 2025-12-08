@@ -42,18 +42,18 @@ public class QueryMetricsResponse extends BaseResponseModel {
 
         /**实际的查询结果，为一个数组，每个元素表示一个时间序列的数据*/
         @JsonProperty("result")
-        private List<ResultDto> Result;
+        private List<DataDtoResultDto> Result;
 
         @Data
         @ToString
-        public static class ResultDto {
+        public static class DataDtoResultDto {
             /**指标的元数据，包含指标名称和标签*/
             @JsonProperty("metric")
-            private MetricDto Metric;
+            private DataDtoResultDtoMetricDto Metric;
 
             @Data
             @ToString
-            public static class MetricDto {
+            public static class DataDtoResultDtoMetricDto {
                 /***/
                 @JsonProperty("__name__")
                 private String __name__;

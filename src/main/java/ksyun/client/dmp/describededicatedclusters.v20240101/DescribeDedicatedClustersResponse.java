@@ -31,11 +31,11 @@ public class DescribeDedicatedClustersResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("DedicatedClusters")
-        private List<DedicatedClustersDto> DedicatedClusters;
+        private List<DataDtoDedicatedClustersDto> DedicatedClusters;
 
         @Data
         @ToString
-        public static class DedicatedClustersDto {
+        public static class DataDtoDedicatedClustersDto {
             /***/
             @JsonProperty("DedicatedClusterId")
             private String DedicatedClusterId;
@@ -70,11 +70,11 @@ public class DescribeDedicatedClustersResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("Ratio")
-            private RatioDto Ratio;
+            private DataDtoDedicatedClustersDtoRatioDto Ratio;
 
             @Data
             @ToString
-            public static class RatioDto {
+            public static class DataDtoDedicatedClustersDtoRatioDto {
                 /***/
                 @JsonProperty("MemRatio")
                 private Integer MemRatio;

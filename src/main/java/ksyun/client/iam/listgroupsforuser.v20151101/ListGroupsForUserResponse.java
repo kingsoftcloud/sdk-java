@@ -23,18 +23,18 @@ public class ListGroupsForUserResponse extends BaseResponseModel {
     public static class ListGroupsForUserResultDto {
         /***/
         @JsonProperty("Groups")
-        private GroupsDto Groups;
+        private ListGroupsForUserResultDtoGroupsDto Groups;
 
         @Data
         @ToString
-        public static class GroupsDto {
+        public static class ListGroupsForUserResultDtoGroupsDto {
             /***/
             @JsonProperty("member")
-            private List<MemberDto> Member;
+            private List<ListGroupsForUserResultDtoGroupsDtoMemberDto> Member;
 
             @Data
             @ToString
-            public static class MemberDto {
+            public static class ListGroupsForUserResultDtoGroupsDtoMemberDto {
                 /***/
                 @JsonProperty("Id")
                 private Integer Id;

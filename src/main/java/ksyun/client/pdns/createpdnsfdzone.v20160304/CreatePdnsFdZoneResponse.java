@@ -47,11 +47,11 @@ public class CreatePdnsFdZoneResponse extends BaseResponseModel {
 
         /**所绑定的VPC的信息*/
         @JsonProperty("BindVpcSet")
-        private List<BindVpcSetDto> BindVpcSet;
+        private List<FdZoneDtoBindVpcSetDto> BindVpcSet;
 
         @Data
         @ToString
-        public static class BindVpcSetDto {
+        public static class FdZoneDtoBindVpcSetDto {
             /**绑定ID*/
             @JsonProperty("BindVpcId")
             private String BindVpcId;

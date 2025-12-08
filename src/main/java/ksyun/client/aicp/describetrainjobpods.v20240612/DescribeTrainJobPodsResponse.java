@@ -43,11 +43,11 @@ public class DescribeTrainJobPodsResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Status")
-        private StatusDto Status;
+        private TrainJobPodSetDtoStatusDto Status;
 
         @Data
         @ToString
-        public static class StatusDto {
+        public static class TrainJobPodSetDtoStatusDto {
             /**状态*/
             @JsonProperty("State")
             private String State;

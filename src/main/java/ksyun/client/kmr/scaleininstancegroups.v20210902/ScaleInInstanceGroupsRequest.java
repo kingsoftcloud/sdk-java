@@ -31,11 +31,11 @@ public class ScaleInInstanceGroupsRequest{
 
         /**要缩容的实例列表，不支持缩容中间实例，如果要缩容中间实例需提工单处理*/
         @KsYunField(name="instances",type=2)
-        private List<InstancesDto> InstancesList;
+        private List<InstanceGroupsDtoInstancesDto> InstancesList;
 
         @Data
         @ToString
-        public static class InstancesDto {
+        public static class InstanceGroupsDtoInstancesDto {
             /**要缩容的实例 id，实例 id 可通过DescribeCluster 接口获得*/
             @KsYunField(name="InstanceId")
             private String InstanceId;

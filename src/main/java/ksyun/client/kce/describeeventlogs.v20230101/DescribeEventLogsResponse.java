@@ -39,18 +39,18 @@ public class DescribeEventLogsResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("EventLogs")
-        private EventLogsDto EventLogs;
+        private DataDtoEventLogsDto EventLogs;
 
         @Data
         @ToString
-        public static class EventLogsDto {
+        public static class DataDtoEventLogsDto {
             /***/
             @JsonProperty("RuntimeInfo")
-            private RuntimeInfoDto RuntimeInfo;
+            private DataDtoEventLogsDtoRuntimeInfoDto RuntimeInfo;
 
             @Data
             @ToString
-            public static class RuntimeInfoDto {
+            public static class DataDtoEventLogsDtoRuntimeInfoDto {
                 /***/
                 @JsonProperty("RuntimeName")
                 private String RuntimeName;
@@ -67,11 +67,11 @@ public class DescribeEventLogsResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("UserInfo")
-            private UserInfoDto UserInfo;
+            private DataDtoEventLogsDtoUserInfoDto UserInfo;
 
             @Data
             @ToString
-            public static class UserInfoDto {
+            public static class DataDtoEventLogsDtoUserInfoDto {
                 /***/
                 @JsonProperty("AccountId")
                 private String AccountId;
@@ -84,11 +84,11 @@ public class DescribeEventLogsResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("EventInfo")
-            private EventInfoDto EventInfo;
+            private DataDtoEventLogsDtoEventInfoDto EventInfo;
 
             @Data
             @ToString
-            public static class EventInfoDto {
+            public static class DataDtoEventLogsDtoEventInfoDto {
                 /***/
                 @JsonProperty("EventId")
                 private String EventId;

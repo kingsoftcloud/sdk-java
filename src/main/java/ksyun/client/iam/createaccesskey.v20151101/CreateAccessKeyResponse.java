@@ -23,11 +23,11 @@ public class CreateAccessKeyResponse extends BaseResponseModel {
     public static class CreateAccessKeyResultDto {
         /***/
         @JsonProperty("AccessKey")
-        private AccessKeyDto AccessKey;
+        private CreateAccessKeyResultDtoAccessKeyDto AccessKey;
 
         @Data
         @ToString
-        public static class AccessKeyDto {
+        public static class CreateAccessKeyResultDtoAccessKeyDto {
             /***/
             @JsonProperty("UserName")
             private String UserName;

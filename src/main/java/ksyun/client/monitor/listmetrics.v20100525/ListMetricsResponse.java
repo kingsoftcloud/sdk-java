@@ -23,18 +23,18 @@ public class ListMetricsResponse extends BaseResponseModel {
     public static class ListMetricsResultDto {
         /**监控项列表。*/
         @JsonProperty("metrics")
-        private MetricsDto Metrics;
+        private ListMetricsResultDtoMetricsDto Metrics;
 
         @Data
         @ToString
-        public static class MetricsDto {
+        public static class ListMetricsResultDtoMetricsDto {
             /***/
             @JsonProperty("member")
-            private List<MemberDto> Member;
+            private List<ListMetricsResultDtoMetricsDtoMemberDto> Member;
 
             @Data
             @ToString
-            public static class MemberDto {
+            public static class ListMetricsResultDtoMetricsDtoMemberDto {
                 /**实例ID。*/
                 @JsonProperty("instanceId")
                 private String InstanceId;

@@ -35,11 +35,11 @@ public class ClusterHealthStatisticResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("HealthCheckHistory")
-        private List<HealthCheckHistoryDto> HealthCheckHistory;
+        private List<DataDtoHealthCheckHistoryDto> HealthCheckHistory;
 
         @Data
         @ToString
-        public static class HealthCheckHistoryDto {
+        public static class DataDtoHealthCheckHistoryDto {
             /**诊断时间*/
             @JsonProperty("StartDate")
             private String StartDate;
@@ -66,11 +66,11 @@ public class ClusterHealthStatisticResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("Status")
-            private List<StatusDto> Status;
+            private List<DataDtoHealthCheckHistoryDtoStatusDto> Status;
 
             @Data
             @ToString
-            public static class StatusDto {
+            public static class DataDtoHealthCheckHistoryDtoStatusDto {
                 /**诊断项*/
                 @JsonProperty("Item")
                 private String Item;

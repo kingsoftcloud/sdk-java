@@ -23,11 +23,11 @@ public class DescribeConnConfigResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("ConnConfig")
-        private ConnConfigDto ConnConfig;
+        private DataDtoConnConfigDto ConnConfig;
 
         @Data
         @ToString
-        public static class ConnConfigDto {
+        public static class DataDtoConnConfigDto {
             /**迁移配置ID*/
             @JsonProperty("Id")
             private String Id;
@@ -84,11 +84,11 @@ public class DescribeConnConfigResponse extends BaseResponseModel {
 
 注意：若是迁移类型不支持结构化迁移的话，是没法指定具体的库表信息的*/
             @JsonProperty("DbSchema")
-            private DbSchemaDto DbSchema;
+            private DataDtoConnConfigDtoDbSchemaDto DbSchema;
 
             @Data
             @ToString
-            public static class DbSchemaDto {
+            public static class DataDtoConnConfigDtoDbSchemaDto {
                 /***/
                 @JsonProperty("is_full")
                 private Boolean Is_full;

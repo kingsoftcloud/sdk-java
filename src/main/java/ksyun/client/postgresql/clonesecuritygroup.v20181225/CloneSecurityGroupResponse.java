@@ -23,11 +23,11 @@ public class CloneSecurityGroupResponse extends BaseResponseModel {
     public static class DataDto {
         /***/
         @JsonProperty("SecurityGroups")
-        private List<SecurityGroupsDto> SecurityGroups;
+        private List<DataDtoSecurityGroupsDto> SecurityGroups;
 
         @Data
         @ToString
-        public static class SecurityGroupsDto {
+        public static class DataDtoSecurityGroupsDto {
             /**安全组ID*/
             @JsonProperty("SecurityGroupId")
             private String SecurityGroupId;
@@ -50,11 +50,11 @@ public class CloneSecurityGroupResponse extends BaseResponseModel {
 
             /**安全组规则列表*/
             @JsonProperty("SecurityGroupRules")
-            private List<SecurityGroupRulesDto> SecurityGroupRules;
+            private List<DataDtoSecurityGroupsDtoSecurityGroupRulesDto> SecurityGroupRules;
 
             @Data
             @ToString
-            public static class SecurityGroupRulesDto {
+            public static class DataDtoSecurityGroupsDtoSecurityGroupRulesDto {
                 /**安全组规则ID*/
                 @JsonProperty("SecurityGroupRuleId")
                 private String SecurityGroupRuleId;

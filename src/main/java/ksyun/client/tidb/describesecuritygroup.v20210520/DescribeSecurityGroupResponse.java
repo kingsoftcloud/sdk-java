@@ -67,11 +67,11 @@ public class DescribeSecurityGroupResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Rules")
-        private List<RulesDto> Rules;
+        private List<DataDtoRulesDto> Rules;
 
         @Data
         @ToString
-        public static class RulesDto {
+        public static class DataDtoRulesDto {
             /**ip类型*/
             @JsonProperty("ipVersion")
             private String IpVersion;
@@ -112,11 +112,11 @@ public class DescribeSecurityGroupResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Instances")
-        private List<InstancesDto> Instances;
+        private List<DataDtoInstancesDto> Instances;
 
         @Data
         @ToString
-        public static class InstancesDto {
+        public static class DataDtoInstancesDto {
             /**实例ID*/
             @JsonProperty("InstanceId")
             private String InstanceId;
