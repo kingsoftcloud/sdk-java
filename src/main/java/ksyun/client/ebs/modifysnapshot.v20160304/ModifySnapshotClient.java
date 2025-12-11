@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
 * @Classname ModifySnapshotClient
-* @Description ModifySnapshot
+ * @Description 修改快照名称描述
 */
 @Slf4j
 public class ModifySnapshotClient extends BaseClient {

@@ -36,11 +36,11 @@ public class CreateModelRequest{
     /**数据盘（云盘）的类型，数据盘n的类型，n 的取值范围为 [1, 8]。只支持I2、I2联网增强、N1、N2、N3、S3和I3。DataDisk.n.Type与DataDisk.n.Size必须都填写才有效。
 SSD3.0，EHDD*/
     @KsYunField(name="DataDisk",type=2)
-    private List<DataDiskDto1> DataDiskList;
+    private List<DataDiskDto> DataDiskList;
 
     @Data
     @ToString
-    public static class DataDiskDto1 {
+    public static class DataDiskDto {
         /**数据盘（云盘）的类型，数据盘n的类型，n 的取值范围为 [1, 8]。只支持I2、I2联网增强、N1、N2、N3、S3和I3。DataDisk.n.Type与DataDisk.n.Size必须都填写才有效。
 SSD3.0，EHDD*/
         @KsYunField(name="Type")
@@ -150,11 +150,11 @@ ModelTest001*/
 
     /***/
     @KsYunField(name="SystemDisk")
-    private SystemDiskDto2 SystemDisk;
+    private SystemDiskDto SystemDisk;
 
     @Data
     @ToString
-    public static class SystemDiskDto2 {
+    public static class SystemDiskDto {
         /**不能给默认值，不传默认按价格体系配置systemDisk属性中第一个创建*/
         @KsYunField(name="DiskType")
         private String DiskType;
@@ -179,11 +179,11 @@ ModelTest001*/
 
     /***/
     @KsYunField(name="NetworkInterface",type=2)
-    private List<NetworkInterfaceDto3> NetworkInterfaceList;
+    private List<NetworkInterfaceDto> NetworkInterfaceList;
 
     @Data
     @ToString
-    public static class NetworkInterfaceDto3 {
+    public static class NetworkInterfaceDto {
         /**辅网卡的子网id不创建辅网卡时非必填，创建辅网卡时必填*/
         @KsYunField(name="SubnetId")
         private String SubnetId;
@@ -200,11 +200,11 @@ ModelTest001*/
 
     /***/
     @KsYunField(name="Tag",type=2)
-    private List<TagDto4> TagList;
+    private List<TagDto> TagList;
 
     @Data
     @ToString
-    public static class TagDto4 {
+    public static class TagDto {
         /***/
         @KsYunField(name="Key")
         private String Key;

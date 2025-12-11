@@ -20,11 +20,11 @@ public class UnbindZoneVpcRequest{
 
     /**筛选Filter*/
     @KsYunField(name="Vpcs",type=2)
-    private List<VpcsDto1> VpcsList;
+    private List<VpcsDto> VpcsList;
 
     @Data
     @ToString
-    public static class VpcsDto1 {
+    public static class VpcsDto {
         /**Region Code,例如cn-beijing-6*/
         @KsYunField(name="RegionName")
         private String RegionName;

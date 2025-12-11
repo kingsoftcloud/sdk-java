@@ -20,11 +20,11 @@ public class DescribeDnatsRequest{
 
     /**筛选Filter*/
     @KsYunField(name="Filter",type=2)
-    private List<FilterDto1> FilterList;
+    private List<FilterDto> FilterList;
 
     @Data
     @ToString
-    public static class FilterDto1 {
+    public static class FilterDto {
         /**有效值：
 - nat-id，Nat的ID
 - nat-ip，Nat的IP

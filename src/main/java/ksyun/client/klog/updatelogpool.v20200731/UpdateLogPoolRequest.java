@@ -40,18 +40,18 @@ public class UpdateLogPoolRequest{
 
     /***/
     @KsYunField(name="Config")
-    private ConfigDto1 Config;
+    private ConfigDto Config;
 
     @Data
     @ToString
-    public static class ConfigDto1 {
+    public static class ConfigDto {
         /**字段信息*/
         @KsYunField(name="Columns",type=2)
-        private List<ColumnsDto2> ColumnsList;
+        private List<ConfigColumnsDto> ColumnsList;
 
         @Data
         @ToString
-        public static class ColumnsDto2 {
+        public static class ConfigColumnsDto {
             /**字段ID*/
             @KsYunField(name="Id")
             private String Id;

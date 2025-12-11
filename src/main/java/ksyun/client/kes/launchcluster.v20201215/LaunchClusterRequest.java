@@ -98,11 +98,11 @@ Daily：按量付费按日月结*/
 
     /**节点组信息*/
     @KsYunField(name="InstanceGroups",type=2)
-    private List<InstanceGroupsDto1> InstanceGroupsList;
+    private List<InstanceGroupsDto> InstanceGroupsList;
 
     @Data
     @ToString
-    public static class InstanceGroupsDto1 {
+    public static class InstanceGroupsDto {
         /**节点组类型：
 MASTER（专有主节点）
 DATA（数据节点）

@@ -36,11 +36,11 @@ public class CreateInstanceDatabaseRequest{
 
     /***/
     @KsYunField(name="InstanceDatabasePrivileges",type=2)
-    private List<InstanceDatabasePrivilegesDto1> InstanceDatabasePrivilegesList;
+    private List<InstanceDatabasePrivilegesDto> InstanceDatabasePrivilegesList;
 
     @Data
     @ToString
-    public static class InstanceDatabasePrivilegesDto1 {
+    public static class InstanceDatabasePrivilegesDto {
         /**账号名称*/
         @KsYunField(name="InstanceAccountName")
         private String InstanceAccountName;

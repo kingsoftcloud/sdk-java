@@ -62,11 +62,11 @@ public class CreateTrainJobRequest{
 
     /**框架副本配置*/
     @KsYunField(name="FrameworkReplicas")
-    private FrameworkReplicasDto1 FrameworkReplicas;
+    private FrameworkReplicasDto FrameworkReplicas;
 
     @Data
     @ToString
-    public static class FrameworkReplicasDto1 {
+    public static class FrameworkReplicasDto {
         /**当Framework=tensorflow必填，范围范围0-1000*/
         @KsYunField(name="Chief")
         private Integer Chief;
@@ -94,11 +94,11 @@ public class CreateTrainJobRequest{
 
     /**环境变量*/
     @KsYunField(name="Envs",type=2)
-    private List<EnvsDto2> EnvsList;
+    private List<EnvsDto> EnvsList;
 
     @Data
     @ToString
-    public static class EnvsDto2 {
+    public static class EnvsDto {
         /***/
         @KsYunField(name="Name")
         private String Name;
@@ -148,11 +148,11 @@ public class CreateTrainJobRequest{
     /**存储配置
 */
     @KsYunField(name="StorageConfigs",type=2)
-    private List<StorageConfigsDto3> StorageConfigsList;
+    private List<StorageConfigsDto> StorageConfigsList;
 
     @Data
     @ToString
-    public static class StorageConfigsDto3 {
+    public static class StorageConfigsDto {
         /**存储配置id*/
         @KsYunField(name="StorageConfigId")
         private String StorageConfigId;

@@ -32,11 +32,11 @@ public class CreateRuleGroupRequest{
 
     /**规则的信息*/
     @KsYunField(name="RuleSet",type=2)
-    private List<RuleSetDto1> RuleSetList;
+    private List<RuleSetDto> RuleSetList;
 
     @Data
     @ToString
-    public static class RuleSetDto1 {
+    public static class RuleSetDto {
         /**匹配规则类型(domain|url|method|sourceIp|header|query|cookie)*/
         @KsYunField(name="RuleType")
         private String RuleType;
@@ -55,11 +55,11 @@ public class CreateRuleGroupRequest{
 
         /**HTTP标头*/
         @KsYunField(name="HeaderValue",type=2)
-        private List<HeaderValueDto2> HeaderValueList;
+        private List<RuleSetHeaderValueDto> HeaderValueList;
 
         @Data
         @ToString
-        public static class HeaderValueDto2 {
+        public static class RuleSetHeaderValueDto {
             /**HTTP标头,查询字符串的键值*/
             @KsYunField(name="Key")
             private String Key;
@@ -72,11 +72,11 @@ public class CreateRuleGroupRequest{
 
         /**查询字符串*/
         @KsYunField(name="QueryValue",type=2)
-        private List<QueryValueDto3> QueryValueList;
+        private List<RuleSetQueryValueDto> QueryValueList;
 
         @Data
         @ToString
-        public static class QueryValueDto3 {
+        public static class RuleSetQueryValueDto {
             /**HTTP标头,查询字符串的键值*/
             @KsYunField(name="Key")
             private String Key;
@@ -89,11 +89,11 @@ public class CreateRuleGroupRequest{
 
         /**Cookie转发条件*/
         @KsYunField(name="CookieValue",type=2)
-        private List<CookieValueDto4> CookieValueList;
+        private List<RuleSetCookieValueDto> CookieValueList;
 
         @Data
         @ToString
-        public static class CookieValueDto4 {
+        public static class RuleSetCookieValueDto {
             /**HTTP标头,查询字符串的键值*/
             @KsYunField(name="Key")
             private String Key;
@@ -116,11 +116,11 @@ public class CreateRuleGroupRequest{
 
     /**返回固定响应信息*/
     @KsYunField(name="FixedResponseConfig")
-    private FixedResponseConfigDto5 FixedResponseConfig;
+    private FixedResponseConfigDto FixedResponseConfig;
 
     @Data
     @ToString
-    public static class FixedResponseConfigDto5 {
+    public static class FixedResponseConfigDto {
         /**响应正文长度不能超过1000个字符，不支持中文字符*/
         @KsYunField(name="Content")
         private String Content;
@@ -137,11 +137,11 @@ public class CreateRuleGroupRequest{
 
     /**重写*/
     @KsYunField(name="RewriteConfig")
-    private RewriteConfigDto6 RewriteConfig;
+    private RewriteConfigDto RewriteConfig;
 
     @Data
     @ToString
-    public static class RewriteConfigDto6 {
+    public static class RewriteConfigDto {
         /**重写的域名*/
         @KsYunField(name="HttpHost")
         private String HttpHost;

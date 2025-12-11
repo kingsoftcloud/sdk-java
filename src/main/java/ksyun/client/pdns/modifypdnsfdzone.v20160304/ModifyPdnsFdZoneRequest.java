@@ -24,11 +24,11 @@ public class ModifyPdnsFdZoneRequest{
 
     /**ForwardIp,此字段若传入即为全量更新*/
     @KsYunField(name="ForwardIp",type=2)
-    private List<ForwardIpDto1> ForwardIpList;
+    private List<ForwardIpDto> ForwardIpList;
 
     @Data
     @ToString
-    public static class ForwardIpDto1 {
+    public static class ForwardIpDto {
         /**端口*/
         @KsYunField(name="Port")
         private String Port;

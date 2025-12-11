@@ -137,11 +137,11 @@ Bisynchronous双向同步
 }
 ```*/
     @KsYunField(name="DTSParameter",type=2)
-    private List<DTSParameterDto1> DTSParameterList;
+    private List<DTSParameterDto> DTSParameterList;
 
     @Data
     @ToString
-    public static class DTSParameterDto1 {
+    public static class DTSParameterDto {
         /**参数名*/
         @KsYunField(name="DBParameter")
         private String DBParameter;
@@ -188,11 +188,11 @@ Bisynchronous双向同步
 }
 ````*/
     @KsYunField(name="SourceUser",type=2)
-    private List<SourceUserDto2> SourceUserList;
+    private List<SourceUserDto> SourceUserList;
 
     @Data
     @ToString
-    public static class SourceUserDto2 {
+    public static class SourceUserDto {
         /**源库账号名(将要迁移到目标库的账号信息)*/
         @KsYunField(name="Username")
         private String Username;

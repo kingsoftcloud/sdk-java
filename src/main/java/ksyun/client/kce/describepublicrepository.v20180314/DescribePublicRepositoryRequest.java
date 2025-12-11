@@ -28,11 +28,11 @@ public class DescribePublicRepositoryRequest{
 
     /***/
     @KsYunField(name="Filter",type=2)
-    private List<FilterDto1> FilterList;
+    private List<FilterDto> FilterList;
 
     @Data
     @ToString
-    public static class FilterDto1 {
+    public static class FilterDto {
         /**一个或者多个过滤器，有效值：<br>- namespace*/
         @KsYunField(name="Name")
         private String Name;

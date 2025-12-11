@@ -24,11 +24,11 @@ public class DescribeRoceEventRequest{
 
     /***/
     @KsYunField(name="Filter.N")
-    private FilterNDto1 FilterN;
+    private FilterNDto FilterN;
 
     @Data
     @ToString
-    public static class FilterNDto1 {
+    public static class FilterNDto {
         /**event-id:事件ID
 roce-ip:roceip
 sn:实例序列号

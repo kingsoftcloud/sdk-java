@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
 * @Classname DeleteVolumeClient
-* @Description DeleteVolume
+ * @Description 删除云硬盘
 */
 @Slf4j
 public class DeleteVolumeClient extends BaseClient {

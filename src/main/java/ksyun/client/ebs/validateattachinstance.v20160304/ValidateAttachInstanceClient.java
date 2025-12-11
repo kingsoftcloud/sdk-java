@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
 * @Classname ValidateAttachInstanceClient
-* @Description ValidateAttachInstance
+ * @Description 校验挂载云主机可用性
 */
 @Slf4j
 public class ValidateAttachInstanceClient extends BaseClient {

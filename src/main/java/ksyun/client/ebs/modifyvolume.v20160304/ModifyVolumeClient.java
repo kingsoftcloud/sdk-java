@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
 * @Classname ModifyVolumeClient
-* @Description ModifyVolume
+ * @Description 更新云硬盘属性
 */
 @Slf4j
 public class ModifyVolumeClient extends BaseClient {

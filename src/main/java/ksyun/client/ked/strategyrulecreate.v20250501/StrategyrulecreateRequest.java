@@ -24,11 +24,11 @@ public class StrategyrulecreateRequest{
 
     /**安全组出站规则*/
     @KsYunField(name="policies",type=2)
-    private List<PoliciesDto1> PoliciesList;
+    private List<PoliciesDto> PoliciesList;
 
     @Data
     @ToString
-    public static class PoliciesDto1 {
+    public static class PoliciesDto {
         /***/
         @KsYunField(name="description")
         private String Description;

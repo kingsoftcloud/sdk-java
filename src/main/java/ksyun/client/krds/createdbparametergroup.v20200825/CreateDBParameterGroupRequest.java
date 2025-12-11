@@ -53,11 +53,11 @@ ebs_mysql 5.6、5.7
 }
 ```*/
     @KsYunField(name="Parameters")
-    private ParametersDto1 Parameters;
+    private ParametersDto Parameters;
 
     @Data
     @ToString
-    public static class ParametersDto1 {
+    public static class ParametersDto {
         /**参数名*/
         @KsYunField(name="Name")
         private String Name;

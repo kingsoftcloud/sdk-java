@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
 * @Classname UpdateVolumeProjectClient
-* @Description UpdateVolumeProject
+ * @Description 更新云硬盘项目组
 */
 @Slf4j
 public class UpdateVolumeProjectClient extends BaseClient {
@@ -43,7 +43,7 @@ public class UpdateVolumeProjectClient extends BaseClient {
      */
     public UpdateVolumeProjectResponse doPost(String path, UpdateVolumeProjectRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
     }
 
@@ -58,7 +58,7 @@ public class UpdateVolumeProjectClient extends BaseClient {
      */
     public UpdateVolumeProjectResponse doPost(String path, UpdateVolumeProjectRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
         return JSON.parseObject(response, UpdateVolumeProjectResponse.class);
     }
@@ -72,7 +72,7 @@ public class UpdateVolumeProjectClient extends BaseClient {
     */
     public UpdateVolumeProjectResponse doPostRaw(String path, UpdateVolumeProjectRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPostRaw(path, requestObj, head);
     }
 
@@ -86,7 +86,7 @@ public class UpdateVolumeProjectClient extends BaseClient {
     */
     public UpdateVolumeProjectResponse doPostRaw(String path, UpdateVolumeProjectRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
         return JSON.parseObject(response, UpdateVolumeProjectResponse.class);
     }
@@ -100,7 +100,7 @@ public class UpdateVolumeProjectClient extends BaseClient {
      */
     public UpdateVolumeProjectResponse doGet(String path, UpdateVolumeProjectRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.putIfAbsent("Content-Type", "application/json");
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doGet(path, requestObj, head);
     }
 
@@ -115,7 +115,7 @@ public class UpdateVolumeProjectClient extends BaseClient {
          */
         public UpdateVolumeProjectResponse doGet(String path, UpdateVolumeProjectRequest requestObj, Map<String, String> head) throws Exception {
             final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-            requestHeaders.putIfAbsent("Content-Type", "application/json");
+            requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
             String response = doRpc(path, requestObj, requestHeaders, "get");
             return JSON.parseObject(response, UpdateVolumeProjectResponse.class);
         }
@@ -130,7 +130,7 @@ public class UpdateVolumeProjectClient extends BaseClient {
      */
     public UpdateVolumeProjectResponse doDelete(String path, UpdateVolumeProjectRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDelete(path, requestObj, head);
     }
 
@@ -145,7 +145,7 @@ public class UpdateVolumeProjectClient extends BaseClient {
      */
     public UpdateVolumeProjectResponse doDelete(String path, UpdateVolumeProjectRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "delete");
         return JSON.parseObject(response, UpdateVolumeProjectResponse.class);
     }
@@ -161,7 +161,7 @@ public class UpdateVolumeProjectClient extends BaseClient {
      */
     public UpdateVolumeProjectResponse doPut(String path, UpdateVolumeProjectRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.putIfAbsent("Content-Type", "application/json");
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doPut(path, requestObj, head);
     }
 
@@ -176,7 +176,7 @@ public class UpdateVolumeProjectClient extends BaseClient {
      */
     public UpdateVolumeProjectResponse doPut(String path, UpdateVolumeProjectRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-       requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "put");
         return JSON.parseObject(response, UpdateVolumeProjectResponse.class);
     }

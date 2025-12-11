@@ -28,11 +28,11 @@ public class DescribeRepoNamespaceRequest{
 
     /***/
     @KsYunField(name="Filter",type=2)
-    private List<FilterDto1> FilterList;
+    private List<FilterDto> FilterList;
 
     @Data
     @ToString
-    public static class FilterDto1 {
+    public static class FilterDto {
         /**一个或者多个过滤器<br>有效值：<br>- public 命名空间是否公开的属性*/
         @KsYunField(name="Name")
         private String Name;

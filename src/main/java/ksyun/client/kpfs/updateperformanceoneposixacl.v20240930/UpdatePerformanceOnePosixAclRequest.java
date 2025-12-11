@@ -20,11 +20,11 @@ public class UpdatePerformanceOnePosixAclRequest{
 
     /***/
     @KsYunField(name="FileSystemList",type=2)
-    private List<FileSystemListDto1> FileSystemListList;
+    private List<FileSystemListDto> FileSystemListList;
 
     @Data
     @ToString
-    public static class FileSystemListDto1 {
+    public static class FileSystemListDto {
         /***/
         @KsYunField(name="FileSystemId")
         private String FileSystemId;

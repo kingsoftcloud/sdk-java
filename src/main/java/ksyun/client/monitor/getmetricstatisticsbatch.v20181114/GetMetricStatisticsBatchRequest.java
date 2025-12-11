@@ -52,11 +52,11 @@ public class GetMetricStatisticsBatchRequest{
 
 */
     @KsYunField(name="Metrics",type=2)
-    private List<MetricsDto1> MetricsList;
+    private List<MetricsDto> MetricsList;
 
     @Data
     @ToString
-    public static class MetricsDto1 {
+    public static class MetricsDto {
         /**实例ID。*/
         @KsYunField(name="InstanceID")
         private String InstanceID;

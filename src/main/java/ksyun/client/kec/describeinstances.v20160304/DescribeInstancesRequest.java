@@ -40,11 +40,11 @@ public class DescribeInstancesRequest{
 84（PostPaidByHour)
 <br>ProjectId.N 所属项目<br>network-interface.subnet-id 网络接口关联的子网ID<br>network-interface.network-interface-id 网卡的ID<br>network-interface.group-id 网络接口关联的安全组ID<br>instance-state.name 实例状态<br>availability-zone-name [可用区(AvailabilityZone)](https://docs.ksyun.com/documents/67)*/
     @KsYunField(name="Filter",type=2)
-    private List<FilterDto1> FilterList;
+    private List<FilterDto> FilterList;
 
     @Data
     @ToString
-    public static class FilterDto1 {
+    public static class FilterDto {
         /**Filter.1.Value.1=****/
         @KsYunField(name="Value",type=2)
         private List<String> ValueList;

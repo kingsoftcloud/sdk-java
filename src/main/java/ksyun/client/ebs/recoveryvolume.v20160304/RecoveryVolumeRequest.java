@@ -14,4 +14,10 @@ import java.util.Arrays;
 */
 @Data
 public class RecoveryVolumeRequest{
+    /**
+     * 硬盘ID 长度36个字符，包括字母、数字、-
+     */
+    @KsYunField(name = "VolumeId")
+    private String VolumeId;
+
 }

@@ -32,11 +32,11 @@ public class StartFlinkJobRunRequest{
 
     /***/
     @KsYunField(name="SubmitData")
-    private SubmitDataDto1 SubmitData;
+    private SubmitDataDto SubmitData;
 
     @Data
     @ToString
-    public static class SubmitDataDto1 {
+    public static class SubmitDataDto {
         /**作业名称*/
         @KsYunField(name="Name")
         private String Name;

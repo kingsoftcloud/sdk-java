@@ -32,11 +32,11 @@ public class CreateTriggerRequest{
 
     /**触发器配置*/
     @KsYunField(name="TriggerDesc")
-    private TriggerDescDto1 TriggerDesc;
+    private TriggerDescDto TriggerDesc;
 
     @Data
     @ToString
-    public static class TriggerDescDto1 {
+    public static class TriggerDescDto {
         /**HTTP请求方法列表，支持GET、POST、PUT、DELETE、HEAD、PATCH等*/
         @KsYunField(name="Methods",type=2)
         private List<String> MethodsList;

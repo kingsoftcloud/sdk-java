@@ -21,11 +21,11 @@ public class CancelJobRunRequest{
     /**停止作业
 支持批量停止*/
     @KsYunField(name="JobRunIds",type=2)
-    private List<JobRunIdsDto1> JobRunIdsList;
+    private List<JobRunIdsDto> JobRunIdsList;
 
     @Data
     @ToString
-    public static class JobRunIdsDto1 {
+    public static class JobRunIdsDto {
         /**作业ID*/
         @KsYunField(name="JobRunId")
         private String JobRunId;

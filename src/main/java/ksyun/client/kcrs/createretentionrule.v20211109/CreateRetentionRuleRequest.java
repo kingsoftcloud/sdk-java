@@ -24,11 +24,11 @@ public class CreateRetentionRuleRequest{
 
     /**参数实体类*/
     @KsYunField(name="Rule")
-    private RuleDto1 Rule;
+    private RuleDto Rule;
 
     @Data
     @ToString
-    public static class RuleDto1 {
+    public static class RuleDto {
         /**生效范围，多个仓库用逗号隔开 */
         @KsYunField(name="Scope")
         private String Scope;

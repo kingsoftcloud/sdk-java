@@ -16,15 +16,17 @@ import java.util.Arrays;
 public class DescribeEpcStocksRequest{
     /**筛选Filter*/
     @KsYunField(name="Filter",type=2)
-    private List<FilterDto1> FilterList;
+    private List<FilterDto> FilterList;
 
     @Data
     @ToString
-    public static class FilterDto1 {
+    public static class FilterDto {
         /**有效值：
 - host-type，裸金属服务器类型 
 - availability-zone,可用区
-- stock-attribute,库存属性*/
+         - stock-attribute,库存属性
+         - roce-cluster,Roce集群名称
+         - sroce-cluster,Roce存储集群名称*/
         @KsYunField(name="Name")
         private String Name;
 

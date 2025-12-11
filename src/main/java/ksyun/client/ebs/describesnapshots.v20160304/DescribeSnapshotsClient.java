@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
 * @Classname DescribeSnapshotsClient
-* @Description DescribeSnapshots
+ * @Description 查询快照信息
 */
 @Slf4j
 public class DescribeSnapshotsClient extends BaseClient {

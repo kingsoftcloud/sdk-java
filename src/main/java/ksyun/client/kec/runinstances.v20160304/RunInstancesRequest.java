@@ -76,11 +76,11 @@ public class RunInstancesRequest{
 
     /**数据盘是否随实例释放*/
     @KsYunField(name="DataDisk",type=2)
-    private List<DataDiskDto1> DataDiskList;
+    private List<DataDiskDto> DataDiskList;
 
     @Data
     @ToString
-    public static class DataDiskDto1 {
+    public static class DataDiskDto {
         /**数据盘是否随实例释放*/
         @KsYunField(name="DeleteWithInstance")
         private Boolean DeleteWithInstance;
@@ -101,11 +101,11 @@ public class RunInstancesRequest{
 
     /**辅网卡*/
     @KsYunField(name="NetworkInterface",type=2)
-    private List<NetworkInterfaceDto2> NetworkInterfaceList;
+    private List<NetworkInterfaceDto> NetworkInterfaceList;
 
     @Data
     @ToString
-    public static class NetworkInterfaceDto2 {
+    public static class NetworkInterfaceDto {
         /**辅网卡的子网id不创建辅网卡时非必填，创建辅网卡时必填*/
         @KsYunField(name="SubnetId")
         private String SubnetId;
@@ -126,11 +126,11 @@ public class RunInstancesRequest{
 
     /**系统盘*/
     @KsYunField(name="SystemDisk")
-    private SystemDiskDto3 SystemDisk;
+    private SystemDiskDto SystemDisk;
 
     @Data
     @ToString
-    public static class SystemDiskDto3 {
+    public static class SystemDiskDto {
         /**系统盘类型*/
         @KsYunField(name="DiskType")
         private String DiskType;
@@ -204,11 +204,11 @@ public class RunInstancesRequest{
 
     /**标签信息*/
     @KsYunField(name="Tag",type=2)
-    private List<TagDto4> TagList;
+    private List<TagDto> TagList;
 
     @Data
     @ToString
-    public static class TagDto4 {
+    public static class TagDto {
         /**标签键值*/
         @KsYunField(name="Key")
         private String Key;
@@ -229,11 +229,11 @@ public class RunInstancesRequest{
 
     /***/
     @KsYunField(name="InstanceConfigure")
-    private InstanceConfigureDto5 InstanceConfigure;
+    private InstanceConfigureDto InstanceConfigure;
 
     @Data
     @ToString
-    public static class InstanceConfigureDto5 {
+    public static class InstanceConfigureDto {
         /**cpu*/
         @KsYunField(name="VCPU")
         private String VCPU;

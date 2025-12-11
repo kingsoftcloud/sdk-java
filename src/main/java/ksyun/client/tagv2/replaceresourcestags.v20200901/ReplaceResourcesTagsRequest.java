@@ -20,11 +20,11 @@ public class ReplaceResourcesTagsRequest{
 
     /***/
     @KsYunField(name="ReplaceTags",type=2)
-    private List<ReplaceTagsDto1> ReplaceTagsList;
+    private List<ReplaceTagsDto> ReplaceTagsList;
 
     @Data
     @ToString
-    public static class ReplaceTagsDto1 {
+    public static class ReplaceTagsDto {
         /**	
 资源ID，多个用逗号分隔*/
         @KsYunField(name="ResourceUuids")

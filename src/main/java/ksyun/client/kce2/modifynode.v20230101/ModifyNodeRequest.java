@@ -28,11 +28,11 @@ public class ModifyNodeRequest{
 
     /**组件列表*/
     @KsYunField(name="Components",type=2)
-    private List<ComponentsDto1> ComponentsList;
+    private List<ComponentsDto> ComponentsList;
 
     @Data
     @ToString
-    public static class ComponentsDto1 {
+    public static class ComponentsDto {
         /**节点需要修改的组件
 • APISERVER
 • SCHEDULER

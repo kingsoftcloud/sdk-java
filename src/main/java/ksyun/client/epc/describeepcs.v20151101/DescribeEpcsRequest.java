@@ -24,11 +24,11 @@ public class DescribeEpcsRequest{
 
     /**筛选Filter*/
     @KsYunField(name="Filter",type=2)
-    private List<FilterDto1> FilterList;
+    private List<FilterDto> FilterList;
 
     @Data
     @ToString
-    public static class FilterDto1 {
+    public static class FilterDto {
         /**有效值：
 - host-name，裸金属服务器的名称，仅支持精确查询
 - vpc-id，裸金属服务器的VPC ID

@@ -24,11 +24,11 @@ public class QueryMetricsRequest{
 
     /**查询指标的详细信息*/
     @KsYunField(name="QueryData")
-    private QueryDataDto1 QueryData;
+    private QueryDataDto QueryData;
 
     @Data
     @ToString
-    public static class QueryDataDto1 {
+    public static class QueryDataDto {
         /**promql,查询表达式,其中的双引号 "，需要用 \ 转义，或用 ' 单引号替代；*/
         @KsYunField(name="Query")
         private String Query;

@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
 * @Classname RecoveryVolumeClient
-* @Description RecoveryVolume
+ * @Description 恢复云硬盘
 */
 @Slf4j
 public class RecoveryVolumeClient extends BaseClient {

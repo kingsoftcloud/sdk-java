@@ -35,11 +35,11 @@ public class CreateDBParameterGroupRequest{
     /**#### 参数详情
 不传入指定参数及数值，则按照默认模板创建参数组*/
     @KsYunField(name="Parameters",type=2)
-    private List<ParametersDto1> ParametersList;
+    private List<ParametersDto> ParametersList;
 
     @Data
     @ToString
-    public static class ParametersDto1 {
+    public static class ParametersDto {
         /**#### 参数名
 参数名与参数值同时填写,不传择按默认值创建参数组*/
         @KsYunField(name="Name")

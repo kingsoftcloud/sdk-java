@@ -29,11 +29,11 @@ public class CreateBackupRequest{
 若要指定备份，则手动具体指定。
 ```*/
     @KsYunField(name="DBCollection",type=2)
-    private List<DBCollectionDto1> DBCollectionList;
+    private List<DBCollectionDto> DBCollectionList;
 
     @Data
     @ToString
-    public static class DBCollectionDto1 {
+    public static class DBCollectionDto {
         /**db名称*/
         @KsYunField(name="DbName")
         private String DbName;

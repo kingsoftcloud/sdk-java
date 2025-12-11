@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
 * @Classname AttachVolumeClient
-* @Description AttachVolume
+ * @Description 挂载云硬盘
 */
 @Slf4j
 public class AttachVolumeClient extends BaseClient {

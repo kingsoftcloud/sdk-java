@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
 * @Classname DetachVolumeClient
-* @Description DetachVolume
+ * @Description 卸载云硬盘
 */
 @Slf4j
 public class DetachVolumeClient extends BaseClient {

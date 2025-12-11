@@ -57,11 +57,11 @@ public class CreateScalingGroupRequest{
     /**与伸缩组绑定的各负载均衡的ID 
  */
     @KsYunField(name="Slb",type=2)
-    private List<SlbDto1> SlbList;
+    private List<SlbDto> SlbList;
 
     @Data
     @ToString
-    public static class SlbDto1 {
+    public static class SlbDto {
         /**与伸缩组绑定的各负载均衡的ID 
  */
         @KsYunField(name="Id")

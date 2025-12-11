@@ -36,11 +36,11 @@ public class RunSoInstancesRequest{
 
     /***/
     @KsYunField(name="Volumes")
-    private VolumesDto1 Volumes;
+    private VolumesDto Volumes;
 
     @Data
     @ToString
-    public static class VolumesDto1 {
+    public static class VolumesDto {
         /**硬盘大小*/
         @KsYunField(name="Size",type=2)
         private List<Integer> SizeList;

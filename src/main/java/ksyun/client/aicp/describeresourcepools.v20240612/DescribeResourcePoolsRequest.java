@@ -44,11 +44,11 @@ public class DescribeResourcePoolsRequest{
 
     /**一个或者多个过滤器*/
     @KsYunField(name="Filter",type=2)
-    private List<FilterDto1> FilterList;
+    private List<FilterDto> FilterList;
 
     @Data
     @ToString
-    public static class FilterDto1 {
+    public static class FilterDto {
         /**过滤关键字：
 - resource-pool-status 资源组状态
 - resource-pool-type 资源组类型

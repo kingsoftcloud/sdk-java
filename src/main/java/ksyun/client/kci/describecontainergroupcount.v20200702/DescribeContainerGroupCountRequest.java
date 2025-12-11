@@ -16,11 +16,11 @@ import java.util.Arrays;
 public class DescribeContainerGroupCountRequest{
     /***/
     @KsYunField(name="Label")
-    private LabelDto1 Label;
+    private LabelDto Label;
 
     @Data
     @ToString
-    public static class LabelDto1 {
+    public static class LabelDto {
         /**固定为cluster-id*/
         @KsYunField(name="Key")
         private String Key;

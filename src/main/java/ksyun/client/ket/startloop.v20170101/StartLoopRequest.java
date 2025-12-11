@@ -32,11 +32,11 @@ public class StartLoopRequest{
 
     /**轮播源文件信息，数组，每项包括文件路径（金山云KS3内网URL）和顺序参数。发起轮播前请先确认轮播源文件是否存在。最多可以支持100个轮播任务。*/
     @KsYunField(name="SrcInfo",type=2)
-    private List<SrcInfoDto1> SrcInfoList;
+    private List<SrcInfoDto> SrcInfoList;
 
     @Data
     @ToString
-    public static class SrcInfoDto1 {
+    public static class SrcInfoDto {
         /**源文件在ks3的完整路径*/
         @KsYunField(name="Path")
         private String Path;

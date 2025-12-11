@@ -95,11 +95,11 @@ False：Master和Etcd组件共享节点部署
 
     /**当集群类型为托管集群时生效，为托管集群控制面进行子网和安全组配置，支持配置多个*/
     @KsYunField(name="ManagedClusterMultiMaster",type=2)
-    private List<ManagedClusterMultiMasterDto1> ManagedClusterMultiMasterList;
+    private List<ManagedClusterMultiMasterDto> ManagedClusterMultiMasterList;
 
     @Data
     @ToString
-    public static class ManagedClusterMultiMasterDto1 {
+    public static class ManagedClusterMultiMasterDto {
         /**master.N所在子网的id*/
         @KsYunField(name="SubnetId")
         private String SubnetId;
@@ -112,11 +112,11 @@ False：Master和Etcd组件共享节点部署
 
     /**新建节点创建集群，定义节点角色和配置，支持云服务器机和专属云服务器。*/
     @KsYunField(name="InstanceForNode",type=2)
-    private List<InstanceForNodeDto2> InstanceForNodeList;
+    private List<InstanceForNodeDto> InstanceForNodeList;
 
     @Data
     @ToString
-    public static class InstanceForNodeDto2 {
+    public static class InstanceForNodeDto {
         /**节点角色,有效值：
 - Worker
 - Master_Etcd
@@ -133,11 +133,11 @@ ClusterManageMode字段为DedicatedCluster时
 
         /**定义节点的配置，支持普通云主机和专属云主机。*/
         @KsYunField(name="NodeConfig",type=2)
-        private List<NodeConfigDto3> NodeConfigList;
+        private List<InstanceForNodeNodeConfigDto> NodeConfigList;
 
         @Data
         @ToString
-        public static class NodeConfigDto3 {
+        public static class InstanceForNodeNodeConfigDto {
             /**定义节点的配置，支持普通云主机和专属云主机。
 节点配置信息使用云主机/专属云主机创建透传参数，json化字符串格式，详见云主机创建实例接口*/
             @KsYunField(name="Para")
@@ -145,18 +145,18 @@ ClusterManageMode字段为DedicatedCluster时
 
             /**节点的高级配置设置*/
             @KsYunField(name="AdvancedSetting")
-            private AdvancedSettingDto4 AdvancedSetting;
+            private InstanceForNodeNodeConfigAdvancedSettingDto AdvancedSetting;
 
             @Data
             @ToString
-            public static class AdvancedSettingDto4 {
+            public static class InstanceForNodeNodeConfigAdvancedSettingDto {
                 /**不推荐使用，请优先使用MultiDataDisk参数支持多块数据盘挂载设置。DataDisk仅针对第一块数据盘挂载设置生效*/
                 @KsYunField(name="DataDisk")
-                private DataDiskDto5 DataDisk;
+                private InstanceForNodeNodeConfigAdvancedSettingDataDiskDto DataDisk;
 
                 @Data
                 @ToString
-                public static class DataDiskDto5 {
+                public static class InstanceForNodeNodeConfigAdvancedSettingDataDiskDto {
                     /**是否对数据盘格式化并挂载，默认值；true。若此字段填写false，则 FileSystem 和 MountTarget字段不生效*/
                     @KsYunField(name="AutoFormatAndMount")
                     private Boolean AutoFormatAndMount;
@@ -199,11 +199,11 @@ Kubernetes版本≥1.24时，有效值：
 
                 /**节点加入集群时预置的标签*/
                 @KsYunField(name="Label",type=2)
-                private List<LabelDto6> LabelList;
+                private List<InstanceForNodeNodeConfigAdvancedSettingLabelDto> LabelList;
 
                 @Data
                 @ToString
-                public static class LabelDto6 {
+                public static class InstanceForNodeNodeConfigAdvancedSettingLabelDto {
                     /**标签键，校验规则：不超过63个字符，只能包含字母、数字及分隔符("-"、"_"、"."、"/")，且必须以字母、数字开头和结尾*/
                     @KsYunField(name="Key")
                     private String Key;
@@ -216,18 +216,18 @@ Kubernetes版本≥1.24时，有效值：
 
                 /**自定义节点上k8s组件的参数*/
                 @KsYunField(name="ExtraArg")
-                private ExtraArgDto7 ExtraArg;
+                private InstanceForNodeNodeConfigAdvancedSettingExtraArgDto ExtraArg;
 
                 @Data
                 @ToString
-                public static class ExtraArgDto7 {
+                public static class InstanceForNodeNodeConfigAdvancedSettingExtraArgDto {
                     /**用户自定义kubelet的参数*/
                     @KsYunField(name="Kubelet",type=2)
-                    private List<KubeletDto8> KubeletList;
+                    private List<InstanceForNodeNodeConfigAdvancedSettingExtraArgKubeletDto> KubeletList;
 
                     @Data
                     @ToString
-                    public static class KubeletDto8 {
+                    public static class InstanceForNodeNodeConfigAdvancedSettingExtraArgKubeletDto {
                         /**用户自定义kubelet的参数，格式k1=v1，如： --feature-gates=EphemeralContainers=true*/
                         @KsYunField(name="CustomArg")
                         private String CustomArg;
@@ -246,11 +246,11 @@ Kubernetes版本≥1.24时，有效值：
 
                 /**节点加入集群时预置污点，匹配污点容忍进行调度*/
                 @KsYunField(name="Taints",type=2)
-                private List<TaintsDto9> TaintsList;
+                private List<InstanceForNodeNodeConfigAdvancedSettingTaintsDto> TaintsList;
 
                 @Data
                 @ToString
-                public static class TaintsDto9 {
+                public static class InstanceForNodeNodeConfigAdvancedSettingTaintsDto {
                     /**污点名称，校验规则：不超过253个字符，只能包含字母、数字及分隔符("-"、"_"、"."、"/")，且必须以字母、数字开头和结尾*/
                     @KsYunField(name="Key")
                     private String Key;
@@ -268,11 +268,11 @@ Kubernetes版本≥1.24时，有效值：
                 /**节点多块数据盘挂载格式化设置，DataDisk只能设置第一块盘，请优先使用MultiDataDisk。
 这个N与NodeConfig下的Para开机参数中DataDisk.N.Type等相关数据盘的定义对应，在Para中定义的数据盘可以不在MultiDataDisk中定义，即某块盘可以不进行格式化挂载设置*/
                 @KsYunField(name="MultiDataDisk",type=2)
-                private List<MultiDataDiskDto10> MultiDataDiskList;
+                private List<InstanceForNodeNodeConfigAdvancedSettingMultiDataDiskDto> MultiDataDiskList;
 
                 @Data
                 @ToString
-                public static class MultiDataDiskDto10 {
+                public static class InstanceForNodeNodeConfigAdvancedSettingMultiDataDiskDto {
                     /**是否自动格式化并挂载*/
                     @KsYunField(name="AutoFormatAndMount")
                     private Boolean AutoFormatAndMount;
@@ -300,11 +300,11 @@ Kubernetes版本≥1.24时，有效值：
 
     /**使用已有的云物理机创建集群，定义节点角色和配置*/
     @KsYunField(name="ExistedInstanceForEpc",type=2)
-    private List<ExistedInstanceForEpcDto11> ExistedInstanceForEpcList;
+    private List<ExistedInstanceForEpcDto> ExistedInstanceForEpcList;
 
     @Data
     @ToString
-    public static class ExistedInstanceForEpcDto11 {
+    public static class ExistedInstanceForEpcDto {
         /**节点角色,有效值：
 
 - Worker
@@ -323,11 +323,11 @@ ClusterManageMode字段为DedicatedCluster时
 
         /**裸金属节点配置*/
         @KsYunField(name="EpcConfig",type=2)
-        private List<EpcConfigDto12> EpcConfigList;
+        private List<ExistedInstanceForEpcEpcConfigDto> EpcConfigList;
 
         @Data
         @ToString
-        public static class EpcConfigDto12 {
+        public static class ExistedInstanceForEpcEpcConfigDto {
             /**支持移入的EPC实例id，Json形式*/
             @KsYunField(name="Para")
             private String Para;
@@ -335,11 +335,11 @@ ClusterManageMode字段为DedicatedCluster时
             /**节点的高级配置设置
 */
             @KsYunField(name="AdvancedSetting")
-            private AdvancedSettingDto13 AdvancedSetting;
+            private ExistedInstanceForEpcEpcConfigAdvancedSettingDto AdvancedSetting;
 
             @Data
             @ToString
-            public static class AdvancedSettingDto13 {
+            public static class ExistedInstanceForEpcEpcConfigAdvancedSettingDto {
                 /**容器运行时，根据集群版本和需求选择
 Kubernetes版本＜1.24时，有效值：
 - docker
@@ -368,11 +368,11 @@ Kubernetes版本≥1.24时，有效值：
 
                 /**节点加入集群时预置的标签*/
                 @KsYunField(name="Label",type=2)
-                private List<LabelDto14> LabelList;
+                private List<ExistedInstanceForEpcEpcConfigAdvancedSettingLabelDto> LabelList;
 
                 @Data
                 @ToString
-                public static class LabelDto14 {
+                public static class ExistedInstanceForEpcEpcConfigAdvancedSettingLabelDto {
                     /**标签键，校验规则：不超过63个字符，只能包含字母、数字及分隔符("-"、"_"、"."、"/")，且必须以字母、数字开头和结尾*/
                     @KsYunField(name="Key")
                     private String Key;
@@ -386,18 +386,18 @@ Kubernetes版本≥1.24时，有效值：
                 /**自定义节点上k8s组件的参数
 */
                 @KsYunField(name="ExtraArg")
-                private ExtraArgDto15 ExtraArg;
+                private ExistedInstanceForEpcEpcConfigAdvancedSettingExtraArgDto ExtraArg;
 
                 @Data
                 @ToString
-                public static class ExtraArgDto15 {
+                public static class ExistedInstanceForEpcEpcConfigAdvancedSettingExtraArgDto {
                     /**用户自定义kubelet的参数*/
                     @KsYunField(name="Kubelet",type=2)
-                    private List<KubeletDto16> KubeletList;
+                    private List<kubeletDto1> KubeletList;
 
                     @Data
                     @ToString
-                    public static class KubeletDto16 {
+                    public static class kubeletDto1 {
                         /**用户自定义kubelet的参数，格式k1=v1，如： --feature-gates=EphemeralContainers=true*/
                         @KsYunField(name="CustomArg")
                         private String CustomArg;
@@ -417,11 +417,11 @@ Kubernetes版本≥1.24时，有效值：
                 /**节点加入集群时预置污点，匹配污点容忍进行调度
 */
                 @KsYunField(name="Taint",type=2)
-                private List<TaintDto17> TaintList;
+                private List<ExistedInstanceForEpcEpcConfigAdvancedSettingTaintDto> TaintList;
 
                 @Data
                 @ToString
-                public static class TaintDto17 {
+                public static class ExistedInstanceForEpcEpcConfigAdvancedSettingTaintDto {
                     /**污点名称，校验规则：不超过253个字符，只能包含字母、数字及分隔符("-"、"_"、"."、"/")，且必须以字母、数字开头和结尾*/
                     @KsYunField(name="Key")
                     private String Key;
@@ -444,11 +444,11 @@ Kubernetes版本≥1.24时，有效值：
 
     /**不推荐使用接口进行安装，集群会安装默认的组件，如需安装其它增强组件，请在集群创建完成后，在控制台选择安装。*/
     @KsYunField(name="Component",type=2)
-    private List<ComponentDto18> ComponentList;
+    private List<ComponentDto> ComponentList;
 
     @Data
     @ToString
-    public static class ComponentDto18 {
+    public static class ComponentDto {
         /**组件名称*/
         @KsYunField(name="Name")
         private String Name;
@@ -461,11 +461,11 @@ Kubernetes版本≥1.24时，有效值：
 
     /**控制面日志采集,当用户选择的是独立部署集群时，此选项填写无效；当选择是托管时，可选*/
     @KsYunField(name="ControlPlaneLog")
-    private ControlPlaneLogDto19 ControlPlaneLog;
+    private ControlPlaneLogDto ControlPlaneLog;
 
     @Data
     @ToString
-    public static class ControlPlaneLogDto19 {
+    public static class ControlPlaneLogDto {
         /**集群ID*/
         @KsYunField(name="ClusterId")
         private String ClusterId;

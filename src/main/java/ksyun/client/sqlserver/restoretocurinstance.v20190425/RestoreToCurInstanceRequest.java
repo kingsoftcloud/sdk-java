@@ -39,11 +39,11 @@ public class RestoreToCurInstanceRequest{
 }]
 ```*/
     @KsYunField(name="SrcDatabases",type=2)
-    private List<SrcDatabasesDto1> SrcDatabasesList;
+    private List<SrcDatabasesDto> SrcDatabasesList;
 
     @Data
     @ToString
-    public static class SrcDatabasesDto1 {
+    public static class SrcDatabasesDto {
         /**数据库名称*/
         @KsYunField(name="DatabaseName")
         private String DatabaseName;
@@ -67,11 +67,11 @@ public class RestoreToCurInstanceRequest{
 }]
 ```*/
     @KsYunField(name="DstDatabases",type=2)
-    private List<DstDatabasesDto2> DstDatabasesList;
+    private List<DstDatabasesDto> DstDatabasesList;
 
     @Data
     @ToString
-    public static class DstDatabasesDto2 {
+    public static class DstDatabasesDto {
         /**数据库库名
 
 */

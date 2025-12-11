@@ -28,11 +28,11 @@ public class DescribeTrainJobPodsRequest{
 
     /***/
     @KsYunField(name="Filter",type=2)
-    private List<FilterDto1> FilterList;
+    private List<FilterDto> FilterList;
 
     @Data
     @ToString
-    public static class FilterDto1 {
+    public static class FilterDto {
         /**可选值：role state*/
         @KsYunField(name="Name")
         private String Name;

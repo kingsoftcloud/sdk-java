@@ -44,11 +44,11 @@ public class CreateTaskRequest{
     /**目标端拓展信息
 若TargetType=MySQL，根据需要填写*/
     @KsYunField(name="TargetMySQL")
-    private TargetMySQLDto1 TargetMySQL;
+    private TargetMySQLDto TargetMySQL;
 
     @Data
     @ToString
-    public static class TargetMySQLDto1 {
+    public static class TargetMySQLDto {
         /**mysql 用户名*/
         @KsYunField(name="User")
         private String User;
@@ -72,11 +72,11 @@ public class CreateTaskRequest{
     /**目标端拓展信息
 若TargetType=KAFKA，根据需要填写*/
     @KsYunField(name="TargetKafka")
-    private TargetKafkaDto2 TargetKafka;
+    private TargetKafkaDto TargetKafka;
 
     @Data
     @ToString
-    public static class TargetKafkaDto2 {
+    public static class TargetKafkaDto {
         /**Kafka版本*/
         @KsYunField(name="KafkaVersion")
         private String KafkaVersion;

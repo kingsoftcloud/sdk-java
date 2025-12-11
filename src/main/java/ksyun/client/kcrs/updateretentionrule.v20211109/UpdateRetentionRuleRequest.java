@@ -24,11 +24,11 @@ public class UpdateRetentionRuleRequest{
 
     /**参数实体类*/
     @KsYunField(name="Rule")
-    private RuleDto1 Rule;
+    private RuleDto Rule;
 
     @Data
     @ToString
-    public static class RuleDto1 {
+    public static class RuleDto {
         /**RuleId*/
         @KsYunField(name="RuleId")
         private String RuleId;

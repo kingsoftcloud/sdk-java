@@ -64,11 +64,11 @@ public class CreateListenerRequest{
 
     /**返回固定响应信息*/
     @KsYunField(name="FixedResponseConfig")
-    private FixedResponseConfigDto1 FixedResponseConfig;
+    private FixedResponseConfigDto FixedResponseConfig;
 
     @Data
     @ToString
-    public static class FixedResponseConfigDto1 {
+    public static class FixedResponseConfigDto {
         /**响应正文长度不能超过1000个字符，不支持中文字符*/
         @KsYunField(name="Content")
         private String Content;
@@ -85,11 +85,11 @@ public class CreateListenerRequest{
 
     /**返回固定响应信息*/
     @KsYunField(name="RewriteConfig")
-    private RewriteConfigDto2 RewriteConfig;
+    private RewriteConfigDto RewriteConfig;
 
     @Data
     @ToString
-    public static class RewriteConfigDto2 {
+    public static class RewriteConfigDto {
         /**重写的域名*/
         @KsYunField(name="HttpHost")
         private String HttpHost;

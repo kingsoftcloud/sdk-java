@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
 * @Classname DescribeEbsInstancesClient
-* @Description DescribeEbsInstances
+ * @Description 查询可挂载云主机
 */
 @Slf4j
 public class DescribeEbsInstancesClient extends BaseClient {

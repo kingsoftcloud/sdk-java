@@ -24,11 +24,11 @@ public class DescribeDirectConnectGatewayRouteRequest{
 
     /**筛选Filter*/
     @KsYunField(name="Filter",type=2)
-    private List<FilterDto1> FilterList;
+    private List<FilterDto> FilterList;
 
     @Data
     @ToString
-    public static class FilterDto1 {
+    public static class FilterDto {
         /**有效值：
 - route-type，路由类型
 - cidr-block，目标网段*/

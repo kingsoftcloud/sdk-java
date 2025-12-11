@@ -36,11 +36,11 @@ public class DescribeNotebooksRequest{
 
     /**条件过滤*/
     @KsYunField(name="Filter",type=2)
-    private List<FilterDto1> FilterList;
+    private List<FilterDto> FilterList;
 
     @Data
     @ToString
-    public static class FilterDto1 {
+    public static class FilterDto {
         /**过滤条件 notebook-status*/
         @KsYunField(name="Name")
         private String Name;

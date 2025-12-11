@@ -32,11 +32,11 @@ public class CreateInstanceAccountActionRequest{
 
     /**该账户对应的数据库权限*/
     @KsYunField(name="InstanceAccountPrivileges",type=2)
-    private List<InstanceAccountPrivilegesDto1> InstanceAccountPrivilegesList;
+    private List<InstanceAccountPrivilegesDto> InstanceAccountPrivilegesList;
 
     @Data
     @ToString
-    public static class InstanceAccountPrivilegesDto1 {
+    public static class InstanceAccountPrivilegesDto {
         /**数据库名称
 数据库名称和权限必须同时填写*/
         @KsYunField(name="InstanceDatabaseName")

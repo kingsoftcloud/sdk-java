@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
 * @Classname DeleteSnapshotClient
-* @Description DeleteSnapshot
+ * @Description 删除快照数据
 */
 @Slf4j
 public class DeleteSnapshotClient extends BaseClient {

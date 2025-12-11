@@ -44,11 +44,11 @@ public class DescribeResourcePoolInstancesRequest{
 
     /**一个或者多个过滤器*/
     @KsYunField(name="Filter",type=2)
-    private List<FilterDto1> FilterList;
+    private List<FilterDto> FilterList;
 
     @Data
     @ToString
-    public static class FilterDto1 {
+    public static class FilterDto {
         /**有效值：
 
 - node-type 节点类型 KEC/EPC

@@ -26,11 +26,11 @@ hot-standby-private-ip，热备机内网ip
 hot-standby-host-type，热备机机型
 replace-type，热备替换类型*/
     @KsYunField(name="Filter.N")
-    private FilterNDto1 FilterN;
+    private FilterNDto FilterN;
 
     @Data
     @ToString
-    public static class FilterNDto1 {
+    public static class FilterNDto {
         /**参数名称*/
         @KsYunField(name="Name")
         private String Name;

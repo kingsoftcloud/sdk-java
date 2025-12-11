@@ -21,11 +21,11 @@ public class ScaleOutInstanceGroupsRequest{
 
     /**节点组信息*/
     @KsYunField(name="InstanceGroups",type=2)
-    private List<InstanceGroupsDto1> InstanceGroupsList;
+    private List<InstanceGroupsDto> InstanceGroupsList;
 
     @Data
     @ToString
-    public static class InstanceGroupsDto1 {
+    public static class InstanceGroupsDto {
         /**节点组类型:
 - Hadoop: MASTER、CORE 、TASK、GATEWAY、COMMON
 - Kafka: BROKER

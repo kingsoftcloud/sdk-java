@@ -16,11 +16,11 @@ import java.util.Arrays;
 public class DescribeSubnetAllocatedIpAddressesRequest{
     /**筛选Filter*/
     @KsYunField(name="Filter",type=2)
-    private List<FilterDto1> FilterList;
+    private List<FilterDto> FilterList;
 
     @Data
     @ToString
-    public static class FilterDto1 {
+    public static class FilterDto {
         /**有效值：
 - subnet-id，子网ID，必传且只能传一个*/
         @KsYunField(name="Name")

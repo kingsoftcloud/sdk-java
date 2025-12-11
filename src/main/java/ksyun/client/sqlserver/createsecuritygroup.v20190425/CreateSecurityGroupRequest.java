@@ -32,11 +32,11 @@ public class CreateSecurityGroupRequest{
 
     /***/
     @KsYunField(name="SecurityGroupRule",type=2)
-    private List<SecurityGroupRuleDto1> SecurityGroupRuleList;
+    private List<SecurityGroupRuleDto> SecurityGroupRuleList;
 
     @Data
     @ToString
-    public static class SecurityGroupRuleDto1 {
+    public static class SecurityGroupRuleDto {
         /**安全组规则CIDR
 
 

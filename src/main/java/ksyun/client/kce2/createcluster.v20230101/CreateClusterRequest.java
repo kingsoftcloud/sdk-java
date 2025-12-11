@@ -40,22 +40,22 @@ INDEPENDENT_CLUSTER:独立部署集群MANAGED_CLUSTER: 托管集群*/
 
     /**集群网络信息*/
     @KsYunField(name="Network")
-    private NetworkDto1 Network;
+    private NetworkDto Network;
 
     @Data
     @ToString
-    public static class NetworkDto1 {
+    public static class NetworkDto {
         /**VPC ID*/
         @KsYunField(name="VpcId")
         private String VpcId;
 
         /**apiserver 信息*/
         @KsYunField(name="ApiServer")
-        private ApiServerDto2 ApiServer;
+        private NetworkApiServerDto ApiServer;
 
         @Data
         @ToString
-        public static class ApiServerDto2 {
+        public static class NetworkApiServerDto {
             /**	
 EIP ID*/
             @KsYunField(name="EipId")
@@ -78,11 +78,11 @@ EIP ID*/
 
         /**VPC-CNI 信息*/
         @KsYunField(name="VpcCNI")
-        private VpcCNIDto3 VpcCNI;
+        private NetworkVpcCNIDto VpcCNI;
 
         @Data
         @ToString
-        public static class VpcCNIDto3 {
+        public static class NetworkVpcCNIDto {
             /**是否开启vpc-cni，默认值：false*/
             @KsYunField(name="Enable")
             private Boolean Enable;
@@ -133,18 +133,18 @@ vpc的子网id，必须选跟集群同vpc下的子网Id,可以填多个*/
 
     /**节点相关配置*/
     @KsYunField(name="NodeInstanceSet",type=2)
-    private List<NodeInstanceSetDto4> NodeInstanceSetList;
+    private List<NodeInstanceSetDto> NodeInstanceSetList;
 
     @Data
     @ToString
-    public static class NodeInstanceSetDto4 {
+    public static class NodeInstanceSetDto {
         /**节点基础配置*/
         @KsYunField(name="BasicSetting")
-        private BasicSettingDto5 BasicSetting;
+        private NodeInstanceSetBasicSettingDto BasicSetting;
 
         @Data
         @ToString
-        public static class BasicSettingDto5 {
+        public static class NodeInstanceSetBasicSettingDto {
             /**节点数量*/
             @KsYunField(name="Num")
             private Integer Num;
@@ -173,11 +173,11 @@ HOST_NAME：主机hostname*/
 
             /**系统盘配置*/
             @KsYunField(name="SystemDisk")
-            private SystemDiskDto6 SystemDisk;
+            private NodeInstanceSetBasicSettingSystemDiskDto SystemDisk;
 
             @Data
             @ToString
-            public static class SystemDiskDto6 {
+            public static class NodeInstanceSetBasicSettingSystemDiskDto {
                 /**系统磁盘类型*/
                 @KsYunField(name="Type")
                 private String Type;
@@ -196,11 +196,11 @@ HOST_NAME：主机hostname*/
 
             /**Container 配置*/
             @KsYunField(name="Container")
-            private ContainerDto7 Container;
+            private NodeInstanceSetBasicSettingContainerDto Container;
 
             @Data
             @ToString
-            public static class ContainerDto7 {
+            public static class NodeInstanceSetBasicSettingContainerDto {
                 /**容器运行时*/
                 @KsYunField(name="Runtime")
                 private String Runtime;
@@ -234,11 +234,11 @@ HOST_NAME：主机hostname*/
 
             /**数据盘配置*/
             @KsYunField(name="DataDisk")
-            private DataDiskDto8 DataDisk;
+            private NodeInstanceSetBasicSettingDataDiskDto DataDisk;
 
             @Data
             @ToString
-            public static class DataDiskDto8 {
+            public static class NodeInstanceSetBasicSettingDataDiskDto {
                 /**数据盘类型*/
                 @KsYunField(name="Type")
                 private String Type;
@@ -281,11 +281,11 @@ HOST_NAME：主机hostname*/
 
             /**登录方式配置*/
             @KsYunField(name="LoginSetting")
-            private LoginSettingDto9 LoginSetting;
+            private NodeInstanceSetBasicSettingLoginSettingDto LoginSetting;
 
             @Data
             @ToString
-            public static class LoginSettingDto9 {
+            public static class NodeInstanceSetBasicSettingLoginSettingDto {
                 /**密码*/
                 @KsYunField(name="Password")
                 private String Password;
@@ -361,11 +361,11 @@ gpu的驱动id （为gpu类型才生效）
 
         /**节点高级配置*/
         @KsYunField(name="AdvancedSetting")
-        private AdvancedSettingDto10 AdvancedSetting;
+        private NodeInstanceSetAdvancedSettingDto AdvancedSetting;
 
         @Data
         @ToString
-        public static class AdvancedSettingDto10 {
+        public static class NodeInstanceSetAdvancedSettingDto {
             /**部署前执行脚本（base64 加密后的密文）*/
             @KsYunField(name="PostUserScript")
             private String PostUserScript;
@@ -376,11 +376,11 @@ gpu的驱动id （为gpu类型才生效）
 
             /**Label 列表*/
             @KsYunField(name="Labels",type=2)
-            private List<LabelsDto11> LabelsList;
+            private List<NodeInstanceSetAdvancedSettingLabelsDto> LabelsList;
 
             @Data
             @ToString
-            public static class LabelsDto11 {
+            public static class NodeInstanceSetAdvancedSettingLabelsDto {
                 /**	
 Label Key*/
                 @KsYunField(name="Key")
@@ -394,11 +394,11 @@ Label Key*/
 
             /***/
             @KsYunField(name="Taints",type=2)
-            private List<TaintsDto12> TaintsList;
+            private List<NodeInstanceSetAdvancedSettingTaintsDto> TaintsList;
 
             @Data
             @ToString
-            public static class TaintsDto12 {
+            public static class NodeInstanceSetAdvancedSettingTaintsDto {
                 /**	
 Taints key*/
                 @KsYunField(name="Key")
@@ -417,11 +417,11 @@ Taints key*/
 
             /**容器相关信息*/
             @KsYunField(name="Container")
-            private ContainerDto13 Container;
+            private NodeInstanceSetAdvancedSettingContainerDto Container;
 
             @Data
             @ToString
-            public static class ContainerDto13 {
+            public static class NodeInstanceSetAdvancedSettingContainerDto {
                 /**容器运行时名称:
 • Containerd（默认）*/
                 @KsYunField(name="Runtime")
@@ -437,11 +437,11 @@ Taints key*/
 
         /**组件配置*/
         @KsYunField(name="Components",type=2)
-        private List<ComponentsDto14> ComponentsList;
+        private List<NodeInstanceSetComponentsDto> ComponentsList;
 
         @Data
         @ToString
-        public static class ComponentsDto14 {
+        public static class NodeInstanceSetComponentsDto {
             /**组件类型*/
             @KsYunField(name="Type")
             private String Type;
@@ -470,11 +470,11 @@ Taints key*/
 
     /**addon插件配置*/
     @KsYunField(name="Addons",type=2)
-    private List<AddonsDto15> AddonsList;
+    private List<AddonsDto> AddonsList;
 
     @Data
     @ToString
-    public static class AddonsDto15 {
+    public static class AddonsDto {
         /**插件名称（会根据插件名称选择
 • csi-driver 
 • lb-controller （推荐默认选择该组件）

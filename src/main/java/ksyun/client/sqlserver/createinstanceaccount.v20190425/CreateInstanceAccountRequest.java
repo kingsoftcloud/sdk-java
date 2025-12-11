@@ -40,11 +40,11 @@ root, rdsrepladmin, rdsadmin, dtsroot, sa不可用；由大小写字母、数字
 
     /**实例账号权限列表*/
     @KsYunField(name="InstanceAccountPrivileges",type=2)
-    private List<InstanceAccountPrivilegesDto1> InstanceAccountPrivilegesList;
+    private List<InstanceAccountPrivilegesDto> InstanceAccountPrivilegesList;
 
     @Data
     @ToString
-    public static class InstanceAccountPrivilegesDto1 {
+    public static class InstanceAccountPrivilegesDto {
         /**数据名称*/
         @KsYunField(name="InstanceDatabaseName")
         private String InstanceDatabaseName;

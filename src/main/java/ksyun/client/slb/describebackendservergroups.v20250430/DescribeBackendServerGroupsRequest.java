@@ -16,11 +16,11 @@ import java.util.Arrays;
 public class DescribeBackendServerGroupsRequest{
     /**筛选Filter*/
     @KsYunField(name="Filter",type=2)
-    private List<FilterDto1> FilterList;
+    private List<FilterDto> FilterList;
 
     @Data
     @ToString
-    public static class FilterDto1 {
+    public static class FilterDto {
         /**有效值： 
 - vpc-id，Vpc的ID
 - backend-server-type，服务器类型

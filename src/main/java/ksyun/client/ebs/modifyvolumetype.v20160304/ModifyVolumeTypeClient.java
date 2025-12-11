@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
 * @Classname ModifyVolumeTypeClient
-* @Description ssd3.0离线变配essd
+ * @Description SSD3.0/EHDD云盘变配ESSD云盘
 */
 @Slf4j
 public class ModifyVolumeTypeClient extends BaseClient {

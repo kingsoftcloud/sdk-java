@@ -68,11 +68,11 @@ public class ModifyNotebookRequest{
     /**存储配置列表
 （覆盖修改，需要传入全量的配置列表）*/
     @KsYunField(name="StorageConfigs",type=2)
-    private List<StorageConfigsDto1> StorageConfigsList;
+    private List<StorageConfigsDto> StorageConfigsList;
 
     @Data
     @ToString
-    public static class StorageConfigsDto1 {
+    public static class StorageConfigsDto {
         /**存储配置ID*/
         @KsYunField(name="StorageConfigId")
         private String StorageConfigId;
@@ -89,11 +89,11 @@ public class ModifyNotebookRequest{
 
     /**服务开放端口列表*/
     @KsYunField(name="ServiceConfigs",type=2)
-    private List<ServiceConfigsDto2> ServiceConfigsList;
+    private List<ServiceConfigsDto> ServiceConfigsList;
 
     @Data
     @ToString
-    public static class ServiceConfigsDto2 {
+    public static class ServiceConfigsDto {
         /**服务名称*/
         @KsYunField(name="Service")
         private String Service;

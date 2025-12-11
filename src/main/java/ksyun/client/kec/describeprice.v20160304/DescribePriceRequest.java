@@ -40,11 +40,11 @@ public class DescribePriceRequest{
 
     /**数据盘（云盘）的类型，数据盘n的类型，n 的取值范围为 [1, 32]，不同套餐规格支持的挂盘数量不同，详见官网文档。DataDisk.n.Type与DataDisk.n.Size必须都填写才有效。*/
     @KsYunField(name="DataDisk",type=2)
-    private List<DataDiskDto1> DataDiskList;
+    private List<DataDiskDto> DataDiskList;
 
     @Data
     @ToString
-    public static class DataDiskDto1 {
+    public static class DataDiskDto {
         /**数据盘（云盘）的类型，数据盘n的类型，n 的取值范围为 [1, 32]，不同套餐规格支持的挂盘数量不同，详见官网文档。DataDisk.n.Type与DataDisk.n.Size必须都填写才有效。*/
         @KsYunField(name="Type")
         private String Type;

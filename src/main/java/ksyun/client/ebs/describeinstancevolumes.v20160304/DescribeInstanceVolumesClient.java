@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
 * @Classname DescribeInstanceVolumesClient
-* @Description DescribeInstanceVolumes
+ * @Description 查询云主机所挂载云硬盘
 */
 @Slf4j
 public class DescribeInstanceVolumesClient extends BaseClient {

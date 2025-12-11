@@ -20,11 +20,11 @@ public class SetUpProxyInstanceRequest{
 
     /**只读实例列表*/
     @KsYunField(name="ReadOnlyInstanceList",type=2)
-    private List<ReadOnlyInstanceListDto1> ReadOnlyInstanceListList;
+    private List<ReadOnlyInstanceListDto> ReadOnlyInstanceListList;
 
     @Data
     @ToString
-    public static class ReadOnlyInstanceListDto1 {
+    public static class ReadOnlyInstanceListDto {
         /**只读实例节点ID*/
         @KsYunField(name="Id")
         private String Id;
