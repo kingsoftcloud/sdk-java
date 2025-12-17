@@ -6,7 +6,7 @@
 
     <groupId>com.ksyun</groupId>
     <artifactId>ksyun-java-sdk</artifactId>
-    <version>1.8.6.30</version>
+    <version>1.8.6.31</version>
     <packaging>jar</packaging>
 
     <name>KSYUN SDK for Java</name>
@@ -225,6 +225,7 @@
                         <extensions>true</extensions>
                         <configuration>
                             <publishingServerId>central</publishingServerId>
+                            <autoPublish>true</autoPublish>
                         </configuration>
                     </plugin>
 

@@ -8,6 +8,41 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Extract version from pom.xml
+        id: get_version
+        run: |
+          VERSION=$(grep -m1 '<version>' pom.xml | sed 's/.*<version>\(.*\)<\/version>.*/\1/')
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Detected version: $VERSION"
+
+      - name: Check if tag exists
+        id: check_tag
+        run: |
+          if git rev-parse "v${{ steps.get_version.outputs.version }}" >/dev/null 2>&1; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+            echo "Tag v${{ steps.get_version.outputs.version }} already exists"
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+            echo "Tag v${{ steps.get_version.outputs.version }} does not exist"
+          fi
+
+      - name: Create Release
+        id: create_release
+        if: steps.check_tag.outputs.exists == 'false'
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ steps.get_version.outputs.version }}
+          release_name: Release v${{ steps.get_version.outputs.version }}
+          body: |
+            Auto-generated release for version ${{ steps.get_version.outputs.version }}
+          draft: false
+          prerelease: false
+
       - name: Set up Maven Central Repository
         uses: actions/setup-java@v2
         with:
@@ -16,13 +51,15 @@ jobs:
           server-id: central
           server-username: MAVEN_USERNAME
           server-password: MAVEN_PASSWORD
-      - id: install-secret-key
-        name: Install gpg secret key
+
+      - name: Install gpg secret key
         run: |
           cat <(echo -e "${{ secrets.OSSRH_GPG_SECRET_KEY }}") | gpg --batch --import
           gpg --list-secret-keys
+
       - name: Publish package
         env:
           MAVEN_USERNAME: ${{ secrets.mvn_central_portal_user_name }}
           MAVEN_PASSWORD: ${{ secrets.mvn_central_portal_password }}
-        run: mvn clean deploy  --batch-mode -Dgpg.passphrase=ksyun@123!  -Dmaven.skip.Test=true
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+        run: mvn clean deploy --batch-mode -Dmaven.skip.Test=true
