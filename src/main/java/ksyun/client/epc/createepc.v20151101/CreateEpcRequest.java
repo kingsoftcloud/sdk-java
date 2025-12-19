@@ -378,16 +378,16 @@ storage_bond*/
     @KsYunField(name="StorageRoceNetworkInterfaceMode")
     private String StorageRoceNetworkInterfaceMode;
 
-    /**
-     * 计算roce集群名称
-     */
-    @KsYunField(name = "RoceCluster")
+    /**计算roce集群名称*/
+    @KsYunField(name="RoceCluster")
     private String RoceCluster;
 
-    /**
-     * 存储Roce卡集群名称
-     */
-    @KsYunField(name = "SRoceCluster")
+    /**存储Roce卡集群名称*/
+    @KsYunField(name="SRoceCluster")
     private String SRoceCluster;
+
+    /**自定义脚本*/
+    @KsYunField(name="UserDefinedData")
+    private String UserDefinedData;
 
 }

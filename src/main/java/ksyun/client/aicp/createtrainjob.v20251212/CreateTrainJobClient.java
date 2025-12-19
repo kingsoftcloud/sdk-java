@@ -1,4 +1,4 @@
-package ksyun.client.cdn.getcdndomains.v20250503;
+package ksyun.client.aicp.createtrainjob.v20251212;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,14 +12,14 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.*;
 
 /**
-* @Classname GetCdnDomainsClient
-* @Description 根据用户查询域名信息列表-V3版本
+* @Classname CreateTrainJobClient
+* @Description 创建训练任务
 */
 @Slf4j
-public class GetCdnDomainsClient extends BaseClient {
-    private final static String service = "cdn";
-    private final static String version = "V3";
-    private final static String action = "GetCdnDomains";
+public class CreateTrainJobClient extends BaseClient {
+    private final static String service = "aicp";
+    private final static String version = "2025-12-12";
+    private final static String action = "CreateTrainJob";
 
 
     /**
@@ -28,7 +28,7 @@ public class GetCdnDomainsClient extends BaseClient {
     private Credential credential;
 
 
-    public GetCdnDomainsClient(Credential credential) {
+    public CreateTrainJobClient(Credential credential) {
         this.credential = credential;
     }
 
@@ -41,9 +41,9 @@ public class GetCdnDomainsClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetCdnDomainsResponse doPost(String path, GetCdnDomainsRequest requestObj) throws Exception {
+    public CreateTrainJobResponse doPost(String path, CreateTrainJobRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doPost(path, requestObj, head);
     }
 
@@ -56,11 +56,11 @@ public class GetCdnDomainsClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetCdnDomainsResponse doPost(String path, GetCdnDomainsRequest requestObj, Map<String, String> head) throws Exception {
+    public CreateTrainJobResponse doPost(String path, CreateTrainJobRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        requestHeaders.putIfAbsent("Content-Type", "application/json");
         String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, GetCdnDomainsResponse.class);
+        return JSON.parseObject(response, CreateTrainJobResponse.class);
     }
 
     /**
@@ -70,9 +70,9 @@ public class GetCdnDomainsClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public GetCdnDomainsResponse doPostRaw(String path, GetCdnDomainsRequest requestObj) throws Exception {
+    public CreateTrainJobResponse doPostRaw(String path, CreateTrainJobRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doPostRaw(path, requestObj, head);
     }
 
@@ -84,11 +84,11 @@ public class GetCdnDomainsClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public GetCdnDomainsResponse doPostRaw(String path, GetCdnDomainsRequest requestObj, Map<String, String> head) throws Exception {
+    public CreateTrainJobResponse doPostRaw(String path, CreateTrainJobRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        requestHeaders.putIfAbsent("Content-Type", "application/json");
         String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, GetCdnDomainsResponse.class);
+        return JSON.parseObject(response, CreateTrainJobResponse.class);
     }
     /**
      * get 请求
@@ -98,9 +98,9 @@ public class GetCdnDomainsClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetCdnDomainsResponse doGet(String path, GetCdnDomainsRequest requestObj) throws Exception {
+    public CreateTrainJobResponse doGet(String path, CreateTrainJobRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        head.putIfAbsent("Content-Type", "application/json");
         return doGet(path, requestObj, head);
     }
 
@@ -113,11 +113,11 @@ public class GetCdnDomainsClient extends BaseClient {
          * @return
          * @throws Exception
          */
-        public GetCdnDomainsResponse doGet(String path, GetCdnDomainsRequest requestObj, Map<String, String> head) throws Exception {
+        public CreateTrainJobResponse doGet(String path, CreateTrainJobRequest requestObj, Map<String, String> head) throws Exception {
             final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-            requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+            requestHeaders.putIfAbsent("Content-Type", "application/json");
             String response = doRpc(path, requestObj, requestHeaders, "get");
-            return JSON.parseObject(response, GetCdnDomainsResponse.class);
+            return JSON.parseObject(response, CreateTrainJobResponse.class);
         }
 
     /**
@@ -128,9 +128,9 @@ public class GetCdnDomainsClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetCdnDomainsResponse doDelete(String path, GetCdnDomainsRequest requestObj) throws Exception {
+    public CreateTrainJobResponse doDelete(String path, CreateTrainJobRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doDelete(path, requestObj, head);
     }
 
@@ -143,11 +143,11 @@ public class GetCdnDomainsClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetCdnDomainsResponse doDelete(String path, GetCdnDomainsRequest requestObj, Map<String, String> head) throws Exception {
+    public CreateTrainJobResponse doDelete(String path, CreateTrainJobRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        requestHeaders.putIfAbsent("Content-Type", "application/json");
         String response = doRpc(path, requestObj, requestHeaders, "delete");
-        return JSON.parseObject(response, GetCdnDomainsResponse.class);
+        return JSON.parseObject(response, CreateTrainJobResponse.class);
     }
 
 
@@ -159,9 +159,9 @@ public class GetCdnDomainsClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetCdnDomainsResponse doPut(String path, GetCdnDomainsRequest requestObj) throws Exception {
+    public CreateTrainJobResponse doPut(String path, CreateTrainJobRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        head.putIfAbsent("Content-Type", "application/json");
         return doPut(path, requestObj, head);
     }
 
@@ -174,11 +174,11 @@ public class GetCdnDomainsClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetCdnDomainsResponse doPut(String path, GetCdnDomainsRequest requestObj, Map<String, String> head) throws Exception {
+    public CreateTrainJobResponse doPut(String path, CreateTrainJobRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-       requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+       requestHeaders.putIfAbsent("Content-Type", "application/json");
         String response = doRpc(path, requestObj, requestHeaders, "put");
-        return JSON.parseObject(response, GetCdnDomainsResponse.class);
+        return JSON.parseObject(response, CreateTrainJobResponse.class);
     }
 
     /**
@@ -190,7 +190,7 @@ public class GetCdnDomainsClient extends BaseClient {
          * @return
          * @throws Exception
          */
-        private String doRpc(String path, GetCdnDomainsRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
+        private String doRpc(String path, CreateTrainJobRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
             //断言
             Objects.requireNonNull(path, "path cannot be null");
             Objects.requireNonNull(requestObj, "requestObj cannot be null");
@@ -222,7 +222,7 @@ public class GetCdnDomainsClient extends BaseClient {
         }
 
 
-        private JSONObject getRequestParam(GetCdnDomainsRequest requestObj, String contentType) throws Exception {
+        private JSONObject getRequestParam(CreateTrainJobRequest requestObj, String contentType) throws Exception {
             //请求参数
             if (contentType.equalsIgnoreCase("application/json")) {
                 return getPostRawRequestParams(requestObj);
@@ -231,7 +231,7 @@ public class GetCdnDomainsClient extends BaseClient {
         }
 
 
-        private JSONObject getSimpleRequestParams(GetCdnDomainsRequest requestObj) throws Exception {
+        private JSONObject getSimpleRequestParams(CreateTrainJobRequest requestObj) throws Exception {
             JSONObject requestParams = new JSONObject();
 
             //设置请求体请求参数
@@ -239,7 +239,7 @@ public class GetCdnDomainsClient extends BaseClient {
             return requestParams;
         }
 
-        private JSONObject getPostRawRequestParams(GetCdnDomainsRequest requestObj) throws Exception {
+        private JSONObject getPostRawRequestParams(CreateTrainJobRequest requestObj) throws Exception {
             JSONObject requestParams = new JSONObject();
 
             //设置请求体请求参数

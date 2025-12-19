@@ -1,4 +1,4 @@
-package ksyun.client.cdn.getcdndomains.v20250503;
+package ksyun.client.cdn.startstopcdndomain.v20250503;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;
@@ -8,12 +8,12 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname GetCdnDomainsResponse
-* @Description GetCdnDomains 返回体
+* @Classname StartStopCdnDomainResponse
+* @Description StartStopCdnDomain 返回体
 */
 @Data
 @ToString
-public class GetCdnDomainsResponse extends BaseResponseModel {
+public class StartStopCdnDomainResponse extends BaseResponseModel {
 
     /**
      * 请求id

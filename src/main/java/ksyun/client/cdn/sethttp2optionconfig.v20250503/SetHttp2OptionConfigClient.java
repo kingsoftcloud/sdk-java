@@ -1,4 +1,4 @@
-package ksyun.client.cdn.getcdndomains.v20250503;
+package ksyun.client.cdn.sethttp2optionconfig.v20250503;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,14 +12,14 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.*;
 
 /**
-* @Classname GetCdnDomainsClient
-* @Description 根据用户查询域名信息列表-V3版本
+* @Classname SetHttp2OptionConfigClient
+* @Description 设置HTTP/2接口
 */
 @Slf4j
-public class GetCdnDomainsClient extends BaseClient {
+public class SetHttp2OptionConfigClient extends BaseClient {
     private final static String service = "cdn";
     private final static String version = "V3";
-    private final static String action = "GetCdnDomains";
+    private final static String action = "SetHttp2OptionConfig";
 
 
     /**
@@ -28,7 +28,7 @@ public class GetCdnDomainsClient extends BaseClient {
     private Credential credential;
 
 
-    public GetCdnDomainsClient(Credential credential) {
+    public SetHttp2OptionConfigClient(Credential credential) {
         this.credential = credential;
     }
 
@@ -41,7 +41,7 @@ public class GetCdnDomainsClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetCdnDomainsResponse doPost(String path, GetCdnDomainsRequest requestObj) throws Exception {
+    public SetHttp2OptionConfigResponse doPost(String path, SetHttp2OptionConfigRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
@@ -56,11 +56,11 @@ public class GetCdnDomainsClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetCdnDomainsResponse doPost(String path, GetCdnDomainsRequest requestObj, Map<String, String> head) throws Exception {
+    public SetHttp2OptionConfigResponse doPost(String path, SetHttp2OptionConfigRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, GetCdnDomainsResponse.class);
+        return JSON.parseObject(response, SetHttp2OptionConfigResponse.class);
     }
 
     /**
@@ -70,7 +70,7 @@ public class GetCdnDomainsClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public GetCdnDomainsResponse doPostRaw(String path, GetCdnDomainsRequest requestObj) throws Exception {
+    public SetHttp2OptionConfigResponse doPostRaw(String path, SetHttp2OptionConfigRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPostRaw(path, requestObj, head);
@@ -84,11 +84,11 @@ public class GetCdnDomainsClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public GetCdnDomainsResponse doPostRaw(String path, GetCdnDomainsRequest requestObj, Map<String, String> head) throws Exception {
+    public SetHttp2OptionConfigResponse doPostRaw(String path, SetHttp2OptionConfigRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, GetCdnDomainsResponse.class);
+        return JSON.parseObject(response, SetHttp2OptionConfigResponse.class);
     }
     /**
      * get 请求
@@ -98,7 +98,7 @@ public class GetCdnDomainsClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetCdnDomainsResponse doGet(String path, GetCdnDomainsRequest requestObj) throws Exception {
+    public SetHttp2OptionConfigResponse doGet(String path, SetHttp2OptionConfigRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doGet(path, requestObj, head);
@@ -113,11 +113,11 @@ public class GetCdnDomainsClient extends BaseClient {
          * @return
          * @throws Exception
          */
-        public GetCdnDomainsResponse doGet(String path, GetCdnDomainsRequest requestObj, Map<String, String> head) throws Exception {
+        public SetHttp2OptionConfigResponse doGet(String path, SetHttp2OptionConfigRequest requestObj, Map<String, String> head) throws Exception {
             final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
             requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
             String response = doRpc(path, requestObj, requestHeaders, "get");
-            return JSON.parseObject(response, GetCdnDomainsResponse.class);
+            return JSON.parseObject(response, SetHttp2OptionConfigResponse.class);
         }
 
     /**
@@ -128,7 +128,7 @@ public class GetCdnDomainsClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetCdnDomainsResponse doDelete(String path, GetCdnDomainsRequest requestObj) throws Exception {
+    public SetHttp2OptionConfigResponse doDelete(String path, SetHttp2OptionConfigRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDelete(path, requestObj, head);
@@ -143,11 +143,11 @@ public class GetCdnDomainsClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetCdnDomainsResponse doDelete(String path, GetCdnDomainsRequest requestObj, Map<String, String> head) throws Exception {
+    public SetHttp2OptionConfigResponse doDelete(String path, SetHttp2OptionConfigRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "delete");
-        return JSON.parseObject(response, GetCdnDomainsResponse.class);
+        return JSON.parseObject(response, SetHttp2OptionConfigResponse.class);
     }
 
 
@@ -159,7 +159,7 @@ public class GetCdnDomainsClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetCdnDomainsResponse doPut(String path, GetCdnDomainsRequest requestObj) throws Exception {
+    public SetHttp2OptionConfigResponse doPut(String path, SetHttp2OptionConfigRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doPut(path, requestObj, head);
@@ -174,11 +174,11 @@ public class GetCdnDomainsClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetCdnDomainsResponse doPut(String path, GetCdnDomainsRequest requestObj, Map<String, String> head) throws Exception {
+    public SetHttp2OptionConfigResponse doPut(String path, SetHttp2OptionConfigRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "put");
-        return JSON.parseObject(response, GetCdnDomainsResponse.class);
+        return JSON.parseObject(response, SetHttp2OptionConfigResponse.class);
     }
 
     /**
@@ -190,7 +190,7 @@ public class GetCdnDomainsClient extends BaseClient {
          * @return
          * @throws Exception
          */
-        private String doRpc(String path, GetCdnDomainsRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
+        private String doRpc(String path, SetHttp2OptionConfigRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
             //断言
             Objects.requireNonNull(path, "path cannot be null");
             Objects.requireNonNull(requestObj, "requestObj cannot be null");
@@ -222,7 +222,7 @@ public class GetCdnDomainsClient extends BaseClient {
         }
 
 
-        private JSONObject getRequestParam(GetCdnDomainsRequest requestObj, String contentType) throws Exception {
+        private JSONObject getRequestParam(SetHttp2OptionConfigRequest requestObj, String contentType) throws Exception {
             //请求参数
             if (contentType.equalsIgnoreCase("application/json")) {
                 return getPostRawRequestParams(requestObj);
@@ -231,7 +231,7 @@ public class GetCdnDomainsClient extends BaseClient {
         }
 
 
-        private JSONObject getSimpleRequestParams(GetCdnDomainsRequest requestObj) throws Exception {
+        private JSONObject getSimpleRequestParams(SetHttp2OptionConfigRequest requestObj) throws Exception {
             JSONObject requestParams = new JSONObject();
 
             //设置请求体请求参数
@@ -239,7 +239,7 @@ public class GetCdnDomainsClient extends BaseClient {
             return requestParams;
         }
 
-        private JSONObject getPostRawRequestParams(GetCdnDomainsRequest requestObj) throws Exception {
+        private JSONObject getPostRawRequestParams(SetHttp2OptionConfigRequest requestObj) throws Exception {
             JSONObject requestParams = new JSONObject();
 
             //设置请求体请求参数

@@ -24,9 +24,9 @@ public class DescribeEpcStocksRequest{
         /**有效值：
 - host-type，裸金属服务器类型 
 - availability-zone,可用区
-         - stock-attribute,库存属性
-         - roce-cluster,Roce集群名称
-         - sroce-cluster,Roce存储集群名称*/
+- stock-attribute,库存属性
+- roce-cluster,Roce集群名称
+- sroce-cluster,Roce存储集群名称*/
         @KsYunField(name="Name")
         private String Name;
 

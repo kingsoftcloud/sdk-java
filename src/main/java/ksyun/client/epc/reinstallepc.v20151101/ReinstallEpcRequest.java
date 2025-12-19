@@ -155,4 +155,8 @@ eth8x_bond、storage_bond*/
     @KsYunField(name="StorageRoceNetworkCardName")
     private String StorageRoceNetworkCardName;
 
+    /**自定义脚本*/
+    @KsYunField(name="UserDefinedData")
+    private String UserDefinedData;
+
 }
