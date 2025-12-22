@@ -176,14 +176,14 @@ public class GetRefreshOrPreloadTaskClient extends BaseClient {
      */
     public GetRefreshOrPreloadTaskResponse doPut(String path, GetRefreshOrPreloadTaskRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+       requestHeaders.putIfAbsent("Content-Type", "application/json");
         String response = doRpc(path, requestObj, requestHeaders, "put");
         return JSON.parseObject(response, GetRefreshOrPreloadTaskResponse.class);
     }
 
     /**
-     * rpc
-     *
+         * rpc
+         *
      * @param path
      * @param requestObj
      * @param head

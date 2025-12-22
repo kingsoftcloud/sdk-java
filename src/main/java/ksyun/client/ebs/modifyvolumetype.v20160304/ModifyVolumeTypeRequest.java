@@ -18,11 +18,13 @@ public class ModifyVolumeTypeRequest{
     @KsYunField(name="VolumeId")
     private String VolumeId;
 
-    /***/
+    /**
+     * 变配目标云盘的容量值
+     */
     @KsYunField(name="PerformanceVolumeSize")
     private String PerformanceVolumeSize;
 
-    /***/
+    /**ESSD盘类型，默认是ESSD_PL1*/
     @KsYunField(name="PerformanceLevelVolumeCategory")
     private String PerformanceLevelVolumeCategory;
 
