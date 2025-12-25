@@ -45,7 +45,7 @@ public class RestoreDBInstanceFromDBBackupRequest{
 
     /**#### 可用区字段
 示例(AvailabilityZone.1=cn-beijing-6a&AvailabilityZone.2=cn-beijing-6b)，表示实例的主副本在a区，备副本在b区。如果没有跨可用区的需求，建议将实例创建在云主机的可用区内已减少网络延时。*/
-    @KsYunField(name="AvailabilityZone",type=2)
+    @KsYunField(name = "AvailabilityZone", type = 1)
     private List<String> AvailabilityZoneList;
 
     /**##### VPC网络ID，可在网络控制台获取。不传默认与原备份一致*/

@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DescribeEpcStocksRequest{
     /**筛选Filter*/
-    @KsYunField(name="Filter",type=2)
+    @KsYunField(name = "Filter", type = 1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -31,7 +31,7 @@ public class DescribeEpcStocksRequest{
         private String Name;
 
         /***/
-        @KsYunField(name="Value",type=2)
+        @KsYunField(name = "Value", type = 1)
         private List<String> ValueList;
 
     }

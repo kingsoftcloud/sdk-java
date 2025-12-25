@@ -44,7 +44,7 @@ hot-standby-sn，热备机sn
 hot-standby-private-ip，热备机内网ip
 hot-standby-host-type，热备机机型
 replace-type，热备替换类型*/
-        @KsYunField(name="Value",type=2)
+        @KsYunField(name = "Value", type = 1)
         private List<String> ValueList;
 
     }

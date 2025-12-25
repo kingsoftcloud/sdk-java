@@ -21,7 +21,7 @@ public class DescribeSoVpcsRequest{
     /**VPC的ID。
 • 参数 - N：表示VPC ID的序号，单次调用数量上限为100个。
 • 多个VPC ID之间用&分隔。*/
-    @KsYunField(name="VpcIds",type=2)
+    @KsYunField(name = "VpcIds", type = 1)
     private List<String> VpcIdsList;
 
     /**分页查询凭证，用于标记分页的位置。

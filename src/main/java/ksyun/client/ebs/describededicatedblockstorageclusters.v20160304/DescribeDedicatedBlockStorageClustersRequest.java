@@ -35,7 +35,7 @@ public class DescribeDedicatedBlockStorageClustersRequest{
     private String DbscCreateDate;
 
     /***/
-    @KsYunField(name="DbscId",type=2)
+    @KsYunField(name = "DbscId", type = 1)
     private List<String> DbscIdList;
 
 }

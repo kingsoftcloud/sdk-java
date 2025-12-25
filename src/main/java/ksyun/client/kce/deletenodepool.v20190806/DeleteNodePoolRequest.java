@@ -19,7 +19,7 @@ public class DeleteNodePoolRequest{
     private String ClusterId;
 
     /**节点池id*/
-    @KsYunField(name="NodePoolId",type=2)
+    @KsYunField(name = "NodePoolId", type = 1)
     private List<String> NodePoolIdList;
 
     /**节点的删除模式，有效值:<br>- **Terminate**：销毁实例<br>- **Remove**：仅把节点移出集群，实例本身不销毁<br>默认值：Terminate*/

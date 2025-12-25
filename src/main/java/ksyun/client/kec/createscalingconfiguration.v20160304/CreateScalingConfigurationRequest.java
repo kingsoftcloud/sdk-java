@@ -56,12 +56,12 @@ public class CreateScalingConfigurationRequest{
 
     /**密钥对 
  */
-    @KsYunField(name="KeyId",type=2)
+    @KsYunField(name = "KeyId", type = 1)
     private List<String> KeyIdList;
 
     /**云盘数据盘类型 
  */
-    @KsYunField(name="DataDisk",type=2)
+    @KsYunField(name = "DataDisk", type = 1)
     private List<DataDiskDto> DataDiskList;
 
     @Data
@@ -134,7 +134,7 @@ public class CreateScalingConfigurationRequest{
 
     /** 启动配置创建的ECS实例的标签键 
  支持1-128个字符，仅支持中英文字符、数字及±=._/@:*/
-    @KsYunField(name="Tag",type=2)
+    @KsYunField(name = "Tag", type = 1)
     private List<TagDto> TagList;
 
     @Data

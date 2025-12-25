@@ -19,11 +19,11 @@ public class AllocateSecurityGroupRequest{
     private String AvailableZone;
 
     /**缓存服务ID 	 N：代表数字，示例（CacheId.1=xxxx&CacheId.2=yyyy），每个缓存服务都会绑定SecurityGroupId.N*/
-    @KsYunField(name="CacheId",type=2)
+    @KsYunField(name = "CacheId", type = 1)
     private List<String> CacheIdList;
 
     /**安全组ID   	 N：代表数字，示例（SecurityGroupId.1=xxxx&SecurityGroupId.2=yyyy）*/
-    @KsYunField(name="SecurityGroupId",type=2)
+    @KsYunField(name = "SecurityGroupId", type = 1)
     private List<String> SecurityGroupIdList;
 
 }

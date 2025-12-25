@@ -41,17 +41,17 @@ raw、vhd、qcow2、vmdk*/
 
     /**存放数据盘镜像的ks3对应的bucket地址。
 http开头，有效的bucket地址*/
-    @KsYunField(name="DataImageUrl",type=2)
+    @KsYunField(name = "DataImageUrl", type = 1)
     private List<String> DataImageUrlList;
 
     /**数据盘磁盘容量。
 2-64个字符，支持中文、字母、数字以及-_@#.字符*/
-    @KsYunField(name="DataImageSize",type=2)
+    @KsYunField(name = "DataImageSize", type = 1)
     private List<String> DataImageSizeList;
 
     /**选择上传的数据盘镜像格式。
 raw*/
-    @KsYunField(name="DataImageFormat",type=2)
+    @KsYunField(name = "DataImageFormat", type = 1)
     private List<String> DataImageFormatList;
 
 }

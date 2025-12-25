@@ -27,7 +27,7 @@ public class RunSoInstancesRequest{
     private String InstanceTypeId;
 
     /**安全组*/
-    @KsYunField(name="SecurityGroupId",type=2)
+    @KsYunField(name = "SecurityGroupId", type = 1)
     private List<String> SecurityGroupIdList;
 
     /**子网ID*/
@@ -42,7 +42,7 @@ public class RunSoInstancesRequest{
     @ToString
     public static class VolumesDto {
         /**硬盘大小*/
-        @KsYunField(name="Size",type=2)
+        @KsYunField(name = "Size", type = 1)
         private List<Integer> SizeList;
 
     }

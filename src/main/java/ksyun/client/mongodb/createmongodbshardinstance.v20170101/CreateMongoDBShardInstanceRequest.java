@@ -20,7 +20,7 @@ public class CreateMongoDBShardInstanceRequest{
     private String PayType;
 
     /**可用区信息，默认为默认为当前Region A区。可[查询可用机房及可用区](https://docs.ksyun.com/documents/6679)*/
-    @KsYunField(name="AvailabilityZone",type=2)
+    @KsYunField(name = "AvailabilityZone", type = 1)
     private List<String> AvailabilityZoneList;
 
     /**实例名称

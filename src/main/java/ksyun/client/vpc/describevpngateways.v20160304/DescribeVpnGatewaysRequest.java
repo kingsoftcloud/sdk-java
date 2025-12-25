@@ -15,15 +15,15 @@ import java.util.Arrays;
 @Data
 public class DescribeVpnGatewaysRequest{
     /**项目的ID*/
-    @KsYunField(name="ProjectId",type=2)
+    @KsYunField(name = "ProjectId", type = 1)
     private List<String> ProjectIdList;
 
     /**VPN网关的ID*/
-    @KsYunField(name="VpnGatewayId",type=2)
+    @KsYunField(name = "VpnGatewayId", type = 1)
     private List<String> VpnGatewayIdList;
 
     /**筛选Filter*/
-    @KsYunField(name="Filter",type=2)
+    @KsYunField(name = "Filter", type = 1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -35,7 +35,7 @@ public class DescribeVpnGatewaysRequest{
         private String Name;
 
         /***/
-        @KsYunField(name="Value",type=2)
+        @KsYunField(name = "Value", type = 1)
         private List<String> ValueList;
 
     }

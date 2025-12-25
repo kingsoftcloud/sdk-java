@@ -19,7 +19,7 @@ public class CreateSecurityGroupRuleRequest{
     private String AvailableZone;
 
     /**IP规则   	 N：代表数字，示例（Cidrs.1=127.0.0.1/32&Cidrs.2=0.0.0.0/32）*/
-    @KsYunField(name="Cidrs",type=2)
+    @KsYunField(name = "Cidrs", type = 1)
     private List<String> CidrsList;
 
     /**安全组ID */

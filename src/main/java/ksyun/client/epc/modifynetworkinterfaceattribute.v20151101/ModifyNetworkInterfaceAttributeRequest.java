@@ -35,7 +35,7 @@ public class ModifyNetworkInterfaceAttributeRequest{
     private List<String> SecurityGroupIdListList;
 
     /**安全组,更换vpc必填*/
-    @KsYunField(name="SecurityGroupId",type=2)
+    @KsYunField(name = "SecurityGroupId", type = 1)
     private List<String> SecurityGroupIdList;
 
 }

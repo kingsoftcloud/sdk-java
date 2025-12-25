@@ -19,7 +19,7 @@ public class BindZoneVpcRequest{
     private String ZoneId;
 
     /**筛选Filter*/
-    @KsYunField(name="Vpcs",type=2)
+    @KsYunField(name = "Vpcs", type = 1)
     private List<VpcsDto> VpcsList;
 
     @Data
@@ -30,7 +30,7 @@ public class BindZoneVpcRequest{
         private String RegionName;
 
         /**要操作的VPC的id*/
-        @KsYunField(name="VpcId",type=2)
+        @KsYunField(name = "VpcId", type = 1)
         private List<String> VpcIdList;
 
     }

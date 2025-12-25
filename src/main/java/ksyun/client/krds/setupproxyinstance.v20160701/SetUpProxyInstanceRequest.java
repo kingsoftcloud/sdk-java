@@ -19,7 +19,7 @@ public class SetUpProxyInstanceRequest{
     private String DBInstanceIdentifier;
 
     /**只读实例列表*/
-    @KsYunField(name="ReadOnlyInstanceList",type=2)
+    @KsYunField(name = "ReadOnlyInstanceList", type = 1)
     private List<ReadOnlyInstanceListDto> ReadOnlyInstanceListList;
 
     @Data

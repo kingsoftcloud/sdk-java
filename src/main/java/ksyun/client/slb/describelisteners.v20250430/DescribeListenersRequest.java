@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class DescribeListenersRequest{
     /**多个监听器的ID*/
-    @KsYunField(name="ListenerId",type=2)
+    @KsYunField(name = "ListenerId", type = 1)
     private List<String> ListenerIdList;
 
     /**筛选Filter*/
-    @KsYunField(name="Filter",type=2)
+    @KsYunField(name = "Filter", type = 1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -31,7 +31,7 @@ public class DescribeListenersRequest{
         private String Name;
 
         /***/
-        @KsYunField(name="Value",type=2)
+        @KsYunField(name = "Value", type = 1)
         private List<String> ValueList;
 
     }

@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DescribeAlbBackendServerGroupsRequest{
     /**筛选Filter*/
-    @KsYunField(name="Filter",type=2)
+    @KsYunField(name = "Filter", type = 1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -29,13 +29,13 @@ public class DescribeAlbBackendServerGroupsRequest{
         private String Name;
 
         /***/
-        @KsYunField(name="Value",type=2)
+        @KsYunField(name = "Value", type = 1)
         private List<String> ValueList;
 
     }
 
     /**多个服务器组id*/
-    @KsYunField(name="BackendServerGroupId",type=2)
+    @KsYunField(name = "BackendServerGroupId", type = 1)
     private List<String> BackendServerGroupIdList;
 
     /**单次调用可返回的最大条目数量*/

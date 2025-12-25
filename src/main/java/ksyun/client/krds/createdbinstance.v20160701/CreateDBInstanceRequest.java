@@ -92,7 +92,7 @@ public class CreateDBInstanceRequest{
     private String DurationUnit;
 
     /**可用区字段	示例(AvailabilityZone.1=cn-beijing-6a&AvailabilityZone.2=cn-beijing-6b)，表示实例的主副本在a区，备副本在b区。如果没有跨可用区的需求，建议将实例创建在云主机的可用区内已减少网络延时。其中企业版ERDS可用区为3个（1主2备）*/
-    @KsYunField(name="AvailabilityZone",type=2)
+    @KsYunField(name = "AvailabilityZone", type = 1)
     private List<String> AvailabilityZoneList;
 
     /**项目ID	可从IAM获取ProjectId。可按项目来进行细粒度权限控制，将实例归类到某个项目下*/

@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DescribeLoadBalancerAclsRequest{
     /**多个LoadBalancerAcl的ID*/
-    @KsYunField(name="LoadBalancerAclId",type=2)
+    @KsYunField(name = "LoadBalancerAclId", type = 1)
     private List<String> LoadBalancerAclIdList;
 
     /**单次调用可返回的最大条目数量*/

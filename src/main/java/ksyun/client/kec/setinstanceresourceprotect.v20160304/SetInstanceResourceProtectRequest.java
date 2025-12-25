@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class SetInstanceResourceProtectRequest{
     /**待修改资源保护的实例ID列表，N的范围为1-100 标准UUID格式*/
-    @KsYunField(name="InstanceId",type=2)
+    @KsYunField(name = "InstanceId", type = 1)
     private List<String> InstanceIdList;
 
     /**是否打开资源保护*/

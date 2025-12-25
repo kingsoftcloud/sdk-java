@@ -27,7 +27,7 @@ public class DescribeImagesRequest{
     private String ImageIdN;
 
     /***/
-    @KsYunField(name="Filter",type=2)
+    @KsYunField(name = "Filter", type = 1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -38,7 +38,7 @@ public class DescribeImagesRequest{
         private String Name;
 
         /***/
-        @KsYunField(name="Value",type=2)
+        @KsYunField(name = "Value", type = 1)
         private List<String> ValueList;
 
     }

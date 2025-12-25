@@ -27,7 +27,7 @@ public class CreatePdnsFdZoneRequest{
     private String Description;
 
     /**ForwardIp*/
-    @KsYunField(name="ForwardIp",type=2)
+    @KsYunField(name = "ForwardIp", type = 1)
     private List<ForwardIpDto> ForwardIpList;
 
     @Data

@@ -26,7 +26,7 @@ public class ModifyInstanceAccountPrivilegesRequest{
 ```json
 库名称和权限必须输入。例如(Get请求传List示例)：InstanceAccountPrivileges.InstanceDatabaseName.1:db_test_1 InstanceAccountPrivileges.Privilege.1:DBOwner
 ```*/
-    @KsYunField(name="InstanceAccountPrivileges",type=2)
+    @KsYunField(name = "InstanceAccountPrivileges", type = 1)
     private List<InstanceAccountPrivilegesDto> InstanceAccountPrivilegesList;
 
     @Data

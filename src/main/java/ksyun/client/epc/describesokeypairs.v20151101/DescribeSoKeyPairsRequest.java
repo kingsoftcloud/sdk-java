@@ -22,7 +22,7 @@ public class DescribeSoKeyPairsRequest{
 • 参数 - N：表示密钥对ID的序号。
 • 多个密钥对ID之间用&分隔。
 示例值：KeyPairIds.1=2c67be69-b508-48e4-a460-fe491e8d49ba*/
-    @KsYunField(name="KeyPairIds",type=2)
+    @KsYunField(name = "KeyPairIds", type = 1)
     private List<String> KeyPairIdsList;
 
     /**密钥对名称，支持模糊搜索。*/
@@ -32,7 +32,7 @@ public class DescribeSoKeyPairsRequest{
     /**密钥对名称，最多支持100个。
 • 参数 - N：表示密钥对的序号。
 • 多个密钥对之间用&分隔。*/
-    @KsYunField(name="KeyPairNames",type=2)
+    @KsYunField(name = "KeyPairNames", type = 1)
     private List<String> KeyPairNamesList;
 
     /**分页查询时设置的每页行数。

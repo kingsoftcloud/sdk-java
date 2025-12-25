@@ -33,13 +33,11 @@ public class DeleteClusterRequest{
     /**
      * 是否删除私网负载均衡实例（如果是alb且为公私网合一，则只需要删除私网负载均衡即可）
      */
-    @KsYunField(name = "PrivateLbDelete")
+    @KsYunField(name="PrivateLbDelete")
     private Boolean PrivateLbDelete;
 
-    /**
-     * 是否删除公网负载均衡实例
-     */
-    @KsYunField(name = "PublicLbDelete")
+    /**是否删除公网负载均衡实例*/
+    @KsYunField(name="PublicLbDelete")
     private Boolean PublicLbDelete;
 
 }

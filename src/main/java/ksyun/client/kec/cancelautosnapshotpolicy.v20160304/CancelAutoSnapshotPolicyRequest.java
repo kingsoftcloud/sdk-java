@@ -19,7 +19,7 @@ public class CancelAutoSnapshotPolicyRequest{
     private String AutoSnapshotPolicyId;
 
     /**待解绑的硬盘ID*/
-    @KsYunField(name="AttachVolumeId",type=2)
+    @KsYunField(name = "AttachVolumeId", type = 1)
     private List<String> AttachVolumeIdList;
 
 }

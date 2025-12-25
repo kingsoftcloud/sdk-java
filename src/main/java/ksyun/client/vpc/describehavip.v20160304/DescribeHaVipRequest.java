@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class DescribeHaVipRequest{
     /**多个高可用虚拟IP的ID*/
-    @KsYunField(name="HaVipId",type=2)
+    @KsYunField(name = "HaVipId", type = 1)
     private List<String> HaVipIdList;
 
     /**筛选Filter*/
-    @KsYunField(name="Filter",type=2)
+    @KsYunField(name = "Filter", type = 1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -32,7 +32,7 @@ public class DescribeHaVipRequest{
         private String Name;
 
         /***/
-        @KsYunField(name="Value",type=2)
+        @KsYunField(name = "Value", type = 1)
         private List<String> ValueList;
 
     }

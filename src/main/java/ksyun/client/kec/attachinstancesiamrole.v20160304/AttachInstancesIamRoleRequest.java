@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class AttachInstancesIamRoleRequest{
     /**待绑定IAM角色实例ID列表，N的范围为1-100*/
-    @KsYunField(name="InstanceId",type=2)
+    @KsYunField(name = "InstanceId", type = 1)
     private List<String> InstanceIdList;
 
     /**实例待绑定的IAM角色名称*/

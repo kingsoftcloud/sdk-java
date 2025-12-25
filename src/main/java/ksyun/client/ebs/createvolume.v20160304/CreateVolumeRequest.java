@@ -75,7 +75,7 @@ ESSD_PL3取值范围：【1761，32768】，步长：1GB
     private String ClusterId;
 
     /**标签属性*/
-    @KsYunField(name="Tag",type=2)
+    @KsYunField(name = "Tag", type = 1)
     private List<TagDto> TagList;
 
     @Data

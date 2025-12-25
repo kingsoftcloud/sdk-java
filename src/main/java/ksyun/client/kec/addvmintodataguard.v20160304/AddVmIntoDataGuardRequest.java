@@ -19,7 +19,7 @@ public class AddVmIntoDataGuardRequest{
     private String DataGuardId;
 
     /**实例ID*/
-    @KsYunField(name="InstanceId",type=2)
+    @KsYunField(name = "InstanceId", type = 1)
     private List<String> InstanceIdList;
 
 }

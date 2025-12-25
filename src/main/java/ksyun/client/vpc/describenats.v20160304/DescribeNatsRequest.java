@@ -15,15 +15,15 @@ import java.util.Arrays;
 @Data
 public class DescribeNatsRequest{
     /**项目的ID*/
-    @KsYunField(name="ProjectId",type=2)
+    @KsYunField(name = "ProjectId", type = 1)
     private List<String> ProjectIdList;
 
     /**多个Nat的ID*/
-    @KsYunField(name="NatId",type=2)
+    @KsYunField(name = "NatId", type = 1)
     private List<String> NatIdList;
 
     /**筛选Filter*/
-    @KsYunField(name="Filter",type=2)
+    @KsYunField(name = "Filter", type = 1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -37,7 +37,7 @@ public class DescribeNatsRequest{
         private String Name;
 
         /***/
-        @KsYunField(name="Value",type=2)
+        @KsYunField(name = "Value", type = 1)
         private List<String> ValueList;
 
     }
@@ -47,11 +47,11 @@ public class DescribeNatsRequest{
     private Boolean IsContainTag;
 
     /**多个标签的键*/
-    @KsYunField(name="TagKey",type=2)
+    @KsYunField(name = "TagKey", type = 1)
     private List<String> TagKeyList;
 
     /**多个标签的键*/
-    @KsYunField(name="TagKV",type=2)
+    @KsYunField(name = "TagKV", type = 1)
     private List<TagKVDto> TagKVList;
 
     @Data

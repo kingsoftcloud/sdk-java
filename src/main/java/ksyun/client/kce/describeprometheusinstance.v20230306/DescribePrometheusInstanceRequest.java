@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DescribePrometheusInstanceRequest{
     /**实例id，若不填，则默认查询该地域下的所有实例*/
-    @KsYunField(name="InstanceId",type=2)
+    @KsYunField(name = "InstanceId", type = 1)
     private List<String> InstanceIdList;
 
     /**分页标识，单次调用未返回全部实例时，标记下次调用的返回值的起点，默认值是0*/

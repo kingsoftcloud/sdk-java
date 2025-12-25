@@ -23,11 +23,11 @@ public class CenCidrPublishRequest{
     private String InstanceType;
 
     /**网络路由的ID*/
-    @KsYunField(name="NetworkRouteId",type=2)
+    @KsYunField(name = "NetworkRouteId", type = 1)
     private List<String> NetworkRouteIdList;
 
     /**网络实例发布的自定义网段*/
-    @KsYunField(name="SelfDefineCidr",type=2)
+    @KsYunField(name = "SelfDefineCidr", type = 1)
     private List<String> SelfDefineCidrList;
 
     /**CenId*/

@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class DescribeBackendServerGroupsRequest{
     /**多个服务器组的ID*/
-    @KsYunField(name="BackendServerGroupId",type=2)
+    @KsYunField(name = "BackendServerGroupId", type = 1)
     private List<String> BackendServerGroupIdList;
 
     /**筛选Filter*/
-    @KsYunField(name="Filter",type=2)
+    @KsYunField(name = "Filter", type = 1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -33,7 +33,7 @@ public class DescribeBackendServerGroupsRequest{
         private String Name;
 
         /***/
-        @KsYunField(name="Value",type=2)
+        @KsYunField(name = "Value", type = 1)
         private List<String> ValueList;
 
     }

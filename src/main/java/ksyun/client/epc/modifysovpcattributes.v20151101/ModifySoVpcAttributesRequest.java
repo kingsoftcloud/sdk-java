@@ -26,7 +26,7 @@ public class ModifySoVpcAttributesRequest{
 • 参数 - N：表示DNS服务器地址的序号，单次调用数量上限为5个，每个DnsServer必须以合法IP形式给出。
 • 多个IP之间用&分隔。
 • 不填则配置为默认DNS服务器地址。*/
-    @KsYunField(name="DnsServers",type=2)
+    @KsYunField(name = "DnsServers", type = 1)
     private List<String> DnsServersList;
 
     /**VPC的名称。*/

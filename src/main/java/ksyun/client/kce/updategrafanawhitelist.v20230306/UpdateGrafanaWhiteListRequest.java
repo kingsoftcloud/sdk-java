@@ -19,7 +19,7 @@ public class UpdateGrafanaWhiteListRequest{
     private String InstanceId;
 
     /**白名单数组，输入公网域名IP或网段，例如：127.0.0.1或127.0.0.1/24*/
-    @KsYunField(name="WhiteList",type=2)
+    @KsYunField(name = "WhiteList", type = 1)
     private List<String> WhiteListList;
 
 }

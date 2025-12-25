@@ -23,7 +23,7 @@ public class ModifyInstanceDatabasePrivilegesActionRequest{
     private String InstanceDatabaseName;
 
     /**具体账户及其权限说明*/
-    @KsYunField(name="InstanceDatabasePrivileges",type=2)
+    @KsYunField(name = "InstanceDatabasePrivileges", type = 1)
     private List<InstanceDatabasePrivilegesDto> InstanceDatabasePrivilegesList;
 
     @Data

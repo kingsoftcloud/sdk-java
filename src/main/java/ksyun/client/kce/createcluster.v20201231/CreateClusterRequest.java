@@ -94,7 +94,7 @@ False：Master和Etcd组件共享节点部署
     private Boolean MasterEtcdSeparate;
 
     /**当集群类型为托管集群时生效，为托管集群控制面进行子网和安全组配置，支持配置多个*/
-    @KsYunField(name="ManagedClusterMultiMaster",type=2)
+    @KsYunField(name = "ManagedClusterMultiMaster", type = 1)
     private List<ManagedClusterMultiMasterDto> ManagedClusterMultiMasterList;
 
     @Data
@@ -111,7 +111,7 @@ False：Master和Etcd组件共享节点部署
     }
 
     /**新建节点创建集群，定义节点角色和配置，支持云服务器机和专属云服务器。*/
-    @KsYunField(name="InstanceForNode",type=2)
+    @KsYunField(name = "InstanceForNode", type = 1)
     private List<InstanceForNodeDto> InstanceForNodeList;
 
     @Data
@@ -132,7 +132,7 @@ ClusterManageMode字段为DedicatedCluster时
         private String NodeRole;
 
         /**定义节点的配置，支持普通云主机和专属云主机。*/
-        @KsYunField(name="NodeConfig",type=2)
+        @KsYunField(name = "NodeConfig", type = 1)
         private List<InstanceForNodeNodeConfigDto> NodeConfigList;
 
         @Data
@@ -198,7 +198,7 @@ Kubernetes版本≥1.24时，有效值：
                 private Boolean Schedulable;
 
                 /**节点加入集群时预置的标签*/
-                @KsYunField(name="Label",type=2)
+                @KsYunField(name = "Label", type = 1)
                 private List<InstanceForNodeNodeConfigAdvancedSettingLabelDto> LabelList;
 
                 @Data
@@ -222,7 +222,7 @@ Kubernetes版本≥1.24时，有效值：
                 @ToString
                 public static class InstanceForNodeNodeConfigAdvancedSettingExtraArgDto {
                     /**用户自定义kubelet的参数*/
-                    @KsYunField(name="Kubelet",type=2)
+                    @KsYunField(name = "Kubelet", type = 1)
                     private List<InstanceForNodeNodeConfigAdvancedSettingExtraArgKubeletDto> KubeletList;
 
                     @Data
@@ -245,7 +245,7 @@ Kubernetes版本≥1.24时，有效值：
                 private Integer ContainerLogMaxFiles;
 
                 /**节点加入集群时预置污点，匹配污点容忍进行调度*/
-                @KsYunField(name="Taints",type=2)
+                @KsYunField(name = "Taints", type = 1)
                 private List<InstanceForNodeNodeConfigAdvancedSettingTaintsDto> TaintsList;
 
                 @Data
@@ -267,7 +267,7 @@ Kubernetes版本≥1.24时，有效值：
 
                 /**节点多块数据盘挂载格式化设置，DataDisk只能设置第一块盘，请优先使用MultiDataDisk。
 这个N与NodeConfig下的Para开机参数中DataDisk.N.Type等相关数据盘的定义对应，在Para中定义的数据盘可以不在MultiDataDisk中定义，即某块盘可以不进行格式化挂载设置*/
-                @KsYunField(name="MultiDataDisk",type=2)
+                @KsYunField(name = "MultiDataDisk", type = 1)
                 private List<InstanceForNodeNodeConfigAdvancedSettingMultiDataDiskDto> MultiDataDiskList;
 
                 @Data
@@ -299,7 +299,7 @@ Kubernetes版本≥1.24时，有效值：
     }
 
     /**使用已有的云物理机创建集群，定义节点角色和配置*/
-    @KsYunField(name="ExistedInstanceForEpc",type=2)
+    @KsYunField(name = "ExistedInstanceForEpc", type = 1)
     private List<ExistedInstanceForEpcDto> ExistedInstanceForEpcList;
 
     @Data
@@ -322,7 +322,7 @@ ClusterManageMode字段为DedicatedCluster时
         private String NodeRole;
 
         /**裸金属节点配置*/
-        @KsYunField(name="EpcConfig",type=2)
+        @KsYunField(name = "EpcConfig", type = 1)
         private List<ExistedInstanceForEpcEpcConfigDto> EpcConfigList;
 
         @Data
@@ -367,7 +367,7 @@ Kubernetes版本≥1.24时，有效值：
                 private Boolean Schedulable;
 
                 /**节点加入集群时预置的标签*/
-                @KsYunField(name="Label",type=2)
+                @KsYunField(name = "Label", type = 1)
                 private List<ExistedInstanceForEpcEpcConfigAdvancedSettingLabelDto> LabelList;
 
                 @Data
@@ -392,7 +392,7 @@ Kubernetes版本≥1.24时，有效值：
                 @ToString
                 public static class ExistedInstanceForEpcEpcConfigAdvancedSettingExtraArgDto {
                     /**用户自定义kubelet的参数*/
-                    @KsYunField(name="Kubelet",type=2)
+                    @KsYunField(name = "Kubelet", type = 1)
                     private List<kubeletDto1> KubeletList;
 
                     @Data
@@ -416,7 +416,7 @@ Kubernetes版本≥1.24时，有效值：
 
                 /**节点加入集群时预置污点，匹配污点容忍进行调度
 */
-                @KsYunField(name="Taint",type=2)
+                @KsYunField(name = "Taint", type = 1)
                 private List<ExistedInstanceForEpcEpcConfigAdvancedSettingTaintDto> TaintList;
 
                 @Data
@@ -443,7 +443,7 @@ Kubernetes版本≥1.24时，有效值：
     }
 
     /**不推荐使用接口进行安装，集群会安装默认的组件，如需安装其它增强组件，请在集群创建完成后，在控制台选择安装。*/
-    @KsYunField(name="Component",type=2)
+    @KsYunField(name = "Component", type = 1)
     private List<ComponentDto> ComponentList;
 
     @Data

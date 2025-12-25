@@ -34,7 +34,7 @@ Dettach：将实例Id从安全组解绑
 方式1：DBInstanceIdentifier.0=aaa&DBInstanceIdentifier.1=bbb
 方式2：DBInstanceIdentifier=aaa,bbb
 ```*/
-    @KsYunField(name="DBInstanceIdentifier",type=2)
+    @KsYunField(name = "DBInstanceIdentifier", type = 1)
     private List<String> DBInstanceIdentifierList;
 
 }

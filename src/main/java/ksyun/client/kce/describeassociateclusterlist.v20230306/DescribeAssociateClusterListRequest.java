@@ -27,7 +27,7 @@ public class DescribeAssociateClusterListRequest{
     private Integer MaxResults;
 
     /**集群id，支持输入多个集群id进行查询，若不填默认查询所有的关联集群*/
-    @KsYunField(name="ClusterId",type=2)
+    @KsYunField(name = "ClusterId", type = 1)
     private List<String> ClusterIdList;
 
 }

@@ -38,7 +38,7 @@ public class RestoreToCurInstanceRequest{
 “li”]
 }]
 ```*/
-    @KsYunField(name="SrcDatabases",type=2)
+    @KsYunField(name = "SrcDatabases", type = 1)
     private List<SrcDatabasesDto> SrcDatabasesList;
 
     @Data
@@ -66,7 +66,7 @@ public class RestoreToCurInstanceRequest{
 “li”]
 }]
 ```*/
-    @KsYunField(name="DstDatabases",type=2)
+    @KsYunField(name = "DstDatabases", type = 1)
     private List<DstDatabasesDto> DstDatabasesList;
 
     @Data

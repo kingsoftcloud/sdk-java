@@ -29,7 +29,7 @@ public class SecurityGroupRelationRequest{
     private String SecurityGroupId;
 
     /**实例ID列表，支持批量*/
-    @KsYunField(name="DBInstanceIdentifier",type=2)
+    @KsYunField(name = "DBInstanceIdentifier", type = 1)
     private List<String> DBInstanceIdentifierList;
 
 }

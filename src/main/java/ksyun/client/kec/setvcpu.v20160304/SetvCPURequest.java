@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class SetvCPURequest{
     /**专属集群id*/
-    @KsYunField(name="DedicatedHostId",type=2)
+    @KsYunField(name = "DedicatedHostId", type = 1)
     private List<String> DedicatedHostIdList;
 
     /**虚拟核数*/

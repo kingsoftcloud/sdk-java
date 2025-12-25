@@ -29,44 +29,32 @@ public class QueryTokenDataRequest {
     /**
      * 分页页长，最大10000
      */
-    @KsYunField(name = "MaxResults")
+    @KsYunField(name="MaxResults")
     private Integer MaxResults;
 
-    /**
-     * model 搜索关键词
-     */
-    @KsYunField(name = "ModelKeyword")
+    /**model 搜索关键词*/
+    @KsYunField(name="ModelKeyword")
     private String ModelKeyword;
 
-    /**
-     * 搜索关键词
-     */
+    /**搜索关键词*/
     @KsYunField(name = "Keyword")
     private String Keyword;
 
-    /**
-     * 分组字段：
-     * model-按模型分组；keyId-按apikey分组。
-     */
+    /**分组字段：
+     model-按模型分组；keyId-按apikey分组。*/
     @KsYunField(name = "GroupBy")
     private String GroupBy;
 
-    /**
-     * 推理类型：normal-在线，batch-批量，web-在线体验，不传为查询全部。
-     */
-    @KsYunField(name = "ReasoningType")
+    /**推理类型：normal-在线，batch-批量，web-在线体验，不传为查询全部。*/
+    @KsYunField(name="ReasoningType")
     private String ReasoningType;
 
-    /**
-     * 页码，从1开始。
-     */
+    /**页码，从1开始。*/
     @KsYunField(name = "Marker")
     private Integer Marker;
 
-    /**
-     * 是否国际版：false-国内版，true-国际版
-     */
-    @KsYunField(name = "IsGlobalServer")
+    /**是否国际版：false-国内版，true-国际版*/
+    @KsYunField(name="IsGlobalServer")
     private Boolean IsGlobalServer;
 
 }

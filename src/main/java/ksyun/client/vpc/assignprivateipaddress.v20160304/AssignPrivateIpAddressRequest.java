@@ -19,7 +19,7 @@ public class AssignPrivateIpAddressRequest{
     private String NetworkInterfaceId;
 
     /**辅助私有IP地址*/
-    @KsYunField(name="PrivateIpAddress",type=2)
+    @KsYunField(name = "PrivateIpAddress", type = 1)
     private List<String> PrivateIpAddressList;
 
     /**分配辅助私网IP数量*/

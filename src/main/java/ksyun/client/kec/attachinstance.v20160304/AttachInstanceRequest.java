@@ -21,7 +21,7 @@ public class AttachInstanceRequest{
 
     /**待添加的云服务器ID必须与伸缩组处于同一VPC和子网下 
  */
-    @KsYunField(name="ScalingInstanceId",type=2)
+    @KsYunField(name = "ScalingInstanceId", type = 1)
     private List<String> ScalingInstanceIdList;
 
 }

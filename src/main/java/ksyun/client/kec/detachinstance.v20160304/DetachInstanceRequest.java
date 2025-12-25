@@ -21,7 +21,7 @@ public class DetachInstanceRequest{
 
     /**待从伸缩组中移除的云服务器ID 
  */
-    @KsYunField(name="ScalingInstanceId",type=2)
+    @KsYunField(name = "ScalingInstanceId", type = 1)
     private List<String> ScalingInstanceIdList;
 
 }

@@ -23,7 +23,7 @@ public class ProtectedFromScaleDownRequest{
     private String NodePoolId;
 
     /**节点id*/
-    @KsYunField(name="InstanceIds",type=2)
+    @KsYunField(name = "InstanceIds", type = 1)
     private List<String> InstanceIdsList;
 
     /**节点是否开启缩容保护，有效值：<br>- **True**：开启缩容保护<br>- **False**：关闭缩容保护<br>*/

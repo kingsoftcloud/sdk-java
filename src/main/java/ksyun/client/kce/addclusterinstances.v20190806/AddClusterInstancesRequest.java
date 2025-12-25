@@ -19,7 +19,7 @@ public class AddClusterInstancesRequest{
     private String ClusterId;
 
     /**建议仅填写一条InstanceSet数据，不要填写多条。*/
-    @KsYunField(name="InstanceSet",type=2)
+    @KsYunField(name = "InstanceSet", type = 1)
     private List<InstanceSetDto> InstanceSetList;
 
     @Data
@@ -31,7 +31,7 @@ public class AddClusterInstancesRequest{
 
         /**定义节点的配置，支持普通云主机和专属云主机。
 节点配置信息使用云主机/专属云主机创建透传参数，json化字符串格式，详见云主机创建实例接口和专属云主机创建实例接口*/
-        @KsYunField(name="NodePara",type=2)
+        @KsYunField(name = "NodePara", type = 1)
         private List<String> NodeParaList;
 
         /**节点高级设置*/
@@ -89,7 +89,7 @@ Kubernetes版本≥1.24时，有效值：
             private Boolean Schedulable;
 
             /**节点加入集群时预置的标签*/
-            @KsYunField(name="Label",type=2)
+            @KsYunField(name = "Label", type = 1)
             private List<InstanceSetAdvancedSettingLabelDto> LabelList;
 
             @Data
@@ -113,7 +113,7 @@ Kubernetes版本≥1.24时，有效值：
             @ToString
             public static class InstanceSetAdvancedSettingExtraArgDto {
                 /**用户自定义kubelet的参数*/
-                @KsYunField(name="Kubelet",type=2)
+                @KsYunField(name = "Kubelet", type = 1)
                 private List<InstanceSetAdvancedSettingExtraArgKubeletDto> KubeletList;
 
                 @Data
@@ -136,7 +136,7 @@ Kubernetes版本≥1.24时，有效值：
             private Integer ContainerLogMaxFiles;
 
             /**节点加入集群时预置污点，匹配污点容忍进行调度*/
-            @KsYunField(name="Taints",type=2)
+            @KsYunField(name = "Taints", type = 1)
             private List<InstanceSetAdvancedSettingTaintsDto> TaintsList;
 
             @Data

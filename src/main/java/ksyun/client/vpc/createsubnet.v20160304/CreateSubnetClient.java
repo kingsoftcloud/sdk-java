@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
 * @Classname CreateSubnetClient
-* @Description 创建子网
+ * @Description 创建vpc子网
 */
 @Slf4j
 public class CreateSubnetClient extends BaseClient {

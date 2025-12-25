@@ -55,7 +55,7 @@ public class RunInstancesRequest{
     private Integer PurchaseTime;
 
     /**实例绑定的安全组，目前仅支持绑定一个安全组*/
-    @KsYunField(name="SecurityGroupId",type=2)
+    @KsYunField(name = "SecurityGroupId", type = 1)
     private List<String> SecurityGroupIdList;
 
     /**私有IP地址，指定子网IP地址范围内的任意有效值，代表实例的主IP地址，只能选择一个，绑定到主网卡；如果未指定该参数，系统自动从有效地址池中随机选取一个*/
@@ -75,7 +75,7 @@ public class RunInstancesRequest{
     private Integer ProjectId;
 
     /**数据盘是否随实例释放*/
-    @KsYunField(name="DataDisk",type=2)
+    @KsYunField(name = "DataDisk", type = 1)
     private List<DataDiskDto> DataDiskList;
 
     @Data
@@ -100,7 +100,7 @@ public class RunInstancesRequest{
     }
 
     /**辅网卡*/
-    @KsYunField(name="NetworkInterface",type=2)
+    @KsYunField(name = "NetworkInterface", type = 1)
     private List<NetworkInterfaceDto> NetworkInterfaceList;
 
     @Data
@@ -111,7 +111,7 @@ public class RunInstancesRequest{
         private String SubnetId;
 
         /**辅网卡的安全组id不创建辅网卡时非必填，创建辅网卡时必填*/
-        @KsYunField(name="SecurityGroupId",type=2)
+        @KsYunField(name = "SecurityGroupId", type = 1)
         private List<String> SecurityGroupIdList;
 
         /**辅网卡的内网ip,创建辅网卡传了按传的ip开机，不传自动分配*/
@@ -183,7 +183,7 @@ public class RunInstancesRequest{
     private Integer AddressPurchaseTime;
 
     /**秘钥ID*/
-    @KsYunField(name="KeyId",type=2)
+    @KsYunField(name = "KeyId", type = 1)
     private List<String> KeyIdList;
 
     /**是否保留镜像设置*/
@@ -203,7 +203,7 @@ public class RunInstancesRequest{
     private Boolean FailureAutoDelete;
 
     /**标签信息*/
-    @KsYunField(name="Tag",type=2)
+    @KsYunField(name = "Tag", type = 1)
     private List<TagDto> TagList;
 
     @Data

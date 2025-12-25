@@ -15,15 +15,15 @@ import java.util.Arrays;
 @Data
 public class DescribeBandWidthSharesRequest{
     /**项目的ID*/
-    @KsYunField(name="ProjectId",type=2)
+    @KsYunField(name = "ProjectId", type = 1)
     private List<String> ProjectIdList;
 
     /**多个共享带宽的ID*/
-    @KsYunField(name="BandWidthShareId",type=2)
+    @KsYunField(name = "BandWidthShareId", type = 1)
     private List<String> BandWidthShareIdList;
 
     /**筛选Filter*/
-    @KsYunField(name="Filter",type=2)
+    @KsYunField(name = "Filter", type = 1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -35,7 +35,7 @@ public class DescribeBandWidthSharesRequest{
         private String Name;
 
         /***/
-        @KsYunField(name="Value",type=2)
+        @KsYunField(name = "Value", type = 1)
         private List<String> ValueList;
 
     }
@@ -45,11 +45,11 @@ public class DescribeBandWidthSharesRequest{
     private Boolean IsContainTag;
 
     /**多个标签的键*/
-    @KsYunField(name="TagKey",type=2)
+    @KsYunField(name = "TagKey", type = 1)
     private List<String> TagKeyList;
 
     /**多个标签的键*/
-    @KsYunField(name="TagKV",type=2)
+    @KsYunField(name = "TagKV", type = 1)
     private List<TagKVDto> TagKVList;
 
     @Data

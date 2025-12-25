@@ -23,11 +23,11 @@ public class DescribeKeysRequest{
     private String NextToken;
 
     /**密钥ID*/
-    @KsYunField(name="KeyId",type=2)
+    @KsYunField(name = "KeyId", type = 1)
     private List<String> KeyIdList;
 
     /**筛选Filter*/
-    @KsYunField(name="Filter",type=2)
+    @KsYunField(name = "Filter", type = 1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -39,7 +39,7 @@ public class DescribeKeysRequest{
         private String Name;
 
         /***/
-        @KsYunField(name="Value",type=2)
+        @KsYunField(name = "Value", type = 1)
         private List<String> ValueList;
 
     }

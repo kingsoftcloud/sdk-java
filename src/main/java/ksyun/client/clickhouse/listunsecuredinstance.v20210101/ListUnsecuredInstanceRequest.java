@@ -27,7 +27,7 @@ public class ListUnsecuredInstanceRequest{
     private Integer Limit;
 
     /**排序字段。*/
-    @KsYunField(name="OrderBy",type=2)
+    @KsYunField(name = "OrderBy", type = 1)
     private List<String> OrderByList;
 
 }

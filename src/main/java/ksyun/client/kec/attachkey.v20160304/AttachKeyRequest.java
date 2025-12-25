@@ -20,12 +20,12 @@ public class AttachKeyRequest{
 
     /**待绑定密钥的实例。
 标准UUID格式，形如[1]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$	*/
-    @KsYunField(name="InstanceId",type=2)
+    @KsYunField(name = "InstanceId", type = 1)
     private List<String> InstanceIdList;
 
     /**待绑定的密钥列表。
 标准UUID格式，形如[2]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$	*/
-    @KsYunField(name="KeyId",type=2)
+    @KsYunField(name = "KeyId", type = 1)
     private List<String> KeyIdList;
 
 }

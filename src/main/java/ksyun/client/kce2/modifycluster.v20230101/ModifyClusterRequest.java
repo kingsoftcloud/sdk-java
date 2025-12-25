@@ -50,13 +50,13 @@ public class ModifyClusterRequest{
         /**
          * 该字段填写，则使用该负载均衡id作为集群的公网负载均衡
          */
-        @KsYunField(name = "PublicLbId")
+        @KsYunField(name="PublicLbId")
         private String PublicLbId;
 
         /**
          * 关闭公网访问时，是否删除公网负载均衡实例
          */
-        @KsYunField(name = "IsPublicLbDelete")
+        @KsYunField(name="IsPublicLbDelete")
         private Boolean IsPublicLbDelete;
 
     }

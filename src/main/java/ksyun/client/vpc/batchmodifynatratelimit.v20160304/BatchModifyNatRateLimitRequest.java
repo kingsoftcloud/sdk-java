@@ -23,7 +23,7 @@ public class BatchModifyNatRateLimitRequest{
     private Integer InBandwidthLimit;
 
     /**Nat网卡限速规则ID*/
-    @KsYunField(name="NatRateLimitId",type=2)
+    @KsYunField(name = "NatRateLimitId", type = 1)
     private List<String> NatRateLimitIdList;
 
 }

@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DescribeCustomerGatewaysRequest{
     /**多个客户网关的ID*/
-    @KsYunField(name="CustomerGatewayId",type=2)
+    @KsYunField(name = "CustomerGatewayId", type = 1)
     private List<String> CustomerGatewayIdList;
 
     /**单次调用可返回的最大条目数量*/

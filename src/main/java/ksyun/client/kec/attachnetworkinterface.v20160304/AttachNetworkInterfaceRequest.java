@@ -27,7 +27,7 @@ public class AttachNetworkInterfaceRequest{
     private String SubnetId;
 
     /**安全组id*/
-    @KsYunField(name="SecurityGroupId",type=2)
+    @KsYunField(name = "SecurityGroupId", type = 1)
     private List<String> SecurityGroupIdList;
 
     /***/

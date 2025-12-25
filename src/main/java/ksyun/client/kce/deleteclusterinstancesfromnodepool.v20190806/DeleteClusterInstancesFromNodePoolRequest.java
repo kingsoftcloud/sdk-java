@@ -23,7 +23,7 @@ public class DeleteClusterInstancesFromNodePoolRequest{
     private String NodePoolId;
 
     /**节点id*/
-    @KsYunField(name="InstanceIds",type=2)
+    @KsYunField(name = "InstanceIds", type = 1)
     private List<String> InstanceIdsList;
 
     /**节点的删除模式，有效值:<br>- **Terminate**：销毁实例<br>- **Remove**：仅把节点移出集群，实例本身不销毁<br>默认值：Terminate*/

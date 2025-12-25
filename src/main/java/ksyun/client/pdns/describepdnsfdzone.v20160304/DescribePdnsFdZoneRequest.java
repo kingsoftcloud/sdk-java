@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class DescribePdnsFdZoneRequest{
     /**转发Zone的ID*/
-    @KsYunField(name="FdZoneId",type=2)
+    @KsYunField(name = "FdZoneId", type = 1)
     private List<String> FdZoneIdList;
 
     /**筛选Filter*/
-    @KsYunField(name="Filter",type=2)
+    @KsYunField(name = "Filter", type = 1)
     private List<FilterDto> FilterList;
 
     @Data

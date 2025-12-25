@@ -26,7 +26,7 @@ public class DescribeContainerGroupCountRequest{
         private String Key;
 
         /***/
-        @KsYunField(name="Value",type=2)
+        @KsYunField(name = "Value", type = 1)
         private List<String> ValueList;
 
     }

@@ -59,11 +59,11 @@ public class ModifyDomainRequest{
     private String HealthMonitor;
 
     /**描述：http协议端口列表*/
-    @KsYunField(name="HttpPort",type=2)
+    @KsYunField(name = "HttpPort", type = 1)
     private List<String> HttpPortList;
 
     /**描述：https协议端口列表*/
-    @KsYunField(name="HttpsPort",type=2)
+    @KsYunField(name = "HttpsPort", type = 1)
     private List<String> HttpsPortList;
 
     /**描述：域名回源信息列表*/

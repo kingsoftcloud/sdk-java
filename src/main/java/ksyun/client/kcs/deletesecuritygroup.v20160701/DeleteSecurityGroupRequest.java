@@ -19,7 +19,7 @@ public class DeleteSecurityGroupRequest{
     private String AvailableZone;
 
     /**安全组ID 	 N：代表数字，示例(SecurityGroupId.1=xxxx&SecurityGroupId.2=yyyyy)*/
-    @KsYunField(name="SecurityGroupId",type=2)
+    @KsYunField(name = "SecurityGroupId", type = 1)
     private List<String> SecurityGroupIdList;
 
 }

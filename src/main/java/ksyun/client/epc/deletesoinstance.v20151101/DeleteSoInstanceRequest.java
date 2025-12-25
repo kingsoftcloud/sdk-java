@@ -17,7 +17,7 @@ public class DeleteSoInstanceRequest{
     /**实例ID，最多支持100个ID。
 • 参数 - N：表示实例的序号。
 • 多个Instance ID之间用&分隔。*/
-    @KsYunField(name="InstanceIds",type=2)
+    @KsYunField(name = "InstanceIds", type = 1)
     private List<String> InstanceIdsList;
 
     /**星海专区*/

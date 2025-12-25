@@ -35,7 +35,7 @@ public class ModifyCacheParameterGroupRequest{
     private String CacheParameterGroupId;
 
     /**参数名称   	 N：表示数字，示例（Parameters.ParameterName.1=xx&Parameters.ParameterName.2=yy）参考请见 - [参数组参数](https://docs.ksyun.com/documents/38470)*/
-    @KsYunField(name="Parameters",type=2)
+    @KsYunField(name = "Parameters", type = 1)
     private List<ParametersDto> ParametersList;
 
     @Data

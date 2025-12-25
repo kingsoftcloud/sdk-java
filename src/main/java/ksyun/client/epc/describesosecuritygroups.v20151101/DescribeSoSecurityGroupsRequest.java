@@ -21,7 +21,7 @@ public class DescribeSoSecurityGroupsRequest{
     /**安全组的ID列表。
 • 参数 - N：表示安全组ID的序号，单次调用数量上限为100个。
 • 多个安全组用&分隔。*/
-    @KsYunField(name="SecurityGroupIds",type=2)
+    @KsYunField(name = "SecurityGroupIds", type = 1)
     private List<String> SecurityGroupIdsList;
 
     /**分页查询凭证，用于标记分页的位置。

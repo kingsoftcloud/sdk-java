@@ -19,7 +19,7 @@ public class DescribeKeadIpRequest{
     private String Ip;
 
     /**项目制id*/
-    @KsYunField(name="ProjectId",type=2)
+    @KsYunField(name = "ProjectId", type = 1)
     private List<Integer> ProjectIdList;
 
     /**每页条数*/

@@ -77,23 +77,17 @@ EIP ID*/
             @KsYunField(name = "LbType")
             private String LbType;
 
-            /**
-             * ALB实例是否为公私网合一类型，默认值：false
-             * 地域是否支持 ALB以及支持哪种 ALB实例类型可参照文档：https://docs.ksyun.com/documents/42600?type=3
-             */
-            @KsYunField(name = "IsAdaptationLb")
+            /**ALB实例是否为公私网合一类型，默认值：false
+             地域是否支持 ALB以及支持哪种 ALB实例类型可参照文档：https://docs.ksyun.com/documents/42600?type=3*/
+            @KsYunField(name="IsAdaptationLb")
             private Boolean IsAdaptationLb;
 
-            /**
-             * 已有私网LB实例 id（新建实例不用填写）
-             */
+            /**已有私网LB实例 id（新建实例不用填写）*/
             @KsYunField(name = "PrivateLbId")
             private String PrivateLbId;
 
-            /**
-             * 已有公网LB实例 id（新建实例不用填写，若是 ALB公私网合一类型开启公网访问也不用填写）
-             */
-            @KsYunField(name = "PublicLbId")
+            /**已有公网LB实例 id（新建实例不用填写，若是 ALB公私网合一类型开启公网访问也不用填写）*/
+            @KsYunField(name="PublicLbId")
             private String PublicLbId;
 
         }
@@ -147,15 +141,13 @@ vpc的子网id，必须选跟集群同vpc下的子网Id,可以填多个*/
         private String ServiceCidr;
 
         /**Pod数量上限/节点
-默认值：128
-可选值：16，32，64，128，256*/
+         默认值：128
+         可选值：16，32，64，128，256*/
         @KsYunField(name = "MaxPodPerNode")
         private Integer MaxPodPerNode;
 
-        /**
-         * 集群证书SAN 信息
-         */
-        @KsYunField(name = "SANs", type = 2)
+        /**集群证书SAN 信息*/
+        @KsYunField(name="SANs",type=2)
         private List<String> SANsList;
 
         /**安全组id，如果填写则使用该安全组为集群的安全组，如果不填写则集群会自动创建一个安全组*/

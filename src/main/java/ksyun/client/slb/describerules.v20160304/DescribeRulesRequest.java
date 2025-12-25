@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class DescribeRulesRequest{
     /**多个规则的ID*/
-    @KsYunField(name="RuleId",type=2)
+    @KsYunField(name = "RuleId", type = 1)
     private List<String> RuleIdList;
 
     /**筛选Filter*/
-    @KsYunField(name="Filter",type=2)
+    @KsYunField(name = "Filter", type = 1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -30,7 +30,7 @@ public class DescribeRulesRequest{
         private String Name;
 
         /***/
-        @KsYunField(name="Value",type=2)
+        @KsYunField(name = "Value", type = 1)
         private List<String> ValueList;
 
     }

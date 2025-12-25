@@ -34,7 +34,7 @@ public class CreateDBParameterGroupRequest{
 
     /**#### 参数详情
 不传入指定参数及数值，则按照默认模板创建参数组*/
-    @KsYunField(name="Parameters",type=2)
+    @KsYunField(name = "Parameters", type = 1)
     private List<ParametersDto> ParametersList;
 
     @Data

@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DescribeVolumesRequest{
     /**云硬盘ID，传参方式请参照示例；长度36个字符，包括字母、数字、-不传此参数，则查询该用户下所有硬盘信息。最多传入100个，N为1~100*/
-    @KsYunField(name="VolumeId",type=2)
+    @KsYunField(name = "VolumeId", type = 1)
     private List<String> VolumeIdList;
 
     /**云硬盘分类，两种，有效值是系统盘（system）或者数据盘（data）

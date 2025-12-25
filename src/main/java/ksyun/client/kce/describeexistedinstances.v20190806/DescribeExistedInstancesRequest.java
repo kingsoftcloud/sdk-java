@@ -19,7 +19,7 @@ public class DescribeExistedInstancesRequest{
     private String ClusterId;
 
     /**云服务器id*/
-    @KsYunField(name="InstanceId",type=2)
+    @KsYunField(name = "InstanceId", type = 1)
     private List<String> InstanceIdList;
 
     /**分页标识，单次调用未返回全部实例时，标记下次调用的返回值的起点，默认值是0。*/
@@ -31,7 +31,7 @@ public class DescribeExistedInstancesRequest{
     private String MaxResults;
 
     /***/
-    @KsYunField(name="Filter",type=2)
+    @KsYunField(name = "Filter", type = 1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -46,7 +46,7 @@ vpc id：vpc-id
         private String Name;
 
         /***/
-        @KsYunField(name="Value",type=2)
+        @KsYunField(name = "Value", type = 1)
         private List<String> ValueList;
 
     }

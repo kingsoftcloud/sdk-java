@@ -16,7 +16,7 @@ import java.util.Arrays;
 public class DisableImageCachingRequest{
     /**预热的镜像ID。
 ——*/
-    @KsYunField(name="ImageId",type=2)
+    @KsYunField(name = "ImageId", type = 1)
     private List<String> ImageIdList;
 
 }

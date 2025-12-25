@@ -19,11 +19,11 @@ public class DescribeZoneRecordRequest{
     private String ZoneId;
 
     /**解析记录的ID*/
-    @KsYunField(name="RecordId",type=2)
+    @KsYunField(name = "RecordId", type = 1)
     private List<String> RecordIdList;
 
     /**解析记录的主机记录筛选*/
-    @KsYunField(name="Filter",type=2)
+    @KsYunField(name = "Filter", type = 1)
     private List<String> FilterList;
 
 }

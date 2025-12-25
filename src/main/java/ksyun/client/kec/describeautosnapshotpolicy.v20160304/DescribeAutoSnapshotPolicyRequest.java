@@ -19,7 +19,7 @@ public class DescribeAutoSnapshotPolicyRequest{
     private String AutoSnapshotPolicyName;
 
     /**快照策略id*/
-    @KsYunField(name="AutoSnapshotPolicyId",type=2)
+    @KsYunField(name = "AutoSnapshotPolicyId", type = 1)
     private List<String> AutoSnapshotPolicyIdList;
 
 }

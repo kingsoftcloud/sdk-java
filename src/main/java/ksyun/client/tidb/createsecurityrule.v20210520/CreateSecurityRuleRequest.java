@@ -27,11 +27,11 @@ public class CreateSecurityRuleRequest{
     @ToString
     public static class RulesDto {
         /**规则地址*/
-        @KsYunField(name="Cidr",type=2)
+        @KsYunField(name = "Cidr", type = 1)
         private List<String> CidrList;
 
         /**描述*/
-        @KsYunField(name="Desc",type=2)
+        @KsYunField(name = "Desc", type = 1)
         private List<String> DescList;
 
     }

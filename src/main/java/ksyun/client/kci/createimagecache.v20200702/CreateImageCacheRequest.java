@@ -36,11 +36,11 @@ public class CreateImageCacheRequest{
     private Integer RetentionDays;
 
     /**镜像数量，最多20个，镜像必须符合docker镜像格式*/
-    @KsYunField(name="Image",type=2)
+    @KsYunField(name = "Image", type = 1)
     private List<String> ImageList;
 
     /**拉取镜像仓库中私有镜像的凭据，公开镜像无须填写凭据*/
-    @KsYunField(name="ImageRegistryCredential",type=2)
+    @KsYunField(name = "ImageRegistryCredential", type = 1)
     private List<ImageRegistryCredentialDto> ImageRegistryCredentialList;
 
     @Data

@@ -16,12 +16,12 @@ import java.util.Arrays;
 public class CopyImageRequest{
     /**源自定义镜像的ID列表。
 cc27b87a-b74c-4da8-93b0-33edce5399cf*/
-    @KsYunField(name="ImageId",type=2)
+    @KsYunField(name = "ImageId", type = 1)
     private List<String> ImageIdList;
 
     /**复制到目标地域的列表。
 =cn-beijing-6*/
-    @KsYunField(name="DestinationRegion",type=2)
+    @KsYunField(name = "DestinationRegion", type = 1)
     private List<String> DestinationRegionList;
 
     /**复制后的镜像的名称，默认值：源镜像名称。

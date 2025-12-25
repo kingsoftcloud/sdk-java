@@ -35,7 +35,7 @@ public class ModifyWebhookTriggerRequest{
     private String TriggerName;
 
     /**触发动作，有效值：<br/>PushImage<br/>DeleteImage*/
-    @KsYunField(name="EventType",type=2)
+    @KsYunField(name = "EventType", type = 1)
     private List<String> EventTypeList;
 
     /**触发器URL*/
@@ -43,7 +43,7 @@ public class ModifyWebhookTriggerRequest{
     private String TriggerUrl;
 
     /**自定义Headers*/
-    @KsYunField(name="Header",type=2)
+    @KsYunField(name = "Header", type = 1)
     private List<String> HeaderList;
 
     /**启用触发器，有效值：<br/>True：是<br/>False：否*/
@@ -55,7 +55,7 @@ public class ModifyWebhookTriggerRequest{
     private String Key;
 
     /**Header Values*/
-    @KsYunField(name="Value",type=2)
+    @KsYunField(name = "Value", type = 1)
     private List<String> ValueList;
 
 }

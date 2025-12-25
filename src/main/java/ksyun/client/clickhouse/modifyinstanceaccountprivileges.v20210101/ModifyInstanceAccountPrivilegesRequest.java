@@ -23,7 +23,7 @@ public class ModifyInstanceAccountPrivilegesRequest{
     private String InstanceAccountName;
 
     /***/
-    @KsYunField(name="InstanceAccountPrivileges",type=2)
+    @KsYunField(name = "InstanceAccountPrivileges", type = 1)
     private List<InstanceAccountPrivilegesDto> InstanceAccountPrivilegesList;
 
     @Data

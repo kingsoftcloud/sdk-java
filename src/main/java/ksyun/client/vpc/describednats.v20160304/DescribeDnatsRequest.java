@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class DescribeDnatsRequest{
     /**多个Dnat的ID*/
-    @KsYunField(name="DnatId",type=2)
+    @KsYunField(name = "DnatId", type = 1)
     private List<String> DnatIdList;
 
     /**筛选Filter*/
-    @KsYunField(name="Filter",type=2)
+    @KsYunField(name = "Filter", type = 1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -37,7 +37,7 @@ public class DescribeDnatsRequest{
         private String Name;
 
         /***/
-        @KsYunField(name="Value",type=2)
+        @KsYunField(name = "Value", type = 1)
         private List<String> ValueList;
 
     }

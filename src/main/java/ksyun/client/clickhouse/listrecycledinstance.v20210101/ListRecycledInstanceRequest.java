@@ -19,7 +19,7 @@ public class ListRecycledInstanceRequest{
     private String ProductType;
 
     /**项目ID列表，不填表示全部项目。*/
-    @KsYunField(name="ProjectIds",type=2)
+    @KsYunField(name = "ProjectIds", type = 1)
     private List<String> ProjectIdsList;
 
     /**模糊查询字段。支持：实例ID、实例名称、VIP。*/
@@ -27,7 +27,7 @@ public class ListRecycledInstanceRequest{
     private String FuzzySearch;
 
     /**排序字段。*/
-    @KsYunField(name="OrderBy",type=2)
+    @KsYunField(name = "OrderBy", type = 1)
     private List<String> OrderByList;
 
     /**第几页，从0开始。默认：0。*/

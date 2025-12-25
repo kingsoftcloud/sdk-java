@@ -21,7 +21,7 @@ public class ModifyImageSharePermissionRequest{
 
     /**接收分享镜像的账号ID列表。
 2000001278*/
-    @KsYunField(name="AccountId",type=2)
+    @KsYunField(name = "AccountId", type = 1)
     private List<String> AccountIdList;
 
     /**操作类型。

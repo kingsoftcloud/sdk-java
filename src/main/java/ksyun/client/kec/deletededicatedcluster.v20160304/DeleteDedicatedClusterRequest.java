@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DeleteDedicatedClusterRequest{
     /**专属集群id列表*/
-    @KsYunField(name="DedicatedClusterId",type=2)
+    @KsYunField(name = "DedicatedClusterId", type = 1)
     private List<String> DedicatedClusterIdList;
 
 }

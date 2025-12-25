@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class UpdateVolumeProjectRequest{
     /**硬盘ID，传参方式请参照示例.长度36个字符，包括字母、数字、-.PS:最多传入100个.N为1~100,硬盘状态必须为待挂载（available）*/
-    @KsYunField(name="VolumeId",type=2)
+    @KsYunField(name = "VolumeId", type = 1)
     private List<String> VolumeIdList;
 
     /**目标项目组id，项目组状态必须为可用*/

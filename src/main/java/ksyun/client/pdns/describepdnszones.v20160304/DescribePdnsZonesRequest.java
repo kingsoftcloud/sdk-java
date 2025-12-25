@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DescribePdnsZonesRequest{
     /**Zone的Id*/
-    @KsYunField(name="Filter",type=2)
+    @KsYunField(name = "Filter", type = 1)
     private List<String> FilterList;
 
     /**单次调用可返回的最大条目数量*/

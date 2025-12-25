@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DescribeDirectConnectRoutesRequest{
     /**专线路由的ID*/
-    @KsYunField(name="DirectConnectRouteId",type=2)
+    @KsYunField(name = "DirectConnectRouteId", type = 1)
     private List<String> DirectConnectRouteIdList;
 
     /**单次调用可返回的最大条目数量*/
@@ -23,7 +23,7 @@ public class DescribeDirectConnectRoutesRequest{
     private Integer MaxResults;
 
     /**筛选Filter*/
-    @KsYunField(name="Filter",type=2)
+    @KsYunField(name = "Filter", type = 1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -36,7 +36,7 @@ public class DescribeDirectConnectRoutesRequest{
         private String Name;
 
         /***/
-        @KsYunField(name="Value",type=2)
+        @KsYunField(name = "Value", type = 1)
         private List<String> ValueList;
 
     }

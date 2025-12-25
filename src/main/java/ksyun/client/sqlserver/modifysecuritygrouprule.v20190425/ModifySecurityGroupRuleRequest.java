@@ -30,7 +30,7 @@ Cover：用传入的规则列表（SecurityGroupRuleName，SecurityGroupRuleProt
     private String SecurityGroupId;
 
     /***/
-    @KsYunField(name="SecurityGroupRule",type=2)
+    @KsYunField(name = "SecurityGroupRule", type = 1)
     private List<SecurityGroupRuleDto> SecurityGroupRuleList;
 
     @Data

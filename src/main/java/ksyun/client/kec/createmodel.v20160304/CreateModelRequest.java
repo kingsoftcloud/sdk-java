@@ -35,7 +35,7 @@ public class CreateModelRequest{
 
     /**数据盘（云盘）的类型，数据盘n的类型，n 的取值范围为 [1, 8]。只支持I2、I2联网增强、N1、N2、N3、S3和I3。DataDisk.n.Type与DataDisk.n.Size必须都填写才有效。
 SSD3.0，EHDD*/
-    @KsYunField(name="DataDisk",type=2)
+    @KsYunField(name = "DataDisk", type = 1)
     private List<DataDiskDto> DataDiskList;
 
     @Data
@@ -87,7 +87,7 @@ Monthly(包年包月）、Daily（按量付费（按日月结）)、 HourlyInsta
 
     /**实例绑定的安全组，目前仅支持绑定一个安全组。
 标准UUID格式，形如`^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$`*/
-    @KsYunField(name="SecurityGroupId",type=2)
+    @KsYunField(name = "SecurityGroupId", type = 1)
     private List<String> SecurityGroupIdList;
 
     /**私有IP地址，指定子网IP地址范围内的任意有效值，代表实例的主IP地址，只能选择一个，绑定到主网卡；如果未指定该参数，系统自动从有效地址池中随机选取一个。
@@ -178,7 +178,7 @@ ModelTest001*/
     private String UserData;
 
     /***/
-    @KsYunField(name="NetworkInterface",type=2)
+    @KsYunField(name = "NetworkInterface", type = 1)
     private List<NetworkInterfaceDto> NetworkInterfaceList;
 
     @Data
@@ -189,7 +189,7 @@ ModelTest001*/
         private String SubnetId;
 
         /**辅网卡的安全组id不创建辅网卡时非必填，创建辅网卡时必填*/
-        @KsYunField(name="SecurityGroupId",type=2)
+        @KsYunField(name = "SecurityGroupId", type = 1)
         private List<String> SecurityGroupIdList;
 
         /**辅网卡的内网ip,创建辅网卡传了按传的ip开机，不传自动分配*/
@@ -199,7 +199,7 @@ ModelTest001*/
     }
 
     /***/
-    @KsYunField(name="Tag",type=2)
+    @KsYunField(name = "Tag", type = 1)
     private List<TagDto> TagList;
 
     @Data

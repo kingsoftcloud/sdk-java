@@ -23,11 +23,11 @@ public class CenCidrDeleteRequest{
     private String InstanceType;
 
     /**网络路由的ID*/
-    @KsYunField(name="NetworkRouteId",type=2)
+    @KsYunField(name = "NetworkRouteId", type = 1)
     private List<String> NetworkRouteIdList;
 
     /**自定义网段路由的ID*/
-    @KsYunField(name="SelfRouteId",type=2)
+    @KsYunField(name = "SelfRouteId", type = 1)
     private List<String> SelfRouteIdList;
 
     /**云企业网ID*/

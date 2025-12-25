@@ -50,7 +50,7 @@ true/false*/
 
     /**目标套餐数据盘类型（当本地盘机型变更为云盘机型时才需填写此参数，此参数仅对源本地数据盘生效）
 */
-    @KsYunField(name="DataDisk",type=2)
+    @KsYunField(name = "DataDisk", type = 1)
     private List<DataDiskDto> DataDiskList;
 
     @Data

@@ -19,7 +19,7 @@ public class AddExistedInstancesRequest{
     private String ClusterId;
 
     /**选择已有的虚拟机（包含专属云主机）作为集群的Worker节点，其中NodeRole只能是Worker。<br>N：1-99*/
-    @KsYunField(name="ExistedInstanceKecSet",type=2)
+    @KsYunField(name = "ExistedInstanceKecSet", type = 1)
     private List<ExistedInstanceKecSetDto> ExistedInstanceKecSetList;
 
     @Data
@@ -31,7 +31,7 @@ public class AddExistedInstancesRequest{
 
         /**云服务器产品重新安装实例操作系统的透传参数，json化字符串格式，详见主机更换或者重新安装实例操作接口ModifyInstanceImage。
 注意：接口中的ImageId参数替换为支持的节点操作系统，可调用容器的DescribeInstanceImage接口，获取容器服务支持的节点操作系统*/
-        @KsYunField(name="KecPara",type=2)
+        @KsYunField(name = "KecPara", type = 1)
         private List<String> KecParaList;
 
         /**节点高级设置*/
@@ -90,7 +90,7 @@ Kubernetes版本≥1.24时，有效值：
             private Boolean Schedulable;
 
             /**节点加入集群时预置的标签*/
-            @KsYunField(name="Label",type=2)
+            @KsYunField(name = "Label", type = 1)
             private List<ExistedInstanceKecSetAdvancedSettingLabelDto> LabelList;
 
             @Data
@@ -114,7 +114,7 @@ Kubernetes版本≥1.24时，有效值：
             @ToString
             public static class ExistedInstanceKecSetAdvancedSettingExtraArgDto {
                 /**用户自定义kubelet的参数*/
-                @KsYunField(name="Kubelet",type=2)
+                @KsYunField(name = "Kubelet", type = 1)
                 private List<ExistedInstanceKecSetAdvancedSettingExtraArgKubeletDto> KubeletList;
 
                 @Data
@@ -137,7 +137,7 @@ Kubernetes版本≥1.24时，有效值：
             private Integer ContainerLogMaxFiles;
 
             /**节点加入集群时预置污点，匹配污点容忍进行调度*/
-            @KsYunField(name="Taints",type=2)
+            @KsYunField(name = "Taints", type = 1)
             private List<ExistedInstanceKecSetAdvancedSettingTaintsDto> TaintsList;
 
             @Data

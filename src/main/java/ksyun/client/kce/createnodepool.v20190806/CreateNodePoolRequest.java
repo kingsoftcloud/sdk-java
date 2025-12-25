@@ -67,7 +67,7 @@ public class CreateNodePoolRequest{
         private Integer DataDiskGb;
 
         /**第n个数据盘（云盘）*/
-        @KsYunField(name="DataDisk",type=2)
+        @KsYunField(name = "DataDisk", type = 1)
         private List<NodeTemplateDataDiskDto> DataDiskList;
 
         @Data
@@ -99,7 +99,7 @@ public class CreateNodePoolRequest{
         private String VpcId;
 
         /**子网id*/
-        @KsYunField(name="SubnetId",type=2)
+        @KsYunField(name = "SubnetId", type = 1)
         private List<String> SubnetIdList;
 
         /**多子网扩展策略，有效值：
@@ -185,7 +185,7 @@ Kubernetes版本≥1.24时，有效值：
             @ToString
             public static class NodeTemplateAdvancedSettingExtraArgDto {
                 /**用户自定义kubelet的参数*/
-                @KsYunField(name="Kubelet",type=2)
+                @KsYunField(name = "Kubelet", type = 1)
                 private List<NodeTemplateAdvancedSettingExtraArgKubeletDto> KubeletList;
 
                 @Data
@@ -210,7 +210,7 @@ Kubernetes版本≥1.24时，有效值：
         }
 
         /**云盘标签，N取值范围[1-10]*/
-        @KsYunField(name="EbsTag",type=2)
+        @KsYunField(name = "EbsTag", type = 1)
         private List<NodeTemplateEbsTagDto> EbsTagList;
 
         @Data
@@ -227,7 +227,7 @@ Kubernetes版本≥1.24时，有效值：
         }
 
         /**实例标签，N取值范围[1-10]*/
-        @KsYunField(name="InstanceTag",type=2)
+        @KsYunField(name = "InstanceTag", type = 1)
         private List<NodeTemplateInstanceTagDto> InstanceTagList;
 
         @Data
@@ -252,7 +252,7 @@ Kubernetes版本≥1.24时，有效值：
         private String Mem;
 
         /**密钥ID*/
-        @KsYunField(name="KeyId",type=2)
+        @KsYunField(name = "KeyId", type = 1)
         private List<String> KeyIdList;
 
         /**实例名称*/
@@ -265,7 +265,7 @@ Kubernetes版本≥1.24时，有效值：
 
         /**节点多块数据盘挂载格式化设置，DataDisk只能设置第一块盘，请优先使用MultiDataDisk。
 这个N与NodeTemplate.DataDisk.N对应，数据盘可以不在MultiDataDisk中定义，即某块盘可以不进行格式化挂载设置*/
-        @KsYunField(name="MultiDataDisk",type=2)
+        @KsYunField(name = "MultiDataDisk", type = 1)
         private List<NodeTemplateMultiDataDiskDto> MultiDataDiskList;
 
         @Data
@@ -296,7 +296,7 @@ Kubernetes版本≥1.24时，有效值：
     }
 
     /**节点标签*/
-    @KsYunField(name="Label",type=2)
+    @KsYunField(name = "Label", type = 1)
     private List<LabelDto> LabelList;
 
     @Data
@@ -313,7 +313,7 @@ Kubernetes版本≥1.24时，有效值：
     }
 
     /**节点污点*/
-    @KsYunField(name="Taint",type=2)
+    @KsYunField(name = "Taint", type = 1)
     private List<TaintDto> TaintList;
 
     @Data

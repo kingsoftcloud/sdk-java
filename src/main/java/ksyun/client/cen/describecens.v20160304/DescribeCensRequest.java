@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DescribeCensRequest{
     /**多个云企业网的ID*/
-    @KsYunField(name="CenId",type=2)
+    @KsYunField(name = "CenId", type = 1)
     private List<String> CenIdList;
 
     /**单次调用可返回的最大条目数量*/

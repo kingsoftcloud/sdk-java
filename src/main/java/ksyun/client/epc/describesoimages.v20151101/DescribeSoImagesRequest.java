@@ -17,7 +17,7 @@ public class DescribeSoImagesRequest{
     /**镜像的ID，最多支持100个ID。
 • 参数 - N：表示镜像ID的序号。
 • 多个镜像ID之间用&分隔。*/
-    @KsYunField(name="ImageId",type=2)
+    @KsYunField(name = "ImageId", type = 1)
     private List<String> ImageIdList;
 
     /**镜像名称。*/
@@ -61,7 +61,7 @@ public class DescribeSoImagesRequest{
 说明
 • 参数 - N：表示镜像状态的序号。
 • 多个镜像状态之间用&分隔。*/
-    @KsYunField(name="Status",type=2)
+    @KsYunField(name = "Status", type = 1)
     private List<String> StatusList;
 
     /**镜像的可见性。取值：

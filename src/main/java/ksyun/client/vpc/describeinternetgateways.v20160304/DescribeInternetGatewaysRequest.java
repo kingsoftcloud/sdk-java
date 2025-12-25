@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class DescribeInternetGatewaysRequest{
     /**多个InternetGateway的ID*/
-    @KsYunField(name="InternetGatewayId",type=2)
+    @KsYunField(name = "InternetGatewayId", type = 1)
     private List<String> InternetGatewayIdList;
 
     /**筛选Filter*/
-    @KsYunField(name="Filter",type=2)
+    @KsYunField(name = "Filter", type = 1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -31,7 +31,7 @@ public class DescribeInternetGatewaysRequest{
         private String Name;
 
         /***/
-        @KsYunField(name="Value",type=2)
+        @KsYunField(name = "Value", type = 1)
         private List<String> ValueList;
 
     }

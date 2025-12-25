@@ -110,7 +110,7 @@ windows创建时，只支持非bond模式。*/
     private String KeyId;
 
     /**裸金属服务器关联的安全组ID，一个裸金属服务器最多可以支持5个安全组*/
-    @KsYunField(name="SecurityGroupId",type=2)
+    @KsYunField(name = "SecurityGroupId", type = 1)
     private List<String> SecurityGroupIdList;
 
     /**DNS1的值，当通过该接口进行修改网络配置时不填写此参数，保持与之前不变*/

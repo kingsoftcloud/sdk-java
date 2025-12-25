@@ -27,7 +27,7 @@ public class CreateSecurityGroupRequest{
     private String SecurityGroupType;
 
     /**安全组绑定实例列表	UUID格式，可填写未绑定过安全组的实例ID。查看数据库实例*/
-    @KsYunField(name="DBInstanceIdentifier",type=2)
+    @KsYunField(name = "DBInstanceIdentifier", type = 1)
     private List<String> DBInstanceIdentifierList;
 
     /**安全组规则描述	不超过256个字节，仅支持中文、大小写字母、数字、减号和下划线*/

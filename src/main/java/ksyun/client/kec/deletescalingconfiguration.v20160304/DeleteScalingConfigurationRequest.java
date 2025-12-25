@@ -16,7 +16,7 @@ import java.util.Arrays;
 public class DeleteScalingConfigurationRequest{
     /**待删除的启动配置ID 
  */
-    @KsYunField(name="ScalingConfigurationId",type=2)
+    @KsYunField(name = "ScalingConfigurationId", type = 1)
     private List<String> ScalingConfigurationIdList;
 
 }

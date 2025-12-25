@@ -19,7 +19,7 @@ public class ApplyAutoSnapshotPolicyRequest{
     private String AutoSnapshotPolicyId;
 
     /**绑定的硬盘ID，支持多个硬盘ID*/
-    @KsYunField(name="AttachVolumeId",type=2)
+    @KsYunField(name = "AttachVolumeId", type = 1)
     private List<String> AttachVolumeIdList;
 
 }

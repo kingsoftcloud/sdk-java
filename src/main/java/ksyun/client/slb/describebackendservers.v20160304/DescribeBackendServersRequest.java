@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class DescribeBackendServersRequest{
     /**多个绑定服务器组的注册ID*/
-    @KsYunField(name="RegisterId",type=2)
+    @KsYunField(name = "RegisterId", type = 1)
     private List<String> RegisterIdList;
 
     /**筛选Filter*/
-    @KsYunField(name="Filter",type=2)
+    @KsYunField(name = "Filter", type = 1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -33,7 +33,7 @@ public class DescribeBackendServersRequest{
         private String Name;
 
         /***/
-        @KsYunField(name="Value",type=2)
+        @KsYunField(name = "Value", type = 1)
         private List<String> ValueList;
 
     }

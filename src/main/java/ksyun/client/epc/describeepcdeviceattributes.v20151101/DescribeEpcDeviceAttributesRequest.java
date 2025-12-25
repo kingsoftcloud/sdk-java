@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DescribeEpcDeviceAttributesRequest{
     /**筛选Filter*/
-    @KsYunField(name="Filter",type=2)
+    @KsYunField(name = "Filter", type = 1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -28,13 +28,13 @@ public class DescribeEpcDeviceAttributesRequest{
         private String Name;
 
         /***/
-        @KsYunField(name="Value",type=2)
+        @KsYunField(name = "Value", type = 1)
         private List<String> ValueList;
 
     }
 
     /**设备的ID*/
-    @KsYunField(name="DeviceAttributeId",type=2)
+    @KsYunField(name = "DeviceAttributeId", type = 1)
     private List<String> DeviceAttributeIdList;
 
     /**单次调用可返回的最大条目数量*/

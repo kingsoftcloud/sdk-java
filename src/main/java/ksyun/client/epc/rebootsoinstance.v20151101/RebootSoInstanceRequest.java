@@ -30,7 +30,7 @@ public class RebootSoInstanceRequest{
 • 参数 - N：表示实例的序号。
 • 多个Instance ID之间用&分隔。
 示例值：InstanceIds.1=8981d45e-b3dc-44c6-b02f-2d1969551316&InstanceIds.2=8981d45e-b3dc-44c6-b02f-2d1969551318*/
-    @KsYunField(name="InstanceIds",type=2)
+    @KsYunField(name = "InstanceIds", type = 1)
     private List<String> InstanceIdsList;
 
     /**星海专区*/
