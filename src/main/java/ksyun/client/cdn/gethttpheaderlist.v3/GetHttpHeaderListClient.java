@@ -1,4 +1,4 @@
-package ksyun.client.cdn.getrefreshorpreloadtask.v20160901;
+package ksyun.client.cdn.gethttpheaderlist.v3;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -12,14 +12,14 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.*;
 
 /**
-* @Classname GetRefreshOrPreloadTaskClient
-* @Description 刷新预热进度查询接口
+* @Classname GetHttpHeaderListClient
+* @Description 获取Http响应头列表V3
 */
 @Slf4j
-public class GetRefreshOrPreloadTaskClient extends BaseClient {
+public class GetHttpHeaderListClient extends BaseClient {
     private final static String service = "cdn";
-    private final static String version = "2016-09-01";
-    private final static String action = "GetRefreshOrPreloadTask";
+    private final static String version = "V3";
+    private final static String action = "GetHttpHeaderList";
 
 
     /**
@@ -28,7 +28,7 @@ public class GetRefreshOrPreloadTaskClient extends BaseClient {
     private Credential credential;
 
 
-    public GetRefreshOrPreloadTaskClient(Credential credential) {
+    public GetHttpHeaderListClient(Credential credential) {
         this.credential = credential;
     }
 
@@ -41,9 +41,9 @@ public class GetRefreshOrPreloadTaskClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetRefreshOrPreloadTaskResponse doPost(String path, GetRefreshOrPreloadTaskRequest requestObj) throws Exception {
+    public GetHttpHeaderListResponse doPost(String path, GetHttpHeaderListRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
     }
 
@@ -56,11 +56,11 @@ public class GetRefreshOrPreloadTaskClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetRefreshOrPreloadTaskResponse doPost(String path, GetRefreshOrPreloadTaskRequest requestObj, Map<String, String> head) throws Exception {
+    public GetHttpHeaderListResponse doPost(String path, GetHttpHeaderListRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, GetRefreshOrPreloadTaskResponse.class);
+        return JSON.parseObject(response, GetHttpHeaderListResponse.class);
     }
 
     /**
@@ -70,9 +70,9 @@ public class GetRefreshOrPreloadTaskClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public GetRefreshOrPreloadTaskResponse doPostRaw(String path, GetRefreshOrPreloadTaskRequest requestObj) throws Exception {
+    public GetHttpHeaderListResponse doPostRaw(String path, GetHttpHeaderListRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPostRaw(path, requestObj, head);
     }
 
@@ -84,11 +84,11 @@ public class GetRefreshOrPreloadTaskClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public GetRefreshOrPreloadTaskResponse doPostRaw(String path, GetRefreshOrPreloadTaskRequest requestObj, Map<String, String> head) throws Exception {
+    public GetHttpHeaderListResponse doPostRaw(String path, GetHttpHeaderListRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, GetRefreshOrPreloadTaskResponse.class);
+        return JSON.parseObject(response, GetHttpHeaderListResponse.class);
     }
     /**
      * get 请求
@@ -98,9 +98,9 @@ public class GetRefreshOrPreloadTaskClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetRefreshOrPreloadTaskResponse doGet(String path, GetRefreshOrPreloadTaskRequest requestObj) throws Exception {
+    public GetHttpHeaderListResponse doGet(String path, GetHttpHeaderListRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.putIfAbsent("Content-Type", "application/json");
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doGet(path, requestObj, head);
     }
 
@@ -113,11 +113,11 @@ public class GetRefreshOrPreloadTaskClient extends BaseClient {
          * @return
          * @throws Exception
          */
-        public GetRefreshOrPreloadTaskResponse doGet(String path, GetRefreshOrPreloadTaskRequest requestObj, Map<String, String> head) throws Exception {
+        public GetHttpHeaderListResponse doGet(String path, GetHttpHeaderListRequest requestObj, Map<String, String> head) throws Exception {
             final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-            requestHeaders.putIfAbsent("Content-Type", "application/json");
+            requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
             String response = doRpc(path, requestObj, requestHeaders, "get");
-            return JSON.parseObject(response, GetRefreshOrPreloadTaskResponse.class);
+            return JSON.parseObject(response, GetHttpHeaderListResponse.class);
         }
 
     /**
@@ -128,9 +128,9 @@ public class GetRefreshOrPreloadTaskClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetRefreshOrPreloadTaskResponse doDelete(String path, GetRefreshOrPreloadTaskRequest requestObj) throws Exception {
+    public GetHttpHeaderListResponse doDelete(String path, GetHttpHeaderListRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDelete(path, requestObj, head);
     }
 
@@ -143,11 +143,11 @@ public class GetRefreshOrPreloadTaskClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetRefreshOrPreloadTaskResponse doDelete(String path, GetRefreshOrPreloadTaskRequest requestObj, Map<String, String> head) throws Exception {
+    public GetHttpHeaderListResponse doDelete(String path, GetHttpHeaderListRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "delete");
-        return JSON.parseObject(response, GetRefreshOrPreloadTaskResponse.class);
+        return JSON.parseObject(response, GetHttpHeaderListResponse.class);
     }
 
 
@@ -159,9 +159,9 @@ public class GetRefreshOrPreloadTaskClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetRefreshOrPreloadTaskResponse doPut(String path, GetRefreshOrPreloadTaskRequest requestObj) throws Exception {
+    public GetHttpHeaderListResponse doPut(String path, GetHttpHeaderListRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.putIfAbsent("Content-Type", "application/json");
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doPut(path, requestObj, head);
     }
 
@@ -174,11 +174,11 @@ public class GetRefreshOrPreloadTaskClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetRefreshOrPreloadTaskResponse doPut(String path, GetRefreshOrPreloadTaskRequest requestObj, Map<String, String> head) throws Exception {
+    public GetHttpHeaderListResponse doPut(String path, GetHttpHeaderListRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-       requestHeaders.putIfAbsent("Content-Type", "application/json");
+       requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "put");
-        return JSON.parseObject(response, GetRefreshOrPreloadTaskResponse.class);
+        return JSON.parseObject(response, GetHttpHeaderListResponse.class);
     }
 
     /**
@@ -190,7 +190,7 @@ public class GetRefreshOrPreloadTaskClient extends BaseClient {
          * @return
          * @throws Exception
          */
-        private String doRpc(String path, GetRefreshOrPreloadTaskRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
+        private String doRpc(String path, GetHttpHeaderListRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
             //断言
             Objects.requireNonNull(path, "path cannot be null");
             Objects.requireNonNull(requestObj, "requestObj cannot be null");
@@ -222,7 +222,7 @@ public class GetRefreshOrPreloadTaskClient extends BaseClient {
         }
 
 
-        private JSONObject getRequestParam(GetRefreshOrPreloadTaskRequest requestObj, String contentType) throws Exception {
+        private JSONObject getRequestParam(GetHttpHeaderListRequest requestObj, String contentType) throws Exception {
             //请求参数
             if (contentType.equalsIgnoreCase("application/json")) {
                 return getPostRawRequestParams(requestObj);
@@ -231,7 +231,7 @@ public class GetRefreshOrPreloadTaskClient extends BaseClient {
         }
 
 
-        private JSONObject getSimpleRequestParams(GetRefreshOrPreloadTaskRequest requestObj) throws Exception {
+        private JSONObject getSimpleRequestParams(GetHttpHeaderListRequest requestObj) throws Exception {
             JSONObject requestParams = new JSONObject();
 
             //设置请求体请求参数
@@ -239,7 +239,7 @@ public class GetRefreshOrPreloadTaskClient extends BaseClient {
             return requestParams;
         }
 
-        private JSONObject getPostRawRequestParams(GetRefreshOrPreloadTaskRequest requestObj) throws Exception {
+        private JSONObject getPostRawRequestParams(GetHttpHeaderListRequest requestObj) throws Exception {
             JSONObject requestParams = new JSONObject();
 
             //设置请求体请求参数

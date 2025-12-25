@@ -1,4 +1,4 @@
-package ksyun.client.cdn.setreferprotectionconfig.v3;
+package ksyun.client.cdn.settlsversionconfig.v3;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;
@@ -8,12 +8,12 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname SetReferProtectionConfigResponse
-* @Description SetReferProtectionConfig 返回体
+* @Classname SetTLSVersionConfigResponse
+* @Description SetTLSVersionConfig 返回体
 */
 @Data
 @ToString
-public class SetReferProtectionConfigResponse extends BaseResponseModel {
+public class SetTLSVersionConfigResponse extends BaseResponseModel {
 
     /**
      * 请求id
