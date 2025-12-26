@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname GetFlowDataResponse
- * @Description GetFlowData 返回体
- */
+* @Classname GetFlowDataResponse
+* @Description GetFlowData 返回体
+*/
 @Data
 @ToString
 public class GetFlowDataResponse extends BaseResponseModel {

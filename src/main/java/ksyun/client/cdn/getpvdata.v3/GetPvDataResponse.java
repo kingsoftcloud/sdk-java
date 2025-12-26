@@ -8,9 +8,9 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
- * @Classname GetPvDataResponse
- * @Description GetPvData 返回体
- */
+* @Classname GetPvDataResponse
+* @Description GetPvData 返回体
+*/
 @Data
 @ToString
 public class GetPvDataResponse extends BaseResponseModel {

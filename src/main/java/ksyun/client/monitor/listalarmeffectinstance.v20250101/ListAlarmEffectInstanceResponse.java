@@ -1,4 +1,4 @@
-package ksyun.client.cdn.getbandwidthdata.v3;
+package ksyun.client.monitor.listalarmeffectinstance.v20250101;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;
@@ -8,12 +8,12 @@ import lombok.ToString;
 import java.util.Set;
 
 /**
-* @Classname GetBandwidthDataResponse
-* @Description GetBandwidthData 返回体
+* @Classname ListAlarmEffectInstanceResponse
+* @Description ListAlarmEffectInstance 返回体
 */
 @Data
 @ToString
-public class GetBandwidthDataResponse extends BaseResponseModel {
+public class ListAlarmEffectInstanceResponse extends BaseResponseModel {
 
     /**
      * 请求id
