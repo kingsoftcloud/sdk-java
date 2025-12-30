@@ -22,28 +22,26 @@ public class ListUsersExample {
         // 创建请求对象
         ListUsersRequest request = new ListUsersRequest();
 
-        // 设置请求参数
-        request.setMaxItems(500);
-
         try {
             // 发起请求，获取结构化的 Response 对象
             ListUsersResponse response = client.doPostRaw("iam.api.ksyun.com", request);
 
             // 检查响应是否为空
             if (response == null) {
-                log.error("请求失败，返回响应为空");
+                System.out.println("请求失败，返回响应为空");
                 return;
             }
 
             // 请求成功，可以直接访问返回字段
-            log.info("请求成功！");
+            System.out.println("请求成功！");
 
             // 将完整响应序列化为 JSON 字符串输出
-            log.info("完整返回结果: {}", response);
+            System.out.println("完整返回结果: " + response);
 
         } catch (Exception e) {
             // 捕获并记录异常
-            log.error("ListUsers 请求发生错误: {}", e.getMessage(), e);
+            System.err.println("ListUsers 请求发生错误: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 }
