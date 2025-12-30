@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname UpdateAlertUserStatusResponse
@@ -15,12 +15,60 @@ import java.util.Set;
 @ToString
 public class UpdateAlertUserStatusResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("data")
+    private DataDto Data;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class DataDto {
+        /**告警联系人列表。*/
+        @JsonProperty("userList")
+        private List<DataUserListDto> UserList;
+
+        @Data
+        @ToString
+        public static class DataUserListDto {
+            /**告警联系人ID。*/
+            @JsonProperty("userId")
+            private Integer UserId;
+
+            /**告警联系人名称。*/
+            @JsonProperty("userName")
+            private String UserName;
+
+            /**告警联系人邮箱。*/
+            @JsonProperty("userEmail")
+            private String UserEmail;
+
+            /**告警联系人电话。*/
+            @JsonProperty("userPhone")
+            private String UserPhone;
+
+            /**告警联系人所属联系组名称。*/
+            @JsonProperty("groupName")
+            private String GroupName;
+
+            /**告警联系组ID*/
+            @JsonProperty("userGrpId")
+            private Integer UserGrpId;
+
+            /**告警联系人状态。取值范围：
+- 1：启用
+- 2：禁用*/
+            @JsonProperty("userStatus")
+            private Integer UserStatus;
+
+        }
+
+    }
+
+    /**总数。*/
+    @JsonProperty("totalCount")
+    private Integer TotalCount;
+
+    /**请求ID。*/
+    @JsonProperty("requestId")
+    private String RequestId;
 
 }

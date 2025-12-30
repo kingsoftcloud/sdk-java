@@ -40,7 +40,7 @@ public class UpdateImageCacheRequest{
     private Integer RetentionDays;
 
     /**镜像数量，最多20个，镜像必须符合docker镜像格式*/
-    @KsYunField(name = "Image", type = 1)
+    @KsYunField(name="Image",type=1)
     private List<String> ImageList;
 
     /**镜像缓存类型
@@ -55,7 +55,7 @@ public class UpdateImageCacheRequest{
     private Boolean EnableWarm;
 
     /**镜像拉取凭证*/
-    @KsYunField(name = "ImageRegistryCredential", type = 1)
+    @KsYunField(name="ImageRegistryCredential",type=1)
     private List<ImageRegistryCredentialDto> ImageRegistryCredentialList;
 
     @Data

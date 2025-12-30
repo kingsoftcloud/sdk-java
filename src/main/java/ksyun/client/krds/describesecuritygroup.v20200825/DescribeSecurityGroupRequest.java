@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DescribeSecurityGroupRequest{
     /**安全组ID列表，不传的时候返回列表，传值展示指定ID的安全组信息。支持批量查询。*/
-    @KsYunField(name = "SecurityGroupId", type = 1)
+    @KsYunField(name="SecurityGroupId",type=1)
     private List<String> SecurityGroupIdList;
 
     /**取值范围：IPV4 / IPV6 （默认IPV4）*/

@@ -26,15 +26,15 @@ Cover：用传入的规则列表（SecurityGroupRuleName，SecurityGroupRuleProt
     private String SecurityGroupId;
 
     /**规则id列表*/
-    @KsYunField(name = "SecurityGroupRule.SecurityGroupRuleId", type = 1)
+    @KsYunField(name="SecurityGroupRule.SecurityGroupRuleId",type=1)
     private List<String> SecurityGroupRuleSecurityGroupRuleIdList;
 
     /**规则名称列表*/
-    @KsYunField(name = "SecurityGroupRule.SecurityGroupRuleName", type = 1)
+    @KsYunField(name="SecurityGroupRule.SecurityGroupRuleName",type=1)
     private List<String> SecurityGroupRuleSecurityGroupRuleNameList;
 
     /**规则协议列表*/
-    @KsYunField(name = "SecurityGroupRule.SecurityGroupRuleCidr", type = 1)
+    @KsYunField(name="SecurityGroupRule.SecurityGroupRuleCidr",type=1)
     private List<String> SecurityGroupRuleSecurityGroupRuleCidrList;
 
 }

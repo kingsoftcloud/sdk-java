@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class DescribeCenGrantsRequest{
     /**多个云企业网授权的ID*/
-    @KsYunField(name = "CenGrantId", type = 1)
+    @KsYunField(name="CenGrantId",type=1)
     private List<String> CenGrantIdList;
 
     /**筛选Filter*/
-    @KsYunField(name = "Filter", type = 1)
+    @KsYunField(name="Filter",type=1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -34,7 +34,7 @@ public class DescribeCenGrantsRequest{
         private String Name;
 
         /***/
-        @KsYunField(name = "Value", type = 1)
+        @KsYunField(name="Value",type=1)
         private List<String> ValueList;
 
     }

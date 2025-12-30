@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname GetDomainRequestPeriodRatioDataResponse
@@ -15,12 +15,111 @@ import java.util.Set;
 @ToString
 public class GetDomainRequestPeriodRatioDataResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("CurrentPeriodStartTime")
+    private String CurrentPeriodStartTime;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("CurrentPeriodEndTime")
+    private String CurrentPeriodEndTime;
+
+    /***/
+    @JsonProperty("PriorPeriodStartTime")
+    private String PriorPeriodStartTime;
+
+    /***/
+    @JsonProperty("PriorPeriodEndTime")
+    private String PriorPeriodEndTime;
+
+    /***/
+    @JsonProperty("Metric")
+    private String Metric;
+
+    /***/
+    @JsonProperty("Interval")
+    private Integer Interval;
+
+    /***/
+    @JsonProperty("CdnType")
+    private String CdnType;
+
+    /***/
+    @JsonProperty("Domains")
+    private String Domains;
+
+    /***/
+    @JsonProperty("Areas")
+    private String Areas;
+
+    /***/
+    @JsonProperty("Provinces")
+    private String Provinces;
+
+    /***/
+    @JsonProperty("Isps")
+    private String Isps;
+
+    /***/
+    @JsonProperty("IpType")
+    private String IpType;
+
+    /***/
+    @JsonProperty("Schema")
+    private String Schema;
+
+    /***/
+    @JsonProperty("ResultType")
+    private String ResultType;
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
+
+    /***/
+    @JsonProperty("Datas")
+    private List<DatasDto> Datas;
+
+    @Data
+    @ToString
+    public static class DatasDto {
+        /***/
+        @JsonProperty("Condition")
+        private DatasConditionDto Condition;
+
+        @Data
+        @ToString
+        public static class DatasConditionDto {
+        }
+
+        /***/
+        @JsonProperty("Data")
+        private List<DatasDataDto> Data;
+
+        @Data
+        @ToString
+        public static class DatasDataDto {
+            /***/
+            @JsonProperty("CurrentPeriodTime")
+            private String CurrentPeriodTime;
+
+            /***/
+            @JsonProperty("PriorPeriodTime")
+            private String PriorPeriodTime;
+
+            /***/
+            @JsonProperty("CurrentPeriodValue")
+            private Integer CurrentPeriodValue;
+
+            /***/
+            @JsonProperty("PriorPeriodValue")
+            private Integer PriorPeriodValue;
+
+            /***/
+            @JsonProperty("PeriodRatio")
+            private Double PeriodRatio;
+
+        }
+
+    }
 
 }

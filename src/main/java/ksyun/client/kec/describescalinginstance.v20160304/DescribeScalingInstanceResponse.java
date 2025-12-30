@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeScalingInstanceResponse
@@ -15,12 +15,57 @@ import java.util.Set;
 @ToString
 public class DescribeScalingInstanceResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("ScalingInstanceCount")
+    private Integer ScalingInstanceCount;
+
+    /***/
+    @JsonProperty("ScalingInstanceSet")
+    private List<ScalingInstanceSetDto> ScalingInstanceSet;
+
+    @Data
+    @ToString
+    public static class ScalingInstanceSetDto {
+        /***/
+        @JsonProperty("InstanceId")
+        private String InstanceId;
+
+        /***/
+        @JsonProperty("InstanceName")
+        private String InstanceName;
+
+        /***/
+        @JsonProperty("HealthStatus")
+        private String HealthStatus;
+
+        /***/
+        @JsonProperty("CreationType")
+        private String CreationType;
+
+        /***/
+        @JsonProperty("AddTime")
+        private String AddTime;
+
+        /***/
+        @JsonProperty("ProtectedFromScaleIn")
+        private Integer ProtectedFromScaleIn;
+
+        /***/
+        @JsonProperty("HostName")
+        private String HostName;
+
+        /***/
+        @JsonProperty("LifeCycleState")
+        private String LifeCycleState;
+
+        /***/
+        @JsonProperty("AvailabilityZone")
+        private String AvailabilityZone;
+
+    }
 
 }

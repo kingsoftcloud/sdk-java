@@ -24,7 +24,7 @@ public class DescribeSoInstancesRequest{
     /**根据规格过滤实例，最多支持100个实例规格。
 • 参数 - N：表示实例的序号。
 undefined多个实例规格之间用&分隔*/
-    @KsYunField(name = "InstanceTypeId", type = 1)
+    @KsYunField(name="InstanceTypeId",type=1)
     private List<String> InstanceTypeIdList;
 
     /**密钥对的名称。*/
@@ -68,7 +68,7 @@ undefined多个实例规格之间用&分隔*/
     /**实例ID，最多支持100个。
 • 参数 - N：表示实例的序号。
 • 多个Instance ID之间用&分隔。*/
-    @KsYunField(name = "InstanceIds", type = 1)
+    @KsYunField(name="InstanceIds",type=1)
     private List<String> InstanceIdsList;
 
     /**星海专区*/

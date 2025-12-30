@@ -23,7 +23,7 @@ public class ModifyPdnsFdZoneRequest{
     private String Description;
 
     /**ForwardIp,此字段若传入即为全量更新*/
-    @KsYunField(name = "ForwardIp", type = 1)
+    @KsYunField(name="ForwardIp",type=1)
     private List<ForwardIpDto> ForwardIpList;
 
     @Data

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname GetTopReferDataResponse
@@ -15,12 +15,65 @@ import java.util.Set;
 @ToString
 public class GetTopReferDataResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("StartTime")
+    private String StartTime;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("EndTime")
+    private String EndTime;
+
+    /***/
+    @JsonProperty("CdnType")
+    private String CdnType;
+
+    /***/
+    @JsonProperty("Domains")
+    private String Domains;
+
+    /***/
+    @JsonProperty("LimitN")
+    private Integer LimitN;
+
+    /***/
+    @JsonProperty("SortBy")
+    private String SortBy;
+
+    /***/
+    @JsonProperty("Datas")
+    private List<DatasDto> Datas;
+
+    @Data
+    @ToString
+    public static class DatasDto {
+        /***/
+        @JsonProperty("Refer")
+        private String Refer;
+
+        /***/
+        @JsonProperty("Rank")
+        private Integer Rank;
+
+        /***/
+        @JsonProperty("Pv")
+        private Integer Pv;
+
+        /***/
+        @JsonProperty("PvProportion")
+        private Double PvProportion;
+
+        /***/
+        @JsonProperty("Flow")
+        private Integer Flow;
+
+        /***/
+        @JsonProperty("FlowProportion")
+        private Double FlowProportion;
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

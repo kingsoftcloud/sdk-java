@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DropRecycledInstanceRequest{
     /**实例ID列表。*/
-    @KsYunField(name = "InstanceIds", type = 1)
+    @KsYunField(name="InstanceIds",type=1)
     private List<String> InstanceIdsList;
 
 }

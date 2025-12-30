@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeStackOutputsResponse
@@ -15,12 +15,37 @@ import java.util.Set;
 @ToString
 public class DescribeStackOutputsResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Outputs")
+    private List<OutputsDto> Outputs;
+
+    @Data
+    @ToString
+    public static class OutputsDto {
+        /***/
+        @JsonProperty("Name")
+        private String Name;
+
+        /***/
+        @JsonProperty("Type")
+        private String Type;
+
+        /***/
+        @JsonProperty("Description")
+        private String Description;
+
+        /***/
+        @JsonProperty("Value")
+        private String Value;
+
+        /***/
+        @JsonProperty("Params")
+        private String Params;
+
+    }
 
 }

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeNodePoolSummaryResponse
@@ -15,12 +15,25 @@ import java.util.Set;
 @ToString
 public class DescribeNodePoolSummaryResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /**请求ID*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /**节点池信息*/
+    @JsonProperty("NodePools")
+    private List<NodePoolsDto> NodePools;
+
+    @Data
+    @ToString
+    public static class NodePoolsDto {
+        /**节点池ID*/
+        @JsonProperty("NodePoolId")
+        private String NodePoolId;
+
+        /**节点池名称*/
+        @JsonProperty("NodePoolName")
+        private String NodePoolName;
+
+    }
 
 }

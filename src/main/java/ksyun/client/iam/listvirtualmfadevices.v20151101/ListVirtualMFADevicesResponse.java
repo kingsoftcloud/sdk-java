@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname ListVirtualMFADevicesResponse
@@ -15,12 +15,84 @@ import java.util.Set;
 @ToString
 public class ListVirtualMFADevicesResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /**ListVirtualMFADevicesResult*/
+    @JsonProperty("ListVirtualMFADevicesResult")
+    private ListVirtualMFADevicesResultDto ListVirtualMFADevicesResult;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class ListVirtualMFADevicesResultDto {
+        /***/
+        @JsonProperty("VirtualMFADevices")
+        private ListVirtualMFADevicesResultVirtualMFADevicesDto VirtualMFADevices;
+
+        @Data
+        @ToString
+        public static class ListVirtualMFADevicesResultVirtualMFADevicesDto {
+            /***/
+            @JsonProperty("member")
+            private List<ListVirtualMFADevicesResultVirtualMFADevicesMemberDto> Member;
+
+            @Data
+            @ToString
+            public static class ListVirtualMFADevicesResultVirtualMFADevicesMemberDto {
+                /***/
+                @JsonProperty("SerialNumber")
+                private String SerialNumber;
+
+                /***/
+                @JsonProperty("EnableDate")
+                private String EnableDate;
+
+                /***/
+                @JsonProperty("User")
+                private ListVirtualMFADevicesResultVirtualMFADevicesMemberUserDto User;
+
+                @Data
+                @ToString
+                public static class ListVirtualMFADevicesResultVirtualMFADevicesMemberUserDto {
+                    /***/
+                    @JsonProperty("Uuid")
+                    private String Uuid;
+
+                    /***/
+                    @JsonProperty("Name")
+                    private String Name;
+
+                    /***/
+                    @JsonProperty("RealName")
+                    private String RealName;
+
+                    /***/
+                    @JsonProperty("Path")
+                    private String Path;
+
+                    /***/
+                    @JsonProperty("Krn")
+                    private String Krn;
+
+                    /***/
+                    @JsonProperty("CreatedTime")
+                    private String CreatedTime;
+
+                    /***/
+                    @JsonProperty("PwdLastUsed")
+                    private String PwdLastUsed;
+
+                }
+
+            }
+
+        }
+
+        /***/
+        @JsonProperty("Marker")
+        private String Marker;
+
+        /***/
+        @JsonProperty("IsTruncated")
+        private Boolean IsTruncated;
+
+    }
 
 }

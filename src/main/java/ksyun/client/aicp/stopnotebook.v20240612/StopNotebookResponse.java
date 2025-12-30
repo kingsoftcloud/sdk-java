@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname StopNotebookResponse
@@ -15,12 +15,12 @@ import java.util.Set;
 @ToString
 public class StopNotebookResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /**开发任务ID*/
+    @JsonProperty("NotebookId")
+    private String NotebookId;
 
-    //返回结果，需要按需扩展
+    /**请求ID*/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

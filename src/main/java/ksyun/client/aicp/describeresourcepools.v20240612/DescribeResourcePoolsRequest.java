@@ -39,11 +39,11 @@ public class DescribeResourcePoolsRequest{
     private String Component;
 
     /**资源组ID*/
-    @KsYunField(name = "ResourcePoolId", type = 1)
+    @KsYunField(name="ResourcePoolId",type=1)
     private List<String> ResourcePoolIdList;
 
     /**一个或者多个过滤器*/
-    @KsYunField(name = "Filter", type = 1)
+    @KsYunField(name="Filter",type=1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -57,7 +57,7 @@ public class DescribeResourcePoolsRequest{
         private String Name;
 
         /**过滤值*/
-        @KsYunField(name = "Value", type = 1)
+        @KsYunField(name="Value",type=1)
         private List<String> ValueList;
 
     }

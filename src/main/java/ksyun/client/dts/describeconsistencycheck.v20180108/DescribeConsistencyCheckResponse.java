@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeConsistencyCheckResponse
@@ -15,12 +15,37 @@ import java.util.Set;
 @ToString
 public class DescribeConsistencyCheckResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("TaskId")
+        private String TaskId;
+
+        /**一致性检查周期*/
+        @JsonProperty("ConsistencyCheckCycle")
+        private Integer ConsistencyCheckCycle;
+
+        /**一致性检查固定时间*/
+        @JsonProperty("ConsistencyCheckFixedTime")
+        private String ConsistencyCheckFixedTime;
+
+        /**一致性检查自动与否
+
+```json
+True表示开启，False表示关闭
+```*/
+        @JsonProperty("ConsistencyCheckAuto")
+        private String ConsistencyCheckAuto;
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

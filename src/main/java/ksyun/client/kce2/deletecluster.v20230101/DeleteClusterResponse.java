@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DeleteClusterResponse
@@ -15,12 +15,21 @@ import java.util.Set;
 @ToString
 public class DeleteClusterResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /**请求ID*/
+    @JsonProperty("Request")
+    private String Request;
 
-    //返回结果，需要按需扩展
+    /**返回数据*/
+    @JsonProperty("Data")
+    private DataDto Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /**被删除的集群ID*/
+        @JsonProperty("ClusterId")
+        private String ClusterId;
+
+    }
 
 }

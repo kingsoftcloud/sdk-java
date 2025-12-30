@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class UnbindFdZoneVpcRequest{
     /**要解绑的BindVpcId*/
-    @KsYunField(name = "BindVpcId", type = 1)
+    @KsYunField(name="BindVpcId",type=1)
     private List<BindVpcIdDto> BindVpcIdList;
 
     @Data

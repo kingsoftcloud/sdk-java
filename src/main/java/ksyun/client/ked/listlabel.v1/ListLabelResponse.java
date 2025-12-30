@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname ListLabelResponse
@@ -15,12 +15,25 @@ import java.util.Set;
 @ToString
 public class ListLabelResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("requestId")
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("data")
+    private List<DataDto> Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /**标签id*/
+        @JsonProperty("id")
+        private Integer Id;
+
+        /**标签名*/
+        @JsonProperty("name")
+        private String Name;
+
+    }
 
 }

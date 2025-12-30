@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeCollationsResponse
@@ -15,12 +15,43 @@ import java.util.Set;
 @ToString
 public class DescribeCollationsResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class DataDto {
+        /**排序规则列表，每个子项为对应的排序规则，及其对应的ctype和name。*/
+        @JsonProperty("Collations")
+        private DataCollationsDto Collations;
+
+        @Data
+        @ToString
+        public static class DataCollationsDto {
+            /***/
+            @JsonProperty("LATIN5")
+            private DataCollationsLATIN5Dto LATIN5;
+
+            @Data
+            @ToString
+            public static class DataCollationsLATIN5Dto {
+                /***/
+                @JsonProperty("ctype_name")
+                private List<String> Ctype_name;
+
+                /***/
+                @JsonProperty("collation_name")
+                private List<String> Collation_name;
+
+            }
+
+        }
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

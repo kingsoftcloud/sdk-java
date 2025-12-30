@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeValidRegionResponse
@@ -15,12 +15,67 @@ import java.util.Set;
 @ToString
 public class DescribeValidRegionResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("Regions")
+        private List<DataRegionsDto> Regions;
+
+        @Data
+        @ToString
+        public static class DataRegionsDto {
+            /***/
+            @JsonProperty("Name")
+            private String Name;
+
+            /***/
+            @JsonProperty("Code")
+            private String Code;
+
+            /***/
+            @JsonProperty("RegionEnName")
+            private String RegionEnName;
+
+            /***/
+            @JsonProperty("AreaCode")
+            private String AreaCode;
+
+            /***/
+            @JsonProperty("AreaName")
+            private String AreaName;
+
+            /***/
+            @JsonProperty("AreaEnName")
+            private String AreaEnName;
+
+            /***/
+            @JsonProperty("AvailabilityZones")
+            private List<DataRegionsAvailabilityZonesDto> AvailabilityZones;
+
+            @Data
+            @ToString
+            public static class DataRegionsAvailabilityZonesDto {
+                /***/
+                @JsonProperty("Code")
+                private String Code;
+
+                /***/
+                @JsonProperty("Name")
+                private String Name;
+
+            }
+
+        }
+
+    }
 
 }

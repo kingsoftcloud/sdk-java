@@ -33,11 +33,11 @@ public class CreateSecurityGroupRequest{
 ```json 
 UUID格式，可填写未绑定过安全组的实例ID
 ```*/
-    @KsYunField(name = "DBInstanceIdentifier", type = 1)
+    @KsYunField(name="DBInstanceIdentifier",type=1)
     private List<String> DBInstanceIdentifierList;
 
     /**安全组规则*/
-    @KsYunField(name = "SecurityGroupRule", type = 1)
+    @KsYunField(name="SecurityGroupRule",type=1)
     private List<SecurityGroupRuleDto> SecurityGroupRuleList;
 
     @Data

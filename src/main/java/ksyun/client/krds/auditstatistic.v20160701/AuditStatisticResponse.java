@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname AuditStatisticResponse
@@ -15,12 +15,65 @@ import java.util.Set;
 @ToString
 public class AuditStatisticResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("AuditStatistic")
+    private AuditStatisticDto AuditStatistic;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class AuditStatisticDto {
+        /**SQL操作类型	
+返回类型具体由审计结果统计*/
+        @JsonProperty("AccessSqlLanguage")
+        private AuditStatisticAccessSqlLanguageDto AccessSqlLanguage;
+
+        @Data
+        @ToString
+        public static class AuditStatisticAccessSqlLanguageDto {
+            /***/
+            @JsonProperty("OTHER")
+            private Integer OTHER;
+
+            /***/
+            @JsonProperty("LOGOUT")
+            private Integer LOGOUT;
+
+            /***/
+            @JsonProperty("LOGIN")
+            private Integer LOGIN;
+
+            /***/
+            @JsonProperty("DQL")
+            private Integer DQL;
+
+        }
+
+        /**SQL操作命令	
+返回类型具体由审计结果统计*/
+        @JsonProperty("AccessSqlStatement")
+        private AuditStatisticAccessSqlStatementDto AccessSqlStatement;
+
+        @Data
+        @ToString
+        public static class AuditStatisticAccessSqlStatementDto {
+            /***/
+            @JsonProperty("LOGOUT")
+            private Integer LOGOUT;
+
+            /***/
+            @JsonProperty("SET")
+            private Integer SET;
+
+            /***/
+            @JsonProperty("LOGIN")
+            private Integer LOGIN;
+
+            /***/
+            @JsonProperty("SELECT")
+            private Integer SELECT;
+
+        }
+
+    }
 
 }

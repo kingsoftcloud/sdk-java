@@ -35,7 +35,7 @@ ServiceMonitor*/
     private String Type;
 
     /**指标名称*/
-    @KsYunField(name = "MetricsName", type = 1)
+    @KsYunField(name="MetricsName",type=1)
     private List<String> MetricsNameList;
 
 }

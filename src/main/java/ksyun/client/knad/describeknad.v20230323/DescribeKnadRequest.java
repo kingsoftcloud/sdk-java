@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class DescribeKnadRequest{
     /**项目制id*/
-    @KsYunField(name = "ProjectId", type = 1)
+    @KsYunField(name="ProjectId",type=1)
     private List<String> ProjectIdList;
 
     /***/
-    @KsYunField(name = "KnadId", type = 1)
+    @KsYunField(name="KnadId",type=1)
     private List<String> KnadIdList;
 
 }

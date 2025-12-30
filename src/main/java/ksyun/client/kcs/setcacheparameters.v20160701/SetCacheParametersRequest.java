@@ -27,11 +27,11 @@ public class SetCacheParametersRequest{
     private String Protocol;
 
     /**参数名称   	 N：表示数字，示例（Parameters.ParameterName.1=xx&Parameters.ParameterName.2=yy）参考请见：[参数组参数](https://docs.ksyun.com/documents/38470)(默认不修改)*/
-    @KsYunField(name = "Parameters.ParameterName", type = 1)
+    @KsYunField(name="Parameters.ParameterName",type=1)
     private List<String> ParametersParameterNameList;
 
     /**参数值 N：表示数字，示例（Parameters.ParameterValue.1=xx&Parameters.ParameterValue.2=yy）参考请见：参数组参数(默认不修改)*/
-    @KsYunField(name = "Parameters.ParameterValue", type = 1)
+    @KsYunField(name="Parameters.ParameterValue",type=1)
     private List<String> ParametersParameterValueList;
 
     /**是否为重置参数 	 默认：false；重置实例参数时修改为true，参数值/参数名不传*/

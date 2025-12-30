@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeDBParameterGroupResponse
@@ -15,12 +15,54 @@ import java.util.Set;
 @ToString
 public class DescribeDBParameterGroupResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("DBParameterGroups")
+        private List<DataDBParameterGroupsDto> DBParameterGroups;
+
+        @Data
+        @ToString
+        public static class DataDBParameterGroupsDto {
+            /**参数组ID*/
+            @JsonProperty("DBParameterGroupId")
+            private String DBParameterGroupId;
+
+            /**参数组名称*/
+            @JsonProperty("DBParameterGroupName")
+            private String DBParameterGroupName;
+
+            /**数据库引擎版本*/
+            @JsonProperty("EngineVersion")
+            private String EngineVersion;
+
+            /**数据库引擎*/
+            @JsonProperty("Engine")
+            private String Engine;
+
+        }
+
+        /**参数组类型*/
+        @JsonProperty("Source")
+        private String Source;
+
+        /***/
+        @JsonProperty("MaxRecords")
+        private Integer MaxRecords;
+
+        /***/
+        @JsonProperty("TotalCount")
+        private Integer TotalCount;
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

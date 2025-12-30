@@ -31,12 +31,12 @@ LocalImage 和 CommonImage*/
 
     /**实例需要制作镜像的数据盘ID。
 标准UUID格式，形如[1]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$*/
-    @KsYunField(name = "DataDiskIds", type = 1)
+    @KsYunField(name="DataDiskIds",type=1)
     private List<String> DataDiskIdsList;
 
     /**实例需要制作镜像的快照ID，里面必须包含一个系统盘快照ID。
 标准UUID格式，形如[2]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$*/
-    @KsYunField(name = "SnapshotIds", type = 1)
+    @KsYunField(name="SnapshotIds",type=1)
     private List<String> SnapshotIdsList;
 
     /**支持快速开盘/快速变更，该参数仅对本地盘/本地盘机型/本地盘快照生效*/

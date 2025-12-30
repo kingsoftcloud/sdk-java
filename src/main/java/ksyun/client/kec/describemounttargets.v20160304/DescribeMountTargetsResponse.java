@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeMountTargetsResponse
@@ -15,12 +15,84 @@ import java.util.Set;
 @ToString
 public class DescribeMountTargetsResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("DescribeMountTargetsResponse")
+    private DescribeMountTargetsResponseDto DescribeMountTargetsResponse;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class DescribeMountTargetsResponseDto {
+        /***/
+        @JsonProperty("RequestId")
+        private String RequestId;
+
+        /***/
+        @JsonProperty("Marker")
+        private String Marker;
+
+        /***/
+        @JsonProperty("FileSystemCount")
+        private String FileSystemCount;
+
+        /***/
+        @JsonProperty("MountTargets")
+        private DescribeMountTargetsResponseMountTargetsDto MountTargets;
+
+        @Data
+        @ToString
+        public static class DescribeMountTargetsResponseMountTargetsDto {
+            /***/
+            @JsonProperty("Item")
+            private DescribeMountTargetsResponseMountTargetsItemDto Item;
+
+            @Data
+            @ToString
+            public static class DescribeMountTargetsResponseMountTargetsItemDto {
+                /***/
+                @JsonProperty("MountTargetId")
+                private String MountTargetId;
+
+                /***/
+                @JsonProperty("SubnetId")
+                private String SubnetId;
+
+                /***/
+                @JsonProperty("IpAddress")
+                private String IpAddress;
+
+                /***/
+                @JsonProperty("MountTargetState")
+                private String MountTargetState;
+
+                /***/
+                @JsonProperty("CreationDate")
+                private String CreationDate;
+
+                /**权限组信息*/
+                @JsonProperty("AccessGroup")
+                private DescribeMountTargetsResponseMountTargetsItemAccessGroupDto AccessGroup;
+
+                @Data
+                @ToString
+                public static class DescribeMountTargetsResponseMountTargetsItemAccessGroupDto {
+                    /**权限组ID*/
+                    @JsonProperty("AccessGroupId")
+                    private String AccessGroupId;
+
+                    /**权限组名称*/
+                    @JsonProperty("AccessGroupName")
+                    private String AccessGroupName;
+
+                    /**标识是否默认权限组*/
+                    @JsonProperty("DefaultGroup")
+                    private Boolean DefaultGroup;
+
+                }
+
+            }
+
+        }
+
+    }
 
 }

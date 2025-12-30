@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeAuditHotDurationResponse
@@ -15,12 +15,33 @@ import java.util.Set;
 @ToString
 public class DescribeAuditHotDurationResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("data")
+    private List<DataDto> Data;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class DataDto {
+        /**数据库库名	
+*/
+        @JsonProperty("dbName")
+        private String DbName;
+
+        /**数据库表名	
+*/
+        @JsonProperty("tableName")
+        private String TableName;
+
+        /**执行耗时	
+*/
+        @JsonProperty("duration")
+        private Double Duration;
+
+        /**	执行耗时占比	
+*/
+        @JsonProperty("durationRatio")
+        private Double DurationRatio;
+
+    }
 
 }

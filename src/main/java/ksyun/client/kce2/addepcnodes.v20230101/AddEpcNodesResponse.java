@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname AddEpcNodesResponse
@@ -15,12 +15,34 @@ import java.util.Set;
 @ToString
 public class AddEpcNodesResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("RequestId")
+        private String RequestId;
+
+        /***/
+        @JsonProperty("InstanceSet")
+        private List<DataInstanceSetDto> InstanceSet;
+
+        @Data
+        @ToString
+        public static class DataInstanceSetDto {
+            /***/
+            @JsonProperty("KceNodeId")
+            private String KceNodeId;
+
+            /***/
+            @JsonProperty("Code")
+            private Integer Code;
+
+        }
+
+    }
 
 }

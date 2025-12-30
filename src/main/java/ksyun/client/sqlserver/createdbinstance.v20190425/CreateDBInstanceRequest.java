@@ -147,7 +147,7 @@ HourlyInstantSettlement(按量计费)。
 ```json
 示例(AvailabilityZone.1=cn-beijing-6a&AvailabilityZone.2=cn-beijing-6b)，表示实例的主副本在a区，备副本在b区。如果没有跨可用区的需求，建议将实例创建在云主机的可用区内已减少网络延时。
 ```*/
-    @KsYunField(name = "AvailabilityZone", type = 1)
+    @KsYunField(name="AvailabilityZone",type=1)
     private List<String> AvailabilityZoneList;
 
     /**项目Id

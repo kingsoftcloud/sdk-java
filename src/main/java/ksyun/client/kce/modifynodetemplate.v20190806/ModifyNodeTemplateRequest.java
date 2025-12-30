@@ -72,7 +72,7 @@ public class ModifyNodeTemplateRequest{
         private Integer DataDiskGb;
 
         /***/
-        @KsYunField(name = "DataDisk", type = 1)
+        @KsYunField(name="DataDisk",type=1)
         private List<NodeTemplateDataDiskDto> DataDiskList;
 
         @Data
@@ -104,7 +104,7 @@ public class ModifyNodeTemplateRequest{
         private String VpcId;
 
         /**子网id*/
-        @KsYunField(name = "SubnetId", type = 1)
+        @KsYunField(name="SubnetId",type=1)
         private List<String> SubnetIdList;
 
         /**多子网扩展策略，有效值：
@@ -131,7 +131,7 @@ public class ModifyNodeTemplateRequest{
         /**密钥id
 校验规则：请填写有效的keyId，若填写此参数，则Password参数无效
 注：参数KeyId.N和Password必须填写一个*/
-        @KsYunField(name = "KeyId", type = 1)
+        @KsYunField(name="KeyId",type=1)
         private List<String> KeyIdList;
 
         /**节点高级设置*/
@@ -189,7 +189,7 @@ Kubernetes版本≥1.24时，有效值：
             private Boolean Schedulable;
 
             /**节点加入集群时预置的标签*/
-            @KsYunField(name = "Label", type = 1)
+            @KsYunField(name="Label",type=1)
             private List<NodeTemplateAdvancedSettingLabelDto> LabelList;
 
             @Data
@@ -213,7 +213,7 @@ Kubernetes版本≥1.24时，有效值：
             @ToString
             public static class NodeTemplateAdvancedSettingExtraArgDto {
                 /**用户自定义kubelet的参数*/
-                @KsYunField(name = "Kubelet", type = 1)
+                @KsYunField(name="Kubelet",type=1)
                 private List<NodeTemplateAdvancedSettingExtraArgKubeletDto> KubeletList;
 
                 @Data
@@ -236,7 +236,7 @@ Kubernetes版本≥1.24时，有效值：
             private Integer ContainerLogMaxFiles;
 
             /**节点加入集群时预置污点，匹配污点容忍进行调度*/
-            @KsYunField(name = "Taints", type = 1)
+            @KsYunField(name="Taints",type=1)
             private List<NodeTemplateAdvancedSettingTaintsDto> TaintsList;
 
             @Data
@@ -258,7 +258,7 @@ Kubernetes版本≥1.24时，有效值：
 
             /**节点多块数据盘挂载格式化设置，DataDisk只能设置第一块盘，请优先使用MultiDataDisk。
 这个N与NodeConfig下的Para开机参数中DataDisk.N.Type等相关数据盘的定义对应，在Para中定义的数据盘可以不在MultiDataDisk中定义，即某块盘可以不进行格式化挂载设置*/
-            @KsYunField(name = "MultiDataDisk", type = 1)
+            @KsYunField(name="MultiDataDisk",type=1)
             private List<NodeTemplateAdvancedSettingMultiDataDiskDto> MultiDataDiskList;
 
             @Data
@@ -289,7 +289,7 @@ Kubernetes版本≥1.24时，有效值：
         }
 
         /**云盘标签，N取值范围[1-10]*/
-        @KsYunField(name = "EbsTag", type = 1)
+        @KsYunField(name="EbsTag",type=1)
         private List<NodeTemplateEbsTagDto> EbsTagList;
 
         @Data
@@ -306,7 +306,7 @@ Kubernetes版本≥1.24时，有效值：
         }
 
         /**实例标签，N取值范围[1-10]*/
-        @KsYunField(name = "InstanceTag", type = 1)
+        @KsYunField(name="InstanceTag",type=1)
         private List<NodeTemplateInstanceTagDto> InstanceTagList;
 
         @Data

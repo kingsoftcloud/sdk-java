@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname GetDomainConfigsResponse
@@ -15,12 +15,9 @@ import java.util.Set;
 @ToString
 public class GetDomainConfigsResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
-
-    //返回结果，需要按需扩展
+    /**对应的配置数据，参考上面ConfigList的请求参数名和返回参数名的对应关系
+*/
+    @JsonProperty("DomainConfigs")
+    private String DomainConfigs;
 
 }

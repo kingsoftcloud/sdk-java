@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname CancelOrderResponse
@@ -15,12 +15,12 @@ import java.util.Set;
 @ToString
 public class CancelOrderResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /**请求唯一id*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /**是否取消成功*/
+    @JsonProperty("success")
+    private Boolean Success;
 
 }

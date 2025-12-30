@@ -20,7 +20,7 @@ public class GetAlertUserRequest{
 > **说明：** 默认：表示全部；
 > **示例：** `UserGrpId.1=100&UserGrpId.2=101`
 (如果用户需要获取两个联系组的人员信息)*/
-    @KsYunField(name="UserGrpId",type=2)
+    @KsYunField(name="UserGrpId",type=1)
     private List<Integer> UserGrpIdList;
 
 }

@@ -30,7 +30,7 @@ public class CreateInstanceRequest{
             "mem": 2,
             "tidisk": 0
         }*/
-    @KsYunField(name = "ModuleConfigs", type = 1)
+    @KsYunField(name="ModuleConfigs",type=1)
     private List<ModuleConfigsDto> ModuleConfigsList;
 
     @Data

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname ListGroupsForUserResponse
@@ -15,12 +15,83 @@ import java.util.Set;
 @ToString
 public class ListGroupsForUserResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("ListGroupsForUserResult")
+    private ListGroupsForUserResultDto ListGroupsForUserResult;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class ListGroupsForUserResultDto {
+        /***/
+        @JsonProperty("Groups")
+        private ListGroupsForUserResultGroupsDto Groups;
+
+        @Data
+        @ToString
+        public static class ListGroupsForUserResultGroupsDto {
+            /***/
+            @JsonProperty("member")
+            private List<ListGroupsForUserResultGroupsMemberDto> Member;
+
+            @Data
+            @ToString
+            public static class ListGroupsForUserResultGroupsMemberDto {
+                /***/
+                @JsonProperty("Id")
+                private Integer Id;
+
+                /***/
+                @JsonProperty("GroupId")
+                private String GroupId;
+
+                /***/
+                @JsonProperty("Path")
+                private String Path;
+
+                /***/
+                @JsonProperty("GroupName")
+                private String GroupName;
+
+                /***/
+                @JsonProperty("Description")
+                private String Description;
+
+                /***/
+                @JsonProperty("CreateDate")
+                private String CreateDate;
+
+                /***/
+                @JsonProperty("Krn")
+                private String Krn;
+
+                /***/
+                @JsonProperty("PolicyCount")
+                private Integer PolicyCount;
+
+                /**别名*/
+                @JsonProperty("GroupRealName")
+                private String GroupRealName;
+
+            }
+
+        }
+
+        /***/
+        @JsonProperty("IsTruncated")
+        private Boolean IsTruncated;
+
+        /***/
+        @JsonProperty("Marker")
+        private String Marker;
+
+        /***/
+        @JsonProperty("Total")
+        private Integer Total;
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DeleteAutoSnapshotPolicyResponse
@@ -15,12 +15,12 @@ import java.util.Set;
 @ToString
 public class DeleteAutoSnapshotPolicyResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /**请求id*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /**自动快照策略ID*/
+    @JsonProperty("AutoSnapshotPolicySet")
+    private List<String> AutoSnapshotPolicySet;
 
 }

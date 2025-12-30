@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class DescribeFlowLogsRequest{
     /**流日志的ID*/
-    @KsYunField(name = "FlowLogId", type = 1)
+    @KsYunField(name="FlowLogId",type=1)
     private List<String> FlowLogIdList;
 
     /**筛选Filter*/
-    @KsYunField(name = "Filter", type = 1)
+    @KsYunField(name="Filter",type=1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -34,7 +34,7 @@ public class DescribeFlowLogsRequest{
         private String Name;
 
         /***/
-        @KsYunField(name = "Value", type = 1)
+        @KsYunField(name="Value",type=1)
         private List<String> ValueList;
 
     }

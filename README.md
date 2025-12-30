@@ -33,19 +33,28 @@ secretKey， secretId 是用于标识 API 调用者的身份，secretKey 是用�
 
 # 示例
 
-```js
+```java
 public static void main(String[] args) {
-   //证书
-   Credential credential = new Credential("secretKey", "signStr", "region");
-   ListUsersClient client = new ListUsersClient(credential);
-   ListUsersRequest request = new ListUsersRequest();
-   request.setMaxItems(20);
-   
+   // 创建凭证
+   Credential credential = new Credential("YOUR_SECRET_KEY", "YOUR_SIGN_STR", "YOUR_REGION");
+
+   // 创建客户端
+   AssumeRoleClient client = new AssumeRoleClient(credential);
+
+   // 创建请求对象
+   AssumeRoleRequest request = new AssumeRoleRequest();
+   // 设置请求参数
+   request.setRoleSessionName("Test");
    try {
-      ListUsersResponse ListUsersResponse = client.doGet("iam.api.ksyun.com", request);
-      log.info("ListUsers result:{}", JSON.toJSON(ListUsersResponse));
-   } catch (Exception e) {
-      log.error("ListUsers occur error", e);
+      AssumeRoleResponse response = client.doPostSend("sts.api.ksyun.com", request);
+      if (response != null) {
+         System.out.println("请求成功: " + JSON.toJSON(response));
+      } else {
+         System.out.println("响应为空");
+      }
+   } catch (RuntimeException e) {
+      // SDK 已经格式化好错误信息，直接输出即可
+      System.err.println(e.getMessage());
    }
 }
 ```

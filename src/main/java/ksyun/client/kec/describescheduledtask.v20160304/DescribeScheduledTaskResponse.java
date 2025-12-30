@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeScheduledTaskResponse
@@ -15,12 +15,77 @@ import java.util.Set;
 @ToString
 public class DescribeScheduledTaskResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("ScheduledTaskSize")
+    private Integer ScheduledTaskSize;
+
+    /***/
+    @JsonProperty("ScalingScheduleTaskSet")
+    private List<ScalingScheduleTaskSetDto> ScalingScheduleTaskSet;
+
+    @Data
+    @ToString
+    public static class ScalingScheduleTaskSetDto {
+        /***/
+        @JsonProperty("ScalingGroupId")
+        private String ScalingGroupId;
+
+        /***/
+        @JsonProperty("ScalingScheduledTaskId")
+        private String ScalingScheduledTaskId;
+
+        /***/
+        @JsonProperty("ScalingScheduledTaskName")
+        private String ScalingScheduledTaskName;
+
+        /***/
+        @JsonProperty("ReadjustMaxSize")
+        private Integer ReadjustMaxSize;
+
+        /***/
+        @JsonProperty("ReadjustMinSize")
+        private Integer ReadjustMinSize;
+
+        /***/
+        @JsonProperty("ReadjustExpectSize")
+        private Integer ReadjustExpectSize;
+
+        /***/
+        @JsonProperty("StartTime")
+        private String StartTime;
+
+        /***/
+        @JsonProperty("Recurrence")
+        private String Recurrence;
+
+        /***/
+        @JsonProperty("RepeatUnit")
+        private String RepeatUnit;
+
+        /***/
+        @JsonProperty("RepeatCycle")
+        private String RepeatCycle;
+
+        /***/
+        @JsonProperty("CreateTime")
+        private String CreateTime;
+
+        /***/
+        @JsonProperty("EndTime")
+        private String EndTime;
+
+        /***/
+        @JsonProperty("AvailabilityZone")
+        private String AvailabilityZone;
+
+        /***/
+        @JsonProperty("Description")
+        private String Description;
+
+    }
 
 }

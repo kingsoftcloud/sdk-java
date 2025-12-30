@@ -23,7 +23,7 @@ public class BatchCreateNatRateLimitRequest{
     private Integer InBandwidthLimit;
 
     /**弹性网卡ID*/
-    @KsYunField(name = "NetworkInterfaceId", type = 1)
+    @KsYunField(name="NetworkInterfaceId",type=1)
     private List<String> NetworkInterfaceIdList;
 
 }

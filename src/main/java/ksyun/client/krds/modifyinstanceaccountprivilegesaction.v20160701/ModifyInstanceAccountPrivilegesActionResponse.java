@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname ModifyInstanceAccountPrivilegesActionResponse
@@ -15,12 +15,16 @@ import java.util.Set;
 @ToString
 public class ModifyInstanceAccountPrivilegesActionResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("DBInstanceIdentifier")
+    private String DBInstanceIdentifier;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("InstanceAccountName")
+    private String InstanceAccountName;
+
+    /***/
+    @JsonProperty("InstanceAccountPrivileges")
+    private List<String> InstanceAccountPrivileges;
 
 }

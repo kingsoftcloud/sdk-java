@@ -19,7 +19,7 @@ public class DeleteTagsRequest{
     private String RepoName;
 
     /**指定的镜像版本*/
-    @KsYunField(name = "Tag", type = 1)
+    @KsYunField(name="Tag",type=1)
     private List<String> TagList;
 
 }

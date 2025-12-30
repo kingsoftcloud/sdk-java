@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeMongoDBInstanceNodeResponse
@@ -15,12 +15,41 @@ import java.util.Set;
 @ToString
 public class DescribeMongoDBInstanceNodeResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("MongoDBInstanceNodeResult")
+    private List<MongoDBInstanceNodeResultDto> MongoDBInstanceNodeResult;
+
+    @Data
+    @ToString
+    public static class MongoDBInstanceNodeResultDto {
+        /***/
+        @JsonProperty("NodeId")
+        private String NodeId;
+
+        /***/
+        @JsonProperty("Name")
+        private String Name;
+
+        /***/
+        @JsonProperty("Role")
+        private String Role;
+
+        /***/
+        @JsonProperty("IP")
+        private String IP;
+
+        /***/
+        @JsonProperty("Port")
+        private Integer Port;
+
+        /***/
+        @JsonProperty("Status")
+        private String Status;
+
+    }
 
 }

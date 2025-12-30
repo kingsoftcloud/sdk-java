@@ -19,7 +19,7 @@ public class DescribeForwardConfRequest{
     private String KadId;
 
     /**一个或多个四层转发配置的ID*/
-    @KsYunField(name = "ForwardConfId", type = 1)
+    @KsYunField(name="ForwardConfId",type=1)
     private List<String> ForwardConfIdList;
 
 }

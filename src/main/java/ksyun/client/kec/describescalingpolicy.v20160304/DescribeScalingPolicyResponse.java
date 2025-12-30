@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeScalingPolicyResponse
@@ -15,12 +15,90 @@ import java.util.Set;
 @ToString
 public class DescribeScalingPolicyResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("ScalingPolicySize")
+    private Integer ScalingPolicySize;
+
+    /***/
+    @JsonProperty("ScalingPolicySet")
+    private List<ScalingPolicySetDto> ScalingPolicySet;
+
+    @Data
+    @ToString
+    public static class ScalingPolicySetDto {
+        /***/
+        @JsonProperty("ScalingGroupId")
+        private String ScalingGroupId;
+
+        /***/
+        @JsonProperty("ScalingPolicyId")
+        private String ScalingPolicyId;
+
+        /***/
+        @JsonProperty("Description")
+        private String Description;
+
+        /***/
+        @JsonProperty("ScalingPolicyName")
+        private String ScalingPolicyName;
+
+        /***/
+        @JsonProperty("AdjustmentType")
+        private String AdjustmentType;
+
+        /***/
+        @JsonProperty("AdjustmentValue")
+        private Integer AdjustmentValue;
+
+        /***/
+        @JsonProperty("Metric")
+        private ScalingPolicySetMetricDto Metric;
+
+        @Data
+        @ToString
+        public static class ScalingPolicySetMetricDto {
+            /***/
+            @JsonProperty("DimensionName")
+            private String DimensionName;
+
+            /***/
+            @JsonProperty("ComparisonOperator")
+            private String ComparisonOperator;
+
+            /***/
+            @JsonProperty("Threshold")
+            private Integer Threshold;
+
+            /***/
+            @JsonProperty("RepeatTimes")
+            private Integer RepeatTimes;
+
+            /***/
+            @JsonProperty("Period")
+            private Integer Period;
+
+            /***/
+            @JsonProperty("Function")
+            private String Function;
+
+        }
+
+        /***/
+        @JsonProperty("CreateTime")
+        private String CreateTime;
+
+        /***/
+        @JsonProperty("CoolDown")
+        private Integer CoolDown;
+
+        /***/
+        @JsonProperty("AvailabilityZone")
+        private String AvailabilityZone;
+
+    }
 
 }

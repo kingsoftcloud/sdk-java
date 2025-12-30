@@ -41,7 +41,7 @@ public class ModifyDBInstanceExtensionRequest{
 ```json
 注意：支持普通GET传List<string>的方式，也支持以Extension=aaa,bbb,ccc的形式传值
 ```*/
-    @KsYunField(name = "Extension", type = 1)
+    @KsYunField(name="Extension",type=1)
     private List<String> ExtensionList;
 
 }

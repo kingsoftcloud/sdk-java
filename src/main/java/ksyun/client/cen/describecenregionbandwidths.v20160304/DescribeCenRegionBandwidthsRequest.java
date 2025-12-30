@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class DescribeCenRegionBandwidthsRequest{
     /**多个跨地域带宽的ID*/
-    @KsYunField(name = "CenRegionBandwidthId", type = 1)
+    @KsYunField(name="CenRegionBandwidthId",type=1)
     private List<String> CenRegionBandwidthIdList;
 
     /**筛选Filter*/
-    @KsYunField(name = "Filter", type = 1)
+    @KsYunField(name="Filter",type=1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -31,7 +31,7 @@ public class DescribeCenRegionBandwidthsRequest{
         private String Name;
 
         /***/
-        @KsYunField(name = "Value", type = 1)
+        @KsYunField(name="Value",type=1)
         private List<String> ValueList;
 
     }

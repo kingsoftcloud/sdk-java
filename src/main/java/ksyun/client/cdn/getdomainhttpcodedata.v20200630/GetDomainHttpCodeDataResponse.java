@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname GetDomainHttpCodeDataResponse
@@ -15,12 +15,91 @@ import java.util.Set;
 @ToString
 public class GetDomainHttpCodeDataResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("StartTime")
+    private String StartTime;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("EndTime")
+    private String EndTime;
+
+    /***/
+    @JsonProperty("CdnType")
+    private String CdnType;
+
+    /***/
+    @JsonProperty("Domains")
+    private String Domains;
+
+    /***/
+    @JsonProperty("Areas")
+    private String Areas;
+
+    /***/
+    @JsonProperty("Provinces")
+    private String Provinces;
+
+    /***/
+    @JsonProperty("Isps")
+    private String Isps;
+
+    /***/
+    @JsonProperty("IpType")
+    private String IpType;
+
+    /***/
+    @JsonProperty("Schema")
+    private String Schema;
+
+    /***/
+    @JsonProperty("ResultType")
+    private String ResultType;
+
+    /***/
+    @JsonProperty("Datas")
+    private List<DatasDto> Datas;
+
+    @Data
+    @ToString
+    public static class DatasDto {
+        /***/
+        @JsonProperty("Condition")
+        private DatasConditionDto Condition;
+
+        @Data
+        @ToString
+        public static class DatasConditionDto {
+            /***/
+            @JsonProperty("Domains")
+            private String Domains;
+
+        }
+
+        /***/
+        @JsonProperty("httpcodeData")
+        private List<DatasHttpcodeDataDto> HttpcodeData;
+
+        @Data
+        @ToString
+        public static class DatasHttpcodeDataDto {
+            /***/
+            @JsonProperty("CodeType")
+            private String CodeType;
+
+            /***/
+            @JsonProperty("PV")
+            private Integer PV;
+
+            /***/
+            @JsonProperty("Proportion")
+            private Double Proportion;
+
+        }
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

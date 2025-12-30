@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname ListUnsecuredInstanceResponse
@@ -15,12 +15,61 @@ import java.util.Set;
 @ToString
 public class ListUnsecuredInstanceResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Offset")
+    private Integer Offset;
+
+    /***/
+    @JsonProperty("Limit")
+    private Integer Limit;
+
+    /***/
+    @JsonProperty("Total")
+    private Integer Total;
+
+    /***/
+    @JsonProperty("Data")
+    private List<DataDto> Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("InstanceId")
+        private String InstanceId;
+
+        /***/
+        @JsonProperty("InstanceName")
+        private String InstanceName;
+
+        /***/
+        @JsonProperty("ProductType")
+        private Integer ProductType;
+
+        /***/
+        @JsonProperty("ProductTypeName")
+        private String ProductTypeName;
+
+        /***/
+        @JsonProperty("CreateTime")
+        private String CreateTime;
+
+        /***/
+        @JsonProperty("UpdateTime")
+        private String UpdateTime;
+
+        /***/
+        @JsonProperty("ClientIp")
+        private String ClientIp;
+
+        /***/
+        @JsonProperty("ClientPort")
+        private Integer ClientPort;
+
+    }
 
 }

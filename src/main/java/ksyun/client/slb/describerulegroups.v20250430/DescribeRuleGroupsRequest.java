@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class DescribeRuleGroupsRequest{
     /**多个转发策略的ID*/
-    @KsYunField(name = "RuleGroupId", type = 1)
+    @KsYunField(name="RuleGroupId",type=1)
     private List<String> RuleGroupIdList;
 
     /**筛选Filter*/
-    @KsYunField(name = "Filter", type = 1)
+    @KsYunField(name="Filter",type=1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -31,7 +31,7 @@ public class DescribeRuleGroupsRequest{
         private String Name;
 
         /***/
-        @KsYunField(name = "Value", type = 1)
+        @KsYunField(name="Value",type=1)
         private List<String> ValueList;
 
     }

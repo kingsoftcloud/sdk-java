@@ -19,7 +19,7 @@ public class MatchImageCacheRequest{
 - hub.kce.ksyun.com/ksyun/nginx:1.0
 - nginx/nginx:1.0
 - nginx:1.0@sha256:1f4f402b9c14f3ae92b11ada1dfe9893a88f0faeb0b2f4b903e2c67a0c3bf0de*/
-    @KsYunField(name = "Image", type = 1)
+    @KsYunField(name="Image",type=1)
     private List<String> ImageList;
 
 }

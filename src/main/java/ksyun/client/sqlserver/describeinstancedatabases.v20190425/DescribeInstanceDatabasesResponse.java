@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeInstanceDatabasesResponse
@@ -15,12 +15,63 @@ import java.util.Set;
 @ToString
 public class DescribeInstanceDatabasesResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class DataDto {
+        /**数据库列表*/
+        @JsonProperty("InstanceDatabases")
+        private List<DataInstanceDatabasesDto> InstanceDatabases;
+
+        @Data
+        @ToString
+        public static class DataInstanceDatabasesDto {
+            /**数据库名称*/
+            @JsonProperty("InstanceDatabaseName")
+            private String InstanceDatabaseName;
+
+            /**数据库排序规则*/
+            @JsonProperty("InstanceDatabaseCollation")
+            private String InstanceDatabaseCollation;
+
+            /**数据库描述*/
+            @JsonProperty("InstanceDatabaseDescription")
+            private String InstanceDatabaseDescription;
+
+            /**数据库状态*/
+            @JsonProperty("InstanceDatabaseStatus")
+            private String InstanceDatabaseStatus;
+
+            /**创建时间*/
+            @JsonProperty("Created")
+            private String Created;
+
+            /**账号权限列表*/
+            @JsonProperty("InstanceDatabasePrivileges")
+            private List<DataInstanceDatabasesInstanceDatabasePrivilegesDto> InstanceDatabasePrivileges;
+
+            @Data
+            @ToString
+            public static class DataInstanceDatabasesInstanceDatabasePrivilegesDto {
+                /***/
+                @JsonProperty("InstanceAccountName")
+                private String InstanceAccountName;
+
+                /**账号名称*/
+                @JsonProperty("Privilege")
+                private String Privilege;
+
+            }
+
+        }
+
+    }
+
+    /**账号权限*/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

@@ -19,7 +19,7 @@ public class CreateSecurityRulesRequest{
     private String SecurityGroupId;
 
     /**安全组规则列表(支持多个)*/
-    @KsYunField(name = "Rules", type = 1)
+    @KsYunField(name="Rules",type=1)
     private List<RulesDto> RulesList;
 
     @Data

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname ApplyCertificateResponse
@@ -15,12 +15,66 @@ import java.util.Set;
 @ToString
 public class ApplyCertificateResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("ApplyCertificateResponse")
+    private ApplyCertificateResponseDto ApplyCertificateResponse;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class ApplyCertificateResponseDto {
+        /***/
+        @JsonProperty("RequestId")
+        private String RequestId;
+
+        /***/
+        @JsonProperty("Certificate")
+        private ApplyCertificateResponseCertificateDto Certificate;
+
+        @Data
+        @ToString
+        public static class ApplyCertificateResponseCertificateDto {
+            /***/
+            @JsonProperty("CertificateId")
+            private String CertificateId;
+
+            /***/
+            @JsonProperty("MainDomain")
+            private String MainDomain;
+
+            /***/
+            @JsonProperty("CertificateBrand")
+            private String CertificateBrand;
+
+            /***/
+            @JsonProperty("CertificateLevel")
+            private String CertificateLevel;
+
+            /***/
+            @JsonProperty("CertificateName")
+            private String CertificateName;
+
+            /***/
+            @JsonProperty("CertificateCode")
+            private String CertificateCode;
+
+            /***/
+            @JsonProperty("CertificateStatus")
+            private String CertificateStatus;
+
+            /***/
+            @JsonProperty("YearLength")
+            private String YearLength;
+
+            /***/
+            @JsonProperty("DomainCount")
+            private String DomainCount;
+
+            /***/
+            @JsonProperty("WildcardCount")
+            private String WildcardCount;
+
+        }
+
+    }
 
 }

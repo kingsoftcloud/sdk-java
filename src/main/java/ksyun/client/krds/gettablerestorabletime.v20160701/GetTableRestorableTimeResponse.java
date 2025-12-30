@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname GetTableRestorableTimeResponse
@@ -15,12 +15,29 @@ import java.util.Set;
 @ToString
 public class GetTableRestorableTimeResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /**	
+*/
+    @JsonProperty("RestorableTime")
+    private RestorableTimeDto RestorableTime;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class RestorableTimeDto {
+        /**库表可恢复时间段下限
+*/
+        @JsonProperty("Begin")
+        private String Begin;
+
+        /**库表可恢复时间段上限
+*/
+        @JsonProperty("End")
+        private String End;
+
+    }
+
+    /**请求id
+*/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

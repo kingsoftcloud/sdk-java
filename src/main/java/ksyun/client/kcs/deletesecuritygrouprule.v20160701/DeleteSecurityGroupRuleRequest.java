@@ -23,7 +23,7 @@ public class DeleteSecurityGroupRuleRequest{
     private String SecurityGroupId;
 
     /**安全组规则ID		N：代表数字，示例（SecurityGroupRuleId.1=xxx&SecurityGroupRuleId.2=yyy）*/
-    @KsYunField(name = "SecurityGroupRuleId", type = 1)
+    @KsYunField(name="SecurityGroupRuleId",type=1)
     private List<String> SecurityGroupRuleIdList;
 
 }

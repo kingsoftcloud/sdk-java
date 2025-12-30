@@ -136,7 +136,7 @@ Bisynchronous双向同步
   "Type": "Transmission"
 }
 ```*/
-    @KsYunField(name = "DTSParameter", type = 1)
+    @KsYunField(name="DTSParameter",type=1)
     private List<DTSParameterDto> DTSParameterList;
 
     @Data
@@ -187,7 +187,7 @@ Bisynchronous双向同步
   "Type": "Transmission"
 }
 ````*/
-    @KsYunField(name = "SourceUser", type = 1)
+    @KsYunField(name="SourceUser",type=1)
     private List<SourceUserDto> SourceUserList;
 
     @Data

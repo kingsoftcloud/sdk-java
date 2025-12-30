@@ -19,7 +19,7 @@ public class DescribeNodePoolRequest{
     private String ClusterId;
 
     /**节点池id*/
-    @KsYunField(name = "NodePoolId", type = 1)
+    @KsYunField(name="NodePoolId",type=1)
     private List<String> NodePoolIdList;
 
     /**分页标识，单次调用未返回全部实例时，标记下次调用的返回值的起点，默认值是0*/

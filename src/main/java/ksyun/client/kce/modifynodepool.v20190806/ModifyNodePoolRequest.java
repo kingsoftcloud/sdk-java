@@ -43,7 +43,7 @@ public class ModifyNodePoolRequest{
     private Integer DesiredCapacity;
 
     /**节点标签*/
-    @KsYunField(name = "Label", type = 1)
+    @KsYunField(name="Label",type=1)
     private List<LabelDto> LabelList;
 
     @Data
@@ -60,7 +60,7 @@ public class ModifyNodePoolRequest{
     }
 
     /**节点污点*/
-    @KsYunField(name = "Taint", type = 1)
+    @KsYunField(name="Taint",type=1)
     private List<TaintDto> TaintList;
 
     @Data

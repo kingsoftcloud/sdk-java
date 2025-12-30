@@ -30,7 +30,7 @@ public class ModifySecurityGroupRuleRequest{
     private String SecurityGroupRuleAction;
 
     /***/
-    @KsYunField(name = "SecurityGroupRule", type = 1)
+    @KsYunField(name="SecurityGroupRule",type=1)
     private List<SecurityGroupRuleDto> SecurityGroupRuleList;
 
     @Data

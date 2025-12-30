@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname GetUpgradeVolumeTypeProcessInfoResponse
@@ -15,12 +15,8 @@ import java.util.Set;
 @ToString
 public class GetUpgradeVolumeTypeProcessInfoResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /**267168cc-28c6-4991-85d0-e851c5d6c49b*/
     @JsonProperty("RequestId")
-    private String requestId;
-
-    //返回结果，需要按需扩展
+    private String RequestId;
 
 }

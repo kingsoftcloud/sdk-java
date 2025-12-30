@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname CreateKeyResponse
@@ -15,12 +15,39 @@ import java.util.Set;
 @ToString
 public class CreateKeyResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /**请求接口时传递过来的，用户跟踪问题
+*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /**用户的公钥信息
+*/
+    @JsonProperty("PrivateKey")
+    private String PrivateKey;
+
+    /***/
+    @JsonProperty("Key")
+    private KeyDto Key;
+
+    @Data
+    @ToString
+    public static class KeyDto {
+        /***/
+        @JsonProperty("KeyName")
+        private String KeyName;
+
+        /***/
+        @JsonProperty("PublicKey")
+        private String PublicKey;
+
+        /***/
+        @JsonProperty("CreateTime")
+        private String CreateTime;
+
+        /***/
+        @JsonProperty("KeyId")
+        private String KeyId;
+
+    }
 
 }

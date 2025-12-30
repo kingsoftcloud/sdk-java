@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname UpdateRetentionTriggerResponse
@@ -15,12 +15,12 @@ import java.util.Set;
 @ToString
 public class UpdateRetentionTriggerResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /**请求Id*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /**返回信息*/
+    @JsonProperty("Data")
+    private String Data;
 
 }

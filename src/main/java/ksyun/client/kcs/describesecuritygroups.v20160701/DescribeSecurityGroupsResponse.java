@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeSecurityGroupsResponse
@@ -15,12 +15,62 @@ import java.util.Set;
 @ToString
 public class DescribeSecurityGroupsResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("list")
+        private List<DataListDto> List;
+
+        @Data
+        @ToString
+        public static class DataListDto {
+            /***/
+            @JsonProperty("securityGroupId")
+            private String SecurityGroupId;
+
+            /***/
+            @JsonProperty("name")
+            private String Name;
+
+            /***/
+            @JsonProperty("description")
+            private String Description;
+
+            /***/
+            @JsonProperty("resourceNum")
+            private Integer ResourceNum;
+
+            /***/
+            @JsonProperty("created")
+            private String Created;
+
+            /***/
+            @JsonProperty("updated")
+            private String Updated;
+
+        }
+
+        /***/
+        @JsonProperty("offset")
+        private Integer Offset;
+
+        /***/
+        @JsonProperty("limit")
+        private Integer Limit;
+
+        /***/
+        @JsonProperty("total")
+        private Integer Total;
+
+    }
 
 }

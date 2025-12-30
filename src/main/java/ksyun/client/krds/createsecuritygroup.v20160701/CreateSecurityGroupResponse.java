@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname CreateSecurityGroupResponse
@@ -15,12 +15,79 @@ import java.util.Set;
 @ToString
 public class CreateSecurityGroupResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("SecurityGroups")
+        private List<DataSecurityGroupsDto> SecurityGroups;
+
+        @Data
+        @ToString
+        public static class DataSecurityGroupsDto {
+            /***/
+            @JsonProperty("SecurityGroupId")
+            private String SecurityGroupId;
+
+            /***/
+            @JsonProperty("SecurityGroupName")
+            private String SecurityGroupName;
+
+            /***/
+            @JsonProperty("SecurityGroupDescription")
+            private String SecurityGroupDescription;
+
+            /***/
+            @JsonProperty("SecurityGroupType")
+            private String SecurityGroupType;
+
+            /***/
+            @JsonProperty("Created")
+            private String Created;
+
+            /***/
+            @JsonProperty("Instances")
+            private List<String> Instances;
+
+            /***/
+            @JsonProperty("SecurityGroupRules")
+            private List<DataSecurityGroupsSecurityGroupRulesDto> SecurityGroupRules;
+
+            @Data
+            @ToString
+            public static class DataSecurityGroupsSecurityGroupRulesDto {
+                /***/
+                @JsonProperty("SecurityGroupRuleId")
+                private String SecurityGroupRuleId;
+
+                /***/
+                @JsonProperty("SecurityGroupRuleName")
+                private String SecurityGroupRuleName;
+
+                /***/
+                @JsonProperty("SecurityGroupRuleProtocol")
+                private String SecurityGroupRuleProtocol;
+
+                /***/
+                @JsonProperty("SecurityGroupRuleCidr")
+                private String SecurityGroupRuleCidr;
+
+                /***/
+                @JsonProperty("Created")
+                private String Created;
+
+            }
+
+        }
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

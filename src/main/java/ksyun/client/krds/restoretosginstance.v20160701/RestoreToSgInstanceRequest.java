@@ -27,7 +27,7 @@ public class RestoreToSgInstanceRequest{
     private String RestorableTime;
 
     /**源		[{<br>  "DatabaseName": "wang",<br>"WholeDatabase":"True",<br>"TableNames": [<br>"li"]<br>}]*/
-    @KsYunField(name = "SrcDatabases", type = 1)
+    @KsYunField(name="SrcDatabases",type=1)
     private List<SrcDatabasesDto> SrcDatabasesList;
 
     @Data
@@ -48,7 +48,7 @@ public class RestoreToSgInstanceRequest{
     }
 
     /**目标		[{<br>"DatabaseName": "wang",<br>"WholeDatabase":"True",<br>"TableNames": [<br> "li"]<br> }]*/
-    @KsYunField(name = "DstDatabases", type = 1)
+    @KsYunField(name="DstDatabases",type=1)
     private List<DstDatabasesDto> DstDatabasesList;
 
     @Data

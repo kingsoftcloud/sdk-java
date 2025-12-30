@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname CreateAlbWafResponse
@@ -15,12 +15,13 @@ import java.util.Set;
 @ToString
 public class CreateAlbWafResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /**waf信息*/
+    @JsonProperty("WafInfo")
+    private WafInfoDto WafInfo;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class WafInfoDto {
+    }
 
 }

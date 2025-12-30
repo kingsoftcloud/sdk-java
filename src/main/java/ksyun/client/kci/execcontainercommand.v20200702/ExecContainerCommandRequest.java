@@ -23,7 +23,7 @@ public class ExecContainerCommandRequest{
     private String ContainerName;
 
     /**exec执行的命令，如/bin/sh */
-    @KsYunField(name = "Command", type = 1)
+    @KsYunField(name="Command",type=1)
     private List<String> CommandList;
 
     /**是否保持连接，默认false*/

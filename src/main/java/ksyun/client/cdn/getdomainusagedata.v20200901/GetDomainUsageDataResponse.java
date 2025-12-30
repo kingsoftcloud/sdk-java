@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname GetDomainUsageDataResponse
@@ -15,12 +15,53 @@ import java.util.Set;
 @ToString
 public class GetDomainUsageDataResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("StartTime")
+    private String StartTime;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("EndTime")
+    private String EndTime;
+
+    /***/
+    @JsonProperty("CdnType")
+    private String CdnType;
+
+    /***/
+    @JsonProperty("Domains")
+    private String Domains;
+
+    /***/
+    @JsonProperty("Areas")
+    private String Areas;
+
+    /***/
+    @JsonProperty("Interval")
+    private Integer Interval;
+
+    /***/
+    @JsonProperty("Metric")
+    private List<MetricDto> Metric;
+
+    @Data
+    @ToString
+    public static class MetricDto {
+        /***/
+        @JsonProperty("Time")
+        private String Time;
+
+        /***/
+        @JsonProperty("Value")
+        private Integer Value;
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
+
+    /***/
+    @JsonProperty("PeakTime")
+    private String PeakTime;
 
 }

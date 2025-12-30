@@ -31,7 +31,7 @@ public class CreateEndPointRequest{
     private String Description;
 
     /**筛选Filter*/
-    @KsYunField(name = "IpConfig", type = 1)
+    @KsYunField(name="IpConfig",type=1)
     private List<IpConfigDto> IpConfigList;
 
     @Data

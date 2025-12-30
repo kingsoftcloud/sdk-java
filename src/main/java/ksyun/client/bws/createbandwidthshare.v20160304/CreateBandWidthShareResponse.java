@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname CreateBandWidthShareResponse
@@ -15,12 +15,28 @@ import java.util.Set;
 @ToString
 public class CreateBandWidthShareResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /**请求ID*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /**共享带宽的ID*/
+    @JsonProperty("BandWidthShareId")
+    private String BandWidthShareId;
+
+    /**共享带宽的带宽*/
+    @JsonProperty("BandWidth")
+    private Integer BandWidth;
+
+    /**共享带宽的名称*/
+    @JsonProperty("BandWidthShareName")
+    private String BandWidthShareName;
+
+    /**共享带宽创建时间*/
+    @JsonProperty("CreateTime")
+    private String CreateTime;
+
+    /**线路类型的ID*/
+    @JsonProperty("LineId")
+    private String LineId;
 
 }

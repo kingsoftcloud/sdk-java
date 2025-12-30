@@ -28,7 +28,7 @@ public class DescribeTaskRequest{
     private String TaskType;
 
     /**不传默认查询所有状态，范围：UNSTARTED RUNNING RELOADING PAUSED PAUSING STOPED FINISHED ERROR*/
-    @KsYunField(name = "TaskStatus", type = 1)
+    @KsYunField(name="TaskStatus",type=1)
     private List<String> TaskStatusList;
 
     /**任务名称*/

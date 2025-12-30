@@ -31,7 +31,7 @@ public class DescribeClusterRequest{
     private String Search;
 
     /***/
-    @KsYunField(name = "Filter", type = 1)
+    @KsYunField(name="Filter",type=1)
     private List<FilterDto> FilterList;
 
     @Data

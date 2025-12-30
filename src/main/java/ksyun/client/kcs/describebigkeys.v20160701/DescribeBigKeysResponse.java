@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeBigKeysResponse
@@ -15,12 +15,41 @@ import java.util.Set;
 @ToString
 public class DescribeBigKeysResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Data")
+    private List<DataDto> Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("id")
+        private String Id;
+
+        /***/
+        @JsonProperty("resourceId")
+        private String ResourceId;
+
+        /***/
+        @JsonProperty("updateTime")
+        private String UpdateTime;
+
+        /***/
+        @JsonProperty("taskType")
+        private String TaskType;
+
+        /***/
+        @JsonProperty("createTime")
+        private String CreateTime;
+
+        /***/
+        @JsonProperty("taskStatus")
+        private String TaskStatus;
+
+    }
 
 }

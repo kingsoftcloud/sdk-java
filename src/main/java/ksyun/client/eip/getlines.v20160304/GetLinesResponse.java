@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname GetLinesResponse
@@ -15,12 +15,37 @@ import java.util.Set;
 @ToString
 public class GetLinesResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /**请求ID*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /**线路列表*/
+    @JsonProperty("LineSet")
+    private List<LineSetDto> LineSet;
+
+    @Data
+    @ToString
+    public static class LineSetDto {
+        /**线路ID*/
+        @JsonProperty("LineId")
+        private String LineId;
+
+        /**线路类型*/
+        @JsonProperty("LineType")
+        private String LineType;
+
+        /**线路名称*/
+        @JsonProperty("LineName")
+        private String LineName;
+
+        /**IP版本*/
+        @JsonProperty("IpVersion")
+        private String IpVersion;
+
+        /**供应商*/
+        @JsonProperty("Isp")
+        private String Isp;
+
+    }
 
 }

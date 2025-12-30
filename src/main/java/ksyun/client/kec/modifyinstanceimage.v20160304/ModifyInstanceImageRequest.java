@@ -34,7 +34,7 @@ public class ModifyInstanceImageRequest{
     private String InstancePassword;
 
     /**密钥ID*/
-    @KsYunField(name = "KeyId", type = 1)
+    @KsYunField(name="KeyId",type=1)
     private List<String> KeyIdList;
 
     /**保留镜像设置登录。该参数只对使用自定义镜像有效。当该值填写为true，默认InstancePassword参数无效。该参数与InstancePassword必须填写一个。

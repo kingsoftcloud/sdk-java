@@ -17,7 +17,7 @@ public class DescribeAgentInstallStatusRequest{
     /**实例ID，最多支持100个ID。
 • 参数 - N：表示实例的序号。
 • 多个Host ID之间用&分隔。*/
-    @KsYunField(name = "HostId", type = 1)
+    @KsYunField(name="HostId",type=1)
     private List<String> HostIdList;
 
     /**Agent的ID*/

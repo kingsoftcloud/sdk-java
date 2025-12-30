@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeKciPackagesResponse
@@ -15,12 +15,25 @@ import java.util.Set;
 @ToString
 public class DescribeKciPackagesResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /**请求ID*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Packages")
+    private List<PackagesDto> Packages;
+
+    @Data
+    @ToString
+    public static class PackagesDto {
+        /**CPU核数*/
+        @JsonProperty("Cpu")
+        private Double Cpu;
+
+        /**内存，单位GB*/
+        @JsonProperty("Mem")
+        private List<Double> Mem;
+
+    }
 
 }

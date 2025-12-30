@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class DescribeInterRegionsRequest{
     /**云企业网地域ID*/
-    @KsYunField(name = "InterRegionId", type = 1)
+    @KsYunField(name="InterRegionId",type=1)
     private List<String> InterRegionIdList;
 
     /**筛选Filter*/
-    @KsYunField(name = "Filter", type = 1)
+    @KsYunField(name="Filter",type=1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -31,7 +31,7 @@ public class DescribeInterRegionsRequest{
         private String Name;
 
         /***/
-        @KsYunField(name = "Value", type = 1)
+        @KsYunField(name="Value",type=1)
         private List<String> ValueList;
 
     }

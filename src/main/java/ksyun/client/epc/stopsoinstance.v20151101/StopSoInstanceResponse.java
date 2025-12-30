@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname StopSoInstanceResponse
@@ -15,12 +15,34 @@ import java.util.Set;
 @ToString
 public class StopSoInstanceResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("OperationDetails")
+    private List<OperationDetailsDto> OperationDetails;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class OperationDetailsDto {
+        /*********/
+        @JsonProperty("InstanceId")
+        private String InstanceId;
+
+        /***/
+        @JsonProperty("Error")
+        private OperationDetailsErrorDto Error;
+
+        @Data
+        @ToString
+        public static class OperationDetailsErrorDto {
+            /**InvalidInstanceStatus*/
+            @JsonProperty("Code")
+            private String Code;
+
+            /**The status of the specified instance does not support this request.*/
+            @JsonProperty("Message")
+            private String Message;
+
+        }
+
+    }
 
 }

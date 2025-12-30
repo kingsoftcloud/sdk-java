@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname StatisticDBInstancesResponse
@@ -15,12 +15,42 @@ import java.util.Set;
 @ToString
 public class StatisticDBInstancesResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /**注意：仅供参考*/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class DataDto {
+        /**当前Region总计数量*/
+        @JsonProperty("TotalCount")
+        private Integer TotalCount;
+
+        /***/
+        @JsonProperty("Statistic")
+        private DataStatisticDto Statistic;
+
+        @Data
+        @ToString
+        public static class DataStatisticDto {
+            /**任务中*/
+            @JsonProperty("RUNNING_TASK")
+            private Integer RUNNING_TASK;
+
+            /**运行中*/
+            @JsonProperty("ACTIVE")
+            private Integer ACTIVE;
+
+            /**异常中*/
+            @JsonProperty("INVALID")
+            private Integer INVALID;
+
+        }
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname AddClusterInstancesResponse
@@ -15,12 +15,25 @@ import java.util.Set;
 @ToString
 public class AddClusterInstancesResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /**请求id*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /**添加的节点信息*/
+    @JsonProperty("InstanceSet")
+    private List<InstanceSetDto> InstanceSet;
+
+    @Data
+    @ToString
+    public static class InstanceSetDto {
+        /**实例id*/
+        @JsonProperty("InstanceId")
+        private String InstanceId;
+
+        /**实例名称*/
+        @JsonProperty("InstanceName")
+        private String InstanceName;
+
+    }
 
 }

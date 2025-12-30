@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname ListResourcesResponse
@@ -15,12 +15,24 @@ import java.util.Set;
 @ToString
 public class ListResourcesResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /**Resources*/
+    @JsonProperty("Resources")
+    private String Resources;
 
-    //返回结果，需要按需扩展
+    /**页码*/
+    @JsonProperty("Page")
+    private Integer Page;
+
+    /**条数*/
+    @JsonProperty("PageSize")
+    private Integer PageSize;
+
+    /**总数*/
+    @JsonProperty("Total")
+    private Integer Total;
+
+    /**请求id*/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

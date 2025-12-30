@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribePluginsResponse
@@ -15,12 +15,46 @@ import java.util.Set;
 @ToString
 public class DescribePluginsResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("Plugins")
+        private List<DataPluginsDto> Plugins;
+
+        @Data
+        @ToString
+        public static class DataPluginsDto {
+            /***/
+            @JsonProperty("PluginName")
+            private String PluginName;
+
+            /***/
+            @JsonProperty("EnableUninstall")
+            private Boolean EnableUninstall;
+
+            /***/
+            @JsonProperty("UpgradeVersions")
+            private List<String> UpgradeVersions;
+
+            /***/
+            @JsonProperty("Description")
+            private String Description;
+
+        }
+
+        /***/
+        @JsonProperty("Total")
+        private Integer Total;
+
+    }
 
 }

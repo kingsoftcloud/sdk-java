@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DeleteAutoSnapshotPolicyRequest{
     /**自动快照策略ID*/
-    @KsYunField(name = "AutoSnapshotPolicyId", type = 1)
+    @KsYunField(name="AutoSnapshotPolicyId",type=1)
     private List<String> AutoSnapshotPolicyIdList;
 
 }

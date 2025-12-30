@@ -20,7 +20,7 @@ public class DescribeTemplatesRequest{
     private Integer MaxResults;
 
     /**模板Id*/
-    @KsYunField(name = "TemplateId", type = 1)
+    @KsYunField(name="TemplateId",type=1)
     private List<String> TemplateIdList;
 
     /**偏移量*/
@@ -28,7 +28,7 @@ public class DescribeTemplatesRequest{
     private Integer Offset;
 
     /**模板名称*/
-    @KsYunField(name = "TemplateName", type = 1)
+    @KsYunField(name="TemplateName",type=1)
     private List<String> TemplateNameList;
 
     /**有效值：sample、custom

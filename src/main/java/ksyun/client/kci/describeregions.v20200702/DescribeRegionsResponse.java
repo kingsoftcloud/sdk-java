@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeRegionsResponse
@@ -15,12 +15,29 @@ import java.util.Set;
 @ToString
 public class DescribeRegionsResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /**请求ID*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Regions")
+    private List<RegionsDto> Regions;
+
+    @Data
+    @ToString
+    public static class RegionsDto {
+        /**机房*/
+        @JsonProperty("Region")
+        private String Region;
+
+        /**机房名称*/
+        @JsonProperty("RegionName")
+        private String RegionName;
+
+        /**机房下的可用区列表*/
+        @JsonProperty("AvailabilityZones")
+        private List<String> AvailabilityZones;
+
+    }
 
 }

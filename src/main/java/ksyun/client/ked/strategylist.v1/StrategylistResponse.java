@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname StrategylistResponse
@@ -15,12 +15,70 @@ import java.util.Set;
 @ToString
 public class StrategylistResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("requestId")
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("detail")
+    private String Detail;
+
+    /***/
+    @JsonProperty("data")
+    private DataDto Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("pageNum")
+        private Integer PageNum;
+
+        /***/
+        @JsonProperty("pageSize")
+        private Integer PageSize;
+
+        /***/
+        @JsonProperty("totalCount")
+        private Integer TotalCount;
+
+        /***/
+        @JsonProperty("records")
+        private List<DataRecordsDto> Records;
+
+        @Data
+        @ToString
+        public static class DataRecordsDto {
+            /***/
+            @JsonProperty("id")
+            private Integer Id;
+
+            /**策略组唯一 id*/
+            @JsonProperty("securityGroupId")
+            private String SecurityGroupId;
+
+            /**名称*/
+            @JsonProperty("name")
+            private String Name;
+
+            /***/
+            @JsonProperty("description")
+            private String Description;
+
+            /**已绑定云桌面数量*/
+            @JsonProperty("instanceNum")
+            private Integer InstanceNum;
+
+            /**创建时间*/
+            @JsonProperty("createTime")
+            private String CreateTime;
+
+            /**修改时间*/
+            @JsonProperty("updateTime")
+            private String UpdateTime;
+
+        }
+
+    }
 
 }

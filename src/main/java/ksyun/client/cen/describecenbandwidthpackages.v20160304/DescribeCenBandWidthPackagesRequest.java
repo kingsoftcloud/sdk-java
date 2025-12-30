@@ -15,15 +15,15 @@ import java.util.Arrays;
 @Data
 public class DescribeCenBandWidthPackagesRequest{
     /**项目的ID*/
-    @KsYunField(name = "ProjectId", type = 1)
+    @KsYunField(name="ProjectId",type=1)
     private List<String> ProjectIdList;
 
     /**多个带宽包的ID*/
-    @KsYunField(name = "CenBandWidthPackageId", type = 1)
+    @KsYunField(name="CenBandWidthPackageId",type=1)
     private List<String> CenBandWidthPackageIdList;
 
     /**筛选Filter*/
-    @KsYunField(name = "Filter", type = 1)
+    @KsYunField(name="Filter",type=1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -35,7 +35,7 @@ public class DescribeCenBandWidthPackagesRequest{
         private String Name;
 
         /***/
-        @KsYunField(name = "Value", type = 1)
+        @KsYunField(name="Value",type=1)
         private List<String> ValueList;
 
     }
@@ -49,11 +49,11 @@ public class DescribeCenBandWidthPackagesRequest{
     private String NextToken;
 
     /**多个标签的键*/
-    @KsYunField(name = "TagKey", type = 1)
+    @KsYunField(name="TagKey",type=1)
     private List<String> TagKeyList;
 
     /**多个标签的键*/
-    @KsYunField(name = "TagKV", type = 1)
+    @KsYunField(name="TagKV",type=1)
     private List<TagKVDto> TagKVList;
 
     @Data

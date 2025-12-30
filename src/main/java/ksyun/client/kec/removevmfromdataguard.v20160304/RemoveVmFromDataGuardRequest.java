@@ -19,7 +19,7 @@ public class RemoveVmFromDataGuardRequest{
     private String DataGuardId;
 
     /**待移除的实例ID*/
-    @KsYunField(name = "InstanceId", type = 1)
+    @KsYunField(name="InstanceId",type=1)
     private List<String> InstanceIdList;
 
 }

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribePrecheckResponse
@@ -15,12 +15,58 @@ import java.util.Set;
 @ToString
 public class DescribePrecheckResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("Progress")
+        private Integer Progress;
+
+        /***/
+        @JsonProperty("SubPrecheck")
+        private List<DataSubPrecheckDto> SubPrecheck;
+
+        @Data
+        @ToString
+        public static class DataSubPrecheckDto {
+            /***/
+            @JsonProperty("Id")
+            private String Id;
+
+            /***/
+            @JsonProperty("PrecheckId")
+            private String PrecheckId;
+
+            /***/
+            @JsonProperty("Name")
+            private String Name;
+
+            /***/
+            @JsonProperty("Status")
+            private String Status;
+
+            /***/
+            @JsonProperty("Description")
+            private String Description;
+
+            /***/
+            @JsonProperty("ChineseName")
+            private String ChineseName;
+
+            /***/
+            @JsonProperty("Solution")
+            private String Solution;
+
+        }
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

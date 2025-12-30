@@ -19,7 +19,7 @@ public class DeallocateSecurityGroupRequest{
     private String AvailableZone;
 
     /**缓存服务ID 	 N：代表数字，示例（CacheId.1=xxx&CacheId.2=yyy）*/
-    @KsYunField(name = "CacheId", type = 1)
+    @KsYunField(name="CacheId",type=1)
     private List<String> CacheIdList;
 
     /**安全组ID   	 安全组ID*/

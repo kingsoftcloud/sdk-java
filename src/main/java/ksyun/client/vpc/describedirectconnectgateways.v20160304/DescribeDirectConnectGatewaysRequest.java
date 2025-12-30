@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class DescribeDirectConnectGatewaysRequest{
     /**多个边界网关的ID*/
-    @KsYunField(name = "DirectConnectGatewayId", type = 1)
+    @KsYunField(name="DirectConnectGatewayId",type=1)
     private List<String> DirectConnectGatewayIdList;
 
     /**筛选Filter*/
-    @KsYunField(name = "Filter", type = 1)
+    @KsYunField(name="Filter",type=1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -33,7 +33,7 @@ public class DescribeDirectConnectGatewaysRequest{
         private String Name;
 
         /***/
-        @KsYunField(name = "Value", type = 1)
+        @KsYunField(name="Value",type=1)
         private List<String> ValueList;
 
     }

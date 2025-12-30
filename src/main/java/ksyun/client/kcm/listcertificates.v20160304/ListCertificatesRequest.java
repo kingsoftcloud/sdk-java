@@ -15,15 +15,15 @@ import java.util.Arrays;
 @Data
 public class ListCertificatesRequest{
     /**一个或多个证书ID*/
-    @KsYunField(name = "CertificateId", type = 1)
+    @KsYunField(name="CertificateId",type=1)
     private List<String> CertificateIdList;
 
     /**一个或多个项目ID，若缺省则默认值为0*/
-    @KsYunField(name = "ProjectId", type = 1)
+    @KsYunField(name="ProjectId",type=1)
     private List<Integer> ProjectIdList;
 
     /**主域名*/
-    @KsYunField(name = "Filter", type = 1)
+    @KsYunField(name="Filter",type=1)
     private List<String> FilterList;
 
     /**页码*/

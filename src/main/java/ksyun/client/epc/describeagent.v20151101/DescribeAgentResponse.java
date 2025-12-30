@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeAgentResponse
@@ -15,12 +15,34 @@ import java.util.Set;
 @ToString
 public class DescribeAgentResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("AgentInfo")
+    private List<AgentInfoDto> AgentInfo;
+
+    @Data
+    @ToString
+    public static class AgentInfoDto {
+        /**agent名称*/
+        @JsonProperty("AgentName")
+        private String AgentName;
+
+        /**agentID*/
+        @JsonProperty("AgentId")
+        private String AgentId;
+
+        /**agent类型
+CloudMonitor | Container*/
+        @JsonProperty("AgentType")
+        private String AgentType;
+
+        /**版本*/
+        @JsonProperty("Version")
+        private String Version;
+
+    }
 
 }

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname ModifyCenBandWidthPackageResponse
@@ -15,12 +15,49 @@ import java.util.Set;
 @ToString
 public class ModifyCenBandWidthPackageResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /**请求ID*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /**云企业网带宽包的信息*/
+    @JsonProperty("CenBandWidthPackage")
+    private CenBandWidthPackageDto CenBandWidthPackage;
+
+    @Data
+    @ToString
+    public static class CenBandWidthPackageDto {
+        /**创建时间*/
+        @JsonProperty("CreateTime")
+        private String CreateTime;
+
+        /**带宽包的ID*/
+        @JsonProperty("CenBandWidthPackageId")
+        private String CenBandWidthPackageId;
+
+        /**带宽包的名称*/
+        @JsonProperty("CenBandWidthPackageName")
+        private String CenBandWidthPackageName;
+
+        /**云企业网的ID*/
+        @JsonProperty("CenId")
+        private String CenId;
+
+        /**项目ID*/
+        @JsonProperty("ProjectId")
+        private String ProjectId;
+
+        /**带宽包的带宽*/
+        @JsonProperty("PackageBandWidth")
+        private Integer PackageBandWidth;
+
+        /**本端区域ID*/
+        @JsonProperty("LocalAreaId")
+        private String LocalAreaId;
+
+        /**对端区域ID*/
+        @JsonProperty("RemoteAreaId")
+        private String RemoteAreaId;
+
+    }
 
 }

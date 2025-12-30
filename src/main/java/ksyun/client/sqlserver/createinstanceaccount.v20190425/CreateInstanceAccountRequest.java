@@ -39,7 +39,7 @@ root, rdsrepladmin, rdsadmin, dtsroot, sa不可用；由大小写字母、数字
     private String InstanceAccountDescription;
 
     /**实例账号权限列表*/
-    @KsYunField(name = "InstanceAccountPrivileges", type = 1)
+    @KsYunField(name="InstanceAccountPrivileges",type=1)
     private List<InstanceAccountPrivilegesDto> InstanceAccountPrivilegesList;
 
     @Data

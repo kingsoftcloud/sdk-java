@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname ModifyCacheParameterGroupResponse
@@ -15,12 +15,103 @@ import java.util.Set;
 @ToString
 public class ModifyCacheParameterGroupResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("id")
+        private String Id;
+
+        /***/
+        @JsonProperty("name")
+        private String Name;
+
+        /***/
+        @JsonProperty("description")
+        private String Description;
+
+        /***/
+        @JsonProperty("paramVersion")
+        private String ParamVersion;
+
+        /***/
+        @JsonProperty("engine")
+        private String Engine;
+
+        /***/
+        @JsonProperty("created")
+        private String Created;
+
+        /***/
+        @JsonProperty("updated")
+        private String Updated;
+
+        /***/
+        @JsonProperty("parameters")
+        private List<DataParametersDto> Parameters;
+
+        @Data
+        @ToString
+        public static class DataParametersDto {
+            /***/
+            @JsonProperty("name")
+            private String Name;
+
+            /***/
+            @JsonProperty("desc")
+            private String Desc;
+
+            /***/
+            @JsonProperty("defaultValue")
+            private String DefaultValue;
+
+            /***/
+            @JsonProperty("currentValue")
+            private String CurrentValue;
+
+            /***/
+            @JsonProperty("validity")
+            private DataParametersValidityDto Validity;
+
+            @Data
+            @ToString
+            public static class DataParametersValidityDto {
+                /***/
+                @JsonProperty("type")
+                private String Type;
+
+                /***/
+                @JsonProperty("dataType")
+                private String DataType;
+
+                /***/
+                @JsonProperty("value")
+                private String Value;
+
+                /***/
+                @JsonProperty("values")
+                private List<String> Values;
+
+                /***/
+                @JsonProperty("min")
+                private String Min;
+
+                /***/
+                @JsonProperty("max")
+                private String Max;
+
+            }
+
+        }
+
+    }
 
 }

@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DescribeInstanceVolumesRequest{
     /***/
-    @KsYunField(name = "InstanceId")
+    @KsYunField(name="InstanceId")
     private String InstanceId;
 
 }

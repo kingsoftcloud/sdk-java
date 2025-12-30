@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeDataGuardCapacityResponse
@@ -15,12 +15,42 @@ import java.util.Set;
 @ToString
 public class DescribeDataGuardCapacityResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("DataGuardCapacity")
+    private DataGuardCapacityDto DataGuardCapacity;
+
+    @Data
+    @ToString
+    public static class DataGuardCapacityDto {
+        /***/
+        @JsonProperty("Region")
+        private String Region;
+
+        /***/
+        @JsonProperty("Capacity")
+        private Integer Capacity;
+
+    }
+
+    /***/
+    @JsonProperty("DataGuardCapacitySet")
+    private List<DataGuardCapacitySetDto> DataGuardCapacitySet;
+
+    @Data
+    @ToString
+    public static class DataGuardCapacitySetDto {
+        /***/
+        @JsonProperty("DomainTypeCapacity")
+        private Integer DomainTypeCapacity;
+
+        /***/
+        @JsonProperty("HostTypeCapacity")
+        private Integer HostTypeCapacity;
+
+    }
 
 }

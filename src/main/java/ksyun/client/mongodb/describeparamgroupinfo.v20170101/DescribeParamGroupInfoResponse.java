@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeParamGroupInfoResponse
@@ -15,12 +15,58 @@ import java.util.Set;
 @ToString
 public class DescribeParamGroupInfoResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("ParamGroupInfo")
+    private ParamGroupInfoDto ParamGroupInfo;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class ParamGroupInfoDto {
+        /***/
+        @JsonProperty("Params")
+        private ParamGroupInfoParamsDto Params;
+
+        @Data
+        @ToString
+        public static class ParamGroupInfoParamsDto {
+            /***/
+            @JsonProperty("setParameter.failIndexKeyTooInt")
+            private String SetParameterFailIndexKeyTooInt;
+
+            /***/
+            @JsonProperty("operationProfiling.slowOpThresholdMs")
+            private Integer OperationProfilingSlowOpThresholdMs;
+
+            /***/
+            @JsonProperty("replication.oplogSizeMB")
+            private String ReplicationOplogSizeMB;
+
+            /***/
+            @JsonProperty("operationProfiling.mode")
+            private String OperationProfilingMode;
+
+            /***/
+            @JsonProperty("setParameter.cursorTimeoutMillis")
+            private Integer SetParameterCursorTimeoutMillis;
+
+        }
+
+        /***/
+        @JsonProperty("ParamGroupName")
+        private String ParamGroupName;
+
+        /***/
+        @JsonProperty("Description")
+        private String Description;
+
+        /***/
+        @JsonProperty("ParamGroupId")
+        private String ParamGroupId;
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

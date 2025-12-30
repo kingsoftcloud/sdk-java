@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DescribeDirectConnectInterfacesRequest{
     /**多个连接通道的ID*/
-    @KsYunField(name = "DirectConnectInterfaceId", type = 1)
+    @KsYunField(name="DirectConnectInterfaceId",type=1)
     private List<String> DirectConnectInterfaceIdList;
 
     /**单次调用可返回的最大条目数量*/

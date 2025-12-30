@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeAlertingResourcesResponse
@@ -15,12 +15,150 @@ import java.util.Set;
 @ToString
 public class DescribeAlertingResourcesResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("ResponseMetadata")
+    private ResponseMetadataDto ResponseMetadata;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class ResponseMetadataDto {
+        /**请求ID。*/
+        @JsonProperty("RequestID")
+        private String RequestID;
+
+    }
+
+    /***/
+    @JsonProperty("AlertingProductSet")
+    private List<AlertingProductSetDto> AlertingProductSet;
+
+    @Data
+    @ToString
+    public static class AlertingProductSetDto {
+        /**命名空间。*/
+        @JsonProperty("Namespace")
+        private String Namespace;
+
+        /**告警产品类型。*/
+        @JsonProperty("ProductType")
+        private Integer ProductType;
+
+        /**告警产品名称。*/
+        @JsonProperty("ProductName")
+        private String ProductName;
+
+        /**正在告警资源列表。*/
+        @JsonProperty("ResourceSet")
+        private List<AlertingProductSetResourceSetDto> ResourceSet;
+
+        @Data
+        @ToString
+        public static class AlertingProductSetResourceSetDto {
+            /**实例ID。*/
+            @JsonProperty("InstanceId")
+            private String InstanceId;
+
+            /**实例名称。*/
+            @JsonProperty("InstanceName")
+            private String InstanceName;
+
+            /**实例IP。*/
+            @JsonProperty("InstanceIP")
+            private String InstanceIP;
+
+            /**实例标签。*/
+            @JsonProperty("InstanceTags")
+            private List<AlertingProductSetResourceSetInstanceTagsDto> InstanceTags;
+
+            @Data
+            @ToString
+            public static class AlertingProductSetResourceSetInstanceTagsDto {
+                /**资源类型。*/
+                @JsonProperty("ResourceType")
+                private String ResourceType;
+
+                /**资源ID。*/
+                @JsonProperty("ResourceId")
+                private String ResourceId;
+
+                /**标签名称。*/
+                @JsonProperty("Key")
+                private String Key;
+
+                /**标签值。*/
+                @JsonProperty("Value")
+                private String Value;
+
+            }
+
+            /**项目制ID。*/
+            @JsonProperty("ProjectID")
+            private Integer ProjectID;
+
+            /**资源所在机房。*/
+            @JsonProperty("Region")
+            private String Region;
+
+            /**正在告警策略列表。*/
+            @JsonProperty("Policies")
+            private List<AlertingProductSetResourceSetPoliciesDto> Policies;
+
+            @Data
+            @ToString
+            public static class AlertingProductSetResourceSetPoliciesDto {
+                /**策略ID。*/
+                @JsonProperty("PolicyId")
+                private Integer PolicyId;
+
+                /**策略名称。*/
+                @JsonProperty("PolicyName")
+                private String PolicyName;
+
+                /**告警规则说明。*/
+                @JsonProperty("PolicyRule")
+                private String PolicyRule;
+
+                /**触发阈值。*/
+                @JsonProperty("CurValue")
+                private Double CurValue;
+
+                /**告警状态。
+
+> 取值范围
+> - **0**: 告警恢复;
+> - **1**: 告警发生;*/
+                @JsonProperty("AlarmState")
+                private Integer AlarmState;
+
+                /**告警触发时间。*/
+                @JsonProperty("TriggerTime")
+                private String TriggerTime;
+
+                /**告警持续时间。*/
+                @JsonProperty("Duration")
+                private String Duration;
+
+            }
+
+            /**关联资源列表。*/
+            @JsonProperty("RelatedResourceSet")
+            private List<AlertingProductSetResourceSetRelatedResourceSetDto> RelatedResourceSet;
+
+            @Data
+            @ToString
+            public static class AlertingProductSetResourceSetRelatedResourceSetDto {
+                /**关联资源命名空间。*/
+                @JsonProperty("Namespace")
+                private String Namespace;
+
+                /**关联资源实例ID。*/
+                @JsonProperty("InstanceID")
+                private String InstanceID;
+
+            }
+
+        }
+
+    }
 
 }

@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class TerminateInstancesRequest{
     /**待销毁实例ID列表，N的范围为1-100*/
-    @KsYunField(name = "InstanceId", type = 1)
+    @KsYunField(name="InstanceId",type=1)
     private List<String> InstanceIdList;
 
     /**强制销毁*/

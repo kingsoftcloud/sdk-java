@@ -19,11 +19,11 @@ public class DescribeEpcForClusterRequest{
     private String ClusterId;
 
     /**裸金属服务器实例id*/
-    @KsYunField(name = "InstanceId", type = 1)
+    @KsYunField(name="InstanceId",type=1)
     private List<String> InstanceIdList;
 
     /***/
-    @KsYunField(name = "Filter", type = 1)
+    @KsYunField(name="Filter",type=1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -34,7 +34,7 @@ public class DescribeEpcForClusterRequest{
         private String Name;
 
         /***/
-        @KsYunField(name = "Value", type = 1)
+        @KsYunField(name="Value",type=1)
         private List<String> ValueList;
 
     }
