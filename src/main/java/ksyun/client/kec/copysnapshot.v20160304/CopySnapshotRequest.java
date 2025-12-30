@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class CopySnapshotRequest{
     /**CopySnapshot*/
-    @KsYunField(name = "SnapshotId", type = 1)
+    @KsYunField(name="SnapshotId",type=1)
     private List<String> SnapshotIdList;
 
     /**目标省区*/
-    @KsYunField(name = "DestinationRegion", type = 1)
+    @KsYunField(name="DestinationRegion",type=1)
     private List<String> DestinationRegionList;
 
     /**快照名称*/

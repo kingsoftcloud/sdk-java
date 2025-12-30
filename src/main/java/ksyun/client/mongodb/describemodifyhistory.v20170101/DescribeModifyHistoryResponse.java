@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeModifyHistoryResponse
@@ -15,12 +15,24 @@ import java.util.Set;
 @ToString
 public class DescribeModifyHistoryResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("TotalCount")
+    private Integer TotalCount;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("HistoryInfo")
+    private List<String> HistoryInfo;
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
+
+    /***/
+    @JsonProperty("Offset")
+    private Integer Offset;
+
+    /***/
+    @JsonProperty("Limit")
+    private Integer Limit;
 
 }

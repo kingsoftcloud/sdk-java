@@ -23,11 +23,11 @@ public class CreateContainerGroupRequest{
     private String SubnetId;
 
     /**子网ID(多值传参用法)，如果SubnetId为空，则该参数为必填，最多传5个*/
-    @KsYunField(name = "MultiSubnetId", type = 1)
+    @KsYunField(name="MultiSubnetId",type=1)
     private List<String> MultiSubnetIdList;
 
     /**安全组ID，最多3个*/
-    @KsYunField(name = "SecurityGroupId", type = 1)
+    @KsYunField(name="SecurityGroupId",type=1)
     private List<String> SecurityGroupIdList;
 
     /**容器实例类型，当前固定为RBKCI*/
@@ -84,7 +84,7 @@ public class CreateContainerGroupRequest{
 
     /**EIP实例ID(多值传参用法)，
 MultiEipAllocationId 和 EipAllocationId只能同时传一个*/
-    @KsYunField(name = "MultiEipAllocationId", type = 1)
+    @KsYunField(name="MultiEipAllocationId",type=1)
     private List<String> MultiEipAllocationIdList;
 
     /**自动匹配镜像缓存，默认False*/
@@ -137,15 +137,15 @@ MultiEipAllocationId 和 EipAllocationId只能同时传一个*/
     @ToString
     public static class MachineDnsConfigDto {
         /***/
-        @KsYunField(name = "NameServer", type = 1)
+        @KsYunField(name="NameServer",type=1)
         private List<String> NameServerList;
 
         /***/
-        @KsYunField(name = "Search", type = 1)
+        @KsYunField(name="Search",type=1)
         private List<String> SearchList;
 
         /***/
-        @KsYunField(name = "Option", type = 1)
+        @KsYunField(name="Option",type=1)
         private List<MachineDnsConfigOptionDto> OptionList;
 
         @Data
@@ -164,7 +164,7 @@ MultiEipAllocationId 和 EipAllocationId只能同时传一个*/
     }
 
     /**容器实例底层云主机host配置，如使用场景：当有自建镜像仓库时，可通过此参数配置host，通过域名拉取vpc下自建仓库镜像*/
-    @KsYunField(name = "MachineHostAliase", type = 1)
+    @KsYunField(name="MachineHostAliase",type=1)
     private List<MachineHostAliaseDto> MachineHostAliaseList;
 
     @Data
@@ -175,7 +175,7 @@ MultiEipAllocationId 和 EipAllocationId只能同时传一个*/
         private String Ip;
 
         /***/
-        @KsYunField(name = "Hostname", type = 1)
+        @KsYunField(name="Hostname",type=1)
         private List<String> HostnameList;
 
     }
@@ -189,7 +189,7 @@ MultiEipAllocationId 和 EipAllocationId只能同时传一个*/
     private String RestartPolicy;
 
     /****创建无集群模式实例时该字段才生效**拉取镜像仓库私有镜像凭据，公开镜像无须填写。*/
-    @KsYunField(name = "ImageRegistryCredential", type = 1)
+    @KsYunField(name="ImageRegistryCredential",type=1)
     private List<ImageRegistryCredentialDto> ImageRegistryCredentialList;
 
     @Data
@@ -210,7 +210,7 @@ MultiEipAllocationId 和 EipAllocationId只能同时传一个*/
     }
 
     /****创建无集群模式实例时该字段必填***/
-    @KsYunField(name = "Volume", type = 1)
+    @KsYunField(name="Volume",type=1)
     private List<VolumeDto> VolumeList;
 
     @Data
@@ -328,7 +328,7 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
             private Integer DefaultMode;
 
             /**当Volume.Type=ConfigFileVolume时，该配置必填*/
-            @KsYunField(name = "ConfigFileToPath", type = 1)
+            @KsYunField(name="ConfigFileToPath",type=1)
             private List<VolumeConfigFileVolumeConfigFileToPathDto> ConfigFileToPathList;
 
             @Data
@@ -373,7 +373,7 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
     }
 
     /****创建无集群模式实例时该字段必填***/
-    @KsYunField(name = "Container", type = 1)
+    @KsYunField(name="Container",type=1)
     private List<ContainerDto> ContainerList;
 
     @Data
@@ -384,11 +384,11 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
         private String Name;
 
         /**运行命令*/
-        @KsYunField(name = "Command", type = 1)
+        @KsYunField(name="Command",type=1)
         private List<String> CommandList;
 
         /**命令行参数*/
-        @KsYunField(name = "Arg", type = 1)
+        @KsYunField(name="Arg",type=1)
         private List<String> ArgList;
 
         /**最多三位小数*/
@@ -484,7 +484,7 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
             @ToString
             public static class ContainerLivenessProbeExecDto {
                 /**命令行*/
-                @KsYunField(name = "Command", type = 1)
+                @KsYunField(name="Command",type=1)
                 private List<String> CommandList;
 
             }
@@ -547,7 +547,7 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
             @ToString
             public static class ContainerReadinessProbeExecDto {
                 /***/
-                @KsYunField(name = "Command", type = 1)
+                @KsYunField(name="Command",type=1)
                 private List<String> CommandList;
 
             }
@@ -568,7 +568,7 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
         }
 
         /**环境变量*/
-        @KsYunField(name = "EnvironmentVar", type = 1)
+        @KsYunField(name="EnvironmentVar",type=1)
         private List<ContainerEnvironmentVarDto> EnvironmentVarList;
 
         @Data
@@ -607,7 +607,7 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
         }
 
         /***/
-        @KsYunField(name = "Port", type = 1)
+        @KsYunField(name="Port",type=1)
         private List<ContainerPortDto> PortList;
 
         @Data
@@ -624,7 +624,7 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
         }
 
         /**挂载点信息*/
-        @KsYunField(name = "VolumeMount", type = 1)
+        @KsYunField(name="VolumeMount",type=1)
         private List<ContainerVolumeMountDto> VolumeMountList;
 
         @Data
@@ -654,15 +654,15 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
     @ToString
     public static class DnsConfigDto {
         /***/
-        @KsYunField(name = "NameServer", type = 1)
+        @KsYunField(name="NameServer",type=1)
         private List<String> NameServerList;
 
         /***/
-        @KsYunField(name = "Search", type = 1)
+        @KsYunField(name="Search",type=1)
         private List<String> SearchList;
 
         /***/
-        @KsYunField(name = "Option", type = 1)
+        @KsYunField(name="Option",type=1)
         private List<DnsConfigOptionDto> OptionList;
 
         @Data
@@ -681,7 +681,7 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
     }
 
     /****创建无集群模式实例时该字段必填**pod host配置*/
-    @KsYunField(name = "HostAliase", type = 1)
+    @KsYunField(name="HostAliase",type=1)
     private List<HostAliaseDto> HostAliaseList;
 
     @Data
@@ -692,7 +692,7 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
         private String Ip;
 
         /***/
-        @KsYunField(name = "Hostname", type = 1)
+        @KsYunField(name="Hostname",type=1)
         private List<String> HostnameList;
 
     }
@@ -706,7 +706,7 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
     private String ClusterDomain;
 
     /**创建集群模式容器实例时，cluster-id、namespace、pod-name标签必填，通常该标签由virtual-kubelet组件自动传递。*/
-    @KsYunField(name = "Label", type = 1)
+    @KsYunField(name="Label",type=1)
     private List<LabelDto> LabelList;
 
     @Data
@@ -741,7 +741,7 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
 
     /****创建集群模式容器实例该字段生效**
 实例开机时需要创建的ebs数据盘，主要用于创建集群工作负载中指定了ebs类型的存储卷，最大8块ebs盘，这是底层云服务器的限制。*/
-    @KsYunField(name = "DataDisk", type = 1)
+    @KsYunField(name="DataDisk",type=1)
     private List<DataDiskDto> DataDiskList;
 
     @Data
@@ -785,7 +785,7 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
 
 pod内部所有容器申请的资源列表，不填写，开出的容器实例就是默认规格大小。
 计算规格时，优先以Limit值进行计算，Limit值为空，再以Request值累加计算。*/
-    @KsYunField(name = "ContainerSpec", type = 1)
+    @KsYunField(name="ContainerSpec",type=1)
     private List<ContainerSpecDto> ContainerSpecList;
 
     @Data

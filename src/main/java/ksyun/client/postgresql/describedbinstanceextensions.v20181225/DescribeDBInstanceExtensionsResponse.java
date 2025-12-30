@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeDBInstanceExtensionsResponse
@@ -15,12 +15,59 @@ import java.util.Set;
 @ToString
 public class DescribeDBInstanceExtensionsResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class DataDto {
+        /**已安装插件列表 */
+        @JsonProperty("Installed")
+        private List<DataInstalledDto> Installed;
+
+        @Data
+        @ToString
+        public static class DataInstalledDto {
+            /**插件描述*/
+            @JsonProperty("Comment")
+            private String Comment;
+
+            /**默认版本*/
+            @JsonProperty("DefaultVersion")
+            private String DefaultVersion;
+
+            /**下载版本*/
+            @JsonProperty("InstalledVersion")
+            private String InstalledVersion;
+
+            /**插件名称*/
+            @JsonProperty("Name")
+            private String Name;
+
+        }
+
+        /**未安装插件列表*/
+        @JsonProperty("Uninstalled")
+        private List<DataUninstalledDto> Uninstalled;
+
+        @Data
+        @ToString
+        public static class DataUninstalledDto {
+            /**插件描述*/
+            @JsonProperty("Comment")
+            private String Comment;
+
+            /**默认版本*/
+            @JsonProperty("DefaultVersion")
+            private String DefaultVersion;
+
+            /**插件名称*/
+            @JsonProperty("Name")
+            private String Name;
+
+        }
+
+    }
 
 }

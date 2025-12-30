@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeSplitItemDayBillDetailsResponse
@@ -15,12 +15,12 @@ import java.util.Set;
 @ToString
 public class DescribeSplitItemDayBillDetailsResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /**响应状态码*/
+    @JsonProperty("Status")
+    private Integer Status;
 
-    //返回结果，需要按需扩展
+    /**请求id*/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

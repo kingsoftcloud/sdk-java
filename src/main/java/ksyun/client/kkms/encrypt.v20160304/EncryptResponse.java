@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname EncryptResponse
@@ -16,11 +16,20 @@ import java.util.Set;
 public class EncryptResponse extends BaseResponseModel {
 
     /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+- 请求ID
+- 类型: String
 
-    //返回结果，需要按需扩展
+#### */
+    @JsonProperty("RequestId")
+    private String RequestId;
+
+    /**
+- 密文数据
+- 类型:Base64-encoded binary data object
+- 是否可缺省: 否
+
+#### */
+    @JsonProperty("CiphertextBlob")
+    private String CiphertextBlob;
 
 }

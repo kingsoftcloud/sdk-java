@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname ListAlarmEffectInstanceResponse
@@ -15,12 +15,75 @@ import java.util.Set;
 @ToString
 public class ListAlarmEffectInstanceResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("RequestID")
+    private String RequestID;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("TotalCount")
+    private Integer TotalCount;
+
+    /***/
+    @JsonProperty("Alarms")
+    private List<AlarmsDto> Alarms;
+
+    @Data
+    @ToString
+    public static class AlarmsDto {
+        /***/
+        @JsonProperty("AlarmID")
+        private Integer AlarmID;
+
+        /***/
+        @JsonProperty("Product")
+        private String Product;
+
+        /***/
+        @JsonProperty("AlarmTime")
+        private String AlarmTime;
+
+        /***/
+        @JsonProperty("RecoveryTime")
+        private String RecoveryTime;
+
+        /***/
+        @JsonProperty("RelatedProductSet")
+        private List<AlarmsRelatedProductSetDto> RelatedProductSet;
+
+        @Data
+        @ToString
+        public static class AlarmsRelatedProductSetDto {
+            /***/
+            @JsonProperty("ProductName")
+            private String ProductName;
+
+            /***/
+            @JsonProperty("ResourceSet")
+            private List<AlarmsRelatedProductSetResourceSetDto> ResourceSet;
+
+            @Data
+            @ToString
+            public static class AlarmsRelatedProductSetResourceSetDto {
+                /***/
+                @JsonProperty("InstanceID")
+                private String InstanceID;
+
+                /***/
+                @JsonProperty("InstanceName")
+                private String InstanceName;
+
+                /***/
+                @JsonProperty("Project")
+                private String Project;
+
+                /***/
+                @JsonProperty("Region")
+                private String Region;
+
+            }
+
+        }
+
+    }
 
 }

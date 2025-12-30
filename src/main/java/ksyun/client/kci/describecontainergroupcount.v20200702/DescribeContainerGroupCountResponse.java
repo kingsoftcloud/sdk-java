@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeContainerGroupCountResponse
@@ -15,12 +15,25 @@ import java.util.Set;
 @ToString
 public class DescribeContainerGroupCountResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /**请求Id*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("ClusterPodCounts")
+    private List<ClusterPodCountsDto> ClusterPodCounts;
+
+    @Data
+    @ToString
+    public static class ClusterPodCountsDto {
+        /***/
+        @JsonProperty("ClusterId")
+        private String ClusterId;
+
+        /***/
+        @JsonProperty("Count")
+        private Integer Count;
+
+    }
 
 }

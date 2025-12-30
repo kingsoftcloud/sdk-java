@@ -21,7 +21,7 @@ public class DescribeScalingInstanceRequest{
 
     /**待查询的云服务器ID默认显示与伸缩组绑定的所有云服务器 
  */
-    @KsYunField(name = "ScalingInstanceId", type = 1)
+    @KsYunField(name="ScalingInstanceId",type=1)
     private List<String> ScalingInstanceIdList;
 
     /**待查询的与伸缩组绑定的云服务器类型 

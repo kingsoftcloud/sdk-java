@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class DescribePrivateLinkRequest{
     /**PrivateLinkId的ID*/
-    @KsYunField(name = "PrivateLinkId", type = 1)
+    @KsYunField(name="PrivateLinkId",type=1)
     private List<String> PrivateLinkIdList;
 
     /**项目的ID*/
-    @KsYunField(name = "ProjectId", type = 1)
+    @KsYunField(name="ProjectId",type=1)
     private List<String> ProjectIdList;
 
     /**单次调用可返回的最大条目数量*/

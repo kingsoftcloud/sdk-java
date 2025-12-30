@@ -6,7 +6,7 @@
 
     <groupId>com.ksyun</groupId>
     <artifactId>ksyun-java-sdk</artifactId>
-    <version>1.8.6.37</version>
+    <version>1.8.6.38</version>
     <packaging>jar</packaging>
 
     <name>KSYUN SDK for Java</name>
@@ -81,7 +81,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.16</version>
+            <version>1.18.30</version>
         </dependency>
         <dependency>
             <groupId>commons-codec</groupId>
@@ -147,6 +147,13 @@
                         <configuration>
                             <source>8</source>
                             <target>8</target>
+                            <annotationProcessorPaths>
+                                <path>
+                                    <groupId>org.projectlombok</groupId>
+                                    <artifactId>lombok</artifactId>
+                                    <version>1.18.30</version>
+                                </path>
+                            </annotationProcessorPaths>
                         </configuration>
                     </plugin>
 

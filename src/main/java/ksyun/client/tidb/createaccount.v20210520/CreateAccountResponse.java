@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname CreateAccountResponse
@@ -15,12 +15,29 @@ import java.util.Set;
 @ToString
 public class CreateAccountResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /**实例id*/
+        @JsonProperty("InstanceId")
+        private String InstanceId;
+
+        /**此次操作结果*/
+        @JsonProperty("OperStatus")
+        private String OperStatus;
+
+        /**操作信息*/
+        @JsonProperty("Msg")
+        private String Msg;
+
+    }
 
 }

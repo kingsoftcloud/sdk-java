@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname CreateInspectHostResponse
@@ -15,12 +15,16 @@ import java.util.Set;
 @ToString
 public class CreateInspectHostResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("InspectId")
+    private String InspectId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
+
+    /***/
+    @JsonProperty("Return")
+    private Boolean ReturnField;
 
 }

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname ValidateDomainOwnerResponse
@@ -15,12 +15,12 @@ import java.util.Set;
 @ToString
 public class ValidateDomainOwnerResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /**本次校验的内容，如：cb4b37ef9e0fcbdce5dccf777452683a*/
+    @JsonProperty("Content")
+    private String Content;
 
-    //返回结果，需要按需扩展
+    /**该任务请求ID*/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname ModifySoKeyPairAttributeResponse
@@ -15,12 +15,16 @@ import java.util.Set;
 @ToString
 public class ModifySoKeyPairAttributeResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /**3e51192a-9bfc-4788-861c-b0905571b913*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /**123*/
+    @JsonProperty("KeyPairName")
+    private String KeyPairName;
+
+    /**true*/
+    @JsonProperty("Return")
+    private Boolean ReturnField;
 
 }

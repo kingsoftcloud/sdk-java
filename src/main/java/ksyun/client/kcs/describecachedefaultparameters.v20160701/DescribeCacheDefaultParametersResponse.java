@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeCacheDefaultParametersResponse
@@ -15,12 +15,54 @@ import java.util.Set;
 @ToString
 public class DescribeCacheDefaultParametersResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Data")
+    private List<DataDto> Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("name")
+        private String Name;
+
+        /***/
+        @JsonProperty("desc")
+        private String Desc;
+
+        /***/
+        @JsonProperty("defaultValue")
+        private String DefaultValue;
+
+        /***/
+        @JsonProperty("currentValue")
+        private String CurrentValue;
+
+        /***/
+        @JsonProperty("validity")
+        private DataValidityDto Validity;
+
+        @Data
+        @ToString
+        public static class DataValidityDto {
+            /***/
+            @JsonProperty("type")
+            private String Type;
+
+            /***/
+            @JsonProperty("dataType")
+            private String DataType;
+
+            /***/
+            @JsonProperty("value")
+            private List<String> Value;
+
+        }
+
+    }
 
 }

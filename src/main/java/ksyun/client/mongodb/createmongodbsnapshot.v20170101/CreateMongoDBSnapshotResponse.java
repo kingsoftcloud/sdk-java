@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname CreateMongoDBSnapshotResponse
@@ -15,12 +15,37 @@ import java.util.Set;
 @ToString
 public class CreateMongoDBSnapshotResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("MongoDBSnapshotResult")
+    private MongoDBSnapshotResultDto MongoDBSnapshotResult;
+
+    @Data
+    @ToString
+    public static class MongoDBSnapshotResultDto {
+        /***/
+        @JsonProperty("SnapshotId")
+        private String SnapshotId;
+
+        /***/
+        @JsonProperty("Name")
+        private String Name;
+
+        /***/
+        @JsonProperty("InstanceId")
+        private String InstanceId;
+
+        /***/
+        @JsonProperty("Status")
+        private String Status;
+
+        /***/
+        @JsonProperty("Create")
+        private String Create;
+
+    }
 
 }

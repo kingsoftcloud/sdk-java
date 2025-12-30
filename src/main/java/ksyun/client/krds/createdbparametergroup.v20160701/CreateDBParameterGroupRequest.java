@@ -27,11 +27,11 @@ public class CreateDBParameterGroupRequest{
     private String EngineVersion;
 
     /**参数名	参数名与参数值同时填写*/
-    @KsYunField(name = "Parameters.Name", type = 1)
+    @KsYunField(name="Parameters.Name",type=1)
     private List<String> ParametersNameList;
 
     /**参数值	*/
-    @KsYunField(name = "Parameters.Value", type = 1)
+    @KsYunField(name="Parameters.Value",type=1)
     private List<String> ParametersValueList;
 
     /**参数组描述*/

@@ -19,14 +19,17 @@ import com.fasterxml.jackson.databind.Module;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import common.Credential;
+import common.HttpResponseWrapper;
 import common.annotation.KsYunField;
 import common.annotation.KsYunFieldPropertySerializer;
 import common.exception.ClientException;
+import common.utils.RpcRequestClient;
 import java.lang.reflect.Field;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -180,6 +183,22 @@ public class BaseClient {
             JSONObject.parseObject((String)paramsJson).entrySet().forEach(entry -> requestParams.put((String)entry.getKey(), entry.getValue()));
         }
         log.info("requestParams:{}", (Object)JSONObject.toJSONString((Object)requestParams));
+    }
+
+    /**
+     * 执行 RPC 请求并返回完整的响应信息(包含 HTTP 状态码)
+     * WithContextV2 方法的底层实现
+     *
+     * @param rpcRequestClient RPC 请求客户端
+     * @param url 请求 URL
+     * @param requestMethod HTTP 方法(post/get/put/delete)
+     * @param requestParams 请求参数
+     * @param requestHeaders 请求头
+     * @return HttpResponseWrapper 包含状态码和原始响应消息
+     */
+    protected HttpResponseWrapper doRpcV2(RpcRequestClient rpcRequestClient, String url, String requestMethod,
+                                          Map<String, Object> requestParams, Map<String, String> requestHeaders) {
+        return rpcRequestClient.beginRpcRequestV2(url, requestMethod, requestParams, requestHeaders);
     }
 
     public static void main(String[] args) {

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname UpgradeDBInstanceEngineVersionResponse
@@ -15,12 +15,245 @@ import java.util.Set;
 @ToString
 public class UpgradeDBInstanceEngineVersionResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /**返回操作实例详情*/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("Instances")
+        private List<DataInstancesDto> Instances;
+
+        @Data
+        @ToString
+        public static class DataInstancesDto {
+            /***/
+            @JsonProperty("DBInstanceClass")
+            private DataInstancesDBInstanceClassDto DBInstanceClass;
+
+            @Data
+            @ToString
+            public static class DataInstancesDBInstanceClassDto {
+                /***/
+                @JsonProperty("Id")
+                private String Id;
+
+                /***/
+                @JsonProperty("Iops")
+                private Integer Iops;
+
+                /***/
+                @JsonProperty("Vcpus")
+                private Integer Vcpus;
+
+                /***/
+                @JsonProperty("Disk")
+                private Integer Disk;
+
+                /***/
+                @JsonProperty("Ram")
+                private Integer Ram;
+
+                /***/
+                @JsonProperty("Mem")
+                private Integer Mem;
+
+                /***/
+                @JsonProperty("MaxConn")
+                private Integer MaxConn;
+
+            }
+
+            /***/
+            @JsonProperty("DBInstanceIdentifier")
+            private String DBInstanceIdentifier;
+
+            /***/
+            @JsonProperty("DBInstanceName")
+            private String DBInstanceName;
+
+            /***/
+            @JsonProperty("DBInstanceStatus")
+            private String DBInstanceStatus;
+
+            /***/
+            @JsonProperty("DBInstanceType")
+            private String DBInstanceType;
+
+            /***/
+            @JsonProperty("DBParameterGroupId")
+            private String DBParameterGroupId;
+
+            /***/
+            @JsonProperty("PreferredBackupTime")
+            private String PreferredBackupTime;
+
+            /***/
+            @JsonProperty("GroupId")
+            private String GroupId;
+
+            /***/
+            @JsonProperty("SecurityGroupId")
+            private String SecurityGroupId;
+
+            /***/
+            @JsonProperty("Vip")
+            private String Vip;
+
+            /***/
+            @JsonProperty("Port")
+            private Integer Port;
+
+            /***/
+            @JsonProperty("Engine")
+            private String Engine;
+
+            /***/
+            @JsonProperty("EngineVersion")
+            private String EngineVersion;
+
+            /***/
+            @JsonProperty("InstanceCreateTime")
+            private String InstanceCreateTime;
+
+            /***/
+            @JsonProperty("MasterUserName")
+            private String MasterUserName;
+
+            /***/
+            @JsonProperty("DatastoreVersionId")
+            private String DatastoreVersionId;
+
+            /***/
+            @JsonProperty("VpcId")
+            private String VpcId;
+
+            /***/
+            @JsonProperty("SubnetId")
+            private String SubnetId;
+
+            /***/
+            @JsonProperty("PubliclyAccessible")
+            private Boolean PubliclyAccessible;
+
+            /***/
+            @JsonProperty("BillType")
+            private String BillType;
+
+            /***/
+            @JsonProperty("OrderType")
+            private String OrderType;
+
+            /***/
+            @JsonProperty("MultiAvailabilityZone")
+            private Boolean MultiAvailabilityZone;
+
+            /***/
+            @JsonProperty("MasterAvailabilityZone")
+            private String MasterAvailabilityZone;
+
+            /***/
+            @JsonProperty("SlaveAvailabilityZone")
+            private String SlaveAvailabilityZone;
+
+            /***/
+            @JsonProperty("AvailabilityZoneList")
+            private List<DataInstancesAvailabilityZoneListDto> AvailabilityZoneList;
+
+            @Data
+            @ToString
+            public static class DataInstancesAvailabilityZoneListDto {
+                /***/
+                @JsonProperty("MemberType")
+                private String MemberType;
+
+                /***/
+                @JsonProperty("AzCode")
+                private String AzCode;
+
+            }
+
+            /***/
+            @JsonProperty("DiskUsed")
+            private Integer DiskUsed;
+
+            /***/
+            @JsonProperty("InnerAzCode")
+            private String InnerAzCode;
+
+            /***/
+            @JsonProperty("Audit")
+            private Boolean Audit;
+
+            /***/
+            @JsonProperty("ReadReplicaDBInstanceIdentifiers")
+            private List<String> ReadReplicaDBInstanceIdentifiers;
+
+            /***/
+            @JsonProperty("ProductId")
+            private String ProductId;
+
+            /***/
+            @JsonProperty("ProductWhat")
+            private Integer ProductWhat;
+
+            /***/
+            @JsonProperty("ProjectId")
+            private Integer ProjectId;
+
+            /***/
+            @JsonProperty("ProjectName")
+            private String ProjectName;
+
+            /***/
+            @JsonProperty("Region")
+            private String Region;
+
+            /***/
+            @JsonProperty("ServiceStartTime")
+            private String ServiceStartTime;
+
+            /***/
+            @JsonProperty("SubOrderId")
+            private String SubOrderId;
+
+            /***/
+            @JsonProperty("SecurityGroups")
+            private List<DataInstancesSecurityGroupsDto> SecurityGroups;
+
+            @Data
+            @ToString
+            public static class DataInstancesSecurityGroupsDto {
+                /***/
+                @JsonProperty("SecurityGroupId")
+                private String SecurityGroupId;
+
+                /***/
+                @JsonProperty("SecurityGroupName")
+                private String SecurityGroupName;
+
+                /***/
+                @JsonProperty("SecurityGroupType")
+                private String SecurityGroupType;
+
+            }
+
+            /***/
+            @JsonProperty("SupportIPV6")
+            private Boolean SupportIPV6;
+
+            /***/
+            @JsonProperty("BillTypeId")
+            private Integer BillTypeId;
+
+        }
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

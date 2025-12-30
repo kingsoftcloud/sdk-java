@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class DescribeTrainJobsRequest{
     /**多个训练任务的ID*/
-    @KsYunField(name = "TrainJobId", type = 1)
+    @KsYunField(name="TrainJobId",type=1)
     private List<String> TrainJobIdList;
 
     /**筛选Filter*/
-    @KsYunField(name = "Filter", type = 1)
+    @KsYunField(name="Filter",type=1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -32,7 +32,7 @@ public class DescribeTrainJobsRequest{
         private String Name;
 
         /***/
-        @KsYunField(name = "Value", type = 1)
+        @KsYunField(name="Value",type=1)
         private List<String> ValueList;
 
     }

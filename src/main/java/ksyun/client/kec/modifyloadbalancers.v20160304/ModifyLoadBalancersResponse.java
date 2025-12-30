@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname ModifyLoadBalancersResponse
@@ -15,12 +15,21 @@ import java.util.Set;
 @ToString
 public class ModifyLoadBalancersResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("ModifyLoadBalancersResponse")
+    private ModifyLoadBalancersResponseDto ModifyLoadBalancersResponse;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class ModifyLoadBalancersResponseDto {
+        /***/
+        @JsonProperty("request_id")
+        private String Request_id;
+
+        /***/
+        @JsonProperty("return")
+        private String ReturnField;
+
+    }
 
 }

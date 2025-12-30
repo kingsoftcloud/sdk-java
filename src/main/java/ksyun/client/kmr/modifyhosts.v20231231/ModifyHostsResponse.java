@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname ModifyHostsResponse
@@ -15,12 +15,38 @@ import java.util.Set;
 @ToString
 public class ModifyHostsResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /**状态*/
+    @JsonProperty("status")
+    private Integer Status;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("data")
+    private DataDto Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /**Code*/
+        @JsonProperty("Code")
+        private Integer Code;
+
+        /**信息*/
+        @JsonProperty("Message")
+        private String Message;
+
+        /**请求ID*/
+        @JsonProperty("RequestId")
+        private String RequestId;
+
+        /**Data*/
+        @JsonProperty("Data")
+        private DataDataDto Data;
+
+        @Data
+        @ToString
+        public static class DataDataDto {
+        }
+
+    }
 
 }

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribePerformanceOnePosixAclListResponse
@@ -15,12 +15,66 @@ import java.util.Set;
 @ToString
 public class DescribePerformanceOnePosixAclListResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Data")
+    private List<DataDto> Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("PosixAclId")
+        private String PosixAclId;
+
+        /***/
+        @JsonProperty("FileSystemList")
+        private List<DataFileSystemListDto> FileSystemList;
+
+        @Data
+        @ToString
+        public static class DataFileSystemListDto {
+            /***/
+            @JsonProperty("FileSystemId")
+            private String FileSystemId;
+
+            /***/
+            @JsonProperty("VolumePath")
+            private String VolumePath;
+
+            /***/
+            @JsonProperty("FileSystemName")
+            private String FileSystemName;
+
+        }
+
+        /***/
+        @JsonProperty("Ips")
+        private List<String> Ips;
+
+        /***/
+        @JsonProperty("Desc")
+        private String Desc;
+
+        /***/
+        @JsonProperty("AutoMount")
+        private Boolean AutoMount;
+
+    }
+
+    /***/
+    @JsonProperty("PageSize")
+    private Integer PageSize;
+
+    /***/
+    @JsonProperty("PageNum")
+    private Integer PageNum;
+
+    /***/
+    @JsonProperty("TotalCount")
+    private Integer TotalCount;
 
 }

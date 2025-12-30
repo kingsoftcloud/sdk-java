@@ -58,7 +58,7 @@ public class CreateLogRuleRequest{
             @ToString
             public static class InputConfigContainerStandoutSpecifiedWorkloadDto {
                 /***/
-                @KsYunField(name = "NamespaceList", type = 1)
+                @KsYunField(name="NamespaceList",type=1)
                 private List<namespaceListDto1> NamespaceListList;
 
                 @Data
@@ -74,7 +74,7 @@ public class CreateLogRuleRequest{
 
                     /**采集负载集合
 - 如果 AllContainer=false，则此项为必填*/
-                    @KsYunField(name = "Workload", type = 1)
+                    @KsYunField(name="Workload",type=1)
                     private List<workloadDto2> WorkloadList;
 
                     @Data
@@ -113,7 +113,7 @@ public class CreateLogRuleRequest{
                 private Integer NamespaceOperator;
 
                 /**命名空间集合，如果NamespaceOperator=2，该项为必填*/
-                @KsYunField(name = "Namespace", type = 1)
+                @KsYunField(name="Namespace",type=1)
                 private List<String> NamespaceList;
 
                 /**容器名称操作类型，如果ContainerName不为空，则该值为必填项。有效值：1、2
@@ -127,7 +127,7 @@ public class CreateLogRuleRequest{
                 private String ContainerName;
 
                 /***/
-                @KsYunField(name = "ContainerLabel", type = 1)
+                @KsYunField(name="ContainerLabel",type=1)
                 private List<containerLabelDto3> ContainerLabelList;
 
                 @Data
@@ -212,7 +212,7 @@ public class CreateLogRuleRequest{
                 private Integer NamespaceOperator;
 
                 /**命名空间集合*/
-                @KsYunField(name = "Namespace", type = 1)
+                @KsYunField(name="Namespace",type=1)
                 private List<String> NamespaceList;
 
                 /**容器名称操作类型，有效值：1、2
@@ -228,11 +228,11 @@ public class CreateLogRuleRequest{
                 /**设置要采集的日志文件的绝对路径，不支持通配符“*”
 
 */
-                @KsYunField(name = "ContainerPath", type = 1)
+                @KsYunField(name="ContainerPath",type=1)
                 private List<String> ContainerPathList;
 
                 /***/
-                @KsYunField(name = "ContainerLabel", type = 1)
+                @KsYunField(name="ContainerLabel",type=1)
                 private List<InputConfigContainerFileSpecifiedPodLabelContainerLabelDto> ContainerLabelList;
 
                 @Data
@@ -271,7 +271,7 @@ public class CreateLogRuleRequest{
             private String Path;
 
             /***/
-            @KsYunField(name = "Label", type = 1)
+            @KsYunField(name="Label",type=1)
             private List<InputConfigHostFileLabelDto> LabelList;
 
             @Data

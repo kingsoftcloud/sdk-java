@@ -23,7 +23,7 @@ public class DescribeRepositoryRequest{
     private String Namespace;
 
     /**镜像仓库名称，若不输入，则默认查询所选命名空间下所有镜像仓库*/
-    @KsYunField(name = "RepoName", type = 1)
+    @KsYunField(name="RepoName",type=1)
     private List<String> RepoNameList;
 
     /**单次调用所返回的最大实例数目，默认20，最大99*/

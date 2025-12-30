@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname ModifyIpv6PublicIpResponse
@@ -15,12 +15,41 @@ import java.util.Set;
 @ToString
 public class ModifyIpv6PublicIpResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /**请求ID*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /**IPV6公网的信息*/
+    @JsonProperty("Ipv6PublicIpAddress")
+    private Ipv6PublicIpAddressDto Ipv6PublicIpAddress;
+
+    @Data
+    @ToString
+    public static class Ipv6PublicIpAddressDto {
+        /**带宽*/
+        @JsonProperty("BandWidth")
+        private Integer BandWidth;
+
+        /**创建时间*/
+        @JsonProperty("CreateTime")
+        private String CreateTime;
+
+        /**计费类型*/
+        @JsonProperty("ChargeType")
+        private String ChargeType;
+
+        /**服务结束时间*/
+        @JsonProperty("ServiceEndTime")
+        private String ServiceEndTime;
+
+        /**Ipv6公网地址*/
+        @JsonProperty("Ipv6PublicIpAddress")
+        private String Ipv6PublicIpAddress;
+
+        /**Ipv6公网的ID*/
+        @JsonProperty("Ipv6PublicIpAddressId")
+        private String Ipv6PublicIpAddressId;
+
+    }
 
 }

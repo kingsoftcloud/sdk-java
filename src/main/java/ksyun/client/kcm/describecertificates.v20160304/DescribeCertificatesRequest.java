@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DescribeCertificatesRequest{
     /***/
-    @KsYunField(name = "CertificateId", type = 1)
+    @KsYunField(name="CertificateId",type=1)
     private List<String> CertificateIdList;
 
 }

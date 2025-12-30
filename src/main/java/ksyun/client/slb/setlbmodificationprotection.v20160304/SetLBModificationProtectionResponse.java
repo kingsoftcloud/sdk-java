@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname SetLBModificationProtectionResponse
@@ -15,12 +15,12 @@ import java.util.Set;
 @ToString
 public class SetLBModificationProtectionResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /**请求ID*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /**负载均衡的ID*/
+    @JsonProperty("Return")
+    private Boolean ReturnField;
 
 }

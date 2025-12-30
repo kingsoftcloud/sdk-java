@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname SetvCPUResponse
@@ -15,12 +15,29 @@ import java.util.Set;
 @ToString
 public class SetvCPUResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("ReturnSet")
+    private List<ReturnSetDto> ReturnSet;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class ReturnSetDto {
+        /***/
+        @JsonProperty("DedicatedHostId")
+        private String DedicatedHostId;
+
+        /***/
+        @JsonProperty("Return")
+        private Boolean ReturnField;
+
+        /***/
+        @JsonProperty("Message")
+        private String Message;
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

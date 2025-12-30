@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeTriggersResponse
@@ -15,12 +15,79 @@ import java.util.Set;
 @ToString
 public class DescribeTriggersResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("MaxRecords")
+        private Integer MaxRecords;
+
+        /***/
+        @JsonProperty("Marker")
+        private Integer Marker;
+
+        /***/
+        @JsonProperty("TotalCount")
+        private Integer TotalCount;
+
+        /***/
+        @JsonProperty("triggers")
+        private List<DataTriggersDto> Triggers;
+
+        @Data
+        @ToString
+        public static class DataTriggersDto {
+            /**触发器 ID*/
+            @JsonProperty("Id")
+            private String Id;
+
+            /**函数 ID*/
+            @JsonProperty("FunctionId")
+            private String FunctionId;
+
+            /**触发器名称*/
+            @JsonProperty("TriggerName")
+            private String TriggerName;
+
+            /**触发器类型*/
+            @JsonProperty("Type")
+            private String Type;
+
+            /**公网地址*/
+            @JsonProperty("UrlInternet")
+            private String UrlInternet;
+
+            /**vpc 内访问地址*/
+            @JsonProperty("UrlIntranet")
+            private String UrlIntranet;
+
+            /***/
+            @JsonProperty("TriggerDesc")
+            private DataTriggersTriggerDescDto TriggerDesc;
+
+            @Data
+            @ToString
+            public static class DataTriggersTriggerDescDto {
+                /**是否开启验证*/
+                @JsonProperty("AuthRequired")
+                private Boolean AuthRequired;
+
+                /**HTTP method*/
+                @JsonProperty("Methods")
+                private List<String> Methods;
+
+            }
+
+        }
+
+    }
 
 }

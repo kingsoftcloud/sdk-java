@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname GetDwsuMetricResponse
@@ -15,12 +15,25 @@ import java.util.Set;
 @ToString
 public class GetDwsuMetricResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /**监控指标数组*/
+    @JsonProperty("Data")
+    private List<DataDto> Data;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class DataDto {
+        /**监控指标名称*/
+        @JsonProperty("Name")
+        private String Name;
+
+        /**若为DPS监控指标，则该值为DPS ID，若为DWSU监控指标，则该值为DWSU ID*/
+        @JsonProperty("ResourceId")
+        private String ResourceId;
+
+        /**监控指标数值*/
+        @JsonProperty("Value")
+        private String Value;
+
+    }
 
 }

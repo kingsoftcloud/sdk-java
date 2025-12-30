@@ -19,7 +19,7 @@ public class DescribeScheduledTaskRequest{
     private String ScalingGroupId;
 
     /**弹性伸缩定时任务id列表*/
-    @KsYunField(name = "ScalingScheduledTaskId", type = 1)
+    @KsYunField(name="ScalingScheduledTaskId",type=1)
     private List<String> ScalingScheduledTaskIdList;
 
     /**弹性伸缩定时任务名称*/

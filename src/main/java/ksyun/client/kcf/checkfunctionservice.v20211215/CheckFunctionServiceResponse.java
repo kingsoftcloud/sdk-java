@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname CheckFunctionServiceResponse
@@ -15,12 +15,12 @@ import java.util.Set;
 @ToString
 public class CheckFunctionServiceResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /**若为true，表示已开通；若为false，表示未开通*/
+    @JsonProperty("Data")
+    private String Data;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

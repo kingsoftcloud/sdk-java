@@ -15,15 +15,15 @@ import java.util.Arrays;
 @Data
 public class DescribeVpcPeeringConnectionsRequest{
     /**项目的ID*/
-    @KsYunField(name = "ProjectId", type = 1)
+    @KsYunField(name="ProjectId",type=1)
     private List<String> ProjectIdList;
 
     /**多个对等连接的ID*/
-    @KsYunField(name = "VpcPeeringConnectionId", type = 1)
+    @KsYunField(name="VpcPeeringConnectionId",type=1)
     private List<String> VpcPeeringConnectionIdList;
 
     /**筛选Filter*/
-    @KsYunField(name = "Filter", type = 1)
+    @KsYunField(name="Filter",type=1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -34,7 +34,7 @@ public class DescribeVpcPeeringConnectionsRequest{
         private String Name;
 
         /***/
-        @KsYunField(name = "Value", type = 1)
+        @KsYunField(name="Value",type=1)
         private List<String> ValueList;
 
     }

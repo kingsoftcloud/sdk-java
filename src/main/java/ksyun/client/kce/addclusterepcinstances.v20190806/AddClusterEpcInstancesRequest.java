@@ -21,11 +21,11 @@ public class AddClusterEpcInstancesRequest{
     /**移入集群的裸金属服务器实例id，即HostId
 
 注：参数InstanceId.N和EpcPara.N必须填写一个，不能同时填写，也不能同时为空*/
-    @KsYunField(name = "InstanceId", type = 1)
+    @KsYunField(name="InstanceId",type=1)
     private List<String> InstanceIdList;
 
     /**裸金属服务器产品重新安装操作系统的透传参数，json化字符串格式，详见[重装租赁裸金属服务器](https://apiexplorer.ksyun.com/#/api/44/ReinstallEpc/2015-11-01/1003)。*/
-    @KsYunField(name = "EpcPara", type = 1)
+    @KsYunField(name="EpcPara",type=1)
     private List<String> EpcParaList;
 
     /**节点高级设置*/
@@ -64,7 +64,7 @@ Kubernetes版本≥1.24时，有效值：
         private Boolean Schedulable;
 
         /**节点加入集群时预置的标签*/
-        @KsYunField(name = "Label", type = 1)
+        @KsYunField(name="Label",type=1)
         private List<AdvancedSettingLabelDto> LabelList;
 
         @Data
@@ -88,7 +88,7 @@ Kubernetes版本≥1.24时，有效值：
         @ToString
         public static class AdvancedSettingExtraArgDto {
             /**用户自定义kubelet的参数*/
-            @KsYunField(name = "Kubelet", type = 1)
+            @KsYunField(name="Kubelet",type=1)
             private List<AdvancedSettingExtraArgKubeletDto> KubeletList;
 
             @Data
@@ -111,7 +111,7 @@ Kubernetes版本≥1.24时，有效值：
         private Integer ContainerLogMaxFiles;
 
         /**节点加入集群时预置污点，匹配污点容忍进行调度*/
-        @KsYunField(name = "Taints", type = 1)
+        @KsYunField(name="Taints",type=1)
         private List<AdvancedSettingTaintsDto> TaintsList;
 
         @Data

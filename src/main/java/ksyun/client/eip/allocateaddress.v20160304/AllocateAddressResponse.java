@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname AllocateAddressResponse
@@ -15,12 +15,20 @@ import java.util.Set;
 @ToString
 public class AllocateAddressResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /**弹性IP的ID*/
+    @JsonProperty("AllocationId")
+    private String AllocationId;
 
-    //返回结果，需要按需扩展
+    /**弹性IP地址*/
+    @JsonProperty("PublicIp")
+    private String PublicIp;
+
+    /**请求ID*/
+    @JsonProperty("RequestId")
+    private String RequestId;
+
+    /**IP版本*/
+    @JsonProperty("IpVersion")
+    private String IpVersion;
 
 }

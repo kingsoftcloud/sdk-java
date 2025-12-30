@@ -19,7 +19,7 @@ public class DescribeInstanceTypeConfigsRequest{
 instance-family 实例族
 instance-type 实例类型
 availability-zone 可用区*/
-    @KsYunField(name = "Filter", type = 1)
+    @KsYunField(name="Filter",type=1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -27,12 +27,12 @@ availability-zone 可用区*/
     public static class FilterDto {
         /**	
 Filter.1.Name.1=instance-type*/
-        @KsYunField(name = "Name", type = 1)
+        @KsYunField(name="Name",type=1)
         private List<String> NameList;
 
         /**	
 Filter.1.Value.1=****/
-        @KsYunField(name = "Value", type = 1)
+        @KsYunField(name="Value",type=1)
         private List<String> ValueList;
 
     }

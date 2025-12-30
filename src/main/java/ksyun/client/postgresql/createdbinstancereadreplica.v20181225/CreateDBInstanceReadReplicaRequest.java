@@ -51,7 +51,7 @@ YEAR_MONTH（包年包月）,DAY（按日计费），默认值：YEAR_MONTH*/
     /**可用区
 
 示例(AvailabilityZone.1=cn-beijing-6a)，默认情况下只读实例可用区与主实例一致，如果主实例是跨可用区实例，只读实例会随机分布。*/
-    @KsYunField(name = "AvailabilityZone", type = 1)
+    @KsYunField(name="AvailabilityZone",type=1)
     private List<String> AvailabilityZoneList;
 
     /**只读ip地址

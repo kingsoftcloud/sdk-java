@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname MatchImageCacheResponse
@@ -15,12 +15,25 @@ import java.util.Set;
 @ToString
 public class MatchImageCacheResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /**请求ID*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /**镜像缓存匹配结果记录，只返回最优的一条记录*/
+    @JsonProperty("ImageCaches")
+    private List<ImageCachesDto> ImageCaches;
+
+    @Data
+    @ToString
+    public static class ImageCachesDto {
+        /**镜像缓存ID*/
+        @JsonProperty("ImageCacheId")
+        private String ImageCacheId;
+
+        /**镜像缓存名称*/
+        @JsonProperty("ImageCacheName")
+        private String ImageCacheName;
+
+    }
 
 }

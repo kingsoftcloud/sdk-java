@@ -21,7 +21,7 @@ public class DescribeScalingConfigurationRequest{
 
     /**待查询的各启动配置ID构成的数组数组下标从0开始，最多可指定20个 
  */
-    @KsYunField(name = "ScalingConfigurationId", type = 1)
+    @KsYunField(name="ScalingConfigurationId",type=1)
     private List<String> ScalingConfigurationIdList;
 
     /**偏移量，默认为0偏移量，默认为0 
@@ -31,7 +31,7 @@ public class DescribeScalingConfigurationRequest{
 
     /**项目组id 
  */
-    @KsYunField(name = "ProjectId", type = 1)
+    @KsYunField(name="ProjectId",type=1)
     private List<String> ProjectIdList;
 
     /**一次最多可查询的启动配置数量 

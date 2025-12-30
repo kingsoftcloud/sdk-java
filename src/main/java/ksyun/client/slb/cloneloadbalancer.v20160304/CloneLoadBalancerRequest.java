@@ -43,7 +43,7 @@ public class CloneLoadBalancerRequest{
     private String LbType;
 
     /**tag标签*/
-    @KsYunField(name = "TagId", type = 1)
+    @KsYunField(name="TagId",type=1)
     private List<String> TagIdList;
 
     /**项目的ID*/

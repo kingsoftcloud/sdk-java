@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeCfwAvResponse
@@ -15,12 +15,37 @@ import java.util.Set;
 @ToString
 public class DescribeCfwAvResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("CfwAvs")
+    private List<CfwAvsDto> CfwAvs;
+
+    @Data
+    @ToString
+    public static class CfwAvsDto {
+        /***/
+        @JsonProperty("AvId")
+        private String AvId;
+
+        /***/
+        @JsonProperty("Protocol")
+        private String Protocol;
+
+        /***/
+        @JsonProperty("ProtectType")
+        private String ProtectType;
+
+        /***/
+        @JsonProperty("Status")
+        private String Status;
+
+        /***/
+        @JsonProperty("CreateTime")
+        private String CreateTime;
+
+    }
 
 }

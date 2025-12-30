@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DescribeFileSystemsRequest{
     /**预查看的文件系统ID*/
-    @KsYunField(name = "FileSystemId", type = 1)
+    @KsYunField(name="FileSystemId",type=1)
     private List<String> FileSystemIdList;
 
     /**单次调用所返回的最大实例数目，取值为5~1000，超过1000记为1000*/
@@ -27,7 +27,7 @@ public class DescribeFileSystemsRequest{
     private Integer Marker;
 
     /**项目制id，默认为0*/
-    @KsYunField(name = "ProjectId", type = 1)
+    @KsYunField(name="ProjectId",type=1)
     private List<Integer> ProjectIdList;
 
     /**是否包含删除的，默认为false*/
@@ -35,7 +35,7 @@ public class DescribeFileSystemsRequest{
     private Boolean IncludeDel;
 
     /**可查询file-system-name和ip-address*/
-    @KsYunField(name = "Filter", type = 1)
+    @KsYunField(name="Filter",type=1)
     private List<FilterDto> FilterList;
 
     @Data

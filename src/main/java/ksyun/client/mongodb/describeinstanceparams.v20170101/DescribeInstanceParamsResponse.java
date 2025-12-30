@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeInstanceParamsResponse
@@ -15,12 +15,68 @@ import java.util.Set;
 @ToString
 public class DescribeInstanceParamsResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("RuntimeParams")
+    private RuntimeParamsDto RuntimeParams;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class RuntimeParamsDto {
+        /***/
+        @JsonProperty("SetParameter")
+        private RuntimeParamsSetParameterDto SetParameter;
+
+        @Data
+        @ToString
+        public static class RuntimeParamsSetParameterDto {
+            /***/
+            @JsonProperty("maxTransactionLockRequestTimeoutMillis")
+            private Integer MaxTransactionLockRequestTimeoutMillis;
+
+            /***/
+            @JsonProperty("transactionLifetimeLimitSeconds")
+            private Integer TransactionLifetimeLimitSeconds;
+
+            /***/
+            @JsonProperty("cursorTimeoutMillis")
+            private Integer CursorTimeoutMillis;
+
+        }
+
+        /***/
+        @JsonProperty("OperationProfiling")
+        private RuntimeParamsOperationProfilingDto OperationProfiling;
+
+        @Data
+        @ToString
+        public static class RuntimeParamsOperationProfilingDto {
+            /***/
+            @JsonProperty("slowOpThresholdMs")
+            private Integer SlowOpThresholdMs;
+
+            /***/
+            @JsonProperty("mode")
+            private String Mode;
+
+        }
+
+        /***/
+        @JsonProperty("Replication")
+        private RuntimeParamsReplicationDto Replication;
+
+        @Data
+        @ToString
+        public static class RuntimeParamsReplicationDto {
+            /***/
+            @JsonProperty("oplogSizeMB")
+            private String OplogSizeMB;
+
+        }
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

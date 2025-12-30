@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname GetWebIdeUrlResponse
@@ -15,12 +15,20 @@ import java.util.Set;
 @ToString
 public class GetWebIdeUrlResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /**Jupyter连接地址*/
+    @JsonProperty("JupyterWebUrl")
+    private String JupyterWebUrl;
 
-    //返回结果，需要按需扩展
+    /**Vscode连接地址*/
+    @JsonProperty("VscodeWebUrl")
+    private String VscodeWebUrl;
+
+    /**开发任务ID*/
+    @JsonProperty("NotebookId")
+    private String NotebookId;
+
+    /**请求ID*/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

@@ -35,7 +35,7 @@ public class CreateInstanceDatabaseRequest{
     private String InstanceDatabaseDescription;
 
     /***/
-    @KsYunField(name = "InstanceDatabasePrivileges", type = 1)
+    @KsYunField(name="InstanceDatabasePrivileges",type=1)
     private List<InstanceDatabasePrivilegesDto> InstanceDatabasePrivilegesList;
 
     @Data

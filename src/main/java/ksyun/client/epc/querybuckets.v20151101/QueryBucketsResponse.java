@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname QueryBucketsResponse
@@ -15,12 +15,33 @@ import java.util.Set;
 @ToString
 public class QueryBucketsResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("BucketSet")
+    private List<BucketSetDto> BucketSet;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class BucketSetDto {
+        /***/
+        @JsonProperty("BucketName")
+        private String BucketName;
+
+        /***/
+        @JsonProperty("BucketHost")
+        private String BucketHost;
+
+        /***/
+        @JsonProperty("BucketHostCompatible")
+        private String BucketHostCompatible;
+
+        /***/
+        @JsonProperty("BucketInnerHost")
+        private String BucketInnerHost;
+
+        /***/
+        @JsonProperty("Endpoint")
+        private String Endpoint;
+
+    }
 
 }

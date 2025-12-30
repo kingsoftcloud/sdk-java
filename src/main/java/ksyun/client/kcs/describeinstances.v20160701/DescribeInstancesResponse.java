@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeInstancesResponse
@@ -15,12 +15,58 @@ import java.util.Set;
 @ToString
 public class DescribeInstancesResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("list")
+        private List<DataListDto> List;
+
+        @Data
+        @ToString
+        public static class DataListDto {
+            /***/
+            @JsonProperty("id")
+            private String Id;
+
+            /***/
+            @JsonProperty("name")
+            private String Name;
+
+            /***/
+            @JsonProperty("ip")
+            private String Ip;
+
+            /***/
+            @JsonProperty("mode")
+            private Integer Mode;
+
+            /***/
+            @JsonProperty("created")
+            private String Created;
+
+        }
+
+        /***/
+        @JsonProperty("offset")
+        private Integer Offset;
+
+        /***/
+        @JsonProperty("limit")
+        private Integer Limit;
+
+        /***/
+        @JsonProperty("total")
+        private Integer Total;
+
+    }
 
 }

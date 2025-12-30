@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname BatchCreateProcessResponse
@@ -15,12 +15,33 @@ import java.util.Set;
 @ToString
 public class BatchCreateProcessResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("ProcessInfo")
+    private List<ProcessInfoDto> ProcessInfo;
+
+    @Data
+    @ToString
+    public static class ProcessInfoDto {
+        /***/
+        @JsonProperty("ProcessId")
+        private String ProcessId;
+
+        /***/
+        @JsonProperty("InstanceId")
+        private String InstanceId;
+
+        /***/
+        @JsonProperty("Sn")
+        private String Sn;
+
+    }
+
+    /***/
+    @JsonProperty("Return")
+    private Boolean ReturnField;
 
 }

@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class DescribeRouteTablesRequest{
     /**多个路由表的ID*/
-    @KsYunField(name = "RouteTableId", type = 1)
+    @KsYunField(name="RouteTableId",type=1)
     private List<String> RouteTableIdList;
 
     /**筛选Filter*/
-    @KsYunField(name = "Filter", type = 1)
+    @KsYunField(name="Filter",type=1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -31,7 +31,7 @@ public class DescribeRouteTablesRequest{
         private String Name;
 
         /***/
-        @KsYunField(name = "Value", type = 1)
+        @KsYunField(name="Value",type=1)
         private List<String> ValueList;
 
     }

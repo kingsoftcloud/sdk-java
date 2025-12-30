@@ -40,6 +40,7 @@
 package common.utils;
 
 import com.alibaba.fastjson.JSONObject;
+import common.HttpResponseWrapper;
 import common.RpcRequestContentModel;
 import common.utils.HttpClientUtils;
 import java.io.UnsupportedEncodingException;
@@ -111,6 +112,32 @@ public class RpcRequestClient {
         catch (Exception e) {
             log.error("rpc occur error", (Throwable)e);
             throw new RuntimeException(e);
+        }
+    }
+
+    /**
+     * 发起 RPC 请求并返回完整的响应信息(包含 HTTP 状态码)
+     * WithContextV2 方法的底层实现
+     *
+     * @param url 请求 URL
+     * @param requestMethod HTTP 方法
+     * @param requestParam 请求参数
+     * @param head 请求头
+     * @return HttpResponseWrapper 包含状态码和原始响应消息
+     */
+    public HttpResponseWrapper beginRpcRequestV2(String url, String requestMethod, Map<String, Object> requestParam, Map<String, String> head) {
+        url = RpcRequestClient.enhanceUrl(url);
+        HashMap<String, String> rpcHead = new HashMap<String, String>(head);
+        HashMap<String, Object> rpcParam = new HashMap<String, Object>(requestParam);
+        try {
+            SdkHttpFullRequest unsignedRequest = this.createUnsignedRequest(url, this.paseSdkHttpMethod(requestMethod), rpcParam, rpcHead);
+            SdkHttpFullRequest signedRequest = this.signRequest(unsignedRequest, this.rpcRequestContentModel.getAccessKeyId(), this.rpcRequestContentModel.getSecretAccessKey());
+            HttpRequestBase httpRequest = this.convertToHttpRequest(signedRequest, rpcParam);
+            return this.executeRequestWithResponse(httpRequest);
+        }
+        catch (Exception e) {
+            log.error("rpc occur error", (Throwable)e);
+            return new HttpResponseWrapper(e);
         }
     }
 
@@ -300,6 +327,43 @@ public class RpcRequestClient {
         catch (Exception e) {
             log.info("rpc request occur exception:{}", (Object)e.getMessage());
             throw new RuntimeException("rpc\u8bf7\u6c42\u5931\u8d25", e);
+        }
+    }
+
+    /**
+     * 执行 HTTP 请求并返回包含状态码的响应
+     *
+     * @param httpRequest HTTP 请求对象
+     * @return HttpResponseWrapper 包含状态码和响应消息
+     */
+    private HttpResponseWrapper executeRequestWithResponse(HttpRequestBase httpRequest) {
+        log.info("begin rpc request v2");
+        try (CloseableHttpClient httpClient = HttpClients.createDefault();){
+            RequestConfig requestConfig = RequestConfig.custom()
+                .setSocketTimeout(this.rpcRequestContentModel.getSocketTimeout().intValue())
+                .setConnectTimeout(this.rpcRequestContentModel.getConnectTimeout().intValue())
+                .build();
+            httpRequest.setConfig(requestConfig);
+            String curl = HttpClientUtils.convertHttpClientToCurl(httpRequest);
+            log.info("begin rpc request curl:{}", (Object)curl);
+
+            // 执行请求
+            CloseableHttpResponse response = httpClient.execute((HttpUriRequest)httpRequest);
+
+            // 获取状态码
+            int statusCode = response.getStatusLine().getStatusCode();
+
+            // 读取响应体
+            Objects.requireNonNull(response.getEntity(), "response content is null");
+            String result = EntityUtils.toString((HttpEntity)response.getEntity(), (Charset)StandardCharsets.UTF_8);
+
+            log.info("rpc request end, statusCode:{}, response:{}", statusCode, result);
+
+            return new HttpResponseWrapper(statusCode, result);
+        }
+        catch (Exception e) {
+            log.error("rpc request occur exception:{}", (Object)e.getMessage(), e);
+            return new HttpResponseWrapper(e);
         }
     }
 

@@ -46,11 +46,11 @@ False*/
         /**触发动作，有效值
 PushImage
 DeleteImage*/
-        @KsYunField(name = "EventType", type = 1)
+        @KsYunField(name="EventType",type=1)
         private List<String> EventTypeList;
 
         /**自定义Header*/
-        @KsYunField(name = "Header", type = 1)
+        @KsYunField(name="Header",type=1)
         private List<TriggerHeaderDto> HeaderList;
 
         @Data
@@ -61,7 +61,7 @@ DeleteImage*/
             private String Key;
 
             /***/
-            @KsYunField(name = "Value", type = 1)
+            @KsYunField(name="Value",type=1)
             private List<String> ValueList;
 
         }

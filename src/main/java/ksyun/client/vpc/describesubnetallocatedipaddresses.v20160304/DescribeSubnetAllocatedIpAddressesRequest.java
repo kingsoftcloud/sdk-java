@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DescribeSubnetAllocatedIpAddressesRequest{
     /**筛选Filter*/
-    @KsYunField(name = "Filter", type = 1)
+    @KsYunField(name="Filter",type=1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -27,7 +27,7 @@ public class DescribeSubnetAllocatedIpAddressesRequest{
         private String Name;
 
         /***/
-        @KsYunField(name = "Value", type = 1)
+        @KsYunField(name="Value",type=1)
         private List<String> ValueList;
 
     }

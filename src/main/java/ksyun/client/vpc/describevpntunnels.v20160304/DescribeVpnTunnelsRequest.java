@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class DescribeVpnTunnelsRequest{
     /**多个Vpn通道的ID*/
-    @KsYunField(name = "VpnTunnelId", type = 1)
+    @KsYunField(name="VpnTunnelId",type=1)
     private List<String> VpnTunnelIdList;
 
     /**筛选Filter*/
-    @KsYunField(name = "Filter", type = 1)
+    @KsYunField(name="Filter",type=1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -32,7 +32,7 @@ public class DescribeVpnTunnelsRequest{
         private String Name;
 
         /***/
-        @KsYunField(name = "Value", type = 1)
+        @KsYunField(name="Value",type=1)
         private List<String> ValueList;
 
     }

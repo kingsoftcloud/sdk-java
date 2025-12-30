@@ -19,7 +19,7 @@ public class CreateSecurityGroupRequest{
     private String SecurityGroupName;
 
     /**安全组规则，支持以英文逗号隔开的传值形式，或者List<String>传值形式*/
-    @KsYunField(name = "SecurityGroupRule", type = 1)
+    @KsYunField(name="SecurityGroupRule",type=1)
     private List<SecurityGroupRuleDto> SecurityGroupRuleList;
 
     @Data

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname SupportPluginsResponse
@@ -15,12 +15,25 @@ import java.util.Set;
 @ToString
 public class SupportPluginsResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Data")
+    private List<DataDto> Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("PluginName")
+        private String PluginName;
+
+        /***/
+        @JsonProperty("NeedToRestart")
+        private Boolean NeedToRestart;
+
+    }
 
 }

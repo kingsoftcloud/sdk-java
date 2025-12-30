@@ -60,21 +60,21 @@ INVALID（请续费）*/
 
     /**实例ids
 实例id多选筛选   例如：DBInstanceIdentifierIn.0=xxx&DBInstanceIdentifierIn.1=xxx*/
-    @KsYunField(name = "DBInstanceIdentifierIn", type = 1)
+    @KsYunField(name="DBInstanceIdentifierIn",type=1)
     private List<String> DBInstanceIdentifierInList;
 
     /**按实例名称过滤
 示例(DBInstanceNameIn.1=test1，DBInstanceNameIn.2=test2)*/
-    @KsYunField(name = "DBInstanceNameIn", type = 1)
+    @KsYunField(name="DBInstanceNameIn",type=1)
     private List<String> DBInstanceNameInList;
 
     /**按vip过滤
 示例(VipIn.1=10.9.2.3，VipIn.2=10.9.2.4)*/
-    @KsYunField(name = "VipIn", type = 1)
+    @KsYunField(name="VipIn",type=1)
     private List<String> VipInList;
 
     /**按eip过滤*/
-    @KsYunField(name = "EIPIn", type = 1)
+    @KsYunField(name="EIPIn",type=1)
     private List<String> EIPInList;
 
     /**按照实例过期时间过滤*/

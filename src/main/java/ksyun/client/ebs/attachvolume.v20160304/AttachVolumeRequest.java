@@ -14,10 +14,8 @@ import java.util.Arrays;
 */
 @Data
 public class AttachVolumeRequest{
-    /**
-     * 待挂载的云硬盘ID，云硬盘和云主机必须在同一可用区。长度36个字符，包括字母、数字、-、_-
-     */
-    @KsYunField(name = "VolumeId")
+    /**待挂载的云硬盘ID，云硬盘和云主机必须在同一可用区。长度36个字符，包括字母、数字、-、_-*/
+    @KsYunField(name="VolumeId")
     private String VolumeId;
 
     /**待挂载的云主机实例ID

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeWebhookTriggerLogResponse
@@ -15,12 +15,29 @@ import java.util.Set;
 @ToString
 public class DescribeWebhookTriggerLogResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("MaxResults")
+    private Integer MaxResults;
+
+    /***/
+    @JsonProperty("Marker")
+    private Integer Marker;
+
+    /***/
+    @JsonProperty("TotalCount")
+    private Integer TotalCount;
+
+    /***/
+    @JsonProperty("Logs")
+    private LogsDto Logs;
+
+    @Data
+    @ToString
+    public static class LogsDto {
+    }
 
 }

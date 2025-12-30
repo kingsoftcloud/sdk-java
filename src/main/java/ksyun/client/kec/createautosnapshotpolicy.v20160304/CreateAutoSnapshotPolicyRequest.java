@@ -23,7 +23,7 @@ public class CreateAutoSnapshotPolicyRequest{
     private String AutoSnapshotTime;
 
     /**自动快照重复时间,选定周一到周日中需要创建快照的日期，参数为 1 ~ 7 的数字*/
-    @KsYunField(name = "AutoSnapshotDate", type = 1)
+    @KsYunField(name="AutoSnapshotDate",type=1)
     private List<String> AutoSnapshotDateList;
 
     /**快照类型 LocalSnapshot（极速可用快照）、CommonSnapshot（普通快照）*/

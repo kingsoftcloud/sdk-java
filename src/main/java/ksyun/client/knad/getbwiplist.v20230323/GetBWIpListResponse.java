@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname GetBWIpListResponse
@@ -15,12 +15,29 @@ import java.util.Set;
 @ToString
 public class GetBWIpListResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("IpList")
+    private List<IpListDto> IpList;
+
+    @Data
+    @ToString
+    public static class IpListDto {
+        /***/
+        @JsonProperty("id")
+        private String Id;
+
+        /***/
+        @JsonProperty("ip")
+        private String Ip;
+
+    }
+
+    /***/
+    @JsonProperty("total")
+    private Integer Total;
 
 }

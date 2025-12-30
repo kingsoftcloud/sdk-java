@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname BatchApplyDBParameterGroupResponse
@@ -15,12 +15,41 @@ import java.util.Set;
 @ToString
 public class BatchApplyDBParameterGroupResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("succeededCount")
+    private Integer SucceededCount;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("failedCount")
+    private Integer FailedCount;
+
+    /***/
+    @JsonProperty("succeeded")
+    private List<String> Succeeded;
+
+    /***/
+    @JsonProperty("failed")
+    private List<FailedDto> Failed;
+
+    @Data
+    @ToString
+    public static class FailedDto {
+        /***/
+        @JsonProperty("result")
+        private String Result;
+
+        /***/
+        @JsonProperty("id")
+        private String Id;
+
+        /***/
+        @JsonProperty("name")
+        private String Name;
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

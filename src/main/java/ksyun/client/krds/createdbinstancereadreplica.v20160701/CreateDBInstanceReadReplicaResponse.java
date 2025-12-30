@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname CreateDBInstanceReadReplicaResponse
@@ -15,12 +15,228 @@ import java.util.Set;
 @ToString
 public class CreateDBInstanceReadReplicaResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class DataDto {
+        /**RDS实例信息
+*/
+        @JsonProperty("DBInstance")
+        private DataDBInstanceDto DBInstance;
+
+        @Data
+        @ToString
+        public static class DataDBInstanceDto {
+            /***/
+            @JsonProperty("DBInstanceClass")
+            private DataDBInstanceDBInstanceClassDto DBInstanceClass;
+
+            @Data
+            @ToString
+            public static class DataDBInstanceDBInstanceClassDto {
+                /**请求ID
+*/
+                @JsonProperty("Id")
+                private String Id;
+
+                /**请求ID
+*/
+                @JsonProperty("Iops")
+                private Integer Iops;
+
+                /**请求ID
+*/
+                @JsonProperty("Vcpus")
+                private Integer Vcpus;
+
+                /**请求ID
+*/
+                @JsonProperty("Disk")
+                private Integer Disk;
+
+                /**请求ID
+*/
+                @JsonProperty("Ram")
+                private Integer Ram;
+
+                /**请求ID
+*/
+                @JsonProperty("Mem")
+                private Integer Mem;
+
+                /**请求ID
+*/
+                @JsonProperty("MaxConn")
+                private Integer MaxConn;
+
+            }
+
+            /***/
+            @JsonProperty("DBInstanceIdentifier")
+            private String DBInstanceIdentifier;
+
+            /***/
+            @JsonProperty("DBInstanceName")
+            private String DBInstanceName;
+
+            /***/
+            @JsonProperty("DBInstanceStatus")
+            private String DBInstanceStatus;
+
+            /***/
+            @JsonProperty("DBInstanceType")
+            private String DBInstanceType;
+
+            /***/
+            @JsonProperty("DBParameterGroupId")
+            private String DBParameterGroupId;
+
+            /***/
+            @JsonProperty("PreferredBackupTime")
+            private String PreferredBackupTime;
+
+            /***/
+            @JsonProperty("GroupId")
+            private String GroupId;
+
+            /***/
+            @JsonProperty("Vip")
+            private String Vip;
+
+            /***/
+            @JsonProperty("Port")
+            private Integer Port;
+
+            /***/
+            @JsonProperty("Engine")
+            private String Engine;
+
+            /***/
+            @JsonProperty("EngineVersion")
+            private String EngineVersion;
+
+            /***/
+            @JsonProperty("MasterUserName")
+            private String MasterUserName;
+
+            /***/
+            @JsonProperty("DatastoreVersionId")
+            private String DatastoreVersionId;
+
+            /***/
+            @JsonProperty("VpcId")
+            private String VpcId;
+
+            /***/
+            @JsonProperty("SubnetId")
+            private String SubnetId;
+
+            /***/
+            @JsonProperty("PubliclyAccessible")
+            private Boolean PubliclyAccessible;
+
+            /***/
+            @JsonProperty("BillType")
+            private String BillType;
+
+            /***/
+            @JsonProperty("OrderType")
+            private String OrderType;
+
+            /***/
+            @JsonProperty("MultiAvailabilityZone")
+            private Boolean MultiAvailabilityZone;
+
+            /***/
+            @JsonProperty("AvailabilityZoneList")
+            private DataDBInstanceAvailabilityZoneListDto AvailabilityZoneList;
+
+            @Data
+            @ToString
+            public static class DataDBInstanceAvailabilityZoneListDto {
+            }
+
+            /***/
+            @JsonProperty("DiskUsed")
+            private Double DiskUsed;
+
+            /***/
+            @JsonProperty("Audit")
+            private Boolean Audit;
+
+            /***/
+            @JsonProperty("ReadReplicaDBInstanceIdentifiers")
+            private DataDBInstanceReadReplicaDBInstanceIdentifiersDto ReadReplicaDBInstanceIdentifiers;
+
+            @Data
+            @ToString
+            public static class DataDBInstanceReadReplicaDBInstanceIdentifiersDto {
+            }
+
+            /***/
+            @JsonProperty("DBSource")
+            private DataDBInstanceDBSourceDto DBSource;
+
+            @Data
+            @ToString
+            public static class DataDBInstanceDBSourceDto {
+                /***/
+                @JsonProperty("DBInstanceIdentifier")
+                private String DBInstanceIdentifier;
+
+                /***/
+                @JsonProperty("DBInstanceName")
+                private String DBInstanceName;
+
+                /***/
+                @JsonProperty("DBInstanceType")
+                private String DBInstanceType;
+
+            }
+
+            /***/
+            @JsonProperty("ProductId")
+            private String ProductId;
+
+            /***/
+            @JsonProperty("ProductWhat")
+            private Integer ProductWhat;
+
+            /***/
+            @JsonProperty("Region")
+            private String Region;
+
+            /***/
+            @JsonProperty("SubOrderId")
+            private String SubOrderId;
+
+            /***/
+            @JsonProperty("SecurityGroups")
+            private DataDBInstanceSecurityGroupsDto SecurityGroups;
+
+            @Data
+            @ToString
+            public static class DataDBInstanceSecurityGroupsDto {
+            }
+
+            /***/
+            @JsonProperty("SupportIPV6")
+            private Boolean SupportIPV6;
+
+            /***/
+            @JsonProperty("BillTypeId")
+            private Integer BillTypeId;
+
+        }
+
+    }
+
+    /**请求ID
+*/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

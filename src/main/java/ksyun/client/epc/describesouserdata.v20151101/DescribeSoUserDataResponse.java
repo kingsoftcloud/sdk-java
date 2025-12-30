@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeSoUserDataResponse
@@ -15,12 +15,12 @@ import java.util.Set;
 @ToString
 public class DescribeSoUserDataResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /**实例ID*/
+    @JsonProperty("InstanceId")
+    private String InstanceId;
 
-    //返回结果，需要按需扩展
+    /**实例的自定义数据*/
+    @JsonProperty("UserData")
+    private String UserData;
 
 }

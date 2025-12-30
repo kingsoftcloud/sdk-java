@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DescribeImageCacheRequest{
     /**指定镜像缓存ID查询，其它参数ImageCacheName、Image则无效*/
-    @KsYunField(name = "ImageCacheId", type = 1)
+    @KsYunField(name="ImageCacheId",type=1)
     private List<String> ImageCacheIdList;
 
     /**镜像缓存名称关键字模糊匹配，最长63个字符，必须满足 `^[a-zA-Z0-9]([-a-zA-Z0-9._]*[a-zA-Z0-9])?$` 格式*/

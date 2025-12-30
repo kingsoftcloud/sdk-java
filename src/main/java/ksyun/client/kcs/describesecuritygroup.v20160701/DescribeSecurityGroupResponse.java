@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeSecurityGroupResponse
@@ -15,12 +15,78 @@ import java.util.Set;
 @ToString
 public class DescribeSecurityGroupResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("securityGroupId")
+        private String SecurityGroupId;
+
+        /***/
+        @JsonProperty("name")
+        private String Name;
+
+        /***/
+        @JsonProperty("description")
+        private String Description;
+
+        /***/
+        @JsonProperty("resourceNum")
+        private Integer ResourceNum;
+
+        /***/
+        @JsonProperty("rules")
+        private List<DataRulesDto> Rules;
+
+        @Data
+        @ToString
+        public static class DataRulesDto {
+            /***/
+            @JsonProperty("id")
+            private String Id;
+
+            /***/
+            @JsonProperty("cidr")
+            private String Cidr;
+
+            /***/
+            @JsonProperty("createAt")
+            private String CreateAt;
+
+            /***/
+            @JsonProperty("fromPort")
+            private Integer FromPort;
+
+            /***/
+            @JsonProperty("toPort")
+            private Integer ToPort;
+
+            /***/
+            @JsonProperty("protocol")
+            private String Protocol;
+
+        }
+
+        /***/
+        @JsonProperty("total")
+        private Integer Total;
+
+        /***/
+        @JsonProperty("created")
+        private String Created;
+
+        /***/
+        @JsonProperty("updated")
+        private String Updated;
+
+    }
 
 }

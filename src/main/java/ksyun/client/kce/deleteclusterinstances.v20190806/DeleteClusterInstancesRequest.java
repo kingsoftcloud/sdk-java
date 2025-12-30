@@ -19,7 +19,7 @@ public class DeleteClusterInstancesRequest{
     private String ClusterId;
 
     /**需要移除的节点id列表，只允许移除Worker节点（N的范围为1-50）。*/
-    @KsYunField(name = "InstanceId", type = 1)
+    @KsYunField(name="InstanceId",type=1)
     private List<String> InstanceIdList;
 
     /**节点的删除模式，有效值:

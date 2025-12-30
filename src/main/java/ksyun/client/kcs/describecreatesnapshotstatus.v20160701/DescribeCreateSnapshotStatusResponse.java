@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeCreateSnapshotStatusResponse
@@ -15,12 +15,63 @@ import java.util.Set;
 @ToString
 public class DescribeCreateSnapshotStatusResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("backup_resource")
+        private DataBackup_resourceDto Backup_resource;
+
+        @Data
+        @ToString
+        public static class DataBackup_resourceDto {
+            /***/
+            @JsonProperty("resourceId")
+            private String ResourceId;
+
+            /***/
+            @JsonProperty("backup_type")
+            private Integer Backup_type;
+
+            /***/
+            @JsonProperty("backup_timezone")
+            private String Backup_timezone;
+
+            /***/
+            @JsonProperty("resource_mode")
+            private String Resource_mode;
+
+            /***/
+            @JsonProperty("task_status")
+            private String Task_status;
+
+            /***/
+            @JsonProperty("metadata")
+            private DataBackup_resourceMetadataDto Metadata;
+
+            @Data
+            @ToString
+            public static class DataBackup_resourceMetadataDto {
+                /***/
+                @JsonProperty("bigkey")
+                private Integer Bigkey;
+
+            }
+
+            /***/
+            @JsonProperty("resource_type")
+            private String Resource_type;
+
+        }
+
+    }
 
 }

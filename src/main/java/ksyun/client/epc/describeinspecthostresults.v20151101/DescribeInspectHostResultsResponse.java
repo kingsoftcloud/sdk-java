@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeInspectHostResultsResponse
@@ -15,12 +15,94 @@ import java.util.Set;
 @ToString
 public class DescribeInspectHostResultsResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("InspectResultSet")
+    private List<InspectResultSetDto> InspectResultSet;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class InspectResultSetDto {
+        /***/
+        @JsonProperty("InspectId")
+        private String InspectId;
+
+        /***/
+        @JsonProperty("InspectName")
+        private String InspectName;
+
+        /***/
+        @JsonProperty("GpuModel")
+        private String GpuModel;
+
+        /***/
+        @JsonProperty("Result")
+        private String Result;
+
+        /***/
+        @JsonProperty("CreateTime")
+        private String CreateTime;
+
+        /***/
+        @JsonProperty("UpdateTime")
+        private String UpdateTime;
+
+        /***/
+        @JsonProperty("SuccessCount")
+        private Integer SuccessCount;
+
+        /***/
+        @JsonProperty("FailCount")
+        private Integer FailCount;
+
+        /***/
+        @JsonProperty("InspectResultDetailSet")
+        private List<InspectResultSetInspectResultDetailSetDto> InspectResultDetailSet;
+
+        @Data
+        @ToString
+        public static class InspectResultSetInspectResultDetailSetDto {
+            /***/
+            @JsonProperty("HostId")
+            private String HostId;
+
+            /***/
+            @JsonProperty("Sn")
+            private String Sn;
+
+            /***/
+            @JsonProperty("Result")
+            private String Result;
+
+            /***/
+            @JsonProperty("InspectStatus")
+            private String InspectStatus;
+
+            /***/
+            @JsonProperty("CreateTime")
+            private String CreateTime;
+
+            /***/
+            @JsonProperty("UpdateTime")
+            private String UpdateTime;
+
+        }
+
+    }
+
+    /***/
+    @JsonProperty("InspectHostCount")
+    private Integer InspectHostCount;
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
+
+    /***/
+    @JsonProperty("TotalCount")
+    private Integer TotalCount;
+
+    /***/
+    @JsonProperty("NextToken")
+    private String NextToken;
 
 }

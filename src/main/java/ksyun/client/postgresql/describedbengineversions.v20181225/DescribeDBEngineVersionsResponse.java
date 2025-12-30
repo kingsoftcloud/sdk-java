@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeDBEngineVersionsResponse
@@ -15,12 +15,43 @@ import java.util.Set;
 @ToString
 public class DescribeDBEngineVersionsResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("Engines")
+        private DataEnginesDto Engines;
+
+        @Data
+        @ToString
+        public static class DataEnginesDto {
+            /***/
+            @JsonProperty("PostgerSQL")
+            private List<DataEnginesPostgerSQLDto> PostgerSQL;
+
+            @Data
+            @ToString
+            public static class DataEnginesPostgerSQLDto {
+                /**引擎类型*/
+                @JsonProperty("Engine")
+                private String Engine;
+
+                /**引擎版本*/
+                @JsonProperty("EngineVersion")
+                private String EngineVersion;
+
+                /**当前引擎最新小版本*/
+                @JsonProperty("MinorVersion")
+                private String MinorVersion;
+
+            }
+
+        }
+
+    }
 
 }

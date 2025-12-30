@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname GetServerDataResponse
@@ -15,12 +15,87 @@ import java.util.Set;
 @ToString
 public class GetServerDataResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("StartTime")
+    private String StartTime;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("EndTime")
+    private String EndTime;
+
+    /***/
+    @JsonProperty("Metric")
+    private String Metric;
+
+    /***/
+    @JsonProperty("DataType")
+    private String DataType;
+
+    /***/
+    @JsonProperty("Interval")
+    private Integer Interval;
+
+    /***/
+    @JsonProperty("CdnType")
+    private String CdnType;
+
+    /***/
+    @JsonProperty("Domains")
+    private String Domains;
+
+    /***/
+    @JsonProperty("Regions")
+    private String Regions;
+
+    /***/
+    @JsonProperty("Schema")
+    private String Schema;
+
+    /***/
+    @JsonProperty("ResultType")
+    private String ResultType;
+
+    /***/
+    @JsonProperty("Datas")
+    private List<DatasDto> Datas;
+
+    @Data
+    @ToString
+    public static class DatasDto {
+        /***/
+        @JsonProperty("Condition")
+        private DatasConditionDto Condition;
+
+        @Data
+        @ToString
+        public static class DatasConditionDto {
+            /***/
+            @JsonProperty("DataType")
+            private String DataType;
+
+        }
+
+        /***/
+        @JsonProperty("Data")
+        private List<DatasDataDto> Data;
+
+        @Data
+        @ToString
+        public static class DatasDataDto {
+            /***/
+            @JsonProperty("Time")
+            private String Time;
+
+            /***/
+            @JsonProperty("Flow")
+            private Double Flow;
+
+        }
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

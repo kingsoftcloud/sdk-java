@@ -25,7 +25,7 @@ Dettach：解绑*/
     private String RelationAction;
 
     /**实例ID列表*/
-    @KsYunField(name = "DBInstanceIdentifier", type = 1)
+    @KsYunField(name="DBInstanceIdentifier",type=1)
     private List<String> DBInstanceIdentifierList;
 
 }

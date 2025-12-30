@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname UpdatePolicyResponse
@@ -15,12 +15,21 @@ import java.util.Set;
 @ToString
 public class UpdatePolicyResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("UpdatePolicyResult")
+    private UpdatePolicyResultDto UpdatePolicyResult;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class UpdatePolicyResultDto {
+        /***/
+        @JsonProperty("Policy")
+        private Boolean Policy;
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname StrategycreateResponse
@@ -15,12 +15,53 @@ import java.util.Set;
 @ToString
 public class StrategycreateResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("requestId")
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("detail")
+    private String Detail;
+
+    /***/
+    @JsonProperty("data")
+    private DataDto Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("id")
+        private Integer Id;
+
+        /**策略id*/
+        @JsonProperty("strategyId")
+        private String StrategyId;
+
+        /***/
+        @JsonProperty("strategyName")
+        private String StrategyName;
+
+        /***/
+        @JsonProperty("accountId")
+        private Integer AccountId;
+
+        /***/
+        @JsonProperty("comment")
+        private String Comment;
+
+        /**已绑定实例数*/
+        @JsonProperty("instanceNum")
+        private String InstanceNum;
+
+        /***/
+        @JsonProperty("createTime")
+        private String CreateTime;
+
+        /***/
+        @JsonProperty("updateTime")
+        private String UpdateTime;
+
+    }
 
 }

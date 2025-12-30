@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeSecurityGroupResponse
@@ -15,12 +15,71 @@ import java.util.Set;
 @ToString
 public class DescribeSecurityGroupResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("SecurityGroups")
+        private List<DataSecurityGroupsDto> SecurityGroups;
+
+        @Data
+        @ToString
+        public static class DataSecurityGroupsDto {
+            /***/
+            @JsonProperty("SecurityGroupId")
+            private String SecurityGroupId;
+
+            /***/
+            @JsonProperty("SecurityGroupName")
+            private String SecurityGroupName;
+
+            /***/
+            @JsonProperty("SecurityGroupDescription")
+            private String SecurityGroupDescription;
+
+            /***/
+            @JsonProperty("Created")
+            private String Created;
+
+            /***/
+            @JsonProperty("Instances")
+            private List<String> Instances;
+
+            /***/
+            @JsonProperty("SecurityGroupRules")
+            private List<DataSecurityGroupsSecurityGroupRulesDto> SecurityGroupRules;
+
+            @Data
+            @ToString
+            public static class DataSecurityGroupsSecurityGroupRulesDto {
+                /***/
+                @JsonProperty("SecurityGroupRuleId")
+                private String SecurityGroupRuleId;
+
+                /***/
+                @JsonProperty("SecurityGroupRuleName")
+                private String SecurityGroupRuleName;
+
+                /**安全组规则*/
+                @JsonProperty("SecurityGroupRuleProtocol")
+                private String SecurityGroupRuleProtocol;
+
+                /***/
+                @JsonProperty("Created")
+                private String Created;
+
+            }
+
+        }
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DescribeEpcImageRequest{
     /**镜像id*/
-    @KsYunField(name = "ImageId", type = 1)
+    @KsYunField(name="ImageId",type=1)
     private List<String> ImageIdList;
 
 }

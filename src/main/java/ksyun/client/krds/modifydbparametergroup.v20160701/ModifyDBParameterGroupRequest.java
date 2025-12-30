@@ -19,7 +19,7 @@ public class ModifyDBParameterGroupRequest{
     private String DBParameterGroupId;
 
     /**参数名	参数名与参数值同时填写；参数组名-参数值/参数组名称/参数组描述，至少填写一项*/
-    @KsYunField(name = "Parameters", type = 1)
+    @KsYunField(name="Parameters",type=1)
     private List<ParametersDto> ParametersList;
 
     @Data

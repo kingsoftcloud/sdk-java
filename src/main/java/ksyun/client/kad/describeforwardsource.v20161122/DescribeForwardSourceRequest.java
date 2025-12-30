@@ -19,7 +19,7 @@ public class DescribeForwardSourceRequest{
     private String ForwardConfId;
 
     /**一个或多个四层转发源站配置的ID*/
-    @KsYunField(name = "ForwardSourceId", type = 1)
+    @KsYunField(name="ForwardSourceId",type=1)
     private List<String> ForwardSourceIdList;
 
 }

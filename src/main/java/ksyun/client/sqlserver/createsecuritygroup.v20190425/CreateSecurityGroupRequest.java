@@ -31,7 +31,7 @@ public class CreateSecurityGroupRequest{
     private String DBInstanceIdentifier;
 
     /***/
-    @KsYunField(name = "SecurityGroupRule", type = 1)
+    @KsYunField(name="SecurityGroupRule",type=1)
     private List<SecurityGroupRuleDto> SecurityGroupRuleList;
 
     @Data

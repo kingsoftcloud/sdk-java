@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeEventLogsResponse
@@ -15,12 +15,113 @@ import java.util.Set;
 @ToString
 public class DescribeEventLogsResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("ClusterId")
+        private String ClusterId;
+
+        /***/
+        @JsonProperty("MaxResults")
+        private Integer MaxResults;
+
+        /***/
+        @JsonProperty("TotalCount")
+        private Integer TotalCount;
+
+        /***/
+        @JsonProperty("EventLogs")
+        private DataEventLogsDto EventLogs;
+
+        @Data
+        @ToString
+        public static class DataEventLogsDto {
+            /***/
+            @JsonProperty("RuntimeInfo")
+            private DataEventLogsRuntimeInfoDto RuntimeInfo;
+
+            @Data
+            @ToString
+            public static class DataEventLogsRuntimeInfoDto {
+                /***/
+                @JsonProperty("RuntimeName")
+                private String RuntimeName;
+
+                /***/
+                @JsonProperty("RuntimeIP")
+                private String RuntimeIP;
+
+                /***/
+                @JsonProperty("NodeIP")
+                private String NodeIP;
+
+            }
+
+            /***/
+            @JsonProperty("UserInfo")
+            private DataEventLogsUserInfoDto UserInfo;
+
+            @Data
+            @ToString
+            public static class DataEventLogsUserInfoDto {
+                /***/
+                @JsonProperty("AccountId")
+                private String AccountId;
+
+                /***/
+                @JsonProperty("Region")
+                private String Region;
+
+            }
+
+            /***/
+            @JsonProperty("EventInfo")
+            private DataEventLogsEventInfoDto EventInfo;
+
+            @Data
+            @ToString
+            public static class DataEventLogsEventInfoDto {
+                /***/
+                @JsonProperty("EventId")
+                private String EventId;
+
+                /***/
+                @JsonProperty("ClusterId")
+                private String ClusterId;
+
+                /***/
+                @JsonProperty("EventType")
+                private String EventType;
+
+                /***/
+                @JsonProperty("Level")
+                private String Level;
+
+                /***/
+                @JsonProperty("CreatedTime")
+                private String CreatedTime;
+
+                /***/
+                @JsonProperty("Content")
+                private String Content;
+
+                /***/
+                @JsonProperty("Category")
+                private Integer Category;
+
+            }
+
+        }
+
+    }
 
 }

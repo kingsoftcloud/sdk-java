@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DescribeKeysRequest{
     /**客户主KEY的ID*/
-    @KsYunField(name = "KeyId", type = 1)
+    @KsYunField(name="KeyId",type=1)
     private List<String> KeyIdList;
 
 }

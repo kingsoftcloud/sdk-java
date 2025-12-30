@@ -24,7 +24,7 @@ public class ListInstanceRequest{
     private String TagId;
 
     /**根据项目ID进行过滤，不填则表示全部项目。*/
-    @KsYunField(name = "ProjectIds", type = 1)
+    @KsYunField(name="ProjectIds",type=1)
     private List<String> ProjectIdsList;
 
     /**模糊搜索。支持：实例ID、实例名称,VIP。*/
@@ -32,7 +32,7 @@ public class ListInstanceRequest{
     private String FuzzySearch;
 
     /**排序字段列表。*/
-    @KsYunField(name = "OrderBy", type = 1)
+    @KsYunField(name="OrderBy",type=1)
     private List<String> OrderByList;
 
     /**第几页，从0开始。*/

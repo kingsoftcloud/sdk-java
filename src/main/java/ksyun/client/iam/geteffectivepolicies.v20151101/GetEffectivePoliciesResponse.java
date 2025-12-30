@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname GetEffectivePoliciesResponse
@@ -15,12 +15,86 @@ import java.util.Set;
 @ToString
 public class GetEffectivePoliciesResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("ListPoliciesResult")
+    private ListPoliciesResultDto ListPoliciesResult;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class ListPoliciesResultDto {
+        /***/
+        @JsonProperty("Policies")
+        private List<ListPoliciesResultPoliciesDto> Policies;
+
+        @Data
+        @ToString
+        public static class ListPoliciesResultPoliciesDto {
+            /***/
+            @JsonProperty("CreateDate")
+            private String CreateDate;
+
+            /***/
+            @JsonProperty("DefaultVersionId")
+            private String DefaultVersionId;
+
+            /***/
+            @JsonProperty("Description")
+            private String Description;
+
+            /***/
+            @JsonProperty("Krn")
+            private String Krn;
+
+            /***/
+            @JsonProperty("Path")
+            private String Path;
+
+            /***/
+            @JsonProperty("PolicyId")
+            private String PolicyId;
+
+            /***/
+            @JsonProperty("PolicyName")
+            private String PolicyName;
+
+            /***/
+            @JsonProperty("ServiceId")
+            private Integer ServiceId;
+
+            /***/
+            @JsonProperty("ServiceName")
+            private String ServiceName;
+
+            /***/
+            @JsonProperty("ServiceViewName")
+            private String ServiceViewName;
+
+            /***/
+            @JsonProperty("PolicyType")
+            private Integer PolicyType;
+
+            /***/
+            @JsonProperty("CreateMode")
+            private Integer CreateMode;
+
+            /***/
+            @JsonProperty("UpdateDate")
+            private String UpdateDate;
+
+            /***/
+            @JsonProperty("AttachmentCount")
+            private Integer AttachmentCount;
+
+            /**策略文档*/
+            @JsonProperty("PolicyDocument")
+            private String PolicyDocument;
+
+        }
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

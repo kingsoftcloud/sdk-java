@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname ImagecreateResponse
@@ -15,12 +15,25 @@ import java.util.Set;
 @ToString
 public class ImagecreateResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("requestId")
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("detail")
+    private String Detail;
+
+    /***/
+    @JsonProperty("data")
+    private DataDto Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /**镜像ID*/
+        @JsonProperty("imageID")
+        private Integer ImageID;
+
+    }
 
 }

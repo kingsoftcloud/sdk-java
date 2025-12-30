@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeMonitorPanelResponse
@@ -15,12 +15,54 @@ import java.util.Set;
 @ToString
 public class DescribeMonitorPanelResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("Data")
+    private DataDto Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("InstanceList")
+        private List<DataInstanceListDto> InstanceList;
+
+        @Data
+        @ToString
+        public static class DataInstanceListDto {
+            /***/
+            @JsonProperty("InstanceId")
+            private String InstanceId;
+
+            /***/
+            @JsonProperty("InstanceName")
+            private String InstanceName;
+
+            /***/
+            @JsonProperty("InstanceRegion")
+            private String InstanceRegion;
+
+            /***/
+            @JsonProperty("DatabaseType")
+            private String DatabaseType;
+
+            /***/
+            @JsonProperty("Mode")
+            private String Mode;
+
+        }
+
+        /***/
+        @JsonProperty("MonitorItemList")
+        private List<String> MonitorItemList;
+
+        /***/
+        @JsonProperty("PanelType")
+        private String PanelType;
+
+    }
 
 }

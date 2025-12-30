@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname AddCdnDomainResponse
@@ -15,12 +15,12 @@ import java.util.Set;
 @ToString
 public class AddCdnDomainResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("DomainId")
+    private String DomainId;
 
-    //返回结果，需要按需扩展
+    /**域名状态*/
+    @JsonProperty("DomainStatus")
+    private String DomainStatus;
 
 }

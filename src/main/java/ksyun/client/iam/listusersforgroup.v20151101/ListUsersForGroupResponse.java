@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname ListUsersForGroupResponse
@@ -15,12 +15,98 @@ import java.util.Set;
 @ToString
 public class ListUsersForGroupResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("ListUsersForGroupResult")
+    private ListUsersForGroupResultDto ListUsersForGroupResult;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class ListUsersForGroupResultDto {
+        /***/
+        @JsonProperty("Users")
+        private List<ListUsersForGroupResultUsersDto> Users;
+
+        @Data
+        @ToString
+        public static class ListUsersForGroupResultUsersDto {
+            /***/
+            @JsonProperty("UserId")
+            private String UserId;
+
+            /***/
+            @JsonProperty("Path")
+            private String Path;
+
+            /***/
+            @JsonProperty("UserName")
+            private String UserName;
+
+            /***/
+            @JsonProperty("RealName")
+            private String RealName;
+
+            /***/
+            @JsonProperty("CreateDate")
+            private String CreateDate;
+
+            /***/
+            @JsonProperty("Phone")
+            private String Phone;
+
+            /***/
+            @JsonProperty("CountryMobileCode")
+            private String CountryMobileCode;
+
+            /***/
+            @JsonProperty("isInternational")
+            private Integer IsInternational;
+
+            /***/
+            @JsonProperty("Email")
+            private String Email;
+
+            /***/
+            @JsonProperty("PhoneVerified")
+            private String PhoneVerified;
+
+            /***/
+            @JsonProperty("EmailVerified")
+            private String EmailVerified;
+
+            /***/
+            @JsonProperty("Remark")
+            private String Remark;
+
+            /***/
+            @JsonProperty("Krn")
+            private String Krn;
+
+            /***/
+            @JsonProperty("PasswordResetRequired")
+            private Boolean PasswordResetRequired;
+
+            /***/
+            @JsonProperty("UpdateDate")
+            private String UpdateDate;
+
+            /***/
+            @JsonProperty("Id")
+            private Integer Id;
+
+        }
+
+        /***/
+        @JsonProperty("IsTruncated")
+        private Boolean IsTruncated;
+
+        /***/
+        @JsonProperty("Marker")
+        private String Marker;
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

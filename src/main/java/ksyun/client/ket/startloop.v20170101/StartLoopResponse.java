@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname StartLoopResponse
@@ -15,12 +15,29 @@ import java.util.Set;
 @ToString
 public class StartLoopResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /**错误码*/
+    @JsonProperty("ErrNum")
+    private Integer ErrNum;
 
-    //返回结果，需要按需扩展
+    /**错误信息*/
+    @JsonProperty("ErrMsg")
+    private String ErrMsg;
+
+    /**轮播转码任务信息*/
+    @JsonProperty("List")
+    private List<ListDto> List;
+
+    @Data
+    @ToString
+    public static class ListDto {
+        /**轮播转码单个任务ID*/
+        @JsonProperty("TaskID")
+        private String TaskID;
+
+        /***/
+        @JsonProperty("Format")
+        private Integer Format;
+
+    }
 
 }

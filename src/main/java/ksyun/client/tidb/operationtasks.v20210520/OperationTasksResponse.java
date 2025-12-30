@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname OperationTasksResponse
@@ -15,12 +15,29 @@ import java.util.Set;
 @ToString
 public class OperationTasksResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /**任务操作情况反馈列表。返回批量操作时，单条任务的执行情况。*/
+    @JsonProperty("Data")
+    private List<DataDto> Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("TaskName")
+        private String TaskName;
+
+        /***/
+        @JsonProperty("OperStatus")
+        private String OperStatus;
+
+        /***/
+        @JsonProperty("Msg")
+        private String Msg;
+
+    }
 
 }

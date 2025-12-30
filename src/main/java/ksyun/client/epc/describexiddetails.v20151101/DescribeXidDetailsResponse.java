@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeXidDetailsResponse
@@ -15,12 +15,57 @@ import java.util.Set;
 @ToString
 public class DescribeXidDetailsResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("XidDetailSet")
+    private List<XidDetailSetDto> XidDetailSet;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class XidDetailSetDto {
+        /***/
+        @JsonProperty("InstanceId")
+        private String InstanceId;
+
+        /***/
+        @JsonProperty("InstanceName")
+        private String InstanceName;
+
+        /***/
+        @JsonProperty("Sn")
+        private String Sn;
+
+        /***/
+        @JsonProperty("EventName")
+        private String EventName;
+
+        /***/
+        @JsonProperty("EventTime")
+        private String EventTime;
+
+        /***/
+        @JsonProperty("KcmName")
+        private String KcmName;
+
+        /***/
+        @JsonProperty("Xid")
+        private String Xid;
+
+        /***/
+        @JsonProperty("EventMsg")
+        private String EventMsg;
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
+
+    /***/
+    @JsonProperty("TotalCount")
+    private Integer TotalCount;
+
+    /***/
+    @JsonProperty("NextToken")
+    private String NextToken;
 
 }

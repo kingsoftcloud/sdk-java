@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname CreateSoVpcResponse
@@ -15,12 +15,16 @@ import java.util.Set;
 @ToString
 public class CreateSoVpcResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /**b54be2bc-e96a-41d1-8156-3990d1f9ba41*/
+    @JsonProperty("VpcId")
+    private String VpcId;
 
-    //返回结果，需要按需扩展
+    /**1ded7233-54f8-44d1-a2ea-b6fcc0ca7390*/
+    @JsonProperty("RequestId")
+    private String RequestId;
+
+    /**true*/
+    @JsonProperty("Return")
+    private Boolean ReturnField;
 
 }

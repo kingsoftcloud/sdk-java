@@ -21,7 +21,7 @@ public class DescribeScalingActivityRequest{
 
     /**伸缩活动ID可指定查询某些伸缩活动记录 
  */
-    @KsYunField(name = "ScalingActivityId", type = 1)
+    @KsYunField(name="ScalingActivityId",type=1)
     private List<String> ScalingActivityIdList;
 
     /**分页标识单次调用未返回全部伸缩组时，标记下次调用的返回值的起点，默认值是0 

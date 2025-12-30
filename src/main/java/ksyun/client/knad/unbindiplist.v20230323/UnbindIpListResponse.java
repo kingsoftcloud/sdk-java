@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname UnbindIpListResponse
@@ -15,12 +15,33 @@ import java.util.Set;
 @ToString
 public class UnbindIpListResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("EipCount")
+    private Integer EipCount;
+
+    /***/
+    @JsonProperty("EipSet")
+    private List<EipSetDto> EipSet;
+
+    @Data
+    @ToString
+    public static class EipSetDto {
+        /***/
+        @JsonProperty("Ip")
+        private String Ip;
+
+        /***/
+        @JsonProperty("EipId")
+        private String EipId;
+
+        /**资源类型*/
+        @JsonProperty("InstanceType")
+        private String InstanceType;
+
+    }
 
 }

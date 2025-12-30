@@ -43,7 +43,7 @@ public class CreateDedicatedHostsRequest{
     private String DedicatedClusterId;
 
     /**创建的专属宿主机的标签键，N取值范围1~10。若填写了Tag.N.Value，Tag.N.Key为必填，且两个参数的N值需保持一致*/
-    @KsYunField(name = "Tag", type = 1)
+    @KsYunField(name="Tag",type=1)
     private List<TagDto> TagList;
 
     @Data

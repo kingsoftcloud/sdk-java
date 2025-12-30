@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class BatchDeleteNatRateLimitRequest{
     /**Nat网卡限速规则ID*/
-    @KsYunField(name = "NatRateLimitId", type = 1)
+    @KsYunField(name="NatRateLimitId",type=1)
     private List<String> NatRateLimitIdList;
 
 }

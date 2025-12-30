@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname SwitchImageTypeResponse
@@ -15,12 +15,29 @@ import java.util.Set;
 @ToString
 public class SwitchImageTypeResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("ImageErrorResponses")
+    private List<ImageErrorResponsesDto> ImageErrorResponses;
+
+    @Data
+    @ToString
+    public static class ImageErrorResponsesDto {
+        /***/
+        @JsonProperty("Result")
+        private Boolean Result;
+
+        /***/
+        @JsonProperty("Reason")
+        private String Reason;
+
+        /***/
+        @JsonProperty("ImageId")
+        private String ImageId;
+
+    }
 
 }

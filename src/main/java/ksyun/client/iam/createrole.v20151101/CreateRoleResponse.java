@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname CreateRoleResponse
@@ -15,12 +15,54 @@ import java.util.Set;
 @ToString
 public class CreateRoleResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("CreateRoleResult")
+    private CreateRoleResultDto CreateRoleResult;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class CreateRoleResultDto {
+        /***/
+        @JsonProperty("Role")
+        private CreateRoleResultRoleDto Role;
+
+        @Data
+        @ToString
+        public static class CreateRoleResultRoleDto {
+            /***/
+            @JsonProperty("Path")
+            private String Path;
+
+            /***/
+            @JsonProperty("Krn")
+            private String Krn;
+
+            /***/
+            @JsonProperty("RoleName")
+            private String RoleName;
+
+            /***/
+            @JsonProperty("Description")
+            private String Description;
+
+            /***/
+            @JsonProperty("TrustAccounts")
+            private String TrustAccounts;
+
+            /***/
+            @JsonProperty("CreateDate")
+            private String CreateDate;
+
+            /***/
+            @JsonProperty("RoleId")
+            private String RoleId;
+
+        }
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

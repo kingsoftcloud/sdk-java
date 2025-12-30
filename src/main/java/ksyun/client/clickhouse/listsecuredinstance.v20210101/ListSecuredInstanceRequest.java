@@ -19,7 +19,7 @@ public class ListSecuredInstanceRequest{
     private String SecurityGroupId;
 
     /**项目组ID列表。不填表示全部项目。*/
-    @KsYunField(name = "ProjectIds", type = 1)
+    @KsYunField(name="ProjectIds",type=1)
     private List<String> ProjectIdsList;
 
     /**模糊搜索。支持：实例ID、实例名称、项目名称、VIP。*/
@@ -35,7 +35,7 @@ public class ListSecuredInstanceRequest{
     private Integer Limit;
 
     /**排序字段。*/
-    @KsYunField(name = "OrderBy", type = 1)
+    @KsYunField(name="OrderBy",type=1)
     private List<String> OrderByList;
 
 }

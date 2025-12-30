@@ -18,9 +18,7 @@ public class ModifyVolumeTypeRequest{
     @KsYunField(name="VolumeId")
     private String VolumeId;
 
-    /**
-     * 变配目标云盘的容量值
-     */
+    /**变配目标云盘的容量值*/
     @KsYunField(name="PerformanceVolumeSize")
     private String PerformanceVolumeSize;
 

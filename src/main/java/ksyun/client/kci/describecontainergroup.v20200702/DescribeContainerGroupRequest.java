@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DescribeContainerGroupRequest{
     /**容器实例ID*/
-    @KsYunField(name = "ContainerGroupId", type = 1)
+    @KsYunField(name="ContainerGroupId",type=1)
     private List<String> ContainerGroupIdList;
 
     /**每页返回的最大记录数，最大100*/
@@ -27,7 +27,7 @@ public class DescribeContainerGroupRequest{
     private Integer Marker;
 
     /**资源项目ID，不指定默认查询有权限的全部项目下资源*/
-    @KsYunField(name = "ProjectId", type = 1)
+    @KsYunField(name="ProjectId",type=1)
     private List<Integer> ProjectIdList;
 
     /**容器实例名称关键字模糊匹配查询*/
@@ -46,7 +46,7 @@ status常用值范围
 - Running
 - Failed
 - Succeeded*/
-    @KsYunField(name = "Filter", type = 1)
+    @KsYunField(name="Filter",type=1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -57,7 +57,7 @@ status常用值范围
         private String Name;
 
         /**过滤参数值*/
-        @KsYunField(name = "Value", type = 1)
+        @KsYunField(name="Value",type=1)
         private List<String> ValueList;
 
     }

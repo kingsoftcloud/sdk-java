@@ -27,7 +27,7 @@ public class CreateSecurityGroupRequest{
     private String Detail;
 
     /**安全组规则列表*/
-    @KsYunField(name = "Rules", type = 1)
+    @KsYunField(name="Rules",type=1)
     private List<RulesDto> RulesList;
 
     @Data

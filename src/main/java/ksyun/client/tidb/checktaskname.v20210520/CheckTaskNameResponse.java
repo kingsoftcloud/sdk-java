@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname CheckTaskNameResponse
@@ -15,12 +15,12 @@ import java.util.Set;
 @ToString
 public class CheckTaskNameResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /***/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /**任务名称列表(任务名不重复)*/
+    @JsonProperty("Data")
+    private List<String> Data;
 
 }

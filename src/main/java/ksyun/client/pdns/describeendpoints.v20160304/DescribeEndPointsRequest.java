@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DescribeEndPointsRequest{
     /**出站节点的Id*/
-    @KsYunField(name = "EndPointId", type = 1)
+    @KsYunField(name="EndPointId",type=1)
     private List<String> EndPointIdList;
 
 }

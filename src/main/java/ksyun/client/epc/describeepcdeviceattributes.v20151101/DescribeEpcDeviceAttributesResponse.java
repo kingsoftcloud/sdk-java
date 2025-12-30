@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname DescribeEpcDeviceAttributesResponse
@@ -15,12 +15,281 @@ import java.util.Set;
 @ToString
 public class DescribeEpcDeviceAttributesResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /**请求ID*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /**获取另一页返回结果的 token.*/
+    @JsonProperty("NextToken")
+    private String NextToken;
+
+    /**设备配置的信息*/
+    @JsonProperty("EpcDeviceAttributeSet")
+    private List<EpcDeviceAttributeSetDto> EpcDeviceAttributeSet;
+
+    @Data
+    @ToString
+    public static class EpcDeviceAttributeSetDto {
+        /**设备ID*/
+        @JsonProperty("DeviceAttributeId")
+        private String DeviceAttributeId;
+
+        /**云物理主机机型*/
+        @JsonProperty("HostType")
+        private String HostType;
+
+        /**云物理主机机型的名称*/
+        @JsonProperty("HostTypeName")
+        private String HostTypeName;
+
+        /**内存*/
+        @JsonProperty("Memory")
+        private String Memory;
+
+        /**网卡*/
+        @JsonProperty("NetworkCard")
+        private String NetworkCard;
+
+        /**CPU信息*/
+        @JsonProperty("CpuDeviceSet")
+        private List<EpcDeviceAttributeSetCpuDeviceSetDto> CpuDeviceSet;
+
+        @Data
+        @ToString
+        public static class EpcDeviceAttributeSetCpuDeviceSetDto {
+            /**CPU*/
+            @JsonProperty("CpuSpec")
+            private String CpuSpec;
+
+        }
+
+        /**GPU信息*/
+        @JsonProperty("GpuDeviceSet")
+        private List<EpcDeviceAttributeSetGpuDeviceSetDto> GpuDeviceSet;
+
+        @Data
+        @ToString
+        public static class EpcDeviceAttributeSetGpuDeviceSetDto {
+            /**GPU*/
+            @JsonProperty("GpuModel")
+            private String GpuModel;
+
+            /**GPU数量*/
+            @JsonProperty("GpuCount")
+            private String GpuCount;
+
+        }
+
+        /**物理磁盘信息*/
+        @JsonProperty("PhysicalDiskDeviceSet")
+        private List<EpcDeviceAttributeSetPhysicalDiskDeviceSetDto> PhysicalDiskDeviceSet;
+
+        @Data
+        @ToString
+        public static class EpcDeviceAttributeSetPhysicalDiskDeviceSetDto {
+            /**磁盘*/
+            @JsonProperty("DiskAttribute")
+            private String DiskAttribute;
+
+            /**磁盘数量*/
+            @JsonProperty("DiskCount")
+            private String DiskCount;
+
+            /**磁盘空间*/
+            @JsonProperty("Space")
+            private String Space;
+
+        }
+
+        /**价格信息*/
+        @JsonProperty("PriceSet")
+        private List<EpcDeviceAttributeSetPriceSetDto> PriceSet;
+
+        @Data
+        @ToString
+        public static class EpcDeviceAttributeSetPriceSetDto {
+            /**按月价格*/
+            @JsonProperty("MonthlylistPrice")
+            private String MonthlylistPrice;
+
+        }
+
+        /**是否套餐组*/
+        @JsonProperty("IsGroup")
+        private Boolean IsGroup;
+
+        /**套餐组关联子机型信息*/
+        @JsonProperty("SubEpcDeviceAttributeSet")
+        private List<EpcDeviceAttributeSetSubEpcDeviceAttributeSetDto> SubEpcDeviceAttributeSet;
+
+        @Data
+        @ToString
+        public static class EpcDeviceAttributeSetSubEpcDeviceAttributeSetDto {
+            /**设备ID*/
+            @JsonProperty("DeviceAttributeId")
+            private String DeviceAttributeId;
+
+            /**云物理主机机型*/
+            @JsonProperty("HostType")
+            private String HostType;
+
+            /**云物理主机机型的名称*/
+            @JsonProperty("HostTypeName")
+            private String HostTypeName;
+
+            /**内存*/
+            @JsonProperty("Memory")
+            private String Memory;
+
+            /**CPU信息*/
+            @JsonProperty("CpuDeviceSet")
+            private List<EpcDeviceAttributeSetSubEpcDeviceAttributeSetCpuDeviceSetDto> CpuDeviceSet;
+
+            @Data
+            @ToString
+            public static class EpcDeviceAttributeSetSubEpcDeviceAttributeSetCpuDeviceSetDto {
+                /**CPU*/
+                @JsonProperty("CpuSpec")
+                private String CpuSpec;
+
+            }
+
+            /**GPU信息*/
+            @JsonProperty("GpuDeviceSet")
+            private List<EpcDeviceAttributeSetSubEpcDeviceAttributeSetGpuDeviceSetDto> GpuDeviceSet;
+
+            @Data
+            @ToString
+            public static class EpcDeviceAttributeSetSubEpcDeviceAttributeSetGpuDeviceSetDto {
+                /**GPU*/
+                @JsonProperty("GpuModel")
+                private String GpuModel;
+
+                /**GPU数量*/
+                @JsonProperty("GpuCount")
+                private String GpuCount;
+
+            }
+
+            /**物理磁盘信息*/
+            @JsonProperty("PhysicalDiskDeviceSet")
+            private List<physicalDiskDeviceSetDto1> PhysicalDiskDeviceSet;
+
+            @Data
+            @ToString
+            public static class physicalDiskDeviceSetDto1 {
+                /**磁盘*/
+                @JsonProperty("DiskAttribute")
+                private String DiskAttribute;
+
+                /**磁盘数量*/
+                @JsonProperty("DiskCount")
+                private String DiskCount;
+
+                /**磁盘空间*/
+                @JsonProperty("Space")
+                private String Space;
+
+            }
+
+            /**子机型code*/
+            @JsonProperty("SubHostType")
+            private String SubHostType;
+
+            /**子机型code名称*/
+            @JsonProperty("SubHostTypeName")
+            private String SubHostTypeName;
+
+            /**是否套餐组*/
+            @JsonProperty("IsGroup")
+            private Boolean IsGroup;
+
+            /**vpc网卡*/
+            @JsonProperty("VpcNetworkCard")
+            private List<vpcNetworkCardDto2> VpcNetworkCard;
+
+            @Data
+            @ToString
+            public static class vpcNetworkCardDto2 {
+                /**网卡类型*/
+                @JsonProperty("Type")
+                private String Type;
+
+                /**数量*/
+                @JsonProperty("Num")
+                private Integer Num;
+
+            }
+
+            /**rdma网卡信息*/
+            @JsonProperty("RdmaNetworkCard")
+            private List<rdmaNetworkCardDto3> RdmaNetworkCard;
+
+            @Data
+            @ToString
+            public static class rdmaNetworkCardDto3 {
+                /**网卡类型*/
+                @JsonProperty("Type")
+                private String Type;
+
+                /**数量*/
+                @JsonProperty("Num")
+                private Integer Num;
+
+                /**网卡种类 IB/RoCE*/
+                @JsonProperty("Kind")
+                private String Kind;
+
+                /**使用类型 calculate/storage*/
+                @JsonProperty("UseType")
+                private String UseType;
+
+            }
+
+        }
+
+        /**vpc网卡信息*/
+        @JsonProperty("VpcNetworkCard")
+        private List<EpcDeviceAttributeSetVpcNetworkCardDto> VpcNetworkCard;
+
+        @Data
+        @ToString
+        public static class EpcDeviceAttributeSetVpcNetworkCardDto {
+            /**网卡类型*/
+            @JsonProperty("Type")
+            private String Type;
+
+            /**数量*/
+            @JsonProperty("Num")
+            private Integer Num;
+
+        }
+
+        /**rdma网卡*/
+        @JsonProperty("RdmaNetworkCard")
+        private List<EpcDeviceAttributeSetRdmaNetworkCardDto> RdmaNetworkCard;
+
+        @Data
+        @ToString
+        public static class EpcDeviceAttributeSetRdmaNetworkCardDto {
+            /**网卡类型*/
+            @JsonProperty("Type")
+            private String Type;
+
+            /**数量*/
+            @JsonProperty("Num")
+            private Integer Num;
+
+            /**种类 IB/RoCE*/
+            @JsonProperty("Kind")
+            private String Kind;
+
+            /**使用类型 calculate/storage*/
+            @JsonProperty("UseType")
+            private String UseType;
+
+        }
+
+    }
 
 }

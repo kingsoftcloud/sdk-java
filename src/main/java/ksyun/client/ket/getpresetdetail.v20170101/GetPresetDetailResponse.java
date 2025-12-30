@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname GetPresetDetailResponse
@@ -15,12 +15,8 @@ import java.util.Set;
 @ToString
 public class GetPresetDetailResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
-
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("GetPresetDetailResponse")
+    private String GetPresetDetailResponse;
 
 }

@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class DescribeNetworkInterfacesRequest{
     /**多个网卡的ID*/
-    @KsYunField(name = "NetworkInterfaceId", type = 1)
+    @KsYunField(name="NetworkInterfaceId",type=1)
     private List<String> NetworkInterfaceIdList;
 
     /**筛选Filter*/
-    @KsYunField(name = "Filter", type = 1)
+    @KsYunField(name="Filter",type=1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -38,7 +38,7 @@ public class DescribeNetworkInterfacesRequest{
         private String Name;
 
         /***/
-        @KsYunField(name = "Value", type = 1)
+        @KsYunField(name="Value",type=1)
         private List<String> ValueList;
 
     }

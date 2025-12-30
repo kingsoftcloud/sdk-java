@@ -19,7 +19,7 @@ public class CreateMongoDBInstanceRequest{
     private String PayType;
 
     /**可用区信息*/
-    @KsYunField(name = "AvailabilityZone", type = 1)
+    @KsYunField(name="AvailabilityZone",type=1)
     private List<String> AvailabilityZoneList;
 
     /**6-64个中文或者英文字符，包括汉字，大小写字母，数字，下划线及中划线*/

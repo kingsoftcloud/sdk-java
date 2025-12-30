@@ -23,7 +23,7 @@ public class ModifySecurityGroupRequest{
     private String NetworkInterfaceId;
 
     /**裸金属服务器关联的安全组ID，一个裸金属服务器最多可以支持5个安全组*/
-    @KsYunField(name = "SecurityGroupId", type = 1)
+    @KsYunField(name="SecurityGroupId",type=1)
     private List<String> SecurityGroupIdList;
 
 }

@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname UpdateDBInstanceOrderResponse
@@ -15,12 +15,28 @@ import java.util.Set;
 @ToString
 public class UpdateDBInstanceOrderResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("status")
+    private String Status;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("orderId")
+    private String OrderId;
+
+    /***/
+    @JsonProperty("totalMoney")
+    private Integer TotalMoney;
+
+    /***/
+    @JsonProperty("realMoney")
+    private Integer RealMoney;
+
+    /***/
+    @JsonProperty("lastMoney")
+    private Integer LastMoney;
+
+    /***/
+    @JsonProperty("subOrderIds")
+    private List<String> SubOrderIds;
 
 }

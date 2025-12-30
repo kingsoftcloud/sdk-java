@@ -9,19 +9,17 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname InsertEipsRequest
- * @Description 请求参数
- */
+* @Classname InsertEipsRequest
+* @Description 请求参数
+*/
 @Data
-public class InsertEipsRequest {
+public class InsertEipsRequest{
     /***/
-    @KsYunField(name = "KnadId")
+    @KsYunField(name="KnadId")
     private String KnadId;
 
-    /**
-     * 高防实例绑定的eip列表
-     */
-    @KsYunField(name = "Ip", type = 2)
+    /**高防实例绑定的eip列表*/
+    @KsYunField(name="Ip",type=2)
     private List<String> IpList;
 
 }

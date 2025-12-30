@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname CreateSoSubnetResponse
@@ -15,12 +15,16 @@ import java.util.Set;
 @ToString
 public class CreateSoSubnetResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
+    /**1ded7233-54f8-44d1-a2ea-b6fcc0ca7390*/
     @JsonProperty("RequestId")
-    private String requestId;
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /**true*/
+    @JsonProperty("Return")
+    private Boolean ReturnField;
+
+    /**1ded7233-54f8-44d1-a2ea-b6fcc0ca7390*/
+    @JsonProperty("SubnetId")
+    private String SubnetId;
 
 }

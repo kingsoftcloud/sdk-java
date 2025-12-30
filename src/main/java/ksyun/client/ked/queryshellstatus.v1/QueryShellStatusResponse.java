@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname QueryShellStatusResponse
@@ -15,12 +15,42 @@ import java.util.Set;
 @ToString
 public class QueryShellStatusResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("requestId")
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("detail")
+    private String Detail;
+
+    /***/
+    @JsonProperty("data")
+    private List<DataDto> Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /**任务id*/
+        @JsonProperty("plan_uuid")
+        private Integer Plan_uuid;
+
+        /**3执行失败
+4执行完成*/
+        @JsonProperty("status")
+        private Integer Status;
+
+        /**脚本名称*/
+        @JsonProperty("name")
+        private String Name;
+
+        /**脚本版本号*/
+        @JsonProperty("version")
+        private String Version;
+
+        /***/
+        @JsonProperty("msg")
+        private String Msg;
+
+    }
 
 }

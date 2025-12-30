@@ -23,7 +23,7 @@ public class AddClusterInstanceToNodePoolRequest{
     private String NodePoolId;
 
     /**节点id*/
-    @KsYunField(name = "InstanceIds", type = 1)
+    @KsYunField(name="InstanceIds",type=1)
     private List<String> InstanceIdsList;
 
 }

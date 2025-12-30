@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class GetUpgradeVolumeTypeProcessInfoRequest{
     /**要查询的云盘*/
-    @KsYunField(name = "VolumeId", type = 1)
+    @KsYunField(name="VolumeId",type=1)
     private List<String> VolumeIdList;
 
 }

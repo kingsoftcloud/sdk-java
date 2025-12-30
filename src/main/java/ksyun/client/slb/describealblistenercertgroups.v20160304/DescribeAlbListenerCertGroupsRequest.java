@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class DescribeAlbListenerCertGroupsRequest{
     /**多个证书组的ID*/
-    @KsYunField(name = "AlbListenerCertGroupId", type = 1)
+    @KsYunField(name="AlbListenerCertGroupId",type=1)
     private List<String> AlbListenerCertGroupIdList;
 
     /**筛选Filter*/
-    @KsYunField(name = "Filter", type = 1)
+    @KsYunField(name="Filter",type=1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -31,7 +31,7 @@ public class DescribeAlbListenerCertGroupsRequest{
         private String Name;
 
         /***/
-        @KsYunField(name = "Value", type = 1)
+        @KsYunField(name="Value",type=1)
         private List<String> ValueList;
 
     }

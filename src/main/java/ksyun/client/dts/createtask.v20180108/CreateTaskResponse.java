@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname CreateTaskResponse
@@ -15,12 +15,33 @@ import java.util.Set;
 @ToString
 public class CreateTaskResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("requestId")
+    private String RequestId;
 
-    //返回结果，需要按需扩展
+    /***/
+    @JsonProperty("data")
+    private DataDto Data;
+
+    @Data
+    @ToString
+    public static class DataDto {
+        /***/
+        @JsonProperty("TaskId")
+        private String TaskId;
+
+        /***/
+        @JsonProperty("TaskName")
+        private String TaskName;
+
+        /***/
+        @JsonProperty("TaskType")
+        private String TaskType;
+
+        /***/
+        @JsonProperty("OrderId")
+        private String OrderId;
+
+    }
 
 }

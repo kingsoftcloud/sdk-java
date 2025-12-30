@@ -15,11 +15,11 @@ import java.util.Arrays;
 @Data
 public class DescribeInterAreasRequest{
     /**互通大区的ID*/
-    @KsYunField(name = "InterAreaId", type = 1)
+    @KsYunField(name="InterAreaId",type=1)
     private List<String> InterAreaIdList;
 
     /**筛选Filter*/
-    @KsYunField(name = "Filter", type = 1)
+    @KsYunField(name="Filter",type=1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -31,7 +31,7 @@ public class DescribeInterAreasRequest{
         private String Name;
 
         /***/
-        @KsYunField(name = "Value", type = 1)
+        @KsYunField(name="Value",type=1)
         private List<String> ValueList;
 
     }

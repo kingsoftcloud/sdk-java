@@ -5,7 +5,7 @@ import common.BaseResponseModel;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 /**
 * @Classname UpdateLoginProfileResponse
@@ -15,12 +15,50 @@ import java.util.Set;
 @ToString
 public class UpdateLoginProfileResponse extends BaseResponseModel {
 
-    /**
-     * 请求id
-     */
-    @JsonProperty("RequestId")
-    private String requestId;
+    /***/
+    @JsonProperty("CreateLoginProfileResult")
+    private CreateLoginProfileResultDto CreateLoginProfileResult;
 
-    //返回结果，需要按需扩展
+    @Data
+    @ToString
+    public static class CreateLoginProfileResultDto {
+        /***/
+        @JsonProperty("LoginProfile")
+        private CreateLoginProfileResultLoginProfileDto LoginProfile;
+
+        @Data
+        @ToString
+        public static class CreateLoginProfileResultLoginProfileDto {
+            /***/
+            @JsonProperty("UserName")
+            private String UserName;
+
+            /***/
+            @JsonProperty("OpenLoginProtection")
+            private String OpenLoginProtection;
+
+            /***/
+            @JsonProperty("OpenSecurityProtection")
+            private String OpenSecurityProtection;
+
+            /***/
+            @JsonProperty("PasswordResetRequired")
+            private String PasswordResetRequired;
+
+            /***/
+            @JsonProperty("UpdateDate")
+            private String UpdateDate;
+
+            /***/
+            @JsonProperty("Password")
+            private String Password;
+
+        }
+
+    }
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
 
 }

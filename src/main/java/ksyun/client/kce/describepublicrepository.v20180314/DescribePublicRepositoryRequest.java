@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DescribePublicRepositoryRequest{
     /**镜像仓库名称*/
-    @KsYunField(name = "RepoName", type = 1)
+    @KsYunField(name="RepoName",type=1)
     private List<String> RepoNameList;
 
     /**单次调用所返回的最大实例数目，默认20，最大99。*/
@@ -27,7 +27,7 @@ public class DescribePublicRepositoryRequest{
     private Integer Marker;
 
     /***/
-    @KsYunField(name = "Filter", type = 1)
+    @KsYunField(name="Filter",type=1)
     private List<FilterDto> FilterList;
 
     @Data
@@ -38,7 +38,7 @@ public class DescribePublicRepositoryRequest{
         private String Name;
 
         /***/
-        @KsYunField(name = "Value", type = 1)
+        @KsYunField(name="Value",type=1)
         private List<String> ValueList;
 
     }

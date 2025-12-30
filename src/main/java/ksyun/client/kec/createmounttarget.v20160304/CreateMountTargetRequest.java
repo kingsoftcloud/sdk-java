@@ -26,10 +26,8 @@ public class CreateMountTargetRequest{
     @KsYunField(name="IpVersion")
     private String IpVersion;
 
-    /**
-     * 权限组ID
-     */
-    @KsYunField(name = "AccessGroupId")
+    /**权限组ID*/
+    @KsYunField(name="AccessGroupId")
     private String AccessGroupId;
 
 }

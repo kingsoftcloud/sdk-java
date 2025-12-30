@@ -23,7 +23,7 @@ public class BindFdZoneVpcRequest{
     private String RegionName;
 
     /**要绑定的VpcId*/
-    @KsYunField(name = "VpcId", type = 1)
+    @KsYunField(name="VpcId",type=1)
     private List<VpcIdDto> VpcIdList;
 
     @Data
