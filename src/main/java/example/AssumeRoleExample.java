@@ -2,38 +2,28 @@ package example;
 
 import com.alibaba.fastjson.JSON;
 import common.Credential;
-import ksyun.client.iam.listusers.v20151101.ListUsersClient;
-import ksyun.client.iam.listusers.v20151101.ListUsersRequest;
-import ksyun.client.iam.listusers.v20151101.ListUsersResponse;
-import lombok.extern.slf4j.Slf4j;
-
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Properties;
-import java.util.Arrays;
-import java.util.List;
-import java.util.ArrayList;
+import ksyun.client.sts.assumerole.v20151101.AssumeRoleClient;
+import ksyun.client.sts.assumerole.v20151101.AssumeRoleRequest;
+import ksyun.client.sts.assumerole.v20151101.AssumeRoleResponse;
 
 /**
- * @Classname ListUsersExample
- * @Description Example
+ * @Classname AssumeRoleExample
+ * @Description AssumeRole 示例
  */
-@Slf4j
 public class AssumeRoleExample {
+
     public static void main(String[] args) {
         // 创建凭证
-        Credential credential = new Credential("AKLT32VWMXXLS5WKEHeNdJzw", "OFoUOOs8OKI9aSyq5qzy4NgYs18JpvZlJp8a8s7k", "cn-beijing-6");
+        Credential credential = new Credential("YOUR_SECRET_KEY", "YOUR_SIGN_STR", "YOUR_REGION");
 
         // 创建客户端
-        ListUsersClient client = new ListUsersClient(credential);
+        AssumeRoleClient client = new AssumeRoleClient(credential);
 
         // 创建请求对象
-        ListUsersRequest request = new ListUsersRequest();
-        request.setMaxItems(100);
+        AssumeRoleRequest request = new AssumeRoleRequest();
+        request.setRoleSessionName("Test");
         try {
-            ListUsersResponse response = client.doGetSend("iam.api.ksyun.com", request);
+            AssumeRoleResponse response = client.doPostSend("sts.api.ksyun.com", request);
             if (response != null) {
                 System.out.println("请求成功: " + JSON.toJSON(response));
             } else {
