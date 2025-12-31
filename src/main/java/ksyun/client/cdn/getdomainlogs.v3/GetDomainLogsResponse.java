@@ -56,7 +56,7 @@ public class GetDomainLogsResponse extends BaseResponseModel {
 
         /**日志大小，单位Byte*/
         @JsonProperty("LogSize")
-        private String LogSize;
+        private Integer LogSize;
 
     }
 
