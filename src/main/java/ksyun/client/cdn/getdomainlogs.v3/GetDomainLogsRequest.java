@@ -14,9 +14,7 @@ import java.util.Arrays;
 */
 @Data
 public class GetDomainLogsRequest{
-    /**
-     * 域名ID，只支持单个域名输入
-     */
+    /**域名ID，只支持单个域名输入*/
     @KsYunField(name="DomainId")
     private String DomainId;
 
