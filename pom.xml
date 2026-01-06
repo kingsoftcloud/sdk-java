@@ -6,7 +6,7 @@
 
     <groupId>com.ksyun</groupId>
     <artifactId>ksyun-java-sdk</artifactId>
-    <version>1.8.6.45</version>
+    <version>1.8.6.46</version>
     <packaging>jar</packaging>
 
     <name>KSYUN SDK for Java</name>
@@ -65,7 +65,7 @@
         <dep.maven-source-plugin.version>3.2.0</dep.maven-source-plugin.version>
         <dep.maven-compiler-plugin.version>3.8.1</dep.maven-compiler-plugin.version>
         <dep.maven-gpg-plugin.version>1.6</dep.maven-gpg-plugin.version>
-        <dep.central-publishing-maven-plugin.version>0.6.0</dep.central-publishing-maven-plugin.version>
+        <dep.nexus-staging-maven-plugin.version>1.6.13</dep.nexus-staging-maven-plugin.version>
     </properties>
 
     <dependencies>
@@ -230,13 +230,14 @@
 
 
                     <plugin>
-                        <groupId>org.sonatype.central</groupId>
-                        <artifactId>central-publishing-maven-plugin</artifactId>
-                        <version>${dep.central-publishing-maven-plugin.version}</version>
+                        <groupId>org.sonatype.plugins</groupId>
+                        <artifactId>nexus-staging-maven-plugin</artifactId>
+                        <version>${dep.nexus-staging-maven-plugin.version}</version>
                         <extensions>true</extensions>
                         <configuration>
-                            <publishingServerId>central</publishingServerId>
-                            <autoPublish>true</autoPublish>
+                            <serverId>ossrh</serverId>
+                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
                         </configuration>
                     </plugin>
 
