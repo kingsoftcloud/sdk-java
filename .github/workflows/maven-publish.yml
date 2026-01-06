@@ -43,7 +43,7 @@ jobs:
           draft: false
           prerelease: false
 
-      - name: Set up Maven Central Repository
+      - name: Set up Java
         uses: actions/setup-java@v4
         with:
           java-version: '8'
@@ -52,8 +52,8 @@ jobs:
 
       - name: Configure Maven settings
         env:
-          MAVEN_USERNAME: ${{ secrets.mvn_central_portal_user_name }}
-          MAVEN_PASSWORD: ${{ secrets.mvn_central_portal_password }}
+          MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+          MAVEN_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
         run: |
           mkdir -p ~/.m2
           cat > ~/.m2/settings.xml << EOF
@@ -76,20 +76,6 @@ jobs:
                 <url>https://maven.aliyun.com/repository/public</url>
               </mirror>
             </mirrors>
-            <profiles>
-              <profile>
-                <id>ossrh</id>
-                <repositories>
-                  <repository>
-                    <id>ossrh</id>
-                    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-                  </repository>
-                </repositories>
-              </profile>
-            </profiles>
-            <activeProfiles>
-              <activeProfile>ossrh</activeProfile>
-            </activeProfiles>
           </settings>
           EOF
 
@@ -100,7 +86,5 @@ jobs:
 
       - name: Publish package
         env:
-          MAVEN_USERNAME: ${{ secrets.mvn_central_portal_user_name }}
-          MAVEN_PASSWORD: ${{ secrets.mvn_central_portal_password }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
-        run: mvn clean deploy --batch-mode -Dmaven.skip.Test=true
+        run: mvn clean deploy --batch-mode -Dmaven.test.skip=true -Dgpg.passphrase="${MAVEN_GPG_PASSPHRASE}"
