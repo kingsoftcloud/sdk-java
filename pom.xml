@@ -6,7 +6,7 @@
 
     <groupId>com.ksyun</groupId>
     <artifactId>ksyun-java-sdk</artifactId>
-    <version>1.8.6.44</version>
+    <version>1.8.6.45</version>
     <packaging>jar</packaging>
 
     <name>KSYUN SDK for Java</name>
@@ -209,6 +209,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
+                        <version>${dep.maven-gpg-plugin.version}</version>
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>
@@ -231,7 +232,7 @@
                     <plugin>
                         <groupId>org.sonatype.central</groupId>
                         <artifactId>central-publishing-maven-plugin</artifactId>
-                        <version>0.8.0</version>
+                        <version>${dep.central-publishing-maven-plugin.version}</version>
                         <extensions>true</extensions>
                         <configuration>
                             <publishingServerId>central</publishingServerId>
