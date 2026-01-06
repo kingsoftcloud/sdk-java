@@ -43,50 +43,23 @@ jobs:
           draft: false
           prerelease: false
 
-      - name: Set up Java
-        uses: actions/setup-java@v4
+      - name: Set up Maven Central Repository
+        uses: actions/setup-java@v2
         with:
           java-version: '8'
-          distribution: 'temurin'
-          cache: 'maven'
-
-      - name: Configure Maven settings
-        env:
-          MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-          MAVEN_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
-        run: |
-          mkdir -p ~/.m2
-          cat > ~/.m2/settings.xml << EOF
-          <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
-                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                    xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
-                                        http://maven.apache.org/xsd/settings-1.0.0.xsd">
-            <servers>
-              <server>
-                <id>ossrh</id>
-                <username>${MAVEN_USERNAME}</username>
-                <password>${MAVEN_PASSWORD}</password>
-              </server>
-            </servers>
-            <mirrors>
-              <mirror>
-                <id>aliyun-maven</id>
-                <mirrorOf>central,!ossrh</mirrorOf>
-                <name>Aliyun Maven Mirror</name>
-                <url>https://maven.aliyun.com/repository/public</url>
-              </mirror>
-            </mirrors>
-          </settings>
-          EOF
+          distribution: 'adopt'
+          server-id: central
+          server-username: MAVEN_USERNAME
+          server-password: MAVEN_PASSWORD
 
       - name: Install gpg secret key
         run: |
           cat <(echo -e "${{ secrets.OSSRH_GPG_SECRET_KEY }}") | gpg --batch --import
           gpg --list-secret-keys
 
-      - name: Deploy to Maven Central
+      - name: Publish package
         env:
+          MAVEN_USERNAME: ${{ secrets.mvn_central_portal_user_name }}
+          MAVEN_PASSWORD: ${{ secrets.mvn_central_portal_password }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
-        run: |
-          echo "Building and deploying to OSSRH..."
-          mvn clean deploy -Dgpg.passphrase="${MAVEN_GPG_PASSPHRASE}" --batch-mode -Dmaven.test.skip=true
+        run: mvn clean deploy --batch-mode -Dmaven.skip.Test=true
