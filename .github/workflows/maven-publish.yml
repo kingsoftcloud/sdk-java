@@ -71,7 +71,7 @@ jobs:
             <mirrors>
               <mirror>
                 <id>aliyun-maven</id>
-                <mirrorOf>central</mirrorOf>
+                <mirrorOf>central,!ossrh</mirrorOf>
                 <name>Aliyun Maven Mirror</name>
                 <url>https://maven.aliyun.com/repository/public</url>
               </mirror>
@@ -84,7 +84,9 @@ jobs:
           cat <(echo -e "${{ secrets.OSSRH_GPG_SECRET_KEY }}") | gpg --batch --import
           gpg --list-secret-keys
 
-      - name: Publish package
+      - name: Deploy to Maven Central
         env:
           MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
-        run: mvn clean deploy --batch-mode -Dmaven.test.skip=true -Dgpg.passphrase="${MAVEN_GPG_PASSPHRASE}"
+        run: |
+          echo "Building and deploying to OSSRH..."
+          mvn clean deploy -Dgpg.passphrase="${MAVEN_GPG_PASSPHRASE}" --batch-mode -Dmaven.test.skip=true
