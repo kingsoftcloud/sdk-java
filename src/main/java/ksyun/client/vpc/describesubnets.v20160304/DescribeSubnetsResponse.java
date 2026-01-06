@@ -78,6 +78,18 @@ public class DescribeSubnetsResponse extends BaseResponseModel {
         @JsonProperty("AvailabilityZoneName")
         private String AvailabilityZoneName;
 
+        /**子网可用IP个数*/
+        @JsonProperty("AvailableIpNumber")
+        private String AvailableIpNumber;
+
+        /**子网随机可用IP个数*/
+        @JsonProperty("RandomAvailableIpNum")
+        private String RandomAvailableIpNum;
+
+        /**子网可用IP个数*/
+        @JsonProperty("AvailbleIPNumber")
+        private String AvailbleIPNumber;
+
         /**是否支持IPV6网段*/
         @JsonProperty("ProvidedIpv6CidrBlock")
         private Boolean ProvidedIpv6CidrBlock;
@@ -85,10 +97,6 @@ public class DescribeSubnetsResponse extends BaseResponseModel {
         /**附加网段的ID*/
         @JsonProperty("SecondaryCidrId")
         private String SecondaryCidrId;
-
-        /**子网可用IP个数*/
-        @JsonProperty("AvailableIpNumber")
-        private Integer AvailableIpNumber;
 
         /**绑定的ACL的ID*/
         @JsonProperty("NetworkAclId")

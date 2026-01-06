@@ -6,7 +6,7 @@
 
     <groupId>com.ksyun</groupId>
     <artifactId>ksyun-java-sdk</artifactId>
-    <version>1.8.6.41</version>
+    <version>1.8.6.42</version>
     <packaging>jar</packaging>
 
     <name>KSYUN SDK for Java</name>
@@ -63,6 +63,9 @@
         <dep.commons-lang.version>2.6</dep.commons-lang.version>
         <dep.maven-eclipse-plugin.version>2.10</dep.maven-eclipse-plugin.version>
         <dep.maven-source-plugin.version>3.2.0</dep.maven-source-plugin.version>
+        <dep.maven-compiler-plugin.version>3.8.1</dep.maven-compiler-plugin.version>
+        <dep.maven-gpg-plugin.version>1.6</dep.maven-gpg-plugin.version>
+        <dep.central-publishing-maven-plugin.version>0.6.0</dep.central-publishing-maven-plugin.version>
     </properties>
 
     <dependencies>
@@ -144,6 +147,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-compiler-plugin</artifactId>
+                        <version>${dep.maven-compiler-plugin.version}</version>
                         <configuration>
                             <source>8</source>
                             <target>8</target>
