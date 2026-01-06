@@ -6,7 +6,7 @@
 
     <groupId>com.ksyun</groupId>
     <artifactId>ksyun-java-sdk</artifactId>
-    <version>1.8.6.43</version>
+    <version>1.8.6.44</version>
     <packaging>jar</packaging>
 
     <name>KSYUN SDK for Java</name>
@@ -158,6 +158,16 @@
                                     <version>1.18.30</version>
                                 </path>
                             </annotationProcessorPaths>
+                        </configuration>
+                    </plugin>
+
+                    <!-- 配置maven-surefire-plugin跳过测试 -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>${dep.maven-surefire-plugin.version}</version>
+                        <configuration>
+                            <skipTests>${skipTests}</skipTests>
                         </configuration>
                     </plugin>
 
