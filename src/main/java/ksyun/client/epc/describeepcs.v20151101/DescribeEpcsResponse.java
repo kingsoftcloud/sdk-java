@@ -547,6 +547,10 @@ SSD
 
             }
 
+            /**Ipv6地址信息*/
+            @JsonProperty("Ipv6Address")
+            private String Ipv6Address;
+
         }
 
         /**EPC网卡*/

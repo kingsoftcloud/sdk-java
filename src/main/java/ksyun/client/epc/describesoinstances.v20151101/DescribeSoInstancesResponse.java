@@ -81,11 +81,17 @@ public class DescribeSoInstancesResponse extends BaseResponseModel {
             @JsonProperty("MacAddress")
             private String MacAddress;
 
+            /***/
+            @JsonProperty("Ipv6Addresses")
+            /**8981d45e-b3dc-44c6-b02f-2d1969551316*/
             @JsonProperty("SecurityGroupIds")
             private List<String> SecurityGroupIds;
 
         }
 
+        /***/
+        @JsonProperty("RdmaIpAddresses")
+        /*****/
         @JsonProperty("KeyPairName")
         private String KeyPairName;
 

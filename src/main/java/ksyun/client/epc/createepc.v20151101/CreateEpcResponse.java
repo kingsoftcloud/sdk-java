@@ -208,6 +208,10 @@ public class CreateEpcResponse extends BaseResponseModel {
             @JsonProperty("VpcId")
             private String VpcId;
 
+            /**Ipv6地址*/
+            @JsonProperty("Ipv6Address")
+            private String Ipv6Address;
+
         }
 
         /***/

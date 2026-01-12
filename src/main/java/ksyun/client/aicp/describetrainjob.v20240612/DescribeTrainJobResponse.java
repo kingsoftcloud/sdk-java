@@ -215,7 +215,7 @@ public class DescribeTrainJobResponse extends BaseResponseModel {
             @JsonProperty("Name")
             private String Name;
 
-            /***/
+            /**/mnt/hjl*/
             @JsonProperty("Value")
             private String Value;
 
