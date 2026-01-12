@@ -81,9 +81,6 @@ public class DescribeSoInstanceTypesResponse extends BaseResponseModel {
             private Integer EncryptedSize;
 
         }
-
-        /***/
-        @JsonProperty("LocalVolumes")
     }
 
     /**bHpwdXJja2RxemU1eG5sb3NzdGcW1-RCEq*******/
