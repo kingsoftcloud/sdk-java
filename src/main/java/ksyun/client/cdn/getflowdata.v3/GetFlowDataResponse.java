@@ -60,11 +60,11 @@ public class GetFlowDataResponse extends BaseResponseModel {
 
         /**服务流量（单位：byte）（所选域名合并值）*/
         @JsonProperty("Flow")
-        private Integer Flow;
+        private Long Flow;
 
         /**回源流量（单位：byte）（所选域名合并值）*/
         @JsonProperty("SrcFlow")
-        private Integer SrcFlow;
+        private Long SrcFlow;
 
         /**每个域名的详细流量数据(仅当ResultType取值为1时返回此项数据))*/
         @JsonProperty("Domains")
@@ -79,11 +79,11 @@ public class GetFlowDataResponse extends BaseResponseModel {
 
             /**服务流量（单位：byte）（该域名的服务流量，若选择多个区域，则返回该域名多个区域的数据合并值）*/
             @JsonProperty("Flow")
-            private Integer Flow;
+            private Long Flow;
 
             /**回源流量（单位：byte）（该域名的回源流量，若选择多个区域，则返回该域名多个区域的数据合并值）*/
             @JsonProperty("SrcFlow")
-            private Integer SrcFlow;
+            private Long SrcFlow;
 
             /**该域名在每个区域的流量详细数据*/
             @JsonProperty("Regions")
@@ -98,11 +98,11 @@ public class GetFlowDataResponse extends BaseResponseModel {
 
                 /**服务流量（单位：byte）（该域名在该区域的服务流量数据）*/
                 @JsonProperty("Flow")
-                private Integer Flow;
+                private Long Flow;
 
                 /**回源流量（单位：byte）（该域名在该区域的回源流量数据）*/
                 @JsonProperty("SrcFlow")
-                private Integer SrcFlow;
+                private Long SrcFlow;
 
             }
 

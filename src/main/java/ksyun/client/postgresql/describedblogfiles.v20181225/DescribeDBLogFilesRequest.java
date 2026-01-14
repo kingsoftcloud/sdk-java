@@ -37,7 +37,7 @@ public class DescribeDBLogFilesRequest{
     /**最大文件大小
 ##### 过滤文件大小大于MaxFileSize的文件，单位：字节*/
     @KsYunField(name="MaxFileSize")
-    private Integer MaxFileSize;
+    private Long MaxFileSize;
 
     /**偏移量*/
     @KsYunField(name="Marker")

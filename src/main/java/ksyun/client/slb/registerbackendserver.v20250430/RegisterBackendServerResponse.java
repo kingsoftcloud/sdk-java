@@ -54,6 +54,10 @@ public class RegisterBackendServerResponse extends BaseResponseModel {
         @JsonProperty("Port")
         private Integer Port;
 
+        /**服务器权重*/
+        @JsonProperty("Weight")
+        private Integer Weight;
+
         /**真实服务器的主备状态*/
         @JsonProperty("MasterSlaveType")
         private String MasterSlaveType;

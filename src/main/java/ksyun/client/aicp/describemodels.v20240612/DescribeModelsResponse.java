@@ -56,7 +56,7 @@ public class DescribeModelsResponse extends BaseResponseModel {
 
         /**更新时间，毫秒精度的时间戳*/
         @JsonProperty("UpdateTime")
-        private Integer UpdateTime;
+        private Long UpdateTime;
 
         /**扩展字段*/
         @JsonProperty("CodeCase")
@@ -97,11 +97,11 @@ public class DescribeModelsResponse extends BaseResponseModel {
 
         /**免费额度*/
         @JsonProperty("FreeTotalQuota")
-        private Integer FreeTotalQuota;
+        private Long FreeTotalQuota;
 
         /**免费已用额度*/
         @JsonProperty("FreeUsedQuota")
-        private Integer FreeUsedQuota;
+        private Long FreeUsedQuota;
 
         /***/
         @JsonProperty("Tpm")

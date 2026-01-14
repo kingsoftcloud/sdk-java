@@ -32,7 +32,7 @@ public class QueryItemBillsRequest{
 
     /**托管子账号ID*/
     @KsYunField(name="SubAccountId")
-    private Integer SubAccountId;
+    private Long SubAccountId;
 
     /**查询条数，最大值1000*/
     @KsYunField(name="Size")

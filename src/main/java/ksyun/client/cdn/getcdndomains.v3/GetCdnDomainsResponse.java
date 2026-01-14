@@ -17,15 +17,15 @@ public class GetCdnDomainsResponse extends BaseResponseModel {
 
     /**页码*/
     @JsonProperty("PageNumber")
-    private Integer PageNumber;
+    private Long PageNumber;
 
     /**单页大小*/
     @JsonProperty("PageSize")
-    private Integer PageSize;
+    private Long PageSize;
 
     /**总条数*/
     @JsonProperty("TotalCount")
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**Domain列表*/
     @JsonProperty("Domains")

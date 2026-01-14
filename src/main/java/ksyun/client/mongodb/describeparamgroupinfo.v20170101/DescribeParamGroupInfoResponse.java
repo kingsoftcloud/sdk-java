@@ -30,8 +30,8 @@ public class DescribeParamGroupInfoResponse extends BaseResponseModel {
         @ToString
         public static class ParamGroupInfoParamsDto {
             /***/
-            @JsonProperty("setParameter.failIndexKeyTooInt")
-            private String SetParameterFailIndexKeyTooInt;
+            @JsonProperty("setParameter.failIndexKeyTooLong")
+            private String SetParameterFailIndexKeyTooLong;
 
             /***/
             @JsonProperty("operationProfiling.slowOpThresholdMs")

@@ -25,7 +25,7 @@ public class DescribeEpcManagementsResponse extends BaseResponseModel {
 
     /**裸金属服务器总数*/
     @JsonProperty("TotalCount")
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**物理机带外的信息*/
     @JsonProperty("EpcManagementSet")

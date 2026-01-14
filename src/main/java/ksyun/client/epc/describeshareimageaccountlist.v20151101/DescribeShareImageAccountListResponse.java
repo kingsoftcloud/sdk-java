@@ -24,7 +24,7 @@ public class DescribeShareImageAccountListResponse extends BaseResponseModel {
     public static class SharePermissionSetDto {
         /***/
         @JsonProperty("AccountId")
-        private Integer AccountId;
+        private Long AccountId;
 
         /***/
         @JsonProperty("ShareTime")

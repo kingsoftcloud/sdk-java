@@ -60,11 +60,11 @@ public class DescribeModelQuotasResponse extends BaseResponseModel {
 
         /**免费额度*/
         @JsonProperty("FreeTotalQuota")
-        private Integer FreeTotalQuota;
+        private Long FreeTotalQuota;
 
         /**免费已用额度*/
         @JsonProperty("FreeUsedQuota")
-        private Integer FreeUsedQuota;
+        private Long FreeUsedQuota;
 
         /**是否支持批量推理*/
         @JsonProperty("BatchSupported")

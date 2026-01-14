@@ -65,7 +65,7 @@ public class CreateDedicatedHostsRequest{
 
     /**项目制ID*/
     @KsYunField(name="ProjectId")
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**存储集群模式
 Mixed：混合模式；

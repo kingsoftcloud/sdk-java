@@ -36,7 +36,7 @@ public class CreateFileSystemRequest{
 
     /**项目制id*/
     @KsYunField(name="ProjectId")
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**• 回收站功能是否开启，默认不开启
     ◦ TRUE ：表示回收站功能开启

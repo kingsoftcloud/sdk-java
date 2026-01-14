@@ -37,11 +37,11 @@ public class GetPvDataResponse extends BaseResponseModel {
 
     /**取值为0：多域名多区域数据做合并返回；1：每个域名每个区域的数据分别返回*/
     @JsonProperty("ResultType")
-    private Integer ResultType;
+    private Long ResultType;
 
     /**统计粒度，取值为 5：5分钟粒度；10：10分钟粒度；20：20分钟粒度；60：1小时粒度；240：4小时粒度；480：8小时粒度；1440：1天粒度；以上粒度的请求数均取该粒度时间段的请求数总和*/
     @JsonProperty("Granularity")
-    private Integer Granularity;
+    private Long Granularity;
 
     /**数据类型， 取值为edge:服务数据; origin:回源数据; 支持多类型选择，多个类型用逗号（半角）分隔，缺省为edge*/
     @JsonProperty("DataType")
@@ -60,11 +60,11 @@ public class GetPvDataResponse extends BaseResponseModel {
 
         /**服务请求数（单位：次）（所选域名合并值）*/
         @JsonProperty("Pv")
-        private Integer Pv;
+        private Long Pv;
 
         /**回源请求数（单位：次）（所选域名合并值）*/
         @JsonProperty("SrcPv")
-        private Integer SrcPv;
+        private Long SrcPv;
 
         /**每个域名的详细请求数数据(仅当ResultType取值为1时返回此项数据))*/
         @JsonProperty("Domains")
@@ -79,7 +79,7 @@ public class GetPvDataResponse extends BaseResponseModel {
 
             /**服务请求数（单位：次）（该域名的服务请求数，若选择多个区域，则返回该域名多个区域的数据合并值）*/
             @JsonProperty("Pv")
-            private Integer Pv;
+            private Long Pv;
 
             /**该域名在每个区域的请求数详细数据*/
             @JsonProperty("Regions")
@@ -94,17 +94,17 @@ public class GetPvDataResponse extends BaseResponseModel {
 
                 /**服务请求数（单位：次）（该域名在该区域的服务请求数数据）*/
                 @JsonProperty("Pv")
-                private Integer Pv;
+                private Long Pv;
 
                 /**回源请求数（单位：次）（该域名在该区域的回源请求数数据）*/
                 @JsonProperty("SrcPv")
-                private Integer SrcPv;
+                private Long SrcPv;
 
             }
 
             /**回源请求数（单位：次）（该域名的回源请求数，若选择多个区域，则返回该域名多个区域的数据合并值）*/
             @JsonProperty("SrcPv")
-            private Integer SrcPv;
+            private Long SrcPv;
 
         }
 

@@ -17,10 +17,10 @@ public class GetBlockUrlQuotaResponse extends BaseResponseModel {
 
     /**屏蔽URL的上限条数*/
     @JsonProperty("BlockUrlQuota")
-    private Integer BlockUrlQuota;
+    private Long BlockUrlQuota;
 
     /**剩余屏蔽 Url的 条数*/
     @JsonProperty("BlockUrlSurplus")
-    private Integer BlockUrlSurplus;
+    private Long BlockUrlSurplus;
 
 }

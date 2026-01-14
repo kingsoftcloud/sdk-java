@@ -21,7 +21,7 @@ public class DescribeScalingInstanceResponse extends BaseResponseModel {
 
     /***/
     @JsonProperty("ScalingInstanceCount")
-    private Integer ScalingInstanceCount;
+    private Long ScalingInstanceCount;
 
     /***/
     @JsonProperty("ScalingInstanceSet")

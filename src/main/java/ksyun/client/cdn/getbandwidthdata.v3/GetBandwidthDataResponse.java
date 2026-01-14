@@ -37,11 +37,11 @@ public class GetBandwidthDataResponse extends BaseResponseModel {
 
     /**取值为0：多域名多区域数据做合并返回；1：每个域名每个区域的数据分别返回。*/
     @JsonProperty("ResultType")
-    private Integer ResultType;
+    private Long ResultType;
 
     /**统计粒度，取值为 5：5分钟粒度；10：10分钟粒度；20：20分钟粒度；60：1小时粒度；240：4小时粒度；480：8小时粒度；1440：1天粒度；以上粒度的带宽值均取该粒度时间段的带宽峰值，即每5分钟有效带宽值的最高带宽*/
     @JsonProperty("Granularity")
-    private Integer Granularity;
+    private Long Granularity;
 
     /**数据类型，取值为edge：服务数据；origin：回源数据；支持多类型选择，多个类型用逗号（半角）分隔，缺省为edge*/
     @JsonProperty("DataType")
@@ -60,11 +60,11 @@ public class GetBandwidthDataResponse extends BaseResponseModel {
 
         /**服务带宽（单位bps）（所选域名合并值）*/
         @JsonProperty("Bw")
-        private Integer Bw;
+        private Long Bw;
 
         /**回源带宽（单位bps）（所选域名合并值）*/
         @JsonProperty("SrcBw")
-        private Integer SrcBw;
+        private Long SrcBw;
 
         /**每个域名的详细带宽数据(仅当ResultType取值为1时返回此项数据)*/
         @JsonProperty("Domains")
@@ -79,11 +79,11 @@ public class GetBandwidthDataResponse extends BaseResponseModel {
 
             /**服务带宽（单位bps）（该域名的服务带宽，若选择多个区域，则返回该域名多个区域的数据合并值）*/
             @JsonProperty("Bw")
-            private Integer Bw;
+            private Long Bw;
 
             /**回源带宽（单位bps）（该域名的回源带宽，若选择多个区域，则返回该域名多个区域的数据合并值）*/
             @JsonProperty("SrcBw")
-            private Integer SrcBw;
+            private Long SrcBw;
 
             /**该域名在每个区域的带宽详细数据*/
             @JsonProperty("Regions")
@@ -98,12 +98,12 @@ public class GetBandwidthDataResponse extends BaseResponseModel {
 
                 /**服务带宽（单位bps）（该域名在该区域的服务带宽数据）*/
                 @JsonProperty("Bw")
-                private Integer Bw;
+                private Long Bw;
 
                 /**回源带宽（单位bps）（该域名在该区域的回源带宽数据）
 */
                 @JsonProperty("SrcBw")
-                private Integer SrcBw;
+                private Long SrcBw;
 
             }
 

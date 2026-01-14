@@ -84,7 +84,7 @@ public class DescribeTrainJobsResponse extends BaseResponseModel {
 
         /**最长运行时长(小时)*/
         @JsonProperty("MaxRuntimeHour")
-        private Integer MaxRuntimeHour;
+        private Long MaxRuntimeHour;
 
         /**节点亲和性-仅调度到CPU节点*/
         @JsonProperty("JobRunOnCPU")

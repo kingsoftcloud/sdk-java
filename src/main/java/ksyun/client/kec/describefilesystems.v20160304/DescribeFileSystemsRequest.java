@@ -28,7 +28,7 @@ public class DescribeFileSystemsRequest{
 
     /**项目制id，默认为0*/
     @KsYunField(name="ProjectId",type=1)
-    private List<Integer> ProjectIdList;
+    private List<Long> ProjectIdList;
 
     /**是否包含删除的，默认为false*/
     @KsYunField(name="IncludeDel")

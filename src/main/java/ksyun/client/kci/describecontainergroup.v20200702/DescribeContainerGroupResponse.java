@@ -58,7 +58,7 @@ public class DescribeContainerGroupResponse extends BaseResponseModel {
 
         /**容器实例所在项目ID*/
         @JsonProperty("ProjectId")
-        private Integer ProjectId;
+        private Long ProjectId;
 
         /**容器实例类型，当前固定值为RBKCI*/
         @JsonProperty("KciType")

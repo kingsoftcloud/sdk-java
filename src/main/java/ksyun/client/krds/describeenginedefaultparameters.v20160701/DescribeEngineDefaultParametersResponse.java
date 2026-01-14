@@ -1866,12 +1866,12 @@ public class DescribeEngineDefaultParametersResponse extends BaseResponseModel {
             }
 
             /***/
-            @JsonProperty("Int_query_time")
-            private DataParametersInt_query_timeDto Int_query_time;
+            @JsonProperty("long_query_time")
+            private DataParametersLong_query_timeDto Long_query_time;
 
             @Data
             @ToString
-            public static class DataParametersInt_query_timeDto {
+            public static class DataParametersLong_query_timeDto {
                 /***/
                 @JsonProperty("Min")
                 private Integer Min;

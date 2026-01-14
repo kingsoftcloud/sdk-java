@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Data
 public class DescribeModelConfigRequest{
     /**单次调用可返回的最大条目数量. 传入返回的 NextToken 值可以获取剩余的其它条目. 这个值可以允许的范围是 5- 1000.
-类型: Int
+类型: Integer
 是否必填：否*/
     @KsYunField(name="MaxResults")
     private Integer MaxResults;

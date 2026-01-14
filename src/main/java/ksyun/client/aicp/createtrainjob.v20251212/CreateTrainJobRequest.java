@@ -48,7 +48,7 @@ public class CreateTrainJobRequest{
 
     /**最长运行时长(小时)*/
     @KsYunField(name="MaxRuntimeHour")
-    private Integer MaxRuntimeHour;
+    private Long MaxRuntimeHour;
 
     /**节点亲和性-仅调度到CPU节点*/
     @KsYunField(name="JobRunOnCPU")

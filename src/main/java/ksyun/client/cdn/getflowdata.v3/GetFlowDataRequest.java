@@ -36,11 +36,11 @@ public class GetFlowDataRequest{
 
     /**取值为0：多域名多区域数据做合并；1：每个域名每个区域的数据分别返回*/
     @KsYunField(name="ResultType")
-    private Integer ResultType;
+    private Long ResultType;
 
     /**统计粒度，取值为 5（默认）：5分钟粒度；10：10分钟粒度；20：20分钟粒度；60：1小时粒度；240：4小时粒度；480：8小时粒度；1440：1天粒度；以上粒度流量值均取该粒度时间段的流量总和*/
     @KsYunField(name="Granularity")
-    private Integer Granularity;
+    private Long Granularity;
 
     /**数据类型，取值为edge:服务数据; origin:回源数据（push：直播推流加速暂不支持查询回源数据）; 支持多类型选择，多个类型用逗号（半角）分隔，缺省为edge*/
     @KsYunField(name="DataType")

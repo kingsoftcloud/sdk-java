@@ -25,7 +25,7 @@ public class DescribeProcessesResponse extends BaseResponseModel {
 
     /**裸金属服务器总数*/
     @JsonProperty("TotalCount")
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**工单的信息*/
     @JsonProperty("ProcessSet")

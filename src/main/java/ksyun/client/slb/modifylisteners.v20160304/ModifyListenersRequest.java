@@ -60,7 +60,7 @@ public class ModifyListenersRequest{
 
     /**会话保持超时时间*/
     @KsYunField(name="SessionPersistencePeriod")
-    private Integer SessionPersistencePeriod;
+    private Long SessionPersistencePeriod;
 
     /**会话类型*/
     @KsYunField(name="CookieType")

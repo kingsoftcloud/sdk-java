@@ -40,6 +40,6 @@ public class ModifyRemoteManagementRequest{
 
     /**版本ID*/
     @KsYunField(name="VersionId")
-    private Integer VersionId;
+    private Long VersionId;
 
 }

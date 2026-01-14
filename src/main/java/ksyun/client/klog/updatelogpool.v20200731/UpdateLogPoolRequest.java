@@ -60,7 +60,7 @@ public class UpdateLogPoolRequest{
             @KsYunField(name="Name")
             private String Name;
 
-            /**字段类型：text|Int|double|bool|date*/
+            /**字段类型：text|long|double|bool|date*/
             @KsYunField(name="Type")
             private String Type;
 

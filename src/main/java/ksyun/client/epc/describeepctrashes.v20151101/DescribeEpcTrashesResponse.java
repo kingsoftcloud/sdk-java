@@ -25,7 +25,7 @@ public class DescribeEpcTrashesResponse extends BaseResponseModel {
 
     /**裸金属服务器总数*/
     @JsonProperty("TotalCount")
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**Host的信息*/
     @JsonProperty("HostSet")

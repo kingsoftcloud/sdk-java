@@ -28,7 +28,7 @@ public class QueryProductTypesResponse extends BaseResponseModel {
     public static class DataDto {
         /**产品组ID*/
         @JsonProperty("ProductGroupId")
-        private Integer ProductGroupId;
+        private Long ProductGroupId;
 
         /**产品组名称*/
         @JsonProperty("ProductGroupName")
@@ -36,7 +36,7 @@ public class QueryProductTypesResponse extends BaseResponseModel {
 
         /**产品类型ID*/
         @JsonProperty("ProductTypeId")
-        private Integer ProductTypeId;
+        private Long ProductTypeId;
 
         /**产品类型名称*/
         @JsonProperty("ProductTypeName")

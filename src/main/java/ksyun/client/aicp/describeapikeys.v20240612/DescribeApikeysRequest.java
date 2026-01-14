@@ -38,4 +38,8 @@ public class DescribeApikeysRequest{
     @KsYunField(name="DefaultKey")
     private Boolean DefaultKey;
 
+    /**按apiKeyId 查询*/
+    @KsYunField(name="KeyId",type=1)
+    private List<String> KeyIdList;
+
 }

@@ -72,7 +72,7 @@ public class RunInstancesRequest{
 
     /**实例所属项目ID*/
     @KsYunField(name="ProjectId")
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**数据盘是否随实例释放*/
     @KsYunField(name="DataDisk",type=1)
@@ -148,7 +148,7 @@ public class RunInstancesRequest{
 
     /**实例启动模板版本号。如不指定，则采用默认版本号*/
     @KsYunField(name="ModelVersion")
-    private Integer ModelVersion;
+    private Long ModelVersion;
 
     /**整机镜像所开云盘数据盘的类型*/
     @KsYunField(name="AssembledImageDataDiskType")
@@ -215,7 +215,7 @@ public class RunInstancesRequest{
 
         /**标签Id*/
         @KsYunField(name="Id")
-        private Integer Id;
+        private Long Id;
 
         /**标签值*/
         @KsYunField(name="Value")

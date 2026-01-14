@@ -24,6 +24,6 @@ public class DescribeDedicatedHostsRequest{
 
     /**项目制id列表*/
     @KsYunField(name="ProjectId",type=1)
-    private List<Integer> ProjectIdList;
+    private List<Long> ProjectIdList;
 
 }

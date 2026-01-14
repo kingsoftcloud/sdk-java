@@ -58,7 +58,7 @@ TIMEOUT("timeout", "已超时");*/
 
         /**创建时间戳，毫秒*/
         @JsonProperty("CreateTime")
-        private Integer CreateTime;
+        private Long CreateTime;
 
         /**创建人*/
         @JsonProperty("CreateUserName")
@@ -89,7 +89,7 @@ TIMEOUT("timeout", "已超时");*/
 
             /**超时时间*/
             @JsonProperty("ExecuteTimeoutMs")
-            private Integer ExecuteTimeoutMs;
+            private Long ExecuteTimeoutMs;
 
             /**文件类型：user_ks3 用户ks3, upload_ks3 用户上传下载文件。*/
             @JsonProperty("InputDataType")

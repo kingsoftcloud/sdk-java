@@ -16,11 +16,11 @@ import java.util.Arrays;
 public class GetCdnDomainsRequest{
     /**分页大小，默认20，最大500，取值1～500间整数*/
     @KsYunField(name="PageSize")
-    private Integer PageSize;
+    private Long PageSize;
 
     /**取第几页。默认为1，取值1～10000*/
     @KsYunField(name="PageNumber")
-    private Integer PageNumber;
+    private Long PageNumber;
 
     /**按域名过滤，默认为空，为空时代表当前用户下所有域名，域名长度最大255，不支持多个域名同时查询*/
     @KsYunField(name="DomainName")
@@ -28,7 +28,7 @@ public class GetCdnDomainsRequest{
 
     /**查询指定项目下的域名。默认为空，为空时查询当前用户下所有域名ProjectId可至金山云控制台-资源管理-项目管理查询*/
     @KsYunField(name="ProjectId")
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**按域名状态过滤。默认为空，为空时查询当前用户下所有域名的全部状态，取值为：online：正在运行；offline：已停止；configuring：配置中；configure_failed：配置失败 ；icp_checking：审核中；icp_check_failed：审核失败；locked：已封禁；locking：封禁中*/
     @KsYunField(name="DomainStatus")

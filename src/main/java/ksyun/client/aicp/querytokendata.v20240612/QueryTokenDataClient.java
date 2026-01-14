@@ -14,7 +14,7 @@ import java.util.*;
 
 /**
 * @Classname QueryTokenDataClient
-* @Description 查询模型API token用量*/
+* @Description 查询模型API token用量（限定半年内的）*/
 @Slf4j
 public class QueryTokenDataClient extends BaseClient {
     private final static String service = "aicp";

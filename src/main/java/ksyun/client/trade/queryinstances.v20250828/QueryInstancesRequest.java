@@ -16,7 +16,7 @@ import java.util.Arrays;
 public class QueryInstancesRequest{
     /**企业账号中心关联用户ID。如果空，则会返回企业账号中心有查看权限的用户ID下的实例。*/
     @KsYunField(name="associatedUserId")
-    private Integer AssociatedUserId;
+    private Long AssociatedUserId;
 
     /**实例ID列表*/
     @KsYunField(name="instanceIds",type=2)

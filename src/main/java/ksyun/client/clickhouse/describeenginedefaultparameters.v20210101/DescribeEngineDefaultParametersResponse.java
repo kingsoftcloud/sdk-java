@@ -35,7 +35,7 @@ public class DescribeEngineDefaultParametersResponse extends BaseResponseModel {
                 "max": "1",
                 "visible": 1,
                 "restart_required": false,
-                "type": "Int",
+                "type": "integer",
                 "config_type": "users",
                 "enums": "",
                 "default": "1"
@@ -47,7 +47,7 @@ public class DescribeEngineDefaultParametersResponse extends BaseResponseModel {
                 "max": "1",
                 "visible": 1,
                 "restart_required": false,
-                "type": "Int",
+                "type": "integer",
                 "config_type": "users",
                 "enums": "",
                 "default": "0"

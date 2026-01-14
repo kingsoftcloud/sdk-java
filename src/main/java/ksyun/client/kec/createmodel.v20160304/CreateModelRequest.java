@@ -112,7 +112,7 @@ Monthly(包年包月）、Daily（按量付费（按日月结）)、 HourlyInsta
     /**实例所属项目ID
 账户有权限的项目ID，0为默认项目,默认值为默认项目*/
     @KsYunField(name="ProjectId")
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**容灾分组ID*/
     @KsYunField(name="DataGuardId")
@@ -211,7 +211,7 @@ ModelTest001*/
 
         /***/
         @KsYunField(name="Id")
-        private Integer Id;
+        private Long Id;
 
         /***/
         @KsYunField(name="Value")

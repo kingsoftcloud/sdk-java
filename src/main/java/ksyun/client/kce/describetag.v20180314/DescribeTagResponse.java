@@ -56,7 +56,7 @@ public class DescribeTagResponse extends BaseResponseModel {
 
         /**镜像大小，单位为字节*/
         @JsonProperty("SizeByte")
-        private Integer SizeByte;
+        private Long SizeByte;
 
         /**镜像制作者*/
         @JsonProperty("Author")

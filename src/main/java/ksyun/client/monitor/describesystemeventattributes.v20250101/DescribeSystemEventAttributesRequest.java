@@ -18,13 +18,13 @@ public class DescribeSystemEventAttributesRequest{
 
 > **Tips：** 请注意时间格式为Unix时间戳（毫秒），从1970年1月1日开始所经过的毫秒数。*/
     @KsYunField(name="StartTime")
-    private Integer StartTime;
+    private Long StartTime;
 
     /**结束时间。
 
 > **Tips：** 请注意时间格式为Unix时间戳（毫秒），从1970年1月1日开始所经过的毫秒数。*/
     @KsYunField(name="EndTime")
-    private Integer EndTime;
+    private Long EndTime;
 
     /**表示一类云产品，指定命名空间。*/
     @KsYunField(name="Namespace")

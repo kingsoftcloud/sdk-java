@@ -17,7 +17,7 @@ public class QueryTokenDataResponse extends BaseResponseModel {
 
     /**总条数，分页展示用。*/
     @JsonProperty("TotalCount")
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**本次获取数据的最后一条值，分页游标。*/
     @JsonProperty("LastKey")
@@ -25,15 +25,15 @@ public class QueryTokenDataResponse extends BaseResponseModel {
 
     /**总的输入tokens量*/
     @JsonProperty("SumInputToken")
-    private Integer SumInputToken;
+    private Long SumInputToken;
 
     /**总的输出tokens量*/
     @JsonProperty("SumOutputToken")
-    private Integer SumOutputToken;
+    private Long SumOutputToken;
 
     /**总的tokens量*/
     @JsonProperty("SumTotalToken")
-    private Integer SumTotalToken;
+    private Long SumTotalToken;
 
     /***/
     @JsonProperty("Data")
@@ -48,40 +48,40 @@ public class QueryTokenDataResponse extends BaseResponseModel {
 
         /**输入tokens量*/
         @JsonProperty("InputToken")
-        private Integer InputToken;
+        private Long InputToken;
 
         /**输出tokens量*/
         @JsonProperty("OutputToken")
-        private Integer OutputToken;
+        private Long OutputToken;
 
         /**输入和输出tokens量*/
         @JsonProperty("TotalToken")
-        private Integer TotalToken;
+        private Long TotalToken;
 
         /**缓存命中量*/
         @JsonProperty("TotalCacheToken")
-        private Integer TotalCacheToken;
+        private Long TotalCacheToken;
 
         /**缓存未命中量*/
         @JsonProperty("TotalCacheMissToken")
-        private Integer TotalCacheMissToken;
+        private Long TotalCacheMissToken;
 
         /**联网搜索次数*/
         @JsonProperty("TotalWebSearch")
-        private Integer TotalWebSearch;
+        private Long TotalWebSearch;
 
     }
 
     /**总的缓存命中量*/
     @JsonProperty("SumTotalCacheToken")
-    private Integer SumTotalCacheToken;
+    private Long SumTotalCacheToken;
 
     /**总的缓存未命中量*/
     @JsonProperty("SumTotalCacheMissToken")
-    private Integer SumTotalCacheMissToken;
+    private Long SumTotalCacheMissToken;
 
     /**总的联网搜索次数*/
     @JsonProperty("SumTotalWebSearch")
-    private Integer SumTotalWebSearch;
+    private Long SumTotalWebSearch;
 
 }

@@ -32,7 +32,7 @@ public class DescribeSplitItemBillDetailsRequest{
 
     /**主账号所托管的账号Id*/
     @KsYunField(name="SubAccountId")
-    private Integer SubAccountId;
+    private Long SubAccountId;
 
     /**第几页*/
     @KsYunField(name="Page")

@@ -24,7 +24,7 @@ public class DescribeBillSummaryByProjectRequest{
 
     /**成员账号Id*/
     @KsYunField(name="SubAccount")
-    private Integer SubAccount;
+    private Long SubAccount;
 
     /**非必传，默认值为 False。
 是否吐出全部财务关系数据。

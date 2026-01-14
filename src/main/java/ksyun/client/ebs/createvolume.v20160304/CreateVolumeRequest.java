@@ -93,6 +93,6 @@ ESSD_PL3取值范围：【1761，32768】，步长：1GB
 
     /**ESSD_AutoPL云盘的预配置值,仅AutoPL类型云盘可用*/
     @KsYunField(name="ProvisionedIops")
-    private Integer ProvisionedIops;
+    private Long ProvisionedIops;
 
 }

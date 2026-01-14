@@ -40,7 +40,7 @@ public class ModifySlbRuleRequest{
 
     /**会话保持超时时间*/
     @KsYunField(name="SessionPersistencePeriod")
-    private Integer SessionPersistencePeriod;
+    private Long SessionPersistencePeriod;
 
     /**会话类型(ImplantCookie|RewriteCookie)*/
     @KsYunField(name="cookieType")

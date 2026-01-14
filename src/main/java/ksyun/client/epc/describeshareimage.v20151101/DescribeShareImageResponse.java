@@ -62,7 +62,7 @@ public class DescribeShareImageResponse extends BaseResponseModel {
 
     /***/
     @JsonProperty("TotalCount")
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /***/
     @JsonProperty("NextToken")

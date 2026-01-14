@@ -21,15 +21,15 @@ public class GetDomainLogsResponse extends BaseResponseModel {
 
     /**整页大小*/
     @JsonProperty("PageSize")
-    private Integer PageSize;
+    private Long PageSize;
 
     /**页码*/
     @JsonProperty("PageNumber")
-    private Integer PageNumber;
+    private Long PageNumber;
 
     /**日志总条数*/
     @JsonProperty("TotalCount")
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /***/
     @JsonProperty("DomainLogs")
@@ -56,7 +56,7 @@ public class GetDomainLogsResponse extends BaseResponseModel {
 
         /**日志大小，单位Byte*/
         @JsonProperty("LogSize")
-        private Integer LogSize;
+        private Long LogSize;
 
     }
 

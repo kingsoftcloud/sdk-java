@@ -86,6 +86,7 @@ public class DescribeSoInstancesResponse extends BaseResponseModel {
             private List<String> SecurityGroupIds;
 
         }
+
         /*****/
         @JsonProperty("KeyPairName")
         private String KeyPairName;

@@ -16,11 +16,11 @@ import java.util.Arrays;
 public class QueryTokenDataRequest{
     /**开始时间，毫秒时间戳，仅支持最近180天内时间。*/
     @KsYunField(name="StartTimestamp")
-    private Integer StartTimestamp;
+    private Long StartTimestamp;
 
     /**截止时间，毫秒时间戳*/
     @KsYunField(name="EndTimestamp")
-    private Integer EndTimestamp;
+    private Long EndTimestamp;
 
     /**分页页长，最大10000*/
     @KsYunField(name="MaxResults")
@@ -46,5 +46,9 @@ model-按模型分组；keyId-按apikey分组。*/
     /**是否国际版：false-国内版，true-国际版*/
     @KsYunField(name="IsGlobalServer")
     private Boolean IsGlobalServer;
+
+    /***/
+    @KsYunField(name="ModelName")
+    private String ModelName;
 
 }

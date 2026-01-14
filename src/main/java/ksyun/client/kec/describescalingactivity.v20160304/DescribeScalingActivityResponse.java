@@ -25,7 +25,7 @@ public class DescribeScalingActivityResponse extends BaseResponseModel {
 
     /***/
     @JsonProperty("ScalingActivityCount")
-    private Integer ScalingActivityCount;
+    private Long ScalingActivityCount;
 
     /***/
     @JsonProperty("ScalingActivitySet")

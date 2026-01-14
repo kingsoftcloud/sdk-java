@@ -118,7 +118,7 @@ public class QueryProductConsumeResponse extends BaseResponseModel {
             /**产品线ID
 */
             @JsonProperty("productGroupId")
-            private Integer ProductGroupId;
+            private Long ProductGroupId;
 
             /**产品线名称*/
             @JsonProperty("productGroupName")

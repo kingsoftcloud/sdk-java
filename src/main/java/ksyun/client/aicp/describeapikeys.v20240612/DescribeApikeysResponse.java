@@ -52,7 +52,7 @@ public class DescribeApikeysResponse extends BaseResponseModel {
 
         /**创建时间毫秒时间戳*/
         @JsonProperty("CreateTimestamp")
-        private Integer CreateTimestamp;
+        private Long CreateTimestamp;
 
         /**项目ID*/
         @JsonProperty("ProjectId")

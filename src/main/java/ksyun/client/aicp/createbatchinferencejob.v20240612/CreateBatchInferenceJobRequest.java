@@ -32,7 +32,7 @@ public class CreateBatchInferenceJobRequest{
 
     /***/
     @KsYunField(name="ExecuteTimeoutMs")
-    private Integer ExecuteTimeoutMs;
+    private Long ExecuteTimeoutMs;
 
     /**文件类型：user_ks3 用户ks3;upload_ks3 上传文件*/
     @KsYunField(name="InputDataType")

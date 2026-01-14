@@ -25,7 +25,7 @@ public class DescribeEpcRaidAttributesResponse extends BaseResponseModel {
 
     /**裸金属服务器总数*/
     @JsonProperty("TotalCount")
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**RAID配置的信息*/
     @JsonProperty("EpcRaidAttributeSet")

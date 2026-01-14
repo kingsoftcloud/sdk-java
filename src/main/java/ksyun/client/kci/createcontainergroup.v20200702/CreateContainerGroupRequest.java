@@ -52,7 +52,7 @@ public class CreateContainerGroupRequest{
 
     /**项目ID，不填写默认0*/
     @KsYunField(name="ProjectId")
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**容器实例CPU规格，支持三位小数，最大值256，系统会自动以标准规格适配，如指定的Cpu是2.5核，系统最终可能根据机型还要求开出4核，最小规格去适配*/
     @KsYunField(name="Cpu")

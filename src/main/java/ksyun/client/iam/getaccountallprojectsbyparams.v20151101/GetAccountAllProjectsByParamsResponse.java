@@ -24,7 +24,7 @@ public class GetAccountAllProjectsByParamsResponse extends BaseResponseModel {
     public static class ListProjectResultDto {
         /***/
         @JsonProperty("Total")
-        private Integer Total;
+        private Long Total;
 
         /***/
         @JsonProperty("ProjectList")
@@ -35,7 +35,7 @@ public class GetAccountAllProjectsByParamsResponse extends BaseResponseModel {
         public static class ListProjectResultProjectListDto {
             /**项目ID*/
             @JsonProperty("ProjectId")
-            private Integer ProjectId;
+            private Long ProjectId;
 
             /**主账号ID*/
             @JsonProperty("AccountId")

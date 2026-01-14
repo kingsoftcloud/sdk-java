@@ -28,10 +28,10 @@ public class GetDomainLogsRequest{
 
     /**分页大小，取值为1-500，最大500，默认50*/
     @KsYunField(name="PageSize")
-    private Integer PageSize;
+    private Long PageSize;
 
     /**取得第几页，取值为：1-10000，最大10000，默认1*/
     @KsYunField(name="PageNumber")
-    private Integer PageNumber;
+    private Long PageNumber;
 
 }

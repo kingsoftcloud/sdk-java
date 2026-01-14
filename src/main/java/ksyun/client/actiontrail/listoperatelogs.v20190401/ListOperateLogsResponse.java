@@ -158,7 +158,7 @@ write：写类型*/
 
     /**记录查询结果列表最后一条数据的游标*/
     @JsonProperty("SearchAfter")
-    private Integer SearchAfter;
+    private Long SearchAfter;
 
     /**请求ID*/
     @JsonProperty("RequestId")

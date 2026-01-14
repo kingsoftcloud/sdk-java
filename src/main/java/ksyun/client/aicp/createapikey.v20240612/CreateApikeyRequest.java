@@ -24,7 +24,7 @@ public class CreateApikeyRequest{
 
     /**项目ID*/
     @KsYunField(name="ProjectId")
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**关联的模型列表*/
     @KsYunField(name="AssociatedModelIds",type=2)

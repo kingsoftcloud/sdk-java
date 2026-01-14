@@ -40,7 +40,7 @@ public class DescribeInstancesResponse extends BaseResponseModel {
 
         /**项目ID*/
         @JsonProperty("ProjectId")
-        private Integer ProjectId;
+        private Long ProjectId;
 
         /**是否开启关机不收费*/
         @JsonProperty("ShutdownNoCharge")

@@ -155,7 +155,7 @@ public class QueryInstanceConsumeResponse extends BaseResponseModel {
 
             /**项目ID*/
             @JsonProperty("projectId")
-            private Integer ProjectId;
+            private Long ProjectId;
 
             /**项目名称*/
             @JsonProperty("projectName")
@@ -191,7 +191,7 @@ public class QueryInstanceConsumeResponse extends BaseResponseModel {
 
             /***/
             @JsonProperty("durationNumber")
-            private Integer DurationNumber;
+            private Long DurationNumber;
 
             /***/
             @JsonProperty("ruleRemark")

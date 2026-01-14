@@ -14,7 +14,7 @@ import java.util.*;
 
 /**
 * @Classname StartInferenceEndpointClient
-* @Description 关闭接入点*/
+* @Description 开启接入点*/
 @Slf4j
 public class StartInferenceEndpointClient extends BaseClient {
     private final static String service = "aicp";

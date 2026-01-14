@@ -43,7 +43,7 @@ public class SetCacheRuleConfigRequest{
 
         /**缓存时间，以秒为单位。当CacheEnable = on时，为必选项*/
         @KsYunField(name="CacheTime")
-        private Integer CacheTime;
+        private Long CacheTime;
 
         /**是否遵循源站，off表示不遵循，on表示遵循，默认为遵循。*/
         @KsYunField(name="RespectOrigin")

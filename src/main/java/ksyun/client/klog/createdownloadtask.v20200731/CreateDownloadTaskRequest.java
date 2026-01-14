@@ -31,11 +31,11 @@ public class CreateDownloadTaskRequest{
     public static class ConfigDto {
         /**日志开始时间*/
         @KsYunField(name="From")
-        private Integer From;
+        private Long From;
 
         /**日志结束时间*/
         @KsYunField(name="To")
-        private Integer To;
+        private Long To;
 
         /**日志下载语句*/
         @KsYunField(name="Query")

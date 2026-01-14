@@ -25,7 +25,7 @@ public class DescribeImagesResponse extends BaseResponseModel {
 
     /**裸金属服务器总数*/
     @JsonProperty("TotalCount")
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**Image的信息*/
     @JsonProperty("ImageSet")

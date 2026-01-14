@@ -25,7 +25,7 @@ public class DescribeGpuImageDriverResponse extends BaseResponseModel {
 
     /**裸金属服务器总数*/
     @JsonProperty("TotalCount")
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**GPU镜像的信息*/
     @JsonProperty("GpuImagesDriverSet")

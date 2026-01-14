@@ -20,6 +20,6 @@ public class TerminateModelsRequest{
 
     /**传ModelId和ModelVersion，删除某个模板下的版本*/
     @KsYunField(name="ModelVersion")
-    private Integer ModelVersion;
+    private Long ModelVersion;
 
 }

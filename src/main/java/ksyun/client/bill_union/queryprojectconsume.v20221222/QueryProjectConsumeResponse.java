@@ -119,7 +119,7 @@ public class QueryProjectConsumeResponse extends BaseResponseModel {
 
 */
             @JsonProperty("projectId")
-            private Integer ProjectId;
+            private Long ProjectId;
 
             /**项目名称
 

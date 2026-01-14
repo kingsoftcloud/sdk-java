@@ -297,8 +297,8 @@ public class DescribeDBInstanceParametersResponse extends BaseResponseModel {
             private String Concurrent_insert;
 
             /***/
-            @JsonProperty("Int_query_time")
-            private Double Int_query_time;
+            @JsonProperty("long_query_time")
+            private Double Long_query_time;
 
             /***/
             @JsonProperty("slow_query_log")
