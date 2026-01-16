@@ -14,7 +14,7 @@ import java.util.*;
 
 /**
 * @Classname RemovePrivateLinkClient
-* @Description RemovePrivateLink*/
+* @Description 删除已建立的RemovePrivateLink*/
 @Slf4j
 public class RemovePrivateLinkClient extends BaseClient {
     private final static String service = "slb";

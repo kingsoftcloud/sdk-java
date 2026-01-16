@@ -84,4 +84,5 @@ public class DescribeInstanceShardInfoResponse extends BaseResponseModel {
         }
 
     }
+
 }

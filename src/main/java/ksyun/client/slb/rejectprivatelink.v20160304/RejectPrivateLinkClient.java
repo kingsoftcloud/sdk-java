@@ -14,7 +14,7 @@ import java.util.*;
 
 /**
 * @Classname RejectPrivateLinkClient
-* @Description RejectPrivateLink*/
+* @Description 拒绝PrivateLink申请RejectPrivateLink*/
 @Slf4j
 public class RejectPrivateLinkClient extends BaseClient {
     private final static String service = "slb";

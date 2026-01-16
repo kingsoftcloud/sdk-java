@@ -50,7 +50,12 @@ public class DescribeProcessesResponse extends BaseResponseModel {
         @JsonProperty("AvailabilityZone")
         private String AvailabilityZone;
 
-        /**状态*/
+        /**状态
+    ◦ Created 已创建
+    ◦ Troubleshooting排查中
+    ◦ InProgress 处理中
+    ◦ Completed 已完成
+    ◦ UserClose 用户关闭*/
         @JsonProperty("Status")
         private String Status;
 

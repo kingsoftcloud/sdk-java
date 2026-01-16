@@ -66,10 +66,6 @@ public class DescribePrivateLinkServerResponse extends BaseResponseModel {
         @JsonProperty("ServiceEndTime")
         private String ServiceEndTime;
 
-        /**删除保护*/
-        @JsonProperty("DeleteProtection")
-        private String DeleteProtection;
-
     }
 
 }
