@@ -14,4 +14,16 @@ import java.util.Arrays;
 */
 @Data
 public class CreateKeyRequest{
+    /**项目制ID*/
+    @KsYunField(name="projectId")
+    private String ProjectId;
+
+    /**秘钥名称*/
+    @KsYunField(name="KeyName")
+    private String KeyName;
+
+    /**描述*/
+    @KsYunField(name="Description")
+    private String Description;
+
 }

@@ -44,4 +44,8 @@ public class DescribeKeysRequest{
 
     }
 
+    /**项目制ID*/
+    @KsYunField(name="ProjectId",type=1)
+    private List<Long> ProjectIdList;
+
 }

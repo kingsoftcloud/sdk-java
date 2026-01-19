@@ -58,6 +58,10 @@ public class DescribeEpcManagementsResponse extends BaseResponseModel {
         @JsonProperty("Sn")
         private String Sn;
 
+        /**项目制ID*/
+        @JsonProperty("ProjectId")
+        private Long ProjectId;
+
     }
 
 }

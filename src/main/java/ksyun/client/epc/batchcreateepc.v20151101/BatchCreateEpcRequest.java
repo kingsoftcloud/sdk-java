@@ -343,4 +343,12 @@ storage_bond*/
     @KsYunField(name="StorageRoceNetworkCardName")
     private String StorageRoceNetworkCardName;
 
+    /**Roce存储卡集群名称*/
+    @KsYunField(name="SRoceCluster")
+    private String SRoceCluster;
+
+    /**Roce计算卡集群名称*/
+    @KsYunField(name="RoceCluster")
+    private String RoceCluster;
+
 }

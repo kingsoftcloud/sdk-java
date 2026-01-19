@@ -14,7 +14,7 @@ import java.util.*;
 
 /**
 * @Classname DescribeEpcManagementsClient
-* @Description DescribeEpcManagements*/
+* @Description DescribeEpcManagements查询带外信息*/
 @Slf4j
 public class DescribeEpcManagementsClient extends BaseClient {
     private final static String service = "epc";

@@ -14,7 +14,7 @@ import java.util.*;
 
 /**
 * @Classname CreateKeyClient
-* @Description 创建密钥*/
+* @Description 创建密钥对*/
 @Slf4j
 public class CreateKeyClient extends BaseClient {
     private final static String service = "sks";

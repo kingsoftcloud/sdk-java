@@ -38,4 +38,8 @@ public class DescribeEpcManagementsRequest{
     @KsYunField(name="RemoteManagementId")
     private String RemoteManagementId;
 
+    /**项目制ID*/
+    @KsYunField(name="ProjectId",type=1)
+    private List<String> ProjectIdList;
+
 }

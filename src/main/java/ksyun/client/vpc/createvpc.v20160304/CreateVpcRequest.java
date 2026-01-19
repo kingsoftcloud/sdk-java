@@ -26,4 +26,8 @@ public class CreateVpcRequest{
     @KsYunField(name="ProvidedIpv6CidrBlock")
     private Boolean ProvidedIpv6CidrBlock;
 
+    /**Ipv6CidrBlock指定ipv6网段创建vpc，只有当ProvidedIpv6CidrBlock = true时生效，该参数可不传，不传则随机分配ipv6网段*/
+    @KsYunField(name="Ipv6CidrBlock")
+    private String Ipv6CidrBlock;
+
 }

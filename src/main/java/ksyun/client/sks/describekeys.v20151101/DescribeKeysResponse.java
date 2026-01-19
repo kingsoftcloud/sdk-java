@@ -50,6 +50,10 @@ public class DescribeKeysResponse extends BaseResponseModel {
         @JsonProperty("KeyName")
         private String KeyName;
 
+        /**项目制ID*/
+        @JsonProperty("ProjectId")
+        private Long ProjectId;
+
     }
 
 }
