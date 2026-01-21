@@ -177,11 +177,11 @@ public class DescribeResourcePoolInstancesResponse extends BaseResponseModel {
         public static class ResourcePoolInstanceSetCpuDto {
             /**已分配值*/
             @JsonProperty("Allocated")
-            private Integer Allocated;
+            private String Allocated;
 
             /**可分配值*/
             @JsonProperty("Allocatable")
-            private Integer Allocatable;
+            private String Allocatable;
 
         }
 
@@ -195,11 +195,11 @@ public class DescribeResourcePoolInstancesResponse extends BaseResponseModel {
         public static class ResourcePoolInstanceSetGpuDto {
             /**已分配值*/
             @JsonProperty("Allocated")
-            private Integer Allocated;
+            private String Allocated;
 
             /**可分配值*/
             @JsonProperty("Allocatable")
-            private Integer Allocatable;
+            private String Allocatable;
 
         }
 
@@ -213,11 +213,11 @@ public class DescribeResourcePoolInstancesResponse extends BaseResponseModel {
         public static class ResourcePoolInstanceSetMemoryDto {
             /**已分配值*/
             @JsonProperty("Allocated")
-            private Integer Allocated;
+            private String Allocated;
 
             /**可分配值*/
             @JsonProperty("Allocatable")
-            private Integer Allocatable;
+            private String Allocatable;
 
         }
 

@@ -89,7 +89,7 @@ public class DescribeNotebooksResponse extends BaseResponseModel {
 
         /**GPU卡数*/
         @JsonProperty("GPUNumber")
-        private Integer GPUNumber;
+        private String GPUNumber;
 
         /**创建人ID*/
         @JsonProperty("CreateUser")

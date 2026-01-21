@@ -40,7 +40,7 @@ public class ModifyNotebookRequest{
 
     /**GPU核数，允许范围为0~10000*/
     @KsYunField(name="GPUNumber")
-    private Integer GPUNumber;
+    private String GPUNumber;
 
     /**Cpu数量，允许范围为0~10000*/
     @KsYunField(name="CPUNum")
