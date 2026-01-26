@@ -1,4 +1,4 @@
-package ksyun.client.aicp.modifynotebook.v20240612;
+package ksyun.client.aicp.deletemodel.v20251212;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -13,13 +13,14 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.*;
 
 /**
- * @Classname ModifyNotebookClient
- * @Description 修改开发任务*/
+ * @Classname DeleteModelClient
+ * @Description 删除指定模型
+ */
 @Slf4j
-public class ModifyNotebookClient extends BaseClient {
+public class DeleteModelClient extends BaseClient {
     private final static String service = "aicp";
-    private final static String version = "2024-06-12";
-    private final static String action = "ModifyNotebook";
+    private final static String version = "2025-12-12";
+    private final static String action = "DeleteModel";
 
 
     /**
@@ -28,7 +29,7 @@ public class ModifyNotebookClient extends BaseClient {
     private Credential credential;
 
 
-    public ModifyNotebookClient(Credential credential) {
+    public DeleteModelClient(Credential credential) {
         this.credential = credential;
     }
 
@@ -37,12 +38,12 @@ public class ModifyNotebookClient extends BaseClient {
      * post 请求 - Send 方法
      * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
-     * @return ModifyNotebookResponse 响应对象
+     * @return DeleteModelResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public ModifyNotebookResponse doPostSend(String path, ModifyNotebookRequest requestObj) throws RuntimeException {
+    public DeleteModelResponse doPostSend(String path, DeleteModelRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doPostSend(path, requestObj, head);
@@ -52,16 +53,16 @@ public class ModifyNotebookClient extends BaseClient {
      * post 请求 - Send 方法（支持 URL 路径参数和自定义 Header）
      * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
      *
-     * @param path 请求路径
-     * @param requestObj 请求对象
+     * @param path          请求路径
+     * @param requestObj    请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return ModifyNotebookResponse 响应对象
+     * @return DeleteModelResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public ModifyNotebookResponse doPostSend(String path, ModifyNotebookRequest requestObj,
-                                             UrlPathParams urlPathParams,
-                                             Map<String, String> customHeaders) throws RuntimeException {
+    public DeleteModelResponse doPostSend(String path, DeleteModelRequest requestObj,
+                                          UrlPathParams urlPathParams,
+                                          Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         if (customHeaders != null && !customHeaders.isEmpty()) {
@@ -74,13 +75,13 @@ public class ModifyNotebookClient extends BaseClient {
      * post 请求 - Send 方法
      * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
-     * @param head 请求头
-     * @return ModifyNotebookResponse 响应对象
+     * @param head       请求头
+     * @return DeleteModelResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public ModifyNotebookResponse doPostSend(String path, ModifyNotebookRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public DeleteModelResponse doPostSend(String path, DeleteModelRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("post", path, requestObj, head, null);
     }
 
@@ -88,15 +89,15 @@ public class ModifyNotebookClient extends BaseClient {
      * post 请求 - Send 方法（完整版，支持 URL 路径参数）
      * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
      *
-     * @param path 请求路径
-     * @param requestObj 请求对象
-     * @param head 请求头（包含自定义 Header）
+     * @param path          请求路径
+     * @param requestObj    请求对象
+     * @param head          请求头（包含自定义 Header）
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
-     * @return ModifyNotebookResponse 响应对象
+     * @return DeleteModelResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public ModifyNotebookResponse doPostSend(String path, ModifyNotebookRequest requestObj, Map<String, String> head,
-                                             UrlPathParams urlPathParams) throws RuntimeException {
+    public DeleteModelResponse doPostSend(String path, DeleteModelRequest requestObj, Map<String, String> head,
+                                          UrlPathParams urlPathParams) throws RuntimeException {
         return executeWithV2("post", path, requestObj, head, urlPathParams);
     }
 
@@ -104,12 +105,12 @@ public class ModifyNotebookClient extends BaseClient {
      * get 请求 - Send 方法
      * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
-     * @return ModifyNotebookResponse 响应对象
+     * @return DeleteModelResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public ModifyNotebookResponse doGetSend(String path, ModifyNotebookRequest requestObj) throws RuntimeException {
+    public DeleteModelResponse doGetSend(String path, DeleteModelRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doGetSend(path, requestObj, head);
@@ -119,13 +120,13 @@ public class ModifyNotebookClient extends BaseClient {
      * get 请求 - Send 方法
      * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
-     * @param head 请求头
-     * @return ModifyNotebookResponse 响应对象
+     * @param head       请求头
+     * @return DeleteModelResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public ModifyNotebookResponse doGetSend(String path, ModifyNotebookRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public DeleteModelResponse doGetSend(String path, DeleteModelRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("get", path, requestObj, head, null);
     }
 
@@ -133,16 +134,16 @@ public class ModifyNotebookClient extends BaseClient {
      * get 请求 - Send 方法（支持 URL 路径参数和自定义 Header）
      * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
      *
-     * @param path 请求路径
-     * @param requestObj 请求对象
+     * @param path          请求路径
+     * @param requestObj    请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return ModifyNotebookResponse 响应对象
+     * @return DeleteModelResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public ModifyNotebookResponse doGetSend(String path, ModifyNotebookRequest requestObj,
-                                            UrlPathParams urlPathParams,
-                                            Map<String, String> customHeaders) throws RuntimeException {
+    public DeleteModelResponse doGetSend(String path, DeleteModelRequest requestObj,
+                                         UrlPathParams urlPathParams,
+                                         Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         if (customHeaders != null && !customHeaders.isEmpty()) {
@@ -155,12 +156,12 @@ public class ModifyNotebookClient extends BaseClient {
      * put 请求 - Send 方法
      * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
-     * @return ModifyNotebookResponse 响应对象
+     * @return DeleteModelResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public ModifyNotebookResponse doPutSend(String path, ModifyNotebookRequest requestObj) throws RuntimeException {
+    public DeleteModelResponse doPutSend(String path, DeleteModelRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doPutSend(path, requestObj, head);
@@ -170,13 +171,13 @@ public class ModifyNotebookClient extends BaseClient {
      * put 请求 - Send 方法
      * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
-     * @param head 请求头
-     * @return ModifyNotebookResponse 响应对象
+     * @param head       请求头
+     * @return DeleteModelResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public ModifyNotebookResponse doPutSend(String path, ModifyNotebookRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public DeleteModelResponse doPutSend(String path, DeleteModelRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("put", path, requestObj, head, null);
     }
 
@@ -184,16 +185,16 @@ public class ModifyNotebookClient extends BaseClient {
      * put 请求 - Send 方法（支持 URL 路径参数和自定义 Header）
      * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
      *
-     * @param path 请求路径
-     * @param requestObj 请求对象
+     * @param path          请求路径
+     * @param requestObj    请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return ModifyNotebookResponse 响应对象
+     * @return DeleteModelResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public ModifyNotebookResponse doPutSend(String path, ModifyNotebookRequest requestObj,
-                                            UrlPathParams urlPathParams,
-                                            Map<String, String> customHeaders) throws RuntimeException {
+    public DeleteModelResponse doPutSend(String path, DeleteModelRequest requestObj,
+                                         UrlPathParams urlPathParams,
+                                         Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         if (customHeaders != null && !customHeaders.isEmpty()) {
@@ -206,12 +207,12 @@ public class ModifyNotebookClient extends BaseClient {
      * delete 请求 - Send 方法
      * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
-     * @return ModifyNotebookResponse 响应对象
+     * @return DeleteModelResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public ModifyNotebookResponse doDeleteSend(String path, ModifyNotebookRequest requestObj) throws RuntimeException {
+    public DeleteModelResponse doDeleteSend(String path, DeleteModelRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doDeleteSend(path, requestObj, head);
@@ -221,13 +222,13 @@ public class ModifyNotebookClient extends BaseClient {
      * delete 请求 - Send 方法
      * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
-     * @param head 请求头
-     * @return ModifyNotebookResponse 响应对象
+     * @param head       请求头
+     * @return DeleteModelResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public ModifyNotebookResponse doDeleteSend(String path, ModifyNotebookRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public DeleteModelResponse doDeleteSend(String path, DeleteModelRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("delete", path, requestObj, head, null);
     }
 
@@ -235,16 +236,16 @@ public class ModifyNotebookClient extends BaseClient {
      * delete 请求 - Send 方法（支持 URL 路径参数和自定义 Header）
      * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
      *
-     * @param path 请求路径
-     * @param requestObj 请求对象
+     * @param path          请求路径
+     * @param requestObj    请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return ModifyNotebookResponse 响应对象
+     * @return DeleteModelResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public ModifyNotebookResponse doDeleteSend(String path, ModifyNotebookRequest requestObj,
-                                               UrlPathParams urlPathParams,
-                                               Map<String, String> customHeaders) throws RuntimeException {
+    public DeleteModelResponse doDeleteSend(String path, DeleteModelRequest requestObj,
+                                            UrlPathParams urlPathParams,
+                                            Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         if (customHeaders != null && !customHeaders.isEmpty()) {
@@ -257,16 +258,16 @@ public class ModifyNotebookClient extends BaseClient {
      * 通用的 V2 执行方法 - 处理状态码检查和响应解析
      * 被所有 Send 方法调用
      *
-     * @param method HTTP 方法
-     * @param path 请求路径
-     * @param requestObj 请求对象
-     * @param head 请求头
+     * @param method        HTTP 方法
+     * @param path          请求路径
+     * @param requestObj    请求对象
+     * @param head          请求头
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
-     * @return ModifyNotebookResponse 响应对象
+     * @return DeleteModelResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    private ModifyNotebookResponse executeWithV2(String method, String path, ModifyNotebookRequest requestObj,
-                                                 Map<String, String> head, UrlPathParams urlPathParams) throws RuntimeException {
+    private DeleteModelResponse executeWithV2(String method, String path, DeleteModelRequest requestObj,
+                                              Map<String, String> head, UrlPathParams urlPathParams) throws RuntimeException {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/json");
 
@@ -300,7 +301,7 @@ public class ModifyNotebookClient extends BaseClient {
 
         // 4. 解析 JSON 响应
         try {
-            return JSON.parseObject(message, ModifyNotebookResponse.class);
+            return JSON.parseObject(message, DeleteModelResponse.class);
         } catch (Exception e) {
             throw new RuntimeException(
                     String.format("[KsyunSDKError] [HttpCode:%d Err:%s] %s",
@@ -313,15 +314,15 @@ public class ModifyNotebookClient extends BaseClient {
     /**
      * post 请求 - WithContextV2 方法
      * 返回包含 HTTP 状态码的完整响应
-     *
+     * <p>
      * 注意：大多数情况下应该使用 doPostSend() 方法，它会自动处理错误
      * 只有在需要手动处理 HTTP 状态码时才使用此方法
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPostWithContextV2(String path, ModifyNotebookRequest requestObj) {
+    public HttpResponseWrapper doPostWithContextV2(String path, DeleteModelRequest requestObj) {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doPostWithContextV2(path, requestObj, head);
@@ -330,16 +331,16 @@ public class ModifyNotebookClient extends BaseClient {
     /**
      * post 请求 - WithContextV2 方法
      * 返回包含 HTTP 状态码的完整响应
-     *
+     * <p>
      * 注意：大多数情况下应该使用 doPostSend() 方法，它会自动处理错误
      * 只有在需要手动处理 HTTP 状态码时才使用此方法
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
-     * @param head 请求头
+     * @param head       请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPostWithContextV2(String path, ModifyNotebookRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doPostWithContextV2(String path, DeleteModelRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/json");
         return doRpcV2(path, requestObj, requestHeaders, "post", null);
@@ -348,15 +349,15 @@ public class ModifyNotebookClient extends BaseClient {
     /**
      * get 请求 - WithContextV2 方法
      * 返回包含 HTTP 状态码的完整响应
-     *
+     * <p>
      * 注意：大多数情况下应该使用 doGetSend() 方法，它会自动处理错误
      * 只有在需要手动处理 HTTP 状态码时才使用此方法
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doGetWithContextV2(String path, ModifyNotebookRequest requestObj) {
+    public HttpResponseWrapper doGetWithContextV2(String path, DeleteModelRequest requestObj) {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doGetWithContextV2(path, requestObj, head);
@@ -365,16 +366,16 @@ public class ModifyNotebookClient extends BaseClient {
     /**
      * get 请求 - WithContextV2 方法
      * 返回包含 HTTP 状态码的完整响应
-     *
+     * <p>
      * 注意：大多数情况下应该使用 doGetSend() 方法，它会自动处理错误
      * 只有在需要手动处理 HTTP 状态码时才使用此方法
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
-     * @param head 请求头
+     * @param head       请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doGetWithContextV2(String path, ModifyNotebookRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doGetWithContextV2(String path, DeleteModelRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/json");
         return doRpcV2(path, requestObj, requestHeaders, "get", null);
@@ -383,15 +384,15 @@ public class ModifyNotebookClient extends BaseClient {
     /**
      * put 请求 - WithContextV2 方法
      * 返回包含 HTTP 状态码的完整响应
-     *
+     * <p>
      * 注意：大多数情况下应该使用 doPutSend() 方法，它会自动处理错误
      * 只有在需要手动处理 HTTP 状态码时才使用此方法
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPutWithContextV2(String path, ModifyNotebookRequest requestObj) {
+    public HttpResponseWrapper doPutWithContextV2(String path, DeleteModelRequest requestObj) {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doPutWithContextV2(path, requestObj, head);
@@ -400,16 +401,16 @@ public class ModifyNotebookClient extends BaseClient {
     /**
      * put 请求 - WithContextV2 方法
      * 返回包含 HTTP 状态码的完整响应
-     *
+     * <p>
      * 注意：大多数情况下应该使用 doPutSend() 方法，它会自动处理错误
      * 只有在需要手动处理 HTTP 状态码时才使用此方法
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
-     * @param head 请求头
+     * @param head       请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPutWithContextV2(String path, ModifyNotebookRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doPutWithContextV2(String path, DeleteModelRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/json");
         return doRpcV2(path, requestObj, requestHeaders, "put", null);
@@ -418,15 +419,15 @@ public class ModifyNotebookClient extends BaseClient {
     /**
      * delete 请求 - WithContextV2 方法
      * 返回包含 HTTP 状态码的完整响应
-     *
+     * <p>
      * 注意：大多数情况下应该使用 doDeleteSend() 方法，它会自动处理错误
      * 只有在需要手动处理 HTTP 状态码时才使用此方法
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doDeleteWithContextV2(String path, ModifyNotebookRequest requestObj) {
+    public HttpResponseWrapper doDeleteWithContextV2(String path, DeleteModelRequest requestObj) {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doDeleteWithContextV2(path, requestObj, head);
@@ -435,16 +436,16 @@ public class ModifyNotebookClient extends BaseClient {
     /**
      * delete 请求 - WithContextV2 方法
      * 返回包含 HTTP 状态码的完整响应
-     *
+     * <p>
      * 注意：大多数情况下应该使用 doDeleteSend() 方法，它会自动处理错误
      * 只有在需要手动处理 HTTP 状态码时才使用此方法
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
-     * @param head 请求头
+     * @param head       请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doDeleteWithContextV2(String path, ModifyNotebookRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doDeleteWithContextV2(String path, DeleteModelRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/json");
         return doRpcV2(path, requestObj, requestHeaders, "delete", null);
@@ -458,7 +459,7 @@ public class ModifyNotebookClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public ModifyNotebookResponse doPost(String path, ModifyNotebookRequest requestObj) throws Exception {
+    public DeleteModelResponse doPost(String path, DeleteModelRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doPost(path, requestObj, head);
@@ -473,21 +474,22 @@ public class ModifyNotebookClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public ModifyNotebookResponse doPost(String path, ModifyNotebookRequest requestObj, Map<String, String> head) throws Exception {
+    public DeleteModelResponse doPost(String path, DeleteModelRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/json");
         String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, ModifyNotebookResponse.class);
+        return JSON.parseObject(response, DeleteModelResponse.class);
     }
 
     /**
      * post 请求
+     *
      * @param path
      * @param requestObj
      * @return
      * @throws Exception
      */
-    public ModifyNotebookResponse doPostRaw(String path, ModifyNotebookRequest requestObj) throws Exception {
+    public DeleteModelResponse doPostRaw(String path, DeleteModelRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doPostRaw(path, requestObj, head);
@@ -501,12 +503,13 @@ public class ModifyNotebookClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public ModifyNotebookResponse doPostRaw(String path, ModifyNotebookRequest requestObj, Map<String, String> head) throws Exception {
+    public DeleteModelResponse doPostRaw(String path, DeleteModelRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/json");
         String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, ModifyNotebookResponse.class);
+        return JSON.parseObject(response, DeleteModelResponse.class);
     }
+
     /**
      * get 请求
      *
@@ -515,7 +518,7 @@ public class ModifyNotebookClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public ModifyNotebookResponse doGet(String path, ModifyNotebookRequest requestObj) throws Exception {
+    public DeleteModelResponse doGet(String path, DeleteModelRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.putIfAbsent("Content-Type", "application/json");
         return doGet(path, requestObj, head);
@@ -530,11 +533,11 @@ public class ModifyNotebookClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public ModifyNotebookResponse doGet(String path, ModifyNotebookRequest requestObj, Map<String, String> head) throws Exception {
+    public DeleteModelResponse doGet(String path, DeleteModelRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/json");
         String response = doRpc(path, requestObj, requestHeaders, "get");
-        return JSON.parseObject(response, ModifyNotebookResponse.class);
+        return JSON.parseObject(response, DeleteModelResponse.class);
     }
 
     /**
@@ -545,7 +548,7 @@ public class ModifyNotebookClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public ModifyNotebookResponse doDelete(String path, ModifyNotebookRequest requestObj) throws Exception {
+    public DeleteModelResponse doDelete(String path, DeleteModelRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doDelete(path, requestObj, head);
@@ -560,11 +563,11 @@ public class ModifyNotebookClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public ModifyNotebookResponse doDelete(String path, ModifyNotebookRequest requestObj, Map<String, String> head) throws Exception {
+    public DeleteModelResponse doDelete(String path, DeleteModelRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/json");
         String response = doRpc(path, requestObj, requestHeaders, "delete");
-        return JSON.parseObject(response, ModifyNotebookResponse.class);
+        return JSON.parseObject(response, DeleteModelResponse.class);
     }
 
 
@@ -576,7 +579,7 @@ public class ModifyNotebookClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public ModifyNotebookResponse doPut(String path, ModifyNotebookRequest requestObj) throws Exception {
+    public DeleteModelResponse doPut(String path, DeleteModelRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.putIfAbsent("Content-Type", "application/json");
         return doPut(path, requestObj, head);
@@ -591,23 +594,23 @@ public class ModifyNotebookClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public ModifyNotebookResponse doPut(String path, ModifyNotebookRequest requestObj, Map<String, String> head) throws Exception {
+    public DeleteModelResponse doPut(String path, DeleteModelRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-       requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/json");
         String response = doRpc(path, requestObj, requestHeaders, "put");
-        return JSON.parseObject(response, ModifyNotebookResponse.class);
+        return JSON.parseObject(response, DeleteModelResponse.class);
     }
 
     /**
-         * rpc
-         *
+     * rpc
+     *
      * @param path
      * @param requestObj
      * @param head
      * @return
      * @throws Exception
      */
-    private String doRpc(String path, ModifyNotebookRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
+    private String doRpc(String path, DeleteModelRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
         //断言
         Objects.requireNonNull(path, "path cannot be null");
         Objects.requireNonNull(requestObj, "requestObj cannot be null");
@@ -639,7 +642,7 @@ public class ModifyNotebookClient extends BaseClient {
     }
 
 
-    private JSONObject getRequestParam(ModifyNotebookRequest requestObj, String contentType) throws Exception {
+    private JSONObject getRequestParam(DeleteModelRequest requestObj, String contentType) throws Exception {
         //请求参数
         if (contentType.equalsIgnoreCase("application/json")) {
             return getPostRawRequestParams(requestObj);
@@ -648,7 +651,7 @@ public class ModifyNotebookClient extends BaseClient {
     }
 
 
-    private JSONObject getSimpleRequestParams(ModifyNotebookRequest requestObj) throws Exception {
+    private JSONObject getSimpleRequestParams(DeleteModelRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
 
         //设置请求体请求参数
@@ -656,7 +659,7 @@ public class ModifyNotebookClient extends BaseClient {
         return requestParams;
     }
 
-    private JSONObject getPostRawRequestParams(ModifyNotebookRequest requestObj) throws Exception {
+    private JSONObject getPostRawRequestParams(DeleteModelRequest requestObj) throws Exception {
         JSONObject requestParams = new JSONObject();
 
         //设置请求体请求参数
@@ -667,14 +670,14 @@ public class ModifyNotebookClient extends BaseClient {
     /**
      * rpc v2 - 返回包含 HTTP 状态码的完整响应
      *
-     * @param path 请求路径
-     * @param requestObj 请求对象
-     * @param head 请求头
+     * @param path          请求路径
+     * @param requestObj    请求对象
+     * @param head          请求头
      * @param requestMethod HTTP 方法
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    private HttpResponseWrapper doRpcV2(String path, ModifyNotebookRequest requestObj, Map<String, String> head,
+    private HttpResponseWrapper doRpcV2(String path, DeleteModelRequest requestObj, Map<String, String> head,
                                         String requestMethod, UrlPathParams urlPathParams) {
         try {
             //断言

@@ -1,4 +1,4 @@
-package ksyun.client.aicp.querytokendata.v20240612;
+package ksyun.client.aicp.deletemodelversion.v20251212;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -13,13 +13,14 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.*;
 
 /**
-* @Classname QueryTokenDataClient
-* @Description 查询模型API token用量（限定半年内的）*/
+ * @Classname DeleteModelVersionClient
+ * @Description 删除模型版本
+ */
 @Slf4j
-public class QueryTokenDataClient extends BaseClient {
+public class DeleteModelVersionClient extends BaseClient {
     private final static String service = "aicp";
-    private final static String version = "2024-06-12";
-    private final static String action = "QueryTokenData";
+    private final static String version = "2025-12-12";
+    private final static String action = "DeleteModelVersion";
 
 
     /**
@@ -28,7 +29,7 @@ public class QueryTokenDataClient extends BaseClient {
     private Credential credential;
 
 
-    public QueryTokenDataClient(Credential credential) {
+    public DeleteModelVersionClient(Credential credential) {
         this.credential = credential;
     }
 
@@ -37,12 +38,12 @@ public class QueryTokenDataClient extends BaseClient {
      * post 请求 - Send 方法
      * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
-     * @return QueryTokenDataResponse 响应对象
+     * @return DeleteModelVersionResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public QueryTokenDataResponse doPostSend(String path, QueryTokenDataRequest requestObj) throws RuntimeException {
+    public DeleteModelVersionResponse doPostSend(String path, DeleteModelVersionRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPostSend(path, requestObj, head);
@@ -52,16 +53,16 @@ public class QueryTokenDataClient extends BaseClient {
      * post 请求 - Send 方法（支持 URL 路径参数和自定义 Header）
      * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
      *
-     * @param path 请求路径
-     * @param requestObj 请求对象
+     * @param path          请求路径
+     * @param requestObj    请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return QueryTokenDataResponse 响应对象
+     * @return DeleteModelVersionResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public QueryTokenDataResponse doPostSend(String path, QueryTokenDataRequest requestObj,
-                                         UrlPathParams urlPathParams,
-                                         Map<String, String> customHeaders) throws RuntimeException {
+    public DeleteModelVersionResponse doPostSend(String path, DeleteModelVersionRequest requestObj,
+                                                 UrlPathParams urlPathParams,
+                                                 Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         if (customHeaders != null && !customHeaders.isEmpty()) {
@@ -74,13 +75,13 @@ public class QueryTokenDataClient extends BaseClient {
      * post 请求 - Send 方法
      * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
-     * @param head 请求头
-     * @return QueryTokenDataResponse 响应对象
+     * @param head       请求头
+     * @return DeleteModelVersionResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public QueryTokenDataResponse doPostSend(String path, QueryTokenDataRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public DeleteModelVersionResponse doPostSend(String path, DeleteModelVersionRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("post", path, requestObj, head, null);
     }
 
@@ -88,15 +89,15 @@ public class QueryTokenDataClient extends BaseClient {
      * post 请求 - Send 方法（完整版，支持 URL 路径参数）
      * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
      *
-     * @param path 请求路径
-     * @param requestObj 请求对象
-     * @param head 请求头（包含自定义 Header）
+     * @param path          请求路径
+     * @param requestObj    请求对象
+     * @param head          请求头（包含自定义 Header）
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
-     * @return QueryTokenDataResponse 响应对象
+     * @return DeleteModelVersionResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public QueryTokenDataResponse doPostSend(String path, QueryTokenDataRequest requestObj, Map<String, String> head,
-                                         UrlPathParams urlPathParams) throws RuntimeException {
+    public DeleteModelVersionResponse doPostSend(String path, DeleteModelVersionRequest requestObj, Map<String, String> head,
+                                                 UrlPathParams urlPathParams) throws RuntimeException {
         return executeWithV2("post", path, requestObj, head, urlPathParams);
     }
 
@@ -104,12 +105,12 @@ public class QueryTokenDataClient extends BaseClient {
      * get 请求 - Send 方法
      * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
-     * @return QueryTokenDataResponse 响应对象
+     * @return DeleteModelVersionResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public QueryTokenDataResponse doGetSend(String path, QueryTokenDataRequest requestObj) throws RuntimeException {
+    public DeleteModelVersionResponse doGetSend(String path, DeleteModelVersionRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doGetSend(path, requestObj, head);
@@ -119,13 +120,13 @@ public class QueryTokenDataClient extends BaseClient {
      * get 请求 - Send 方法
      * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
-     * @param head 请求头
-     * @return QueryTokenDataResponse 响应对象
+     * @param head       请求头
+     * @return DeleteModelVersionResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public QueryTokenDataResponse doGetSend(String path, QueryTokenDataRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public DeleteModelVersionResponse doGetSend(String path, DeleteModelVersionRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("get", path, requestObj, head, null);
     }
 
@@ -133,16 +134,16 @@ public class QueryTokenDataClient extends BaseClient {
      * get 请求 - Send 方法（支持 URL 路径参数和自定义 Header）
      * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
      *
-     * @param path 请求路径
-     * @param requestObj 请求对象
+     * @param path          请求路径
+     * @param requestObj    请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return QueryTokenDataResponse 响应对象
+     * @return DeleteModelVersionResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public QueryTokenDataResponse doGetSend(String path, QueryTokenDataRequest requestObj,
-                                        UrlPathParams urlPathParams,
-                                        Map<String, String> customHeaders) throws RuntimeException {
+    public DeleteModelVersionResponse doGetSend(String path, DeleteModelVersionRequest requestObj,
+                                                UrlPathParams urlPathParams,
+                                                Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         if (customHeaders != null && !customHeaders.isEmpty()) {
@@ -155,12 +156,12 @@ public class QueryTokenDataClient extends BaseClient {
      * put 请求 - Send 方法
      * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
-     * @return QueryTokenDataResponse 响应对象
+     * @return DeleteModelVersionResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public QueryTokenDataResponse doPutSend(String path, QueryTokenDataRequest requestObj) throws RuntimeException {
+    public DeleteModelVersionResponse doPutSend(String path, DeleteModelVersionRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPutSend(path, requestObj, head);
@@ -170,13 +171,13 @@ public class QueryTokenDataClient extends BaseClient {
      * put 请求 - Send 方法
      * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
-     * @param head 请求头
-     * @return QueryTokenDataResponse 响应对象
+     * @param head       请求头
+     * @return DeleteModelVersionResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public QueryTokenDataResponse doPutSend(String path, QueryTokenDataRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public DeleteModelVersionResponse doPutSend(String path, DeleteModelVersionRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("put", path, requestObj, head, null);
     }
 
@@ -184,16 +185,16 @@ public class QueryTokenDataClient extends BaseClient {
      * put 请求 - Send 方法（支持 URL 路径参数和自定义 Header）
      * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
      *
-     * @param path 请求路径
-     * @param requestObj 请求对象
+     * @param path          请求路径
+     * @param requestObj    请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return QueryTokenDataResponse 响应对象
+     * @return DeleteModelVersionResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public QueryTokenDataResponse doPutSend(String path, QueryTokenDataRequest requestObj,
-                                        UrlPathParams urlPathParams,
-                                        Map<String, String> customHeaders) throws RuntimeException {
+    public DeleteModelVersionResponse doPutSend(String path, DeleteModelVersionRequest requestObj,
+                                                UrlPathParams urlPathParams,
+                                                Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         if (customHeaders != null && !customHeaders.isEmpty()) {
@@ -206,12 +207,12 @@ public class QueryTokenDataClient extends BaseClient {
      * delete 请求 - Send 方法
      * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
-     * @return QueryTokenDataResponse 响应对象
+     * @return DeleteModelVersionResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public QueryTokenDataResponse doDeleteSend(String path, QueryTokenDataRequest requestObj) throws RuntimeException {
+    public DeleteModelVersionResponse doDeleteSend(String path, DeleteModelVersionRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDeleteSend(path, requestObj, head);
@@ -221,13 +222,13 @@ public class QueryTokenDataClient extends BaseClient {
      * delete 请求 - Send 方法
      * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
-     * @param head 请求头
-     * @return QueryTokenDataResponse 响应对象
+     * @param head       请求头
+     * @return DeleteModelVersionResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public QueryTokenDataResponse doDeleteSend(String path, QueryTokenDataRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public DeleteModelVersionResponse doDeleteSend(String path, DeleteModelVersionRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("delete", path, requestObj, head, null);
     }
 
@@ -235,16 +236,16 @@ public class QueryTokenDataClient extends BaseClient {
      * delete 请求 - Send 方法（支持 URL 路径参数和自定义 Header）
      * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
      *
-     * @param path 请求路径
-     * @param requestObj 请求对象
+     * @param path          请求路径
+     * @param requestObj    请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return QueryTokenDataResponse 响应对象
+     * @return DeleteModelVersionResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public QueryTokenDataResponse doDeleteSend(String path, QueryTokenDataRequest requestObj,
-                                           UrlPathParams urlPathParams,
-                                           Map<String, String> customHeaders) throws RuntimeException {
+    public DeleteModelVersionResponse doDeleteSend(String path, DeleteModelVersionRequest requestObj,
+                                                   UrlPathParams urlPathParams,
+                                                   Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         if (customHeaders != null && !customHeaders.isEmpty()) {
@@ -257,16 +258,16 @@ public class QueryTokenDataClient extends BaseClient {
      * 通用的 V2 执行方法 - 处理状态码检查和响应解析
      * 被所有 Send 方法调用
      *
-     * @param method HTTP 方法
-     * @param path 请求路径
-     * @param requestObj 请求对象
-     * @param head 请求头
+     * @param method        HTTP 方法
+     * @param path          请求路径
+     * @param requestObj    请求对象
+     * @param head          请求头
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
-     * @return QueryTokenDataResponse 响应对象
+     * @return DeleteModelVersionResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    private QueryTokenDataResponse executeWithV2(String method, String path, QueryTokenDataRequest requestObj,
-                                             Map<String, String> head, UrlPathParams urlPathParams) throws RuntimeException {
+    private DeleteModelVersionResponse executeWithV2(String method, String path, DeleteModelVersionRequest requestObj,
+                                                     Map<String, String> head, UrlPathParams urlPathParams) throws RuntimeException {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
 
@@ -276,9 +277,9 @@ public class QueryTokenDataClient extends BaseClient {
         // 1. 检查是否有异常
         if (wrapper.hasException()) {
             throw new RuntimeException(
-                String.format("[KsyunSDKError] [HttpCode:0 Err:%s] Request failed",
-                    wrapper.getException().getMessage()),
-                wrapper.getException()
+                    String.format("[KsyunSDKError] [HttpCode:0 Err:%s] Request failed",
+                            wrapper.getException().getMessage()),
+                    wrapper.getException()
             );
         }
 
@@ -288,8 +289,8 @@ public class QueryTokenDataClient extends BaseClient {
         // 2. 检查 HTTP 状态码(200-299 为成功)
         if (statusCode < 200 || statusCode > 299) {
             throw new RuntimeException(
-                String.format("[KsyunSDKError] [HttpCode:%d Err:Request failed] %s",
-                    statusCode, message)
+                    String.format("[KsyunSDKError] [HttpCode:%d Err:Request failed] %s",
+                            statusCode, message)
             );
         }
 
@@ -300,12 +301,12 @@ public class QueryTokenDataClient extends BaseClient {
 
         // 4. 解析 JSON 响应
         try {
-            return JSON.parseObject(message, QueryTokenDataResponse.class);
+            return JSON.parseObject(message, DeleteModelVersionResponse.class);
         } catch (Exception e) {
             throw new RuntimeException(
-                String.format("[KsyunSDKError] [HttpCode:%d Err:%s] %s",
-                    statusCode, e.getMessage(), message),
-                e
+                    String.format("[KsyunSDKError] [HttpCode:%d Err:%s] %s",
+                            statusCode, e.getMessage(), message),
+                    e
             );
         }
     }
@@ -313,15 +314,15 @@ public class QueryTokenDataClient extends BaseClient {
     /**
      * post 请求 - WithContextV2 方法
      * 返回包含 HTTP 状态码的完整响应
-     *
+     * <p>
      * 注意：大多数情况下应该使用 doPostSend() 方法，它会自动处理错误
      * 只有在需要手动处理 HTTP 状态码时才使用此方法
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPostWithContextV2(String path, QueryTokenDataRequest requestObj) {
+    public HttpResponseWrapper doPostWithContextV2(String path, DeleteModelVersionRequest requestObj) {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPostWithContextV2(path, requestObj, head);
@@ -330,16 +331,16 @@ public class QueryTokenDataClient extends BaseClient {
     /**
      * post 请求 - WithContextV2 方法
      * 返回包含 HTTP 状态码的完整响应
-     *
+     * <p>
      * 注意：大多数情况下应该使用 doPostSend() 方法，它会自动处理错误
      * 只有在需要手动处理 HTTP 状态码时才使用此方法
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
-     * @param head 请求头
+     * @param head       请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPostWithContextV2(String path, QueryTokenDataRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doPostWithContextV2(String path, DeleteModelVersionRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doRpcV2(path, requestObj, requestHeaders, "post", null);
@@ -348,15 +349,15 @@ public class QueryTokenDataClient extends BaseClient {
     /**
      * get 请求 - WithContextV2 方法
      * 返回包含 HTTP 状态码的完整响应
-     *
+     * <p>
      * 注意：大多数情况下应该使用 doGetSend() 方法，它会自动处理错误
      * 只有在需要手动处理 HTTP 状态码时才使用此方法
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doGetWithContextV2(String path, QueryTokenDataRequest requestObj) {
+    public HttpResponseWrapper doGetWithContextV2(String path, DeleteModelVersionRequest requestObj) {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doGetWithContextV2(path, requestObj, head);
@@ -365,16 +366,16 @@ public class QueryTokenDataClient extends BaseClient {
     /**
      * get 请求 - WithContextV2 方法
      * 返回包含 HTTP 状态码的完整响应
-     *
+     * <p>
      * 注意：大多数情况下应该使用 doGetSend() 方法，它会自动处理错误
      * 只有在需要手动处理 HTTP 状态码时才使用此方法
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
-     * @param head 请求头
+     * @param head       请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doGetWithContextV2(String path, QueryTokenDataRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doGetWithContextV2(String path, DeleteModelVersionRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doRpcV2(path, requestObj, requestHeaders, "get", null);
@@ -383,15 +384,15 @@ public class QueryTokenDataClient extends BaseClient {
     /**
      * put 请求 - WithContextV2 方法
      * 返回包含 HTTP 状态码的完整响应
-     *
+     * <p>
      * 注意：大多数情况下应该使用 doPutSend() 方法，它会自动处理错误
      * 只有在需要手动处理 HTTP 状态码时才使用此方法
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPutWithContextV2(String path, QueryTokenDataRequest requestObj) {
+    public HttpResponseWrapper doPutWithContextV2(String path, DeleteModelVersionRequest requestObj) {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPutWithContextV2(path, requestObj, head);
@@ -400,16 +401,16 @@ public class QueryTokenDataClient extends BaseClient {
     /**
      * put 请求 - WithContextV2 方法
      * 返回包含 HTTP 状态码的完整响应
-     *
+     * <p>
      * 注意：大多数情况下应该使用 doPutSend() 方法，它会自动处理错误
      * 只有在需要手动处理 HTTP 状态码时才使用此方法
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
-     * @param head 请求头
+     * @param head       请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPutWithContextV2(String path, QueryTokenDataRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doPutWithContextV2(String path, DeleteModelVersionRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doRpcV2(path, requestObj, requestHeaders, "put", null);
@@ -418,15 +419,15 @@ public class QueryTokenDataClient extends BaseClient {
     /**
      * delete 请求 - WithContextV2 方法
      * 返回包含 HTTP 状态码的完整响应
-     *
+     * <p>
      * 注意：大多数情况下应该使用 doDeleteSend() 方法，它会自动处理错误
      * 只有在需要手动处理 HTTP 状态码时才使用此方法
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doDeleteWithContextV2(String path, QueryTokenDataRequest requestObj) {
+    public HttpResponseWrapper doDeleteWithContextV2(String path, DeleteModelVersionRequest requestObj) {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDeleteWithContextV2(path, requestObj, head);
@@ -435,16 +436,16 @@ public class QueryTokenDataClient extends BaseClient {
     /**
      * delete 请求 - WithContextV2 方法
      * 返回包含 HTTP 状态码的完整响应
-     *
+     * <p>
      * 注意：大多数情况下应该使用 doDeleteSend() 方法，它会自动处理错误
      * 只有在需要手动处理 HTTP 状态码时才使用此方法
      *
-     * @param path 请求路径
+     * @param path       请求路径
      * @param requestObj 请求对象
-     * @param head 请求头
+     * @param head       请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doDeleteWithContextV2(String path, QueryTokenDataRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doDeleteWithContextV2(String path, DeleteModelVersionRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doRpcV2(path, requestObj, requestHeaders, "delete", null);
@@ -458,7 +459,7 @@ public class QueryTokenDataClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public QueryTokenDataResponse doPost(String path, QueryTokenDataRequest requestObj) throws Exception {
+    public DeleteModelVersionResponse doPost(String path, DeleteModelVersionRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
@@ -473,40 +474,42 @@ public class QueryTokenDataClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public QueryTokenDataResponse doPost(String path, QueryTokenDataRequest requestObj, Map<String, String> head) throws Exception {
+    public DeleteModelVersionResponse doPost(String path, DeleteModelVersionRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, QueryTokenDataResponse.class);
+        return JSON.parseObject(response, DeleteModelVersionResponse.class);
     }
 
     /**
-    * post 请求
-    * @param path
-    * @param requestObj
-    * @return
-    * @throws Exception
-    */
-    public QueryTokenDataResponse doPostRaw(String path, QueryTokenDataRequest requestObj) throws Exception {
+     * post 请求
+     *
+     * @param path
+     * @param requestObj
+     * @return
+     * @throws Exception
+     */
+    public DeleteModelVersionResponse doPostRaw(String path, DeleteModelVersionRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPostRaw(path, requestObj, head);
     }
 
     /**
-    * post 请求
-    *
-    * @param path
-    * @param requestObj
-    * @return
-    * @throws Exception
-    */
-    public QueryTokenDataResponse doPostRaw(String path, QueryTokenDataRequest requestObj, Map<String, String> head) throws Exception {
+     * post 请求
+     *
+     * @param path
+     * @param requestObj
+     * @return
+     * @throws Exception
+     */
+    public DeleteModelVersionResponse doPostRaw(String path, DeleteModelVersionRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, QueryTokenDataResponse.class);
+        return JSON.parseObject(response, DeleteModelVersionResponse.class);
     }
+
     /**
      * get 请求
      *
@@ -515,27 +518,27 @@ public class QueryTokenDataClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public QueryTokenDataResponse doGet(String path, QueryTokenDataRequest requestObj) throws Exception {
+    public DeleteModelVersionResponse doGet(String path, DeleteModelVersionRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doGet(path, requestObj, head);
     }
 
-        /**
-         * get 请求
-         *
-         * @param path
-         * @param requestObj
-         * @param head
-         * @return
-         * @throws Exception
-         */
-        public QueryTokenDataResponse doGet(String path, QueryTokenDataRequest requestObj, Map<String, String> head) throws Exception {
-            final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-            requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
-            String response = doRpc(path, requestObj, requestHeaders, "get");
-            return JSON.parseObject(response, QueryTokenDataResponse.class);
-        }
+    /**
+     * get 请求
+     *
+     * @param path
+     * @param requestObj
+     * @param head
+     * @return
+     * @throws Exception
+     */
+    public DeleteModelVersionResponse doGet(String path, DeleteModelVersionRequest requestObj, Map<String, String> head) throws Exception {
+        final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        String response = doRpc(path, requestObj, requestHeaders, "get");
+        return JSON.parseObject(response, DeleteModelVersionResponse.class);
+    }
 
     /**
      * doDelete 请求
@@ -545,7 +548,7 @@ public class QueryTokenDataClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public QueryTokenDataResponse doDelete(String path, QueryTokenDataRequest requestObj) throws Exception {
+    public DeleteModelVersionResponse doDelete(String path, DeleteModelVersionRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDelete(path, requestObj, head);
@@ -560,11 +563,11 @@ public class QueryTokenDataClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public QueryTokenDataResponse doDelete(String path, QueryTokenDataRequest requestObj, Map<String, String> head) throws Exception {
+    public DeleteModelVersionResponse doDelete(String path, DeleteModelVersionRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "delete");
-        return JSON.parseObject(response, QueryTokenDataResponse.class);
+        return JSON.parseObject(response, DeleteModelVersionResponse.class);
     }
 
 
@@ -576,7 +579,7 @@ public class QueryTokenDataClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public QueryTokenDataResponse doPut(String path, QueryTokenDataRequest requestObj) throws Exception {
+    public DeleteModelVersionResponse doPut(String path, DeleteModelVersionRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doPut(path, requestObj, head);
@@ -591,90 +594,90 @@ public class QueryTokenDataClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public QueryTokenDataResponse doPut(String path, QueryTokenDataRequest requestObj, Map<String, String> head) throws Exception {
+    public DeleteModelVersionResponse doPut(String path, DeleteModelVersionRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-       requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "put");
-        return JSON.parseObject(response, QueryTokenDataResponse.class);
+        return JSON.parseObject(response, DeleteModelVersionResponse.class);
     }
 
     /**
-         * rpc
-         *
-         * @param path
-         * @param requestObj
-         * @param head
-         * @return
-         * @throws Exception
-         */
-        private String doRpc(String path, QueryTokenDataRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
-            //断言
-            Objects.requireNonNull(path, "path cannot be null");
-            Objects.requireNonNull(requestObj, "requestObj cannot be null");
-            Objects.requireNonNull(requestMethod, "requestMethod cannot be null");
-            Objects.requireNonNull(head, "head cannot be null");
+     * rpc
+     *
+     * @param path
+     * @param requestObj
+     * @param head
+     * @return
+     * @throws Exception
+     */
+    private String doRpc(String path, DeleteModelVersionRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
+        //断言
+        Objects.requireNonNull(path, "path cannot be null");
+        Objects.requireNonNull(requestObj, "requestObj cannot be null");
+        Objects.requireNonNull(requestMethod, "requestMethod cannot be null");
+        Objects.requireNonNull(head, "head cannot be null");
 
-            //请求上下文
-            RpcRequestContentModel requestContentModel = RpcRequestContentModel.builder()
-                    .action(action)
-                    .version(version)
-                    .service(service)
-                    .region(credential.getRegion())
-                    .accessKeyId(credential.getSecretKey())
-                    .secretAccessKey(credential.getSignStr())
-                    .build();
+        //请求上下文
+        RpcRequestContentModel requestContentModel = RpcRequestContentModel.builder()
+                .action(action)
+                .version(version)
+                .service(service)
+                .region(credential.getRegion())
+                .accessKeyId(credential.getSecretKey())
+                .secretAccessKey(credential.getSignStr())
+                .build();
 
-            // 根据内容类型设置请求体
-            String contentType = head.getOrDefault("Content-Type", "application/x-www-form-urlencoded");
-            JSONObject requestParam = getRequestParam(requestObj, contentType);
+        // 根据内容类型设置请求体
+        String contentType = head.getOrDefault("Content-Type", "application/x-www-form-urlencoded");
+        JSONObject requestParam = getRequestParam(requestObj, contentType);
 
-            //uri
-            path = path + "?Action=" + action + "&Version=" + version;
+        //uri
+        path = path + "?Action=" + action + "&Version=" + version;
 
-            //发起请求
-            String response = new RpcRequestClient(requestContentModel).beginRpcRequest(path, requestMethod, requestParam, head);
-            log.info("doRpc end,path:{},params:{},head:{}", path, JSONObject.toJSON(requestParam), head);
-            return response;
+        //发起请求
+        String response = new RpcRequestClient(requestContentModel).beginRpcRequest(path, requestMethod, requestParam, head);
+        log.info("doRpc end,path:{},params:{},head:{}", path, JSONObject.toJSON(requestParam), head);
+        return response;
 
+    }
+
+
+    private JSONObject getRequestParam(DeleteModelVersionRequest requestObj, String contentType) throws Exception {
+        //请求参数
+        if (contentType.equalsIgnoreCase("application/json")) {
+            return getPostRawRequestParams(requestObj);
         }
+        return getSimpleRequestParams(requestObj);
+    }
 
 
-        private JSONObject getRequestParam(QueryTokenDataRequest requestObj, String contentType) throws Exception {
-            //请求参数
-            if (contentType.equalsIgnoreCase("application/json")) {
-                return getPostRawRequestParams(requestObj);
-            }
-            return getSimpleRequestParams(requestObj);
-        }
+    private JSONObject getSimpleRequestParams(DeleteModelVersionRequest requestObj) throws Exception {
+        JSONObject requestParams = new JSONObject();
 
+        //设置请求体请求参数
+        setRequestField(requestObj, requestParams);
+        return requestParams;
+    }
 
-        private JSONObject getSimpleRequestParams(QueryTokenDataRequest requestObj) throws Exception {
-            JSONObject requestParams = new JSONObject();
+    private JSONObject getPostRawRequestParams(DeleteModelVersionRequest requestObj) throws Exception {
+        JSONObject requestParams = new JSONObject();
 
-            //设置请求体请求参数
-            setRequestField(requestObj, requestParams);
-            return requestParams;
-        }
-
-        private JSONObject getPostRawRequestParams(QueryTokenDataRequest requestObj) throws Exception {
-            JSONObject requestParams = new JSONObject();
-
-            //设置请求体请求参数
-            setRequestFieldForPostRaw(requestObj, requestParams);
-            return requestParams;
-        }
+        //设置请求体请求参数
+        setRequestFieldForPostRaw(requestObj, requestParams);
+        return requestParams;
+    }
 
     /**
      * rpc v2 - 返回包含 HTTP 状态码的完整响应
      *
-     * @param path 请求路径
-     * @param requestObj 请求对象
-     * @param head 请求头
+     * @param path          请求路径
+     * @param requestObj    请求对象
+     * @param head          请求头
      * @param requestMethod HTTP 方法
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    private HttpResponseWrapper doRpcV2(String path, QueryTokenDataRequest requestObj, Map<String, String> head,
+    private HttpResponseWrapper doRpcV2(String path, DeleteModelVersionRequest requestObj, Map<String, String> head,
                                         String requestMethod, UrlPathParams urlPathParams) {
         try {
             //断言
