@@ -14,11 +14,11 @@ import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.SerializerProvider;
-import common.annotation.KsYunField;
+import org.apache.commons.lang3.StringUtils;
+
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.Collection;
-import org.apache.commons.lang3.StringUtils;
 
 public class KsYunFieldPropertySerializer
 extends JsonSerializer<Object> {

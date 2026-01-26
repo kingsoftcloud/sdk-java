@@ -15,9 +15,13 @@ package common.aws;
 import com.alibaba.fastjson.JSON;
 import common.auth.KscClientException;
 import common.auth.SigningAlgorithm;
-import common.aws.AWS4EncryptionFactory;
-import common.aws.BinaryUtils;
 import common.utils.SdkHttpUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.crypto.Mac;
+import javax.crypto.spec.SecretKeySpec;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -29,11 +33,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.TimeZone;
 import java.util.stream.Collectors;
-import javax.crypto.Mac;
-import javax.crypto.spec.SecretKeySpec;
-import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 @Deprecated
 public class AWS4EncryptionUtils {

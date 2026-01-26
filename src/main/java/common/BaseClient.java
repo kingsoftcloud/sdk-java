@@ -18,21 +18,20 @@ import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.Module;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
-import common.Credential;
-import common.HttpResponseWrapper;
 import common.annotation.KsYunField;
 import common.annotation.KsYunFieldPropertySerializer;
 import common.exception.ClientException;
 import common.utils.RpcRequestClient;
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.lang.reflect.Field;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
-import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class BaseClient {
     protected static final Logger log = LoggerFactory.getLogger(BaseClient.class);

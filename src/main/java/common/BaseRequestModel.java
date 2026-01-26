@@ -3,8 +3,6 @@
  */
 package common;
 
-import common.Credential;
-
 public class BaseRequestModel {
     private String service;
     private String action;

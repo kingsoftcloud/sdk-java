@@ -42,32 +42,10 @@ package common.utils;
 import com.alibaba.fastjson.JSONObject;
 import common.HttpResponseWrapper;
 import common.RpcRequestContentModel;
-import common.utils.HttpClientUtils;
-import java.io.UnsupportedEncodingException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URLEncoder;
-import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
-import java.util.stream.Collectors;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpDelete;
-import org.apache.http.client.methods.HttpEntityEnclosingRequestBase;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpHead;
-import org.apache.http.client.methods.HttpOptions;
-import org.apache.http.client.methods.HttpPatch;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.client.methods.HttpPut;
-import org.apache.http.client.methods.HttpRequestBase;
-import org.apache.http.client.methods.HttpUriRequest;
+import org.apache.http.client.methods.*;
 import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -85,6 +63,18 @@ import software.amazon.awssdk.http.SdkHttpMethod;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.utils.StringInputStream;
 import software.amazon.awssdk.utils.StringUtils;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URLEncoder;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class RpcRequestClient {
     private static final Logger log = LoggerFactory.getLogger(RpcRequestClient.class);
@@ -174,12 +164,25 @@ public class RpcRequestClient {
     public SdkHttpFullRequest createUnsignedRequest(String endpoint, SdkHttpMethod method, Map<String, Object> requestParam, Map<String, String> head) throws URISyntaxException {
         URI uri = new URI(endpoint);
         SdkHttpFullRequest.Builder builder = SdkHttpFullRequest.builder().method(method).uri(uri);
-        if (method == SdkHttpMethod.GET || method == SdkHttpMethod.DELETE || method == SdkHttpMethod.HEAD || method == SdkHttpMethod.OPTIONS) {
+        String contentType = head.getOrDefault("Content-Type", "application/x-www-form-urlencoded");
+
+        if (method == SdkHttpMethod.GET || method == SdkHttpMethod.HEAD || method == SdkHttpMethod.OPTIONS) {
+            // GET/HEAD/OPTIONS 参数放在 query string
             if (requestParam != null) {
                 requestParam.entrySet().stream().filter(entry -> entry.getValue() != null).sorted(Map.Entry.comparingByKey()).forEach(entry -> builder.putRawQueryParameter((String)entry.getKey(), entry.getValue().toString()));
             }
+        } else if (method == SdkHttpMethod.DELETE) {
+            // DELETE: 如果是 application/json 则放 body，否则放 query string
+            if (requestParam != null && !requestParam.isEmpty()) {
+                if ("application/json".equalsIgnoreCase(contentType)) {
+                    String jsonBody = this.buildJsonBody(requestParam);
+                    builder.putHeader("Content-Type", "application/json").contentStreamProvider(() -> new StringInputStream(jsonBody));
+                } else {
+                    requestParam.entrySet().stream().filter(entry -> entry.getValue() != null).sorted(Map.Entry.comparingByKey()).forEach(entry -> builder.putRawQueryParameter((String)entry.getKey(), entry.getValue().toString()));
+                }
+            }
         } else if (!(method != SdkHttpMethod.POST && method != SdkHttpMethod.PUT && method != SdkHttpMethod.PATCH || requestParam == null || requestParam.isEmpty())) {
-            String contentType = head.getOrDefault("Content-Type", "application/x-www-form-urlencoded");
+            // POST/PUT/PATCH 参数放在 body
             if ("application/json".equalsIgnoreCase(contentType)) {
                 String jsonBody = this.buildJsonBody(requestParam);
                 builder.putHeader("Content-Type", "application/json").contentStreamProvider(() -> new StringInputStream(jsonBody));
@@ -219,7 +222,8 @@ public class RpcRequestClient {
                 return new HttpPut(signedRequest.getUri());
             }
             case DELETE: {
-                return new HttpDelete(signedRequest.getUri());
+                // 使用支持 body 的 HttpDeleteWithBody
+                return new HttpDeleteWithBody(signedRequest.getUri());
             }
             case PATCH: {
                 return new HttpPatch(signedRequest.getUri());
@@ -232,6 +236,33 @@ public class RpcRequestClient {
             }
         }
         throw new UnsupportedOperationException("Method not supported: " + signedRequest.method());
+    }
+
+    /**
+     * 支持 body 的 HttpDelete 实现
+     * 标准的 HttpDelete 不支持设置请求体，这个类继承 HttpEntityEnclosingRequestBase 来支持 body
+     */
+    private static class HttpDeleteWithBody extends HttpEntityEnclosingRequestBase {
+        public static final String METHOD_NAME = "DELETE";
+
+        public HttpDeleteWithBody() {
+            super();
+        }
+
+        public HttpDeleteWithBody(final URI uri) {
+            super();
+            setURI(uri);
+        }
+
+        public HttpDeleteWithBody(final String uri) {
+            super();
+            setURI(URI.create(uri));
+        }
+
+        @Override
+        public String getMethod() {
+            return METHOD_NAME;
+        }
     }
 
     private void addHeaders(HttpRequestBase httpRequest, SdkHttpFullRequest signedRequest) {
