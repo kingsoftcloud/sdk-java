@@ -351,4 +351,8 @@ storage_bond*/
     @KsYunField(name="RoceCluster")
     private String RoceCluster;
 
+    /**子机型*/
+    @KsYunField(name="GroupSubType")
+    private String GroupSubType;
+
 }

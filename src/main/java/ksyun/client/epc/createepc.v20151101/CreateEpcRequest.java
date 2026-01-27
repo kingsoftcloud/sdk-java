@@ -390,4 +390,8 @@ storage_bond*/
     @KsYunField(name="UserDefinedData")
     private String UserDefinedData;
 
+    /**子机型*/
+    @KsYunField(name="GroupSubType")
+    private String GroupSubType;
+
 }
