@@ -57,7 +57,16 @@ extends JsonSerializer<Object> {
                     gen.writeEndArray();
                     continue;
                 }
-                gen.writeObjectField(propertyName, fieldValue);
+                // 判断是否为自定义嵌套对象，如果是则递归序列化
+                String typeName = fieldValue.getClass().getTypeName();
+                if (typeName.startsWith("java")) {
+                    // 基本类型或 Java 内置类型，直接写
+                    gen.writeObjectField(propertyName, fieldValue);
+                } else {
+                    // 自定义嵌套对象，递归序列化以支持无限层级
+                    gen.writeFieldName(propertyName);
+                    this.serialize(fieldValue, gen, serializers);
+                }
             }
             catch (IllegalAccessException e) {
                 e.printStackTrace();
