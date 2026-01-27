@@ -9,15 +9,13 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DeleteModelRequest
- * @Description 请求参数
- */
+* @Classname DeleteModelRequest
+* @Description 请求参数
+*/
 @Data
-public class DeleteModelRequest {
-    /**
-     * 模型ID
-     */
-    @KsYunField(name = "ModelId")
+public class DeleteModelRequest{
+    /**模型ID*/
+    @KsYunField(name="ModelId")
     private String ModelId;
 
 }

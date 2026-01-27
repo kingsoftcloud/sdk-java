@@ -44,7 +44,7 @@ public class StopNotebookClient extends BaseClient {
      */
     public StopNotebookResponse doPostSend(String path, StopNotebookRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPostSend(path, requestObj, head);
     }
 
@@ -63,7 +63,7 @@ public class StopNotebookClient extends BaseClient {
                                          UrlPathParams urlPathParams,
                                          Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         if (customHeaders != null && !customHeaders.isEmpty()) {
             head.putAll(customHeaders);
         }
@@ -111,7 +111,7 @@ public class StopNotebookClient extends BaseClient {
      */
     public StopNotebookResponse doGetSend(String path, StopNotebookRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doGetSend(path, requestObj, head);
     }
 
@@ -144,7 +144,7 @@ public class StopNotebookClient extends BaseClient {
                                         UrlPathParams urlPathParams,
                                         Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         if (customHeaders != null && !customHeaders.isEmpty()) {
             head.putAll(customHeaders);
         }
@@ -162,7 +162,7 @@ public class StopNotebookClient extends BaseClient {
      */
     public StopNotebookResponse doPutSend(String path, StopNotebookRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPutSend(path, requestObj, head);
     }
 
@@ -195,7 +195,7 @@ public class StopNotebookClient extends BaseClient {
                                         UrlPathParams urlPathParams,
                                         Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         if (customHeaders != null && !customHeaders.isEmpty()) {
             head.putAll(customHeaders);
         }
@@ -213,7 +213,7 @@ public class StopNotebookClient extends BaseClient {
      */
     public StopNotebookResponse doDeleteSend(String path, StopNotebookRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDeleteSend(path, requestObj, head);
     }
 
@@ -246,7 +246,7 @@ public class StopNotebookClient extends BaseClient {
                                            UrlPathParams urlPathParams,
                                            Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         if (customHeaders != null && !customHeaders.isEmpty()) {
             head.putAll(customHeaders);
         }
@@ -268,7 +268,7 @@ public class StopNotebookClient extends BaseClient {
     private StopNotebookResponse executeWithV2(String method, String path, StopNotebookRequest requestObj,
                                              Map<String, String> head, UrlPathParams urlPathParams) throws RuntimeException {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
 
         // 调用底层 V2 方法获取完整响应
         HttpResponseWrapper wrapper = doRpcV2(path, requestObj, requestHeaders, method, urlPathParams);
@@ -323,7 +323,7 @@ public class StopNotebookClient extends BaseClient {
      */
     public HttpResponseWrapper doPostWithContextV2(String path, StopNotebookRequest requestObj) {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPostWithContextV2(path, requestObj, head);
     }
 
@@ -341,7 +341,7 @@ public class StopNotebookClient extends BaseClient {
      */
     public HttpResponseWrapper doPostWithContextV2(String path, StopNotebookRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doRpcV2(path, requestObj, requestHeaders, "post", null);
     }
 
@@ -358,7 +358,7 @@ public class StopNotebookClient extends BaseClient {
      */
     public HttpResponseWrapper doGetWithContextV2(String path, StopNotebookRequest requestObj) {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doGetWithContextV2(path, requestObj, head);
     }
 
@@ -376,7 +376,7 @@ public class StopNotebookClient extends BaseClient {
      */
     public HttpResponseWrapper doGetWithContextV2(String path, StopNotebookRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doRpcV2(path, requestObj, requestHeaders, "get", null);
     }
 
@@ -393,7 +393,7 @@ public class StopNotebookClient extends BaseClient {
      */
     public HttpResponseWrapper doPutWithContextV2(String path, StopNotebookRequest requestObj) {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPutWithContextV2(path, requestObj, head);
     }
 
@@ -411,7 +411,7 @@ public class StopNotebookClient extends BaseClient {
      */
     public HttpResponseWrapper doPutWithContextV2(String path, StopNotebookRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doRpcV2(path, requestObj, requestHeaders, "put", null);
     }
 
@@ -428,7 +428,7 @@ public class StopNotebookClient extends BaseClient {
      */
     public HttpResponseWrapper doDeleteWithContextV2(String path, StopNotebookRequest requestObj) {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDeleteWithContextV2(path, requestObj, head);
     }
 
@@ -446,7 +446,7 @@ public class StopNotebookClient extends BaseClient {
      */
     public HttpResponseWrapper doDeleteWithContextV2(String path, StopNotebookRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doRpcV2(path, requestObj, requestHeaders, "delete", null);
     }
 
@@ -460,7 +460,7 @@ public class StopNotebookClient extends BaseClient {
      */
     public StopNotebookResponse doPost(String path, StopNotebookRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
     }
 
@@ -475,7 +475,7 @@ public class StopNotebookClient extends BaseClient {
      */
     public StopNotebookResponse doPost(String path, StopNotebookRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
         return JSON.parseObject(response, StopNotebookResponse.class);
     }
@@ -489,7 +489,7 @@ public class StopNotebookClient extends BaseClient {
     */
     public StopNotebookResponse doPostRaw(String path, StopNotebookRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPostRaw(path, requestObj, head);
     }
 
@@ -503,7 +503,7 @@ public class StopNotebookClient extends BaseClient {
     */
     public StopNotebookResponse doPostRaw(String path, StopNotebookRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
         return JSON.parseObject(response, StopNotebookResponse.class);
     }
@@ -517,7 +517,7 @@ public class StopNotebookClient extends BaseClient {
      */
     public StopNotebookResponse doGet(String path, StopNotebookRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.putIfAbsent("Content-Type", "application/json");
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doGet(path, requestObj, head);
     }
 
@@ -532,7 +532,7 @@ public class StopNotebookClient extends BaseClient {
          */
         public StopNotebookResponse doGet(String path, StopNotebookRequest requestObj, Map<String, String> head) throws Exception {
             final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-            requestHeaders.putIfAbsent("Content-Type", "application/json");
+            requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
             String response = doRpc(path, requestObj, requestHeaders, "get");
             return JSON.parseObject(response, StopNotebookResponse.class);
         }
@@ -547,7 +547,7 @@ public class StopNotebookClient extends BaseClient {
      */
     public StopNotebookResponse doDelete(String path, StopNotebookRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDelete(path, requestObj, head);
     }
 
@@ -562,7 +562,7 @@ public class StopNotebookClient extends BaseClient {
      */
     public StopNotebookResponse doDelete(String path, StopNotebookRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "delete");
         return JSON.parseObject(response, StopNotebookResponse.class);
     }
@@ -578,7 +578,7 @@ public class StopNotebookClient extends BaseClient {
      */
     public StopNotebookResponse doPut(String path, StopNotebookRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.putIfAbsent("Content-Type", "application/json");
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doPut(path, requestObj, head);
     }
 
@@ -593,7 +593,7 @@ public class StopNotebookClient extends BaseClient {
      */
     public StopNotebookResponse doPut(String path, StopNotebookRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-       requestHeaders.putIfAbsent("Content-Type", "application/json");
+       requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "put");
         return JSON.parseObject(response, StopNotebookResponse.class);
     }

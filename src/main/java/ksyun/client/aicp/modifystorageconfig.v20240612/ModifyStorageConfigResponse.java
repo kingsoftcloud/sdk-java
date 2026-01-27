@@ -8,22 +8,18 @@ import lombok.ToString;
 import java.util.List;
 
 /**
- * @Classname ModifyStorageConfigResponse
- * @Description ModifyStorageConfig 返回体
- */
+* @Classname ModifyStorageConfigResponse
+* @Description ModifyStorageConfig 返回体
+*/
 @Data
 @ToString
 public class ModifyStorageConfigResponse extends BaseResponseModel {
 
-    /**
-     * 存储配置ID
-     */
+    /**存储配置ID*/
     @JsonProperty("StorageConfigId")
     private String StorageConfigId;
 
-    /**
-     * 请求ID
-     */
+    /**请求ID*/
     @JsonProperty("RequestId")
     private String RequestId;
 

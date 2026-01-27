@@ -14,7 +14,7 @@ import java.util.*;
 
 /**
 * @Classname DescribeNotebookLogClient
-* @Description 查看开发机日志*/
+* @Description 查看开发机的pod日志*/
 @Slf4j
 public class DescribeNotebookLogClient extends BaseClient {
     private final static String service = "aicp";

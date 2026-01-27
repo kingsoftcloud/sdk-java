@@ -276,11 +276,11 @@ public class DescribeNotebooksResponse extends BaseResponseModel {
     private Integer TotalCount;
 
     /**页码*/
-    @JsonProperty("Marker")
-    private Integer Marker;
+    @JsonProperty("Page")
+    private Integer Page;
 
     /**页大小*/
-    @JsonProperty("MaxResults")
-    private Integer MaxResults;
+    @JsonProperty("PageSize")
+    private Integer PageSize;
 
 }

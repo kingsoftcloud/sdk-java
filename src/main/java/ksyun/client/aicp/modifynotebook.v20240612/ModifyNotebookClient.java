@@ -13,8 +13,8 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.*;
 
 /**
- * @Classname ModifyNotebookClient
- * @Description 修改开发任务*/
+* @Classname ModifyNotebookClient
+* @Description 修改开发任务*/
 @Slf4j
 public class ModifyNotebookClient extends BaseClient {
     private final static String service = "aicp";
@@ -60,8 +60,8 @@ public class ModifyNotebookClient extends BaseClient {
      * @throws RuntimeException 如果请求失败
      */
     public ModifyNotebookResponse doPostSend(String path, ModifyNotebookRequest requestObj,
-                                             UrlPathParams urlPathParams,
-                                             Map<String, String> customHeaders) throws RuntimeException {
+                                         UrlPathParams urlPathParams,
+                                         Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         if (customHeaders != null && !customHeaders.isEmpty()) {
@@ -96,7 +96,7 @@ public class ModifyNotebookClient extends BaseClient {
      * @throws RuntimeException 如果请求失败
      */
     public ModifyNotebookResponse doPostSend(String path, ModifyNotebookRequest requestObj, Map<String, String> head,
-                                             UrlPathParams urlPathParams) throws RuntimeException {
+                                         UrlPathParams urlPathParams) throws RuntimeException {
         return executeWithV2("post", path, requestObj, head, urlPathParams);
     }
 
@@ -141,8 +141,8 @@ public class ModifyNotebookClient extends BaseClient {
      * @throws RuntimeException 如果请求失败
      */
     public ModifyNotebookResponse doGetSend(String path, ModifyNotebookRequest requestObj,
-                                            UrlPathParams urlPathParams,
-                                            Map<String, String> customHeaders) throws RuntimeException {
+                                        UrlPathParams urlPathParams,
+                                        Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         if (customHeaders != null && !customHeaders.isEmpty()) {
@@ -192,8 +192,8 @@ public class ModifyNotebookClient extends BaseClient {
      * @throws RuntimeException 如果请求失败
      */
     public ModifyNotebookResponse doPutSend(String path, ModifyNotebookRequest requestObj,
-                                            UrlPathParams urlPathParams,
-                                            Map<String, String> customHeaders) throws RuntimeException {
+                                        UrlPathParams urlPathParams,
+                                        Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         if (customHeaders != null && !customHeaders.isEmpty()) {
@@ -243,8 +243,8 @@ public class ModifyNotebookClient extends BaseClient {
      * @throws RuntimeException 如果请求失败
      */
     public ModifyNotebookResponse doDeleteSend(String path, ModifyNotebookRequest requestObj,
-                                               UrlPathParams urlPathParams,
-                                               Map<String, String> customHeaders) throws RuntimeException {
+                                           UrlPathParams urlPathParams,
+                                           Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         if (customHeaders != null && !customHeaders.isEmpty()) {
@@ -266,7 +266,7 @@ public class ModifyNotebookClient extends BaseClient {
      * @throws RuntimeException 如果请求失败
      */
     private ModifyNotebookResponse executeWithV2(String method, String path, ModifyNotebookRequest requestObj,
-                                                 Map<String, String> head, UrlPathParams urlPathParams) throws RuntimeException {
+                                             Map<String, String> head, UrlPathParams urlPathParams) throws RuntimeException {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/json");
 
@@ -276,9 +276,9 @@ public class ModifyNotebookClient extends BaseClient {
         // 1. 检查是否有异常
         if (wrapper.hasException()) {
             throw new RuntimeException(
-                    String.format("[KsyunSDKError] [HttpCode:0 Err:%s] Request failed",
-                            wrapper.getException().getMessage()),
-                    wrapper.getException()
+                String.format("[KsyunSDKError] [HttpCode:0 Err:%s] Request failed",
+                    wrapper.getException().getMessage()),
+                wrapper.getException()
             );
         }
 
@@ -288,8 +288,8 @@ public class ModifyNotebookClient extends BaseClient {
         // 2. 检查 HTTP 状态码(200-299 为成功)
         if (statusCode < 200 || statusCode > 299) {
             throw new RuntimeException(
-                    String.format("[KsyunSDKError] [HttpCode:%d Err:Request failed] %s",
-                            statusCode, message)
+                String.format("[KsyunSDKError] [HttpCode:%d Err:Request failed] %s",
+                    statusCode, message)
             );
         }
 
@@ -303,9 +303,9 @@ public class ModifyNotebookClient extends BaseClient {
             return JSON.parseObject(message, ModifyNotebookResponse.class);
         } catch (Exception e) {
             throw new RuntimeException(
-                    String.format("[KsyunSDKError] [HttpCode:%d Err:%s] %s",
-                            statusCode, e.getMessage(), message),
-                    e
+                String.format("[KsyunSDKError] [HttpCode:%d Err:%s] %s",
+                    statusCode, e.getMessage(), message),
+                e
             );
         }
     }
@@ -481,12 +481,12 @@ public class ModifyNotebookClient extends BaseClient {
     }
 
     /**
-     * post 请求
-     * @param path
-     * @param requestObj
-     * @return
-     * @throws Exception
-     */
+    * post 请求
+    * @param path
+    * @param requestObj
+    * @return
+    * @throws Exception
+    */
     public ModifyNotebookResponse doPostRaw(String path, ModifyNotebookRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
@@ -494,13 +494,13 @@ public class ModifyNotebookClient extends BaseClient {
     }
 
     /**
-     * post 请求
-     *
-     * @param path
-     * @param requestObj
-     * @return
-     * @throws Exception
-     */
+    * post 请求
+    *
+    * @param path
+    * @param requestObj
+    * @return
+    * @throws Exception
+    */
     public ModifyNotebookResponse doPostRaw(String path, ModifyNotebookRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/json");
@@ -521,21 +521,21 @@ public class ModifyNotebookClient extends BaseClient {
         return doGet(path, requestObj, head);
     }
 
-    /**
-     * get 请求
-     *
-     * @param path
-     * @param requestObj
-     * @param head
-     * @return
-     * @throws Exception
-     */
-    public ModifyNotebookResponse doGet(String path, ModifyNotebookRequest requestObj, Map<String, String> head) throws Exception {
-        final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
-        String response = doRpc(path, requestObj, requestHeaders, "get");
-        return JSON.parseObject(response, ModifyNotebookResponse.class);
-    }
+        /**
+         * get 请求
+         *
+         * @param path
+         * @param requestObj
+         * @param head
+         * @return
+         * @throws Exception
+         */
+        public ModifyNotebookResponse doGet(String path, ModifyNotebookRequest requestObj, Map<String, String> head) throws Exception {
+            final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
+            requestHeaders.putIfAbsent("Content-Type", "application/json");
+            String response = doRpc(path, requestObj, requestHeaders, "get");
+            return JSON.parseObject(response, ModifyNotebookResponse.class);
+        }
 
     /**
      * doDelete 请求
@@ -601,68 +601,68 @@ public class ModifyNotebookClient extends BaseClient {
     /**
          * rpc
          *
-     * @param path
-     * @param requestObj
-     * @param head
-     * @return
-     * @throws Exception
-     */
-    private String doRpc(String path, ModifyNotebookRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
-        //断言
-        Objects.requireNonNull(path, "path cannot be null");
-        Objects.requireNonNull(requestObj, "requestObj cannot be null");
-        Objects.requireNonNull(requestMethod, "requestMethod cannot be null");
-        Objects.requireNonNull(head, "head cannot be null");
+         * @param path
+         * @param requestObj
+         * @param head
+         * @return
+         * @throws Exception
+         */
+        private String doRpc(String path, ModifyNotebookRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
+            //断言
+            Objects.requireNonNull(path, "path cannot be null");
+            Objects.requireNonNull(requestObj, "requestObj cannot be null");
+            Objects.requireNonNull(requestMethod, "requestMethod cannot be null");
+            Objects.requireNonNull(head, "head cannot be null");
 
-        //请求上下文
-        RpcRequestContentModel requestContentModel = RpcRequestContentModel.builder()
-                .action(action)
-                .version(version)
-                .service(service)
-                .region(credential.getRegion())
-                .accessKeyId(credential.getSecretKey())
-                .secretAccessKey(credential.getSignStr())
-                .build();
+            //请求上下文
+            RpcRequestContentModel requestContentModel = RpcRequestContentModel.builder()
+                    .action(action)
+                    .version(version)
+                    .service(service)
+                    .region(credential.getRegion())
+                    .accessKeyId(credential.getSecretKey())
+                    .secretAccessKey(credential.getSignStr())
+                    .build();
 
-        // 根据内容类型设置请求体
-        String contentType = head.getOrDefault("Content-Type", "application/x-www-form-urlencoded");
-        JSONObject requestParam = getRequestParam(requestObj, contentType);
+            // 根据内容类型设置请求体
+            String contentType = head.getOrDefault("Content-Type", "application/x-www-form-urlencoded");
+            JSONObject requestParam = getRequestParam(requestObj, contentType);
 
-        //uri
-        path = path + "?Action=" + action + "&Version=" + version;
+            //uri
+            path = path + "?Action=" + action + "&Version=" + version;
 
-        //发起请求
-        String response = new RpcRequestClient(requestContentModel).beginRpcRequest(path, requestMethod, requestParam, head);
-        log.info("doRpc end,path:{},params:{},head:{}", path, JSONObject.toJSON(requestParam), head);
-        return response;
+            //发起请求
+            String response = new RpcRequestClient(requestContentModel).beginRpcRequest(path, requestMethod, requestParam, head);
+            log.info("doRpc end,path:{},params:{},head:{}", path, JSONObject.toJSON(requestParam), head);
+            return response;
 
-    }
-
-
-    private JSONObject getRequestParam(ModifyNotebookRequest requestObj, String contentType) throws Exception {
-        //请求参数
-        if (contentType.equalsIgnoreCase("application/json")) {
-            return getPostRawRequestParams(requestObj);
         }
-        return getSimpleRequestParams(requestObj);
-    }
 
 
-    private JSONObject getSimpleRequestParams(ModifyNotebookRequest requestObj) throws Exception {
-        JSONObject requestParams = new JSONObject();
+        private JSONObject getRequestParam(ModifyNotebookRequest requestObj, String contentType) throws Exception {
+            //请求参数
+            if (contentType.equalsIgnoreCase("application/json")) {
+                return getPostRawRequestParams(requestObj);
+            }
+            return getSimpleRequestParams(requestObj);
+        }
 
-        //设置请求体请求参数
-        setRequestField(requestObj, requestParams);
-        return requestParams;
-    }
 
-    private JSONObject getPostRawRequestParams(ModifyNotebookRequest requestObj) throws Exception {
-        JSONObject requestParams = new JSONObject();
+        private JSONObject getSimpleRequestParams(ModifyNotebookRequest requestObj) throws Exception {
+            JSONObject requestParams = new JSONObject();
 
-        //设置请求体请求参数
-        setRequestFieldForPostRaw(requestObj, requestParams);
-        return requestParams;
-    }
+            //设置请求体请求参数
+            setRequestField(requestObj, requestParams);
+            return requestParams;
+        }
+
+        private JSONObject getPostRawRequestParams(ModifyNotebookRequest requestObj) throws Exception {
+            JSONObject requestParams = new JSONObject();
+
+            //设置请求体请求参数
+            setRequestFieldForPostRaw(requestObj, requestParams);
+            return requestParams;
+        }
 
     /**
      * rpc v2 - 返回包含 HTTP 状态码的完整响应

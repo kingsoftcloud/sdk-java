@@ -23,16 +23,12 @@ public class DescribeNotebooksRequest{
     private String Name;
 
     /**页数*/
-    @KsYunField(name="Marker")
-    private Integer Marker;
+    @KsYunField(name="Page")
+    private Integer Page;
 
     /**每页查询数目*/
-    @KsYunField(name="MaxResults")
-    private Integer MaxResults;
-
-    /**开发任务状态*/
-    @KsYunField(name="State")
-    private String State;
+    @KsYunField(name="PageSize")
+    private Integer PageSize;
 
     /**条件过滤*/
     @KsYunField(name="Filter",type=1)

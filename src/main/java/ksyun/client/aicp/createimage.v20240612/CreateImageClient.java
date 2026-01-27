@@ -44,7 +44,7 @@ public class CreateImageClient extends BaseClient {
      */
     public CreateImageResponse doPostSend(String path, CreateImageRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doPostSend(path, requestObj, head);
     }
 
@@ -63,7 +63,7 @@ public class CreateImageClient extends BaseClient {
                                          UrlPathParams urlPathParams,
                                          Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         if (customHeaders != null && !customHeaders.isEmpty()) {
             head.putAll(customHeaders);
         }
@@ -111,7 +111,7 @@ public class CreateImageClient extends BaseClient {
      */
     public CreateImageResponse doGetSend(String path, CreateImageRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doGetSend(path, requestObj, head);
     }
 
@@ -144,7 +144,7 @@ public class CreateImageClient extends BaseClient {
                                         UrlPathParams urlPathParams,
                                         Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         if (customHeaders != null && !customHeaders.isEmpty()) {
             head.putAll(customHeaders);
         }
@@ -162,7 +162,7 @@ public class CreateImageClient extends BaseClient {
      */
     public CreateImageResponse doPutSend(String path, CreateImageRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doPutSend(path, requestObj, head);
     }
 
@@ -195,7 +195,7 @@ public class CreateImageClient extends BaseClient {
                                         UrlPathParams urlPathParams,
                                         Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         if (customHeaders != null && !customHeaders.isEmpty()) {
             head.putAll(customHeaders);
         }
@@ -213,7 +213,7 @@ public class CreateImageClient extends BaseClient {
      */
     public CreateImageResponse doDeleteSend(String path, CreateImageRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doDeleteSend(path, requestObj, head);
     }
 
@@ -246,7 +246,7 @@ public class CreateImageClient extends BaseClient {
                                            UrlPathParams urlPathParams,
                                            Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         if (customHeaders != null && !customHeaders.isEmpty()) {
             head.putAll(customHeaders);
         }
@@ -268,7 +268,7 @@ public class CreateImageClient extends BaseClient {
     private CreateImageResponse executeWithV2(String method, String path, CreateImageRequest requestObj,
                                              Map<String, String> head, UrlPathParams urlPathParams) throws RuntimeException {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        requestHeaders.putIfAbsent("Content-Type", "application/json");
 
         // 调用底层 V2 方法获取完整响应
         HttpResponseWrapper wrapper = doRpcV2(path, requestObj, requestHeaders, method, urlPathParams);
@@ -323,7 +323,7 @@ public class CreateImageClient extends BaseClient {
      */
     public HttpResponseWrapper doPostWithContextV2(String path, CreateImageRequest requestObj) {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doPostWithContextV2(path, requestObj, head);
     }
 
@@ -341,7 +341,7 @@ public class CreateImageClient extends BaseClient {
      */
     public HttpResponseWrapper doPostWithContextV2(String path, CreateImageRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        requestHeaders.putIfAbsent("Content-Type", "application/json");
         return doRpcV2(path, requestObj, requestHeaders, "post", null);
     }
 
@@ -358,7 +358,7 @@ public class CreateImageClient extends BaseClient {
      */
     public HttpResponseWrapper doGetWithContextV2(String path, CreateImageRequest requestObj) {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doGetWithContextV2(path, requestObj, head);
     }
 
@@ -376,7 +376,7 @@ public class CreateImageClient extends BaseClient {
      */
     public HttpResponseWrapper doGetWithContextV2(String path, CreateImageRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        requestHeaders.putIfAbsent("Content-Type", "application/json");
         return doRpcV2(path, requestObj, requestHeaders, "get", null);
     }
 
@@ -393,7 +393,7 @@ public class CreateImageClient extends BaseClient {
      */
     public HttpResponseWrapper doPutWithContextV2(String path, CreateImageRequest requestObj) {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doPutWithContextV2(path, requestObj, head);
     }
 
@@ -411,7 +411,7 @@ public class CreateImageClient extends BaseClient {
      */
     public HttpResponseWrapper doPutWithContextV2(String path, CreateImageRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        requestHeaders.putIfAbsent("Content-Type", "application/json");
         return doRpcV2(path, requestObj, requestHeaders, "put", null);
     }
 
@@ -428,7 +428,7 @@ public class CreateImageClient extends BaseClient {
      */
     public HttpResponseWrapper doDeleteWithContextV2(String path, CreateImageRequest requestObj) {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doDeleteWithContextV2(path, requestObj, head);
     }
 
@@ -446,7 +446,7 @@ public class CreateImageClient extends BaseClient {
      */
     public HttpResponseWrapper doDeleteWithContextV2(String path, CreateImageRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        requestHeaders.putIfAbsent("Content-Type", "application/json");
         return doRpcV2(path, requestObj, requestHeaders, "delete", null);
     }
 
@@ -460,7 +460,7 @@ public class CreateImageClient extends BaseClient {
      */
     public CreateImageResponse doPost(String path, CreateImageRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doPost(path, requestObj, head);
     }
 
@@ -475,7 +475,7 @@ public class CreateImageClient extends BaseClient {
      */
     public CreateImageResponse doPost(String path, CreateImageRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        requestHeaders.putIfAbsent("Content-Type", "application/json");
         String response = doRpc(path, requestObj, requestHeaders, "post");
         return JSON.parseObject(response, CreateImageResponse.class);
     }
@@ -489,7 +489,7 @@ public class CreateImageClient extends BaseClient {
     */
     public CreateImageResponse doPostRaw(String path, CreateImageRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doPostRaw(path, requestObj, head);
     }
 
@@ -503,7 +503,7 @@ public class CreateImageClient extends BaseClient {
     */
     public CreateImageResponse doPostRaw(String path, CreateImageRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        requestHeaders.putIfAbsent("Content-Type", "application/json");
         String response = doRpc(path, requestObj, requestHeaders, "post");
         return JSON.parseObject(response, CreateImageResponse.class);
     }
@@ -517,7 +517,7 @@ public class CreateImageClient extends BaseClient {
      */
     public CreateImageResponse doGet(String path, CreateImageRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        head.putIfAbsent("Content-Type", "application/json");
         return doGet(path, requestObj, head);
     }
 
@@ -532,7 +532,7 @@ public class CreateImageClient extends BaseClient {
          */
         public CreateImageResponse doGet(String path, CreateImageRequest requestObj, Map<String, String> head) throws Exception {
             final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-            requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+            requestHeaders.putIfAbsent("Content-Type", "application/json");
             String response = doRpc(path, requestObj, requestHeaders, "get");
             return JSON.parseObject(response, CreateImageResponse.class);
         }
@@ -547,7 +547,7 @@ public class CreateImageClient extends BaseClient {
      */
     public CreateImageResponse doDelete(String path, CreateImageRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doDelete(path, requestObj, head);
     }
 
@@ -562,7 +562,7 @@ public class CreateImageClient extends BaseClient {
      */
     public CreateImageResponse doDelete(String path, CreateImageRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        requestHeaders.putIfAbsent("Content-Type", "application/json");
         String response = doRpc(path, requestObj, requestHeaders, "delete");
         return JSON.parseObject(response, CreateImageResponse.class);
     }
@@ -578,7 +578,7 @@ public class CreateImageClient extends BaseClient {
      */
     public CreateImageResponse doPut(String path, CreateImageRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        head.putIfAbsent("Content-Type", "application/json");
         return doPut(path, requestObj, head);
     }
 
@@ -593,7 +593,7 @@ public class CreateImageClient extends BaseClient {
      */
     public CreateImageResponse doPut(String path, CreateImageRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-       requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+       requestHeaders.putIfAbsent("Content-Type", "application/json");
         String response = doRpc(path, requestObj, requestHeaders, "put");
         return JSON.parseObject(response, CreateImageResponse.class);
     }

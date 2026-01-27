@@ -9,15 +9,13 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DeleteStorageConfigRequest
- * @Description 请求参数
- */
+* @Classname DeleteStorageConfigRequest
+* @Description 请求参数
+*/
 @Data
-public class DeleteStorageConfigRequest {
-    /**
-     * 存储配置Id
-     */
-    @KsYunField(name = "StorageConfigId")
+public class DeleteStorageConfigRequest{
+    /**存储配置Id*/
+    @KsYunField(name="StorageConfigId")
     private String StorageConfigId;
 
 }

@@ -8,22 +8,18 @@ import lombok.ToString;
 import java.util.List;
 
 /**
- * @Classname ModifyModelVersionResponse
- * @Description ModifyModelVersion 返回体
- */
+* @Classname ModifyModelVersionResponse
+* @Description ModifyModelVersion 返回体
+*/
 @Data
 @ToString
 public class ModifyModelVersionResponse extends BaseResponseModel {
 
-    /**
-     * 请求ID
-     */
+    /**请求ID*/
     @JsonProperty("RequestId")
     private String RequestId;
 
-    /**
-     * 模型版本ID
-     */
+    /**模型版本ID*/
     @JsonProperty("ModelVersionId")
     private String ModelVersionId;
 

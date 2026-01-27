@@ -13,8 +13,8 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.*;
 
 /**
- * @Classname DescribeQueuesClient
- * @Description 查询资源组队列*/
+* @Classname DescribeQueuesClient
+* @Description 查询资源组队列*/
 @Slf4j
 public class DescribeQueuesClient extends BaseClient {
     private final static String service = "aicp";
@@ -607,7 +607,7 @@ public class DescribeQueuesClient extends BaseClient {
          * @return
          * @throws Exception
          */
-    private String doRpc(String path, DescribeQueuesRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
+        private String doRpc(String path, DescribeQueuesRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
             //断言
             Objects.requireNonNull(path, "path cannot be null");
             Objects.requireNonNull(requestObj, "requestObj cannot be null");
@@ -639,7 +639,7 @@ public class DescribeQueuesClient extends BaseClient {
         }
 
 
-    private JSONObject getRequestParam(DescribeQueuesRequest requestObj, String contentType) throws Exception {
+        private JSONObject getRequestParam(DescribeQueuesRequest requestObj, String contentType) throws Exception {
             //请求参数
             if (contentType.equalsIgnoreCase("application/json")) {
                 return getPostRawRequestParams(requestObj);
@@ -648,7 +648,7 @@ public class DescribeQueuesClient extends BaseClient {
         }
 
 
-    private JSONObject getSimpleRequestParams(DescribeQueuesRequest requestObj) throws Exception {
+        private JSONObject getSimpleRequestParams(DescribeQueuesRequest requestObj) throws Exception {
             JSONObject requestParams = new JSONObject();
 
             //设置请求体请求参数
@@ -656,7 +656,7 @@ public class DescribeQueuesClient extends BaseClient {
             return requestParams;
         }
 
-    private JSONObject getPostRawRequestParams(DescribeQueuesRequest requestObj) throws Exception {
+        private JSONObject getPostRawRequestParams(DescribeQueuesRequest requestObj) throws Exception {
             JSONObject requestParams = new JSONObject();
 
             //设置请求体请求参数

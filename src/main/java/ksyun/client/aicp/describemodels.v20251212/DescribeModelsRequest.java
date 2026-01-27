@@ -9,33 +9,25 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
- * @Classname DescribeModelsRequest
- * @Description 请求参数
- */
+* @Classname DescribeModelsRequest
+* @Description 请求参数
+*/
 @Data
-public class DescribeModelsRequest {
-    /**
-     * 模型ID列表
-     */
-    @KsYunField(name = "ModelId.N", type = 2)
+public class DescribeModelsRequest{
+    /**模型ID列表*/
+    @KsYunField(name="ModelId.N",type=2)
     private List<String> ModelIdNList;
 
-    /**
-     * 模型名称(支持模糊查询)
-     */
-    @KsYunField(name = "ModelName")
+    /**模型名称(支持模糊查询)*/
+    @KsYunField(name="ModelName")
     private String ModelName;
 
-    /**
-     * 页码
-     */
-    @KsYunField(name = "Page")
+    /**页码*/
+    @KsYunField(name="Page")
     private Integer Page;
 
-    /**
-     * 每页数量
-     */
-    @KsYunField(name = "PageSize")
+    /**每页数量*/
+    @KsYunField(name="PageSize")
     private Integer PageSize;
 
 }

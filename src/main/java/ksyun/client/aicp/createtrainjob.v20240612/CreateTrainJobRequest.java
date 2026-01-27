@@ -83,6 +83,10 @@ public class CreateTrainJobRequest{
         @KsYunField(name="Master")
         private Integer Master;
 
+        /**Worker节点个数 0-10000*/
+        @KsYunField(name="Worker")
+        private Integer Worker;
+
     }
 
     /**重启策略，可选值：

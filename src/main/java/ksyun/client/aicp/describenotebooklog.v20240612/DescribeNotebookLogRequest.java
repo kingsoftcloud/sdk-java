@@ -14,4 +14,16 @@ import java.util.Arrays;
 */
 @Data
 public class DescribeNotebookLogRequest{
+    /**开发任务Id*/
+    @KsYunField(name="NotebookId")
+    private String NotebookId;
+
+    /**日志默认显示时间，单位秒；比如10分钟内的，值为600*/
+    @KsYunField(name="SinceSeconds")
+    private Integer SinceSeconds;
+
+    /**日志显示行数，比如显示30行，值为30*/
+    @KsYunField(name="TailLines")
+    private String TailLines;
+
 }
