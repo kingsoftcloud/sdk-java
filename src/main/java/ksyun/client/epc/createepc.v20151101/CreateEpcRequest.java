@@ -49,6 +49,7 @@ public class CreateEpcRequest{
 		- EC-I-V-III：高性能计算型-V-III
 		- EC-I-V-V：高性能计算型-V-V
 		- EC-I-V-VI：高性能计算型-V-VI
+		- ……
 	- GPU型	
 		- GPU-I：GPU I型
 		- P3E：GPU裸金属服务器实例标准型
@@ -66,15 +67,23 @@ public class CreateEpcRequest{
 		- GN3-III：推理I型-III
 		- GND5：效能V型
 		- CMLU1：寒武纪I型
-		- ...*/
+		- ……
+- 说明：当使用标准机型创建裸金属服务器时，该参数需传入标准机型的CODE(形如GN3-II)；当使用套餐组开机时，该参数需传入套餐组的CODE(形如GROUP-GM301)，和GroupSubType字段二者必须有一个不为空*/
     @KsYunField(name="HostType")
     private String HostType;
 
-    /**可用区的名称*/
+    /**- 裸金属服务器的子机型
+- 说明：当HostType传入套餐组的CODE时，才可指定子机型。传入该参数表示通过套餐组创建裸金属服务器时，指定创建套餐组内的某一子机型。取值逻辑为：套餐组CODE-子机型CODE,套餐组开机可以只传此参数，和HostType二者至少有一个不为空
+
+*/
+    @KsYunField(name="GroupSubType")
+    private String GroupSubType;
+
+    /**可用区*/
     @KsYunField(name="AvailabilityZone")
     private String AvailabilityZone;
 
-    /**数据盘Raid级别,和数据盘的数量直接相关 
+    /**数据盘Raid，和机型的数据盘的数量相关 
 有效值：
 - Jbod：直连模式
 - Raid1：数据盘数量必须是2的倍数
@@ -82,6 +91,7 @@ public class CreateEpcRequest{
 - Raid10：数据盘数量必须是4的倍数
 - Raid50：数据盘的数量必须大于6且是2的倍数
 - SRaid0：单盘SRaid0无限制，仅针对大数据业务自身有冗余的场景
+
 说明：Raid与RaidId必填其一，RaidId优先级高*/
     @KsYunField(name="Raid")
     private String Raid;
@@ -90,28 +100,35 @@ public class CreateEpcRequest{
     @KsYunField(name="RaidId")
     private String RaidId;
 
-    /**镜像资源ID,参见DescribeImages*/
+    /**镜像资源ID，参见DescribeImages*/
     @KsYunField(name="ImageId")
     private String ImageId;
 
-    /**网卡模式
+    /**VPC网卡模式
 有效值：
-bond4：bond模式
-single：非bond模式
-dual：双网卡模式
-windows创建时，只支持非bond模式。*/
+- bond4：bond模式
+- single：非bond模式
+- dual：双网卡模式
+- 说明：使用windows镜像创建时，仅支持非bond模式。*/
     @KsYunField(name="NetworkInterfaceMode")
     private String NetworkInterfaceMode;
 
-    /**云物理主机的子网ID*/
+    /**bond名称
+有效值： 
+- bond0
+- bond1*/
+    @KsYunField(name="BondAttribute")
+    private String BondAttribute;
+
+    /**裸金属服务器的子网ID*/
     @KsYunField(name="SubnetId")
     private String SubnetId;
 
-    /**内网资源IP地址*/
+    /**内网IP地址*/
     @KsYunField(name="PrivateIpAddress")
     private String PrivateIpAddress;
 
-    /**用户密钥对的资源ID*/
+    /**密钥对ID*/
     @KsYunField(name="keyId")
     private String KeyId;
 
@@ -127,16 +144,19 @@ windows创建时，只支持非bond模式。*/
     @KsYunField(name="DNS2")
     private String DNS2;
 
-    /**云物理主机名称*/
+    /**裸金属服务器的实例名称*/
     @KsYunField(name="HostName")
     private String HostName;
 
-    /**项目的ID*/
+    /**项目ID，表示资源所属项目，一个资源只能归属于一个项目。
+说明：默认项目的id为0。
+*/
     @KsYunField(name="ProjectId")
     private String ProjectId;
 
-    /**云物理主机计费类型，包年包月Monthly，按日月结Daily，试用Trial
--有效值：Monthly | Daily | Trial*/
+    /**裸金属服务器的计费方式
+当前支持：包年包月、按日月结、试用Trial
+- 有效值：Monthly | Daily | Trial*/
     @KsYunField(name="ChargeType")
     private String ChargeType;
 
@@ -148,7 +168,7 @@ windows创建时，只支持非bond模式。*/
     @KsYunField(name="Password")
     private String Password;
 
-    /**云监控
+    /**是否安装云监控agent
 - classic：经典版
 - no：不开启*/
     @KsYunField(name="CloudMonitorAgent")
@@ -255,11 +275,6 @@ windows创建时，只支持非bond模式。*/
     @KsYunField(name="NvmeDataDiskCatalogueSuffix")
     private String NvmeDataDiskCatalogueSuffix;
 
-    /**bond名称
-有效值： bond0|bond1*/
-    @KsYunField(name="BondAttribute")
-    private String BondAttribute;
-
     /**容器引擎组件类型*/
     @KsYunField(name="ContainerAgent")
     private String ContainerAgent;
@@ -280,7 +295,7 @@ windows创建时，只支持非bond模式。*/
     @KsYunField(name="OverclockingAttribute")
     private String OverclockingAttribute;
 
-    /**gpu版本*/
+    /**GPU驱动版本*/
     @KsYunField(name="GpuImageDriverId")
     private String GpuImageDriverId;
 
@@ -374,24 +389,24 @@ storage_bond*/
     @KsYunField(name="UserData")
     private String UserData;
 
-    /**存储网卡bond模式，仅支持bond3(bond)、single(非bond)*/
+    /**存储RoCE网卡bond模式
+有效值：
+- bond模式：bond3
+- 非bond模式：single*/
     @KsYunField(name="StorageRoceNetworkInterfaceMode")
     private String StorageRoceNetworkInterfaceMode;
 
-    /**计算roce集群名称*/
+    /**计算RoCE集群名称*/
     @KsYunField(name="RoceCluster")
     private String RoceCluster;
 
-    /**存储Roce卡集群名称*/
+    /**存储RoCE集群名称*/
     @KsYunField(name="SRoceCluster")
     private String SRoceCluster;
 
-    /**自定义脚本*/
+    /**实例自定义数据。设置的自定义数据必须经过Base64编码，且Base64编码前的自定义数据大小不能超过16KB。
+不填则默认为空。*/
     @KsYunField(name="UserDefinedData")
     private String UserDefinedData;
-
-    /**子机型*/
-    @KsYunField(name="GroupSubType")
-    private String GroupSubType;
 
 }

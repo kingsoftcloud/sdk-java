@@ -49,6 +49,7 @@ public class BatchCreateEpcRequest{
 		- EC-I-V-III：高性能计算型-V-III
 		- EC-I-V-V：高性能计算型-V-V
 		- EC-I-V-VI：高性能计算型-V-VI
+		- ……
 	- GPU型	
 		- GPU-I：GPU I型
 		- P3E：GPU裸金属服务器实例标准型
@@ -66,20 +67,29 @@ public class BatchCreateEpcRequest{
 		- GN3-III：推理I型-III
 		- GND5：效能V型
 		- CMLU1：寒武纪I型
-		- ...*/
+		- ……
+
+说明：当使用标准机型创建裸金属服务器时，该参数需传入标准机型的CODE(形如GN3-II)；当使用套餐组开机时，该参数需传入套餐组的CODE(形如GROUP-GM301)。*/
     @KsYunField(name="HostType")
     private String HostType;
 
-    /**可用区的名称*/
+    /**裸金属服务器的子机型
+说明：当HostType传入套餐组的CODE时，才可指定子机型。传入该参数表示通过套餐组创建裸金属服务器时，指定创建套餐组内的某一子机型。取值逻辑为：套餐组CODE-子机型CODE。*/
+    @KsYunField(name="GroupSubType")
+    private String GroupSubType;
+
+    /**可用区*/
     @KsYunField(name="AvailabilityZone")
     private String AvailabilityZone;
 
-    /**数据盘Raid级别,和数据盘的数量直接相关 
-有效值：  Raid1：数据盘数量必须是2的倍数
-Raid5：数据盘的数量必须大于等于3
-Raid10：数据盘数量必须是4的倍数
-Raid50：数据盘的数量必须大于6且是2的倍数
-SRaid0：单盘SRaid0无限制，仅针对大数据业务自身有冗余的场景
+    /**数据盘Raid，和数据盘的数量相关 
+有效值：
+- Raid1：数据盘数量必须是2的倍数
+- Raid5：数据盘的数量必须大于等于3
+- Raid10：数据盘数量必须是4的倍数
+- Raid50：数据盘的数量必须大于6且是2的倍数
+- SRaid0：单盘SRaid0无限制，仅针对大数据业务自身有冗余的场景
+
 与RaidId必填其一，RaidId优先级高*/
     @KsYunField(name="Raid")
     private String Raid;
@@ -88,7 +98,7 @@ SRaid0：单盘SRaid0无限制，仅针对大数据业务自身有冗余的场�
     @KsYunField(name="RaidId")
     private String RaidId;
 
-    /**镜像资源ID,参见DescribeImages*/
+    /**镜像ID，参见DescribeImages*/
     @KsYunField(name="ImageId")
     private String ImageId;
 
@@ -105,7 +115,7 @@ windows创建时，只支持非bond模式。*/
     @KsYunField(name="SubnetId")
     private String SubnetId;
 
-    /**用户密钥对的资源ID*/
+    /**密钥ID*/
     @KsYunField(name="keyId")
     private String KeyId;
 
@@ -337,22 +347,19 @@ windows创建时，只支持非bond模式。*/
     @KsYunField(name="DataDiskMount")
     private String DataDiskMount;
 
-    /**存储网卡名称，有效值：
-eth8x_bond
-storage_bond*/
+    /**存储RoCE网卡名称
+有效值：
+- eth8x_bond
+- storage_bond*/
     @KsYunField(name="StorageRoceNetworkCardName")
     private String StorageRoceNetworkCardName;
 
-    /**Roce存储卡集群名称*/
+    /**存储RoCE集群名称*/
     @KsYunField(name="SRoceCluster")
     private String SRoceCluster;
 
-    /**Roce计算卡集群名称*/
+    /**计算RoCE集群名称*/
     @KsYunField(name="RoceCluster")
     private String RoceCluster;
-
-    /**子机型*/
-    @KsYunField(name="GroupSubType")
-    private String GroupSubType;
 
 }

@@ -81,6 +81,28 @@ public class DescribeSoInstanceTypesResponse extends BaseResponseModel {
             private Integer EncryptedSize;
 
         }
+
+        /***/
+        @JsonProperty("LocalVolumes")
+        private List<InstanceTypesLocalVolumesDto> LocalVolumes;
+
+        @Data
+        @ToString
+        public static class InstanceTypesLocalVolumesDto {
+            /**硬盘大小*/
+            @JsonProperty("Size")
+            private Integer Size;
+
+            /**硬盘数量*/
+            @JsonProperty("Count")
+            private Integer Count;
+
+            /**硬盘类型*/
+            @JsonProperty("VolumeType")
+            private String VolumeType;
+
+        }
+
     }
 
     /**bHpwdXJja2RxemU1eG5sb3NzdGcW1-RCEq*******/

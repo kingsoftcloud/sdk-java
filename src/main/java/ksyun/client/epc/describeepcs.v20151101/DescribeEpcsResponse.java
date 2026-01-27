@@ -176,11 +176,12 @@ data：在系统的根目录下，系统里展示内容从/data1开始，如/dat
         GN3-III：推理I型-III
         GND5：效能V型
         CMLU1：寒武纪I型
-*/
+说明：当使用标准机型创建裸金属服务器时，该参数返回标准机型的CODE(形如GN3-II)；当使用套餐组开机时，该参数返回套餐组子机型的CODE(形如GM301-1)。*/
         @JsonProperty("HostType")
         private String HostType;
 
-        /**机型套餐组*/
+        /**套餐组
+说明：当创建裸金属服务器时HostType传入套餐组的CODE时，才返回该参数，表示示例机型所在的套餐组。*/
         @JsonProperty("GroupHostType")
         private String GroupHostType;
 
@@ -682,6 +683,35 @@ SSD
         /**Roce存储集群名称*/
         @JsonProperty("SRoceCluster")
         private String SRoceCluster;
+
+        /**套餐组子机型*/
+        @JsonProperty("GroupSubType")
+        private String GroupSubType;
+
+        /**标签*/
+        @JsonProperty("Tags")
+        private List<HostSetTagsDto> Tags;
+
+        @Data
+        @ToString
+        public static class HostSetTagsDto {
+            /**资源ID*/
+            @JsonProperty("ResourceId")
+            private String ResourceId;
+
+            /**标签ID*/
+            @JsonProperty("TagId")
+            private String TagId;
+
+            /**标签键*/
+            @JsonProperty("Key")
+            private String Key;
+
+            /**标签值*/
+            @JsonProperty("Value")
+            private String Value;
+
+        }
 
     }
 
