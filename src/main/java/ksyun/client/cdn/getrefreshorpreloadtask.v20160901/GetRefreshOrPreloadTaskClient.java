@@ -1,48 +1,62 @@
-<?php
-namespace  Ksyun\Client\Cdn\V20160901\Models;
+package ksyun.client.cdn.getrefreshorpreloadtask.v20160901;
 
-use Ksyun\Common\BaseModel;
-use Ksyun\Common\Http\HttpOptions;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import common.BaseClient;
+import common.Credential;
+import common.HttpResponseWrapper;
+import common.RpcRequestContentModel;
+import common.UrlPathParams;
+import common.utils.RpcRequestClient;
+import lombok.extern.slf4j.Slf4j;
 
-class GetRefreshOrPreloadTaskRequest extends BaseModel
-{
-    public $RequestParams = [
-         /**String**/
-        "DomainIds" => null,
-    ];
+import java.util.*;
+
+/**
+* @Classname GetRefreshOrPreloadTaskClient
+* @Description 刷新预热进度查询接口*/
+@Slf4j
+public class GetRefreshOrPreloadTaskClient extends BaseClient {
+    private final static String service = "cdn";
+    private final static String version = "2016-09-01";
+    private final static String action = "GetRefreshOrPreloadTask";
 
 
-    public function __construct(HttpOptions $httpOptions)
-    {
-        $httpOptions->setHeaderContentType("application/json");
+    /**
+     * 证书
+     */
+    private Credential credential;
+
+
+    public GetRefreshOrPreloadTaskClient(Credential credential) {
+        this.credential = credential;
     }
 
-    public function setParams($param = [])
-    {
-        if ($param === null) {
-            return;
-        }
-        if (array_key_exists("DomainIds",$param) and $param["DomainIds"] !== null) {
-            if(is_bool($param["DomainIds"])){
-                $this->RequestParams["DomainIds"] = $param["DomainIds"] ? "true" : "false";
-            } else {
-                $this->RequestParams["DomainIds"] = $param["DomainIds"];
-            }
-        }
 
+    /**
+     * post 请求 - Send 方法
+     * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
+     *
+     * @param path 请求路径
+     * @param requestObj 请求对象
+     * @return GetRefreshOrPreloadTaskResponse 响应对象
+     * @throws RuntimeException 如果请求失败
+     */
+    public GetRefreshOrPreloadTaskResponse doPostSend(String path, GetRefreshOrPreloadTaskRequest requestObj) throws RuntimeException {
+        Map<String, String> head = new HashMap<>();
+        head.put("Content-Type", "application/json");
+        return doPostSend(path, requestObj, head);
     }
 
-    private function _unserialize($name,$params)
-    {
-        if ($params === null) {
-            return;
-        }
-        foreach ($params as $key => $value){
-            $this->$name[$key] = $value;
-        }
-
-    }
-}��对象
+    /**
+     * post 请求 - Send 方法（支持 URL 路径参数和自定义 Header）
+     * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
+     *
+     * @param path 请求路径
+     * @param requestObj 请求对象
+     * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
+     * @param customHeaders 自定义 HTTP Header
+     * @return GetRefreshOrPreloadTaskResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
     public GetRefreshOrPreloadTaskResponse doPostSend(String path, GetRefreshOrPreloadTaskRequest requestObj,

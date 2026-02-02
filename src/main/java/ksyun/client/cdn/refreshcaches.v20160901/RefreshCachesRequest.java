@@ -1,22 +1,25 @@
 package ksyun.client.cdn.refreshcaches.v20160901;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import common.BaseResponseModel;
+import common.annotation.KsYunField;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Arrays;
 
 /**
-* @Classname RefreshCachesResponse
-* @Description RefreshCaches 返回体
+* @Classname RefreshCachesRequest
+* @Description 请求参数
 */
 @Data
-@ToString
-public class RefreshCachesResponse extends BaseResponseModel {
+public class RefreshCachesRequest{
+    /**Files*/
+    @KsYunField(name="Files")
+    private String Files;
 
-    /**RefreshTaskId*/
-    @JsonProperty("RefreshTaskId")
-    private String RefreshTaskId;
+    /**Dirs*/
+    @KsYunField(name="Dirs")
+    private String Dirs;
 
 }
