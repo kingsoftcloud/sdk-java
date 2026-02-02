@@ -14,7 +14,7 @@ import java.util.*;
 
 /**
 * @Classname StopEpcClient
-* @Description StopEpc*/
+* @Description 关机epc服务器*/
 @Slf4j
 public class StopEpcClient extends BaseClient {
     private final static String service = "epc";

@@ -14,7 +14,7 @@ import java.util.*;
 
 /**
 * @Classname ModifyEpcClient
-* @Description ModifyEpc*/
+* @Description 修改云物理主机信息*/
 @Slf4j
 public class ModifyEpcClient extends BaseClient {
     private final static String service = "epc";

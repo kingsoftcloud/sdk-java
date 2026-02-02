@@ -409,4 +409,8 @@ storage_bond*/
     @KsYunField(name="UserDefinedData")
     private String UserDefinedData;
 
+    /**由客户端生成的本次请求的不超过64个ASCII字符唯一标识，同一个ClientToken支持幂等*/
+    @KsYunField(name="ClientToken")
+    private String ClientToken;
+
 }

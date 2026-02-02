@@ -1,55 +1,69 @@
-<?php
-namespace  Ksyun\Client\Cdn\V20160901\Models;
+package ksyun.client.cdn.setcertificateconfig.v3;
 
-use Ksyun\Common\BaseModel;
-use Ksyun\Common\Http\HttpOptions;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import common.BaseClient;
+import common.Credential;
+import common.HttpResponseWrapper;
+import common.RpcRequestContentModel;
+import common.UrlPathParams;
+import common.utils.RpcRequestClient;
+import lombok.extern.slf4j.Slf4j;
 
-class GetRefreshOrPreloadTaskRequest extends BaseModel
-{
-    public $RequestParams = [
-         /**String**/
-        "DomainIds" => null,
-    ];
+import java.util.*;
+
+/**
+* @Classname SetCertificateConfigClient
+* @Description 为域名配置证书V3*/
+@Slf4j
+public class SetCertificateConfigClient extends BaseClient {
+    private final static String service = "cdn";
+    private final static String version = "V3";
+    private final static String action = "SetCertificateConfig";
 
 
-    public function __construct(HttpOptions $httpOptions)
-    {
-        $httpOptions->setHeaderContentType("application/json");
+    /**
+     * 证书
+     */
+    private Credential credential;
+
+
+    public SetCertificateConfigClient(Credential credential) {
+        this.credential = credential;
     }
 
-    public function setParams($param = [])
-    {
-        if ($param === null) {
-            return;
-        }
-        if (array_key_exists("DomainIds",$param) and $param["DomainIds"] !== null) {
-            if(is_bool($param["DomainIds"])){
-                $this->RequestParams["DomainIds"] = $param["DomainIds"] ? "true" : "false";
-            } else {
-                $this->RequestParams["DomainIds"] = $param["DomainIds"];
-            }
-        }
 
-    }
-
-    private function _unserialize($name,$params)
-    {
-        if ($params === null) {
-            return;
-        }
-        foreach ($params as $key => $value){
-            $this->$name[$key] = $value;
-        }
-
-    }
-}��对象
+    /**
+     * post 请求 - Send 方法
+     * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
+     *
+     * @param path 请求路径
+     * @param requestObj 请求对象
+     * @return SetCertificateConfigResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public GetRefreshOrPreloadTaskResponse doPostSend(String path, GetRefreshOrPreloadTaskRequest requestObj,
+    public SetCertificateConfigResponse doPostSend(String path, SetCertificateConfigRequest requestObj) throws RuntimeException {
+        Map<String, String> head = new HashMap<>();
+        head.put("Content-Type", "application/x-www-form-urlencoded");
+        return doPostSend(path, requestObj, head);
+    }
+
+    /**
+     * post 请求 - Send 方法（支持 URL 路径参数和自定义 Header）
+     * 在底层调用 WithContextV2，自动处理状态码检查和响应解析
+     *
+     * @param path 请求路径
+     * @param requestObj 请求对象
+     * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
+     * @param customHeaders 自定义 HTTP Header
+     * @return SetCertificateConfigResponse 响应对象
+     * @throws RuntimeException 如果请求失败
+     */
+    public SetCertificateConfigResponse doPostSend(String path, SetCertificateConfigRequest requestObj,
                                          UrlPathParams urlPathParams,
                                          Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         if (customHeaders != null && !customHeaders.isEmpty()) {
             head.putAll(customHeaders);
         }
@@ -63,10 +77,10 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
      * @param path 请求路径
      * @param requestObj 请求对象
      * @param head 请求头
-     * @return GetRefreshOrPreloadTaskResponse 响应对象
+     * @return SetCertificateConfigResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public GetRefreshOrPreloadTaskResponse doPostSend(String path, GetRefreshOrPreloadTaskRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public SetCertificateConfigResponse doPostSend(String path, SetCertificateConfigRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("post", path, requestObj, head, null);
     }
 
@@ -78,10 +92,10 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
      * @param requestObj 请求对象
      * @param head 请求头（包含自定义 Header）
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
-     * @return GetRefreshOrPreloadTaskResponse 响应对象
+     * @return SetCertificateConfigResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public GetRefreshOrPreloadTaskResponse doPostSend(String path, GetRefreshOrPreloadTaskRequest requestObj, Map<String, String> head,
+    public SetCertificateConfigResponse doPostSend(String path, SetCertificateConfigRequest requestObj, Map<String, String> head,
                                          UrlPathParams urlPathParams) throws RuntimeException {
         return executeWithV2("post", path, requestObj, head, urlPathParams);
     }
@@ -92,12 +106,12 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
      *
      * @param path 请求路径
      * @param requestObj 请求对象
-     * @return GetRefreshOrPreloadTaskResponse 响应对象
+     * @return SetCertificateConfigResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public GetRefreshOrPreloadTaskResponse doGetSend(String path, GetRefreshOrPreloadTaskRequest requestObj) throws RuntimeException {
+    public SetCertificateConfigResponse doGetSend(String path, SetCertificateConfigRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doGetSend(path, requestObj, head);
     }
 
@@ -108,10 +122,10 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
      * @param path 请求路径
      * @param requestObj 请求对象
      * @param head 请求头
-     * @return GetRefreshOrPreloadTaskResponse 响应对象
+     * @return SetCertificateConfigResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public GetRefreshOrPreloadTaskResponse doGetSend(String path, GetRefreshOrPreloadTaskRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public SetCertificateConfigResponse doGetSend(String path, SetCertificateConfigRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("get", path, requestObj, head, null);
     }
 
@@ -123,14 +137,14 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
      * @param requestObj 请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return GetRefreshOrPreloadTaskResponse 响应对象
+     * @return SetCertificateConfigResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public GetRefreshOrPreloadTaskResponse doGetSend(String path, GetRefreshOrPreloadTaskRequest requestObj,
+    public SetCertificateConfigResponse doGetSend(String path, SetCertificateConfigRequest requestObj,
                                         UrlPathParams urlPathParams,
                                         Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         if (customHeaders != null && !customHeaders.isEmpty()) {
             head.putAll(customHeaders);
         }
@@ -143,12 +157,12 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
      *
      * @param path 请求路径
      * @param requestObj 请求对象
-     * @return GetRefreshOrPreloadTaskResponse 响应对象
+     * @return SetCertificateConfigResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public GetRefreshOrPreloadTaskResponse doPutSend(String path, GetRefreshOrPreloadTaskRequest requestObj) throws RuntimeException {
+    public SetCertificateConfigResponse doPutSend(String path, SetCertificateConfigRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPutSend(path, requestObj, head);
     }
 
@@ -159,10 +173,10 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
      * @param path 请求路径
      * @param requestObj 请求对象
      * @param head 请求头
-     * @return GetRefreshOrPreloadTaskResponse 响应对象
+     * @return SetCertificateConfigResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public GetRefreshOrPreloadTaskResponse doPutSend(String path, GetRefreshOrPreloadTaskRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public SetCertificateConfigResponse doPutSend(String path, SetCertificateConfigRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("put", path, requestObj, head, null);
     }
 
@@ -174,14 +188,14 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
      * @param requestObj 请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return GetRefreshOrPreloadTaskResponse 响应对象
+     * @return SetCertificateConfigResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public GetRefreshOrPreloadTaskResponse doPutSend(String path, GetRefreshOrPreloadTaskRequest requestObj,
+    public SetCertificateConfigResponse doPutSend(String path, SetCertificateConfigRequest requestObj,
                                         UrlPathParams urlPathParams,
                                         Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         if (customHeaders != null && !customHeaders.isEmpty()) {
             head.putAll(customHeaders);
         }
@@ -194,12 +208,12 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
      *
      * @param path 请求路径
      * @param requestObj 请求对象
-     * @return GetRefreshOrPreloadTaskResponse 响应对象
+     * @return SetCertificateConfigResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public GetRefreshOrPreloadTaskResponse doDeleteSend(String path, GetRefreshOrPreloadTaskRequest requestObj) throws RuntimeException {
+    public SetCertificateConfigResponse doDeleteSend(String path, SetCertificateConfigRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDeleteSend(path, requestObj, head);
     }
 
@@ -210,10 +224,10 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
      * @param path 请求路径
      * @param requestObj 请求对象
      * @param head 请求头
-     * @return GetRefreshOrPreloadTaskResponse 响应对象
+     * @return SetCertificateConfigResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public GetRefreshOrPreloadTaskResponse doDeleteSend(String path, GetRefreshOrPreloadTaskRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public SetCertificateConfigResponse doDeleteSend(String path, SetCertificateConfigRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("delete", path, requestObj, head, null);
     }
 
@@ -225,14 +239,14 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
      * @param requestObj 请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return GetRefreshOrPreloadTaskResponse 响应对象
+     * @return SetCertificateConfigResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public GetRefreshOrPreloadTaskResponse doDeleteSend(String path, GetRefreshOrPreloadTaskRequest requestObj,
+    public SetCertificateConfigResponse doDeleteSend(String path, SetCertificateConfigRequest requestObj,
                                            UrlPathParams urlPathParams,
                                            Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         if (customHeaders != null && !customHeaders.isEmpty()) {
             head.putAll(customHeaders);
         }
@@ -248,13 +262,13 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
      * @param requestObj 请求对象
      * @param head 请求头
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
-     * @return GetRefreshOrPreloadTaskResponse 响应对象
+     * @return SetCertificateConfigResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    private GetRefreshOrPreloadTaskResponse executeWithV2(String method, String path, GetRefreshOrPreloadTaskRequest requestObj,
+    private SetCertificateConfigResponse executeWithV2(String method, String path, SetCertificateConfigRequest requestObj,
                                              Map<String, String> head, UrlPathParams urlPathParams) throws RuntimeException {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
 
         // 调用底层 V2 方法获取完整响应
         HttpResponseWrapper wrapper = doRpcV2(path, requestObj, requestHeaders, method, urlPathParams);
@@ -286,7 +300,7 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
 
         // 4. 解析 JSON 响应
         try {
-            return JSON.parseObject(message, GetRefreshOrPreloadTaskResponse.class);
+            return JSON.parseObject(message, SetCertificateConfigResponse.class);
         } catch (Exception e) {
             throw new RuntimeException(
                 String.format("[KsyunSDKError] [HttpCode:%d Err:%s] %s",
@@ -307,9 +321,9 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPostWithContextV2(String path, GetRefreshOrPreloadTaskRequest requestObj) {
+    public HttpResponseWrapper doPostWithContextV2(String path, SetCertificateConfigRequest requestObj) {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPostWithContextV2(path, requestObj, head);
     }
 
@@ -325,9 +339,9 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
      * @param head 请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPostWithContextV2(String path, GetRefreshOrPreloadTaskRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doPostWithContextV2(String path, SetCertificateConfigRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doRpcV2(path, requestObj, requestHeaders, "post", null);
     }
 
@@ -342,9 +356,9 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doGetWithContextV2(String path, GetRefreshOrPreloadTaskRequest requestObj) {
+    public HttpResponseWrapper doGetWithContextV2(String path, SetCertificateConfigRequest requestObj) {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doGetWithContextV2(path, requestObj, head);
     }
 
@@ -360,9 +374,9 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
      * @param head 请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doGetWithContextV2(String path, GetRefreshOrPreloadTaskRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doGetWithContextV2(String path, SetCertificateConfigRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doRpcV2(path, requestObj, requestHeaders, "get", null);
     }
 
@@ -377,9 +391,9 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPutWithContextV2(String path, GetRefreshOrPreloadTaskRequest requestObj) {
+    public HttpResponseWrapper doPutWithContextV2(String path, SetCertificateConfigRequest requestObj) {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPutWithContextV2(path, requestObj, head);
     }
 
@@ -395,9 +409,9 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
      * @param head 请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPutWithContextV2(String path, GetRefreshOrPreloadTaskRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doPutWithContextV2(String path, SetCertificateConfigRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doRpcV2(path, requestObj, requestHeaders, "put", null);
     }
 
@@ -412,9 +426,9 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doDeleteWithContextV2(String path, GetRefreshOrPreloadTaskRequest requestObj) {
+    public HttpResponseWrapper doDeleteWithContextV2(String path, SetCertificateConfigRequest requestObj) {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDeleteWithContextV2(path, requestObj, head);
     }
 
@@ -430,9 +444,9 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
      * @param head 请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doDeleteWithContextV2(String path, GetRefreshOrPreloadTaskRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doDeleteWithContextV2(String path, SetCertificateConfigRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doRpcV2(path, requestObj, requestHeaders, "delete", null);
     }
 
@@ -444,9 +458,9 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
      * @return
      * @throws Exception
      */
-    public GetRefreshOrPreloadTaskResponse doPost(String path, GetRefreshOrPreloadTaskRequest requestObj) throws Exception {
+    public SetCertificateConfigResponse doPost(String path, SetCertificateConfigRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
     }
 
@@ -459,11 +473,11 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
      * @return
      * @throws Exception
      */
-    public GetRefreshOrPreloadTaskResponse doPost(String path, GetRefreshOrPreloadTaskRequest requestObj, Map<String, String> head) throws Exception {
+    public SetCertificateConfigResponse doPost(String path, SetCertificateConfigRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, GetRefreshOrPreloadTaskResponse.class);
+        return JSON.parseObject(response, SetCertificateConfigResponse.class);
     }
 
     /**
@@ -473,9 +487,9 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
     * @return
     * @throws Exception
     */
-    public GetRefreshOrPreloadTaskResponse doPostRaw(String path, GetRefreshOrPreloadTaskRequest requestObj) throws Exception {
+    public SetCertificateConfigResponse doPostRaw(String path, SetCertificateConfigRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPostRaw(path, requestObj, head);
     }
 
@@ -487,11 +501,11 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
     * @return
     * @throws Exception
     */
-    public GetRefreshOrPreloadTaskResponse doPostRaw(String path, GetRefreshOrPreloadTaskRequest requestObj, Map<String, String> head) throws Exception {
+    public SetCertificateConfigResponse doPostRaw(String path, SetCertificateConfigRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, GetRefreshOrPreloadTaskResponse.class);
+        return JSON.parseObject(response, SetCertificateConfigResponse.class);
     }
     /**
      * get 请求
@@ -501,9 +515,9 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
      * @return
      * @throws Exception
      */
-    public GetRefreshOrPreloadTaskResponse doGet(String path, GetRefreshOrPreloadTaskRequest requestObj) throws Exception {
+    public SetCertificateConfigResponse doGet(String path, SetCertificateConfigRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.putIfAbsent("Content-Type", "application/json");
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doGet(path, requestObj, head);
     }
 
@@ -516,11 +530,11 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
          * @return
          * @throws Exception
          */
-        public GetRefreshOrPreloadTaskResponse doGet(String path, GetRefreshOrPreloadTaskRequest requestObj, Map<String, String> head) throws Exception {
+        public SetCertificateConfigResponse doGet(String path, SetCertificateConfigRequest requestObj, Map<String, String> head) throws Exception {
             final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-            requestHeaders.putIfAbsent("Content-Type", "application/json");
+            requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
             String response = doRpc(path, requestObj, requestHeaders, "get");
-            return JSON.parseObject(response, GetRefreshOrPreloadTaskResponse.class);
+            return JSON.parseObject(response, SetCertificateConfigResponse.class);
         }
 
     /**
@@ -531,9 +545,9 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
      * @return
      * @throws Exception
      */
-    public GetRefreshOrPreloadTaskResponse doDelete(String path, GetRefreshOrPreloadTaskRequest requestObj) throws Exception {
+    public SetCertificateConfigResponse doDelete(String path, SetCertificateConfigRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDelete(path, requestObj, head);
     }
 
@@ -546,11 +560,11 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
      * @return
      * @throws Exception
      */
-    public GetRefreshOrPreloadTaskResponse doDelete(String path, GetRefreshOrPreloadTaskRequest requestObj, Map<String, String> head) throws Exception {
+    public SetCertificateConfigResponse doDelete(String path, SetCertificateConfigRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "delete");
-        return JSON.parseObject(response, GetRefreshOrPreloadTaskResponse.class);
+        return JSON.parseObject(response, SetCertificateConfigResponse.class);
     }
 
 
@@ -562,9 +576,9 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
      * @return
      * @throws Exception
      */
-    public GetRefreshOrPreloadTaskResponse doPut(String path, GetRefreshOrPreloadTaskRequest requestObj) throws Exception {
+    public SetCertificateConfigResponse doPut(String path, SetCertificateConfigRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.putIfAbsent("Content-Type", "application/json");
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doPut(path, requestObj, head);
     }
 
@@ -577,11 +591,11 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
      * @return
      * @throws Exception
      */
-    public GetRefreshOrPreloadTaskResponse doPut(String path, GetRefreshOrPreloadTaskRequest requestObj, Map<String, String> head) throws Exception {
+    public SetCertificateConfigResponse doPut(String path, SetCertificateConfigRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-       requestHeaders.putIfAbsent("Content-Type", "application/json");
+       requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "put");
-        return JSON.parseObject(response, GetRefreshOrPreloadTaskResponse.class);
+        return JSON.parseObject(response, SetCertificateConfigResponse.class);
     }
 
     /**
@@ -593,7 +607,7 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
          * @return
          * @throws Exception
          */
-        private String doRpc(String path, GetRefreshOrPreloadTaskRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
+        private String doRpc(String path, SetCertificateConfigRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
             //断言
             Objects.requireNonNull(path, "path cannot be null");
             Objects.requireNonNull(requestObj, "requestObj cannot be null");
@@ -625,7 +639,7 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
         }
 
 
-        private JSONObject getRequestParam(GetRefreshOrPreloadTaskRequest requestObj, String contentType) throws Exception {
+        private JSONObject getRequestParam(SetCertificateConfigRequest requestObj, String contentType) throws Exception {
             //请求参数
             if (contentType.equalsIgnoreCase("application/json")) {
                 return getPostRawRequestParams(requestObj);
@@ -634,7 +648,7 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
         }
 
 
-        private JSONObject getSimpleRequestParams(GetRefreshOrPreloadTaskRequest requestObj) throws Exception {
+        private JSONObject getSimpleRequestParams(SetCertificateConfigRequest requestObj) throws Exception {
             JSONObject requestParams = new JSONObject();
 
             //设置请求体请求参数
@@ -642,7 +656,7 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
             return requestParams;
         }
 
-        private JSONObject getPostRawRequestParams(GetRefreshOrPreloadTaskRequest requestObj) throws Exception {
+        private JSONObject getPostRawRequestParams(SetCertificateConfigRequest requestObj) throws Exception {
             JSONObject requestParams = new JSONObject();
 
             //设置请求体请求参数
@@ -660,7 +674,7 @@ class GetRefreshOrPreloadTaskRequest extends BaseModel
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    private HttpResponseWrapper doRpcV2(String path, GetRefreshOrPreloadTaskRequest requestObj, Map<String, String> head,
+    private HttpResponseWrapper doRpcV2(String path, SetCertificateConfigRequest requestObj, Map<String, String> head,
                                         String requestMethod, UrlPathParams urlPathParams) {
         try {
             //断言

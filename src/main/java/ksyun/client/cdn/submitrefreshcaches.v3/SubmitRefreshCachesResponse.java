@@ -1,4 +1,4 @@
-package ksyun.client.cdn.refreshcaches.v20160901;
+package ksyun.client.cdn.submitrefreshcaches.v3;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;
@@ -8,14 +8,14 @@ import lombok.ToString;
 import java.util.List;
 
 /**
-* @Classname RefreshCachesResponse
-* @Description RefreshCaches 返回体
+* @Classname SubmitRefreshCachesResponse
+* @Description SubmitRefreshCaches 返回体
 */
 @Data
 @ToString
-public class RefreshCachesResponse extends BaseResponseModel {
+public class SubmitRefreshCachesResponse extends BaseResponseModel {
 
-    /**RefreshTaskId*/
+    /**刷新返回的任务ID*/
     @JsonProperty("RefreshTaskId")
     private String RefreshTaskId;
 

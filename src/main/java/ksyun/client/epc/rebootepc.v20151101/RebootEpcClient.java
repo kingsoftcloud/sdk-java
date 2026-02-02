@@ -14,7 +14,7 @@ import java.util.*;
 
 /**
 * @Classname RebootEpcClient
-* @Description RebootEpc*/
+* @Description 重启服务器*/
 @Slf4j
 public class RebootEpcClient extends BaseClient {
     private final static String service = "epc";

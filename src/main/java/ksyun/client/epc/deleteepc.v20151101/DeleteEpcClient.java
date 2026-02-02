@@ -14,7 +14,7 @@ import java.util.*;
 
 /**
 * @Classname DeleteEpcClient
-* @Description DeleteEpc*/
+* @Description 删除服务器*/
 @Slf4j
 public class DeleteEpcClient extends BaseClient {
     private final static String service = "epc";
