@@ -73,7 +73,19 @@ public class DescribeQueuesResponse extends BaseResponseModel {
             @JsonProperty("State")
             private String State;
 
-            /**排队中的任务数量*/
+            /**正在运行的任务数量*/
+            @JsonProperty("Running")
+            private Integer Running;
+
+            /**任务刚进入队列，尚未触发资源检查的任务数*/
+            @JsonProperty("Inqueue")
+            private Integer Inqueue;
+
+            /**等待调度的任务数(Job 已完成资源检查，但因资源不足或其他条件不满足而等待调度)*/
+            @JsonProperty("Pending")
+            private Integer Pending;
+
+            /**排队中（待处理的任务数 Inqueue+Pending）的任务数量*/
             @JsonProperty("Queuing")
             private Integer Queuing;
 

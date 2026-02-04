@@ -235,6 +235,32 @@ public class GetModelDetailResponse extends BaseResponseModel {
             @JsonProperty("SupportTryout")
             private String SupportTryout;
 
+            /**true 表示 文字转语音。*/
+            @JsonProperty("TextToSpeech")
+            private Boolean TextToSpeech;
+
+            /**文本转语音定价*/
+            @JsonProperty("VoicePrice")
+            private String VoicePrice;
+
+            /**阶梯计费规则*/
+            @JsonProperty("PricingRules")
+            private ModelApiModelDataWebRespCodeCasePricingRulesDto PricingRules;
+
+            @Data
+            @ToString
+            public static class ModelApiModelDataWebRespCodeCasePricingRulesDto {
+                /***/
+                @JsonProperty("OnlineCalculateDisplayCache")
+                private List<onlineCalculateDisplayCacheDto1> OnlineCalculateDisplayCache;
+
+                @Data
+                @ToString
+                public static class onlineCalculateDisplayCacheDto1 {
+                }
+
+            }
+
         }
 
         /***/
@@ -244,6 +270,10 @@ public class GetModelDetailResponse extends BaseResponseModel {
         /**模型开通状态：1-已开通，2-未开通。*/
         @JsonProperty("ActiveStatus")
         private Integer ActiveStatus;
+
+        /***/
+        @JsonProperty("ExtraFields")
+        private String ExtraFields;
 
     }
 

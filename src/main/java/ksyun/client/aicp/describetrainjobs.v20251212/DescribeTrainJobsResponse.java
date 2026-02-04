@@ -78,6 +78,10 @@ public class DescribeTrainJobsResponse extends BaseResponseModel {
         @JsonProperty("CreateUserId")
         private String CreateUserId;
 
+        /**KCE集群ID*/
+        @JsonProperty("ClusterId")
+        private String ClusterId;
+
         /**GPU故障自愈*/
         @JsonProperty("SelfHealing")
         private Boolean SelfHealing;

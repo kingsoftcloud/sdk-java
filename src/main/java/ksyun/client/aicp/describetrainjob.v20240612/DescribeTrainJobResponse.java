@@ -262,6 +262,10 @@ public class DescribeTrainJobResponse extends BaseResponseModel {
 
         }
 
+        /**任务所在资源组所属的集群ID*/
+        @JsonProperty("ClusterId")
+        private String ClusterId;
+
     }
 
 }

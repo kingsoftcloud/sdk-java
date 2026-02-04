@@ -65,7 +65,7 @@ public class DescribeNotebooksResponse extends BaseResponseModel {
             @JsonProperty("Message")
             private String Message;
 
-            /**本次运行时长*/
+            /**本次运行时长（h:小时 m:分钟 s:秒）*/
             @JsonProperty("ExecutionTime")
             private String ExecutionTime;
 
