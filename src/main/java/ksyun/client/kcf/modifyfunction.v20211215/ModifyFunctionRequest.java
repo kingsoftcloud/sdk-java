@@ -53,10 +53,6 @@ public class ModifyFunctionRequest{
     @Data
     @ToString
     public static class CodeDto {
-        /**代码包的KS3地址*/
-        @KsYunField(name="SourceUrl")
-        private String SourceUrl;
-
         /**KS3存储桶名称*/
         @KsYunField(name="Ks3BucketName")
         private String Ks3BucketName;
@@ -218,5 +214,22 @@ public class ModifyFunctionRequest{
     /**Layer列表，格式为“name#version”，如 “layer#1”*/
     @KsYunField(name="Layers",type=2)
     private List<String> LayersList;
+
+    /**镜像配置*/
+    @KsYunField(name="CustomContainerConfig")
+    private CustomContainerConfigDto CustomContainerConfig;
+
+    @Data
+    @ToString
+    public static class CustomContainerConfigDto {
+        /**镜像名*/
+        @KsYunField(name="Image")
+        private String Image;
+
+        /**镜像版本*/
+        @KsYunField(name="ImageVersion")
+        private String ImageVersion;
+
+    }
 
 }
