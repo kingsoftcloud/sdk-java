@@ -1,0 +1,62 @@
+package ksyun.client.cdn.getrefreshorpreloadtask.v3;
+
+import common.annotation.KsYunField;
+import lombok.Builder;
+import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
+
+/**
+* @Classname GetRefreshOrPreloadTaskRequest
+* @Description 请求参数
+*/
+@Data
+public class GetRefreshOrPreloadTaskRequest{
+    /**获取数据起始时间点，不能超出可查询范围的起始时间点，日期格式按ISO8601表示法，北京时间，格式为：YYYY-MM-DDThh:mm+0800，例如：2022-03-10T21:00+0800*/
+    @KsYunField(name="StartTime")
+    private String StartTime;
+
+    /**结束时间需大于起始时间；获取日期格式按照ISO8601表示法，北京时间，格式为：YYYY-MM-DDThh:mm+0800，例如：2022-03-10T21:10+0800*/
+    @KsYunField(name="EndTime")
+    private String EndTime;
+
+    /**支持按任务ID查询，只允许输入单个任务ID*/
+    @KsYunField(name="TaskId")
+    private String TaskId;
+
+    /**支持按域名查询，只允许输入单个域名*/
+    @KsYunField(name="DomainName")
+    private String DomainName;
+
+    /**Url组成的数组，支持按Url路径查询，准确匹配*/
+    @KsYunField(name="Urls",type=2)
+    private List<UrlsDto> UrlsList;
+
+    @Data
+    @ToString
+    public static class UrlsDto {
+        /**需要查询的Url路径*/
+        @KsYunField(name="Url")
+        private String Url;
+
+    }
+
+    /**支持按内容管理任务的类型查询，传参可取值：refresh、preload。其中，refresh表示刷新任务类型，preload表示预热任务类型，不传参表示查询所有类型。*/
+    @KsYunField(name="Type")
+    private String Type;
+
+    /**支持按任务的细分类型查询，传参可取值：REFRESH_FILE、REFRESH_DIR。若Type取值refresh或者不传参，则该传参可生效，其中，REFRESH_FILE表示URL刷新，REFRESH_DIR表示目录刷新，不传参表示查询所有细分类型。若Type取值preload，则该参数为无效参数*/
+    @KsYunField(name="SubType")
+    private String SubType;
+
+    /**分页大小，取值为1-50，最大50，默认20*/
+    @KsYunField(name="PageSize")
+    private Long PageSize;
+
+    /**取得第几页，取值为：1-100000，最大100000，默认1*/
+    @KsYunField(name="PageNumber")
+    private Long PageNumber;
+
+}
