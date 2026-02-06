@@ -34,7 +34,7 @@ public class CreateNotebookRequest{
     @KsYunField(name="GPUType")
     private String GPUType;
 
-    /**GPU核数，允许范围为0~10000, 如果可虚拟化，支持[0.1,0.9]*/
+    /**GPU核数，GPUType不为空时，此值有效，允许范围为0~10000, 如果可虚拟化，支持[0.1,0.9]*/
     @KsYunField(name="GPUNumber")
     private String GPUNumber;
 

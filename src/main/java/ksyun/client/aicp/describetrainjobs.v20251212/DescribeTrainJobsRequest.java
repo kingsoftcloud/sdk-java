@@ -49,4 +49,16 @@ public class DescribeTrainJobsRequest{
     @KsYunField(name="TrainJobName")
     private String TrainJobName;
 
+    /**GPU卡型*/
+    @KsYunField(name="GPUType")
+    private String GPUType;
+
+    /**排序关键字*/
+    @KsYunField(name="SortKey")
+    private String SortKey;
+
+    /**排序方式*/
+    @KsYunField(name="Sort")
+    private String Sort;
+
 }
