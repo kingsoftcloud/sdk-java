@@ -1,4 +1,4 @@
-package ksyun.client.kcf.deletetrigger.v20211215;
+package ksyun.client.kpfs.getcapacityavailable.v20240930;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -13,13 +13,13 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.*;
 
 /**
-* @Classname DeleteTriggerClient
-* @Description 删除触发器*/
+* @Classname GetCapacityAvailableClient
+* @Description 文件系统可用容量*/
 @Slf4j
-public class DeleteTriggerClient extends BaseClient {
-    private final static String service = "kcf";
-    private final static String version = "2021-12-15";
-    private final static String action = "DeleteTrigger";
+public class GetCapacityAvailableClient extends BaseClient {
+    private final static String service = "kpfs";
+    private final static String version = "2024-09-30";
+    private final static String action = "GetCapacityAvailable";
 
 
     /**
@@ -28,7 +28,7 @@ public class DeleteTriggerClient extends BaseClient {
     private Credential credential;
 
 
-    public DeleteTriggerClient(Credential credential) {
+    public GetCapacityAvailableClient(Credential credential) {
         this.credential = credential;
     }
 
@@ -39,12 +39,12 @@ public class DeleteTriggerClient extends BaseClient {
      *
      * @param path 请求路径
      * @param requestObj 请求对象
-     * @return DeleteTriggerResponse 响应对象
+     * @return GetCapacityAvailableResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DeleteTriggerResponse doPostSend(String path, DeleteTriggerRequest requestObj) throws RuntimeException {
+    public GetCapacityAvailableResponse doPostSend(String path, GetCapacityAvailableRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPostSend(path, requestObj, head);
     }
 
@@ -56,14 +56,14 @@ public class DeleteTriggerClient extends BaseClient {
      * @param requestObj 请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return DeleteTriggerResponse 响应对象
+     * @return GetCapacityAvailableResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DeleteTriggerResponse doPostSend(String path, DeleteTriggerRequest requestObj,
+    public GetCapacityAvailableResponse doPostSend(String path, GetCapacityAvailableRequest requestObj,
                                          UrlPathParams urlPathParams,
                                          Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         if (customHeaders != null && !customHeaders.isEmpty()) {
             head.putAll(customHeaders);
         }
@@ -77,10 +77,10 @@ public class DeleteTriggerClient extends BaseClient {
      * @param path 请求路径
      * @param requestObj 请求对象
      * @param head 请求头
-     * @return DeleteTriggerResponse 响应对象
+     * @return GetCapacityAvailableResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DeleteTriggerResponse doPostSend(String path, DeleteTriggerRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public GetCapacityAvailableResponse doPostSend(String path, GetCapacityAvailableRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("post", path, requestObj, head, null);
     }
 
@@ -92,10 +92,10 @@ public class DeleteTriggerClient extends BaseClient {
      * @param requestObj 请求对象
      * @param head 请求头（包含自定义 Header）
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
-     * @return DeleteTriggerResponse 响应对象
+     * @return GetCapacityAvailableResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DeleteTriggerResponse doPostSend(String path, DeleteTriggerRequest requestObj, Map<String, String> head,
+    public GetCapacityAvailableResponse doPostSend(String path, GetCapacityAvailableRequest requestObj, Map<String, String> head,
                                          UrlPathParams urlPathParams) throws RuntimeException {
         return executeWithV2("post", path, requestObj, head, urlPathParams);
     }
@@ -106,12 +106,12 @@ public class DeleteTriggerClient extends BaseClient {
      *
      * @param path 请求路径
      * @param requestObj 请求对象
-     * @return DeleteTriggerResponse 响应对象
+     * @return GetCapacityAvailableResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DeleteTriggerResponse doGetSend(String path, DeleteTriggerRequest requestObj) throws RuntimeException {
+    public GetCapacityAvailableResponse doGetSend(String path, GetCapacityAvailableRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doGetSend(path, requestObj, head);
     }
 
@@ -122,10 +122,10 @@ public class DeleteTriggerClient extends BaseClient {
      * @param path 请求路径
      * @param requestObj 请求对象
      * @param head 请求头
-     * @return DeleteTriggerResponse 响应对象
+     * @return GetCapacityAvailableResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DeleteTriggerResponse doGetSend(String path, DeleteTriggerRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public GetCapacityAvailableResponse doGetSend(String path, GetCapacityAvailableRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("get", path, requestObj, head, null);
     }
 
@@ -137,14 +137,14 @@ public class DeleteTriggerClient extends BaseClient {
      * @param requestObj 请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return DeleteTriggerResponse 响应对象
+     * @return GetCapacityAvailableResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DeleteTriggerResponse doGetSend(String path, DeleteTriggerRequest requestObj,
+    public GetCapacityAvailableResponse doGetSend(String path, GetCapacityAvailableRequest requestObj,
                                         UrlPathParams urlPathParams,
                                         Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         if (customHeaders != null && !customHeaders.isEmpty()) {
             head.putAll(customHeaders);
         }
@@ -157,12 +157,12 @@ public class DeleteTriggerClient extends BaseClient {
      *
      * @param path 请求路径
      * @param requestObj 请求对象
-     * @return DeleteTriggerResponse 响应对象
+     * @return GetCapacityAvailableResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DeleteTriggerResponse doPutSend(String path, DeleteTriggerRequest requestObj) throws RuntimeException {
+    public GetCapacityAvailableResponse doPutSend(String path, GetCapacityAvailableRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPutSend(path, requestObj, head);
     }
 
@@ -173,10 +173,10 @@ public class DeleteTriggerClient extends BaseClient {
      * @param path 请求路径
      * @param requestObj 请求对象
      * @param head 请求头
-     * @return DeleteTriggerResponse 响应对象
+     * @return GetCapacityAvailableResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DeleteTriggerResponse doPutSend(String path, DeleteTriggerRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public GetCapacityAvailableResponse doPutSend(String path, GetCapacityAvailableRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("put", path, requestObj, head, null);
     }
 
@@ -188,14 +188,14 @@ public class DeleteTriggerClient extends BaseClient {
      * @param requestObj 请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return DeleteTriggerResponse 响应对象
+     * @return GetCapacityAvailableResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DeleteTriggerResponse doPutSend(String path, DeleteTriggerRequest requestObj,
+    public GetCapacityAvailableResponse doPutSend(String path, GetCapacityAvailableRequest requestObj,
                                         UrlPathParams urlPathParams,
                                         Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         if (customHeaders != null && !customHeaders.isEmpty()) {
             head.putAll(customHeaders);
         }
@@ -208,12 +208,12 @@ public class DeleteTriggerClient extends BaseClient {
      *
      * @param path 请求路径
      * @param requestObj 请求对象
-     * @return DeleteTriggerResponse 响应对象
+     * @return GetCapacityAvailableResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DeleteTriggerResponse doDeleteSend(String path, DeleteTriggerRequest requestObj) throws RuntimeException {
+    public GetCapacityAvailableResponse doDeleteSend(String path, GetCapacityAvailableRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDeleteSend(path, requestObj, head);
     }
 
@@ -224,10 +224,10 @@ public class DeleteTriggerClient extends BaseClient {
      * @param path 请求路径
      * @param requestObj 请求对象
      * @param head 请求头
-     * @return DeleteTriggerResponse 响应对象
+     * @return GetCapacityAvailableResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DeleteTriggerResponse doDeleteSend(String path, DeleteTriggerRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public GetCapacityAvailableResponse doDeleteSend(String path, GetCapacityAvailableRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("delete", path, requestObj, head, null);
     }
 
@@ -239,14 +239,14 @@ public class DeleteTriggerClient extends BaseClient {
      * @param requestObj 请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return DeleteTriggerResponse 响应对象
+     * @return GetCapacityAvailableResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DeleteTriggerResponse doDeleteSend(String path, DeleteTriggerRequest requestObj,
+    public GetCapacityAvailableResponse doDeleteSend(String path, GetCapacityAvailableRequest requestObj,
                                            UrlPathParams urlPathParams,
                                            Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         if (customHeaders != null && !customHeaders.isEmpty()) {
             head.putAll(customHeaders);
         }
@@ -262,13 +262,13 @@ public class DeleteTriggerClient extends BaseClient {
      * @param requestObj 请求对象
      * @param head 请求头
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
-     * @return DeleteTriggerResponse 响应对象
+     * @return GetCapacityAvailableResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    private DeleteTriggerResponse executeWithV2(String method, String path, DeleteTriggerRequest requestObj,
+    private GetCapacityAvailableResponse executeWithV2(String method, String path, GetCapacityAvailableRequest requestObj,
                                              Map<String, String> head, UrlPathParams urlPathParams) throws RuntimeException {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
 
         // 调用底层 V2 方法获取完整响应
         HttpResponseWrapper wrapper = doRpcV2(path, requestObj, requestHeaders, method, urlPathParams);
@@ -300,7 +300,7 @@ public class DeleteTriggerClient extends BaseClient {
 
         // 4. 解析 JSON 响应
         try {
-            return JSON.parseObject(message, DeleteTriggerResponse.class);
+            return JSON.parseObject(message, GetCapacityAvailableResponse.class);
         } catch (Exception e) {
             throw new RuntimeException(
                 String.format("[KsyunSDKError] [HttpCode:%d Err:%s] %s",
@@ -321,9 +321,9 @@ public class DeleteTriggerClient extends BaseClient {
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPostWithContextV2(String path, DeleteTriggerRequest requestObj) {
+    public HttpResponseWrapper doPostWithContextV2(String path, GetCapacityAvailableRequest requestObj) {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPostWithContextV2(path, requestObj, head);
     }
 
@@ -339,9 +339,9 @@ public class DeleteTriggerClient extends BaseClient {
      * @param head 请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPostWithContextV2(String path, DeleteTriggerRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doPostWithContextV2(String path, GetCapacityAvailableRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doRpcV2(path, requestObj, requestHeaders, "post", null);
     }
 
@@ -356,9 +356,9 @@ public class DeleteTriggerClient extends BaseClient {
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doGetWithContextV2(String path, DeleteTriggerRequest requestObj) {
+    public HttpResponseWrapper doGetWithContextV2(String path, GetCapacityAvailableRequest requestObj) {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doGetWithContextV2(path, requestObj, head);
     }
 
@@ -374,9 +374,9 @@ public class DeleteTriggerClient extends BaseClient {
      * @param head 请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doGetWithContextV2(String path, DeleteTriggerRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doGetWithContextV2(String path, GetCapacityAvailableRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doRpcV2(path, requestObj, requestHeaders, "get", null);
     }
 
@@ -391,9 +391,9 @@ public class DeleteTriggerClient extends BaseClient {
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPutWithContextV2(String path, DeleteTriggerRequest requestObj) {
+    public HttpResponseWrapper doPutWithContextV2(String path, GetCapacityAvailableRequest requestObj) {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPutWithContextV2(path, requestObj, head);
     }
 
@@ -409,9 +409,9 @@ public class DeleteTriggerClient extends BaseClient {
      * @param head 请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPutWithContextV2(String path, DeleteTriggerRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doPutWithContextV2(String path, GetCapacityAvailableRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doRpcV2(path, requestObj, requestHeaders, "put", null);
     }
 
@@ -426,9 +426,9 @@ public class DeleteTriggerClient extends BaseClient {
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doDeleteWithContextV2(String path, DeleteTriggerRequest requestObj) {
+    public HttpResponseWrapper doDeleteWithContextV2(String path, GetCapacityAvailableRequest requestObj) {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDeleteWithContextV2(path, requestObj, head);
     }
 
@@ -444,9 +444,9 @@ public class DeleteTriggerClient extends BaseClient {
      * @param head 请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doDeleteWithContextV2(String path, DeleteTriggerRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doDeleteWithContextV2(String path, GetCapacityAvailableRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doRpcV2(path, requestObj, requestHeaders, "delete", null);
     }
 
@@ -458,9 +458,9 @@ public class DeleteTriggerClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DeleteTriggerResponse doPost(String path, DeleteTriggerRequest requestObj) throws Exception {
+    public GetCapacityAvailableResponse doPost(String path, GetCapacityAvailableRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
     }
 
@@ -473,11 +473,11 @@ public class DeleteTriggerClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DeleteTriggerResponse doPost(String path, DeleteTriggerRequest requestObj, Map<String, String> head) throws Exception {
+    public GetCapacityAvailableResponse doPost(String path, GetCapacityAvailableRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, DeleteTriggerResponse.class);
+        return JSON.parseObject(response, GetCapacityAvailableResponse.class);
     }
 
     /**
@@ -487,9 +487,9 @@ public class DeleteTriggerClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public DeleteTriggerResponse doPostRaw(String path, DeleteTriggerRequest requestObj) throws Exception {
+    public GetCapacityAvailableResponse doPostRaw(String path, GetCapacityAvailableRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPostRaw(path, requestObj, head);
     }
 
@@ -501,11 +501,11 @@ public class DeleteTriggerClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public DeleteTriggerResponse doPostRaw(String path, DeleteTriggerRequest requestObj, Map<String, String> head) throws Exception {
+    public GetCapacityAvailableResponse doPostRaw(String path, GetCapacityAvailableRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, DeleteTriggerResponse.class);
+        return JSON.parseObject(response, GetCapacityAvailableResponse.class);
     }
     /**
      * get 请求
@@ -515,9 +515,9 @@ public class DeleteTriggerClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DeleteTriggerResponse doGet(String path, DeleteTriggerRequest requestObj) throws Exception {
+    public GetCapacityAvailableResponse doGet(String path, GetCapacityAvailableRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.putIfAbsent("Content-Type", "application/json");
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doGet(path, requestObj, head);
     }
 
@@ -530,11 +530,11 @@ public class DeleteTriggerClient extends BaseClient {
          * @return
          * @throws Exception
          */
-        public DeleteTriggerResponse doGet(String path, DeleteTriggerRequest requestObj, Map<String, String> head) throws Exception {
+        public GetCapacityAvailableResponse doGet(String path, GetCapacityAvailableRequest requestObj, Map<String, String> head) throws Exception {
             final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-            requestHeaders.putIfAbsent("Content-Type", "application/json");
+            requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
             String response = doRpc(path, requestObj, requestHeaders, "get");
-            return JSON.parseObject(response, DeleteTriggerResponse.class);
+            return JSON.parseObject(response, GetCapacityAvailableResponse.class);
         }
 
     /**
@@ -545,9 +545,9 @@ public class DeleteTriggerClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DeleteTriggerResponse doDelete(String path, DeleteTriggerRequest requestObj) throws Exception {
+    public GetCapacityAvailableResponse doDelete(String path, GetCapacityAvailableRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/json");
+        head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDelete(path, requestObj, head);
     }
 
@@ -560,11 +560,11 @@ public class DeleteTriggerClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DeleteTriggerResponse doDelete(String path, DeleteTriggerRequest requestObj, Map<String, String> head) throws Exception {
+    public GetCapacityAvailableResponse doDelete(String path, GetCapacityAvailableRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/json");
+        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "delete");
-        return JSON.parseObject(response, DeleteTriggerResponse.class);
+        return JSON.parseObject(response, GetCapacityAvailableResponse.class);
     }
 
 
@@ -576,9 +576,9 @@ public class DeleteTriggerClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DeleteTriggerResponse doPut(String path, DeleteTriggerRequest requestObj) throws Exception {
+    public GetCapacityAvailableResponse doPut(String path, GetCapacityAvailableRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.putIfAbsent("Content-Type", "application/json");
+        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doPut(path, requestObj, head);
     }
 
@@ -591,11 +591,11 @@ public class DeleteTriggerClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DeleteTriggerResponse doPut(String path, DeleteTriggerRequest requestObj, Map<String, String> head) throws Exception {
+    public GetCapacityAvailableResponse doPut(String path, GetCapacityAvailableRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-       requestHeaders.putIfAbsent("Content-Type", "application/json");
+       requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "put");
-        return JSON.parseObject(response, DeleteTriggerResponse.class);
+        return JSON.parseObject(response, GetCapacityAvailableResponse.class);
     }
 
     /**
@@ -607,7 +607,7 @@ public class DeleteTriggerClient extends BaseClient {
          * @return
          * @throws Exception
          */
-        private String doRpc(String path, DeleteTriggerRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
+        private String doRpc(String path, GetCapacityAvailableRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
             //断言
             Objects.requireNonNull(path, "path cannot be null");
             Objects.requireNonNull(requestObj, "requestObj cannot be null");
@@ -639,7 +639,7 @@ public class DeleteTriggerClient extends BaseClient {
         }
 
 
-        private JSONObject getRequestParam(DeleteTriggerRequest requestObj, String contentType) throws Exception {
+        private JSONObject getRequestParam(GetCapacityAvailableRequest requestObj, String contentType) throws Exception {
             //请求参数
             if (contentType.equalsIgnoreCase("application/json")) {
                 return getPostRawRequestParams(requestObj);
@@ -648,7 +648,7 @@ public class DeleteTriggerClient extends BaseClient {
         }
 
 
-        private JSONObject getSimpleRequestParams(DeleteTriggerRequest requestObj) throws Exception {
+        private JSONObject getSimpleRequestParams(GetCapacityAvailableRequest requestObj) throws Exception {
             JSONObject requestParams = new JSONObject();
 
             //设置请求体请求参数
@@ -656,7 +656,7 @@ public class DeleteTriggerClient extends BaseClient {
             return requestParams;
         }
 
-        private JSONObject getPostRawRequestParams(DeleteTriggerRequest requestObj) throws Exception {
+        private JSONObject getPostRawRequestParams(GetCapacityAvailableRequest requestObj) throws Exception {
             JSONObject requestParams = new JSONObject();
 
             //设置请求体请求参数
@@ -674,7 +674,7 @@ public class DeleteTriggerClient extends BaseClient {
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    private HttpResponseWrapper doRpcV2(String path, DeleteTriggerRequest requestObj, Map<String, String> head,
+    private HttpResponseWrapper doRpcV2(String path, GetCapacityAvailableRequest requestObj, Map<String, String> head,
                                         String requestMethod, UrlPathParams urlPathParams) {
         try {
             //断言
