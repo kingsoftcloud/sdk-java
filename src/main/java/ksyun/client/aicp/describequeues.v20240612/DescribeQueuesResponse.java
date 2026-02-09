@@ -131,12 +131,12 @@ public class DescribeQueuesResponse extends BaseResponseModel {
         @ToString
         public static class QueueSetCapabilityDto {
             /**队列CPU配额量*/
-            @JsonProperty("CPU")
-            private Integer CPU;
+            @JsonProperty("CPUNum")
+            private Integer CPUNum;
 
             /**内存配额量（Gi）*/
-            @JsonProperty("Memory")
-            private Integer Memory;
+            @JsonProperty("MemoryNum")
+            private Integer MemoryNum;
 
             /**GPU配额列表*/
             @JsonProperty("GPUInfos")
@@ -165,21 +165,16 @@ public class DescribeQueuesResponse extends BaseResponseModel {
         @ToString
         public static class QueueSetAllocatedDto {
             /**已分配CPU数量*/
-            @JsonProperty("CPU")
-            private Integer CPU;
+            @JsonProperty("CPUNum")
+            private Integer CPUNum;
 
             /**已分配内存（Gi）*/
-            @JsonProperty("Memory")
-            private Integer Memory;
+            @JsonProperty("MemoryNum")
+            private Integer MemoryNum;
 
             /**已分配GPU数量*/
-            @JsonProperty("GPU")
-            private QueueSetAllocatedGPUDto GPU;
-
-            @Data
-            @ToString
-            public static class QueueSetAllocatedGPUDto {
-            }
+            @JsonProperty("GPUNum")
+            private String GPUNum;
 
         }
 

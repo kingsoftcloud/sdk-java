@@ -89,6 +89,10 @@ public class DescribeModelsResponse extends BaseResponseModel {
             @JsonProperty("SupportTryout")
             private String SupportTryout;
 
+            /***/
+            @JsonProperty("ContextLength")
+            private String ContextLength;
+
         }
 
         /**免费额度用尽后是否继续使用*/
