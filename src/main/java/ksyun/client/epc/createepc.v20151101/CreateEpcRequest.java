@@ -413,4 +413,12 @@ storage_bond*/
     @KsYunField(name="ClientToken")
     private String ClientToken;
 
+    /**网卡名称格式，仅支持ethN和ethNx(仅对白名单用户生效)*/
+    @KsYunField(name="NetworkCardNameFormat")
+    private String NetworkCardNameFormat;
+
+    /**网卡的优先级，仅支持VPC-RoCE和RoCE-VPC(仅对白名单用户生效)*/
+    @KsYunField(name="NetworkCardPriority")
+    private String NetworkCardPriority;
+
 }
