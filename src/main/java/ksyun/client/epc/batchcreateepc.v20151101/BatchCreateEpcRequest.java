@@ -374,4 +374,12 @@ windows创建时，只支持非bond模式。*/
     @KsYunField(name="NetworkCardPriority")
     private String NetworkCardPriority;
 
+    /**文件系统id*/
+    @KsYunField(name="FileSystemId")
+    private String FileSystemId;
+
+    /**访问授权规则id*/
+    @KsYunField(name="PosixAclId")
+    private String PosixAclId;
+
 }

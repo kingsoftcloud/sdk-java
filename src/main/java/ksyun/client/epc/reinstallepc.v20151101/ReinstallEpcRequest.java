@@ -171,4 +171,12 @@ eth8x_bond、storage_bond*/
     @KsYunField(name="NetworkCardPriority")
     private String NetworkCardPriority;
 
+    /**文件系统id*/
+    @KsYunField(name="FileSystemId")
+    private String FileSystemId;
+
+    /**访问授权规则id*/
+    @KsYunField(name="PosixAclId")
+    private String PosixAclId;
+
 }
