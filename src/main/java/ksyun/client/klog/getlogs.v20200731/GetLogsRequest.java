@@ -28,11 +28,11 @@ public class GetLogsRequest{
 
     /**查询开始时间，unix时间戳*/
     @KsYunField(name="From")
-    private Integer From;
+    private Long From;
 
     /**查询结束时间，unix时间戳*/
     @KsYunField(name="To")
-    private Integer To;
+    private Long To;
 
     /**查询分析语法。关于查询分析的详细语法，详见查询语法，不填的情况下 返回原始日志*/
     @KsYunField(name="Query")

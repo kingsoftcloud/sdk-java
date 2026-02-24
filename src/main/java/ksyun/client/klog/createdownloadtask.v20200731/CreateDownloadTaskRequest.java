@@ -29,11 +29,11 @@ public class CreateDownloadTaskRequest{
     @Data
     @ToString
     public static class ConfigDto {
-        /**日志开始时间*/
+        /**日志开始时间（毫秒时间戳）*/
         @KsYunField(name="From")
         private Long From;
 
-        /**日志结束时间*/
+        /**日志结束时间（毫秒时间戳）*/
         @KsYunField(name="To")
         private Long To;
 
@@ -49,7 +49,7 @@ public class CreateDownloadTaskRequest{
         @KsYunField(name="Order")
         private String Order;
 
-        /**下载日志条数*/
+        /**下载日志条数（<=2000万）*/
         @KsYunField(name="Count")
         private Integer Count;
 
