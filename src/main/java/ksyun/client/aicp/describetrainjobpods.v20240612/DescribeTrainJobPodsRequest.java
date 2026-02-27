@@ -14,30 +14,32 @@ import java.util.Arrays;
 */
 @Data
 public class DescribeTrainJobPodsRequest{
-    /***/
+    /**页码，后续废弃，改用Page*/
     @KsYunField(name="Marker")
     private String Marker;
 
-    /***/
+    /**单次调用返回的最大条目，后续废弃，改用PageSize*/
     @KsYunField(name="MaxResults")
     private String MaxResults;
 
-    /***/
+    /**训练任务ID*/
     @KsYunField(name="TrainJobId")
     private String TrainJobId;
 
-    /***/
+    /**筛选器*/
     @KsYunField(name="Filter",type=1)
     private List<FilterDto> FilterList;
 
     @Data
     @ToString
     public static class FilterDto {
-        /**可选值：role state*/
+        /**筛选项名称，可选值:
+- role 角色
+- state 状态*/
         @KsYunField(name="Name")
         private String Name;
 
-        /***/
+        /**多个筛选项的值*/
         @KsYunField(name="Value",type=1)
         private List<String> ValueList;
 

@@ -70,7 +70,7 @@ public class DescribeTrainJobsResponse extends BaseResponseModel {
         @JsonProperty("Framework")
         private String Framework;
 
-        /**权限配置-可见范围, 有效值：Creator(队列管理员可见), QueueMember(队列内成员可见)*/
+        /**权限配置-可见范围, 有效值：Creator(个人私有), QueueMember(队列内共享)*/
         @JsonProperty("AccessType")
         private String AccessType;
 
@@ -82,7 +82,7 @@ public class DescribeTrainJobsResponse extends BaseResponseModel {
         @JsonProperty("ClusterId")
         private String ClusterId;
 
-        /**GPU故障自愈*/
+        /**故障自愈*/
         @JsonProperty("SelfHealing")
         private Boolean SelfHealing;
 
@@ -171,7 +171,7 @@ public class DescribeTrainJobsResponse extends BaseResponseModel {
         @Data
         @ToString
         public static class TrainJobSetRolesDto {
-            /**角色名称，pytorch框架支持Master和Worker，tensorflow框架支持Chief，PS和Evaluator*/
+            /**角色名称，pytorch框架支持Master和Worker，tensorflow框架支持Worker，Chief，PS和Evaluator*/
             @JsonProperty("RoleName")
             private String RoleName;
 
@@ -239,7 +239,7 @@ public class DescribeTrainJobsResponse extends BaseResponseModel {
                 @JsonProperty("CPUNum")
                 private Integer CPUNum;
 
-                /**内存(GB)*/
+                /**内存(Gi)*/
                 @JsonProperty("Memory")
                 private Integer Memory;
 

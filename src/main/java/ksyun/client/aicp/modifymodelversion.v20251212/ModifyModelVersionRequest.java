@@ -26,11 +26,11 @@ public class ModifyModelVersionRequest{
     @KsYunField(name="ModelVersionDescription")
     private String ModelVersionDescription;
 
-    /**模型格式*/
+    /**模型格式（有效值请参考DescribeFormatAndFrameworks）*/
     @KsYunField(name="Format")
     private String Format;
 
-    /**模型框架*/
+    /**模型框架（有效值请参考DescribeFormatAndFrameworks）*/
     @KsYunField(name="Framework")
     private String Framework;
 

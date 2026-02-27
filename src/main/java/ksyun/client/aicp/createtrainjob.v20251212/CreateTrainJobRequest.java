@@ -26,7 +26,10 @@ public class CreateTrainJobRequest{
     @KsYunField(name="ResourcePoolId")
     private String ResourcePoolId;
 
-    /**优先级*/
+    /**优先级，有效值：
+- kaic-high 高优先级
+- kaic-normal 中优先级
+- kaic-low 低优先级*/
     @KsYunField(name="Priority")
     private String Priority;
 
@@ -34,7 +37,9 @@ public class CreateTrainJobRequest{
     @KsYunField(name="QueueName")
     private String QueueName;
 
-    /**训练框架*/
+    /**训练框架	，有效值：
+- pytorch
+- tensorflow*/
     @KsYunField(name="Framework")
     private String Framework;
 
@@ -42,7 +47,7 @@ public class CreateTrainJobRequest{
     @KsYunField(name="AccessType")
     private String AccessType;
 
-    /**GPU故障自愈*/
+    /**故障自愈*/
     @KsYunField(name="SelfHealing")
     private Boolean SelfHealing;
 
@@ -50,7 +55,7 @@ public class CreateTrainJobRequest{
     @KsYunField(name="MaxRuntimeHour")
     private Long MaxRuntimeHour;
 
-    /**节点亲和性-仅调度到CPU节点*/
+    /**仅调度到CPU节点。当GPUNumber为空或值为0时，此值有效*/
     @KsYunField(name="JobRunOnCPU")
     private Boolean JobRunOnCPU;
 
@@ -73,7 +78,7 @@ public class CreateTrainJobRequest{
         @KsYunField(name="MountType")
         private String MountType;
 
-        /**挂载路径*/
+        /**挂载路径，不设置则取存储配置的默认挂载路径*/
         @KsYunField(name="MountPath")
         private String MountPath;
 
@@ -86,7 +91,7 @@ public class CreateTrainJobRequest{
     @Data
     @ToString
     public static class RolesDto {
-        /**角色名称，pytorch框架支持Master和Worker，tensorflow框架支持Chief，PS和Evaluator*/
+        /**角色名称，pytorch框架支持Master和Worker，tensorflow框架支持Worker，Chief，PS和Evaluator*/
         @KsYunField(name="RoleName")
         private String RoleName;
 
@@ -109,7 +114,7 @@ public class CreateTrainJobRequest{
             @KsYunField(name="ImageSource")
             private String ImageSource;
 
-            /**第三方镜像ID，当ImageSource=ThirdParty必传*/
+            /**第三方镜像配置ID，当ImageSource=ThirdParty必传*/
             @KsYunField(name="ImageRegistryId")
             private String ImageRegistryId;
 
@@ -142,7 +147,7 @@ public class CreateTrainJobRequest{
             @KsYunField(name="CPUNum")
             private Integer CPUNum;
 
-            /**内存(GB)*/
+            /**内存(Gi)*/
             @KsYunField(name="Memory")
             private Integer Memory;
 
@@ -152,7 +157,10 @@ public class CreateTrainJobRequest{
         @KsYunField(name="RunCommand")
         private String RunCommand;
 
-        /**重启策略*/
+        /**重启策略，有效值：
+- Always
+- OnFailure
+- Never*/
         @KsYunField(name="RestartPolicy")
         private String RestartPolicy;
 

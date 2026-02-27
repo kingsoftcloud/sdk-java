@@ -14,11 +14,11 @@ import java.util.Arrays;
 */
 @Data
 public class DescribeTrainJobEventsRequest{
-    /***/
+    /**资源组ID*/
     @KsYunField(name="ResourcePoolId")
     private String ResourcePoolId;
 
-    /***/
+    /**训练任务ID*/
     @KsYunField(name="TrainJobId")
     private String TrainJobId;
 

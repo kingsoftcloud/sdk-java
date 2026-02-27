@@ -34,19 +34,19 @@ public class CreateNotebookRequest{
     @KsYunField(name="GPUType")
     private String GPUType;
 
-    /**GPU核数，GPUType不为空时，此值有效，允许范围为0~10000, 如果可虚拟化，支持[0.1,0.9]*/
+    /**GPU卡数，当GPUType不为空时，此值有效，允许范围为0~10000, 如果可虚拟化，支持[0.1,0.9]*/
     @KsYunField(name="GPUNumber")
     private String GPUNumber;
 
-    /**Cpu数量，允许范围为0~10000*/
+    /**CPU核数，允许范围为0~10000*/
     @KsYunField(name="CPUNum")
     private Integer CPUNum;
 
-    /**内存G，允许范围为0~10000*/
+    /**内存Gi，允许范围为0~10000*/
     @KsYunField(name="Memory")
     private Integer Memory;
 
-    /**可见范围，Creator(创建者可见)，QueueMember（队列成员可见）*/
+    /**可见范围，Creator(个人私有)，QueueMember（队列内共享）*/
     @KsYunField(name="AccessType")
     private String AccessType;
 
@@ -101,7 +101,7 @@ public class CreateNotebookRequest{
     /**镜像来源
 - 官方镜像 Official
 - 个人镜像 Personal
-- 第三方镜 ThirdParty
+- 第三方镜像 ThirdParty
 
 当传入值为ThirdParty时，"ImageRegistryId", "ImageRepoId", "ImageTagId"必须传入*/
     @KsYunField(name="ImageSource")
@@ -112,15 +112,15 @@ public class CreateNotebookRequest{
     @KsYunField(name="ImageId")
     private String ImageId;
 
-    /**仓库连接 Id*/
+    /**第三方镜像配置ID*/
     @KsYunField(name="ImageRegistryId")
     private String ImageRegistryId;
 
-    /**仓库 Id*/
+    /**第三方镜像仓库ID*/
     @KsYunField(name="ImageRepoId")
     private String ImageRepoId;
 
-    /**tagId*/
+    /**第三方镜像版本ID*/
     @KsYunField(name="ImageTagId")
     private String ImageTagId;
 

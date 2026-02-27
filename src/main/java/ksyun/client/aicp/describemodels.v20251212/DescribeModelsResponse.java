@@ -77,7 +77,7 @@ public class DescribeModelsResponse extends BaseResponseModel {
             @JsonProperty("UserId")
             private String UserId;
 
-            /**模型权限，有效值：writer(可读写), reader(只读)*/
+            /**模型权限，有效值：writer(管理员可读写), reader(普通用户只读)*/
             @JsonProperty("Permission")
             private String Permission;
 

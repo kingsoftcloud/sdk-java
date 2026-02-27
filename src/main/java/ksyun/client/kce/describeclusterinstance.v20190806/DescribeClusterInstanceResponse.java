@@ -299,11 +299,11 @@ public class DescribeClusterInstanceResponse extends BaseResponseModel {
 
             /**自定义容器日志采集文件大小，超出此大小日志将滚动写入下一文件，默认值为100m*/
             @JsonProperty("ContainerLogMaxSize")
-            private Integer ContainerLogMaxSize;
+            private String ContainerLogMaxSize;
 
             /**自定义容器日志采集文件最大数量，默认值为10个*/
             @JsonProperty("ContainerLogMaxFiles")
-            private Integer ContainerLogMaxFiles;
+            private String ContainerLogMaxFiles;
 
         }
 

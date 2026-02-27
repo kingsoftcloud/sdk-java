@@ -107,7 +107,9 @@ public class DescribeNotebooksResponse extends BaseResponseModel {
         @JsonProperty("QueueName")
         private String QueueName;
 
-        /**可见范围: • Creator ：仅实例创建者可见 • QueueMember ：队列内成员可见
+        /**可见范围: 
+• Creator ：个人私有 
+• QueueMember ：队列内共享
 */
         @JsonProperty("AccessType")
         private String AccessType;
@@ -148,7 +150,7 @@ public class DescribeNotebooksResponse extends BaseResponseModel {
         @JsonProperty("ExternalIp")
         private String ExternalIp;
 
-        /**CPU数*/
+        /**CPU核数*/
         @JsonProperty("CPUNum")
         private Integer CPUNum;
 
@@ -168,7 +170,7 @@ public class DescribeNotebooksResponse extends BaseResponseModel {
         @JsonProperty("ImageSource")
         private String ImageSource;
 
-        /**第三方镜像链接ID*/
+        /**第三方镜像配置ID*/
         @JsonProperty("ImageRegistryId")
         private String ImageRegistryId;
 
@@ -176,11 +178,11 @@ public class DescribeNotebooksResponse extends BaseResponseModel {
         @JsonProperty("ImageRepoId")
         private String ImageRepoId;
 
-        /**第三方镜像tagId*/
+        /**第三方镜像版本ID*/
         @JsonProperty("ImageTagId")
         private String ImageTagId;
 
-        /**第三方镜像链接名称*/
+        /**第三方镜像配置名称*/
         @JsonProperty("ImageRegistryName")
         private String ImageRegistryName;
 
@@ -188,7 +190,7 @@ public class DescribeNotebooksResponse extends BaseResponseModel {
         @JsonProperty("ImageRepoName")
         private String ImageRepoName;
 
-        /**第三方镜像tag名称*/
+        /**第三方镜像版本名称*/
         @JsonProperty("ImageTagName")
         private String ImageTagName;
 

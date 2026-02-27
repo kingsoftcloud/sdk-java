@@ -38,11 +38,11 @@ public class CreateModelAndVersionRequest{
     @KsYunField(name="StorageConfigId")
     private String StorageConfigId;
 
-    /**模型格式*/
+    /**模型格式(有效值请参考DescribeFormatAndFrameworks)*/
     @KsYunField(name="Format")
     private String Format;
 
-    /**模型框架*/
+    /**模型框架(有效值请参考DescribeFormatAndFrameworks)*/
     @KsYunField(name="Framework")
     private String Framework;
 
@@ -57,7 +57,7 @@ public class CreateModelAndVersionRequest{
         @KsYunField(name="UserId")
         private String UserId;
 
-        /**模型权限，有效值：writer(可读写), reader(只读)*/
+        /**模型权限，有效值：writer(管理员可读写), reader(普通用户只读)*/
         @KsYunField(name="Permission")
         private String Permission;
 

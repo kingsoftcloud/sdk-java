@@ -26,7 +26,7 @@ public class DescribeTrainJobPodsResponse extends BaseResponseModel {
     @Data
     @ToString
     public static class TrainJobPodSetDto {
-        /**训练任务id*/
+        /**训练任务ID*/
         @JsonProperty("TrainJobId")
         private String TrainJobId;
 
@@ -34,7 +34,7 @@ public class DescribeTrainJobPodsResponse extends BaseResponseModel {
         @JsonProperty("Role")
         private String Role;
 
-        /***/
+        /**任务重启次数*/
         @JsonProperty("StartTimes")
         private Integer StartTimes;
 
@@ -69,11 +69,11 @@ public class DescribeTrainJobPodsResponse extends BaseResponseModel {
             @JsonProperty("EndTime")
             private String EndTime;
 
-            /**集群内ip*/
+            /**Pod所在节点IP*/
             @JsonProperty("Ip")
             private String Ip;
 
-            /**重启次数*/
+            /**Pod重启次数*/
             @JsonProperty("RestartCount")
             private Integer RestartCount;
 
@@ -93,7 +93,7 @@ public class DescribeTrainJobPodsResponse extends BaseResponseModel {
 
     }
 
-    /**请求id*/
+    /**请求ID*/
     @JsonProperty("RequestId")
     private String RequestId;
 

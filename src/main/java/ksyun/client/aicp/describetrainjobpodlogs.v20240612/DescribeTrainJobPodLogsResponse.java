@@ -15,11 +15,11 @@ import java.util.List;
 @ToString
 public class DescribeTrainJobPodLogsResponse extends BaseResponseModel {
 
-    /**请求id*/
+    /**请求ID*/
     @JsonProperty("RequestId")
     private String RequestId;
 
-    /**日志内容*/
+    /**日志内容。若资源组关联了Klog，请使用Klog的GetLogs接口查询*/
     @JsonProperty("PodLogs")
     private String PodLogs;
 

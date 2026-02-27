@@ -14,7 +14,7 @@ import java.util.*;
 
 /**
 * @Classname StartTrainJobClient
-* @Description 开启训练任务*/
+* @Description 启动训练任务*/
 @Slf4j
 public class StartTrainJobClient extends BaseClient {
     private final static String service = "aicp";

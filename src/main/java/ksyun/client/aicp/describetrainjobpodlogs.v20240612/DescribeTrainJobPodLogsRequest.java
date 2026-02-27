@@ -14,7 +14,7 @@ import java.util.Arrays;
 */
 @Data
 public class DescribeTrainJobPodLogsRequest{
-    /**资源池Id*/
+    /**资源组ID*/
     @KsYunField(name="ResourcePoolId")
     private String ResourcePoolId;
 
@@ -22,11 +22,11 @@ public class DescribeTrainJobPodLogsRequest{
     @KsYunField(name="TrainJobId")
     private String TrainJobId;
 
-    /**PodName名称*/
+    /**Pod名称*/
     @KsYunField(name="PodName")
     private String PodName;
 
-    /**秒，默认86400*/
+    /**日志时间范围，即查询多长时间以内的日志，单位秒*/
     @KsYunField(name="SinceSeconds")
     private Integer SinceSeconds;
 

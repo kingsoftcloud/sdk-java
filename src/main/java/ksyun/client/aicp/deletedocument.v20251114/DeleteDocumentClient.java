@@ -1,4 +1,4 @@
-package ksyun.client.aicp.createtrainjob.v20240612;
+package ksyun.client.aicp.deletedocument.v20251114;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -13,13 +13,13 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.*;
 
 /**
-* @Classname CreateTrainJobClient
-* @Description 创建训练任务*/
+* @Classname DeleteDocumentClient
+* @Description 删除知识库文档*/
 @Slf4j
-public class CreateTrainJobClient extends BaseClient {
+public class DeleteDocumentClient extends BaseClient {
     private final static String service = "aicp";
-    private final static String version = "2024-06-12";
-    private final static String action = "CreateTrainJob";
+    private final static String version = "2025-11-14";
+    private final static String action = "DeleteDocument";
 
 
     /**
@@ -28,7 +28,7 @@ public class CreateTrainJobClient extends BaseClient {
     private Credential credential;
 
 
-    public CreateTrainJobClient(Credential credential) {
+    public DeleteDocumentClient(Credential credential) {
         this.credential = credential;
     }
 
@@ -39,10 +39,10 @@ public class CreateTrainJobClient extends BaseClient {
      *
      * @param path 请求路径
      * @param requestObj 请求对象
-     * @return CreateTrainJobResponse 响应对象
+     * @return DeleteDocumentResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public CreateTrainJobResponse doPostSend(String path, CreateTrainJobRequest requestObj) throws RuntimeException {
+    public DeleteDocumentResponse doPostSend(String path, DeleteDocumentRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doPostSend(path, requestObj, head);
@@ -56,10 +56,10 @@ public class CreateTrainJobClient extends BaseClient {
      * @param requestObj 请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return CreateTrainJobResponse 响应对象
+     * @return DeleteDocumentResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public CreateTrainJobResponse doPostSend(String path, CreateTrainJobRequest requestObj,
+    public DeleteDocumentResponse doPostSend(String path, DeleteDocumentRequest requestObj,
                                          UrlPathParams urlPathParams,
                                          Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
@@ -77,10 +77,10 @@ public class CreateTrainJobClient extends BaseClient {
      * @param path 请求路径
      * @param requestObj 请求对象
      * @param head 请求头
-     * @return CreateTrainJobResponse 响应对象
+     * @return DeleteDocumentResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public CreateTrainJobResponse doPostSend(String path, CreateTrainJobRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public DeleteDocumentResponse doPostSend(String path, DeleteDocumentRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("post", path, requestObj, head, null);
     }
 
@@ -92,10 +92,10 @@ public class CreateTrainJobClient extends BaseClient {
      * @param requestObj 请求对象
      * @param head 请求头（包含自定义 Header）
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
-     * @return CreateTrainJobResponse 响应对象
+     * @return DeleteDocumentResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public CreateTrainJobResponse doPostSend(String path, CreateTrainJobRequest requestObj, Map<String, String> head,
+    public DeleteDocumentResponse doPostSend(String path, DeleteDocumentRequest requestObj, Map<String, String> head,
                                          UrlPathParams urlPathParams) throws RuntimeException {
         return executeWithV2("post", path, requestObj, head, urlPathParams);
     }
@@ -106,10 +106,10 @@ public class CreateTrainJobClient extends BaseClient {
      *
      * @param path 请求路径
      * @param requestObj 请求对象
-     * @return CreateTrainJobResponse 响应对象
+     * @return DeleteDocumentResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public CreateTrainJobResponse doGetSend(String path, CreateTrainJobRequest requestObj) throws RuntimeException {
+    public DeleteDocumentResponse doGetSend(String path, DeleteDocumentRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doGetSend(path, requestObj, head);
@@ -122,10 +122,10 @@ public class CreateTrainJobClient extends BaseClient {
      * @param path 请求路径
      * @param requestObj 请求对象
      * @param head 请求头
-     * @return CreateTrainJobResponse 响应对象
+     * @return DeleteDocumentResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public CreateTrainJobResponse doGetSend(String path, CreateTrainJobRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public DeleteDocumentResponse doGetSend(String path, DeleteDocumentRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("get", path, requestObj, head, null);
     }
 
@@ -137,10 +137,10 @@ public class CreateTrainJobClient extends BaseClient {
      * @param requestObj 请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return CreateTrainJobResponse 响应对象
+     * @return DeleteDocumentResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public CreateTrainJobResponse doGetSend(String path, CreateTrainJobRequest requestObj,
+    public DeleteDocumentResponse doGetSend(String path, DeleteDocumentRequest requestObj,
                                         UrlPathParams urlPathParams,
                                         Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
@@ -157,10 +157,10 @@ public class CreateTrainJobClient extends BaseClient {
      *
      * @param path 请求路径
      * @param requestObj 请求对象
-     * @return CreateTrainJobResponse 响应对象
+     * @return DeleteDocumentResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public CreateTrainJobResponse doPutSend(String path, CreateTrainJobRequest requestObj) throws RuntimeException {
+    public DeleteDocumentResponse doPutSend(String path, DeleteDocumentRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doPutSend(path, requestObj, head);
@@ -173,10 +173,10 @@ public class CreateTrainJobClient extends BaseClient {
      * @param path 请求路径
      * @param requestObj 请求对象
      * @param head 请求头
-     * @return CreateTrainJobResponse 响应对象
+     * @return DeleteDocumentResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public CreateTrainJobResponse doPutSend(String path, CreateTrainJobRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public DeleteDocumentResponse doPutSend(String path, DeleteDocumentRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("put", path, requestObj, head, null);
     }
 
@@ -188,10 +188,10 @@ public class CreateTrainJobClient extends BaseClient {
      * @param requestObj 请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return CreateTrainJobResponse 响应对象
+     * @return DeleteDocumentResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public CreateTrainJobResponse doPutSend(String path, CreateTrainJobRequest requestObj,
+    public DeleteDocumentResponse doPutSend(String path, DeleteDocumentRequest requestObj,
                                         UrlPathParams urlPathParams,
                                         Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
@@ -208,10 +208,10 @@ public class CreateTrainJobClient extends BaseClient {
      *
      * @param path 请求路径
      * @param requestObj 请求对象
-     * @return CreateTrainJobResponse 响应对象
+     * @return DeleteDocumentResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public CreateTrainJobResponse doDeleteSend(String path, CreateTrainJobRequest requestObj) throws RuntimeException {
+    public DeleteDocumentResponse doDeleteSend(String path, DeleteDocumentRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doDeleteSend(path, requestObj, head);
@@ -224,10 +224,10 @@ public class CreateTrainJobClient extends BaseClient {
      * @param path 请求路径
      * @param requestObj 请求对象
      * @param head 请求头
-     * @return CreateTrainJobResponse 响应对象
+     * @return DeleteDocumentResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public CreateTrainJobResponse doDeleteSend(String path, CreateTrainJobRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public DeleteDocumentResponse doDeleteSend(String path, DeleteDocumentRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("delete", path, requestObj, head, null);
     }
 
@@ -239,10 +239,10 @@ public class CreateTrainJobClient extends BaseClient {
      * @param requestObj 请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return CreateTrainJobResponse 响应对象
+     * @return DeleteDocumentResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public CreateTrainJobResponse doDeleteSend(String path, CreateTrainJobRequest requestObj,
+    public DeleteDocumentResponse doDeleteSend(String path, DeleteDocumentRequest requestObj,
                                            UrlPathParams urlPathParams,
                                            Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
@@ -262,10 +262,10 @@ public class CreateTrainJobClient extends BaseClient {
      * @param requestObj 请求对象
      * @param head 请求头
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
-     * @return CreateTrainJobResponse 响应对象
+     * @return DeleteDocumentResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    private CreateTrainJobResponse executeWithV2(String method, String path, CreateTrainJobRequest requestObj,
+    private DeleteDocumentResponse executeWithV2(String method, String path, DeleteDocumentRequest requestObj,
                                              Map<String, String> head, UrlPathParams urlPathParams) throws RuntimeException {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/json");
@@ -300,7 +300,7 @@ public class CreateTrainJobClient extends BaseClient {
 
         // 4. 解析 JSON 响应
         try {
-            return JSON.parseObject(message, CreateTrainJobResponse.class);
+            return JSON.parseObject(message, DeleteDocumentResponse.class);
         } catch (Exception e) {
             throw new RuntimeException(
                 String.format("[KsyunSDKError] [HttpCode:%d Err:%s] %s",
@@ -321,7 +321,7 @@ public class CreateTrainJobClient extends BaseClient {
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPostWithContextV2(String path, CreateTrainJobRequest requestObj) {
+    public HttpResponseWrapper doPostWithContextV2(String path, DeleteDocumentRequest requestObj) {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doPostWithContextV2(path, requestObj, head);
@@ -339,7 +339,7 @@ public class CreateTrainJobClient extends BaseClient {
      * @param head 请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPostWithContextV2(String path, CreateTrainJobRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doPostWithContextV2(String path, DeleteDocumentRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/json");
         return doRpcV2(path, requestObj, requestHeaders, "post", null);
@@ -356,7 +356,7 @@ public class CreateTrainJobClient extends BaseClient {
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doGetWithContextV2(String path, CreateTrainJobRequest requestObj) {
+    public HttpResponseWrapper doGetWithContextV2(String path, DeleteDocumentRequest requestObj) {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doGetWithContextV2(path, requestObj, head);
@@ -374,7 +374,7 @@ public class CreateTrainJobClient extends BaseClient {
      * @param head 请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doGetWithContextV2(String path, CreateTrainJobRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doGetWithContextV2(String path, DeleteDocumentRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/json");
         return doRpcV2(path, requestObj, requestHeaders, "get", null);
@@ -391,7 +391,7 @@ public class CreateTrainJobClient extends BaseClient {
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPutWithContextV2(String path, CreateTrainJobRequest requestObj) {
+    public HttpResponseWrapper doPutWithContextV2(String path, DeleteDocumentRequest requestObj) {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doPutWithContextV2(path, requestObj, head);
@@ -409,7 +409,7 @@ public class CreateTrainJobClient extends BaseClient {
      * @param head 请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPutWithContextV2(String path, CreateTrainJobRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doPutWithContextV2(String path, DeleteDocumentRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/json");
         return doRpcV2(path, requestObj, requestHeaders, "put", null);
@@ -426,7 +426,7 @@ public class CreateTrainJobClient extends BaseClient {
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doDeleteWithContextV2(String path, CreateTrainJobRequest requestObj) {
+    public HttpResponseWrapper doDeleteWithContextV2(String path, DeleteDocumentRequest requestObj) {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doDeleteWithContextV2(path, requestObj, head);
@@ -444,7 +444,7 @@ public class CreateTrainJobClient extends BaseClient {
      * @param head 请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doDeleteWithContextV2(String path, CreateTrainJobRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doDeleteWithContextV2(String path, DeleteDocumentRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/json");
         return doRpcV2(path, requestObj, requestHeaders, "delete", null);
@@ -458,7 +458,7 @@ public class CreateTrainJobClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CreateTrainJobResponse doPost(String path, CreateTrainJobRequest requestObj) throws Exception {
+    public DeleteDocumentResponse doPost(String path, DeleteDocumentRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doPost(path, requestObj, head);
@@ -473,11 +473,11 @@ public class CreateTrainJobClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CreateTrainJobResponse doPost(String path, CreateTrainJobRequest requestObj, Map<String, String> head) throws Exception {
+    public DeleteDocumentResponse doPost(String path, DeleteDocumentRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/json");
         String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, CreateTrainJobResponse.class);
+        return JSON.parseObject(response, DeleteDocumentResponse.class);
     }
 
     /**
@@ -487,7 +487,7 @@ public class CreateTrainJobClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public CreateTrainJobResponse doPostRaw(String path, CreateTrainJobRequest requestObj) throws Exception {
+    public DeleteDocumentResponse doPostRaw(String path, DeleteDocumentRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doPostRaw(path, requestObj, head);
@@ -501,11 +501,11 @@ public class CreateTrainJobClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public CreateTrainJobResponse doPostRaw(String path, CreateTrainJobRequest requestObj, Map<String, String> head) throws Exception {
+    public DeleteDocumentResponse doPostRaw(String path, DeleteDocumentRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/json");
         String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, CreateTrainJobResponse.class);
+        return JSON.parseObject(response, DeleteDocumentResponse.class);
     }
     /**
      * get 请求
@@ -515,7 +515,7 @@ public class CreateTrainJobClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CreateTrainJobResponse doGet(String path, CreateTrainJobRequest requestObj) throws Exception {
+    public DeleteDocumentResponse doGet(String path, DeleteDocumentRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.putIfAbsent("Content-Type", "application/json");
         return doGet(path, requestObj, head);
@@ -530,11 +530,11 @@ public class CreateTrainJobClient extends BaseClient {
          * @return
          * @throws Exception
          */
-        public CreateTrainJobResponse doGet(String path, CreateTrainJobRequest requestObj, Map<String, String> head) throws Exception {
+        public DeleteDocumentResponse doGet(String path, DeleteDocumentRequest requestObj, Map<String, String> head) throws Exception {
             final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
             requestHeaders.putIfAbsent("Content-Type", "application/json");
             String response = doRpc(path, requestObj, requestHeaders, "get");
-            return JSON.parseObject(response, CreateTrainJobResponse.class);
+            return JSON.parseObject(response, DeleteDocumentResponse.class);
         }
 
     /**
@@ -545,7 +545,7 @@ public class CreateTrainJobClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CreateTrainJobResponse doDelete(String path, CreateTrainJobRequest requestObj) throws Exception {
+    public DeleteDocumentResponse doDelete(String path, DeleteDocumentRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/json");
         return doDelete(path, requestObj, head);
@@ -560,11 +560,11 @@ public class CreateTrainJobClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CreateTrainJobResponse doDelete(String path, CreateTrainJobRequest requestObj, Map<String, String> head) throws Exception {
+    public DeleteDocumentResponse doDelete(String path, DeleteDocumentRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/json");
         String response = doRpc(path, requestObj, requestHeaders, "delete");
-        return JSON.parseObject(response, CreateTrainJobResponse.class);
+        return JSON.parseObject(response, DeleteDocumentResponse.class);
     }
 
 
@@ -576,7 +576,7 @@ public class CreateTrainJobClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CreateTrainJobResponse doPut(String path, CreateTrainJobRequest requestObj) throws Exception {
+    public DeleteDocumentResponse doPut(String path, DeleteDocumentRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.putIfAbsent("Content-Type", "application/json");
         return doPut(path, requestObj, head);
@@ -591,11 +591,11 @@ public class CreateTrainJobClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public CreateTrainJobResponse doPut(String path, CreateTrainJobRequest requestObj, Map<String, String> head) throws Exception {
+    public DeleteDocumentResponse doPut(String path, DeleteDocumentRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
        requestHeaders.putIfAbsent("Content-Type", "application/json");
         String response = doRpc(path, requestObj, requestHeaders, "put");
-        return JSON.parseObject(response, CreateTrainJobResponse.class);
+        return JSON.parseObject(response, DeleteDocumentResponse.class);
     }
 
     /**
@@ -607,7 +607,7 @@ public class CreateTrainJobClient extends BaseClient {
          * @return
          * @throws Exception
          */
-        private String doRpc(String path, CreateTrainJobRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
+        private String doRpc(String path, DeleteDocumentRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
             //断言
             Objects.requireNonNull(path, "path cannot be null");
             Objects.requireNonNull(requestObj, "requestObj cannot be null");
@@ -639,7 +639,7 @@ public class CreateTrainJobClient extends BaseClient {
         }
 
 
-        private JSONObject getRequestParam(CreateTrainJobRequest requestObj, String contentType) throws Exception {
+        private JSONObject getRequestParam(DeleteDocumentRequest requestObj, String contentType) throws Exception {
             //请求参数
             if (contentType.equalsIgnoreCase("application/json")) {
                 return getPostRawRequestParams(requestObj);
@@ -648,7 +648,7 @@ public class CreateTrainJobClient extends BaseClient {
         }
 
 
-        private JSONObject getSimpleRequestParams(CreateTrainJobRequest requestObj) throws Exception {
+        private JSONObject getSimpleRequestParams(DeleteDocumentRequest requestObj) throws Exception {
             JSONObject requestParams = new JSONObject();
 
             //设置请求体请求参数
@@ -656,7 +656,7 @@ public class CreateTrainJobClient extends BaseClient {
             return requestParams;
         }
 
-        private JSONObject getPostRawRequestParams(CreateTrainJobRequest requestObj) throws Exception {
+        private JSONObject getPostRawRequestParams(DeleteDocumentRequest requestObj) throws Exception {
             JSONObject requestParams = new JSONObject();
 
             //设置请求体请求参数
@@ -674,7 +674,7 @@ public class CreateTrainJobClient extends BaseClient {
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    private HttpResponseWrapper doRpcV2(String path, CreateTrainJobRequest requestObj, Map<String, String> head,
+    private HttpResponseWrapper doRpcV2(String path, DeleteDocumentRequest requestObj, Map<String, String> head,
                                         String requestMethod, UrlPathParams urlPathParams) {
         try {
             //断言

@@ -19,59 +19,43 @@ public class DescribeTrainJobEventsResponse extends BaseResponseModel {
     @JsonProperty("RequestId")
     private String RequestId;
 
-    /***/
+    /**事件记录*/
     @JsonProperty("DataSet")
     private List<DataSetDto> DataSet;
 
     @Data
     @ToString
     public static class DataSetDto {
-        /**2024-11-03T10:15:30Z*/
+        /**首次出现时间*/
         @JsonProperty("FirstSeen")
         private String FirstSeen;
 
-        /**2024-11-03T10:15:30Z*/
+        /**最后出现时间*/
         @JsonProperty("LastSeen")
         private String LastSeen;
 
-        /**Normal*/
+        /**类型*/
         @JsonProperty("Type")
         private String Type;
 
-        /**trainjob/pytorch-job-example-worker-0*/
+        /**事件对象*/
         @JsonProperty("Object")
         private DataSetObjectDto Object;
 
         @Data
         @ToString
         public static class DataSetObjectDto {
-            /***/
+            /**对象类型*/
             @JsonProperty("Kind")
             private String Kind;
 
-            /***/
+            /**命名空间*/
             @JsonProperty("Namespace")
             private String Namespace;
 
-            /***/
+            /**对象名称*/
             @JsonProperty("Name")
             private String Name;
-
-            /***/
-            @JsonProperty("UID")
-            private String UID;
-
-            /***/
-            @JsonProperty("APIVersion")
-            private String APIVersion;
-
-            /***/
-            @JsonProperty("ResourceVersion")
-            private String ResourceVersion;
-
-            /***/
-            @JsonProperty("FieldPath")
-            private String FieldPath;
 
         }
 
@@ -83,24 +67,20 @@ public class DescribeTrainJobEventsResponse extends BaseResponseModel {
         @JsonProperty("Message")
         private String Message;
 
-        /***/
+        /**事件源*/
         @JsonProperty("Source")
         private DataSetSourceDto Source;
 
         @Data
         @ToString
         public static class DataSetSourceDto {
-            /**kubelet*/
+            /**组件*/
             @JsonProperty("component")
             private String Component;
 
-            /**node-1.example.com*/
-            @JsonProperty("host")
-            private String Host;
-
         }
 
-        /**1*/
+        /**事件数*/
         @JsonProperty("Count")
         private Integer Count;
 

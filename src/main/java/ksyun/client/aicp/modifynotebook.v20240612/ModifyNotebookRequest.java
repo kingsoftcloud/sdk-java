@@ -38,21 +38,21 @@ public class ModifyNotebookRequest{
     @KsYunField(name="GPUType")
     private String GPUType;
 
-    /**GPU核数，允许范围为0~10000*/
+    /**GPU卡数，允许范围为0~10000*/
     @KsYunField(name="GPUNumber")
     private String GPUNumber;
 
-    /**Cpu数量，允许范围为0~10000*/
+    /**CPU核数，允许范围为0~10000*/
     @KsYunField(name="CPUNum")
     private Integer CPUNum;
 
-    /**内存G，允许范围为0~10000	*/
+    /**内存Gi，允许范围为0~10000	*/
     @KsYunField(name="Memory")
     private Integer Memory;
 
     /**可见范围:
-• Creator ：仅实例创建者可见
-• QueueMember ：队列内成员可见
+• Creator ：个人私有
+• QueueMember ：队列内共享
 */
     @KsYunField(name="AccessType")
     private String AccessType;
@@ -108,7 +108,7 @@ public class ModifyNotebookRequest{
 
     }
 
-    /***/
+    /**自动保存镜像。当值为true时，开发任务停止前会执行自动保存镜像。*/
     @KsYunField(name="AutoSave")
     private Boolean AutoSave;
 
@@ -136,7 +136,7 @@ public class ModifyNotebookRequest{
     @KsYunField(name="AllocationId")
     private String AllocationId;
 
-    /**第三方镜像tagId*/
+    /**第三方镜像版本ID*/
     @KsYunField(name="ImageTagId")
     private String ImageTagId;
 
@@ -154,7 +154,7 @@ public class ModifyNotebookRequest{
     @KsYunField(name="ImageRepoId")
     private String ImageRepoId;
 
-    /**第三方镜像ID*/
+    /**第三方镜像配置ID*/
     @KsYunField(name="ImageRegistryId")
     private String ImageRegistryId;
 

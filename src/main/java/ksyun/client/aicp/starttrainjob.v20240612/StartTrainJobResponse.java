@@ -15,11 +15,11 @@ import java.util.List;
 @ToString
 public class StartTrainJobResponse extends BaseResponseModel {
 
-    /***/
+    /**请求ID*/
     @JsonProperty("RequestId")
     private String RequestId;
 
-    /***/
+    /**训练任务ID*/
     @JsonProperty("TrainJobId")
     private String TrainJobId;
 

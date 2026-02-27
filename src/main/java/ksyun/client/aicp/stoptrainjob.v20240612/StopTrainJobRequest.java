@@ -14,7 +14,7 @@ import java.util.Arrays;
 */
 @Data
 public class StopTrainJobRequest{
-    /**训练任务Id*/
+    /**训练任务ID*/
     @KsYunField(name="TrainJobId")
     private String TrainJobId;
 

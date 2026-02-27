@@ -58,7 +58,7 @@ public class DescribeImagesResponse extends BaseResponseModel {
         @JsonProperty("CudaVersion")
         private String CudaVersion;
 
-        /**镜像大小*/
+        /**镜像大小（Gi）*/
         @JsonProperty("ImageSize")
         private String ImageSize;
 

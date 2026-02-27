@@ -14,14 +14,14 @@ import java.util.Arrays;
 */
 @Data
 public class ModifyTrainJobRequest{
-    /**训练任务Id*/
+    /**训练任务ID*/
     @KsYunField(name="TrainJobId")
     private String TrainJobId;
 
     /**优先级，可选值：
- ·kaic-high
- ·kaic-normal
- ·kaic-low*/
+ - kaic-high 高优先级
+ - kaic-normal 中优先级
+ - kaic-low 低优先级*/
     @KsYunField(name="Priority")
     private String Priority;
 

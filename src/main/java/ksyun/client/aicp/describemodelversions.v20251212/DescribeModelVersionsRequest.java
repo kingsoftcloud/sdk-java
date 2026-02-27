@@ -30,7 +30,7 @@ public class DescribeModelVersionsRequest{
     @KsYunField(name="Page")
     private Integer Page;
 
-    /**每页数量*/
+    /**单次调用可返回的最大条目数量*/
     @KsYunField(name="PageSize")
     private Integer PageSize;
 
