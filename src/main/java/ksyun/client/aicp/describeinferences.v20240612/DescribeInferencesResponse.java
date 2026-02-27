@@ -113,6 +113,20 @@ public class DescribeInferencesResponse extends BaseResponseModel {
 
         /**启动参数（模型部署类型参数）*/
         @JsonProperty("CmdOptions")
+        private List<InferenceSetCmdOptionsDto> CmdOptions;
+
+        @Data
+        @ToString
+        public static class InferenceSetCmdOptionsDto {
+            /**环境变量名*/
+            @JsonProperty("Name")
+            private String Name;
+
+            /**环境变量值*/
+            @JsonProperty("Value")
+            private String Value;
+
+        }
         /**资源池ID*/
         @JsonProperty("ResourcePoolId")
         private String ResourcePoolId;
