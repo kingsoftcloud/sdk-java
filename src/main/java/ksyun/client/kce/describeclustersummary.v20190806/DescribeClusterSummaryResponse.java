@@ -21,7 +21,7 @@ public class DescribeClusterSummaryResponse extends BaseResponseModel {
 
     /***/
     @JsonProperty("ClusterSet")
-    private ClusterSetDto ClusterSet;
+    private List<ClusterSetDto> ClusterSet;
 
     @Data
     @ToString
