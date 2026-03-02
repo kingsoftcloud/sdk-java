@@ -14,7 +14,7 @@ import java.util.Arrays;
 */
 @Data
 public class DeleteStorageConfigRequest{
-    /**存储配置Id*/
+    /**存储配置ID*/
     @KsYunField(name="StorageConfigId")
     private String StorageConfigId;
 

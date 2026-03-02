@@ -68,7 +68,7 @@ public class CreateStorageConfigRequest{
         @KsYunField(name="BucketName")
         private String BucketName;
 
-        /**KS3存储桶路径，请确保KS3路径真实有效(不穿入则挂载整个bucket桶)*/
+        /**KS3存储桶路径，请确保KS3路径真实有效(不传入则挂载整个bucket桶)*/
         @KsYunField(name="BucketPath")
         private String BucketPath;
 
@@ -86,8 +86,8 @@ public class CreateStorageConfigRequest{
         private String UserId;
 
         /**权限类型, 
- kpfs用户权限：[admin 创建者or主账号, writer 管理员（只读）, writer_mnt_w 管理员（读写）, reader 普通成员（只读）, reader_mnt_w 普通成员（读写）] 
-ks3用户权限：[admin 创建者or主账号, writer 管理员（只读）, reader 普通成员（只读）]*/
+ kpfs用户权限：[writer 管理员（只读）, writer_mnt_w 管理员（读写）, reader 普通成员（只读）, reader_mnt_w 普通成员（读写）] 
+ks3用户权限：[writer 管理员（只读）, reader 普通成员（只读）]*/
         @KsYunField(name="Permission")
         private String Permission;
 

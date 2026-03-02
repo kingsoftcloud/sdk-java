@@ -102,6 +102,7 @@ public class GetInferenceDetailResponse extends BaseResponseModel {
         /**启动参数（模型部署类型参数）*/
         @JsonProperty("CmdOptions")
         private List<InferenceDetailCmdOptionsDto> CmdOptions;
+
         @Data
         @ToString
         public static class InferenceDetailCmdOptionsDto {

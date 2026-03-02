@@ -18,11 +18,11 @@ public class ModifyNotebookRequest{
     @KsYunField(name="NotebookId")
     private String NotebookId;
 
-    /**名称*/
+    /**开发任务名称*/
     @KsYunField(name="NotebookName")
     private String NotebookName;
 
-    /**描述*/
+    /**描述信息*/
     @KsYunField(name="Description")
     private String Description;
 
@@ -142,7 +142,7 @@ public class ModifyNotebookRequest{
 
     /**镜像来源，当改变镜像来源时，需传入该值。
 - Official 官方镜像
-- Personal 个人镜像
+- Personal 自定义镜像
 - ThirdParty 第三方镜像
 
 当修改镜像类型为第三方镜像时，需同时传入"ImageRegistryId", "ImageRepoId", "ImageTagId"三个入参

@@ -14,7 +14,7 @@ import java.util.Arrays;
 */
 @Data
 public class CreateNotebookRequest{
-    /**任务名称*/
+    /**开发任务名称*/
     @KsYunField(name="NotebookName")
     private String NotebookName;
 
@@ -22,7 +22,7 @@ public class CreateNotebookRequest{
     @KsYunField(name="Description")
     private String Description;
 
-    /**资源池ID*/
+    /**资源组ID*/
     @KsYunField(name="ResourcePoolId")
     private String ResourcePoolId;
 
@@ -34,7 +34,7 @@ public class CreateNotebookRequest{
     @KsYunField(name="GPUType")
     private String GPUType;
 
-    /**GPU卡数，当GPUType不为空时，此值有效，允许范围为0~10000, 如果可虚拟化，支持[0.1,0.9]*/
+    /**GPU卡数，当GPUType不为空时，此值有效且必传，允许范围为0~10000, 如果可虚拟化，支持[0.1,0.9]*/
     @KsYunField(name="GPUNumber")
     private String GPUNumber;
 
@@ -73,11 +73,11 @@ public class CreateNotebookRequest{
 
     }
 
-    /**是否自动保存镜像*/
+    /**自动保存镜像。当值为true时，开发任务停止前会执行自动保存镜像*/
     @KsYunField(name="AutoSave")
     private Boolean AutoSave;
 
-    /**开放服务端口列表*/
+    /**自定义服务配置*/
     @KsYunField(name="ServiceConfigs",type=2)
     private List<ServiceConfigsDto> ServiceConfigsList;
 
@@ -100,7 +100,7 @@ public class CreateNotebookRequest{
 
     /**镜像来源
 - 官方镜像 Official
-- 个人镜像 Personal
+- 自定义镜像 Personal
 - 第三方镜像 ThirdParty
 
 当传入值为ThirdParty时，"ImageRegistryId", "ImageRepoId", "ImageTagId"必须传入*/
@@ -144,7 +144,7 @@ public class CreateNotebookRequest{
     @KsYunField(name="AllocationId")
     private String AllocationId;
 
-    /**开启后，仅调度CPU*/
+    /**仅调度到CPU节点。当GPUNumber为空或值为0时此值有效*/
     @KsYunField(name="RunOnCPU")
     private String RunOnCPU;
 

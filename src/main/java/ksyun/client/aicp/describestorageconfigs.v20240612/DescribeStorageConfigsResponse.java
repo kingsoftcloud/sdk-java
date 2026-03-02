@@ -38,15 +38,15 @@ public class DescribeStorageConfigsResponse extends BaseResponseModel {
     @Data
     @ToString
     public static class StorageConfigSetDto {
-        /**数据集ID*/
+        /**存储配置ID*/
         @JsonProperty("StorageConfigId")
         private String StorageConfigId;
 
-        /**数据集名称*/
+        /**存储配置名称*/
         @JsonProperty("StorageConfigName")
         private String StorageConfigName;
 
-        /**描述*/
+        /**描述信息*/
         @JsonProperty("Description")
         private String Description;
 
@@ -60,7 +60,7 @@ public class DescribeStorageConfigsResponse extends BaseResponseModel {
         @JsonProperty("MountPath")
         private String MountPath;
 
-        /**Ak*/
+        /**访问秘钥ID*/
         @JsonProperty("Ak")
         private String Ak;
 
@@ -75,7 +75,7 @@ public class DescribeStorageConfigsResponse extends BaseResponseModel {
             @JsonProperty("FileSystemId")
             private String FileSystemId;
 
-            /**文件系统ID*/
+            /**文件系统名称*/
             @JsonProperty("FileSystemName")
             private String FileSystemName;
 

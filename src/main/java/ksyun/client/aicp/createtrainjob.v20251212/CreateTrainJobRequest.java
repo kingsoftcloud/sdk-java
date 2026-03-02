@@ -29,7 +29,7 @@ public class CreateTrainJobRequest{
     /**优先级，有效值：
 - kaic-high 高优先级
 - kaic-normal 中优先级
-- kaic-low 低优先级*/
+- kaic-low  低优先级*/
     @KsYunField(name="Priority")
     private String Priority;
 

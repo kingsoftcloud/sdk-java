@@ -14,7 +14,7 @@ import java.util.Arrays;
 */
 @Data
 public class DescribeNotebookLogRequest{
-    /**开发任务Id*/
+    /**开发任务ID*/
     @KsYunField(name="NotebookId")
     private String NotebookId;
 

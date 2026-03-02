@@ -127,6 +127,7 @@ public class DescribeInferencesResponse extends BaseResponseModel {
             private String Value;
 
         }
+
         /**资源池ID*/
         @JsonProperty("ResourcePoolId")
         private String ResourcePoolId;

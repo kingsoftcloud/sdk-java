@@ -71,11 +71,11 @@ public class DescribeNotebooksResponse extends BaseResponseModel {
 
         }
 
-        /**开启镜像自动保存*/
+        /**自动保存镜像。当值为true时，开发任务停止前会执行自动保存镜像*/
         @JsonProperty("AutoSave")
         private Boolean AutoSave;
 
-        /**镜像报错状态*/
+        /**镜像保存状态*/
         @JsonProperty("ImageSaveStatus")
         private String ImageSaveStatus;
 
@@ -83,7 +83,7 @@ public class DescribeNotebooksResponse extends BaseResponseModel {
         @JsonProperty("ImageId")
         private String ImageId;
 
-        /**GPU卡型*/
+        /**GPU类型*/
         @JsonProperty("GPUType")
         private String GPUType;
 
@@ -95,7 +95,7 @@ public class DescribeNotebooksResponse extends BaseResponseModel {
         @JsonProperty("CreateUser")
         private String CreateUser;
 
-        /**Namespace*/
+        /**命名空间*/
         @JsonProperty("Namespace")
         private String Namespace;
 
@@ -154,7 +154,7 @@ public class DescribeNotebooksResponse extends BaseResponseModel {
         @JsonProperty("CPUNum")
         private Integer CPUNum;
 
-        /**内存GI
+        /**内存Gi
 */
         @JsonProperty("Memory")
         private Integer Memory;
@@ -165,7 +165,7 @@ public class DescribeNotebooksResponse extends BaseResponseModel {
 
         /**镜像来源
 - 官方镜像 Official
-- 个人镜像 Personal 
+- 自定义镜像 Personal 
 - 第三方镜像ThirdParty*/
         @JsonProperty("ImageSource")
         private String ImageSource;
@@ -205,7 +205,7 @@ public class DescribeNotebooksResponse extends BaseResponseModel {
             @JsonProperty("StorageConfigId")
             private String StorageConfigId;
 
-            /**存储路径*/
+            /**挂载路径*/
             @JsonProperty("MountPath")
             private String MountPath;
 
@@ -215,45 +215,41 @@ public class DescribeNotebooksResponse extends BaseResponseModel {
 
         }
 
-        /***/
+        /**自定义服务配置*/
         @JsonProperty("ServiceConfigs")
         private List<NotebooksServiceConfigsDto> ServiceConfigs;
 
         @Data
         @ToString
         public static class NotebooksServiceConfigsDto {
-            /***/
+            /**服务名称*/
             @JsonProperty("Service")
             private String Service;
 
-            /**8001*/
+            /**端口*/
             @JsonProperty("Port")
             private Integer Port;
 
-            /**false*/
+            /**开启公网访问*/
             @JsonProperty("EnablePublicNetwork")
             private Boolean EnablePublicNetwork;
 
         }
 
-        /***/
+        /**标签*/
         @JsonProperty("Label")
         private NotebooksLabelDto Label;
 
         @Data
         @ToString
         public static class NotebooksLabelDto {
-            /***/
+            /**自动清理策略ID*/
             @JsonProperty("TerminatePolicyId")
             private String TerminatePolicyId;
 
         }
 
-        /**1*/
-        @JsonProperty("Version")
-        private String Version;
-
-        /**预估镜像大小，单位G*/
+        /**预估镜像大小，单位Gi*/
         @JsonProperty("EstimatedImageSize")
         private Double EstimatedImageSize;
 
@@ -263,7 +259,7 @@ public class DescribeNotebooksResponse extends BaseResponseModel {
         @JsonProperty("ComputeStatus")
         private String ComputeStatus;
 
-        /**仅调度CPU*/
+        /**仅调度到CPU节点。当GPUNumber为空或值为0时，此值有效*/
         @JsonProperty("RunOnCPU")
         private Boolean RunOnCPU;
 
@@ -281,7 +277,7 @@ public class DescribeNotebooksResponse extends BaseResponseModel {
     @JsonProperty("Page")
     private Integer Page;
 
-    /**页大小*/
+    /**单次调用可返回的最大条目数量*/
     @JsonProperty("PageSize")
     private Integer PageSize;
 

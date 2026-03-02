@@ -14,7 +14,7 @@ import java.util.Arrays;
 */
 @Data
 public class DescribeNotebooksRequest{
-    /**开发任务ID*/
+    /**多个开发任务的ID*/
     @KsYunField(name="NotebookId",type=1)
     private List<String> NotebookIdList;
 
@@ -22,11 +22,11 @@ public class DescribeNotebooksRequest{
     @KsYunField(name="Name")
     private String Name;
 
-    /**页数*/
+    /**页码*/
     @KsYunField(name="Page")
     private Integer Page;
 
-    /**每页查询数目*/
+    /**单次调用可返回的最大条目数量*/
     @KsYunField(name="PageSize")
     private Integer PageSize;
 
@@ -37,7 +37,7 @@ public class DescribeNotebooksRequest{
     @Data
     @ToString
     public static class FilterDto {
-        /**过滤条件 notebook-status*/
+        /**过滤条件 notebook-status（开发任务状态）*/
         @KsYunField(name="Name")
         private String Name;
 
