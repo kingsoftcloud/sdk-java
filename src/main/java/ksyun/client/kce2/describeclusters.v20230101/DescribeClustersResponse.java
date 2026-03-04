@@ -185,6 +185,14 @@ public class DescribeClustersResponse extends BaseResponseModel {
 
             }
 
+            /***/
+            @JsonProperty("CreatedTime")
+            private String CreatedTime;
+
+            /***/
+            @JsonProperty("UpdatedTime")
+            private String UpdatedTime;
+
         }
 
     }

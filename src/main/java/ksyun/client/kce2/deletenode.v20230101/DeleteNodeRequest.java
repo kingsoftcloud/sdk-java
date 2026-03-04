@@ -18,10 +18,6 @@ public class DeleteNodeRequest{
     @KsYunField(name="ClusterId")
     private String ClusterId;
 
-    /***/
-    @KsYunField(name="NodeIds",type=2)
-    private List<String> NodeIdsList;
-
     /**是否删除主机实例*/
     @KsYunField(name="InstanceDelete")
     private Boolean InstanceDelete;
