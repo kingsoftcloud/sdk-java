@@ -54,7 +54,7 @@ public class RunInstancesRequest{
     @KsYunField(name="PurchaseTime")
     private Integer PurchaseTime;
 
-    /**实例绑定的安全组，目前仅支持绑定一个安全组*/
+    /**实例绑定的安全组*/
     @KsYunField(name="SecurityGroupId",type=1)
     private List<String> SecurityGroupIdList;
 

@@ -298,6 +298,10 @@ public class DescribeInstancesResponse extends BaseResponseModel {
             @JsonProperty("NetworkInterfaceName")
             private String NetworkInterfaceName;
 
+            /**弹性公网IP地址*/
+            @JsonProperty("PublicIp")
+            private String PublicIp;
+
         }
 
         /**是否支持 SR-IOV*/

@@ -46,12 +46,4 @@ true/false,默认false*/
     @KsYunField(name="SystemDisk.DiskType")
     private String SystemDiskDiskType;
 
-    /**扩容 offline 离线扩容| online 在线扩容*/
-    @KsYunField(name="SystemDisk.ResizeType")
-    private String SystemDiskResizeType;
-
-    /**用户自定义数据，必须是base64编码*/
-    @KsYunField(name="UserData")
-    private String UserData;
-
 }
