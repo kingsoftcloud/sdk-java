@@ -27,4 +27,32 @@ public class DescribeDirQuotaResponse extends BaseResponseModel {
     @JsonProperty("LogicalUsedCapacity")
     private Long LogicalUsedCapacity;
 
+    /**容量配额的设置方式。参数取值：
+
+none：无设置。仅KPFS性能型支持。
+
+statistics：仅统计。仅KPFS性能型支持。
+
+limit：限制类型。KPFS容量型、标准型、性能型均支持。*/
+    @JsonProperty("LogicalCapacityType")
+    private String LogicalCapacityType;
+
+    /**Inodes配额的设置方式，仅KPFS性能型支持。参数取值：
+
+none：无设置
+
+statistics：仅统计
+
+limit：限制类型。*/
+    @JsonProperty("LogicalInodesType")
+    private String LogicalInodesType;
+
+    /**Inodes硬阈值，仅KPFS性能型支持。单位个。*/
+    @JsonProperty("LogicalHardInodes")
+    private Long LogicalHardInodes;
+
+    /**已用Inodes，仅KPFS性能型支持。单位个。*/
+    @JsonProperty("LogicalUsedInodes")
+    private Long LogicalUsedInodes;
+
 }

@@ -50,7 +50,8 @@ public class DescribeDataFlowsResponse extends BaseResponseModel {
         @JsonProperty("BucketPrefix")
         private String BucketPrefix;
 
-        /**数据流动状态，当该数据流动下存在等待中或运行中状态的数据流动任务时，数据流动为运行中状态。枚举值：running(运行中)、norunning(未运行)*/
+        /**数据流动状态。
+• running：数据流动已创建完成，在正常运行中。*/
         @JsonProperty("Status")
         private String Status;
 

@@ -34,7 +34,10 @@ public class GetBandwidthReadRequest{
     @KsYunField(name="ClientNm")
     private String ClientNm;
 
-    /**NFS客户端的VpcIp。若您需要查询NFS客户端级的统计项，可根据VpcIp筛选。支持Ipv4，如：10.0.0.1。请参见查询文件系统NFS客户端信息。该参数仅支持华北3（呼和浩特）地域，且仅支持专属集群。*/
+    /**NFS客户端的VpcIp。若您需要查询NFS客户端级的统计项，可根据VpcIp筛选。支持Ipv4，如：10.0.0.1。请参见查询文件系统NFS客户端信息。
+
+
+该参数仅支持专属集群以及西北1（庆阳）公共集群，且白名单开放。*/
     @KsYunField(name="VpcIp")
     private String VpcIp;
 

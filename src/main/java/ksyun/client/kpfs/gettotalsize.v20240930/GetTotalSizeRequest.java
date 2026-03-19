@@ -30,4 +30,11 @@ public class GetTotalSizeRequest{
     @KsYunField(name="Interval")
     private String Interval;
 
+    /**目录完整路径，格式：dir/xxx 或 /dir/××× 或 dir/×××/或/dir/×××/。
+
+
+仅设置了目录配额的目录支持查询目录使用量及已用Inodes数量随时间变化趋势*/
+    @KsYunField(name="DirPath")
+    private String DirPath;
+
 }
