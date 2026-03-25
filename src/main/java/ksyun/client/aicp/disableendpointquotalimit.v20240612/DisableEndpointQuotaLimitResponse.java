@@ -1,0 +1,22 @@
+package ksyun.client.aicp.disableendpointquotalimit.v20240612;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import common.BaseResponseModel;
+import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+
+/**
+* @Classname DisableEndpointQuotaLimitResponse
+* @Description DisableEndpointQuotaLimit 返回体
+*/
+@Data
+@ToString
+public class DisableEndpointQuotaLimitResponse extends BaseResponseModel {
+
+    /**接入点ID*/
+    @JsonProperty("EndpointId")
+    private String EndpointId;
+
+}

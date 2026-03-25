@@ -22,11 +22,11 @@ public class DescribeModelsRequest{
     @KsYunField(name="MaxResults")
     private Integer MaxResults;
 
-    /**模型类别筛选项*/
+    /**模型类别筛选项，如"文本模型"。*/
     @KsYunField(name="ModelCategory",type=1)
     private List<String> ModelCategoryList;
 
-    /**模型供应商*/
+    /**模型供应商，如"Qwen"。*/
     @KsYunField(name="Provider",type=1)
     private List<String> ProviderList;
 

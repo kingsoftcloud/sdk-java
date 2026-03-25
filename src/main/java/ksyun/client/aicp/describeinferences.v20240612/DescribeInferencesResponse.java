@@ -203,17 +203,9 @@ public class DescribeInferencesResponse extends BaseResponseModel {
             @JsonProperty("StorageConfigId")
             private String StorageConfigId;
 
-            /**存储配置名称*/
-            @JsonProperty("StorageConfigName")
-            private String StorageConfigName;
-
             /**存储配置类型（）*/
             @JsonProperty("StorageConfigType")
             private String StorageConfigType;
-
-            /**存储类型*/
-            @JsonProperty("StorageType")
-            private String StorageType;
 
             /**挂载路径*/
             @JsonProperty("MountPath")

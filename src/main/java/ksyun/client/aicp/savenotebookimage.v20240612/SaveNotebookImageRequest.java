@@ -34,7 +34,8 @@ public class SaveNotebookImageRequest{
     @KsYunField(name="NamespacePermission")
     private String NamespacePermission;
 
-    /**镜像仓库*/
+    /**镜像仓库
+>长度为2-30位,支持填写小写英文字母、数字、分隔符"_"和"-"(分隔符不能在首位或末位)*/
     @KsYunField(name="ImageRepo")
     private String ImageRepo;
 

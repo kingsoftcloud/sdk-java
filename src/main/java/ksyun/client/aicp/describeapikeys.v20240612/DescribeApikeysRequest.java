@@ -42,4 +42,8 @@ public class DescribeApikeysRequest{
     @KsYunField(name="KeyId",type=1)
     private List<String> KeyIdList;
 
+    /**需要排除的key 类型：1- kscc key。*/
+    @KsYunField(name="ExcludeTypes",type=1)
+    private List<String> ExcludeTypesList;
+
 }
