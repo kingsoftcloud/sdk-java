@@ -34,9 +34,9 @@ public class DescribeInferenceEndpointsResponse extends BaseResponseModel {
         @JsonProperty("ModelName")
         private String ModelName;
 
-        /**1*/
+        /**文本模型*/
         @JsonProperty("ModelType")
-        private Integer ModelType;
+        private String ModelType;
 
         /**模型来源*/
         @JsonProperty("ModelSource")
@@ -98,6 +98,44 @@ public class DescribeInferenceEndpointsResponse extends BaseResponseModel {
         /**项目名称*/
         @JsonProperty("ProjectName")
         private String ProjectName;
+
+        /**限额配置*/
+        @JsonProperty("QuotaLimitConfig")
+        private EndpointsQuotaLimitConfigDto QuotaLimitConfig;
+
+        @Data
+        @ToString
+        public static class EndpointsQuotaLimitConfigDto {
+            /**限额周期：
+daily, weekly, monthly, custom*/
+            @JsonProperty("QuotaLimitCycle")
+            private String QuotaLimitCycle;
+
+            /**自定义周期，当周期自定义时会返回具体天数*/
+            @JsonProperty("CustomCycle")
+            private String CustomCycle;
+
+            /**限额数量*/
+            @JsonProperty("QuotaLimitAmount")
+            private String QuotaLimitAmount;
+
+            /**使用数量*/
+            @JsonProperty("UsedAmount")
+            private String UsedAmount;
+
+            /**剩余数量*/
+            @JsonProperty("RemainingAmount")
+            private String RemainingAmount;
+
+            /**生效时间*/
+            @JsonProperty("EffectiveTime")
+            private String EffectiveTime;
+
+            /**失效时间*/
+            @JsonProperty("ExpireTime")
+            private String ExpireTime;
+
+        }
 
     }
 

@@ -85,6 +85,12 @@ public class ModifyNotebookRequest{
         @KsYunField(name="StorageConfigType")
         private String StorageConfigType;
 
+        /**挂载协议：
+- NFS
+- POSIX*/
+        @KsYunField(name="MountProtocol")
+        private String MountProtocol;
+
     }
 
     /**服务开放端口列表*/

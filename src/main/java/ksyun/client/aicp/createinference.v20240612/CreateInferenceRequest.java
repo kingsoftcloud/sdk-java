@@ -261,6 +261,12 @@ Distributed（多机部署）为true时，有效且必填*/
         @KsYunField(name="MountPath")
         private String MountPath;
 
+        /**挂载协议：
+- NFS
+- POSIX*/
+        @KsYunField(name="MountProtocol")
+        private String MountProtocol;
+
     }
 
 }

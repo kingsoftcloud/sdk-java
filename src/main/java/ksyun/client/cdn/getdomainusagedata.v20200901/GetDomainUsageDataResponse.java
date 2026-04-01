@@ -52,7 +52,7 @@ public class GetDomainUsageDataResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("Value")
-        private Integer Value;
+        private Long Value;
 
     }
 

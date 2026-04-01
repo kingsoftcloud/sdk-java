@@ -225,6 +225,10 @@ public class DescribeResourcePoolInstancesResponse extends BaseResponseModel {
         @JsonProperty("UnSchedulable")
         private Boolean UnSchedulable;
 
+        /**是否支持性能型KPFS*/
+        @JsonProperty("SupportPerformanceKPFS")
+        private Boolean SupportPerformanceKPFS;
+
     }
 
 }

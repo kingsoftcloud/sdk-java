@@ -82,6 +82,17 @@ public class CreateTrainJobRequest{
         @KsYunField(name="MountPath")
         private String MountPath;
 
+        /**存储路径子目录
+>针对TensorBoard挂载类型时有效,不存在的路径会自动新建。不填则默认挂到存储配置对应的目录。*/
+        @KsYunField(name="StorageSubPath")
+        private String StorageSubPath;
+
+        /**挂载协议：
+- NFS
+- POSIX*/
+        @KsYunField(name="MountProtocol")
+        private String MountProtocol;
+
     }
 
     /**角色资源配置信息*/

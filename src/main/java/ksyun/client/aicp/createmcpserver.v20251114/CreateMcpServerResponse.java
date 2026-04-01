@@ -62,10 +62,6 @@ public class CreateMcpServerResponse extends BaseResponseModel {
         @JsonProperty("ServiceProtocol")
         private String ServiceProtocol;
 
-        /**工具列表*/
-        @JsonProperty("Tools")
-        private String Tools;
-
         /**是否已激活*/
         @JsonProperty("IsActivated")
         private Boolean IsActivated;

@@ -46,7 +46,7 @@ public class DescribeStorageConfigsResponse extends BaseResponseModel {
         @JsonProperty("StorageConfigName")
         private String StorageConfigName;
 
-        /**描述信息*/
+        /**存储配置存储配置描述*/
         @JsonProperty("Description")
         private String Description;
 
@@ -60,7 +60,7 @@ public class DescribeStorageConfigsResponse extends BaseResponseModel {
         @JsonProperty("MountPath")
         private String MountPath;
 
-        /**访问秘钥ID*/
+        /**Ak*/
         @JsonProperty("Ak")
         private String Ak;
 
@@ -75,7 +75,7 @@ public class DescribeStorageConfigsResponse extends BaseResponseModel {
             @JsonProperty("FileSystemId")
             private String FileSystemId;
 
-            /**文件系统名称*/
+            /**文件系统ID*/
             @JsonProperty("FileSystemName")
             private String FileSystemName;
 
@@ -83,7 +83,7 @@ public class DescribeStorageConfigsResponse extends BaseResponseModel {
             @JsonProperty("SystemFilePath")
             private String SystemFilePath;
 
-            /**挂载协议类型*/
+            /**挂载协议类型(已废弃)*/
             @JsonProperty("MntProtocol")
             private String MntProtocol;
 
@@ -104,7 +104,7 @@ public class DescribeStorageConfigsResponse extends BaseResponseModel {
             @JsonProperty("BucketName")
             private String BucketName;
 
-            /**KS3存储桶路径*/
+            /**KS3存储桶路径，请确保KS3路径真实有效(不传入则挂载整个bucket桶)*/
             @JsonProperty("BucketPath")
             private String BucketPath;
 

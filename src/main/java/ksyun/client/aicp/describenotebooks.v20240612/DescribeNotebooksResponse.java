@@ -213,6 +213,10 @@ public class DescribeNotebooksResponse extends BaseResponseModel {
             @JsonProperty("StorageConfigType")
             private String StorageConfigType;
 
+            /**挂载协议*/
+            @JsonProperty("MountProtocol")
+            private String MountProtocol;
+
         }
 
         /**自定义服务配置*/

@@ -14,7 +14,7 @@ import java.util.Arrays;
 */
 @Data
 public class ModifyStorageConfigRequest{
-    /**存储配置Id*/
+    /**存储配置ID*/
     @KsYunField(name="StorageConfigId")
     private String StorageConfigId;
 
@@ -22,7 +22,7 @@ public class ModifyStorageConfigRequest{
     @KsYunField(name="StorageConfigName")
     private String StorageConfigName;
 
-    /**存储配置描述*/
+    /**存储配置存储配置描述*/
     @KsYunField(name="Description")
     private String Description;
 

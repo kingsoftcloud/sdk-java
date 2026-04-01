@@ -47,4 +47,27 @@ public class CreateInferenceEndpointRequest{
     @KsYunField(name="ModelId")
     private String ModelId;
 
+    /**限额*/
+    @KsYunField(name="QuotaLimit")
+    private QuotaLimitDto QuotaLimit;
+
+    @Data
+    @ToString
+    public static class QuotaLimitDto {
+        /**限额周期
+daily, weekly, monthly, custom*/
+        @KsYunField(name="QuotaLimitCycle")
+        private String QuotaLimitCycle;
+
+        /**自定义周期，单位为天
+限额周期为custom时必填*/
+        @KsYunField(name="CustomCycle")
+        private Integer CustomCycle;
+
+        /**限额数量*/
+        @KsYunField(name="QuotaLimitAmount")
+        private Long QuotaLimitAmount;
+
+    }
+
 }

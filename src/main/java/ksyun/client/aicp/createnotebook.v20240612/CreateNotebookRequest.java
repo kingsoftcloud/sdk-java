@@ -71,6 +71,12 @@ public class CreateNotebookRequest{
         @KsYunField(name="StorageConfigType")
         private String StorageConfigType;
 
+        /**挂载协议：
+- NFS
+- POSIX*/
+        @KsYunField(name="MountProtocol")
+        private String MountProtocol;
+
     }
 
     /**自动保存镜像。当值为true时，开发任务停止前会执行自动保存镜像*/

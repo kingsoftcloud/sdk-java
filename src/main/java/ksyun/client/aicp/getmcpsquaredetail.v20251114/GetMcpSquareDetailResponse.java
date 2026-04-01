@@ -1,4 +1,4 @@
-package ksyun.client.aicp.describemcpservers.v20251114;
+package ksyun.client.aicp.getmcpsquaredetail.v20251114;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import common.BaseResponseModel;
@@ -8,24 +8,24 @@ import lombok.ToString;
 import java.util.List;
 
 /**
-* @Classname DescribeMcpServersResponse
-* @Description DescribeMcpServers 返回体
+* @Classname GetMcpSquareDetailResponse
+* @Description GetMcpSquareDetail 返回体
 */
 @Data
 @ToString
-public class DescribeMcpServersResponse extends BaseResponseModel {
+public class GetMcpSquareDetailResponse extends BaseResponseModel {
 
     /**请求唯一标识*/
     @JsonProperty("RequestId")
     private String RequestId;
 
-    /**MCP服务列表*/
-    @JsonProperty("McpServers")
-    private List<McpServersDto> McpServers;
+    /**MCP服务详情*/
+    @JsonProperty("McpServer")
+    private McpServerDto McpServer;
 
     @Data
     @ToString
-    public static class McpServersDto {
+    public static class McpServerDto {
         /**MCP服务ID*/
         @JsonProperty("McpServerId")
         private String McpServerId;
@@ -61,6 +61,10 @@ public class DescribeMcpServersResponse extends BaseResponseModel {
         /**服务协议：SSE / StreamableHTTP*/
         @JsonProperty("ServiceProtocol")
         private String ServiceProtocol;
+
+        /**工具列表*/
+        @JsonProperty("Tools")
+        private String Tools;
 
         /**是否已激活*/
         @JsonProperty("IsActivated")

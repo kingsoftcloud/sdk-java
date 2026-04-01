@@ -211,6 +211,12 @@ public class DescribeInferencesResponse extends BaseResponseModel {
             @JsonProperty("MountPath")
             private String MountPath;
 
+            /**挂载协议：
+- NFS
+- POSIX*/
+            @JsonProperty("MountProtocol")
+            private String MountProtocol;
+
         }
 
         /**是否自动扩缩容*/
