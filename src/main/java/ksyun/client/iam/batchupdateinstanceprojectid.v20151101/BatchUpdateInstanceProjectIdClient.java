@@ -1,4 +1,4 @@
-package ksyun.client.iam.getaccountallprojectlist.v20151101;
+package ksyun.client.iam.batchupdateinstanceprojectid.v20151101;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -13,13 +13,13 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.*;
 
 /**
-* @Classname GetAccountAllProjectListClient
-* @Description 获取主/子用户项目列表*/
+* @Classname BatchUpdateInstanceProjectIdClient
+* @Description 批量更新实例项目*/
 @Slf4j
-public class GetAccountAllProjectListClient extends BaseClient {
+public class BatchUpdateInstanceProjectIdClient extends BaseClient {
     private final static String service = "iam";
     private final static String version = "2015-11-01";
-    private final static String action = "GetAccountAllProjectList";
+    private final static String action = "BatchUpdateInstanceProjectId";
 
 
     /**
@@ -28,7 +28,7 @@ public class GetAccountAllProjectListClient extends BaseClient {
     private Credential credential;
 
 
-    public GetAccountAllProjectListClient(Credential credential) {
+    public BatchUpdateInstanceProjectIdClient(Credential credential) {
         this.credential = credential;
     }
 
@@ -39,12 +39,12 @@ public class GetAccountAllProjectListClient extends BaseClient {
      *
      * @param path 请求路径
      * @param requestObj 请求对象
-     * @return GetAccountAllProjectListResponse 响应对象
+     * @return BatchUpdateInstanceProjectIdResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public GetAccountAllProjectListResponse doPostSend(String path, GetAccountAllProjectListRequest requestObj) throws RuntimeException {
+    public BatchUpdateInstanceProjectIdResponse doPostSend(String path, BatchUpdateInstanceProjectIdRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doPostSend(path, requestObj, head);
     }
 
@@ -56,14 +56,14 @@ public class GetAccountAllProjectListClient extends BaseClient {
      * @param requestObj 请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return GetAccountAllProjectListResponse 响应对象
+     * @return BatchUpdateInstanceProjectIdResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public GetAccountAllProjectListResponse doPostSend(String path, GetAccountAllProjectListRequest requestObj,
+    public BatchUpdateInstanceProjectIdResponse doPostSend(String path, BatchUpdateInstanceProjectIdRequest requestObj,
                                          UrlPathParams urlPathParams,
                                          Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         if (customHeaders != null && !customHeaders.isEmpty()) {
             head.putAll(customHeaders);
         }
@@ -77,10 +77,10 @@ public class GetAccountAllProjectListClient extends BaseClient {
      * @param path 请求路径
      * @param requestObj 请求对象
      * @param head 请求头
-     * @return GetAccountAllProjectListResponse 响应对象
+     * @return BatchUpdateInstanceProjectIdResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public GetAccountAllProjectListResponse doPostSend(String path, GetAccountAllProjectListRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public BatchUpdateInstanceProjectIdResponse doPostSend(String path, BatchUpdateInstanceProjectIdRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("post", path, requestObj, head, null);
     }
 
@@ -92,10 +92,10 @@ public class GetAccountAllProjectListClient extends BaseClient {
      * @param requestObj 请求对象
      * @param head 请求头（包含自定义 Header）
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
-     * @return GetAccountAllProjectListResponse 响应对象
+     * @return BatchUpdateInstanceProjectIdResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public GetAccountAllProjectListResponse doPostSend(String path, GetAccountAllProjectListRequest requestObj, Map<String, String> head,
+    public BatchUpdateInstanceProjectIdResponse doPostSend(String path, BatchUpdateInstanceProjectIdRequest requestObj, Map<String, String> head,
                                          UrlPathParams urlPathParams) throws RuntimeException {
         return executeWithV2("post", path, requestObj, head, urlPathParams);
     }
@@ -106,12 +106,12 @@ public class GetAccountAllProjectListClient extends BaseClient {
      *
      * @param path 请求路径
      * @param requestObj 请求对象
-     * @return GetAccountAllProjectListResponse 响应对象
+     * @return BatchUpdateInstanceProjectIdResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public GetAccountAllProjectListResponse doGetSend(String path, GetAccountAllProjectListRequest requestObj) throws RuntimeException {
+    public BatchUpdateInstanceProjectIdResponse doGetSend(String path, BatchUpdateInstanceProjectIdRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doGetSend(path, requestObj, head);
     }
 
@@ -122,10 +122,10 @@ public class GetAccountAllProjectListClient extends BaseClient {
      * @param path 请求路径
      * @param requestObj 请求对象
      * @param head 请求头
-     * @return GetAccountAllProjectListResponse 响应对象
+     * @return BatchUpdateInstanceProjectIdResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public GetAccountAllProjectListResponse doGetSend(String path, GetAccountAllProjectListRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public BatchUpdateInstanceProjectIdResponse doGetSend(String path, BatchUpdateInstanceProjectIdRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("get", path, requestObj, head, null);
     }
 
@@ -137,14 +137,14 @@ public class GetAccountAllProjectListClient extends BaseClient {
      * @param requestObj 请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return GetAccountAllProjectListResponse 响应对象
+     * @return BatchUpdateInstanceProjectIdResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public GetAccountAllProjectListResponse doGetSend(String path, GetAccountAllProjectListRequest requestObj,
+    public BatchUpdateInstanceProjectIdResponse doGetSend(String path, BatchUpdateInstanceProjectIdRequest requestObj,
                                         UrlPathParams urlPathParams,
                                         Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         if (customHeaders != null && !customHeaders.isEmpty()) {
             head.putAll(customHeaders);
         }
@@ -157,12 +157,12 @@ public class GetAccountAllProjectListClient extends BaseClient {
      *
      * @param path 请求路径
      * @param requestObj 请求对象
-     * @return GetAccountAllProjectListResponse 响应对象
+     * @return BatchUpdateInstanceProjectIdResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public GetAccountAllProjectListResponse doPutSend(String path, GetAccountAllProjectListRequest requestObj) throws RuntimeException {
+    public BatchUpdateInstanceProjectIdResponse doPutSend(String path, BatchUpdateInstanceProjectIdRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doPutSend(path, requestObj, head);
     }
 
@@ -173,10 +173,10 @@ public class GetAccountAllProjectListClient extends BaseClient {
      * @param path 请求路径
      * @param requestObj 请求对象
      * @param head 请求头
-     * @return GetAccountAllProjectListResponse 响应对象
+     * @return BatchUpdateInstanceProjectIdResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public GetAccountAllProjectListResponse doPutSend(String path, GetAccountAllProjectListRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public BatchUpdateInstanceProjectIdResponse doPutSend(String path, BatchUpdateInstanceProjectIdRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("put", path, requestObj, head, null);
     }
 
@@ -188,14 +188,14 @@ public class GetAccountAllProjectListClient extends BaseClient {
      * @param requestObj 请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return GetAccountAllProjectListResponse 响应对象
+     * @return BatchUpdateInstanceProjectIdResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public GetAccountAllProjectListResponse doPutSend(String path, GetAccountAllProjectListRequest requestObj,
+    public BatchUpdateInstanceProjectIdResponse doPutSend(String path, BatchUpdateInstanceProjectIdRequest requestObj,
                                         UrlPathParams urlPathParams,
                                         Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         if (customHeaders != null && !customHeaders.isEmpty()) {
             head.putAll(customHeaders);
         }
@@ -208,12 +208,12 @@ public class GetAccountAllProjectListClient extends BaseClient {
      *
      * @param path 请求路径
      * @param requestObj 请求对象
-     * @return GetAccountAllProjectListResponse 响应对象
+     * @return BatchUpdateInstanceProjectIdResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public GetAccountAllProjectListResponse doDeleteSend(String path, GetAccountAllProjectListRequest requestObj) throws RuntimeException {
+    public BatchUpdateInstanceProjectIdResponse doDeleteSend(String path, BatchUpdateInstanceProjectIdRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doDeleteSend(path, requestObj, head);
     }
 
@@ -224,10 +224,10 @@ public class GetAccountAllProjectListClient extends BaseClient {
      * @param path 请求路径
      * @param requestObj 请求对象
      * @param head 请求头
-     * @return GetAccountAllProjectListResponse 响应对象
+     * @return BatchUpdateInstanceProjectIdResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public GetAccountAllProjectListResponse doDeleteSend(String path, GetAccountAllProjectListRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public BatchUpdateInstanceProjectIdResponse doDeleteSend(String path, BatchUpdateInstanceProjectIdRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("delete", path, requestObj, head, null);
     }
 
@@ -239,14 +239,14 @@ public class GetAccountAllProjectListClient extends BaseClient {
      * @param requestObj 请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return GetAccountAllProjectListResponse 响应对象
+     * @return BatchUpdateInstanceProjectIdResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public GetAccountAllProjectListResponse doDeleteSend(String path, GetAccountAllProjectListRequest requestObj,
+    public BatchUpdateInstanceProjectIdResponse doDeleteSend(String path, BatchUpdateInstanceProjectIdRequest requestObj,
                                            UrlPathParams urlPathParams,
                                            Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         if (customHeaders != null && !customHeaders.isEmpty()) {
             head.putAll(customHeaders);
         }
@@ -262,13 +262,13 @@ public class GetAccountAllProjectListClient extends BaseClient {
      * @param requestObj 请求对象
      * @param head 请求头
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
-     * @return GetAccountAllProjectListResponse 响应对象
+     * @return BatchUpdateInstanceProjectIdResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    private GetAccountAllProjectListResponse executeWithV2(String method, String path, GetAccountAllProjectListRequest requestObj,
+    private BatchUpdateInstanceProjectIdResponse executeWithV2(String method, String path, BatchUpdateInstanceProjectIdRequest requestObj,
                                              Map<String, String> head, UrlPathParams urlPathParams) throws RuntimeException {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        requestHeaders.putIfAbsent("Content-Type", "application/json");
 
         // 调用底层 V2 方法获取完整响应
         HttpResponseWrapper wrapper = doRpcV2(path, requestObj, requestHeaders, method, urlPathParams);
@@ -300,7 +300,7 @@ public class GetAccountAllProjectListClient extends BaseClient {
 
         // 4. 解析 JSON 响应
         try {
-            return JSON.parseObject(message, GetAccountAllProjectListResponse.class);
+            return JSON.parseObject(message, BatchUpdateInstanceProjectIdResponse.class);
         } catch (Exception e) {
             throw new RuntimeException(
                 String.format("[KsyunSDKError] [HttpCode:%d Err:%s] %s",
@@ -321,9 +321,9 @@ public class GetAccountAllProjectListClient extends BaseClient {
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPostWithContextV2(String path, GetAccountAllProjectListRequest requestObj) {
+    public HttpResponseWrapper doPostWithContextV2(String path, BatchUpdateInstanceProjectIdRequest requestObj) {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doPostWithContextV2(path, requestObj, head);
     }
 
@@ -339,9 +339,9 @@ public class GetAccountAllProjectListClient extends BaseClient {
      * @param head 请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPostWithContextV2(String path, GetAccountAllProjectListRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doPostWithContextV2(String path, BatchUpdateInstanceProjectIdRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        requestHeaders.putIfAbsent("Content-Type", "application/json");
         return doRpcV2(path, requestObj, requestHeaders, "post", null);
     }
 
@@ -356,9 +356,9 @@ public class GetAccountAllProjectListClient extends BaseClient {
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doGetWithContextV2(String path, GetAccountAllProjectListRequest requestObj) {
+    public HttpResponseWrapper doGetWithContextV2(String path, BatchUpdateInstanceProjectIdRequest requestObj) {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doGetWithContextV2(path, requestObj, head);
     }
 
@@ -374,9 +374,9 @@ public class GetAccountAllProjectListClient extends BaseClient {
      * @param head 请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doGetWithContextV2(String path, GetAccountAllProjectListRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doGetWithContextV2(String path, BatchUpdateInstanceProjectIdRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        requestHeaders.putIfAbsent("Content-Type", "application/json");
         return doRpcV2(path, requestObj, requestHeaders, "get", null);
     }
 
@@ -391,9 +391,9 @@ public class GetAccountAllProjectListClient extends BaseClient {
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPutWithContextV2(String path, GetAccountAllProjectListRequest requestObj) {
+    public HttpResponseWrapper doPutWithContextV2(String path, BatchUpdateInstanceProjectIdRequest requestObj) {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doPutWithContextV2(path, requestObj, head);
     }
 
@@ -409,9 +409,9 @@ public class GetAccountAllProjectListClient extends BaseClient {
      * @param head 请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPutWithContextV2(String path, GetAccountAllProjectListRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doPutWithContextV2(String path, BatchUpdateInstanceProjectIdRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        requestHeaders.putIfAbsent("Content-Type", "application/json");
         return doRpcV2(path, requestObj, requestHeaders, "put", null);
     }
 
@@ -426,9 +426,9 @@ public class GetAccountAllProjectListClient extends BaseClient {
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doDeleteWithContextV2(String path, GetAccountAllProjectListRequest requestObj) {
+    public HttpResponseWrapper doDeleteWithContextV2(String path, BatchUpdateInstanceProjectIdRequest requestObj) {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doDeleteWithContextV2(path, requestObj, head);
     }
 
@@ -444,9 +444,9 @@ public class GetAccountAllProjectListClient extends BaseClient {
      * @param head 请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doDeleteWithContextV2(String path, GetAccountAllProjectListRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doDeleteWithContextV2(String path, BatchUpdateInstanceProjectIdRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        requestHeaders.putIfAbsent("Content-Type", "application/json");
         return doRpcV2(path, requestObj, requestHeaders, "delete", null);
     }
 
@@ -458,9 +458,9 @@ public class GetAccountAllProjectListClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetAccountAllProjectListResponse doPost(String path, GetAccountAllProjectListRequest requestObj) throws Exception {
+    public BatchUpdateInstanceProjectIdResponse doPost(String path, BatchUpdateInstanceProjectIdRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doPost(path, requestObj, head);
     }
 
@@ -473,11 +473,11 @@ public class GetAccountAllProjectListClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetAccountAllProjectListResponse doPost(String path, GetAccountAllProjectListRequest requestObj, Map<String, String> head) throws Exception {
+    public BatchUpdateInstanceProjectIdResponse doPost(String path, BatchUpdateInstanceProjectIdRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        requestHeaders.putIfAbsent("Content-Type", "application/json");
         String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, GetAccountAllProjectListResponse.class);
+        return JSON.parseObject(response, BatchUpdateInstanceProjectIdResponse.class);
     }
 
     /**
@@ -487,9 +487,9 @@ public class GetAccountAllProjectListClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public GetAccountAllProjectListResponse doPostRaw(String path, GetAccountAllProjectListRequest requestObj) throws Exception {
+    public BatchUpdateInstanceProjectIdResponse doPostRaw(String path, BatchUpdateInstanceProjectIdRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doPostRaw(path, requestObj, head);
     }
 
@@ -501,11 +501,11 @@ public class GetAccountAllProjectListClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public GetAccountAllProjectListResponse doPostRaw(String path, GetAccountAllProjectListRequest requestObj, Map<String, String> head) throws Exception {
+    public BatchUpdateInstanceProjectIdResponse doPostRaw(String path, BatchUpdateInstanceProjectIdRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        requestHeaders.putIfAbsent("Content-Type", "application/json");
         String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, GetAccountAllProjectListResponse.class);
+        return JSON.parseObject(response, BatchUpdateInstanceProjectIdResponse.class);
     }
     /**
      * get 请求
@@ -515,9 +515,9 @@ public class GetAccountAllProjectListClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetAccountAllProjectListResponse doGet(String path, GetAccountAllProjectListRequest requestObj) throws Exception {
+    public BatchUpdateInstanceProjectIdResponse doGet(String path, BatchUpdateInstanceProjectIdRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        head.putIfAbsent("Content-Type", "application/json");
         return doGet(path, requestObj, head);
     }
 
@@ -530,11 +530,11 @@ public class GetAccountAllProjectListClient extends BaseClient {
          * @return
          * @throws Exception
          */
-        public GetAccountAllProjectListResponse doGet(String path, GetAccountAllProjectListRequest requestObj, Map<String, String> head) throws Exception {
+        public BatchUpdateInstanceProjectIdResponse doGet(String path, BatchUpdateInstanceProjectIdRequest requestObj, Map<String, String> head) throws Exception {
             final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-            requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+            requestHeaders.putIfAbsent("Content-Type", "application/json");
             String response = doRpc(path, requestObj, requestHeaders, "get");
-            return JSON.parseObject(response, GetAccountAllProjectListResponse.class);
+            return JSON.parseObject(response, BatchUpdateInstanceProjectIdResponse.class);
         }
 
     /**
@@ -545,9 +545,9 @@ public class GetAccountAllProjectListClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetAccountAllProjectListResponse doDelete(String path, GetAccountAllProjectListRequest requestObj) throws Exception {
+    public BatchUpdateInstanceProjectIdResponse doDelete(String path, BatchUpdateInstanceProjectIdRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.put("Content-Type", "application/x-www-form-urlencoded");
+        head.put("Content-Type", "application/json");
         return doDelete(path, requestObj, head);
     }
 
@@ -560,11 +560,11 @@ public class GetAccountAllProjectListClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetAccountAllProjectListResponse doDelete(String path, GetAccountAllProjectListRequest requestObj, Map<String, String> head) throws Exception {
+    public BatchUpdateInstanceProjectIdResponse doDelete(String path, BatchUpdateInstanceProjectIdRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        requestHeaders.putIfAbsent("Content-Type", "application/json");
         String response = doRpc(path, requestObj, requestHeaders, "delete");
-        return JSON.parseObject(response, GetAccountAllProjectListResponse.class);
+        return JSON.parseObject(response, BatchUpdateInstanceProjectIdResponse.class);
     }
 
 
@@ -576,9 +576,9 @@ public class GetAccountAllProjectListClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetAccountAllProjectListResponse doPut(String path, GetAccountAllProjectListRequest requestObj) throws Exception {
+    public BatchUpdateInstanceProjectIdResponse doPut(String path, BatchUpdateInstanceProjectIdRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
-        head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+        head.putIfAbsent("Content-Type", "application/json");
         return doPut(path, requestObj, head);
     }
 
@@ -591,11 +591,11 @@ public class GetAccountAllProjectListClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public GetAccountAllProjectListResponse doPut(String path, GetAccountAllProjectListRequest requestObj, Map<String, String> head) throws Exception {
+    public BatchUpdateInstanceProjectIdResponse doPut(String path, BatchUpdateInstanceProjectIdRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
-       requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
+       requestHeaders.putIfAbsent("Content-Type", "application/json");
         String response = doRpc(path, requestObj, requestHeaders, "put");
-        return JSON.parseObject(response, GetAccountAllProjectListResponse.class);
+        return JSON.parseObject(response, BatchUpdateInstanceProjectIdResponse.class);
     }
 
     /**
@@ -607,7 +607,7 @@ public class GetAccountAllProjectListClient extends BaseClient {
          * @return
          * @throws Exception
          */
-        private String doRpc(String path, GetAccountAllProjectListRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
+        private String doRpc(String path, BatchUpdateInstanceProjectIdRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
             //断言
             Objects.requireNonNull(path, "path cannot be null");
             Objects.requireNonNull(requestObj, "requestObj cannot be null");
@@ -639,7 +639,7 @@ public class GetAccountAllProjectListClient extends BaseClient {
         }
 
 
-        private JSONObject getRequestParam(GetAccountAllProjectListRequest requestObj, String contentType) throws Exception {
+        private JSONObject getRequestParam(BatchUpdateInstanceProjectIdRequest requestObj, String contentType) throws Exception {
             //请求参数
             if (contentType.equalsIgnoreCase("application/json")) {
                 return getPostRawRequestParams(requestObj);
@@ -648,7 +648,7 @@ public class GetAccountAllProjectListClient extends BaseClient {
         }
 
 
-        private JSONObject getSimpleRequestParams(GetAccountAllProjectListRequest requestObj) throws Exception {
+        private JSONObject getSimpleRequestParams(BatchUpdateInstanceProjectIdRequest requestObj) throws Exception {
             JSONObject requestParams = new JSONObject();
 
             //设置请求体请求参数
@@ -656,7 +656,7 @@ public class GetAccountAllProjectListClient extends BaseClient {
             return requestParams;
         }
 
-        private JSONObject getPostRawRequestParams(GetAccountAllProjectListRequest requestObj) throws Exception {
+        private JSONObject getPostRawRequestParams(BatchUpdateInstanceProjectIdRequest requestObj) throws Exception {
             JSONObject requestParams = new JSONObject();
 
             //设置请求体请求参数
@@ -674,7 +674,7 @@ public class GetAccountAllProjectListClient extends BaseClient {
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    private HttpResponseWrapper doRpcV2(String path, GetAccountAllProjectListRequest requestObj, Map<String, String> head,
+    private HttpResponseWrapper doRpcV2(String path, BatchUpdateInstanceProjectIdRequest requestObj, Map<String, String> head,
                                         String requestMethod, UrlPathParams urlPathParams) {
         try {
             //断言
