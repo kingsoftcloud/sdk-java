@@ -110,6 +110,12 @@ public class DescribeFileSystemListResponse extends BaseResponseModel {
             @JsonProperty("ClusterCode")
             private String ClusterCode;
 
+            /**存储池类型。有效值：
+- 若为KPFS-capacity（容量Ⅰ型）、KPFS-capacity2（容量Ⅱ型）、KPFS-standard（标准型），存储池类型有效值：KPFS-C1、KPFS-C2
+- 若为KPFS-P-S01（性能Ⅰ型）、KPFS-P-S02（性能Ⅱ型），存储池类型有效值：KPFS-P1、KPFS-P2*/
+            @JsonProperty("StorePoolType")
+            private String StorePoolType;
+
         }
 
         /**文件系统的认证信息*/
