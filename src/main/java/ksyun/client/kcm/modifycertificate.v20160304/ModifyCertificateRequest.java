@@ -30,4 +30,12 @@ public class ModifyCertificateRequest{
     @KsYunField(name="PublicKey")
     private String PublicKey;
 
+    /**ssl证书id*/
+    @KsYunField(name="SslCertificateId")
+    private String SslCertificateId;
+
+    /**描述*/
+    @KsYunField(name="Description")
+    private String Description;
+
 }

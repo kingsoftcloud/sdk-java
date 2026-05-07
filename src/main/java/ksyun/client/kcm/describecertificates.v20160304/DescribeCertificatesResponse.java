@@ -62,6 +62,14 @@ public class DescribeCertificatesResponse extends BaseResponseModel {
         @JsonProperty("PublicKey")
         private String PublicKey;
 
+        /**ssl证书id*/
+        @JsonProperty("SslCertificateId")
+        private String SslCertificateId;
+
+        /**描述*/
+        @JsonProperty("Description")
+        private String Description;
+
     }
 
 }

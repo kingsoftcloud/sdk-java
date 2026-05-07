@@ -50,6 +50,22 @@ public class ModifyCertificateResponse extends BaseResponseModel {
         @JsonProperty("CertAuthority")
         private String CertAuthority;
 
+        /**证书类型，SVR|CA*/
+        @JsonProperty("CertificateType")
+        private String CertificateType;
+
+        /**来源*/
+        @JsonProperty("Source")
+        private String Source;
+
+        /**ssl证书id*/
+        @JsonProperty("SslCertificateId")
+        private String SslCertificateId;
+
+        /**描述*/
+        @JsonProperty("Description")
+        private String Description;
+
     }
 
 }
