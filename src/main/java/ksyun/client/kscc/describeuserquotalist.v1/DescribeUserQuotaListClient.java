@@ -1,4 +1,4 @@
-package ksyun.client.kscc.describeusercostsummary.v1;
+package ksyun.client.kscc.describeuserquotalist.v1;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -13,13 +13,13 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.*;
 
 /**
-* @Classname DescribeUserCostSummaryClient
-* @Description 查询指定用户在某月份的配额和已使用金额。*/
+* @Classname DescribeUserQuotaListClient
+* @Description 分页查询用户月度配额、已用金额和使用比例。*/
 @Slf4j
-public class DescribeUserCostSummaryClient extends BaseClient {
+public class DescribeUserQuotaListClient extends BaseClient {
     private final static String service = "kscc";
     private final static String version = "V1";
-    private final static String action = "DescribeUserCostSummary";
+    private final static String action = "DescribeUserQuotaList";
 
 
     /**
@@ -28,7 +28,7 @@ public class DescribeUserCostSummaryClient extends BaseClient {
     private Credential credential;
 
 
-    public DescribeUserCostSummaryClient(Credential credential) {
+    public DescribeUserQuotaListClient(Credential credential) {
         this.credential = credential;
     }
 
@@ -39,10 +39,10 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      *
      * @param path 请求路径
      * @param requestObj 请求对象
-     * @return DescribeUserCostSummaryResponse 响应对象
+     * @return DescribeUserQuotaListResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DescribeUserCostSummaryResponse doPostSend(String path, DescribeUserCostSummaryRequest requestObj) throws RuntimeException {
+    public DescribeUserQuotaListResponse doPostSend(String path, DescribeUserQuotaListRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPostSend(path, requestObj, head);
@@ -56,10 +56,10 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      * @param requestObj 请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return DescribeUserCostSummaryResponse 响应对象
+     * @return DescribeUserQuotaListResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DescribeUserCostSummaryResponse doPostSend(String path, DescribeUserCostSummaryRequest requestObj,
+    public DescribeUserQuotaListResponse doPostSend(String path, DescribeUserQuotaListRequest requestObj,
                                          UrlPathParams urlPathParams,
                                          Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
@@ -77,10 +77,10 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      * @param path 请求路径
      * @param requestObj 请求对象
      * @param head 请求头
-     * @return DescribeUserCostSummaryResponse 响应对象
+     * @return DescribeUserQuotaListResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DescribeUserCostSummaryResponse doPostSend(String path, DescribeUserCostSummaryRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public DescribeUserQuotaListResponse doPostSend(String path, DescribeUserQuotaListRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("post", path, requestObj, head, null);
     }
 
@@ -92,10 +92,10 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      * @param requestObj 请求对象
      * @param head 请求头（包含自定义 Header）
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
-     * @return DescribeUserCostSummaryResponse 响应对象
+     * @return DescribeUserQuotaListResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DescribeUserCostSummaryResponse doPostSend(String path, DescribeUserCostSummaryRequest requestObj, Map<String, String> head,
+    public DescribeUserQuotaListResponse doPostSend(String path, DescribeUserQuotaListRequest requestObj, Map<String, String> head,
                                          UrlPathParams urlPathParams) throws RuntimeException {
         return executeWithV2("post", path, requestObj, head, urlPathParams);
     }
@@ -106,10 +106,10 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      *
      * @param path 请求路径
      * @param requestObj 请求对象
-     * @return DescribeUserCostSummaryResponse 响应对象
+     * @return DescribeUserQuotaListResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DescribeUserCostSummaryResponse doGetSend(String path, DescribeUserCostSummaryRequest requestObj) throws RuntimeException {
+    public DescribeUserQuotaListResponse doGetSend(String path, DescribeUserQuotaListRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doGetSend(path, requestObj, head);
@@ -122,10 +122,10 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      * @param path 请求路径
      * @param requestObj 请求对象
      * @param head 请求头
-     * @return DescribeUserCostSummaryResponse 响应对象
+     * @return DescribeUserQuotaListResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DescribeUserCostSummaryResponse doGetSend(String path, DescribeUserCostSummaryRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public DescribeUserQuotaListResponse doGetSend(String path, DescribeUserQuotaListRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("get", path, requestObj, head, null);
     }
 
@@ -137,10 +137,10 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      * @param requestObj 请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return DescribeUserCostSummaryResponse 响应对象
+     * @return DescribeUserQuotaListResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DescribeUserCostSummaryResponse doGetSend(String path, DescribeUserCostSummaryRequest requestObj,
+    public DescribeUserQuotaListResponse doGetSend(String path, DescribeUserQuotaListRequest requestObj,
                                         UrlPathParams urlPathParams,
                                         Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
@@ -157,10 +157,10 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      *
      * @param path 请求路径
      * @param requestObj 请求对象
-     * @return DescribeUserCostSummaryResponse 响应对象
+     * @return DescribeUserQuotaListResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DescribeUserCostSummaryResponse doPutSend(String path, DescribeUserCostSummaryRequest requestObj) throws RuntimeException {
+    public DescribeUserQuotaListResponse doPutSend(String path, DescribeUserQuotaListRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPutSend(path, requestObj, head);
@@ -173,10 +173,10 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      * @param path 请求路径
      * @param requestObj 请求对象
      * @param head 请求头
-     * @return DescribeUserCostSummaryResponse 响应对象
+     * @return DescribeUserQuotaListResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DescribeUserCostSummaryResponse doPutSend(String path, DescribeUserCostSummaryRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public DescribeUserQuotaListResponse doPutSend(String path, DescribeUserQuotaListRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("put", path, requestObj, head, null);
     }
 
@@ -188,10 +188,10 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      * @param requestObj 请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return DescribeUserCostSummaryResponse 响应对象
+     * @return DescribeUserQuotaListResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DescribeUserCostSummaryResponse doPutSend(String path, DescribeUserCostSummaryRequest requestObj,
+    public DescribeUserQuotaListResponse doPutSend(String path, DescribeUserQuotaListRequest requestObj,
                                         UrlPathParams urlPathParams,
                                         Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
@@ -208,10 +208,10 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      *
      * @param path 请求路径
      * @param requestObj 请求对象
-     * @return DescribeUserCostSummaryResponse 响应对象
+     * @return DescribeUserQuotaListResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DescribeUserCostSummaryResponse doDeleteSend(String path, DescribeUserCostSummaryRequest requestObj) throws RuntimeException {
+    public DescribeUserQuotaListResponse doDeleteSend(String path, DescribeUserQuotaListRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDeleteSend(path, requestObj, head);
@@ -224,10 +224,10 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      * @param path 请求路径
      * @param requestObj 请求对象
      * @param head 请求头
-     * @return DescribeUserCostSummaryResponse 响应对象
+     * @return DescribeUserQuotaListResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DescribeUserCostSummaryResponse doDeleteSend(String path, DescribeUserCostSummaryRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public DescribeUserQuotaListResponse doDeleteSend(String path, DescribeUserQuotaListRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("delete", path, requestObj, head, null);
     }
 
@@ -239,10 +239,10 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      * @param requestObj 请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return DescribeUserCostSummaryResponse 响应对象
+     * @return DescribeUserQuotaListResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DescribeUserCostSummaryResponse doDeleteSend(String path, DescribeUserCostSummaryRequest requestObj,
+    public DescribeUserQuotaListResponse doDeleteSend(String path, DescribeUserQuotaListRequest requestObj,
                                            UrlPathParams urlPathParams,
                                            Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
@@ -262,10 +262,10 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      * @param requestObj 请求对象
      * @param head 请求头
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
-     * @return DescribeUserCostSummaryResponse 响应对象
+     * @return DescribeUserQuotaListResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    private DescribeUserCostSummaryResponse executeWithV2(String method, String path, DescribeUserCostSummaryRequest requestObj,
+    private DescribeUserQuotaListResponse executeWithV2(String method, String path, DescribeUserQuotaListRequest requestObj,
                                              Map<String, String> head, UrlPathParams urlPathParams) throws RuntimeException {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
@@ -300,7 +300,7 @@ public class DescribeUserCostSummaryClient extends BaseClient {
 
         // 4. 解析 JSON 响应
         try {
-            return JSON.parseObject(message, DescribeUserCostSummaryResponse.class);
+            return JSON.parseObject(message, DescribeUserQuotaListResponse.class);
         } catch (Exception e) {
             throw new RuntimeException(
                 String.format("[KsyunSDKError] [HttpCode:%d Err:%s] %s",
@@ -321,7 +321,7 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPostWithContextV2(String path, DescribeUserCostSummaryRequest requestObj) {
+    public HttpResponseWrapper doPostWithContextV2(String path, DescribeUserQuotaListRequest requestObj) {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPostWithContextV2(path, requestObj, head);
@@ -339,7 +339,7 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      * @param head 请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPostWithContextV2(String path, DescribeUserCostSummaryRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doPostWithContextV2(String path, DescribeUserQuotaListRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doRpcV2(path, requestObj, requestHeaders, "post", null);
@@ -356,7 +356,7 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doGetWithContextV2(String path, DescribeUserCostSummaryRequest requestObj) {
+    public HttpResponseWrapper doGetWithContextV2(String path, DescribeUserQuotaListRequest requestObj) {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doGetWithContextV2(path, requestObj, head);
@@ -374,7 +374,7 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      * @param head 请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doGetWithContextV2(String path, DescribeUserCostSummaryRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doGetWithContextV2(String path, DescribeUserQuotaListRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doRpcV2(path, requestObj, requestHeaders, "get", null);
@@ -391,7 +391,7 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPutWithContextV2(String path, DescribeUserCostSummaryRequest requestObj) {
+    public HttpResponseWrapper doPutWithContextV2(String path, DescribeUserQuotaListRequest requestObj) {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPutWithContextV2(path, requestObj, head);
@@ -409,7 +409,7 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      * @param head 请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPutWithContextV2(String path, DescribeUserCostSummaryRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doPutWithContextV2(String path, DescribeUserQuotaListRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doRpcV2(path, requestObj, requestHeaders, "put", null);
@@ -426,7 +426,7 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doDeleteWithContextV2(String path, DescribeUserCostSummaryRequest requestObj) {
+    public HttpResponseWrapper doDeleteWithContextV2(String path, DescribeUserQuotaListRequest requestObj) {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDeleteWithContextV2(path, requestObj, head);
@@ -444,7 +444,7 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      * @param head 请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doDeleteWithContextV2(String path, DescribeUserCostSummaryRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doDeleteWithContextV2(String path, DescribeUserQuotaListRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doRpcV2(path, requestObj, requestHeaders, "delete", null);
@@ -458,7 +458,7 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeUserCostSummaryResponse doPost(String path, DescribeUserCostSummaryRequest requestObj) throws Exception {
+    public DescribeUserQuotaListResponse doPost(String path, DescribeUserQuotaListRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
@@ -473,11 +473,11 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeUserCostSummaryResponse doPost(String path, DescribeUserCostSummaryRequest requestObj, Map<String, String> head) throws Exception {
+    public DescribeUserQuotaListResponse doPost(String path, DescribeUserQuotaListRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, DescribeUserCostSummaryResponse.class);
+        return JSON.parseObject(response, DescribeUserQuotaListResponse.class);
     }
 
     /**
@@ -487,7 +487,7 @@ public class DescribeUserCostSummaryClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public DescribeUserCostSummaryResponse doPostRaw(String path, DescribeUserCostSummaryRequest requestObj) throws Exception {
+    public DescribeUserQuotaListResponse doPostRaw(String path, DescribeUserQuotaListRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPostRaw(path, requestObj, head);
@@ -501,11 +501,11 @@ public class DescribeUserCostSummaryClient extends BaseClient {
     * @return
     * @throws Exception
     */
-    public DescribeUserCostSummaryResponse doPostRaw(String path, DescribeUserCostSummaryRequest requestObj, Map<String, String> head) throws Exception {
+    public DescribeUserQuotaListResponse doPostRaw(String path, DescribeUserQuotaListRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, DescribeUserCostSummaryResponse.class);
+        return JSON.parseObject(response, DescribeUserQuotaListResponse.class);
     }
     /**
      * get 请求
@@ -515,7 +515,7 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeUserCostSummaryResponse doGet(String path, DescribeUserCostSummaryRequest requestObj) throws Exception {
+    public DescribeUserQuotaListResponse doGet(String path, DescribeUserQuotaListRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doGet(path, requestObj, head);
@@ -530,11 +530,11 @@ public class DescribeUserCostSummaryClient extends BaseClient {
          * @return
          * @throws Exception
          */
-        public DescribeUserCostSummaryResponse doGet(String path, DescribeUserCostSummaryRequest requestObj, Map<String, String> head) throws Exception {
+        public DescribeUserQuotaListResponse doGet(String path, DescribeUserQuotaListRequest requestObj, Map<String, String> head) throws Exception {
             final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
             requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
             String response = doRpc(path, requestObj, requestHeaders, "get");
-            return JSON.parseObject(response, DescribeUserCostSummaryResponse.class);
+            return JSON.parseObject(response, DescribeUserQuotaListResponse.class);
         }
 
     /**
@@ -545,7 +545,7 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeUserCostSummaryResponse doDelete(String path, DescribeUserCostSummaryRequest requestObj) throws Exception {
+    public DescribeUserQuotaListResponse doDelete(String path, DescribeUserQuotaListRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDelete(path, requestObj, head);
@@ -560,11 +560,11 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeUserCostSummaryResponse doDelete(String path, DescribeUserCostSummaryRequest requestObj, Map<String, String> head) throws Exception {
+    public DescribeUserQuotaListResponse doDelete(String path, DescribeUserQuotaListRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "delete");
-        return JSON.parseObject(response, DescribeUserCostSummaryResponse.class);
+        return JSON.parseObject(response, DescribeUserQuotaListResponse.class);
     }
 
 
@@ -576,7 +576,7 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeUserCostSummaryResponse doPut(String path, DescribeUserCostSummaryRequest requestObj) throws Exception {
+    public DescribeUserQuotaListResponse doPut(String path, DescribeUserQuotaListRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doPut(path, requestObj, head);
@@ -591,11 +591,11 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      * @return
      * @throws Exception
      */
-    public DescribeUserCostSummaryResponse doPut(String path, DescribeUserCostSummaryRequest requestObj, Map<String, String> head) throws Exception {
+    public DescribeUserQuotaListResponse doPut(String path, DescribeUserQuotaListRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "put");
-        return JSON.parseObject(response, DescribeUserCostSummaryResponse.class);
+        return JSON.parseObject(response, DescribeUserQuotaListResponse.class);
     }
 
     /**
@@ -607,7 +607,7 @@ public class DescribeUserCostSummaryClient extends BaseClient {
          * @return
          * @throws Exception
          */
-        private String doRpc(String path, DescribeUserCostSummaryRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
+        private String doRpc(String path, DescribeUserQuotaListRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
             //断言
             Objects.requireNonNull(path, "path cannot be null");
             Objects.requireNonNull(requestObj, "requestObj cannot be null");
@@ -639,7 +639,7 @@ public class DescribeUserCostSummaryClient extends BaseClient {
         }
 
 
-        private JSONObject getRequestParam(DescribeUserCostSummaryRequest requestObj, String contentType) throws Exception {
+        private JSONObject getRequestParam(DescribeUserQuotaListRequest requestObj, String contentType) throws Exception {
             //请求参数
             if (contentType.equalsIgnoreCase("application/json")) {
                 return getPostRawRequestParams(requestObj);
@@ -648,7 +648,7 @@ public class DescribeUserCostSummaryClient extends BaseClient {
         }
 
 
-        private JSONObject getSimpleRequestParams(DescribeUserCostSummaryRequest requestObj) throws Exception {
+        private JSONObject getSimpleRequestParams(DescribeUserQuotaListRequest requestObj) throws Exception {
             JSONObject requestParams = new JSONObject();
 
             //设置请求体请求参数
@@ -656,7 +656,7 @@ public class DescribeUserCostSummaryClient extends BaseClient {
             return requestParams;
         }
 
-        private JSONObject getPostRawRequestParams(DescribeUserCostSummaryRequest requestObj) throws Exception {
+        private JSONObject getPostRawRequestParams(DescribeUserQuotaListRequest requestObj) throws Exception {
             JSONObject requestParams = new JSONObject();
 
             //设置请求体请求参数
@@ -674,7 +674,7 @@ public class DescribeUserCostSummaryClient extends BaseClient {
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    private HttpResponseWrapper doRpcV2(String path, DescribeUserCostSummaryRequest requestObj, Map<String, String> head,
+    private HttpResponseWrapper doRpcV2(String path, DescribeUserQuotaListRequest requestObj, Map<String, String> head,
                                         String requestMethod, UrlPathParams urlPathParams) {
         try {
             //断言

@@ -14,7 +14,7 @@ import java.util.*;
 
 /**
 * @Classname UpdateUserQuotaClient
-* @Description 更新用户月度配额，如不存在则新增现在，如果存在则更新。当quotaAmount为null代表不限制。*/
+* @Description 更新用户月度配额；QuotaAmount不传或为空时清除该用户单独配额。*/
 @Slf4j
 public class UpdateUserQuotaClient extends BaseClient {
     private final static String service = "kscc";

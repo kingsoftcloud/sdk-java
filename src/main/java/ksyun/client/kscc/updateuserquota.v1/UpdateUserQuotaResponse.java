@@ -19,20 +19,20 @@ public class UpdateUserQuotaResponse extends BaseResponseModel {
     @JsonProperty("RequestId")
     private String RequestId;
 
-    /***/
+    /**更新结果*/
     @JsonProperty("UpdateUserQuotaResult")
     private UpdateUserQuotaResultDto UpdateUserQuotaResult;
 
     @Data
     @ToString
     public static class UpdateUserQuotaResultDto {
-        /**用户邮箱前缀，比如： zhangsan3*/
+        /**用户邮箱前缀*/
         @JsonProperty("UserName")
         private String UserName;
 
-        /**月度配额限制,当不设置此属性，代表删除用户的配额限制。*/
+        /**更新后的用户月度配额*/
         @JsonProperty("QuotaAmount")
-        private Integer QuotaAmount;
+        private Double QuotaAmount;
 
     }
 

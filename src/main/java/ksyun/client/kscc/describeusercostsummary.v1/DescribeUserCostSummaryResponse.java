@@ -19,44 +19,48 @@ public class DescribeUserCostSummaryResponse extends BaseResponseModel {
     @JsonProperty("RequestId")
     private String RequestId;
 
-    /***/
+    /**用户配额汇总*/
     @JsonProperty("DescribeUserCostSummaryResult")
     private DescribeUserCostSummaryResultDto DescribeUserCostSummaryResult;
 
     @Data
     @ToString
     public static class DescribeUserCostSummaryResultDto {
-        /**中文名称*/
+        /**用户中文名*/
         @JsonProperty("UserCnName")
         private String UserCnName;
 
-        /**邮箱前缀*/
+        /**用户邮箱前缀*/
         @JsonProperty("UserName")
         private String UserName;
 
-        /**部门ID，例如：取自WPS生成的部门ID*/
+        /**部门ID*/
         @JsonProperty("DeptId")
         private String DeptId;
 
-        /**部门中文名称*/
+        /**部门名称或完整路径*/
         @JsonProperty("DeptName")
         private String DeptName;
 
-        /**月份，格式为YYYY-MM*/
+        /**统计月份*/
         @JsonProperty("Month")
         private String Month;
 
-        /**配额月度限制*/
+        /**月度配额限制*/
         @JsonProperty("QuotaAmount")
-        private Integer QuotaAmount;
+        private Double QuotaAmount;
 
-        /**本金已使用*/
+        /**配额来源：account账号配额、dept部门配额、member用户单独配额、memberDefault默认成员配额*/
+        @JsonProperty("QuotaLimitBy")
+        private String QuotaLimitBy;
+
+        /**本月已使用金额*/
         @JsonProperty("UsageAmount")
         private Double UsageAmount;
 
-        /**使用百分比，UsageAmount/QuotaAmount的比例*/
+        /**使用比例，UsageAmount/QuotaAmount*/
         @JsonProperty("UsagePercent")
-        private Integer UsagePercent;
+        private Double UsagePercent;
 
     }
 

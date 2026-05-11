@@ -1,4 +1,4 @@
-package ksyun.client.kscc.updateuserquota.v1;
+package ksyun.client.kscc.deleteuserquota.v1;
 
 import common.annotation.KsYunField;
 import lombok.Builder;
@@ -9,17 +9,13 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname UpdateUserQuotaRequest
+* @Classname DeleteUserQuotaRequest
 * @Description 请求参数
 */
 @Data
-public class UpdateUserQuotaRequest{
+public class DeleteUserQuotaRequest{
     /**用户邮箱前缀，比如：zhangsan3*/
     @KsYunField(name="UserName")
     private String UserName;
-
-    /**用户月度配额；为空表示清除用户单独配额*/
-    @KsYunField(name="QuotaAmount")
-    private Double QuotaAmount;
 
 }

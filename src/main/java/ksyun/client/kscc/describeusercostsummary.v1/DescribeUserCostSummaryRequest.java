@@ -14,8 +14,12 @@ import java.util.Arrays;
 */
 @Data
 public class DescribeUserCostSummaryRequest{
-    /**邮箱前缀，比如：zhangsan3*/
+    /**用户邮箱前缀，比如：zhangsan3*/
     @KsYunField(name="UserName")
     private String UserName;
+
+    /**月份，格式：yyyyMM；不传默认当前月*/
+    @KsYunField(name="Month")
+    private String Month;
 
 }
