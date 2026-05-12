@@ -1,0 +1,67 @@
+package ksyun.client.kcm.extendcertificate.v20160304;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import common.BaseResponseModel;
+import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+
+/**
+* @Classname ExtendCertificateResponse
+* @Description ExtendCertificate 返回体
+*/
+@Data
+@ToString
+public class ExtendCertificateResponse extends BaseResponseModel {
+
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
+
+    /***/
+    @JsonProperty("Certificate")
+    private CertificateDto Certificate;
+
+    @Data
+    @ToString
+    public static class CertificateDto {
+        /***/
+        @JsonProperty("CertificateId")
+        private String CertificateId;
+
+        /***/
+        @JsonProperty("MainDomain")
+        private String MainDomain;
+
+        /***/
+        @JsonProperty("CertificateBrand")
+        private String CertificateBrand;
+
+        /***/
+        @JsonProperty("CertificateLevel")
+        private String CertificateLevel;
+
+        /***/
+        @JsonProperty("CertificateName")
+        private String CertificateName;
+
+        /***/
+        @JsonProperty("CertificateCode")
+        private String CertificateCode;
+
+        /***/
+        @JsonProperty("YearLength")
+        private String YearLength;
+
+        /***/
+        @JsonProperty("DomainCount")
+        private String DomainCount;
+
+        /***/
+        @JsonProperty("WildcardCount")
+        private String WildcardCount;
+
+    }
+
+}
