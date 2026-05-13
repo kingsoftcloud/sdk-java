@@ -124,7 +124,7 @@ public class DescribeNodesResponse extends BaseResponseModel {
 
                 /**标签信息*/
                 @JsonProperty("Labels")
-                private DataInstanceSetAdvancedSettingLabelsDto Labels;
+                private List<DataInstanceSetAdvancedSettingLabelsDto> Labels;
 
                 @Data
                 @ToString
@@ -140,12 +140,12 @@ public class DescribeNodesResponse extends BaseResponseModel {
                 }
 
                 /**污点信息*/
-                @JsonProperty("Taint")
-                private DataInstanceSetAdvancedSettingTaintDto Taint;
+                @JsonProperty("Taints")
+                private List<DataInstanceSetAdvancedSettingTaintsDto> Taints;
 
                 @Data
                 @ToString
-                public static class DataInstanceSetAdvancedSettingTaintDto {
+                public static class DataInstanceSetAdvancedSettingTaintsDto {
                     /***/
                     @JsonProperty("Key")
                     private String Key;

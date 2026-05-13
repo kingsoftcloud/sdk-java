@@ -18,8 +18,7 @@ public class DescribeClustersRequest{
     @KsYunField(name="ClusterIds",type=2)
     private List<String> ClusterIdsList;
 
-    /**值范围0-50
-默认值：10*/
+    /**值范围0-50*/
     @KsYunField(name="MaxResults")
     private Integer MaxResults;
 
