@@ -16,6 +16,10 @@ import java.util.List;
 public class GetUserResponse extends BaseResponseModel {
 
     /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
+
+    /***/
     @JsonProperty("GetUserResult")
     private GetUserResultDto GetUserResult;
 
@@ -23,77 +27,98 @@ public class GetUserResponse extends BaseResponseModel {
     @ToString
     public static class GetUserResultDto {
         /***/
-        @JsonProperty("UserId")
-        private String UserId;
+        @JsonProperty("User")
+        private GetUserResultUserDto User;
 
-        /***/
-        @JsonProperty("Path")
-        private String Path;
+        @Data
+        @ToString
+        public static class GetUserResultUserDto {
+            /***/
+            @JsonProperty("UserId")
+            private String UserId;
 
-        /***/
-        @JsonProperty("UserName")
-        private String UserName;
+            /***/
+            @JsonProperty("Path")
+            private String Path;
 
-        /***/
-        @JsonProperty("CreateDate")
-        private String CreateDate;
+            /***/
+            @JsonProperty("UserName")
+            private String UserName;
 
-        /***/
-        @JsonProperty("Phone")
-        private Integer Phone;
+            /***/
+            @JsonProperty("RealName")
+            private String RealName;
 
-        /***/
-        @JsonProperty("CountryMobileCode")
-        private Integer CountryMobileCode;
+            /***/
+            @JsonProperty("CreateDate")
+            private String CreateDate;
 
-        /***/
-        @JsonProperty("isInternational")
-        private Integer IsInternational;
+            /***/
+            @JsonProperty("Phone")
+            private String Phone;
 
-        /***/
-        @JsonProperty("Email")
-        private String Email;
+            /***/
+            @JsonProperty("CountryMobileCode")
+            private String CountryMobileCode;
 
-        /***/
-        @JsonProperty("PhoneVerified")
-        private String PhoneVerified;
+            /***/
+            @JsonProperty("isInternational")
+            private Integer IsInternational;
 
-        /***/
-        @JsonProperty("EmailVerified")
-        private String EmailVerified;
+            /***/
+            @JsonProperty("Email")
+            private String Email;
 
-        /***/
-        @JsonProperty("Remark")
-        private String Remark;
+            /***/
+            @JsonProperty("PhoneVerified")
+            private String PhoneVerified;
 
-        /***/
-        @JsonProperty("PasswordResetRequired")
-        private String PasswordResetRequired;
+            /***/
+            @JsonProperty("EmailVerified")
+            private String EmailVerified;
 
-        /***/
-        @JsonProperty("EnableMFA")
-        private Integer EnableMFA;
+            /***/
+            @JsonProperty("Remark")
+            private String Remark;
 
-        /***/
-        @JsonProperty("NeedBindMfa")
-        private Integer NeedBindMfa;
+            /***/
+            @JsonProperty("Krn")
+            private String Krn;
 
-        /***/
-        @JsonProperty("UpdateDate")
-        private String UpdateDate;
+            /***/
+            @JsonProperty("PasswordResetRequired")
+            private Boolean PasswordResetRequired;
 
-        /***/
-        @JsonProperty("ViewAllProject")
-        private String ViewAllProject;
+            /***/
+            @JsonProperty("EnableMFA")
+            private Integer EnableMFA;
 
-        /***/
-        @JsonProperty("Id")
-        private Integer Id;
+            /***/
+            @JsonProperty("NeedBindMfa")
+            private Integer NeedBindMfa;
+
+            /***/
+            @JsonProperty("PwdFreeze")
+            private Integer PwdFreeze;
+
+            /***/
+            @JsonProperty("UpdateDate")
+            private String UpdateDate;
+
+            /***/
+            @JsonProperty("ViewAllProject")
+            private Integer ViewAllProject;
+
+            /***/
+            @JsonProperty("pwdLastUsed")
+            private String PwdLastUsed;
+
+            /***/
+            @JsonProperty("Id")
+            private Integer Id;
+
+        }
 
     }
-
-    /***/
-    @JsonProperty("RequestId")
-    private String RequestId;
 
 }
