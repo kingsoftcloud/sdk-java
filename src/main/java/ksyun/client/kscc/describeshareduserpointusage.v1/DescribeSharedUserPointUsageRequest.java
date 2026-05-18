@@ -1,4 +1,4 @@
-package ksyun.client.kscc.describeusertokenusage.v1;
+package ksyun.client.kscc.describeshareduserpointusage.v1;
 
 import common.annotation.KsYunField;
 import lombok.Builder;
@@ -9,11 +9,11 @@ import java.util.List;
 import java.util.Arrays;
 
 /**
-* @Classname DescribeUserTokenUsageRequest
+* @Classname DescribeSharedUserPointUsageRequest
 * @Description 请求参数
 */
 @Data
-public class DescribeUserTokenUsageRequest{
+public class DescribeSharedUserPointUsageRequest{
     /**开始时间，格式：yyyy-MM-dd HH:mm:ss*/
     @KsYunField(name="StartTime")
     private String StartTime;
@@ -22,7 +22,7 @@ public class DescribeUserTokenUsageRequest{
     @KsYunField(name="EndTime")
     private String EndTime;
 
-    /**用户邮箱前缀，不传则不过滤用户*/
+    /**用户名，不传则不过滤用户*/
     @KsYunField(name="UserName")
     private String UserName;
 
