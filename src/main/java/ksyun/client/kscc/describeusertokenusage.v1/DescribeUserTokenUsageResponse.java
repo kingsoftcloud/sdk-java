@@ -69,6 +69,10 @@ public class DescribeUserTokenUsageResponse extends BaseResponseModel {
             @JsonProperty("AbsPath")
             private String AbsPath;
 
+            /**模型名称*/
+            @JsonProperty("ModelName")
+            private String ModelName;
+
         }
 
     }
