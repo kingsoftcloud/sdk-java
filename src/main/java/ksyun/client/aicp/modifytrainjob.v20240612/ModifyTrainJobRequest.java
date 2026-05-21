@@ -25,4 +25,8 @@ public class ModifyTrainJobRequest{
     @KsYunField(name="Priority")
     private String Priority;
 
+    /**实例保留时长（分钟）*/
+    @KsYunField(name="HoldingTimeMinutes")
+    private Integer HoldingTimeMinutes;
+
 }

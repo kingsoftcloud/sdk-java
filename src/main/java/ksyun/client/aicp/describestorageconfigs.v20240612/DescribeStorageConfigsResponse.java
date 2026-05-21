@@ -143,4 +143,8 @@ ks3用户权限：[admin 创建者or主账号, writer 管理员（只读）, rea
 
     }
 
+    /**是否开启预取*/
+    @JsonProperty("Prefetch")
+    private Boolean Prefetch;
+
 }

@@ -33,39 +33,39 @@ public class QueryMemorySdkResponse extends BaseResponseModel {
         @Data
         @ToString
         public static class DataMemoriesDto {
-            /***/
+            /**查询短句*/
             @JsonProperty("Query")
             private String Query;
 
-            /***/
+            /**主题ID，记忆所属的主题*/
             @JsonProperty("TopicId")
             private String TopicId;
 
-            /***/
+            /**主题名称*/
             @JsonProperty("TopicName")
             private String TopicName;
 
-            /***/
+            /**记忆ID*/
             @JsonProperty("MemoryId")
             private String MemoryId;
 
-            /***/
+            /**记忆内容*/
             @JsonProperty("Memory")
             private String Memory;
 
-            /***/
+            /**相关性分数*/
             @JsonProperty("Score")
             private Double Score;
 
-            /***/
+            /**记忆事件发生的开始时间（毫秒）*/
             @JsonProperty("OccurredStart")
             private Long OccurredStart;
 
-            /***/
+            /**记忆事件发生的结束时间（毫秒）*/
             @JsonProperty("OccurredEnd")
             private Long OccurredEnd;
 
-            /***/
+            /**引用原始数据*/
             @JsonProperty("Citations")
             private List<DataMemoriesCitationsDto> Citations;
 

@@ -74,4 +74,9 @@ ks3用户权限：[admin 创建者or主账号, writer 管理员（只读）, rea
     @KsYunField(name="Sk")
     private String Sk;
 
+    /**开启预取
+> 当选择的文件系统是容量型/标准型KPFS时,可设置开启预取，开启后能提升连续读性能，但可能降低随机读性能。*/
+    @KsYunField(name="Prefetch")
+    private Boolean Prefetch;
+
 }

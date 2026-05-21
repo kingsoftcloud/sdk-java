@@ -283,6 +283,10 @@ public class DescribeTrainJobsResponse extends BaseResponseModel {
 
         }
 
+        /**实例保留时长（分钟）*/
+        @JsonProperty("HoldingTimeMinutes")
+        private Integer HoldingTimeMinutes;
+
     }
 
 }

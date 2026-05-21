@@ -82,6 +82,10 @@ public class QueryTokenDataResponse extends BaseResponseModel {
         @JsonProperty("TotalWebParser")
         private Long TotalWebParser;
 
+        /**分组后的分组值。例如model时为deepseek-r1-0528，keyId时为API-KEY-1165271279093415936，endpointId时为ep-m-20260411073552-fsnp9 .*/
+        @JsonProperty("GroupByValue")
+        private String GroupByValue;
+
     }
 
     /**总的缓存命中量*/

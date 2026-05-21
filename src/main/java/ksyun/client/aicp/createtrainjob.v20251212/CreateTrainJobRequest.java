@@ -194,4 +194,8 @@ public class CreateTrainJobRequest{
 
     }
 
+    /**实例保留时长（分钟）*/
+    @KsYunField(name="HoldingTimeMinutes")
+    private Integer HoldingTimeMinutes;
+
 }

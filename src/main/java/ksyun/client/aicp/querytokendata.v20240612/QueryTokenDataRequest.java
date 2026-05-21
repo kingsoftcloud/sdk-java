@@ -38,7 +38,7 @@ public class QueryTokenDataRequest{
     @KsYunField(name="Keyword")
     private String Keyword;
 
-    /**分组字段：model、keyId*/
+    /**分组字段：model、keyId、endpointId*/
     @KsYunField(name="GroupBy")
     private String GroupBy;
 
@@ -55,5 +55,19 @@ public class QueryTokenDataRequest{
 - 当按照APIKEY分组时，该字段始终生效*/
     @KsYunField(name="ModelName")
     private String ModelName;
+
+    /**排序字段
+InputToken、OutputToken、TotalToken*/
+    @KsYunField(name="SortField")
+    private String SortField;
+
+    /**asc desc
+与SortField配合*/
+    @KsYunField(name="SortOrder")
+    private String SortOrder;
+
+    /**APIKEY ID，响应数据需按APIKEY 筛选时需要*/
+    @KsYunField(name="KeyId")
+    private String KeyId;
 
 }
