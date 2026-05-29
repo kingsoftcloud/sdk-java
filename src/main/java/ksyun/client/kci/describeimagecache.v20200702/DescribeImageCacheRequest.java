@@ -34,4 +34,14 @@ public class DescribeImageCacheRequest{
     @KsYunField(name="MaxResults")
     private Integer MaxResults;
 
+    /**排序关键字
+支持：LastUsedTime*/
+    @KsYunField(name="SortKey")
+    private String SortKey;
+
+    /**排序方向
+支持：asc, desc*/
+    @KsYunField(name="SortDirection")
+    private String SortDirection;
+
 }

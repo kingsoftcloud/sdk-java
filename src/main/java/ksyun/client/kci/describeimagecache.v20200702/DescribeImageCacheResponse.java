@@ -93,6 +93,11 @@ public class DescribeImageCacheResponse extends BaseResponseModel {
         @JsonProperty("ImageCacheType")
         private String ImageCacheType;
 
+        /**最后匹配使用时间
+格式为：yyyy-MM-dd HH:mm:ss*/
+        @JsonProperty("LastUsedTime")
+        private String LastUsedTime;
+
     }
 
 }

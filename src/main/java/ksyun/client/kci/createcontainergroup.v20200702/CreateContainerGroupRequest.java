@@ -644,6 +644,20 @@ rwx：具有读取、写入和执行权限，八进制值为7。*/
 
         }
 
+        /**安全相关配置*/
+        @KsYunField(name="SecurityContext")
+        private ContainerSecurityContextDto SecurityContext;
+
+        @Data
+        @ToString
+        public static class ContainerSecurityContextDto {
+            /****特权模式**
+当配置Privileged=true时，容器将开启特权模式，突破Linux命名空间隔离，可直接访问宿主机的所有设备（如磁盘、网络设备等）、修改宿主机系统配置、执行宿主机级别的敏感操作；当配置为false（默认值）时，容器仅拥有有限的root权限，受命名空间限制，无法直接操作宿主机资源，保持与宿主机的安全隔离。*/
+            @KsYunField(name="Privileged")
+            private Boolean Privileged;
+
+        }
+
     }
 
     /****创建无集群模式实例时该字段必填**pod dns配置*/
@@ -812,6 +826,130 @@ pod内部所有容器申请的资源列表，不填写，开出的容器实例�
 */
         @KsYunField(name="LimitMem")
         private Double LimitMem;
+
+    }
+
+    /****宿主机PID模式**
+当配置HostPID=true时，容器不创建独立的PID命名空间，而是直接共享宿主机的全部进程列表，容器内部可以查看、操作宿主机上的所有进程（需配合相应权限）；当配置为false（默认值）时，容器会拥有独立的PID命名空间，仅能看到自身内部的进程，与宿主机进程完全隔离。*/
+    @KsYunField(name="HostPID")
+    private Boolean HostPID;
+
+    /***/
+    @KsYunField(name="InitContainer",type=1)
+    private List<InitContainerDto> InitContainerList;
+
+    @Data
+    @ToString
+    public static class InitContainerDto {
+        /**容器名称必填，格式`^[a-z0-9]([-a-z0-9]*[a-z0-9])?$`，不能超过63个字符*/
+        @KsYunField(name="Name")
+        private String Name;
+
+        /**运行命令*/
+        @KsYunField(name="Command",type=1)
+        private List<String> CommandList;
+
+        /**命令行参数*/
+        @KsYunField(name="Arg",type=1)
+        private List<String> ArgList;
+
+        /**最多三位小数*/
+        @KsYunField(name="Cpu")
+        private Double Cpu;
+
+        /**最多三位小数*/
+        @KsYunField(name="Memory")
+        private String Memory;
+
+        /**最多三位小数*/
+        @KsYunField(name="Gpu")
+        private Double Gpu;
+
+        /***/
+        @KsYunField(name="WorkingDir")
+        private String WorkingDir;
+
+        /**容器运行镜像，必填*/
+        @KsYunField(name="Image")
+        private String Image;
+
+        /**镜像拉取策略- Always- IfNotPresent- Never*/
+        @KsYunField(name="ImagePullPolicy")
+        private String ImagePullPolicy;
+
+        /**环境变量*/
+        @KsYunField(name="EnvironmentVar",type=1)
+        private List<InitContainerEnvironmentVarDto> EnvironmentVarList;
+
+        @Data
+        @ToString
+        public static class InitContainerEnvironmentVarDto {
+            /**格式`^[-._a-zA-Z][-._a-zA-Z0-9]*$`*/
+            @KsYunField(name="Key")
+            private String Key;
+
+            /***/
+            @KsYunField(name="Value")
+            private String Value;
+
+            /**ValueFrom与Value不能同时存在*/
+            @KsYunField(name="ValueFrom")
+            private InitContainerEnvironmentVarValueFromDto ValueFrom;
+
+            @Data
+            @ToString
+            public static class InitContainerEnvironmentVarValueFromDto {
+                /**其它方式暂不支持*/
+                @KsYunField(name="FieldRef")
+                private InitContainerEnvironmentVarValueFromFieldRefDto FieldRef;
+
+                @Data
+                @ToString
+                public static class InitContainerEnvironmentVarValueFromFieldRefDto {
+                    /**字段路径，如status.podIP*/
+                    @KsYunField(name="FieldPath")
+                    private String FieldPath;
+
+                }
+
+            }
+
+        }
+
+        /**挂载点信息*/
+        @KsYunField(name="VolumeMount",type=1)
+        private List<InitContainerVolumeMountDto> VolumeMountList;
+
+        @Data
+        @ToString
+        public static class InitContainerVolumeMountDto {
+            /**Volume名称，必填，它必须是Volume.N中已存在的名称*/
+            @KsYunField(name="Name")
+            private String Name;
+
+            /**挂载路径*/
+            @KsYunField(name="MountPath")
+            private String MountPath;
+
+            /**是否只读*/
+            @KsYunField(name="ReadOnly")
+            private Boolean ReadOnly;
+
+        }
+
+        /**安全相关配置*/
+        @KsYunField(name="SecurityContext")
+        private InitContainerSecurityContextDto SecurityContext;
+
+        @Data
+        @ToString
+        public static class InitContainerSecurityContextDto {
+            /****特权模式**
+当配置Privileged=true时，容器将开启特权模式，突破Linux命名空间隔离，可直接访问宿主机的所有设备（如磁盘、网络设备等）、修改宿主机系统配置、执行宿主机级别的敏感操作；当配置为false（默认值）时，容器仅拥有有限的root权限，受命名空间限制，无法直接操作宿主机资源，保持与宿主机的安全隔离。*/
+            @KsYunField(name="Privileged")
+            private Boolean Privileged;
+
+        }
 
     }
 
