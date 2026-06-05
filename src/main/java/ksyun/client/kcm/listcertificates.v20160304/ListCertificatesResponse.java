@@ -95,6 +95,10 @@ public class ListCertificatesResponse extends BaseResponseModel {
 
         }
 
+        /**签发时间*/
+        @JsonProperty("IssueTime")
+        private String IssueTime;
+
     }
 
 }
