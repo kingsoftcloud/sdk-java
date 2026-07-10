@@ -54,7 +54,7 @@ public class CreateProcessRequest{
     @KsYunField(name="Type")
     private String Type;
 
-    /**确认是否操作 有效值：0,1*/
+    /**是否允许重启 0允许1不允许*/
     @KsYunField(name="Confirm")
     private String Confirm;
 

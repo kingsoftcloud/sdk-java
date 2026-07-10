@@ -76,6 +76,43 @@ public class DescribeGpuRoceTopologyResponse extends BaseResponseModel {
 
         }
 
+        /**服务器信息*/
+        @JsonProperty("ServerDatas")
+        private List<DescribePortsServerDatasDto> ServerDatas;
+
+        @Data
+        @ToString
+        public static class DescribePortsServerDatasDto {
+            /**服务器sn*/
+            @JsonProperty("Sn")
+            private String Sn;
+
+            /**实例ID*/
+            @JsonProperty("HostId")
+            private String HostId;
+
+            /**交换机名称*/
+            @JsonProperty("LeafName")
+            private String LeafName;
+
+            /**交换机端口*/
+            @JsonProperty("LeafPort")
+            private String LeafPort;
+
+            /**Roce计算集群名称*/
+            @JsonProperty("RoceCluster")
+            private String RoceCluster;
+
+            /**Roce计算集群Group*/
+            @JsonProperty("RoceClusterGroup")
+            private String RoceClusterGroup;
+
+            /**SRoce集群名称*/
+            @JsonProperty("SRoceCluster")
+            private String SRoceCluster;
+
+        }
+
     }
 
 }

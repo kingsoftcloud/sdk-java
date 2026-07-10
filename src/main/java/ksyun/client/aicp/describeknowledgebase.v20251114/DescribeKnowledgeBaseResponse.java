@@ -51,10 +51,6 @@ public class DescribeKnowledgeBaseResponse extends BaseResponseModel {
     @JsonProperty("DocumentCount")
     private Integer DocumentCount;
 
-    /**总词数*/
-    @JsonProperty("WordCount")
-    private Integer WordCount;
-
     /**创建人*/
     @JsonProperty("CreatedBy")
     private String CreatedBy;
@@ -233,5 +229,17 @@ public class DescribeKnowledgeBaseResponse extends BaseResponseModel {
         private Boolean ScoreThresholdEnabled;
 
     }
+
+    /**项目ID*/
+    @JsonProperty("ProjectId")
+    private String ProjectId;
+
+    /**计费方式*/
+    @JsonProperty("ChargeType")
+    private String ChargeType;
+
+    /**计算资源数*/
+    @JsonProperty("ComputeUnit")
+    private Integer ComputeUnit;
 
 }

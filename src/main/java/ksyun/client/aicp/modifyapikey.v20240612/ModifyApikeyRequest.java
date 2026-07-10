@@ -34,4 +34,28 @@ public class ModifyApikeyRequest{
     @KsYunField(name="AllAssociatedModel")
     private Boolean AllAssociatedModel;
 
+    /**接入点列表*/
+    @KsYunField(name="AllowEndpoints",type=2)
+    private List<String> AllowEndpointsList;
+
+    /**项目下所有资源全选*/
+    @KsYunField(name="AllAssociatedProjectResources")
+    private Boolean AllAssociatedProjectResources;
+
+    /**接入点全选*/
+    @KsYunField(name="AllAssociatedEndpoint")
+    private Boolean AllAssociatedEndpoint;
+
+    /**低价池(标准池)模型名称列表*/
+    @KsYunField(name="LowPriceModels",type=2)
+    private List<String> LowPriceModelsList;
+
+    /**高价池模型名称列表*/
+    @KsYunField(name="HighPriceModels",type=2)
+    private List<String> HighPriceModelsList;
+
+    /**IP白名单列表，有值则启用白名单*/
+    @KsYunField(name="AllowedIps",type=2)
+    private List<String> AllowedIpsList;
+
 }

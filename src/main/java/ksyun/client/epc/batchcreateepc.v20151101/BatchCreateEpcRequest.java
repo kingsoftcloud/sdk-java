@@ -374,12 +374,35 @@ windows创建时，只支持非bond模式。*/
     @KsYunField(name="NetworkCardPriority")
     private String NetworkCardPriority;
 
-    /**文件系统id*/
+    /**文件系统id
+- 说明：仅机型支持存储RoCE且所选镜像支持挂载文件存储时支持传入该参数。传入该参数代表仅支持创建文件系统所在存储RoCE集群内的裸金属服务器。*/
     @KsYunField(name="FileSystemId")
     private String FileSystemId;
 
-    /**访问授权规则id*/
+    /**访问授权规则id
+- 说明：仅机型支持存储RoCE且所选镜像支持挂载文件存储时支持传入该参数。*/
     @KsYunField(name="PosixAclId")
     private String PosixAclId;
+
+    /**客户自定义装机参数配置*/
+    @KsYunField(name="CustomInstallConfig",type=1)
+    private List<CustomInstallConfigDto> CustomInstallConfigList;
+
+    @Data
+    @ToString
+    public static class CustomInstallConfigDto {
+        /**客户自定义装机参数配置*/
+        @KsYunField(name="Key")
+        private String Key;
+
+        /**客户自定义装机参数配置*/
+        @KsYunField(name="Value",type=1)
+        private List<String> ValueList;
+
+    }
+
+    /**UltraServer序列号*/
+    @KsYunField(name="UltraServerSn")
+    private String UltraServerSn;
 
 }

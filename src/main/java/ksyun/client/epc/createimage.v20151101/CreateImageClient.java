@@ -14,7 +14,7 @@ import java.util.*;
 
 /**
 * @Classname CreateImageClient
-* @Description CreateImage*/
+* @Description 创建自定义镜像*/
 @Slf4j
 public class CreateImageClient extends BaseClient {
     private final static String service = "epc";

@@ -90,6 +90,10 @@ public class DescribeResourcePoolInstanceTasksResponse extends BaseResponseModel
         @JsonProperty("Status")
         private String Status;
 
+        /**是否使用闲时资源*/
+        @JsonProperty("UseIdleResource")
+        private Boolean UseIdleResource;
+
     }
 
 }

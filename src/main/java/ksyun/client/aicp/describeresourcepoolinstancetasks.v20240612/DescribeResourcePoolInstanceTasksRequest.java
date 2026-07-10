@@ -38,4 +38,8 @@ public class DescribeResourcePoolInstanceTasksRequest{
     @KsYunField(name="Page")
     private Integer Page;
 
+    /**是否使用闲时资源*/
+    @KsYunField(name="UseIdleResource")
+    private Boolean UseIdleResource;
+
 }

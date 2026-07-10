@@ -34,10 +34,11 @@ public class DescribeQueuesRequest{
     @ToString
     public static class FilterDto {
         /**有效值：
-- resource-group-id，资源组的ID
-- queue-name，队列名称 
- workload-type ,队列负载类型 
- state 队列状态*/
+
+- resource-pool-id，资源组的ID
+- queue-name，队列名称
+- workload-type，队列负载类型（Notebook，开发任务;TrainJob，训练任务;Inference，模型在线服务;DataJob，数据处理任务）
+- state 队列状态（normal 可用，abnormal 不可用）*/
         @KsYunField(name="Name")
         private String Name;
 

@@ -76,7 +76,9 @@ public class ListSessionsResponse extends BaseResponseModel {
 100
 提取成功
 -100
-提取失败*/
+提取失败
+50
+重复跳过*/
                 @JsonProperty("State")
                 private Integer State;
 

@@ -131,4 +131,8 @@ public class ModifyKnowledgeBaseRequest{
 
     }
 
+    /**计算资源数*/
+    @KsYunField(name="ComputeUnit")
+    private Integer ComputeUnit;
+
 }

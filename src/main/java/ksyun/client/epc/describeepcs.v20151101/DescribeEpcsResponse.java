@@ -713,6 +713,25 @@ SSD
 
         }
 
+        /**ib集群名称*/
+        @JsonProperty("IbCluster")
+        private String IbCluster;
+
+        /**ib集群group*/
+        @JsonProperty("IbClusterGroup")
+        private String IbClusterGroup;
+
+        /**    释义：实例删除保护属性，指定是否支持通过控制台或API删除实例。
+    有效值：
+    ◦ support：开启实例删除保护。
+    ◦ unsupport：关闭实例删除保护。*/
+        @JsonProperty("DeleteProtection")
+        private String DeleteProtection;
+
+        /**UltraServer序列号*/
+        @JsonProperty("UltraServerSn")
+        private String UltraServerSn;
+
     }
 
     /**请求ID*/

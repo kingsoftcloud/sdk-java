@@ -93,6 +93,11 @@ public class DescribeModelsResponse extends BaseResponseModel {
             @JsonProperty("ContextLength")
             private String ContextLength;
 
+            /**计费类型
+token、imageCount、videoDuration、videoCredits、wordCount*/
+            @JsonProperty("MeteringMode")
+            private String MeteringMode;
+
         }
 
         /**免费额度用尽后是否继续使用*/

@@ -39,7 +39,9 @@ public class CreateTrainJobRequest{
 
     /**训练框架	，有效值：
 - pytorch
-- tensorflow*/
+- tensorflow
+- custom
+- ray*/
     @KsYunField(name="Framework")
     private String Framework;
 
@@ -164,7 +166,7 @@ public class CreateTrainJobRequest{
 
         }
 
-        /**启动命令*/
+        /**启动命令，非ray框架下，该字段不允许为空*/
         @KsYunField(name="RunCommand")
         private String RunCommand;
 
@@ -197,5 +199,39 @@ public class CreateTrainJobRequest{
     /**实例保留时长（分钟）*/
     @KsYunField(name="HoldingTimeMinutes")
     private Integer HoldingTimeMinutes;
+
+    /**是否开启算力健康检测(只对pytorch框架生效)*/
+    @KsYunField(name="EnableDeviceHealthCheck")
+    private Boolean EnableDeviceHealthCheck;
+
+    /**算力健康检测配置，pytorch框架下且EnableDeviceHealthCheck=true时生效*/
+    @KsYunField(name="DeviceHealthCheckConfig")
+    private DeviceHealthCheckConfigDto DeviceHealthCheckConfig;
+
+    @Data
+    @ToString
+    public static class DeviceHealthCheckConfigDto {
+        /**检测时机
+- BeforeRunning 任务运行前*/
+        @KsYunField(name="CheckTiming")
+        private String CheckTiming;
+
+        /**最长检测时长（分钟）MaxCheckTime，默认30，最大60，最小3*/
+        @KsYunField(name="MaxCheckTime")
+        private Long MaxCheckTime;
+
+    }
+
+    /**运行时环境配置（仅ray框架有效），必须是json字符串，且长度最大5000字符*/
+    @KsYunField(name="RuntimeEnv")
+    private String RuntimeEnv;
+
+    /**ray框架下运行命令,当框架为ray时不能为空，其他框架忽略该参数*/
+    @KsYunField(name="EntryPointCommand")
+    private String EntryPointCommand;
+
+    /**是否使用闲时资源，仅当所属队列开启借用AllowBorrowing时，支持开启*/
+    @KsYunField(name="UseIdleResource")
+    private Boolean UseIdleResource;
 
 }

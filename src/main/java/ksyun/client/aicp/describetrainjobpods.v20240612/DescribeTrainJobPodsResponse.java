@@ -77,6 +77,14 @@ public class DescribeTrainJobPodsResponse extends BaseResponseModel {
             @JsonProperty("RestartCount")
             private Integer RestartCount;
 
+            /**算力健康检测状态
+- Success 成功
+- Failed 失败
+- Waiting 等待中
+- Running 检测中*/
+            @JsonProperty("DeviceHealthCheckState")
+            private String DeviceHealthCheckState;
+
         }
 
         /**容器名称*/

@@ -25,4 +25,40 @@ public class CreateMemoryCollectionRequest{
     @KsYunField(name="Description")
     private String Description;
 
+    /***/
+    @KsYunField(name="LongTermConfiguration")
+    private LongTermConfigurationDto LongTermConfiguration;
+
+    @Data
+    @ToString
+    public static class LongTermConfigurationDto {
+        /***/
+        @KsYunField(name="Strategies",type=2)
+        private List<LongTermConfigurationStrategiesDto> StrategiesList;
+
+        @Data
+        @ToString
+        public static class LongTermConfigurationStrategiesDto {
+            /**场景ID，用来区分各个场景，提供精细化记忆提取策略
+可选：
+“_sys_work_assistant”、"_sys_travel_assistant"、"_sys_ai_chat_assistant"、"_sys_coding_assistant"、 “_sys_general”*/
+            @KsYunField(name="Type")
+            private String Type;
+
+        }
+
+    }
+
+    /**记忆库类型：1-基础版，2-专业版，3-企业版*/
+    @KsYunField(name="MemoryType")
+    private String MemoryType;
+
+    /**项目ID*/
+    @KsYunField(name="ProjectId")
+    private String ProjectId;
+
+    /**计费方式*/
+    @KsYunField(name="ChargeType")
+    private String ChargeType;
+
 }

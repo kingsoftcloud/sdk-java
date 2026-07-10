@@ -137,6 +137,10 @@ daily, weekly, monthly, custom*/
 
         }
 
+        /**模型类型列表，比如：视频生成模型,图片生成模型*/
+        @JsonProperty("ModelTypeDesc")
+        private String ModelTypeDesc;
+
     }
 
     /**1*/

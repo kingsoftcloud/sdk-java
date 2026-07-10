@@ -98,6 +98,14 @@ public class DescribeImagesResponse extends BaseResponseModel {
         @JsonProperty("KernelVersion")
         private String KernelVersion;
 
+        /**镜像描述*/
+        @JsonProperty("Description")
+        private String Description;
+
+        /**镜像的架构类型*/
+        @JsonProperty("Architecture")
+        private String Architecture;
+
     }
 
 }

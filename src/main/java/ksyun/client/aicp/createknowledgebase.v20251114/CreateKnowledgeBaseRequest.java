@@ -119,4 +119,16 @@ public class CreateKnowledgeBaseRequest{
 
     }
 
+    /**计算资源数*/
+    @KsYunField(name="ComputeUnit")
+    private Integer ComputeUnit;
+
+    /**项目ID*/
+    @KsYunField(name="ProjectId")
+    private String ProjectId;
+
+    /**计费方式*/
+    @KsYunField(name="ChargeType")
+    private String ChargeType;
+
 }

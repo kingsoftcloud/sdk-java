@@ -62,7 +62,7 @@ E2LWQxOWU0ZWYwYjk2YSwwN2M4YThiZi0zMThmLTQxNjctYWVhNi1kMTllNGVmMGI5NmEsMjAyMC0wNS
     private String Type;
 
     /**确认是否重启
-有效值：0禁止重启，1可以重启*/
+有效值：1禁止重启，0可以重启*/
     @KsYunField(name="Confirm")
     private String Confirm;
 

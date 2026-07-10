@@ -30,4 +30,8 @@ public class CreateImageRequest{
     @KsYunField(name="ImageInitialization")
     private String ImageInitialization;
 
+    /**镜像描述*/
+    @KsYunField(name="Description")
+    private String Description;
+
 }

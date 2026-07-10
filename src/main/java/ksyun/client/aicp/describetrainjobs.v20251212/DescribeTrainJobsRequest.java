@@ -57,6 +57,10 @@ public class DescribeTrainJobsRequest{
     @KsYunField(name="QueueId")
     private String QueueId;
 
+    /**是否使用闲时资源*/
+    @KsYunField(name="UseIdleResource")
+    private Boolean UseIdleResource;
+
     /**排序关键字*/
     @KsYunField(name="SortKey")
     private String SortKey;

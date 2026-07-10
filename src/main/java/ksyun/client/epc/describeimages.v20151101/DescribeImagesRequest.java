@@ -33,7 +33,10 @@ public class DescribeImagesRequest{
     @Data
     @ToString
     public static class FilterDto {
-        /***/
+        /**有效值：
+- enable-container，是否支持容器
+- image-type 镜像类别
+- ImageId 镜像ID*/
         @KsYunField(name="Name")
         private String Name;
 

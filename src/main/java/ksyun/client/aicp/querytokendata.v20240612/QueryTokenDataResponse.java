@@ -112,4 +112,40 @@ public class QueryTokenDataResponse extends BaseResponseModel {
     @JsonProperty("SumTotalWebParser")
     private Long SumTotalWebParser;
 
+    /**总的音频缓存量*/
+    @JsonProperty("SumTotalCacheAudioToken")
+    private Long SumTotalCacheAudioToken;
+
+    /**总的图片缓存token量*/
+    @JsonProperty("SumTotalCacheImageToken")
+    private Long SumTotalCacheImageToken;
+
+    /**总的显式缓存命中量*/
+    @JsonProperty("SumTotalEphemeralCacheToken")
+    private Long SumTotalEphemeralCacheToken;
+
+    /**总的音频未命中量*/
+    @JsonProperty("SumTotalCacheMissAudioToken")
+    private Long SumTotalCacheMissAudioToken;
+
+    /**总队图片缓存未命中量*/
+    @JsonProperty("SumTotalCacheMissImageToken")
+    private Long SumTotalCacheMissImageToken;
+
+    /**总的文转语音文字输入字符数*/
+    @JsonProperty("SumTotalVoiceWordCount")
+    private Long SumTotalVoiceWordCount;
+
+    /**总的图片输出token数*/
+    @JsonProperty("SumTotalImageOutputToken")
+    private Long SumTotalImageOutputToken;
+
+    /**总的5分钟缓存写入量*/
+    @JsonProperty("SumTotalCreationCache5mToken")
+    private Long SumTotalCreationCache5mToken;
+
+    /**总的1小时缓存写入量*/
+    @JsonProperty("SumTotalCreationCache1hToken")
+    private Long SumTotalCreationCache1hToken;
+
 }

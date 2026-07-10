@@ -51,6 +51,28 @@ public class ListMemoryCollectionsResponse extends BaseResponseModel {
         @JsonProperty("Region")
         private String Region;
 
+        /***/
+        @JsonProperty("LongTermConfiguration")
+        private MemoriesLongTermConfigurationDto LongTermConfiguration;
+
+        @Data
+        @ToString
+        public static class MemoriesLongTermConfigurationDto {
+            /***/
+            @JsonProperty("Strategies")
+            private List<MemoriesLongTermConfigurationStrategiesDto> Strategies;
+
+            @Data
+            @ToString
+            public static class MemoriesLongTermConfigurationStrategiesDto {
+                /***/
+                @JsonProperty("Type")
+                private String Type;
+
+            }
+
+        }
+
     }
 
     /**最大返回数量*/

@@ -470,14 +470,30 @@ public class CreateEpcResponse extends BaseResponseModel {
         @JsonProperty("AiModels")
         private List<String> AiModels;
 
+        /**实例删除保护属性，指定是否支持通过控制台或API删除实例*/
+        @JsonProperty("DeleteProtection")
+        private String DeleteProtection;
+
+        /**存储RoCE集群*/
+        @JsonProperty("SRoceCluster")
+        private String SRoceCluster;
+
+        /**计算RoCE集群*/
+        @JsonProperty("RoceCluster")
+        private String RoceCluster;
+
+        /**计算RoCE集群组*/
+        @JsonProperty("RoceClusterGroup")
+        private String RoceClusterGroup;
+
+        /**IB集群*/
+        @JsonProperty("IbCluster")
+        private String IbCluster;
+
+        /**IB集群组*/
+        @JsonProperty("IbClusterGroup")
+        private String IbClusterGroup;
+
     }
-
-    /**存储集群名称*/
-    @JsonProperty("SRoceCluster")
-    private String SRoceCluster;
-
-    /**计算Roce卡集群名称*/
-    @JsonProperty("RoceCluster")
-    private String RoceCluster;
 
 }

@@ -87,4 +87,9 @@ public class CreateMemorySdkRequest{
     @KsYunField(name="MemoryCollectionId")
     private String MemoryCollectionId;
 
+    /**强制提取记忆
+> true: 强制当前seesion下的原始对话切分并提取记忆，false: 走默认流程*/
+    @KsYunField(name="Flush")
+    private Boolean Flush;
+
 }

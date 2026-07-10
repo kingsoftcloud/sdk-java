@@ -23,4 +23,26 @@ public class UpdateMemoryCollectionResponse extends BaseResponseModel {
     @JsonProperty("Name")
     private String Name;
 
+    /***/
+    @JsonProperty("LongTermConfiguration")
+    private LongTermConfigurationDto LongTermConfiguration;
+
+    @Data
+    @ToString
+    public static class LongTermConfigurationDto {
+        /***/
+        @JsonProperty("Strategies")
+        private List<LongTermConfigurationStrategiesDto> Strategies;
+
+        @Data
+        @ToString
+        public static class LongTermConfigurationStrategiesDto {
+            /***/
+            @JsonProperty("Type")
+            private String Type;
+
+        }
+
+    }
+
 }

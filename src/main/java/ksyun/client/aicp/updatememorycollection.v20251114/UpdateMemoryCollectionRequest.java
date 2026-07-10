@@ -30,4 +30,28 @@ public class UpdateMemoryCollectionRequest{
     @KsYunField(name="Name")
     private String Name;
 
+    /***/
+    @KsYunField(name="LongTermConfiguration")
+    private LongTermConfigurationDto LongTermConfiguration;
+
+    @Data
+    @ToString
+    public static class LongTermConfigurationDto {
+        /***/
+        @KsYunField(name="Strategies",type=2)
+        private List<LongTermConfigurationStrategiesDto> StrategiesList;
+
+        @Data
+        @ToString
+        public static class LongTermConfigurationStrategiesDto {
+            /**场景ID，用来区分各个场景，提供精细化记忆提取策略
+可选：
+“_sys_work_assistant”、"_sys_travel_assistant"、"_sys_ai_chat_assistant"、"_sys_coding_assistant"、 “_sys_general”*/
+            @KsYunField(name="Type")
+            private String Type;
+
+        }
+
+    }
+
 }

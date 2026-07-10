@@ -38,10 +38,6 @@ public class DescribeKnowledgeBasesResponse extends BaseResponseModel {
         @JsonProperty("DocumentCount")
         private Integer DocumentCount;
 
-        /**总词数*/
-        @JsonProperty("WordCount")
-        private Integer WordCount;
-
         /**创建时间戳*/
         @JsonProperty("CreatedAt")
         private Long CreatedAt;
@@ -49,6 +45,18 @@ public class DescribeKnowledgeBasesResponse extends BaseResponseModel {
         /**更新时间戳*/
         @JsonProperty("UpdatedAt")
         private Long UpdatedAt;
+
+        /**项目ID*/
+        @JsonProperty("ProjectId")
+        private String ProjectId;
+
+        /**计费方式*/
+        @JsonProperty("ChargeType")
+        private String ChargeType;
+
+        /**计算资源数*/
+        @JsonProperty("ComputeUnit")
+        private Integer ComputeUnit;
 
     }
 

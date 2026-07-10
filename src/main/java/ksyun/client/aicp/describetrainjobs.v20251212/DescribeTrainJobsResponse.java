@@ -141,6 +141,14 @@ public class DescribeTrainJobsResponse extends BaseResponseModel {
             @JsonProperty("ExecutionTime")
             private String ExecutionTime;
 
+            /**算力健康检测状态
+- Success 成功
+- Failed 失败
+- Waiting 等待中
+- Running 检测中*/
+            @JsonProperty("DeviceHealthCheckState")
+            private String DeviceHealthCheckState;
+
         }
 
         /**存储配置信息*/
@@ -286,6 +294,39 @@ public class DescribeTrainJobsResponse extends BaseResponseModel {
         /**实例保留时长（分钟）*/
         @JsonProperty("HoldingTimeMinutes")
         private Integer HoldingTimeMinutes;
+
+        /**是否开启算力健康检测*/
+        @JsonProperty("EnableDeviceHealthCheck")
+        private Boolean EnableDeviceHealthCheck;
+
+        /**算力健康检测配置*/
+        @JsonProperty("DeviceHealthCheckConfig")
+        private TrainJobSetDeviceHealthCheckConfigDto DeviceHealthCheckConfig;
+
+        @Data
+        @ToString
+        public static class TrainJobSetDeviceHealthCheckConfigDto {
+            /**检测时机*/
+            @JsonProperty("CheckTiming")
+            private String CheckTiming;
+
+            /**最长检测时长（分钟）*/
+            @JsonProperty("MaxCheckTime")
+            private Long MaxCheckTime;
+
+        }
+
+        /**运行时环境配置*/
+        @JsonProperty("RuntimeEnv")
+        private String RuntimeEnv;
+
+        /**Ray框架下运行命令*/
+        @JsonProperty("EntryPointCommand")
+        private String EntryPointCommand;
+
+        /**是否使用闲时资源*/
+        @JsonProperty("UseIdleResource")
+        private Boolean UseIdleResource;
 
     }
 

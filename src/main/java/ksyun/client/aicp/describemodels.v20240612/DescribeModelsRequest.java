@@ -22,11 +22,11 @@ public class DescribeModelsRequest{
     @KsYunField(name="MaxResults")
     private Integer MaxResults;
 
-    /**模型类别筛选项，如"文本模型"。*/
+    /**模型类别筛选项*/
     @KsYunField(name="ModelCategory",type=1)
     private List<String> ModelCategoryList;
 
-    /**模型供应商，如"Qwen"。*/
+    /**模型供应商*/
     @KsYunField(name="Provider",type=1)
     private List<String> ProviderList;
 
@@ -40,5 +40,17 @@ public class DescribeModelsRequest{
     /**模型名称关键词*/
     @KsYunField(name="ModelName")
     private String ModelName;
+
+    /**模型能力筛选项*/
+    @KsYunField(name="Capabilities",type=1)
+    private List<String> CapabilitiesList;
+
+    /**模型状态筛选：0-初始化，1-在线，2-下线，3-已废弃，4-灰度在线*/
+    @KsYunField(name="Status")
+    private Integer Status;
+
+    /**模型上下文长度区间筛选 例如:"32-128","256-1024"*/
+    @KsYunField(name="ContextLengthRanges",type=1)
+    private List<String> ContextLengthRangesList;
 
 }

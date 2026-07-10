@@ -30,4 +30,11 @@ public class ModifyEpcRequest{
     @KsYunField(name="ClientToken")
     private String ClientToken;
 
+    /**    实例删除保护属性，指定是否支持通过控制台或API删除实例。
+    有效值：
+    ◦ support：开启实例删除保护。
+    ◦ unsupport：关闭实例删除保护。*/
+    @KsYunField(name="DeleteProtection")
+    private String DeleteProtection;
+
 }
