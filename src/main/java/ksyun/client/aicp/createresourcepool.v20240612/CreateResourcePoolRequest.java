@@ -58,4 +58,14 @@ public class CreateResourcePoolRequest{
     @KsYunField(name="Components",type=2)
     private List<String> ComponentsList;
 
+    /**是否支持挂载云盘, true代表开启*/
+    @KsYunField(name="EnableVolume")
+    private Boolean EnableVolume;
+
+    /**云盘计费方式，有效值：
+- HourlyInstantSettlement（后付费，按小时实时结算）
+- Daily（后付费，按日月结）*/
+    @KsYunField(name="VolumeChargeType")
+    private String VolumeChargeType;
+
 }

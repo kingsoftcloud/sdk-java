@@ -18,4 +18,8 @@ public class DeleteNotebookRequest{
     @KsYunField(name="NotebookId")
     private String NotebookId;
 
+    /**云盘回收策略，有效值：delete、reclaim（保留）*/
+    @KsYunField(name="VolumeReclaimPolicy")
+    private String VolumeReclaimPolicy;
+
 }

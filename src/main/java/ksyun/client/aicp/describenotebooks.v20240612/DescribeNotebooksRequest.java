@@ -51,4 +51,8 @@ public class DescribeNotebooksRequest{
     @KsYunField(name="QueueId")
     private String QueueId;
 
+    /**是否支持挂载云盘*/
+    @KsYunField(name="EnableVolume")
+    private Boolean EnableVolume;
+
 }

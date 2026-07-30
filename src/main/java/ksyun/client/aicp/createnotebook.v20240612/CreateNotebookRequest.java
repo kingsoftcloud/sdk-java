@@ -181,4 +181,25 @@ public class CreateNotebookRequest{
 
     }
 
+    /**是否挂载云盘*/
+    @KsYunField(name="EnableVolume")
+    private Boolean EnableVolume;
+
+    /**云盘配置，当EnableVolume=true时必传*/
+    @KsYunField(name="VolumeConfig")
+    private VolumeConfigDto VolumeConfig;
+
+    @Data
+    @ToString
+    public static class VolumeConfigDto {
+        /**云盘大小，单位Gi*/
+        @KsYunField(name="VolumeSize")
+        private Integer VolumeSize;
+
+        /**云盘类型，有效值：ESSD_PL0、ESSD_PL1、ESSD_PL2、ESSD_PL3*/
+        @KsYunField(name="VolumeType")
+        private String VolumeType;
+
+    }
+
 }

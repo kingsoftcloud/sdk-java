@@ -62,4 +62,8 @@ public class DescribeResourcePoolsRequest{
 
     }
 
+    /**是否支持挂载云盘*/
+    @KsYunField(name="EnableVolume")
+    private Boolean EnableVolume;
+
 }

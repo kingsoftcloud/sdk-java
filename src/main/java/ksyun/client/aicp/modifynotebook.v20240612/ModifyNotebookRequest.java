@@ -164,4 +164,31 @@ public class ModifyNotebookRequest{
     @KsYunField(name="ImageRegistryId")
     private String ImageRegistryId;
 
+    /**自动保存镜像配置*/
+    @KsYunField(name="AutoSaveConfig")
+    private AutoSaveConfigDto AutoSaveConfig;
+
+    @Data
+    @ToString
+    public static class AutoSaveConfigDto {
+        /**ImageType 实例类型：
+• Personal 个人版
+• Official 企业版*/
+        @KsYunField(name="ImageType")
+        private String ImageType;
+
+        /**企业版实例ID*/
+        @KsYunField(name="OfficialInstance")
+        private String OfficialInstance;
+
+        /**企业版用户名*/
+        @KsYunField(name="UserName")
+        private String UserName;
+
+        /**用户凭证*/
+        @KsYunField(name="Password")
+        private String Password;
+
+    }
+
 }

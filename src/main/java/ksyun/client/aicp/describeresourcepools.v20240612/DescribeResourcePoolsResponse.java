@@ -111,6 +111,16 @@ public class DescribeResourcePoolsResponse extends BaseResponseModel {
         @JsonProperty("EnableKlog")
         private Boolean EnableKlog;
 
+        /**是否支持挂载云盘*/
+        @JsonProperty("EnableVolume")
+        private Boolean EnableVolume;
+
+        /**云盘计费方式，有效值：
+- HourlyInstantSettlement（后付费，按小时实时结算）
+- Daily（后付费，按日月结）*/
+        @JsonProperty("VolumeChargeType")
+        private String VolumeChargeType;
+
     }
 
     /**资源组总数*/

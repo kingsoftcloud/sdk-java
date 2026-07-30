@@ -271,6 +271,66 @@ public class DescribeNotebooksResponse extends BaseResponseModel {
         @JsonProperty("NodeIp")
         private String NodeIp;
 
+        /**自动保存镜像配置*/
+        @JsonProperty("AutoSaveConfig")
+        private NotebooksAutoSaveConfigDto AutoSaveConfig;
+
+        @Data
+        @ToString
+        public static class NotebooksAutoSaveConfigDto {
+            /**ImageType 实例类型：
+• Personal 个人版
+• Official 企业版*/
+            @JsonProperty("ImageType")
+            private String ImageType;
+
+            /**企业版实例ID*/
+            @JsonProperty("OfficialInstance")
+            private String OfficialInstance;
+
+            /**企业版用户名*/
+            @JsonProperty("UserName")
+            private String UserName;
+
+            /**命名空间*/
+            @JsonProperty("Namespace")
+            private String Namespace;
+
+            /**镜像名称*/
+            @JsonProperty("ImageRepo")
+            private String ImageRepo;
+
+        }
+
+        /**是否挂载云盘*/
+        @JsonProperty("EnableVolume")
+        private Boolean EnableVolume;
+
+        /**云盘配置，当EnableVolume=true时返回*/
+        @JsonProperty("VolumeConfig")
+        private NotebooksVolumeConfigDto VolumeConfig;
+
+        @Data
+        @ToString
+        public static class NotebooksVolumeConfigDto {
+            /**云盘类型*/
+            @JsonProperty("VolumeType")
+            private String VolumeType;
+
+            /**云盘大小*/
+            @JsonProperty("VolumeSize")
+            private Integer VolumeSize;
+
+            /**云盘ID*/
+            @JsonProperty("VolumeId")
+            private String VolumeId;
+
+            /**云盘可用区*/
+            @JsonProperty("AvailabilityZone")
+            private String AvailabilityZone;
+
+        }
+
     }
 
     /**总数据条数*/
