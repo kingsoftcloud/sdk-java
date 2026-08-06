@@ -34,4 +34,16 @@ public class CreateZoneRecordRequest{
     @KsYunField(name="RecordValue")
     private String RecordValue;
 
+    /**优先级，Type = MX，SRV，必传*/
+    @KsYunField(name="Priority")
+    private Integer Priority;
+
+    /**权重，Type = SRV，必传*/
+    @KsYunField(name="Weight")
+    private Integer Weight;
+
+    /**端口，Type = SRV，必传*/
+    @KsYunField(name="Port")
+    private Integer Port;
+
 }
