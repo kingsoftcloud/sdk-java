@@ -40,7 +40,7 @@ asc:升序；desc：降序*/
 
     /**项目制id*/
     @KsYunField(name="ProjectId",type=2)
-    private List<Integer> ProjectIdList;
+    private List<String> ProjectIdList;
 
     /**每页条数*/
     @KsYunField(name="PageSize")

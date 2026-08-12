@@ -15,4 +15,25 @@ import java.util.List;
 @ToString
 public class GetZoneListResponse extends BaseResponseModel {
 
+    /***/
+    @JsonProperty("RequestId")
+    private String RequestId;
+
+    /***/
+    @JsonProperty("ZoneSet")
+    private List<ZoneSetDto> ZoneSet;
+
+    @Data
+    @ToString
+    public static class ZoneSetDto {
+        /***/
+        @JsonProperty("ZoneName")
+        private String ZoneName;
+
+        /***/
+        @JsonProperty("ZoneKey")
+        private String ZoneKey;
+
+    }
+
 }

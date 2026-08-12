@@ -48,7 +48,7 @@ public class DescribeKnadIpResponse extends BaseResponseModel {
 
         /***/
         @JsonProperty("ProjectId")
-        private Integer ProjectId;
+        private String ProjectId;
 
         /***/
         @JsonProperty("Band")
