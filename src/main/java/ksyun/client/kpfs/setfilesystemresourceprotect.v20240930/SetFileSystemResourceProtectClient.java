@@ -14,7 +14,7 @@ import java.util.*;
 
 /**
 * @Classname SetFileSystemResourceProtectClient
-* @Description 设置文件系统实例删除保护*/
+* @Description 设置文件系统删除保护*/
 @Slf4j
 public class SetFileSystemResourceProtectClient extends BaseClient {
     private final static String service = "kpfs";

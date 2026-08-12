@@ -15,7 +15,7 @@ import java.util.List;
 @ToString
 public class UpdateDirQuotaResponse extends BaseResponseModel {
 
-    /***/
+    /**唯一请求ID，每次请求都会返回。*/
     @JsonProperty("RequestId")
     private String RequestId;
 

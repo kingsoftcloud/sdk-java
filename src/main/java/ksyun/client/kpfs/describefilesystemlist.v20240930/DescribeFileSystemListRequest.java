@@ -14,10 +14,6 @@ import java.util.Arrays;
 */
 @Data
 public class DescribeFileSystemListRequest{
-    /**文件系统所在地域，不传则返回所有地域下文件系统。*/
-    @KsYunField(name="Region")
-    private String Region;
-
     /**文件系统名称前缀，模糊查询。*/
     @KsYunField(name="FileSystemName")
     private String FileSystemName;

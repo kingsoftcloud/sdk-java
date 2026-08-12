@@ -19,7 +19,7 @@ public class DescribePerformanceOneNfsAclListResponse extends BaseResponseModel 
     @JsonProperty("RequestId")
     private String RequestId;
 
-    /**访问授权列表信息*/
+    /**访问授权列表信息。*/
     @JsonProperty("Data")
     private List<DataDto> Data;
 
@@ -34,7 +34,7 @@ public class DescribePerformanceOneNfsAclListResponse extends BaseResponseModel 
         @JsonProperty("ExportPath")
         private String ExportPath;
 
-        /**文件系统信息*/
+        /**文件系统信息。*/
         @JsonProperty("FileSystemList")
         private List<DataFileSystemListDto> FileSystemList;
 
@@ -53,28 +53,32 @@ public class DescribePerformanceOneNfsAclListResponse extends BaseResponseModel 
             @JsonProperty("FileSystemName")
             private String FileSystemName;
 
-            /**挂载域名。*/
-            @JsonProperty("MountDomain")
-            private String MountDomain;
+            /**地域名称。*/
+            @JsonProperty("RegionName")
+            private String RegionName;
 
         }
 
-        /**授权IP列表。（当请求体带NfsAclId时，才会返回Ips信息）*/
+        /**挂载域名。*/
+        @JsonProperty("MountDomain")
+        private String MountDomain;
+
+        /**授权IP列表（当请求体带NfsAclId时，才会返回Ips信息）。*/
         @JsonProperty("Ips")
         private List<DataIpsDto> Ips;
 
         @Data
         @ToString
         public static class DataIpsDto {
-            /**授权IP地址，支持IPv4。单个IP示例：10.0.0.0；网段示例：10.0.0.1/24*/
+            /**授权IP地址，支持IPv4。*/
             @JsonProperty("Ip")
             private String Ip;
 
-            /**指定的权限级别。枚举值：ro（只读）、rw（读/写）*/
+            /**权限级别。ro（只读）、rw（读写）。*/
             @JsonProperty("Permission")
             private String Permission;
 
-            /**root权限压缩。枚举值：root_squash（客户端以root用户访问，映射为匿名用户）、no_root_squash（允许客户端以root用户访问）、all_squash（所有客户端访问，均映射为匿名用户）*/
+            /**root权限压缩。root_squash（映射为匿名用户）、no_root_squash（允许root访问）、all_squash（均映射为匿名用户）。*/
             @JsonProperty("RootSquash")
             private String RootSquash;
 
@@ -82,7 +86,7 @@ public class DescribePerformanceOneNfsAclListResponse extends BaseResponseModel 
             @JsonProperty("Hostname")
             private String Hostname;
 
-            /**计算节点类型。枚举值：epc（裸金属服务器）、kec（云服务器）*/
+            /**计算节点类型。epc（裸金属服务器）、kec（云服务器）。*/
             @JsonProperty("Type")
             private String Type;
 
@@ -93,5 +97,9 @@ public class DescribePerformanceOneNfsAclListResponse extends BaseResponseModel 
         private String Desc;
 
     }
+
+    /**总数量。*/
+    @JsonProperty("TotalCount")
+    private Long TotalCount;
 
 }

@@ -15,15 +15,15 @@ import java.util.List;
 @ToString
 public class DescribeDirQuotaResponse extends BaseResponseModel {
 
-    /**唯一请求ID*/
+    /**唯一请求ID，每次请求都会返回。*/
     @JsonProperty("RequestId")
     private String RequestId;
 
-    /**容量硬阈值，单位Byte*/
+    /**容量硬阈值，单位 Byte。*/
     @JsonProperty("LogicalHardThreshold")
     private Long LogicalHardThreshold;
 
-    /**已用容量，单位Byte*/
+    /**已用容量，单位 Byte。*/
     @JsonProperty("LogicalUsedCapacity")
     private Long LogicalUsedCapacity;
 

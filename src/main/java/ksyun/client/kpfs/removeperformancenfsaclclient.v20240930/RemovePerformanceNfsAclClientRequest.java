@@ -18,7 +18,7 @@ public class RemovePerformanceNfsAclClientRequest{
     @KsYunField(name="NfsAclId")
     private String NfsAclId;
 
-    /**授权IP列表，为计算节点的私网IP，单次最多删除100个。支持IP（示例：10.0.0.1,10.0.0.2）和网段（示例：10.0.0.1/24）*/
+    /**授权IP列表，单次最多删除100个。支持IP和网段格式。*/
     @KsYunField(name="Ips",type=2)
     private List<String> IpsList;
 

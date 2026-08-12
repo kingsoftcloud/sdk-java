@@ -1,0 +1,21 @@
+package ksyun.client.kpfs.deletecleanrecycledfiles.v20240930;
+
+import common.annotation.KsYunField;
+import lombok.Builder;
+import lombok.Data;
+import lombok.ToString;
+
+import java.util.List;
+import java.util.Arrays;
+
+/**
+* @Classname DeleteCleanRecycledFilesRequest
+* @Description 请求参数
+*/
+@Data
+public class DeleteCleanRecycledFilesRequest{
+    /***/
+    @KsYunField(name="FileSystemId")
+    private String FileSystemId;
+
+}

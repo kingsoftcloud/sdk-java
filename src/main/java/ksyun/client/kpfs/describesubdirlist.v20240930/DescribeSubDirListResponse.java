@@ -19,25 +19,25 @@ public class DescribeSubDirListResponse extends BaseResponseModel {
     @JsonProperty("RequestId")
     private String RequestId;
 
-    /**子目录总数*/
-    @JsonProperty("TotalCount")
-    private Integer TotalCount;
-
-    /**目录数据列表*/
+    /**目录数据。*/
     @JsonProperty("Data")
     private List<DataDto> Data;
 
     @Data
     @ToString
     public static class DataDto {
-        /**子目录名称*/
+        /**子目录名称。*/
         @JsonProperty("Name")
         private String Name;
 
-        /**目录最后修改时间戳*/
+        /**目录最后修改时间戳。*/
         @JsonProperty("UpdateTime")
         private Long UpdateTime;
 
     }
+
+    /**子目录总数。*/
+    @JsonProperty("TotalCount")
+    private Integer TotalCount;
 
 }

@@ -70,7 +70,7 @@ limit：限制类型。*/
         @JsonProperty("LogicalInodesType")
         private String LogicalInodesType;
 
-        /**Inodes硬阈值，仅KPFS性能型支持。单位个。*/
+        /**Inodes硬阈值，仅KPFS性能型支持。单位个*/
         @JsonProperty("LogicalHardInodes")
         private Long LogicalHardInodes;
 

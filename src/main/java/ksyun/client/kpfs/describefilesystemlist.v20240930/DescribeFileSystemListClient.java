@@ -14,7 +14,7 @@ import java.util.*;
 
 /**
 * @Classname DescribeFileSystemListClient
-* @Description 文件系统列表查询*/
+* @Description 查询文件系统列表*/
 @Slf4j
 public class DescribeFileSystemListClient extends BaseClient {
     private final static String service = "kpfs";

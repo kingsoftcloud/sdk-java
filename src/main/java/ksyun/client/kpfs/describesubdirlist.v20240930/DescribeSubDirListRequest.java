@@ -14,15 +14,25 @@ import java.util.Arrays;
 */
 @Data
 public class DescribeSubDirListRequest{
-    /**指定文件系统支持2种方式，建议择一使用：1.通过文件系统ID(FileSystemId)；2.输入文件系统完整信息，存储类型(StoreClass) + 存储池名称(ClusterName) + 文件系统名称(FileSystemName)同时必填。*/
+    /**指定文件系统支持2种方式，建议择一使用：
+
+通过文件系统ID(FileSystemId)。
+
+输入文件系统完整信息，文件系统信息，存储类型(StoreClass) + 存储池名称(ClusterName) + 文件系统名称(FileSystemName)同时必填。*/
     @KsYunField(name="FileSystemId")
     private String FileSystemId;
 
-    /**存储类型 取值：KPFS-P-S01（性能Ⅰ型）KPFS-P-S02（性能Ⅱ型）。*/
+    /**存储类型 取值：
+
+KPFS-P-S01（性能Ⅰ型）
+
+KPFS-P-S02（性能Ⅱ型）*/
     @KsYunField(name="StoreClass")
     private String StoreClass;
 
-    /**存储池名称，从控制台>文件系统详情>资源池获取。*/
+    /**存储池名称，
+
+从控制台>文件系统详情>资源池获取*/
     @KsYunField(name="ClusterName")
     private String ClusterName;
 
@@ -30,19 +40,25 @@ public class DescribeSubDirListRequest{
     @KsYunField(name="FileSystemName")
     private String FileSystemName;
 
-    /**目录完整路径，格式 dir/xxx 或 /dir/xxx 或 dir/xxx/ 或 /dir/xxx/；文件系统传入：/；目录传入路径：dir/xxx 或 /dir/xxx 或 dir/xxx/ 或 /dir/xxx/；目录最大深度255层，根目录是第一层。*/
+    /**目录完整路径，格式 dir/xxx 或 /dir/××× 或 dir/×××/或/dir/×××/
+
+文件系统传入：/
+
+目录传入路径：dir/xxx 或 /dir/××× 或 dir/×××/或/dir/×××/
+
+目录最大深度255层，根目录是第一层*/
     @KsYunField(name="DirPath")
     private String DirPath;
 
-    /**目录名称*/
+    /**目录名称，支持模糊匹配。*/
     @KsYunField(name="Name")
     private String Name;
 
-    /**当前页码，最小值1，无上限*/
+    /**页码。默认为1。*/
     @KsYunField(name="PageNum")
     private Integer PageNum;
 
-    /**每页数量，默认值1000，最小值1，最大值1000*/
+    /**分页大小。默认为1000，取值范围1-1000。*/
     @KsYunField(name="PageSize")
     private Integer PageSize;
 

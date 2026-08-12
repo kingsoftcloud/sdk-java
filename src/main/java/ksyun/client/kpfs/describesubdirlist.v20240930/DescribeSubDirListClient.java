@@ -14,7 +14,7 @@ import java.util.*;
 
 /**
 * @Classname DescribeSubDirListClient
-* @Description 查询文件系统或特定目录的子目录列表*/
+* @Description 查询文件系统目录列表*/
 @Slf4j
 public class DescribeSubDirListClient extends BaseClient {
     private final static String service = "kpfs";

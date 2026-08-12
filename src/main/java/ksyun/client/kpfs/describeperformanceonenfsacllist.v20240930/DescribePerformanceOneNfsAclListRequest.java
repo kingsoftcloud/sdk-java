@@ -24,10 +24,10 @@ public class DescribePerformanceOneNfsAclListRequest{
 
     /**页码。默认为1。*/
     @KsYunField(name="PageNum")
-    private Integer PageNum;
+    private Long PageNum;
 
     /**分页大小。默认为10。*/
     @KsYunField(name="PageSize")
-    private Integer PageSize;
+    private Long PageSize;
 
 }

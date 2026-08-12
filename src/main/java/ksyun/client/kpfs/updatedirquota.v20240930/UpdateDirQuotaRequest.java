@@ -14,23 +14,53 @@ import java.util.Arrays;
 */
 @Data
 public class UpdateDirQuotaRequest{
-    /**文件系统的实例ID。性能Ⅰ型/性能Ⅱ型指定文件系统支持2种方式，建议择一使用：1. 通过文件系统ID(FileSystemId)；2. 输入文件系统完整信息，存储类型(StoreClass) + 存储池名称(ClusterName) + 文件系统名称(FileSystemName)同时必填。容量Ⅰ型/容量Ⅱ型/标准型支持2种方式，建议择一使用：1. 通过文件系统ID(FileSystemId)；2. 输入文件系统完整信息，存储类型(StoreClass) + 文件系统名称(FileSystemName)同时必填。*/
+    /**文件系统的实例ID
+
+性能Ⅰ型/性能Ⅱ型指定文件系统支持2种方式，建议择一使用：
+
+通过文件系统ID(FileSystemId)
+
+输入文件系统完整信息，文件系统信息，存储类型(StoreClass) + 存储池名称(ClusterName) + 文件系统名称(FileSystemName)同时必填。
+
+容量Ⅰ型/容量Ⅱ型/标准型支持2种方式，建议择一使用：
+
+通过文件系统ID(FileSystemId)
+
+输入文件系统完整信息，存储类型(StoreClass) + 文件系统名称(FileSystemName)同时必填。*/
     @KsYunField(name="FileSystemId")
     private String FileSystemId;
 
-    /**存储类型*/
+    /**存储类型，取值：
+
+KPFS-capacity（容量Ⅰ型）
+
+KPFS-capacity2（容量Ⅱ型）
+
+KPFS-standard（标准型）
+
+KPFS-P-S01（性能Ⅰ型）
+
+KPFS-P-S02（性能Ⅱ型）*/
     @KsYunField(name="StoreClass")
     private String StoreClass;
 
-    /**存储池名称，从控制台>文件系统详情>资源池获取*/
+    /**存储池名称，从控制台>文件系统详情>资源池获取。*/
     @KsYunField(name="ClusterName")
     private String ClusterName;
 
-    /**文件系统名称，名称最大长度63字节*/
+    /**文件系统名称，名称最大长度63字节。*/
     @KsYunField(name="FileSystemName")
     private String FileSystemName;
 
-    /**目录完整路径，格式：dir/xxx 或 /dir/xxx 或 dir/xxx/ 或 /dir/xxx/。注意：1. 性能Ⅰ型/性能Ⅱ型存储池、文件系统名称、目录完整路径不允许修改，必须与原目录相同；2. 容量Ⅰ型/容量Ⅱ型/标准型，必须与原目录相同；3. 为已设置目录配额的目录，才允许修改目录配额。*/
+    /**目录完整路径，格式：dir/xxx 或 /dir/××× 或 dir/×××/或/dir/×××/
+
+注意：
+
+性能Ⅰ型/性能Ⅱ型存储池、文件系统名称、目录完整路径不允许修改，必须与原目录相同。
+
+容量Ⅰ型/容量Ⅱ型/标准型，必须与原目录相同。
+
+为已设置目录配额的目录，才允许修改目录配额。*/
     @KsYunField(name="DirPath")
     private String DirPath;
 
@@ -62,7 +92,7 @@ limit：限制类型，设置后将统计该目录Inodes情况且限制Inodes。
 
     /**Inodes硬阈值，正整数。仅LogicalInodesTypee取值为limit时支持设置该参数。仅KPFS性能型支持。
 
-单位：个。*/
+单位：个*/
     @KsYunField(name="LogicalHardInodes")
     private Long LogicalHardInodes;
 

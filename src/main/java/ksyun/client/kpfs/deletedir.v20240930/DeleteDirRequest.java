@@ -14,23 +14,41 @@ import java.util.Arrays;
 */
 @Data
 public class DeleteDirRequest{
-    /**指定文件系统支持2种方式，建议择一使用：1.通过文件系统ID(FileSystemId)；2.输入文件系统完整信息，存储类型(StoreClass) + 存储池名称(ClusterName) + 文件系统名称(FileSystemName)同时必填。*/
+    /**指定文件系统支持2种方式，建议择一使用：
+
+通过文件系统ID(FileSystemId)。
+
+输入文件系统完整信息，文件系统信息，存储类型(StoreClass) + 存储池名称(ClusterName) + 文件系统名称(FileSystemName)同时必填。*/
     @KsYunField(name="FileSystemId")
     private String FileSystemId;
 
-    /**存储类型 取值：KPFS-P-S01（性能Ⅰ型）KPFS-P-S02（性能Ⅱ型）。*/
+    /**存储类型 取值：
+
+KPFS-P-S01（性能Ⅰ型）
+
+KPFS-P-S02（性能Ⅱ型）*/
     @KsYunField(name="StoreClass")
     private String StoreClass;
 
-    /**存储池名称，从控制台>文件系统详情>资源池获取。*/
+    /**存储池名称，
+
+从控制台>文件系统详情>资源池获取。*/
     @KsYunField(name="ClusterName")
     private String ClusterName;
 
-    /**文件系统名称，名称最大长度63字节。*/
+    /**文件系统名称，名称最大长度63字节*/
     @KsYunField(name="FileSystemName")
     private String FileSystemName;
 
-    /**目录完整路径，格式 dir/xxx 或 /dir/xxx 或 dir/xxx/ 或 /dir/xxx/。注意：1.存储池、文件系统名称、目录完整路径不允许修改；2.必须与原目录相同；3.若目录中有文件，无法删除。*/
+    /**目录完整路径，格式 dir/xxx 或 /dir/××× 或 dir/×××/或/dir/×××/。
+
+注意：
+
+存储池、文件系统名称、目录完整路径不允许修改
+
+必须与原目录相同。
+
+若目录中有文件，无法删除。*/
     @KsYunField(name="DirPath")
     private String DirPath;
 
