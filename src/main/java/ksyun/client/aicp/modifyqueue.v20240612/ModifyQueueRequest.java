@@ -60,7 +60,7 @@ public class ModifyQueueRequest{
     @KsYunField(name="Description")
     private String Description;
 
-    /**访问控制列表，若传入会进行全量覆盖式修改。传入空数组代表清理全部已授权子用户*/
+    /**访问控制列表，若传入会进行全量覆盖式修改。传入空数组代表清理全部已授权子用户。同一角色（writer管理员/reader成员）只能来自 AccessList 或 SharedGroupList 其中之一，不能同时来自两者*/
     @KsYunField(name="AccessList",type=2)
     private List<AccessListDto> AccessListList;
 
@@ -72,6 +72,25 @@ public class ModifyQueueRequest{
         private String UserId;
 
         /**权限类型，有效值：
+- writer，管理员
+- reader，队列成员*/
+        @KsYunField(name="Permission")
+        private String Permission;
+
+    }
+
+    /**权限组共享列表（若传入，会进行全量覆盖式修改）。同一角色（writer管理员/reader成员）只能来自 AccessList 或 SharedGroupList 其中之一，不能同时来自两者*/
+    @KsYunField(name="SharedGroupList",type=2)
+    private List<SharedGroupListDto> SharedGroupListList;
+
+    @Data
+    @ToString
+    public static class SharedGroupListDto {
+        /**权限组ID*/
+        @KsYunField(name="AccessGroupId")
+        private String AccessGroupId;
+
+        /**权限组共享角色，枚举值：
 - writer，管理员
 - reader，队列成员*/
         @KsYunField(name="Permission")

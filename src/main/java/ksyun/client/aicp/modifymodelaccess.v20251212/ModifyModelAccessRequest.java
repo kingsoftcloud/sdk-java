@@ -35,4 +35,30 @@ public class ModifyModelAccessRequest{
 
     }
 
+    /**模型权限，枚举值：
+- Public，公开可见
+- Private，仅自己可见
+- Specified，指定范围*/
+    @KsYunField(name="ModelPermission")
+    private String ModelPermission;
+
+    /**权限组共享列表（若传入，会进行全量覆盖式修改）*/
+    @KsYunField(name="SharedGroupList",type=2)
+    private List<SharedGroupListDto> SharedGroupListList;
+
+    @Data
+    @ToString
+    public static class SharedGroupListDto {
+        /**权限组ID，36位*/
+        @KsYunField(name="AccessGroupId")
+        private String AccessGroupId;
+
+        /**权限组共享角色，枚举值：
+- writer，管理员
+- reader，只读成员*/
+        @KsYunField(name="Permission")
+        private String Permission;
+
+    }
+
 }

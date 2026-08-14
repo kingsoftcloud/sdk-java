@@ -83,6 +83,32 @@ public class DescribeModelsResponse extends BaseResponseModel {
 
         }
 
+        /**模型权限，枚举值：
+- Public，公开可见
+- Private，仅自己可见
+- Specified，指定范围*/
+        @JsonProperty("ModelPermission")
+        private String ModelPermission;
+
+        /**权限组共享列表*/
+        @JsonProperty("SharedGroupList")
+        private List<ModelSetSharedGroupListDto> SharedGroupList;
+
+        @Data
+        @ToString
+        public static class ModelSetSharedGroupListDto {
+            /**权限组ID，36位*/
+            @JsonProperty("AccessGroupId")
+            private String AccessGroupId;
+
+            /**权限组共享角色，枚举值：
+- writer，管理员
+- reader，只读成员*/
+            @JsonProperty("Permission")
+            private String Permission;
+
+        }
+
     }
 
 }

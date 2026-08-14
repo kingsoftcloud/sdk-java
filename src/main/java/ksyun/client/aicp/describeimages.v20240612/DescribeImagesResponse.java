@@ -90,9 +90,51 @@ public class DescribeImagesResponse extends BaseResponseModel {
         @JsonProperty("OfficialInstance")
         private String OfficialInstance;
 
-        /**镜像权限*/
+        /**镜像权限，枚举值：
+- Public，公开可见
+- Private，仅自己可见
+- Specified，指定范围*/
         @JsonProperty("ImagePermission")
         private String ImagePermission;
+
+        /**用户权限列表*/
+        @JsonProperty("AccessList")
+        private List<ImageSetAccessListDto> AccessList;
+
+        @Data
+        @ToString
+        public static class ImageSetAccessListDto {
+            /**子账号ID*/
+            @JsonProperty("UserId")
+            private String UserId;
+
+            /**用户权限，枚举值：
+- admin，管理员
+- writer，可读写
+- reader，只读*/
+            @JsonProperty("Permission")
+            private String Permission;
+
+        }
+
+        /**权限组共享列表*/
+        @JsonProperty("SharedGroupList")
+        private List<ImageSetSharedGroupListDto> SharedGroupList;
+
+        @Data
+        @ToString
+        public static class ImageSetSharedGroupListDto {
+            /**权限组ID*/
+            @JsonProperty("AccessGroupId")
+            private String AccessGroupId;
+
+            /**权限组共享角色，枚举值：
+- writer，管理员
+- reader，只读成员*/
+            @JsonProperty("Permission")
+            private String Permission;
+
+        }
 
         /**镜像状态*/
         @JsonProperty("ImageStatus")

@@ -19,7 +19,7 @@ public class CreateUsageDownloadTaskRequest{
     @KsYunField(name="StartTimestamp")
     private Long StartTimestamp;
 
-    /**查询任务数据结束时间（UTC Unix 时间戳，单位：秒），需校验：EndTimestamp ≤ 当前时间；EndTimestamp - StartTimestamp ≤ 604800（最大时间跨度7天）*/
+    /**查询任务数据结束时间（UTC Unix 时间戳，单位：秒），需校验：EndTimestamp ≤ 当前时间；EndTimestamp - StartTimestamp ≤ 86400（最大时间跨度1天）*/
     @KsYunField(name="EndTimestamp")
     private Long EndTimestamp;
 

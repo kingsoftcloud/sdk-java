@@ -331,6 +331,23 @@ public class DescribeNotebooksResponse extends BaseResponseModel {
 
         }
 
+        /**环境变量列表*/
+        @JsonProperty("Envs")
+        private List<NotebooksEnvsDto> Envs;
+
+        @Data
+        @ToString
+        public static class NotebooksEnvsDto {
+            /**环境变量Name*/
+            @JsonProperty("Name")
+            private String Name;
+
+            /**环境变量Value*/
+            @JsonProperty("Value")
+            private String Value;
+
+        }
+
     }
 
     /**总数据条数*/

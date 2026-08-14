@@ -66,6 +66,38 @@ ks3用户权限：[admin 创建者or主账号, writer 管理员（只读）, rea
 
     }
 
+    /**存储配置权限，枚举值：
+- Private，私有
+- Specified，指定范围。不传表示不修改
+指定范围权限下，权限取决于Users和SharedGroupList*/
+    @KsYunField(name="DatasetPermission")
+    private String DatasetPermission;
+
+    /**权限组共享列表（若传入，会进行全量覆盖式修改）*/
+    @KsYunField(name="SharedGroupList",type=2)
+    private List<SharedGroupListDto> SharedGroupListList;
+
+    @Data
+    @ToString
+    public static class SharedGroupListDto {
+        /**权限组ID，36位*/
+        @KsYunField(name="AccessGroupId")
+        private String AccessGroupId;
+
+        /**权限组共享角色，枚举值：
+- writer，管理员（只读）
+- reader，普通成员（只读）
+- writer_mnt_w，管理员（读写）
+- reader_mnt_w，普通成员（读写）*/
+        @KsYunField(name="Permission")
+        private String Permission;
+
+    }
+
+    /**开启预取。当选择的文件系统是容量型/标准型KPFS时,可设置开启预取，开启后能提升连续读性能，但可能降低随机读性能。*/
+    @KsYunField(name="Prefetch")
+    private Boolean Prefetch;
+
     /**访问密钥ID,对于KPFS类型的存储配置,需要用户自行保证AK/SK的有效性*/
     @KsYunField(name="Ak")
     private String Ak;
@@ -73,10 +105,5 @@ ks3用户权限：[admin 创建者or主账号, writer 管理员（只读）, rea
     /**访问密钥Secret,对于KPFS类型的存储配置,需要用户自行保证AK/SK的有效性*/
     @KsYunField(name="Sk")
     private String Sk;
-
-    /**开启预取
-> 当选择的文件系统是容量型/标准型KPFS时,可设置开启预取，开启后能提升连续读性能，但可能降低随机读性能。*/
-    @KsYunField(name="Prefetch")
-    private Boolean Prefetch;
 
 }

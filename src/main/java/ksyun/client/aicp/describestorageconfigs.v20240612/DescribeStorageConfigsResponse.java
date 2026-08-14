@@ -141,10 +141,38 @@ ks3用户权限：[admin 创建者or主账号, writer 管理员（只读）, rea
 
         }
 
-    }
+        /**存储配置权限，枚举值：
+- Private，私有
+- Specified，指定范围
+指定范围权限下，权限取决于Users和SharedGroupList*/
+        @JsonProperty("DatasetPermission")
+        private String DatasetPermission;
 
-    /**是否开启预取*/
-    @JsonProperty("Prefetch")
-    private Boolean Prefetch;
+        /**权限组共享列表*/
+        @JsonProperty("SharedGroupList")
+        private List<StorageConfigSetSharedGroupListDto> SharedGroupList;
+
+        @Data
+        @ToString
+        public static class StorageConfigSetSharedGroupListDto {
+            /**权限组ID，36位*/
+            @JsonProperty("AccessGroupId")
+            private String AccessGroupId;
+
+            /**权限组共享角色，枚举值：
+- writer，管理员（只读）
+- reader，普通成员（只读）
+- writer_mnt_w，管理员（读写）
+- reader_mnt_w，普通成员（读写）*/
+            @JsonProperty("Permission")
+            private String Permission;
+
+        }
+
+        /**开启预取。当选择的文件系统是容量型/标准型KPFS时,可设置开启预取，开启后能提升连续读性能，但可能降低随机读性能。*/
+        @JsonProperty("Prefetch")
+        private Boolean Prefetch;
+
+    }
 
 }

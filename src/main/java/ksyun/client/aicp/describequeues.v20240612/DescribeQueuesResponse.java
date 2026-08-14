@@ -123,6 +123,25 @@ public class DescribeQueuesResponse extends BaseResponseModel {
 
         }
 
+        /**权限组共享列表*/
+        @JsonProperty("SharedGroupList")
+        private List<QueueSetSharedGroupListDto> SharedGroupList;
+
+        @Data
+        @ToString
+        public static class QueueSetSharedGroupListDto {
+            /**权限组ID，36位*/
+            @JsonProperty("AccessGroupId")
+            private String AccessGroupId;
+
+            /**权限组共享角色，枚举值：
+- writer，管理员
+- reader，队列成员*/
+            @JsonProperty("Permission")
+            private String Permission;
+
+        }
+
         /**队列资源配额*/
         @JsonProperty("Capability")
         private QueueSetCapabilityDto Capability;

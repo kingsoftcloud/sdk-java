@@ -202,4 +202,21 @@ public class CreateNotebookRequest{
 
     }
 
+    /**环境变量列表*/
+    @KsYunField(name="Envs",type=2)
+    private List<EnvsDto> EnvsList;
+
+    @Data
+    @ToString
+    public static class EnvsDto {
+        /**环境变量Name*/
+        @KsYunField(name="Name")
+        private String Name;
+
+        /**环境变量Value*/
+        @KsYunField(name="Value")
+        private String Value;
+
+    }
+
 }

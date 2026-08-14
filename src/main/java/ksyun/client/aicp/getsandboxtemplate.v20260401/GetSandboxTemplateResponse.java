@@ -367,10 +367,6 @@ public class GetSandboxTemplateResponse extends BaseResponseModel {
                     @JsonProperty("DeleteWithInstance")
                     private Boolean DeleteWithInstance;
 
-                    /***/
-                    @JsonProperty("Path")
-                    private String Path;
-
                 }
 
             }

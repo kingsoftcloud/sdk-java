@@ -191,4 +191,21 @@ public class ModifyNotebookRequest{
 
     }
 
+    /**环境变量列表（全量替换）*/
+    @KsYunField(name="Envs",type=2)
+    private List<EnvsDto> EnvsList;
+
+    @Data
+    @ToString
+    public static class EnvsDto {
+        /**环境变量Name*/
+        @KsYunField(name="Name")
+        private String Name;
+
+        /**环境变量值*/
+        @KsYunField(name="Value")
+        private String Value;
+
+    }
+
 }
