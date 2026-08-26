@@ -279,40 +279,43 @@ public class DescribeNatsResponse extends BaseResponseModel {
 
         }
 
+        /**Nat版本
+可选值:
+- 1.0
+- 2.0*/
+        @JsonProperty("NatVersion")
+        private String NatVersion;
+
+        /**Nat链路ID*/
+        @JsonProperty("NatLineId")
+        private String NatLineId;
+
+        /**Nat2.0关联的EIP信息
+> Nat2.0参数*/
+        @JsonProperty("FloatingIpSet")
+        private NatSetFloatingIpSetDto FloatingIpSet;
+
+        @Data
+        @ToString
+        public static class NatSetFloatingIpSetDto {
+            /**EIP 地址*/
+            @JsonProperty("Address")
+            private String Address;
+
+            /**EIP ID*/
+            @JsonProperty("FloatingIpId")
+            private String FloatingIpId;
+
+            /**EIP可用状态*/
+            @JsonProperty("Enabled")
+            private Boolean Enabled;
+
+        }
+
     }
-
-    /**Nat版本*/
-    @JsonProperty("NatVersion")
-    private String NatVersion;
-
-    /**Nat线路ID*/
-    @JsonProperty("NatLineId")
-    private String NatLineId;
 
     /**Nat的数量*/
     @JsonProperty("TotalCount")
     private Integer TotalCount;
-
-    /**绑定的EIP
-> Nat2.0参数*/
-    @JsonProperty("FloatingIpSet")
-    private List<FloatingIpSetDto> FloatingIpSet;
-
-    @Data
-    @ToString
-    public static class FloatingIpSetDto {
-        /**eip地址*/
-        @JsonProperty("Address")
-        private String Address;
-
-        /**EIP ID*/
-        @JsonProperty("FloatingIpId")
-        private String FloatingIpId;
-
-        /**是否启动*/
-        @JsonProperty("Enabled")
-        private Boolean Enabled;
-
-    }
 
 }

@@ -34,8 +34,4 @@ public class CreateVpcRequest{
     @KsYunField(name="VpcIpv6CidrBlock")
     private String VpcIpv6CidrBlock;
 
-    /**是否默认VPC*/
-    @KsYunField(name="IsDefault")
-    private Boolean IsDefault;
-
 }

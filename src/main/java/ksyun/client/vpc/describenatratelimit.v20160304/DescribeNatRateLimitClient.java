@@ -14,7 +14,7 @@ import java.util.*;
 
 /**
 * @Classname DescribeNatRateLimitClient
-* @Description DescribeNatRateLimit*/
+* @Description 查询网关来访IP流控带宽*/
 @Slf4j
 public class DescribeNatRateLimitClient extends BaseClient {
     private final static String service = "vpc";
