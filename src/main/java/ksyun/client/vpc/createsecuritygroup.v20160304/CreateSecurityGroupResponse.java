@@ -109,7 +109,19 @@ public class CreateSecurityGroupResponse extends BaseResponseModel {
             @JsonProperty("Policy")
             private String Policy;
 
+            /**授权安全组ID*/
+            @JsonProperty("AuthorizedSecurityGroupId")
+            private String AuthorizedSecurityGroupId;
+
         }
+
+        /**安全组是否被授权*/
+        @JsonProperty("AuthorizedOn")
+        private Boolean AuthorizedOn;
+
+        /**安全组是否已授权*/
+        @JsonProperty("EmpowerOn")
+        private Boolean EmpowerOn;
 
     }
 

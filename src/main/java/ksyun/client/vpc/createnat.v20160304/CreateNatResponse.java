@@ -193,4 +193,12 @@ public class CreateNatResponse extends BaseResponseModel {
 
     }
 
+    /**Nat版本*/
+    @JsonProperty("NatVersion")
+    private String NatVersion;
+
+    /**Nat线路ID*/
+    @JsonProperty("NatLineId")
+    private String NatLineId;
+
 }

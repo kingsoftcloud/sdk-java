@@ -95,6 +95,18 @@ public class AddNatIpResponse extends BaseResponseModel {
         @JsonProperty("DirectConnectGatewayId")
         private String DirectConnectGatewayId;
 
+        /**规则的ID*/
+        @JsonProperty("RuleId")
+        private String RuleId;
+
+        /**私网地址段*/
+        @JsonProperty("InternalCidr")
+        private String InternalCidr;
+
+        /**所绑定的NatIp*/
+        @JsonProperty("NatIps")
+        private String NatIps;
+
     }
 
     /**关联的Vpn信息*/
@@ -107,6 +119,18 @@ public class AddNatIpResponse extends BaseResponseModel {
         /**Vpn的ID*/
         @JsonProperty("VpnGatewayId")
         private String VpnGatewayId;
+
+        /**规则ID*/
+        @JsonProperty("RuleId")
+        private String RuleId;
+
+        /**私网地址段*/
+        @JsonProperty("InternalCidr")
+        private String InternalCidr;
+
+        /**所绑定的NatIp*/
+        @JsonProperty("NatIps")
+        private List<String> NatIps;
 
     }
 
@@ -125,6 +149,18 @@ public class AddNatIpResponse extends BaseResponseModel {
         @JsonProperty("NetworkInterfaceId")
         private String NetworkInterfaceId;
 
+        /**规则的Id*/
+        @JsonProperty("RuleId")
+        private String RuleId;
+
+        /**私网地址段*/
+        @JsonProperty("InternalCidr")
+        private String InternalCidr;
+
+        /**所绑定的NatIp*/
+        @JsonProperty("NatIps")
+        private List<String> NatIps;
+
     }
 
     /**关联的子网信息*/
@@ -137,6 +173,18 @@ public class AddNatIpResponse extends BaseResponseModel {
         /**子网的ID*/
         @JsonProperty("SubnetId")
         private String SubnetId;
+
+        /**规则的ID*/
+        @JsonProperty("RuleId")
+        private String RuleId;
+
+        /**私网地址段*/
+        @JsonProperty("InternalCidr")
+        private String InternalCidr;
+
+        /**所绑定的NatIp*/
+        @JsonProperty("NatIps")
+        private List<String> NatIps;
 
     }
 
@@ -188,6 +236,60 @@ public class AddNatIpResponse extends BaseResponseModel {
         private String Description;
 
         /**生效状态*/
+        @JsonProperty("Enabled")
+        private Boolean Enabled;
+
+    }
+
+    /**资源所绑定的标签信息*/
+    @JsonProperty("TagSet")
+    private List<TagSetDto> TagSet;
+
+    @Data
+    @ToString
+    public static class TagSetDto {
+        /**资源ID*/
+        @JsonProperty("ResourceUuid")
+        private String ResourceUuid;
+
+        /**标签ID*/
+        @JsonProperty("TagId")
+        private Integer TagId;
+
+        /**标签建*/
+        @JsonProperty("TagKey")
+        private String TagKey;
+
+        /**标签值*/
+        @JsonProperty("TagValue")
+        private String TagValue;
+
+    }
+
+    /**Nat版本*/
+    @JsonProperty("NatVersion")
+    private String NatVersion;
+
+    /**Nat线路ID*/
+    @JsonProperty("NatLineId")
+    private String NatLineId;
+
+    /**绑定的EIP信息*/
+    @JsonProperty("FloatingIpSet")
+    private List<FloatingIpSetDto> FloatingIpSet;
+
+    @Data
+    @ToString
+    public static class FloatingIpSetDto {
+        /**eip地址*/
+        @JsonProperty("Address")
+        private String Address;
+
+        /**EIP ID*/
+        @JsonProperty("FloatingIpId")
+        private String FloatingIpId;
+
+        /***/
         @JsonProperty("Enabled")
         private Boolean Enabled;
 

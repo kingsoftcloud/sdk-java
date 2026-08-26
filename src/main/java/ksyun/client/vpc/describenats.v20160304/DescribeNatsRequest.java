@@ -75,4 +75,8 @@ public class DescribeNatsRequest{
     @KsYunField(name="NextToken")
     private String NextToken;
 
+    /**Nat版本，可选值:1.0,2.0*/
+    @KsYunField(name="NatVersion")
+    private String NatVersion;
+
 }

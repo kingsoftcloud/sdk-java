@@ -51,4 +51,8 @@ public class DescribeNetworkInterfacesRequest{
     @KsYunField(name="NextToken")
     private String NextToken;
 
+    /**是否访问公网*/
+    @KsYunField(name="VisitInternet")
+    private Boolean VisitInternet;
+
 }

@@ -90,4 +90,8 @@ public class CreateVpcResponse extends BaseResponseModel {
 
     }
 
+    /**云企业网账号ID*/
+    @JsonProperty("CenAccountId")
+    private String CenAccountId;
+
 }

@@ -22,7 +22,8 @@ public class AuthorizeSecurityGroupEntryRequest{
     @KsYunField(name="SecurityGroupId")
     private String SecurityGroupId;
 
-    /**安全组规则的网段*/
+    /**安全组规则的网段
+安全组规则的网段和授权安全组ID只能存在一个*/
     @KsYunField(name="CidrBlock")
     private String CidrBlock;
 
@@ -61,5 +62,10 @@ public class AuthorizeSecurityGroupEntryRequest{
     /**访问权限*/
     @KsYunField(name="Policy")
     private String Policy;
+
+    /**授权安全组ID
+授权安全组ID和安全组规则的网段只能存在一个*/
+    @KsYunField(name="AuthorizedSecurityGroupId")
+    private String AuthorizedSecurityGroupId;
 
 }

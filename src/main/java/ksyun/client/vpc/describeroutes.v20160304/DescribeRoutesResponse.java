@@ -101,4 +101,8 @@ public class DescribeRoutesResponse extends BaseResponseModel {
 
     }
 
+    /**总量*/
+    @JsonProperty("TotalCount")
+    private Integer TotalCount;
+
 }

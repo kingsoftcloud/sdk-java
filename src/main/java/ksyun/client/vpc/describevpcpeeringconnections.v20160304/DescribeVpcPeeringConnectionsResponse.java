@@ -138,4 +138,8 @@ public class DescribeVpcPeeringConnectionsResponse extends BaseResponseModel {
 
     }
 
+    /**总数量*/
+    @JsonProperty("TotalCount")
+    private Integer TotalCount;
+
 }

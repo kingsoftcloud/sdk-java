@@ -70,6 +70,10 @@ public class DescribeFlowLogsResponse extends BaseResponseModel {
         @JsonProperty("CreateTime")
         private String CreateTime;
 
+        /**状态*/
+        @JsonProperty("Status")
+        private String Status;
+
     }
 
 }

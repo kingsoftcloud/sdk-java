@@ -173,6 +173,10 @@ public class DescribeNetworkInterfacesResponse extends BaseResponseModel {
         @JsonProperty("State")
         private String State;
 
+        /**是否访问公网*/
+        @JsonProperty("VisitInternet")
+        private Boolean VisitInternet;
+
     }
 
 }

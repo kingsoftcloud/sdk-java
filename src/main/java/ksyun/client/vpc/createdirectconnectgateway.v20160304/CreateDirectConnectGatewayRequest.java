@@ -22,4 +22,12 @@ public class CreateDirectConnectGatewayRequest{
     @KsYunField(name="DirectConnectGatewayName")
     private String DirectConnectGatewayName;
 
+    /**项目制Id。*/
+    @KsYunField(name="ProjectId")
+    private String ProjectId;
+
+    /**是否自动发布系统路由*/
+    @KsYunField(name="AutoPublishSystemRoute")
+    private Boolean AutoPublishSystemRoute;
+
 }

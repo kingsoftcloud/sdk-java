@@ -18,11 +18,13 @@ public class CreateNatRequest{
     @KsYunField(name="VpcId")
     private String VpcId;
 
-    /**Nat的线路ID*/
+    /**Nat的线路ID
+> Nat1.0参数*/
     @KsYunField(name="NatLineId")
     private String NatLineId;
 
-    /**Nat的带宽*/
+    /**Nat的带宽
+> Nat1.0参数,且对应Nat1.0 必传*/
     @KsYunField(name="BandWidth")
     private Integer BandWidth;
 
@@ -34,7 +36,8 @@ public class CreateNatRequest{
     @KsYunField(name="NatType")
     private String NatType;
 
-    /**Nat的IP数量*/
+    /**Nat的IP数量
+> Nat1.0参数*/
     @KsYunField(name="NatIpNumber")
     private Integer NatIpNumber;
 
@@ -46,12 +49,21 @@ public class CreateNatRequest{
     @KsYunField(name="ProjectId")
     private String ProjectId;
 
-    /**Nat的计费类型*/
+    /**Nat的计费类型
+> Nat1.0参数，当创建Nat2.0时可不传,2.0仅支持`HourlyInstantSettlement`*/
     @KsYunField(name="ChargeType")
     private String ChargeType;
 
     /**购买时长，计费类型为包年包月时不可缺省。*/
     @KsYunField(name="PurchaseTime")
     private Integer PurchaseTime;
+
+    /**Nat版本
+可选值：
+- 1.0
+- 2.0
+> 2.0具有机房限制，并非全机房支持，具体咨询客服了解*/
+    @KsYunField(name="NatVersion")
+    private String NatVersion;
 
 }

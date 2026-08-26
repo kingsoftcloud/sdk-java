@@ -22,4 +22,8 @@ public class AddNatIpRequest{
     @KsYunField(name="AddNumber")
     private Integer AddNumber;
 
+    /**指定IP申请*/
+    @KsYunField(name="NatIp")
+    private String NatIp;
+
 }

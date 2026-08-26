@@ -59,4 +59,8 @@ public class CreateFlowLogResponse extends BaseResponseModel {
     @JsonProperty("CreateTime")
     private String CreateTime;
 
+    /**状态*/
+    @JsonProperty("Status")
+    private String Status;
+
 }

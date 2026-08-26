@@ -23,4 +23,8 @@ public class ModifyRouteTableResponse extends BaseResponseModel {
     @JsonProperty("RouteTableName")
     private String RouteTableName;
 
+    /**描述*/
+    @JsonProperty("Description")
+    private String Description;
+
 }

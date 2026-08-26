@@ -16,7 +16,7 @@ import java.util.Arrays;
 public class BatchModifyNatRateLimitRequest{
     /**出向带宽限速*/
     @KsYunField(name="BandwidthLimit")
-    private String BandwidthLimit;
+    private Integer BandwidthLimit;
 
     /**入向带宽限速*/
     @KsYunField(name="InBandwidthLimit")

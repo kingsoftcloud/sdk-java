@@ -40,19 +40,19 @@ public class QueryNatTopVifMonitorResponse extends BaseResponseModel {
 
         /**入向流量*/
         @JsonProperty("InBound")
-        private String InBound;
+        private Double InBound;
 
         /**出向流量*/
         @JsonProperty("OutBound")
-        private String OutBound;
+        private Double OutBound;
 
         /**入向峰值流量*/
         @JsonProperty("InPeakBound")
-        private String InPeakBound;
+        private Double InPeakBound;
 
         /**出向峰值流量*/
         @JsonProperty("OutPeakBound")
-        private String OutPeakBound;
+        private Double OutPeakBound;
 
         /**明细数据*/
         @JsonProperty("MemberData")
@@ -71,17 +71,25 @@ public class QueryNatTopVifMonitorResponse extends BaseResponseModel {
 
             /**入向流量单元值*/
             @JsonProperty("InBoundValue")
-            private String InBoundValue;
+            private Double InBoundValue;
 
             /**出向流量单元值*/
             @JsonProperty("OutBoundValue")
-            private String OutBoundValue;
+            private Double OutBoundValue;
 
         }
 
         /**实例排名*/
         @JsonProperty("Num")
-        private String Num;
+        private Integer Num;
+
+        /**入向流量pps*/
+        @JsonProperty("InBoundPackage")
+        private Double InBoundPackage;
+
+        /**出向流量pps*/
+        @JsonProperty("OutBoundPackage")
+        private Double OutBoundPackage;
 
     }
 

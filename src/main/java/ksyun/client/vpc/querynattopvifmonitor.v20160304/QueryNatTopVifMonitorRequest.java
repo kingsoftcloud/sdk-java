@@ -35,7 +35,7 @@ public class QueryNatTopVifMonitorRequest{
     private String InstanceType;
 
     /**ip*/
-    @KsYunField(name="ip")
+    @KsYunField(name="Ip")
     private String Ip;
 
 }

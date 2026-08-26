@@ -44,4 +44,8 @@ public class BatchModifyNatRateLimitResponse extends BaseResponseModel {
 
     }
 
+    /**操作是否成功*/
+    @JsonProperty("Return")
+    private Boolean ReturnField;
+
 }

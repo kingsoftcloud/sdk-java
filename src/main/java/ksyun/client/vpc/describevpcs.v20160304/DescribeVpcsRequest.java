@@ -26,4 +26,8 @@ public class DescribeVpcsRequest{
     @KsYunField(name="NextToken")
     private String NextToken;
 
+    /**是否支持IPv6网段*/
+    @KsYunField(name="ProvidedIpv6CidrBlock")
+    private Boolean ProvidedIpv6CidrBlock;
+
 }

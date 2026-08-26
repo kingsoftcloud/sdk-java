@@ -30,4 +30,12 @@ public class CreateVpcRequest{
     @KsYunField(name="Ipv6CidrBlock")
     private String Ipv6CidrBlock;
 
+    /**分配给Vpc的IPv6网段。只有在ProvidedIpv6CidrBlock=true和Ipv6CidrBlock值有效时生效。*/
+    @KsYunField(name="VpcIpv6CidrBlock")
+    private String VpcIpv6CidrBlock;
+
+    /**是否默认VPC*/
+    @KsYunField(name="IsDefault")
+    private Boolean IsDefault;
+
 }

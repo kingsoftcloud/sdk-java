@@ -26,4 +26,8 @@ public class CreateSecurityGroupRequest{
     @KsYunField(name="Description")
     private String Description;
 
+    /**安全组类型。可选值：other（普通安全组），global（全局安全组）*/
+    @KsYunField(name="SecurityGroupType")
+    private String SecurityGroupType;
+
 }

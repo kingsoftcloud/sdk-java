@@ -58,7 +58,8 @@ public class DescribeNatsResponse extends BaseResponseModel {
         @JsonProperty("NatIpNumber")
         private Integer NatIpNumber;
 
-        /**Nat的带宽*/
+        /**Nat的带宽
+> Nat1.0参数*/
         @JsonProperty("BandWidth")
         private Integer BandWidth;
 
@@ -74,7 +75,8 @@ public class DescribeNatsResponse extends BaseResponseModel {
         @JsonProperty("ServiceEndTime")
         private String ServiceEndTime;
 
-        /**Nat Ip的信息*/
+        /**Nat Ip的信息
+> Nat1.0参数*/
         @JsonProperty("NatIpSet")
         private List<NatSetNatIpSetDto> NatIpSet;
 
@@ -106,6 +108,18 @@ public class DescribeNatsResponse extends BaseResponseModel {
             @JsonProperty("DirectConnectGatewayId")
             private String DirectConnectGatewayId;
 
+            /**规则的ID*/
+            @JsonProperty("RuleId")
+            private String RuleId;
+
+            /**私网地址段*/
+            @JsonProperty("InternalCidr")
+            private String InternalCidr;
+
+            /**所绑定的NatIp*/
+            @JsonProperty("NatIps")
+            private List<String> NatIps;
+
         }
 
         /**关联的Vpn信息*/
@@ -118,6 +132,18 @@ public class DescribeNatsResponse extends BaseResponseModel {
             /**Vpn的ID*/
             @JsonProperty("VpnGatewayId")
             private String VpnGatewayId;
+
+            /**规则ID*/
+            @JsonProperty("RuleId")
+            private String RuleId;
+
+            /**私网地址段*/
+            @JsonProperty("InternalCidr")
+            private String InternalCidr;
+
+            /**所绑定的NatIp*/
+            @JsonProperty("NatIps")
+            private List<String> NatIps;
 
         }
 
@@ -140,6 +166,14 @@ public class DescribeNatsResponse extends BaseResponseModel {
             @JsonProperty("NatIps")
             private List<String> NatIps;
 
+            /**规则的Id*/
+            @JsonProperty("RuleId")
+            private String RuleId;
+
+            /**私网地址段*/
+            @JsonProperty("InternalCidr")
+            private String InternalCidr;
+
         }
 
         /**关联的子网信息*/
@@ -156,6 +190,14 @@ public class DescribeNatsResponse extends BaseResponseModel {
             /**所绑定的NatIp*/
             @JsonProperty("NatIps")
             private List<String> NatIps;
+
+            /**规则的ID*/
+            @JsonProperty("RuleId")
+            private String RuleId;
+
+            /**私网地址段*/
+            @JsonProperty("InternalCidr")
+            private String InternalCidr;
 
         }
 
@@ -236,6 +278,40 @@ public class DescribeNatsResponse extends BaseResponseModel {
             private String TagValue;
 
         }
+
+    }
+
+    /**Nat版本*/
+    @JsonProperty("NatVersion")
+    private String NatVersion;
+
+    /**Nat线路ID*/
+    @JsonProperty("NatLineId")
+    private String NatLineId;
+
+    /**Nat的数量*/
+    @JsonProperty("TotalCount")
+    private Integer TotalCount;
+
+    /**绑定的EIP
+> Nat2.0参数*/
+    @JsonProperty("FloatingIpSet")
+    private List<FloatingIpSetDto> FloatingIpSet;
+
+    @Data
+    @ToString
+    public static class FloatingIpSetDto {
+        /**eip地址*/
+        @JsonProperty("Address")
+        private String Address;
+
+        /**EIP ID*/
+        @JsonProperty("FloatingIpId")
+        private String FloatingIpId;
+
+        /**是否启动*/
+        @JsonProperty("Enabled")
+        private Boolean Enabled;
 
     }
 

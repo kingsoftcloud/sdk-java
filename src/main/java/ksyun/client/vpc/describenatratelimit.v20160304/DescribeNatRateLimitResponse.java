@@ -66,6 +66,10 @@ public class DescribeNatRateLimitResponse extends BaseResponseModel {
         @JsonProperty("InstanceType")
         private String InstanceType;
 
+        /**mac地址*/
+        @JsonProperty("vifMac")
+        private String VifMac;
+
     }
 
 }

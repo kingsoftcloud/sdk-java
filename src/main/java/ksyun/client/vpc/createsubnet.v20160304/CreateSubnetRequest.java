@@ -66,4 +66,8 @@ public class CreateSubnetRequest{
     @KsYunField(name="VisitInternet")
     private Boolean VisitInternet;
 
+    /**开启ipv6,支持指定ipv6网段，创建ipv6网段*/
+    @KsYunField(name="Ipv6CidrBlock")
+    private String Ipv6CidrBlock;
+
 }

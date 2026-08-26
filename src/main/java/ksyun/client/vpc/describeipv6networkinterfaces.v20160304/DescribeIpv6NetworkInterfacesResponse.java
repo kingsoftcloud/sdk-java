@@ -115,6 +115,10 @@ public class DescribeIpv6NetworkInterfacesResponse extends BaseResponseModel {
         @JsonProperty("Ipv6Public")
         private Boolean Ipv6Public;
 
+        /**状态*/
+        @JsonProperty("State")
+        private String State;
+
     }
 
 }
