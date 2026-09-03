@@ -58,4 +58,8 @@ public class ModifyApikeyRequest{
     @KsYunField(name="AllowedIps",type=2)
     private List<String> AllowedIpsList;
 
+    /**项目制ID*/
+    @KsYunField(name="ProjectId")
+    private String ProjectId;
+
 }

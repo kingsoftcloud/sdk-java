@@ -29,7 +29,9 @@ public class ModifyModelAccessRequest{
         @KsYunField(name="UserId")
         private String UserId;
 
-        /**模型权限，有效值：writer(管理员可读写), reader(普通用户只读)*/
+        /**模型权限
+- writer，管理员
+- reader，普通成员*/
         @KsYunField(name="Permission")
         private String Permission;
 
@@ -55,7 +57,7 @@ public class ModifyModelAccessRequest{
 
         /**权限组共享角色，枚举值：
 - writer，管理员
-- reader，只读成员*/
+- reader，普通成员*/
         @KsYunField(name="Permission")
         private String Permission;
 

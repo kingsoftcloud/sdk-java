@@ -14,7 +14,7 @@ import java.util.*;
 
 /**
 * @Classname ListTopicsClient
-* @Description 查询瀚海topic列表*/
+* @Description 查询topic列表*/
 @Slf4j
 public class ListTopicsClient extends BaseClient {
     private final static String service = "aicp";

@@ -25,7 +25,7 @@ public class ImportDocumentsRequest{
     @Data
     @ToString
     public static class DataDto {
-        /**索引方式*/
+        /**索引方式：intelligence_fast*/
         @KsYunField(name="IndexingTechnique")
         private String IndexingTechnique;
 
@@ -36,7 +36,7 @@ public class ImportDocumentsRequest{
         @Data
         @ToString
         public static class DataProcessRuleDto {
-            /**清洗模式*/
+            /**清洗模式：intelligence（默认），md2json（markdown格式可选）*/
             @KsYunField(name="Mode")
             private String Mode;
 
@@ -240,7 +240,7 @@ public class ImportDocumentsRequest{
             @KsYunField(name="SearchMethod")
             private String SearchMethod;
 
-            /**是否启用重排序*/
+            /**是否启用重排序，基于向量和倒排的检索结果进行重排序*/
             @KsYunField(name="RerankingEnable")
             private Boolean RerankingEnable;
 
@@ -261,7 +261,7 @@ public class ImportDocumentsRequest{
 
             }
 
-            /**返回结果条数*/
+            /**返回结果条数，1-50*/
             @KsYunField(name="TopK")
             private Integer TopK;
 
@@ -269,7 +269,7 @@ public class ImportDocumentsRequest{
             @KsYunField(name="ScoreThresholdEnabled")
             private Boolean ScoreThresholdEnabled;
 
-            /**阈值分数*/
+            /**阈值分数，0-1*/
             @KsYunField(name="ScoreThreshold")
             private Double ScoreThreshold;
 
@@ -280,18 +280,18 @@ public class ImportDocumentsRequest{
             @Data
             @ToString
             public static class DataRetrievalModelRetrieverDto {
-                /**向量检索参数*/
+                /**向量检索参数：从向量数据库中召回 topK 个向量*/
                 @KsYunField(name="Vector")
                 private DataRetrievalModelRetrieverVectorDto Vector;
 
                 @Data
                 @ToString
                 public static class DataRetrievalModelRetrieverVectorDto {
-                    /**向量召回 topK*/
+                    /**向量召回 topK，1-50*/
                     @KsYunField(name="TopK")
                     private Integer TopK;
 
-                    /**向量阈值*/
+                    /**向量阈值，0-1*/
                     @KsYunField(name="ScoreThreshold")
                     private Double ScoreThreshold;
 
@@ -301,18 +301,18 @@ public class ImportDocumentsRequest{
 
                 }
 
-                /**倒排检索参数*/
+                /**倒排检索参数：从倒排索引中召回 topK 个向量*/
                 @KsYunField(name="Inverted")
                 private DataRetrievalModelRetrieverInvertedDto Inverted;
 
                 @Data
                 @ToString
                 public static class DataRetrievalModelRetrieverInvertedDto {
-                    /**倒排召回 topK*/
+                    /**倒排召回 topK，1-50*/
                     @KsYunField(name="TopK")
                     private Integer TopK;
 
-                    /**倒排阈值*/
+                    /**倒排阈值，0-1*/
                     @KsYunField(name="ScoreThreshold")
                     private Double ScoreThreshold;
 

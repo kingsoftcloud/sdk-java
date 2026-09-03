@@ -26,7 +26,16 @@ public class AddStorageConfigAccessRequest{
     @KsYunField(name="SharedGroupId")
     private String SharedGroupId;
 
-    /**权限类型, kpfs用户权限：[admin 创建者or主账号, writer 管理员（只读）, writer_mnt_w 管理员（读写）, reader 普通成员（只读）, reader_mnt_w 普通成员（读写）] ks3用户权限：[admin 创建者or主账号, writer 管理员（只读）, reader 普通成员（只读）]*/
+    /**权限类型
+KPFS存储配置权限枚举值：
+- writer_mnt_w 管理员（读写）
+- writer 管理员（只读）
+- reader_mnt_w 普通成员（读写）
+- reader普通成员（只读）
+
+KS3存储配置权限枚举值：
+- writer 管理员
+- reader普通成员*/
     @KsYunField(name="Permission")
     private String Permission;
 

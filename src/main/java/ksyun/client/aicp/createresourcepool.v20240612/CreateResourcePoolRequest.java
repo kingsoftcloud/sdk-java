@@ -68,4 +68,8 @@ public class CreateResourcePoolRequest{
     @KsYunField(name="VolumeChargeType")
     private String VolumeChargeType;
 
+    /**项目制ID*/
+    @KsYunField(name="ProjectId")
+    private String ProjectId;
+
 }

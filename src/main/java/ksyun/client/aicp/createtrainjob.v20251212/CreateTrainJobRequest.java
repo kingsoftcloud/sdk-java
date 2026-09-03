@@ -234,4 +234,8 @@ public class CreateTrainJobRequest{
     @KsYunField(name="UseIdleResource")
     private Boolean UseIdleResource;
 
+    /**是否开启RDMA依赖包检测（只对pytorch框架生效）*/
+    @KsYunField(name="EnableRDMADepsCheck")
+    private Boolean EnableRDMADepsCheck;
+
 }

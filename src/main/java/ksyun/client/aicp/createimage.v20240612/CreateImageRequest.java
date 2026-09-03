@@ -73,9 +73,8 @@ public class CreateImageRequest{
         private String UserId;
 
         /**用户权限，枚举值：
-- admin，管理员
-- writer，可读写
-- reader，只读*/
+- writer，管理员
+- reader，普通成员*/
         @KsYunField(name="Permission")
         private String Permission;
 
@@ -94,7 +93,7 @@ public class CreateImageRequest{
 
         /**权限组共享角色，枚举值：
 - writer，管理员
-- reader，只读成员*/
+- reader，普通成员*/
         @KsYunField(name="Permission")
         private String Permission;
 

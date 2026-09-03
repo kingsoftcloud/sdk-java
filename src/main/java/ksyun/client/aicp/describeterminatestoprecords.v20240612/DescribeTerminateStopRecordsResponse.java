@@ -66,10 +66,6 @@ public class DescribeTerminateStopRecordsResponse extends BaseResponseModel {
         @JsonProperty("CreateTime")
         private String CreateTime;
 
-        /**队列ID*/
-        @JsonProperty("QueueId")
-        private String QueueId;
-
     }
 
 }

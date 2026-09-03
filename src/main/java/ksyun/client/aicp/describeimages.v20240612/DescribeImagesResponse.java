@@ -109,9 +109,9 @@ public class DescribeImagesResponse extends BaseResponseModel {
             private String UserId;
 
             /**用户权限，枚举值：
-- admin，管理员
-- writer，可读写
-- reader，只读*/
+- admin，超管、主账号、创建者
+- writer，管理员
+- reader，普通成员*/
             @JsonProperty("Permission")
             private String Permission;
 
@@ -129,8 +129,9 @@ public class DescribeImagesResponse extends BaseResponseModel {
             private String AccessGroupId;
 
             /**权限组共享角色，枚举值：
+- admin，超管、主账号、创建者
 - writer，管理员
-- reader，只读成员*/
+- reader，普通成员*/
             @JsonProperty("Permission")
             private String Permission;
 

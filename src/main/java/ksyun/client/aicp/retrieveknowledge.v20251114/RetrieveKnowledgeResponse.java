@@ -66,10 +66,6 @@ public class RetrieveKnowledgeResponse extends BaseResponseModel {
             @JsonProperty("Answer")
             private String Answer;
 
-            /**词数*/
-            @JsonProperty("WordCount")
-            private Integer WordCount;
-
             /**token 数*/
             @JsonProperty("Tokens")
             private Integer Tokens;

@@ -72,7 +72,7 @@ public class DescribeDocumentResponse extends BaseResponseModel {
     @Data
     @ToString
     public static class DatasetProcessRuleDto {
-        /**清洗模式*/
+        /**清洗模式：intelligence（默认），md2json（markdown格式可选）*/
         @JsonProperty("Mode")
         private String Mode;
 
@@ -111,7 +111,7 @@ public class DescribeDocumentResponse extends BaseResponseModel {
     @Data
     @ToString
     public static class DocumentProcessRuleDto {
-        /**清洗模式*/
+        /**清洗模式：intelligence（默认），md2json（markdown格式可选）*/
         @JsonProperty("Mode")
         private String Mode;
 

@@ -22,7 +22,21 @@ public class CreateQueueRequest{
     @KsYunField(name="QueueName")
     private String QueueName;
 
-    /**资源配额，GPU、CPU、内存等*/
+    /**队列类型：
+- normal，普通队列
+- physical，物理队列
+普通队列必填 Capability；物理队列必填 NodeSelectType 和 NodeSpec*/
+    @KsYunField(name="QueueType")
+    private String QueueType;
+
+    /**节点选择类型：
+- random，随机分配
+- specify，指定节点分配
+仅当队列为物理队列类型时有效*/
+    @KsYunField(name="NodeSelectType")
+    private String NodeSelectType;
+
+    /**资源配额，GPU、CPU、内存等。普通队列必填，物理队列非必填*/
     @KsYunField(name="Capability")
     private CapabilityDto Capability;
 
@@ -53,6 +67,32 @@ public class CreateQueueRequest{
             private Integer GPUNum;
 
         }
+
+    }
+
+    /**物理队列节点规格信息，仅当 QueueType 为 physical 时有效。同一队列内同一 HostType 只能配置一项*/
+    @KsYunField(name="NodeSpec",type=2)
+    private List<NodeSpecDto> NodeSpecList;
+
+    @Data
+    @ToString
+    public static class NodeSpecDto {
+        /**GPU类型（可选）*/
+        @KsYunField(name="GPUType")
+        private String GPUType;
+
+        /**裸金属服务器子机型
+> 通过 DescribeResourcePoolInstanceSpecs 接口获取资源组内各个机型可用节点数*/
+        @KsYunField(name="HostType")
+        private String HostType;
+
+        /**节点数量，当 NodeSelectType 为 random 时必填*/
+        @KsYunField(name="NodeNum")
+        private Integer NodeNum;
+
+        /**指定节点ID列表，当 NodeSelectType 为 specify 时必填*/
+        @KsYunField(name="SpecifyNodes",type=2)
+        private List<String> SpecifyNodesList;
 
     }
 

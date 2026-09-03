@@ -90,7 +90,7 @@ public class DescribeKnowledgeBaseResponse extends BaseResponseModel {
         @JsonProperty("SearchMethod")
         private String SearchMethod;
 
-        /**是否启用重排序*/
+        /**是否启用重排序，基于向量和倒排的检索结果进行重排序*/
         @JsonProperty("RerankingEnable")
         private Boolean RerankingEnable;
 
@@ -111,7 +111,7 @@ public class DescribeKnowledgeBaseResponse extends BaseResponseModel {
 
         }
 
-        /**返回结果条数*/
+        /**返回结果条数，1-50*/
         @JsonProperty("TopK")
         private Integer TopK;
 
@@ -119,7 +119,7 @@ public class DescribeKnowledgeBaseResponse extends BaseResponseModel {
         @JsonProperty("ScoreThresholdEnabled")
         private Boolean ScoreThresholdEnabled;
 
-        /**阈值分数*/
+        /**阈值分数，0-1*/
         @JsonProperty("ScoreThreshold")
         private Double ScoreThreshold;
 
@@ -130,18 +130,18 @@ public class DescribeKnowledgeBaseResponse extends BaseResponseModel {
         @Data
         @ToString
         public static class RetrievalModelDictRetrieverDto {
-            /**向量检索参数*/
+            /**向量检索参数：从向量数据库中召回 topK 个向量*/
             @JsonProperty("Vector")
             private RetrievalModelDictRetrieverVectorDto Vector;
 
             @Data
             @ToString
             public static class RetrievalModelDictRetrieverVectorDto {
-                /**向量召回 topK*/
+                /**向量召回 topK，1-50*/
                 @JsonProperty("TopK")
                 private Integer TopK;
 
-                /**向量阈值*/
+                /**向量阈值，0-1*/
                 @JsonProperty("ScoreThreshold")
                 private Double ScoreThreshold;
 
@@ -151,18 +151,18 @@ public class DescribeKnowledgeBaseResponse extends BaseResponseModel {
 
             }
 
-            /**倒排检索参数*/
+            /**倒排检索参数：从倒排索引中召回 topK 个向量*/
             @JsonProperty("Inverted")
             private RetrievalModelDictRetrieverInvertedDto Inverted;
 
             @Data
             @ToString
             public static class RetrievalModelDictRetrieverInvertedDto {
-                /**倒排召回 topK*/
+                /**倒排召回 topK，1-50*/
                 @JsonProperty("TopK")
                 private Integer TopK;
 
-                /**倒排阈值*/
+                /**倒排阈值，0-1*/
                 @JsonProperty("ScoreThreshold")
                 private Double ScoreThreshold;
 

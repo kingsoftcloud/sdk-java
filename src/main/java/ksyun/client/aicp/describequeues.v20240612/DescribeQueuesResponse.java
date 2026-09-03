@@ -130,7 +130,7 @@ public class DescribeQueuesResponse extends BaseResponseModel {
         @Data
         @ToString
         public static class QueueSetSharedGroupListDto {
-            /**权限组ID，36位*/
+            /**权限组ID*/
             @JsonProperty("AccessGroupId")
             private String AccessGroupId;
 
@@ -194,6 +194,48 @@ public class DescribeQueuesResponse extends BaseResponseModel {
             /**已分配GPU数量*/
             @JsonProperty("GPUNum")
             private String GPUNum;
+
+        }
+
+        /**队列类型：
+- normal，普通队列
+- physical，物理队列*/
+        @JsonProperty("QueueType")
+        private String QueueType;
+
+        /**节点选择类型：
+- random，随机分配
+- specify，指定节点分配
+仅当队列为物理队列类型时有效*/
+        @JsonProperty("NodeSelectType")
+        private String NodeSelectType;
+
+        /**物理队列关联节点数量*/
+        @JsonProperty("NodeCount")
+        private Integer NodeCount;
+
+        /**物理节点配置信息*/
+        @JsonProperty("NodeSpecs")
+        private List<QueueSetNodeSpecsDto> NodeSpecs;
+
+        @Data
+        @ToString
+        public static class QueueSetNodeSpecsDto {
+            /**GPU类型*/
+            @JsonProperty("GPUType")
+            private String GPUType;
+
+            /**裸金属服务器子机型*/
+            @JsonProperty("HostType")
+            private String HostType;
+
+            /**节点数量*/
+            @JsonProperty("NodeNum")
+            private Integer NodeNum;
+
+            /**指定节点ID列表*/
+            @JsonProperty("SpecifyNodes")
+            private List<String> SpecifyNodes;
 
         }
 

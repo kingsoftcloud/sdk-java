@@ -106,4 +106,37 @@ public class ModifyQueueRequest{
     @KsYunField(name="WorkloadType",type=2)
     private List<String> WorkloadTypeList;
 
+    /**物理队列节点规格信息，不传该字段表示不修改。仅物理队列有效，同一队列内同一 HostType 只能配置一项*/
+    @KsYunField(name="NodeSpec",type=2)
+    private List<NodeSpecDto> NodeSpecList;
+
+    @Data
+    @ToString
+    public static class NodeSpecDto {
+        /**GPU类型（可选）*/
+        @KsYunField(name="GPUType")
+        private String GPUType;
+
+        /**裸金属服务器子机型
+> 可以通过 DescribeResourcePoolInstanceSpecs 接口获取资源组内各个机型可用节点数*/
+        @KsYunField(name="HostType")
+        private String HostType;
+
+        /**节点数量，当 NodeSelectType 为 random 时必填*/
+        @KsYunField(name="NodeNum")
+        private Integer NodeNum;
+
+        /**指定节点ID列表，当 NodeSelectType 为 specify 时必填*/
+        @KsYunField(name="SpecifyNodes",type=2)
+        private List<String> SpecifyNodesList;
+
+    }
+
+    /**节点选择类型：
+- random，随机分配
+- specify，指定节点分配
+不传该字段表示不修改，仅物理队列有效。变更时需同时传入 NodeSpec*/
+    @KsYunField(name="NodeSelectType")
+    private String NodeSelectType;
+
 }
