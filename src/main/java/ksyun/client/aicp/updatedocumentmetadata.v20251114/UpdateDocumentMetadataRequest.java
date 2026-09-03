@@ -53,6 +53,11 @@ Type为array[number]时，示例值：[18, 19, 20, 25, 28]*/
             @KsYunField(name="Value")
             private String Value;
 
+            /**元数据类型
+string number time array[number] array[string]*/
+            @KsYunField(name="Type")
+            private String Type;
+
         }
 
     }
