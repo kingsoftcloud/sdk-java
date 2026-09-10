@@ -26,4 +26,8 @@ public class DescribePdnsZonesRequest{
     @KsYunField(name="NextToken")
     private String NextToken;
 
+    /**ZoneName查询*/
+    @KsYunField(name="ZoneName",type=1)
+    private List<String> ZoneNameList;
+
 }

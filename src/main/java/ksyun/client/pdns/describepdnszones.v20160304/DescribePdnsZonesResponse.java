@@ -73,7 +73,23 @@ public class DescribePdnsZonesResponse extends BaseResponseModel {
             @JsonProperty("VpcName")
             private String VpcName;
 
+            /**关联VPC实例账号ID*/
+            @JsonProperty("VpcAccountId")
+            private String VpcAccountId;
+
         }
+
+        /**内网Zone的子域名提柜解析代理模式（AUTHORITY| RECURSIVE）*/
+        @JsonProperty("ProxyPattern")
+        private String ProxyPattern;
+
+        /**是否开启删除保护on/off*/
+        @JsonProperty("DeleteProtection")
+        private String DeleteProtection;
+
+        /**是否开启修改保护on/off*/
+        @JsonProperty("ModifyProtection")
+        private String ModifyProtection;
 
     }
 

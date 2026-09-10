@@ -31,4 +31,19 @@ TrafficMonthly：按量付费（流量月结）。*/
     @KsYunField(name="ChargeType")
     private String ChargeType;
 
+    /**内网 Zone的子域名递归解析代理模式
+有效值：
+AUTHORITY：当前Zone未开启递归解析代理（创建默认值）
+RECURSIVE：当前Zone开启递归解析代理*/
+    @KsYunField(name="ProxyPattern")
+    private String ProxyPattern;
+
+    /**是否开启删除保护on/off*/
+    @KsYunField(name="DeleteProtection")
+    private String DeleteProtection;
+
+    /**是否开启修改保护on/off*/
+    @KsYunField(name="ModifyProtection")
+    private String ModifyProtection;
+
 }

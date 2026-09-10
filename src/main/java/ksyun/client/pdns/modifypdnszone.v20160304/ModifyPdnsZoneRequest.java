@@ -22,4 +22,11 @@ public class ModifyPdnsZoneRequest{
     @KsYunField(name="ZoneTtl")
     private Integer ZoneTtl;
 
+    /**内网Zone的子域名递归解析代理模式
+有效值：
+AUTHORITY：当前Zone未开启递归解析代理
+RECURSIVE：当前Zone开启递归解析代理*/
+    @KsYunField(name="ProxyPattern")
+    private String ProxyPattern;
+
 }
