@@ -150,4 +150,32 @@ public class CreateQueueRequest{
     @KsYunField(name="WorkloadType",type=2)
     private List<String> WorkloadTypeList;
 
+    /**资源预留配置。不传或 Enabled=false 表示不开启资源预留*/
+    @KsYunField(name="ResourceReservation")
+    private ResourceReservationDto ResourceReservation;
+
+    @Data
+    @ToString
+    public static class ResourceReservationDto {
+        /**是否开启资源预留，默认 false*/
+        @KsYunField(name="Enabled")
+        private Boolean Enabled;
+
+        /**超过多少卡（GPU）算大任务，单位：卡
+如 8 表示 ≥8 卡为大任务，默认值为4卡*/
+        @KsYunField(name="LargeTaskGPUThreshold")
+        private Integer LargeTaskGPUThreshold;
+
+        /**排队超过多长时间自动开启资源预留，单位：分钟
+默认值为30分钟*/
+        @KsYunField(name="AutoEnableAfterQueueMinutes")
+        private Integer AutoEnableAfterQueueMinutes;
+
+        /**预留的超时时长，单位：分钟
+超时后放弃预留、恢复正常调度，默认值为120分钟*/
+        @KsYunField(name="ReserveTimeoutMinutes")
+        private Integer ReserveTimeoutMinutes;
+
+    }
+
 }

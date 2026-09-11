@@ -1,21 +1,32 @@
-package ksyun.client.aicp.deletemodel.v20251212;
+<?php
+namespace  Ksyun\Client\Aicp\V20251212\Models;
 
-import common.annotation.KsYunField;
-import lombok.Builder;
-import lombok.Data;
-import lombok.ToString;
+use Ksyun\Common\BaseModel;
 
-import java.util.List;
-import java.util.Arrays;
+class DeleteModelResponse extends BaseModel
+{
+         /** 请求ID**/
+         public  $RequestId;
 
-/**
-* @Classname DeleteModelRequest
-* @Description 请求参数
-*/
-@Data
-public class DeleteModelRequest{
-    /**模型ID*/
-    @KsYunField(name="ModelId")
-    private String ModelId;
+         /** 模型ID**/
+         public  $ModelId;
 
+         public function __construct()
+         {
+
+         }
+
+        public function unserialize($param)
+        {
+            if ($param === null) {
+                return;
+            }
+            if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+                $this->RequestId = $param["RequestId"];
+            }
+            if (array_key_exists("ModelId",$param) and $param["ModelId"] !== null) {
+                $this->ModelId = $param["ModelId"];
+            }
+
+        }
 }

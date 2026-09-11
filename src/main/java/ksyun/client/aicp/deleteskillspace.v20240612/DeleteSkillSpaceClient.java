@@ -1,58 +1,34 @@
-<?php
-namespace  Ksyun\Client\Aicp\V20240612\Models;
+package ksyun.client.aicp.deleteskillspace.v20240612;
 
-use Ksyun\Common\BaseModel;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import common.BaseClient;
+import common.Credential;
+import common.HttpResponseWrapper;
+import common.RpcRequestContentModel;
+import common.UrlPathParams;
+import common.utils.RpcRequestClient;
+import lombok.extern.slf4j.Slf4j;
 
-class DescribeInferenceEndpointsResponse extends BaseModel
-{
-         /** uuid**/
-         public  $RequestId;
+import java.util.*;
 
-         /** 总数**/
-         public  $TotalCount;
+/**
+* @Classname DeleteSkillSpaceClient
+* @Description 删除skill空间*/
+@Slf4j
+public class DeleteSkillSpaceClient extends BaseClient {
+    private final static String service = "aicp";
+    private final static String version = "2024-06-12";
+    private final static String action = "DeleteSkillSpace";
 
-         /**Object **/
-         public  $Endpoints;
 
-         /** 1**/
-         public  $Marker;
-
-         /** 1000**/
-         public  $MaxResults;
-
-         public function __construct()
-         {
-
-         }
-
-        public function unserialize($param)
-        {
-            if ($param === null) {
-                return;
-            }
-            if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-                $this->RequestId = $param["RequestId"];
-            }
-            if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-                $this->TotalCount = $param["TotalCount"];
-            }
-            if (array_key_exists("Endpoints",$param) and $param["Endpoints"] !== null) {
-                $this->Endpoints = $param["Endpoints"];
-            }
-            if (array_key_exists("Marker",$param) and $param["Marker"] !== null) {
-                $this->Marker = $param["Marker"];
-            }
-            if (array_key_exists("MaxResults",$param) and $param["MaxResults"] !== null) {
-                $this->MaxResults = $param["MaxResults"];
-            }
-
-        }
-}�书
+    /**
+     * 证书
      */
     private Credential credential;
 
 
-    public DescribeInferenceEndpointsClient(Credential credential) {
+    public DeleteSkillSpaceClient(Credential credential) {
         this.credential = credential;
     }
 
@@ -63,10 +39,10 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      *
      * @param path 请求路径
      * @param requestObj 请求对象
-     * @return DescribeInferenceEndpointsResponse 响应对象
+     * @return DeleteSkillSpaceResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DescribeInferenceEndpointsResponse doPostSend(String path, DescribeInferenceEndpointsRequest requestObj) throws RuntimeException {
+    public DeleteSkillSpaceResponse doPostSend(String path, DeleteSkillSpaceRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPostSend(path, requestObj, head);
@@ -80,10 +56,10 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      * @param requestObj 请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return DescribeInferenceEndpointsResponse 响应对象
+     * @return DeleteSkillSpaceResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DescribeInferenceEndpointsResponse doPostSend(String path, DescribeInferenceEndpointsRequest requestObj,
+    public DeleteSkillSpaceResponse doPostSend(String path, DeleteSkillSpaceRequest requestObj,
                                          UrlPathParams urlPathParams,
                                          Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
@@ -101,10 +77,10 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      * @param path 请求路径
      * @param requestObj 请求对象
      * @param head 请求头
-     * @return DescribeInferenceEndpointsResponse 响应对象
+     * @return DeleteSkillSpaceResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DescribeInferenceEndpointsResponse doPostSend(String path, DescribeInferenceEndpointsRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public DeleteSkillSpaceResponse doPostSend(String path, DeleteSkillSpaceRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("post", path, requestObj, head, null);
     }
 
@@ -116,10 +92,10 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      * @param requestObj 请求对象
      * @param head 请求头（包含自定义 Header）
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
-     * @return DescribeInferenceEndpointsResponse 响应对象
+     * @return DeleteSkillSpaceResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DescribeInferenceEndpointsResponse doPostSend(String path, DescribeInferenceEndpointsRequest requestObj, Map<String, String> head,
+    public DeleteSkillSpaceResponse doPostSend(String path, DeleteSkillSpaceRequest requestObj, Map<String, String> head,
                                          UrlPathParams urlPathParams) throws RuntimeException {
         return executeWithV2("post", path, requestObj, head, urlPathParams);
     }
@@ -130,10 +106,10 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      *
      * @param path 请求路径
      * @param requestObj 请求对象
-     * @return DescribeInferenceEndpointsResponse 响应对象
+     * @return DeleteSkillSpaceResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DescribeInferenceEndpointsResponse doGetSend(String path, DescribeInferenceEndpointsRequest requestObj) throws RuntimeException {
+    public DeleteSkillSpaceResponse doGetSend(String path, DeleteSkillSpaceRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doGetSend(path, requestObj, head);
@@ -146,10 +122,10 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      * @param path 请求路径
      * @param requestObj 请求对象
      * @param head 请求头
-     * @return DescribeInferenceEndpointsResponse 响应对象
+     * @return DeleteSkillSpaceResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DescribeInferenceEndpointsResponse doGetSend(String path, DescribeInferenceEndpointsRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public DeleteSkillSpaceResponse doGetSend(String path, DeleteSkillSpaceRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("get", path, requestObj, head, null);
     }
 
@@ -161,10 +137,10 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      * @param requestObj 请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return DescribeInferenceEndpointsResponse 响应对象
+     * @return DeleteSkillSpaceResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DescribeInferenceEndpointsResponse doGetSend(String path, DescribeInferenceEndpointsRequest requestObj,
+    public DeleteSkillSpaceResponse doGetSend(String path, DeleteSkillSpaceRequest requestObj,
                                         UrlPathParams urlPathParams,
                                         Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
@@ -181,10 +157,10 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      *
      * @param path 请求路径
      * @param requestObj 请求对象
-     * @return DescribeInferenceEndpointsResponse 响应对象
+     * @return DeleteSkillSpaceResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DescribeInferenceEndpointsResponse doPutSend(String path, DescribeInferenceEndpointsRequest requestObj) throws RuntimeException {
+    public DeleteSkillSpaceResponse doPutSend(String path, DeleteSkillSpaceRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPutSend(path, requestObj, head);
@@ -197,10 +173,10 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      * @param path 请求路径
      * @param requestObj 请求对象
      * @param head 请求头
-     * @return DescribeInferenceEndpointsResponse 响应对象
+     * @return DeleteSkillSpaceResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DescribeInferenceEndpointsResponse doPutSend(String path, DescribeInferenceEndpointsRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public DeleteSkillSpaceResponse doPutSend(String path, DeleteSkillSpaceRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("put", path, requestObj, head, null);
     }
 
@@ -212,10 +188,10 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      * @param requestObj 请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return DescribeInferenceEndpointsResponse 响应对象
+     * @return DeleteSkillSpaceResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DescribeInferenceEndpointsResponse doPutSend(String path, DescribeInferenceEndpointsRequest requestObj,
+    public DeleteSkillSpaceResponse doPutSend(String path, DeleteSkillSpaceRequest requestObj,
                                         UrlPathParams urlPathParams,
                                         Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
@@ -232,10 +208,10 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      *
      * @param path 请求路径
      * @param requestObj 请求对象
-     * @return DescribeInferenceEndpointsResponse 响应对象
+     * @return DeleteSkillSpaceResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DescribeInferenceEndpointsResponse doDeleteSend(String path, DescribeInferenceEndpointsRequest requestObj) throws RuntimeException {
+    public DeleteSkillSpaceResponse doDeleteSend(String path, DeleteSkillSpaceRequest requestObj) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDeleteSend(path, requestObj, head);
@@ -248,10 +224,10 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      * @param path 请求路径
      * @param requestObj 请求对象
      * @param head 请求头
-     * @return DescribeInferenceEndpointsResponse 响应对象
+     * @return DeleteSkillSpaceResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DescribeInferenceEndpointsResponse doDeleteSend(String path, DescribeInferenceEndpointsRequest requestObj, Map<String, String> head) throws RuntimeException {
+    public DeleteSkillSpaceResponse doDeleteSend(String path, DeleteSkillSpaceRequest requestObj, Map<String, String> head) throws RuntimeException {
         return executeWithV2("delete", path, requestObj, head, null);
     }
 
@@ -263,10 +239,10 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      * @param requestObj 请求对象
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @param customHeaders 自定义 HTTP Header
-     * @return DescribeInferenceEndpointsResponse 响应对象
+     * @return DeleteSkillSpaceResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    public DescribeInferenceEndpointsResponse doDeleteSend(String path, DescribeInferenceEndpointsRequest requestObj,
+    public DeleteSkillSpaceResponse doDeleteSend(String path, DeleteSkillSpaceRequest requestObj,
                                            UrlPathParams urlPathParams,
                                            Map<String, String> customHeaders) throws RuntimeException {
         Map<String, String> head = new HashMap<>();
@@ -286,10 +262,10 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      * @param requestObj 请求对象
      * @param head 请求头
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
-     * @return DescribeInferenceEndpointsResponse 响应对象
+     * @return DeleteSkillSpaceResponse 响应对象
      * @throws RuntimeException 如果请求失败
      */
-    private DescribeInferenceEndpointsResponse executeWithV2(String method, String path, DescribeInferenceEndpointsRequest requestObj,
+    private DeleteSkillSpaceResponse executeWithV2(String method, String path, DeleteSkillSpaceRequest requestObj,
                                              Map<String, String> head, UrlPathParams urlPathParams) throws RuntimeException {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
@@ -324,7 +300,7 @@ class DescribeInferenceEndpointsResponse extends BaseModel
 
         // 4. 解析 JSON 响应
         try {
-            return JSON.parseObject(message, DescribeInferenceEndpointsResponse.class);
+            return JSON.parseObject(message, DeleteSkillSpaceResponse.class);
         } catch (Exception e) {
             throw new RuntimeException(
                 String.format("[KsyunSDKError] [HttpCode:%d Err:%s] %s",
@@ -345,7 +321,7 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPostWithContextV2(String path, DescribeInferenceEndpointsRequest requestObj) {
+    public HttpResponseWrapper doPostWithContextV2(String path, DeleteSkillSpaceRequest requestObj) {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPostWithContextV2(path, requestObj, head);
@@ -363,7 +339,7 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      * @param head 请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPostWithContextV2(String path, DescribeInferenceEndpointsRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doPostWithContextV2(String path, DeleteSkillSpaceRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doRpcV2(path, requestObj, requestHeaders, "post", null);
@@ -380,7 +356,7 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doGetWithContextV2(String path, DescribeInferenceEndpointsRequest requestObj) {
+    public HttpResponseWrapper doGetWithContextV2(String path, DeleteSkillSpaceRequest requestObj) {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doGetWithContextV2(path, requestObj, head);
@@ -398,7 +374,7 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      * @param head 请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doGetWithContextV2(String path, DescribeInferenceEndpointsRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doGetWithContextV2(String path, DeleteSkillSpaceRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doRpcV2(path, requestObj, requestHeaders, "get", null);
@@ -415,7 +391,7 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPutWithContextV2(String path, DescribeInferenceEndpointsRequest requestObj) {
+    public HttpResponseWrapper doPutWithContextV2(String path, DeleteSkillSpaceRequest requestObj) {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPutWithContextV2(path, requestObj, head);
@@ -433,7 +409,7 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      * @param head 请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doPutWithContextV2(String path, DescribeInferenceEndpointsRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doPutWithContextV2(String path, DeleteSkillSpaceRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doRpcV2(path, requestObj, requestHeaders, "put", null);
@@ -450,7 +426,7 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      * @param requestObj 请求对象
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doDeleteWithContextV2(String path, DescribeInferenceEndpointsRequest requestObj) {
+    public HttpResponseWrapper doDeleteWithContextV2(String path, DeleteSkillSpaceRequest requestObj) {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDeleteWithContextV2(path, requestObj, head);
@@ -468,7 +444,7 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      * @param head 请求头
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    public HttpResponseWrapper doDeleteWithContextV2(String path, DescribeInferenceEndpointsRequest requestObj, Map<String, String> head) {
+    public HttpResponseWrapper doDeleteWithContextV2(String path, DeleteSkillSpaceRequest requestObj, Map<String, String> head) {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doRpcV2(path, requestObj, requestHeaders, "delete", null);
@@ -482,7 +458,7 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      * @return
      * @throws Exception
      */
-    public DescribeInferenceEndpointsResponse doPost(String path, DescribeInferenceEndpointsRequest requestObj) throws Exception {
+    public DeleteSkillSpaceResponse doPost(String path, DeleteSkillSpaceRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPost(path, requestObj, head);
@@ -497,11 +473,11 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      * @return
      * @throws Exception
      */
-    public DescribeInferenceEndpointsResponse doPost(String path, DescribeInferenceEndpointsRequest requestObj, Map<String, String> head) throws Exception {
+    public DeleteSkillSpaceResponse doPost(String path, DeleteSkillSpaceRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, DescribeInferenceEndpointsResponse.class);
+        return JSON.parseObject(response, DeleteSkillSpaceResponse.class);
     }
 
     /**
@@ -511,7 +487,7 @@ class DescribeInferenceEndpointsResponse extends BaseModel
     * @return
     * @throws Exception
     */
-    public DescribeInferenceEndpointsResponse doPostRaw(String path, DescribeInferenceEndpointsRequest requestObj) throws Exception {
+    public DeleteSkillSpaceResponse doPostRaw(String path, DeleteSkillSpaceRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doPostRaw(path, requestObj, head);
@@ -525,11 +501,11 @@ class DescribeInferenceEndpointsResponse extends BaseModel
     * @return
     * @throws Exception
     */
-    public DescribeInferenceEndpointsResponse doPostRaw(String path, DescribeInferenceEndpointsRequest requestObj, Map<String, String> head) throws Exception {
+    public DeleteSkillSpaceResponse doPostRaw(String path, DeleteSkillSpaceRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "post");
-        return JSON.parseObject(response, DescribeInferenceEndpointsResponse.class);
+        return JSON.parseObject(response, DeleteSkillSpaceResponse.class);
     }
     /**
      * get 请求
@@ -539,7 +515,7 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      * @return
      * @throws Exception
      */
-    public DescribeInferenceEndpointsResponse doGet(String path, DescribeInferenceEndpointsRequest requestObj) throws Exception {
+    public DeleteSkillSpaceResponse doGet(String path, DeleteSkillSpaceRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doGet(path, requestObj, head);
@@ -554,11 +530,11 @@ class DescribeInferenceEndpointsResponse extends BaseModel
          * @return
          * @throws Exception
          */
-        public DescribeInferenceEndpointsResponse doGet(String path, DescribeInferenceEndpointsRequest requestObj, Map<String, String> head) throws Exception {
+        public DeleteSkillSpaceResponse doGet(String path, DeleteSkillSpaceRequest requestObj, Map<String, String> head) throws Exception {
             final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
             requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
             String response = doRpc(path, requestObj, requestHeaders, "get");
-            return JSON.parseObject(response, DescribeInferenceEndpointsResponse.class);
+            return JSON.parseObject(response, DeleteSkillSpaceResponse.class);
         }
 
     /**
@@ -569,7 +545,7 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      * @return
      * @throws Exception
      */
-    public DescribeInferenceEndpointsResponse doDelete(String path, DescribeInferenceEndpointsRequest requestObj) throws Exception {
+    public DeleteSkillSpaceResponse doDelete(String path, DeleteSkillSpaceRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.put("Content-Type", "application/x-www-form-urlencoded");
         return doDelete(path, requestObj, head);
@@ -584,11 +560,11 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      * @return
      * @throws Exception
      */
-    public DescribeInferenceEndpointsResponse doDelete(String path, DescribeInferenceEndpointsRequest requestObj, Map<String, String> head) throws Exception {
+    public DeleteSkillSpaceResponse doDelete(String path, DeleteSkillSpaceRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
         requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "delete");
-        return JSON.parseObject(response, DescribeInferenceEndpointsResponse.class);
+        return JSON.parseObject(response, DeleteSkillSpaceResponse.class);
     }
 
 
@@ -600,7 +576,7 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      * @return
      * @throws Exception
      */
-    public DescribeInferenceEndpointsResponse doPut(String path, DescribeInferenceEndpointsRequest requestObj) throws Exception {
+    public DeleteSkillSpaceResponse doPut(String path, DeleteSkillSpaceRequest requestObj) throws Exception {
         Map<String, String> head = new HashMap<>();
         head.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         return doPut(path, requestObj, head);
@@ -615,11 +591,11 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      * @return
      * @throws Exception
      */
-    public DescribeInferenceEndpointsResponse doPut(String path, DescribeInferenceEndpointsRequest requestObj, Map<String, String> head) throws Exception {
+    public DeleteSkillSpaceResponse doPut(String path, DeleteSkillSpaceRequest requestObj, Map<String, String> head) throws Exception {
         final Map<String, String> requestHeaders = head != null ? new HashMap<>(head) : new HashMap<>();
        requestHeaders.putIfAbsent("Content-Type", "application/x-www-form-urlencoded");
         String response = doRpc(path, requestObj, requestHeaders, "put");
-        return JSON.parseObject(response, DescribeInferenceEndpointsResponse.class);
+        return JSON.parseObject(response, DeleteSkillSpaceResponse.class);
     }
 
     /**
@@ -631,7 +607,7 @@ class DescribeInferenceEndpointsResponse extends BaseModel
          * @return
          * @throws Exception
          */
-        private String doRpc(String path, DescribeInferenceEndpointsRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
+        private String doRpc(String path, DeleteSkillSpaceRequest requestObj, Map<String, String> head, String requestMethod) throws Exception {
             //断言
             Objects.requireNonNull(path, "path cannot be null");
             Objects.requireNonNull(requestObj, "requestObj cannot be null");
@@ -663,7 +639,7 @@ class DescribeInferenceEndpointsResponse extends BaseModel
         }
 
 
-        private JSONObject getRequestParam(DescribeInferenceEndpointsRequest requestObj, String contentType) throws Exception {
+        private JSONObject getRequestParam(DeleteSkillSpaceRequest requestObj, String contentType) throws Exception {
             //请求参数
             if (contentType.equalsIgnoreCase("application/json")) {
                 return getPostRawRequestParams(requestObj);
@@ -672,7 +648,7 @@ class DescribeInferenceEndpointsResponse extends BaseModel
         }
 
 
-        private JSONObject getSimpleRequestParams(DescribeInferenceEndpointsRequest requestObj) throws Exception {
+        private JSONObject getSimpleRequestParams(DeleteSkillSpaceRequest requestObj) throws Exception {
             JSONObject requestParams = new JSONObject();
 
             //设置请求体请求参数
@@ -680,7 +656,7 @@ class DescribeInferenceEndpointsResponse extends BaseModel
             return requestParams;
         }
 
-        private JSONObject getPostRawRequestParams(DescribeInferenceEndpointsRequest requestObj) throws Exception {
+        private JSONObject getPostRawRequestParams(DeleteSkillSpaceRequest requestObj) throws Exception {
             JSONObject requestParams = new JSONObject();
 
             //设置请求体请求参数
@@ -698,7 +674,7 @@ class DescribeInferenceEndpointsResponse extends BaseModel
      * @param urlPathParams URL 路径参数（AccountId、UserId、RoleId）
      * @return HttpResponseWrapper 包含状态码和原始响应消息
      */
-    private HttpResponseWrapper doRpcV2(String path, DescribeInferenceEndpointsRequest requestObj, Map<String, String> head,
+    private HttpResponseWrapper doRpcV2(String path, DeleteSkillSpaceRequest requestObj, Map<String, String> head,
                                         String requestMethod, UrlPathParams urlPathParams) {
         try {
             //断言

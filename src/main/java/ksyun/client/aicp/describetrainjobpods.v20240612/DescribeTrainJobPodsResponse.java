@@ -85,6 +85,10 @@ public class DescribeTrainJobPodsResponse extends BaseResponseModel {
             @JsonProperty("DeviceHealthCheckState")
             private String DeviceHealthCheckState;
 
+            /**Pod IP地址*/
+            @JsonProperty("PodIp")
+            private String PodIp;
+
         }
 
         /**容器名称*/
