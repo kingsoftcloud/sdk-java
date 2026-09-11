@@ -1,53 +1,29 @@
-<?php
-namespace  Ksyun\Client\Aicp\V20240612\Models;
+package ksyun.client.aicp.describeinferenceendpoints.v20240612;
 
-use Ksyun\Common\BaseModel;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import common.BaseClient;
+import common.Credential;
+import common.HttpResponseWrapper;
+import common.RpcRequestContentModel;
+import common.UrlPathParams;
+import common.utils.RpcRequestClient;
+import lombok.extern.slf4j.Slf4j;
 
-class DescribeInferenceEndpointsResponse extends BaseModel
-{
-         /** uuid**/
-         public  $RequestId;
+import java.util.*;
 
-         /** 总数**/
-         public  $TotalCount;
+/**
+* @Classname DescribeInferenceEndpointsClient
+* @Description 查询接入点*/
+@Slf4j
+public class DescribeInferenceEndpointsClient extends BaseClient {
+    private final static String service = "aicp";
+    private final static String version = "2024-06-12";
+    private final static String action = "DescribeInferenceEndpoints";
 
-         /**Object **/
-         public  $Endpoints;
 
-         /** 1**/
-         public  $Marker;
-
-         /** 1000**/
-         public  $MaxResults;
-
-         public function __construct()
-         {
-
-         }
-
-        public function unserialize($param)
-        {
-            if ($param === null) {
-                return;
-            }
-            if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-                $this->RequestId = $param["RequestId"];
-            }
-            if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-                $this->TotalCount = $param["TotalCount"];
-            }
-            if (array_key_exists("Endpoints",$param) and $param["Endpoints"] !== null) {
-                $this->Endpoints = $param["Endpoints"];
-            }
-            if (array_key_exists("Marker",$param) and $param["Marker"] !== null) {
-                $this->Marker = $param["Marker"];
-            }
-            if (array_key_exists("MaxResults",$param) and $param["MaxResults"] !== null) {
-                $this->MaxResults = $param["MaxResults"];
-            }
-
-        }
-}�书
+    /**
+     * 证书
      */
     private Credential credential;
 
