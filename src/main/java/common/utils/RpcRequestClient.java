@@ -1,6 +1,6 @@
 /*
  * Decompiled with CFR 0.152.
- * 
+ *
  * Could not load the following classes:
  *  com.alibaba.fastjson.JSONObject
  *  org.apache.commons.lang3.StringUtils
@@ -42,10 +42,35 @@ package common.utils;
 import com.alibaba.fastjson.JSONObject;
 import common.HttpResponseWrapper;
 import common.RpcRequestContentModel;
+import common.SseEventListener;
+import common.utils.HttpClientUtils;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URLEncoder;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+import java.util.stream.Collectors;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.*;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpDelete;
+import org.apache.http.client.methods.HttpEntityEnclosingRequestBase;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpHead;
+import org.apache.http.client.methods.HttpOptions;
+import org.apache.http.client.methods.HttpPatch;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpPut;
+import org.apache.http.client.methods.HttpRequestBase;
+import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -63,18 +88,6 @@ import software.amazon.awssdk.http.SdkHttpMethod;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.utils.StringInputStream;
 import software.amazon.awssdk.utils.StringUtils;
-
-import java.io.UnsupportedEncodingException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URLEncoder;
-import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
-import java.util.stream.Collectors;
 
 public class RpcRequestClient {
     private static final Logger log = LoggerFactory.getLogger(RpcRequestClient.class);
@@ -128,6 +141,66 @@ public class RpcRequestClient {
         catch (Exception e) {
             log.error("rpc occur error", (Throwable)e);
             return new HttpResponseWrapper(e);
+        }
+    }
+
+    public void beginRpcRequestStream(String url, String requestMethod, Map<String, Object> requestParam,
+                                      Map<String, String> head, SseEventListener listener) {
+        Objects.requireNonNull(listener, "SSE event listener is required");
+        url = RpcRequestClient.enhanceUrl(url);
+        HashMap<String, String> rpcHead = new HashMap<String, String>(head);
+        rpcHead.put("Accept", "text/event-stream");
+        rpcHead.put("Cache-Control", "no-cache");
+        HashMap<String, Object> rpcParam = new HashMap<String, Object>(requestParam);
+        try {
+            SdkHttpFullRequest unsignedRequest = this.createUnsignedRequest(url, this.paseSdkHttpMethod(requestMethod), rpcParam, rpcHead);
+            SdkHttpFullRequest signedRequest = this.signRequest(unsignedRequest, this.rpcRequestContentModel.getAccessKeyId(), this.rpcRequestContentModel.getSecretAccessKey());
+            HttpRequestBase httpRequest = this.convertToHttpRequest(signedRequest, rpcParam);
+            executeStreamRequest(httpRequest, listener);
+        } catch (Exception e) {
+            throw new RuntimeException("SSE request failed", e);
+        }
+    }
+
+    private void executeStreamRequest(HttpRequestBase httpRequest, SseEventListener listener) throws Exception {
+        RequestConfig requestConfig = RequestConfig.custom()
+                .setSocketTimeout(this.rpcRequestContentModel.getSocketTimeout().intValue())
+                .setConnectTimeout(this.rpcRequestContentModel.getConnectTimeout().intValue())
+                .build();
+        httpRequest.setConfig(requestConfig);
+        try (CloseableHttpClient httpClient = HttpClients.createDefault();
+             CloseableHttpResponse response = httpClient.execute((HttpUriRequest)httpRequest)) {
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode < 200 || statusCode > 299) {
+                String body = response.getEntity() == null ? "" : EntityUtils.toString(response.getEntity(), StandardCharsets.UTF_8);
+                throw new RuntimeException("SSE request failed with HTTP " + statusCode + ": " + body);
+            }
+            String contentType = response.getFirstHeader("Content-Type") == null ? "" : response.getFirstHeader("Content-Type").getValue();
+            String mediaType = contentType.split(";", 2)[0].trim();
+            if (!mediaType.equalsIgnoreCase("text/event-stream")) {
+                throw new RuntimeException("Invalid SSE Content-Type: " + (contentType.isEmpty() ? "missing" : contentType));
+            }
+            BufferedReader reader = new BufferedReader(new InputStreamReader(response.getEntity().getContent(), StandardCharsets.UTF_8));
+            StringBuilder event = new StringBuilder();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                if (line.isEmpty()) {
+                    if (event.length() > 0) {
+                        if (!listener.onEvent(event.toString())) {
+                            return;
+                        }
+                        event.setLength(0);
+                    }
+                } else {
+                    if (event.length() > 0) {
+                        event.append('\n');
+                    }
+                    event.append(line);
+                }
+            }
+            if (event.length() > 0) {
+                listener.onEvent(event.toString());
+            }
         }
     }
 
@@ -371,9 +444,9 @@ public class RpcRequestClient {
         log.info("begin rpc request v2");
         try (CloseableHttpClient httpClient = HttpClients.createDefault();){
             RequestConfig requestConfig = RequestConfig.custom()
-                .setSocketTimeout(this.rpcRequestContentModel.getSocketTimeout().intValue())
-                .setConnectTimeout(this.rpcRequestContentModel.getConnectTimeout().intValue())
-                .build();
+                    .setSocketTimeout(this.rpcRequestContentModel.getSocketTimeout().intValue())
+                    .setConnectTimeout(this.rpcRequestContentModel.getConnectTimeout().intValue())
+                    .build();
             httpRequest.setConfig(requestConfig);
             String curl = HttpClientUtils.convertHttpClientToCurl(httpRequest);
             log.info("begin rpc request curl:{}", (Object)curl);
@@ -408,4 +481,3 @@ public class RpcRequestClient {
         return url;
     }
 }
-
