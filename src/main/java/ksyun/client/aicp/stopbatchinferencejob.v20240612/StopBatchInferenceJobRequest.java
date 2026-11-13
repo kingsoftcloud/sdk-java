@@ -14,8 +14,4 @@ import java.util.Arrays;
 */
 @Data
 public class StopBatchInferenceJobRequest{
-    /***/
-    @KsYunField(name="BatchId")
-    private String BatchId;
-
 }

@@ -19,8 +19,8 @@ public class AddStorageConfigAccessRequest{
     private String StorageConfigId;
 
     /**要添加的子用户ID*/
-    @KsYunField(name="UserId")
-    private String UserId;
+    @KsYunField(name="KsyunUserId")
+    private String KsyunUserId;
 
     /**要添加的权限组ID*/
     @KsYunField(name="SharedGroupId")

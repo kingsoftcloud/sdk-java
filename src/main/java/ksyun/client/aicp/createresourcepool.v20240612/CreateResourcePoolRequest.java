@@ -72,4 +72,8 @@ public class CreateResourcePoolRequest{
     @KsYunField(name="ProjectId")
     private String ProjectId;
 
+    /**资源组云盘配额（Gi），范围[20, 10000000]，EnableVolume为true时必填*/
+    @KsYunField(name="VolumeQuota")
+    private Integer VolumeQuota;
+
 }

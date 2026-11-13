@@ -115,6 +115,75 @@ public class DescribeApikeysResponse extends BaseResponseModel {
         @JsonProperty("LowPriceModels")
         private List<String> LowPriceModels;
 
+        /**配额额度上限（Token 总量）*/
+        @JsonProperty("QuotaLimit")
+        private String QuotaLimit;
+
+        /**周期类型：monthly/weekly/daily/custom*/
+        @JsonProperty("QuotaType")
+        private String QuotaType;
+
+        /**自定义周期天数（1~90，仅 custom 类型有效）*/
+        @JsonProperty("QuotaPeriodValue")
+        private String QuotaPeriodValue;
+
+        /**生效时间（yyyy-MM-dd HH:mm:ss，UTC 时区）*/
+        @JsonProperty("QuotaStartTime")
+        private String QuotaStartTime;
+
+        /**配额状态：1=启用，0=禁用*/
+        @JsonProperty("QuotaStatus")
+        private String QuotaStatus;
+
+        /***/
+        @JsonProperty("UsedQuota")
+        private String UsedQuota;
+
+        /**闲时模型*/
+        @JsonProperty("OffpeakModels")
+        private List<String> OffpeakModels;
+
+        /***/
+        @JsonProperty("CostQuotas")
+        private List<DataCostQuotasDto> CostQuotas;
+
+        @Data
+        @ToString
+        public static class DataCostQuotasDto {
+            /**周期类型：cost_daily/cost_weekly/cost_monthly/cost_custom*/
+            @JsonProperty("QuotaType")
+            private String QuotaType;
+
+            /**配额上限（CNY 金额）*/
+            @JsonProperty("QuotaLimit")
+            private String QuotaLimit;
+
+            /**自定义周期天数（仅 cost_custom 有效）*/
+            @JsonProperty("PeriodValue")
+            private String PeriodValue;
+
+            /**生效时间（yyyy-MM-dd HH:mm:ss）*/
+            @JsonProperty("StartTime")
+            private String StartTime;
+
+            /**状态：1=启用，0=禁用*/
+            @JsonProperty("Status")
+            private Integer Status;
+
+            /**是否开启使用率告警*/
+            @JsonProperty("AlertEnabled")
+            private Boolean AlertEnabled;
+
+            /**告警阈值百分比（0-100）*/
+            @JsonProperty("AlertThreshold")
+            private Integer AlertThreshold;
+
+            /**使用百分比（0-100）*/
+            @JsonProperty("UsagePercent")
+            private Integer UsagePercent;
+
+        }
+
     }
 
     /**分页页码，从1开始*/

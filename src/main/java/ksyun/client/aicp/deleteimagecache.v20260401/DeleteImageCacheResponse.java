@@ -15,4 +15,12 @@ import java.util.List;
 @ToString
 public class DeleteImageCacheResponse extends BaseResponseModel {
 
+    /**请求ID*/
+    @JsonProperty("RequestId")
+    private String RequestId;
+
+    /**被删除的镜像缓存记录ID*/
+    @JsonProperty("ImageCacheId")
+    private String ImageCacheId;
+
 }

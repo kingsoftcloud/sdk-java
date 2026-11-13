@@ -159,4 +159,47 @@ public class RetrieveKnowledgeResponse extends BaseResponseModel {
 
     }
 
+    /**模型token消耗*/
+    @JsonProperty("ModelUsage")
+    private ModelUsageDto ModelUsage;
+
+    @Data
+    @ToString
+    public static class ModelUsageDto {
+        /**消耗token模型项*/
+        @JsonProperty("Items")
+        private List<ModelUsageItemsDto> Items;
+
+        @Data
+        @ToString
+        public static class ModelUsageItemsDto {
+            /**模型类型*/
+            @JsonProperty("ModelType")
+            private String ModelType;
+
+            /**提供方*/
+            @JsonProperty("Provider")
+            private String Provider;
+
+            /**模型名*/
+            @JsonProperty("ModelName")
+            private String ModelName;
+
+            /**消耗量*/
+            @JsonProperty("Usage")
+            private ModelUsageItemsUsageDto Usage;
+
+            @Data
+            @ToString
+            public static class ModelUsageItemsUsageDto {
+                /**总消耗token量*/
+                @JsonProperty("TotalTokens")
+                private Long TotalTokens;
+
+            }
+
+        }
+
+    }
+
 }

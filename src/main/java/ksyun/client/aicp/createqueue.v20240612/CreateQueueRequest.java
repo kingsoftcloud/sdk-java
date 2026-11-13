@@ -68,6 +68,11 @@ public class CreateQueueRequest{
 
         }
 
+        /**队列云盘配额（Gi），范围[0, 10000000]，默认0
+*/
+        @KsYunField(name="VolumeNum")
+        private Integer VolumeNum;
+
     }
 
     /**物理队列节点规格信息，仅当 QueueType 为 physical 时有效。同一队列内同一 HostType 只能配置一项*/

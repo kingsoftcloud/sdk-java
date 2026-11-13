@@ -54,12 +54,42 @@ public class ModifyApikeyRequest{
     @KsYunField(name="HighPriceModels",type=2)
     private List<String> HighPriceModelsList;
 
-    /**IP白名单列表，有值则启用白名单*/
-    @KsYunField(name="AllowedIps",type=2)
-    private List<String> AllowedIpsList;
+    /**闲时模型名称列表*/
+    @KsYunField(name="OffpeakModels",type=2)
+    private List<String> OffpeakModelsList;
 
-    /**项目制ID*/
-    @KsYunField(name="ProjectId")
-    private String ProjectId;
+    /**金额配额
+缺省/空数组=不动金额配额*/
+    @KsYunField(name="CostQuotas",type=2)
+    private List<CostQuotasDto> CostQuotasList;
+
+    @Data
+    @ToString
+    public static class CostQuotasDto {
+        /**周期类型：cost_daily/cost_weekly/cost_monthly/cost_custom*/
+        @KsYunField(name="QuotaType")
+        private String QuotaType;
+
+        /**配额上限（CNY 金额，整数，单位元）*/
+        @KsYunField(name="QuotaLimit")
+        private String QuotaLimit;
+
+        /**自定义周期天数（仅 cost_custom 有效）*/
+        @KsYunField(name="PeriodValue")
+        private String PeriodValue;
+
+        /**状态：1=启用，0=禁用*/
+        @KsYunField(name="Status")
+        private Integer Status;
+
+        /**是否开启使用率告警*/
+        @KsYunField(name="AlertEnabled")
+        private Boolean AlertEnabled;
+
+        /**告警阈值百分比（0-100），缺省 80*/
+        @KsYunField(name="AlertThreshold")
+        private Integer AlertThreshold;
+
+    }
 
 }

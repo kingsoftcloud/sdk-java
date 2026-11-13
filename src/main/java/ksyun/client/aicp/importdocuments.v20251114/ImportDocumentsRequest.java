@@ -336,4 +336,8 @@ public class ImportDocumentsRequest{
     @KsYunField(name="Ks3Path",type=2)
     private List<String> Ks3PathList;
 
+    /**是否开启入库前敏感信息处理*/
+    @KsYunField(name="SecurityProcessingEnabled")
+    private Boolean SecurityProcessingEnabled;
+
 }

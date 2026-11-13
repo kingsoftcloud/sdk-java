@@ -19,8 +19,8 @@ public class ModifyStorageConfigAccessRoleRequest{
     private String StorageConfigId;
 
     /**要移除权限组的子账号ID*/
-    @KsYunField(name="UserId")
-    private String UserId;
+    @KsYunField(name="KsyunUserId")
+    private String KsyunUserId;
 
     /**要移除权限的权限组ID*/
     @KsYunField(name="SharedGroupId")

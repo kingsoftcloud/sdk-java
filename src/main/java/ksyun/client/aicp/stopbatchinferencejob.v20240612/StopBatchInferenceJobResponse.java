@@ -15,11 +15,11 @@ import java.util.List;
 @ToString
 public class StopBatchInferenceJobResponse extends BaseResponseModel {
 
-    /***/
+    /**是否终止成功*/
     @JsonProperty("Success")
     private Boolean Success;
 
-    /***/
+    /**本次 API 请求的唯一标识符*/
     @JsonProperty("RequestId")
     private String RequestId;
 

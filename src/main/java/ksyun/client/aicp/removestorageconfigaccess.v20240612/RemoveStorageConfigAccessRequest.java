@@ -19,8 +19,8 @@ public class RemoveStorageConfigAccessRequest{
     private String StorageConfigId;
 
     /**子用户ID（要被移除的子用户ID）*/
-    @KsYunField(name="UserId")
-    private String UserId;
+    @KsYunField(name="KsyunUserId")
+    private String KsyunUserId;
 
     /**权限组ID（要被移除权限的权限组ID）*/
     @KsYunField(name="SharedGroupId")

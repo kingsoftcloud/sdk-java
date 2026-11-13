@@ -14,8 +14,4 @@ import java.util.Arrays;
 */
 @Data
 public class ActivateApiServiceRequest{
-    /**状态：1 表示开通服务*/
-    @KsYunField(name="Status")
-    private String Status;
-
 }

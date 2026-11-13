@@ -15,15 +15,15 @@ import java.util.List;
 @ToString
 public class DescribeInferenceJobsKs3AuthInfoResponse extends BaseResponseModel {
 
-    /***/
+    /**数据库主键*/
     @JsonProperty("Id")
     private String Id;
 
-    /***/
+    /**KS3 临时访问密钥(Access Key)*/
     @JsonProperty("Ak")
     private String Ak;
 
-    /***/
+    /**KS3 临时安全密钥(Secret Key)*/
     @JsonProperty("Sk")
     private String Sk;
 

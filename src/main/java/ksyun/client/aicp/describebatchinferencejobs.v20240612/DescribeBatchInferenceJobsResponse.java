@@ -34,15 +34,15 @@ public class DescribeBatchInferenceJobsResponse extends BaseResponseModel {
     @Data
     @ToString
     public static class DataDto {
-        /***/
+        /**任务唯一 ID*/
         @JsonProperty("BatchId")
         private String BatchId;
 
-        /***/
+        /**任务名称*/
         @JsonProperty("JobName")
         private String JobName;
 
-        /***/
+        /**任务描述*/
         @JsonProperty("JobDesc")
         private String JobDesc;
 
@@ -79,7 +79,7 @@ TIMEOUT("timeout", "已超时");*/
             @JsonProperty("Executed")
             private Integer Executed;
 
-            /***/
+            /**调用模型所用 API Key ID */
             @JsonProperty("ApikeyId")
             private String ApikeyId;
 
@@ -95,23 +95,23 @@ TIMEOUT("timeout", "已超时");*/
             @JsonProperty("InputDataType")
             private String InputDataType;
 
-            /***/
+            /**KS3 Region*/
             @JsonProperty("Ks3Region")
             private String Ks3Region;
 
-            /***/
+            /**输入文件 KS3 桶*/
             @JsonProperty("InBucket")
             private String InBucket;
 
-            /***/
+            /**输出结果 KS3 桶*/
             @JsonProperty("OutBucket")
             private String OutBucket;
 
-            /***/
+            /**输入文件对象路径*/
             @JsonProperty("InObjectName")
             private String InObjectName;
 
-            /***/
+            /**输出文件的对象路径*/
             @JsonProperty("OutObjectName")
             private String OutObjectName;
 

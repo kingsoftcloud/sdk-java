@@ -14,4 +14,8 @@ import java.util.Arrays;
 */
 @Data
 public class DeleteImageCacheRequest{
+    /**镜像缓存记录ID*/
+    @KsYunField(name="ImageCacheId")
+    private String ImageCacheId;
+
 }

@@ -14,8 +14,4 @@ import java.util.Arrays;
 */
 @Data
 public class DeleteBatchInferenceJobRequest{
-    /***/
-    @KsYunField(name="BatchId")
-    private String BatchId;
-
 }

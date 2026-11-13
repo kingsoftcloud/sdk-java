@@ -174,6 +174,10 @@ public class DescribeQueuesResponse extends BaseResponseModel {
 
             }
 
+            /**队列云盘配额（Gi）*/
+            @JsonProperty("VolumeNum")
+            private Integer VolumeNum;
+
         }
 
         /**已分配资源*/
@@ -194,6 +198,10 @@ public class DescribeQueuesResponse extends BaseResponseModel {
             /**已分配GPU数量*/
             @JsonProperty("GPUNum")
             private String GPUNum;
+
+            /**队列云盘已分配量（Gi）*/
+            @JsonProperty("VolumeNum")
+            private Integer VolumeNum;
 
         }
 

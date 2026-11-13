@@ -50,6 +50,10 @@ public class ModifyQueueRequest{
 
         }
 
+        /**队列云盘配额（Gi），范围[0, 10000000]，默认0*/
+        @KsYunField(name="VolumeNum")
+        private Integer VolumeNum;
+
     }
 
     /**是否允许向其他队列借资源，不传该字段表示不修改*/

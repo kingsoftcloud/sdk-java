@@ -19,8 +19,8 @@ public class RemoveImageAccessRequest{
     private String ImageId;
 
     /**用户ID，与 SharedGroupId 二选一，不可同时为空或同时非空*/
-    @KsYunField(name="UserId")
-    private String UserId;
+    @KsYunField(name="KsyunUserId")
+    private String KsyunUserId;
 
     /**权限组ID，与 UserId 二选一，不可同时为空或同时非空*/
     @KsYunField(name="SharedGroupId")

@@ -121,6 +121,14 @@ public class DescribeResourcePoolsResponse extends BaseResponseModel {
         @JsonProperty("VolumeChargeType")
         private String VolumeChargeType;
 
+        /**资源组云盘配额（Gi）*/
+        @JsonProperty("VolumeQuota")
+        private Integer VolumeQuota;
+
+        /**资源组云盘已分配量（Gi）*/
+        @JsonProperty("VolumeAllocated")
+        private Integer VolumeAllocated;
+
     }
 
     /**资源组总数*/

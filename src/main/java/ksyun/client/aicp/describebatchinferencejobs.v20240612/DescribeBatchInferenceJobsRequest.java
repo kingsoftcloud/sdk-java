@@ -31,7 +31,7 @@ init、queuing、running、terminated、completed、failed、timeout*/
     @KsYunField(name="Status",type=1)
     private List<String> StatusList;
 
-    /***/
+    /**批次ID*/
     @KsYunField(name="BatchId")
     private String BatchId;
 

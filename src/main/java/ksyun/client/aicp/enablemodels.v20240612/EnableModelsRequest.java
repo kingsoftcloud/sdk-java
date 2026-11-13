@@ -14,8 +14,4 @@ import java.util.Arrays;
 */
 @Data
 public class EnableModelsRequest{
-    /***/
-    @KsYunField(name="ModelIds",type=2)
-    private List<String> ModelIdsList;
-
 }
