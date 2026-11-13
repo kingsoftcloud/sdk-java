@@ -19,8 +19,6 @@ public class GetImageCacheListResponse extends BaseResponseModel {
     @JsonProperty("RequestId")
     private String RequestId;
 
-    /**镜像缓存列表*/
-    @JsonProperty("ImageCaches")
     /**页码*/
     @JsonProperty("PageNum")
     private Integer PageNum;

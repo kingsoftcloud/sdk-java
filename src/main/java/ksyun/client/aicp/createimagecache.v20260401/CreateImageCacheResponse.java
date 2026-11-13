@@ -18,7 +18,4 @@ public class CreateImageCacheResponse extends BaseResponseModel {
     /**请求ID*/
     @JsonProperty("RequestId")
     private String RequestId;
-
-    /**镜像缓存列表，单镜像返回1元素列表*/
-    @JsonProperty("ImageCaches")
 }
